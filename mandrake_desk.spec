@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
 Version:	8.1
-Release:	13mdk
+Release:	14mdk
 License:	GPL
 Group:		System/Configuration/Other
 Packager:	David BAUDENS <baudens@mandrakesoft.com>
@@ -100,43 +100,10 @@ mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
 
 rm -f special/mandrake-small.xpm
 
+install -d %buildroot/%_datadir/faces/
 cp %buildroot/%_datadir/mdk/faces/user-hat-mdk.png %buildroot/%_datadir/faces/root.png
 cp %buildroot/%_datadir/faces/root.png %buildroot/%_datadir/faces/root
-cp %buildroot/%_datadir/mdk/faces/man.png default.png
-
-cd $RPM_BUILD_ROOT%_datadir/pixmaps/backgrounds/linux-mandrake
-ln -s ICE-640.png PP5-640.png
-ln -s ICE-800.png PP5-800.png
-ln -s ICE-1024.png PP5-1024.png
-ln -s ICE-1280.png PP5-1280.png
-ln -s ICE-1600.png PP5-1600.png
-ln -s nature-640.png PP6-640.png
-ln -s nature-800.png PP6-800.png
-ln -s nature-1024.png PP6-1024.png
-ln -s nature-1280.png PP6-1280.png
-ln -s nature-1600.png PP6-1600.png
-ln -s logoMDK1-640.png PP7-640.png
-ln -s logoMDK1-800.png PP7-800.png
-ln -s logoMDK1-1024.png PP7-1024.png
-ln -s logoMDK1-1280.png PP7-1280.png
-ln -s logoMDK1-1600.png PP7-1600.png
-
-ln -s ICE-640.png DKP5-640.png
-ln -s ICE-800.png DKP5-800.png
-ln -s ICE-1024.png DKP5-1024.png
-ln -s ICE-1280.png DKP5-1280.png
-ln -s ICE-1600.png DKP5-1600.png
-ln -s nature-640.png DKP6-640.png
-ln -s nature-800.png DKP6-800.png
-ln -s nature-1024.png DKP6-1024.png
-ln -s nature-1280.png DKP6-1280.png
-ln -s nature-1600.png DKP6-1600.png
-ln -s logoMDK1-640.png DKP7-640.png
-ln -s logoMDK1-800.png DKP7-800.png
-ln -s logoMDK1-1024.png DKP7-1024.png
-ln -s logoMDK1-1280.png DKP7-1280.png
-ln -s logoMDK1-1600.png DKP7-1600.png
-cd -
+cp %buildroot/%_datadir/mdk/faces/man.png %buildroot/%_datadir/faces/default.png
 
 install -d %buildroot/%_datadir/mdk/gnome-desktop/
 for l in de en fr it; do
@@ -146,7 +113,6 @@ done
 install -m644 gnome/gnome-mandrake-campus.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Campus.desktop"
 install -m644 gnome/gnome-mandrake-control-center.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Control Center.desktop"
 install -m644 gnome/gnome-mandrake-expert.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Expert.desktop"
-install -m644 gnome/gnome-sofware-manager.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Software Manager.desktop"
 install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/mdk/gnome-desktop/Connection-to-Internet.desktop
 
 install -d %buildroot/usr/share/pixmaps/mc/
@@ -176,7 +142,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc TRANSLATORS special/*
+%doc TRANSLATORS
 #
 #
 %_bindir/DrakWM
@@ -195,8 +161,12 @@ rm -rf $RPM_BUILD_ROOT
 %_sbindir/*
 #
 #
+%dir %_datadir/faces/
+%_datadir/faces/*.png
+%_datadir/faces/root
+#
+#
 %_iconsdir/*.xpm
-%_iconsdir/*.png
 %_miconsdir/*
 %_liconsdir/*
 #
@@ -234,6 +204,13 @@ rm -rf $RPM_BUILD_ROOT
 #
 %dir %_datadir/eazel-engine/
 %_datadir/eazel-engine/*.png
+#
+#
+%dir %_datadir/gnome/
+%dir %_datadir/gnome/apps/
+%dir %_datadir/gnome/apps/Settings/
+%dir %_datadir/gnome/apps/Settings/Desktop/
+%_datadir/gnome/apps/Settings/Desktop/*.desktop
 #
 #
 %dir %_libdir/gtk/
@@ -289,6 +266,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Sep 13 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-14mdk
+- Re-add mandrakeexpert and mandrakecampus icons
+
 * Tue Sep 04 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-13mdk
 - Remove old icons and nearly all old images
 - Move eazel-engine-capplet in mdk-eazel-engine
