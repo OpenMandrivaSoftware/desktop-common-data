@@ -1,4 +1,0 @@
-#MIN_CONFIG
-
-AM_INIT_AUTOMAKE(krozat,0.1)
-
