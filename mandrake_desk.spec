@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.1
-Release:	5mdk
+Release:	6mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -166,6 +166,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Jun 13 2003 Frederic Crozat <fcrozat@mandrakesoft.com> - 9.1-6mdk
+- gdm session format has changed, fix chksession
+
 * Wed Jun 04 2003 David BAUDENS <baudens@mandrakesoft.com> 9.1-5mdk
 - Create a link to allow users to access to Mandrake's backgrounds from KDE
 

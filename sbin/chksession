@@ -89,23 +89,22 @@ if ($kdm) {
 
 
 if ($gdm) {
-  my $d = '/etc/X11/gdm/Sessions/';
+  my $d = '/etc/X11/dm/Sessions/';
   chdir $d;
 
-  #Any better way ?
-  opendir D, $d or die "Can't open $d\n";
-  for ( readdir(D)) { next if /^\.\.?/;next if /^Failsafe/; chmod 0644, $_; }
-  closedir D;
-
   for my $file (@lf) {
-    open FH, ">/etc/X11/gdm/Sessions/$file" or die "Can't write to /etc/X11/gdm/Sessions/$file\n";
-    print FH "#!/bin/sh\n";
-    print FH "exec /etc/X11/xdm/Xsession $file\n";
+    open FH, ">/etc/X11/dm/Sessions/$file.desktop" or die "Can't write to /etc/X11/dm/Sessions/$file.desktop\n";
+    print FH "[Desktop Entry]\n";
+    print FH "Encoding=UTF-8\n";
+    print FH "Name=$file\n";
+    print FH "Comment=$file\n";
+    print FH "Exec=/etc/X11/xdm/Xsession $file\n";
+    print FH "Icon=\n";
+    print FH "Type=Application\n";
     close FH;
     chmod 0755, $file;
   }
-  unlink 'Default';
-  symlink shift @lf, 'Default';
+
 }
 
 if ($xsession) {
