@@ -1,3 +1,11 @@
+2002-02-20 14:36  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec: Fix build
+
+2002-02-20 14:31  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec: Fix english strings and makefile
+
 2002-02-18 22:51  David Baudens <baudens@mandrakesoft.com>
 
 	* mandrake_desk.spec: Fix and update spec
