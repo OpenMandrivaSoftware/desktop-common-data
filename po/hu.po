@@ -1,17 +1,18 @@
 #
 # WARNING: This file is in unicode!
 #
-# Csaba Szigetvari <csaba.szigetvari@citicorp.com>
+# Csaba Szigetvari <csaba.szigetvari@citicorp.com>, 1999,2000
+# Tamas Szanto <tszanto@mol.hu>, 2001
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mandrake_desk VERSION\n"
-"POT-Creation-Date: 2001-03-29 09:59+0200\n"
-"PO-Revision-Date: 1999-08-25 11:07+0200\n"
-"Last-Translator: Csaba Szigetvari <csaba.szigetvari@citicorp.com>\n"
-"Language-Team: hu\n"
+"Project-Id-Version: mandrake_desk 8.0\n"
+"POT-Creation-Date: 2001-03-29 10:09+0200\n"
+"PO-Revision-Date: 2001-04-01 11:11+0100\n"
+"Last-Translator: Tamas Szanto <tszanto@mol.hu>\n"
+"Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: gnome/mandrake.links.desktop.in.h:1 kdelnk/DrakConf.kdelnk.in.h:1
@@ -21,7 +22,7 @@ msgstr "DrakConf"
 
 #: gnome/mandrake.links.desktop.in.h:2 old/mandrake.links.desktop.in.h:2
 msgid "GNOME Web Site"
-msgstr "GNOME webhely"
+msgstr "GNOME honlap"
 
 #: gnome/mandrake.links.desktop.in.h:3 old/mandrake.links.desktop.in.h:6
 msgid "Mandrake documentation"
@@ -35,21 +36,21 @@ msgstr "Netscape"
 #: kde/Desktop/Templates/MimeType.noext.kdelnk.in.h:1
 #: old/MimeType.noext.kdelnk.in.h:1
 msgid "Mime Type"
-msgstr "Mime Típus"
+msgstr "MIME-típus"
 
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
 msgid "Application"
-msgstr "Applikáció"
+msgstr "Alkalmazás"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr "Internet Cím (URL)"
+msgstr "Internet-cím (URL)"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
 msgid "World Wide Web URL"
-msgstr ""
+msgstr "WWW URL"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:2
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:1
@@ -57,28 +58,28 @@ msgstr ""
 #: old/CD-ROM.noext.kdelnk.in.h:2 old/Device.noext.kdelnk.in.h:1
 #: old/Floppy.noext.kdelnk.in.h:1
 msgid "File System Device"
-msgstr "Fájlrendszer Eszköz"
+msgstr "Fájlrendszer-eszköz"
 
 #: kde/Desktop/Templates/Ftpurl.noext.kdelnk.in.h:1
 #: old/Ftpurl.noext.kdelnk.in.h:1
 msgid "FTP URL"
-msgstr ""
+msgstr "FTP URL"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:1 old/Printer.noext.kdelnk.in.h:1
 msgid "Default printer"
-msgstr ""
+msgstr "Az alapértelmezett nyomtató"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr ""
+msgstr "A nyomtatósor kezelőprogramja"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:2 old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
-msgstr ""
+msgstr "Floppy lemez"
 
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
@@ -86,11 +87,11 @@ msgstr "Mandrake és KDE dokumentáció"
 
 #: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
-msgstr "Mandrake és KDE dokumentáció"
+msgstr "Mandrake és KDE dokumentáció."
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr "A Linux-Mandrake rendszerkonfigurációs eszközei"
+msgstr "A Mandrake rendszerbeállítási eszközei"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
@@ -103,7 +104,7 @@ msgstr "Internet kapcsolat"
 
 #: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
-msgstr "Internet kapcsolat"
+msgstr "Internet kapcsolat."
 
 #: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
@@ -111,11 +112,12 @@ msgstr "Netscape böngésző"
 
 #: kdelnk/News.kdelnk.in.h:1 old/News.kdelnk.in.h:1
 msgid "Linux Mandrake News"
-msgstr "Linux Mandrake újdonságok"
+msgstr "Mandrake hírek"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr "A szöveges és PostScript fájlok ráejthetők a nyomtató ikonjára"
+msgstr ""
+"A szöveges és PostScript fájlokat lehet ráejteni a nyomtató ikonjára"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
@@ -136,11 +138,11 @@ msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr ""
+msgstr "Linux dokumentumok"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
-msgstr ""
+msgstr "RpmDrake"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
