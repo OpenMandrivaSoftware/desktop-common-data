@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=Linux Mandrake News
+Name[bg]=Mandrake Linux Íîâèíè
 Name[br]=Keleier Linux Mandrake
 Name[ca]=Notícies del Linux Mandrake
 Name[cs]=Novinky Mandrake Linuxu
@@ -24,6 +25,6 @@ Name[uk]=îÏ×ÉÎÉ ĞÒÏ Mandrake ì¦ÎÁËÓ
 Name[wa]=Noveles di Linux Mandrake sol rantoele
 Type=Link
 URL=http://www.linux-mandrake.com
-Icon=news-mdk.xpm
-MiniIcon=news-mdk.xpm
+Icon=magic.xpm
+MiniIcon=magic.xpm
 

@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=Mandrake Updates
+Name[bg]=Mandrake Îáíîâÿâàíå
 Name[br]=Hizivadurioù Mandrake
 Name[ca]=Actualitzacions del Mandrake
 Name[cs]=Aktualizace Mandrake
@@ -21,7 +22,7 @@ Name[uk]=ğÏÎÏ×ÌÅÎÎÑ ÓÉÓÔÅÍÉ Mandrake
 Name[wa]=Metaedje a djoû di Mandrake
 MimeType=
 Exec=MandrakeUpdate
-Icon=updates-mdk.xpm
+Icon=magic.xpm
 TerminalOptions=
 Path=
 Type=Application

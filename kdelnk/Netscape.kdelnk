@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=Netscape
+Name[bg]=Netscape
 Name[ca]=Netscape
 Name[da]=Netscape
 Name[de]=Netscape
@@ -20,6 +21,7 @@ Name[pt]=Netscape
 Name[ru]=Netscape
 Name[wa]=Netscape
 Comment=Netscape browser
+Comment[bg]=Netscape Íàâèãàòîğ
 Comment[br]=Merdeer Netscape
 Comment[ca]=Navegador d'Internet Netscape
 Comment[cs]=Netscape navigátor

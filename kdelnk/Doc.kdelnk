@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=Mandrake and KDE documentation
+Name[bg]=Mandrake è KDE äîêóìåíòàöèÿ
 Name[br]=Teuliadur war Mandrake ha KDE
 Name[ca]=Documentació del Mandrake i del KDE
 Name[cs]=Dokumentace k Mandrake a KDE
@@ -25,5 +26,5 @@ Name[uk]=äÏËÕÍÅÎÔÁÃ¦Ñ ĞÏ ÓÉÓÔÅÍ¦ Mandrake ÔÁ KDE
 Name[wa]=Documintåcion di Mandrake eyèt KDE
 Type=Link
 URL=file:/usr/doc/mandrake/
-Icon=doc-mdk.xpm
-MiniIcon=doc-mdk.xpm
+Icon=magic.xpm
+MiniIcon=magic.xpm

@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=The GIMP
+Name[bg]=GIMP
 Name[br]=GIMP
 Name[ca]=El GIMP
 Name[cs]=GIMP
@@ -35,6 +36,7 @@ Name[wa]=GIMP
 Name[zh_CN.GB2312]=GIMP
 Name[zh_TW.Big5]=GIMP
 Comment=Gnu Image Manipulation Program
+Comment[bg]=GNU Програма за Oбработка на Снимки
 Comment[br]=Goulev GNU Dazverad Skeudennoщ
 Comment[ca]=El programa de manipulaciу d'imatges GNU
 Comment[cs]=GNU program pro prбci s obrбzky
