@@ -20,11 +20,11 @@ This package contains useful icons background and .kdelnk files for
 the Mandrake desktop.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
 
 %setup -n %{name}
 
 %build
+find . -type 'd' -name 'CVS'|xargs rm -rf
 
 %install
 make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT mandir=%{_mandir}
