@@ -1,3 +1,7 @@
+1999-12-22  Pixel  <pixel@mandrakesoft.com>
+	
+	* icons/util-*: added user icons for kdm
+
 1999-12-22  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* sbin/fndSession: new script with the new chksession.
