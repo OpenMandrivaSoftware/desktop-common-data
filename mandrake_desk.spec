@@ -56,6 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 - mandrake_desk.spec: adjust groups.
 - Makefile: correct dis and rpm target.
 - window-managers: fix blakbox with last blackbox package.
+- Makefile: don't need to bzip (spec-helper do this job).
 
 * Wed Feb  2 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.1-19mdk
 - window-managers: Add a sawmill entry (V.Danen).
