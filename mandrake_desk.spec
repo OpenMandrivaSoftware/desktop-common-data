@@ -126,8 +126,6 @@ mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/X11/wmsession.d/
 rm -f special/mandrake-small.xpm
 
 install -d %buildroot/%_datadir/faces/
-cp %buildroot/%_datadir/mdk/faces/user-hat-mdk.png %buildroot/%_datadir/faces/root.png
-cp %buildroot/%_datadir/faces/root.png %buildroot/%_datadir/faces/root
 cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/faces/default.png
 cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/mdk/faces/default.png
 # Dadou - 18mdk - This is needed for GDM
@@ -220,7 +218,6 @@ rm -fr %buildroot
 #
 %dir %_datadir/faces/
 %_datadir/faces/*.png
-%_datadir/faces/root
 #
 #
 %_iconsdir/*.png
@@ -327,6 +324,7 @@ rm -fr %buildroot
 
 %changelog
 * Thu Mar  7 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-12mdk
+- No longer create icon for root
 - Modify Mandrake GTK theme - Frederic Crozat
 - Change name of Mandrake Control Center to Control Center in GNOME desktop
  (Thanks to Mattias Dahlberg) - Frederic Crozat
