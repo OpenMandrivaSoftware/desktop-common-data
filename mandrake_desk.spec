@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
-* Fri Apr 30 2000 dam's <damien@mandrakesoft.com> 1.0.3-12mdk
+* Sun Apr 30 2000 dam's <damien@mandrakesoft.com> 1.0.3-12mdk
 - re-added XKill in kdelnk. 
 
 * Fri Apr 28 2000 dam's <damien@mandrakesoft.com> 1.0.3-11mdk
