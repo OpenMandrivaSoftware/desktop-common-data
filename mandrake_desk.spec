@@ -210,7 +210,9 @@ rm -rf $RPM_BUILD_ROOT
 %_liconsdir/*
 #
 #
-%_mandir/*/*
+%_mandir/man*/*
+# find_lang doesn't find man pages yet :-(
+%lang(fr) %_mandir/fr/man*/*
 #
 #
 %dir %_datadir/eazel-engine/
