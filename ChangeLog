@@ -1,3 +1,8 @@
+1999-12-27  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+
+	* icons/kdelnk: lot of changes (fix pablo sucks).
+	* sbin/chksession: check if root.
+
 1999-12-25 Pablo Saratxga <pablo@mandrakesoft.com>
 
 	* Makefile,*.spec,gnome/*.desktop: put the handling of Gnome icons

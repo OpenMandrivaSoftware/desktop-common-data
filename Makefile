@@ -27,7 +27,8 @@ rpm: dis ../mandrake_desk-$(VERSION).tar.bz2 $(RPM)
 	rm -f ../mandrake_desk-$(VERSION).tar.bz2
 
 install:
-	mkdir -p $(RPM_BUILD_ROOT)/usr/{bin,sbin}
+	mkdir -p $(RPM_BUILD_ROOT)/usr/sbin
+	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{icons,icons/large,icons/mini,pixmaps/backgrounds/mandrake}
 	mkdir -p $(RPM_BUILD_ROOT)/etc/X11/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk
@@ -36,7 +37,6 @@ install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/desktop-links
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/System
-	install -m755 bin/* $(RPM_BUILD_ROOT)/usr/bin
 	install -m755 sbin/* $(RPM_BUILD_ROOT)/usr/sbin
 	install -m644 window-managers $(RPM_BUILD_ROOT)/etc/X11/
 	install -m644 icons/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/
@@ -46,14 +46,13 @@ install:
 	install -m644 backgrounds/* \
 	$(RPM_BUILD_ROOT)/usr/share/pixmaps/backgrounds/mandrake/
 	install -m644 kdelnk/* $(RPM_BUILD_ROOT)/etc/skel/Desktop/
-	install -m644 icons/magic.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
 	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
 	install -m644 gnome/Netscape.desktop \
 		$(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
-	install -m644 gnome/{DrakConf,RpmDrake}.desktop
+	install -m644 gnome/{DrakConf,RpmDrake}.desktop \
 		$(RPM_BUILD_ROOT)/usr/share/gnome/apps/System
 	install -m755 gnome/mandrake.links.sh \
-		$RPM_BUILD_ROOT/usr/lib/mc/desktop-scripts
+		$(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
 	install -m644 gnome/mandrake.links \
-		$RPM_BUILD_ROOT/usr/lib/desktop-links
+		$(RPM_BUILD_ROOT)/usr/lib/desktop-links
 

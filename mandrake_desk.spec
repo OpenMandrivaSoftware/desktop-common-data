@@ -43,7 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc TRANSLATORS special/* README.CVS
 %config /etc/X11/window-managers
-/usr/bin/*
 /usr/sbin/*
 /usr/share/icons/*.xpm
 /usr/share/icons/*.png
@@ -59,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon Dec 27 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - Various fix and changes (icons & links).
+- bin/chkSession check if we are root.
 
 * Fri Dec 24 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - window-managers: various change from (jerome).

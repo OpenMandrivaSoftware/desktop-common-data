@@ -61,6 +61,7 @@ while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
   } elsif (/^--first/ || /^-F/) {
     $first++;
   } elsif (/^--gdm/ || /^-g/) {
+    die "You should be root to build gdm session\n" if $< != 0;
     $gdm++;
   } elsif (/^--list/ || /^-l/) {
     $list++;
@@ -97,7 +98,7 @@ if ($gdm) {
   chdir $d;
 
   #Any better way ?
-  opendir D, $d;
+  opendir D, $d or die "Can't open $d\n";
   for ( readdir(D)) { next if /^\.\.?/;next if /^Failsafe/; chmod 0644, $_; }
   closedir D;
 
