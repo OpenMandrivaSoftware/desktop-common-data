@@ -14,7 +14,7 @@ Source:		mandrake_desk-%{version}.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildArch:	noarch
 Requires:	menu >= 2.1.5-125mdk, mandrake_theme
-Conflicts:	kdebase-kdm-config-file < 3.2-62mdk
+Conflicts:	kdebase-kdm-config-file < 1:3.2-62mdk
 
 
 %description
@@ -98,6 +98,8 @@ fi
 [ ! -d %_datadir/wallpapers ] && install -d -m 0755 %_datadir/wallpapers
 [ ! -e %_datadir/wallpapers/mandrake-linux ] && ln -s %_datadir/mdk/backgrounds/ %_datadir/wallpapers/mandrake-linux
 %update_menus
+
+%make_session
 
 %postun
 # Remove link created to allow users to access to Mandrake's backgrounds from KDE
