@@ -1,5 +1,7 @@
+# DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 0.9.9
-%define release 1mdk
+
+%define release 2mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -42,13 +44,18 @@ rm -rf $RPM_BUILD_ROOT
 %doc TRANSLATORS special/* README.CVS
 /usr/bin/*
 /usr/sbin/*
-/usr/share/icons/*
+/usr/share/icons/*.xpm
+/usr/share/icons/mini/*.xpm
+/usr/share/icons/large/*.xpm
 /usr/share/pixmaps/backgrounds/mandrake
 /etc/skel/Desktop/
 /usr/share/pixmaps/mdk
 /usr/share/gnome/apps/Internet/*.desktop
 
 %changelog
+* Mon Dec 20 1999 Pixel <pixel@mandrakesoft.com>
+- added icons/mini and icons/large
+
 * Sun Dec 19 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - Add fndSession.
 - Use mktemp instead of $$ for fndSession.
