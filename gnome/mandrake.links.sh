@@ -24,6 +24,7 @@ do
 		cs*) CAPTION="Pøipojení k Internetu" ;;
  		da*) CAPTION="Internet forbindelse" ;;
 		de*) CAPTION="Internetverbindung" ;;
+		el*) CAPTION="Óıíäåóç Internet" ;;
 		es*) CAPTION="Conexión a Internet" ;;
 		et*) CAPTION="Internetiühendus" ;;
 		fi*) CAPTION="Internet yhteys" ;;
@@ -73,6 +74,7 @@ do
 		cs*) CAPTION="Aktualizace Mandrake" ;;
 		da*) CAPTION="Mandrake Opdateringer" ;;
 		de*) CAPTION="Mandrake Updates" ;;
+		el*) CAPTION="Áíáâáèìßóåéò ôïõ Mandrake" ;;
 		es*) CAPTION="Actualizaciones de Mandrake" ;;
 		et*) CAPTION="Mandrake parandused" ;;
 		fi*) CAPTION="Mandrake päivitykset" ;;
