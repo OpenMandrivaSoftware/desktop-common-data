@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Tue May  9 2000 dam's <damien@mandrakesoft.com> 1.0.3-16mdk
-- corrected Netscape and rpmdrake gnome icons
+- removed Netscape and rpmdrake gnome icons
 
 * Sat May  6 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.3-15mdk
 - sbin/chksession: if icewm is not here by default launch twm.
