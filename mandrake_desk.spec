@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	10.0
-Release: 	7mdk
+Release: 	8mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -141,6 +141,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Feb 27 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.0-8mdk
+- Fix typo reported by Per Øyvind Karlsen
+
 * Tue Feb 24 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.0-7mdk
 - Fix kontact icons
 
