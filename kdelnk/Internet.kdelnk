@@ -3,6 +3,7 @@
 Name=Internet connection
 Name[af]=Internetkonneksie
 Name[ar]=ЗКХЗд ИЗдЗжКСжК
+Name[be]=Злучэнне з сеткай Інтэрнэт
 Name[bg]=Интернет Връзка
 Name[br]=Kevreaс ouzh ar genrouedad
 Name[ca]=Connexiу a Internet
@@ -42,6 +43,7 @@ Name[zh_CN.GB2312]=»ҐБЄНшБ¬ЅУ
 Comment=Internet connection.
 Comment[af]=Internetkonneksie
 Comment[ar]=ЗКХЗд ИЗдЗжКСжК
+Comment[be]=Злучэнне з сеткай Інтэрнэт.
 Comment[bg]=Интернет Връзка
 Comment[br]=Kevreaс ouzh ar genrouedad
 Comment[ca]=Connexiу a Internet

@@ -20,6 +20,7 @@ fi
 #	case "$i" in
 #		en*) CAPTION="Internet connection" ;;
 #		af*) CAPTION="Internetkonneksie" ;;
+#		bg*) CAPTION="Злучэнне з сеткай Інтэрнэт" ;;
 #		bg*) CAPTION="Интернет Връзка" ;;
 #		br*) CAPTION="Kevreaс ouzh ar genrouedad" ;;
 #		ca*) CAPTION="Connexiу a Internet" ;;
@@ -77,6 +78,7 @@ fi
 #	case "$i" in
 #		en*) CAPTION="Mandrake Updates" ;;
 #		af*) CAPTION="Mandrake Opdaterings" ;;
+#		be*) CAPTION="Аднаўленні Mandrake" ;;
 #		bg*) CAPTION="Mandrake Обновяване" ;;
 #		br*) CAPTION="Hizivadurioщ Mandrake" ;;
 #		ca*) CAPTION="Actualitzacions del Mandrake" ;;

@@ -2,6 +2,7 @@
 Name=DrakConf
 Name[af]=DrakConf
 Name[ar]=DrakConf
+Name[be]=DrakConf
 Name[bg]=DrakConf
 Name[br]=DrakConf
 Name[ca]=DrakConf
@@ -36,6 +37,7 @@ Name[uk]=DrakConf
 Name[wa]=DrakConf
 Name[zh_CN.GB2312]=DrakConf
 Comment=The system configuration tools of Linux-Mandrake
+Comment[be]=Сродкі канфігурацыі сістэмы Linux-Mandrake
 Comment[bg]=Инструменти за конфигурация на системата на Linux-Mandrake
 Comment[ca]=Les eines de configuraciу del sistema de Linux-Mandrake
 Comment[cs]=Konfiguraиnн nбstroj distribuce Linux-Mandrake
