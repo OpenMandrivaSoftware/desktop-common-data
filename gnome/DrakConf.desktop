@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=DrakConf
+Name[nl]=DrakConf
 Name[zh_CN.GB2312]=DrakConf
 Icon=../icons/DrakConf.xpm
 TryExec=DrakConf;

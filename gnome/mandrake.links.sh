@@ -34,7 +34,7 @@ do
 		it*) CAPTION="Connessione a Internet" ;;
 		is*) CAPTION="Lığnets tenging" ;;
 		lv*) CAPTION="Interneta pieslçgums" ;;
-		nl*) CAPTION="Internet verbinding" ;;
+		nl*) CAPTION="Internetverbinding" ;;
 		no*) CAPTION="Oppkobling Internett" ;;
 		ro*) CAPTION="Conectare la Internet" ;;
 		ru*) CAPTION="Internet-ÓÏÅÄÉÎÅÎÉÅ" ;;

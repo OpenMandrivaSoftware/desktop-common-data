@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=KAppFinder
+Name[nl]=KAppFinder
 Name[zh_CN.GB2312]=KAppFinder ³ÌĞòËÑË÷
 Comment=Find X non-KDE applications on your Mandrake system
 Comment[bg]=Òúğñè X íå-KDE ïğîãğàìè âúâ âàøàòà Mandrake ñèñòåìà
@@ -21,7 +22,7 @@ Comment[is]=Finnur X KDE-ósamhæf forrit í Mandrake kerfinu şínu
 Comment[it]=Ricerca programmi X (non-KDE) nel sistema
 Comment[lt]=Rasti ne KDE programas jûsø Mandrake sistemoje
 Comment[lv]=Sameklçt X (ne KDE) programmas jûsu Mandrake sistçmâ
-Comment[nl]=Zoekt X en non-KDE applicaties op het systeem
+Comment[nl]=Zoekt X en non-KDE applicaties op uw systeem
 Comment[no]=Finner ikke-KDE X applikasjoner på Mandrake systemet ditt
 Comment[ro]=Gaseºte aplicaşii X non-KDE pe sistemul tãu Mandrake
 Comment[sk]=Nájde X ne-KDE aplikácie vá¹ho Mandrake systému
