@@ -25,7 +25,7 @@ msgstr "GNOME Web Пойгоҳ"
 
 #: gnome/mandrake.links.desktop.in.h:3 old/mandrake.links.desktop.in.h:6
 msgid "Mandrake documentation"
-msgstr "ЊуЌЌатнокии Mandrake"
+msgstr "Ҳуҷҷатнокии Mandrake"
 
 #: gnome/mandrake.links.desktop.in.h:4 kdelnk/Netscape.kdelnk.in.h:1
 #: old/Netscape.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:7
@@ -82,11 +82,11 @@ msgstr "Дискет"
 
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
-msgstr " ЊуЌЌатнокии Mandrake ва KDE"
+msgstr " Ҳуҷҷатнокии Mandrake ва KDE"
 
 #: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
-msgstr " ЊуЌЌатнокии Mandrake ва KDE"
+msgstr " Ҳуҷҷатнокии Mandrake ва KDE"
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
@@ -136,7 +136,7 @@ msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr "ЊуЌЌатҳои Linux"
+msgstr "Ҳуҷҷатҳои Linux"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
