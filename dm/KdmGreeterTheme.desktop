@@ -1,0 +1,11 @@
+# This is not really a .desktop file like the rest, but it's useful to treat
+# it as such
+
+[GdmGreeterTheme]
+Encoding=UTF-8
+Greeter=mdk-kde.xml
+Name=Mandrake
+Description=Mandrake theme
+Author=MandrakeSoft graphic team
+Copyright=(c) 2002 MandrakeSoft
+Screenshot=screenshot.png
