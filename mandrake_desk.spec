@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	10.0
-Release: 	3mdk
+Release: 	4mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -35,15 +35,9 @@ find . -type 'd' -name 'CVS' | xargs rm -fr
 %install
 rm -rf %buildroot
 
-
 ## Install backgrounds
 # User & root's backgrounds
-# root
-install -d -m 0755 %buildroot/%_datadir/mdk/backgrounds/root/
-install -m 0644 backgrounds/default-root-9.1.png %buildroot/%_datadir/mdk/backgrounds/root/
-
-# user
-install -m 0644 backgrounds/default-9.1.png %buildroot/%_datadir/mdk/backgrounds/
+install -d -m 0755 %buildroot/%_datadir/mdk/backgrounds/
 install -m 0644 backgrounds/flower.jpg %buildroot/%_datadir/mdk/backgrounds/
 install -m 0644 backgrounds/nature.jpg %buildroot/%_datadir/mdk/backgrounds/
 
@@ -74,21 +68,6 @@ install -m 0644 faces/default.png %buildroot/%_datadir/faces/default.png
 
 # David - 9.0-5mdk - For GDM
 install -m 0644 faces/default.png %buildroot/%_datadir/faces/user-default-mdk.png
-
-
-
-## Install icons
-# 16
-install -d -m 0755 %buildroot/%_miconsdir/
-for i in icons/mini/*.png ; do install -m 0644 $i %buildroot/%_miconsdir/ ; done
-
-# 32
-for i in icons/*.png ; do install -m 0644 $i %buildroot/%_iconsdir/ ; done
-for i in icons/*.xpm ; do install -m 0644 $i %buildroot/%_iconsdir/ ; done
-
-# 48
-install -d -m 0755 %buildroot/%_liconsdir/
-for i in icons/large/*.png ; do install -m 0644 $i %buildroot/%_liconsdir/ ; done
 
 
 
@@ -145,15 +124,8 @@ rm -fr %buildroot
 %_datadir/faces/*
 %_datadir/mdk/faces/*
 #
-%_iconsdir/*.*
-%_liconsdir/*
-%_miconsdir/*
-#
 %dir %_datadir/mdk/backgrounds/
-%dir %_datadir/mdk/backgrounds/root/
 %_datadir/mdk/backgrounds/*.jpg
-%_datadir/mdk/backgrounds/*.png
-%_datadir/mdk/backgrounds/root/*.png
 #
 %dir %_datadir/apps/kdm/pics/
 %_datadir/apps/kdm/pics/*
@@ -169,8 +141,11 @@ rm -fr %buildroot
 
 
 %changelog
-* Thu Jan 29 2004 David Baudens <baudens@mandrakesoft.com> 10.0-3mdk
+* Thu Jan 29 2004 David Baudens <baudens@mandrakesoft.com> 10.0-4mdk
 - Remove old files
+
+* Mon Jan 19 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.0-3mdk
+- Add "kontact" entry
 
 * Tue Jan 13 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.0-2mdk
 - Fix drakbackup menu entry
