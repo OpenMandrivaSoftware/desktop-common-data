@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	9mdk
+Release: 	10mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -144,6 +144,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Sep 10 2004 David Baudens <baudens@mandrakesoft.com> 10.1-10mdk
+- Add documentation to task oriented menu
+
 * Thu Sep 09 2004 David Baudens <baudens@mandrakesoft.com> 10.1-9mdk
 - Remove all longtitle
 

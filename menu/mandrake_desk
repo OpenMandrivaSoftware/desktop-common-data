@@ -233,3 +233,20 @@
 # .hidden
 ?package(kdepim-kontact): needs="kde" kde_filename="kontact-summary" section=.hidden title="Kontact" icon="kontact-mdk.png" command="kontact --module summary" kde_opt="\\nEncoding=UTF-8\\nDocPath=knotes/index.html\\nTerminal=0\\nGenericName=Popup Notes\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
 
+
+
+## Read documentation
+# Mandrakelinux documentation in german
+?package(mandrake-doc-de): command="/usr/bin/www-browser /usr/share/doc/mandrake/de/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in German" section="Read Documentation"
+
+# Mandrakelinux documentation in english
+?package(mandrake-doc-en): command="/usr/bin/www-browser /usr/share/doc/mandrake/en/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in English" section="Read Documentation"
+
+# Mandrakelinux documentation in spanish
+?package(mandrake-doc-es): command="/usr/bin/www-browser /usr/share/doc/mandrake/es/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Spanish" section="Read Documentation"
+
+# Mandrakelinux documentation in italian
+?package(mandrake-doc-it): command="/usr/bin/www-browser /usr/share/doc/mandrake/it/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Italian" section="Read Documentation"
+
+# Mandrakelinux documentation in chinese
+?package(mandrake-doc-zh_cn): command="/usr/bin/www-browser /usr/share/doc/mandrake/zh_cn/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux documentation in Chinese" section="Read Documentation"
