@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	1mdk
+Release:	2mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -62,8 +62,8 @@ system administrator permissions.
 Summary:	Default Mandrake Linux screensaver for KDE
 Group:		Graphical desktop/KDE
 BuildRequires:	kdelibs-devel
-Requires:	kdebase
-Requires:   mandrake_desk >= 8.2
+Requires:	kdebase 
+Requires:   mandrake_desk >= 8.3
 
 %description -n krozat
 This package contains the default Mandrake Linux screensaver for KDE.
@@ -81,13 +81,27 @@ cd -
 
 cd krootwarning
 make -f admin/Makefile.common
-./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama --disable-rpath
+
+# Search for qt/kde libraries in the right directories (avoid patch)
+# NOTE: please don't regenerate configure script past this line
+perl -pi -e "s@/lib(\"|\b[^/])@/%_lib\1@g if /(kde|qt)_(libdirs|libraries)=/" configure
+
+./configure \
+	--prefix=%_prefix --libdir=%_libdir \
+	--enable-final --disable-debug --with-xinerama --disable-rpath
 %make
 cd -
 
 cd krozat
 make -f admin/Makefile.common
-./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama --disable-rpath
+
+# Search for qt/kde libraries in the right directories (avoid patch)
+# NOTE: please don't regenerate configure script past this line
+perl -pi -e "s@/lib(\"|\b[^/])@/%_lib\1@g if /(kde|qt)_(libdirs|libraries)=/" configure
+
+./configure \
+	--prefix=%_prefix --libdir=%_libdir \
+	--enable-final --disable-debug --with-xinerama --disable-rpath
 %make
 cd -
 
@@ -323,6 +337,11 @@ rm -fr %buildroot
 
 
 %changelog
+* Sat Jul 27 2002 Laurent MONTEL <lmontel@mandrakesoft.com> 9.0-2mdk
+- Fix Requires
+- Add Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> changes :
+	- As usual, search for qt/kde libraries in the right directories
+
 * Thu Jul 18 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-1mdk
 - Remove old users images. Add new images. Feedback welcome using cooker@linux-mandrake.com.
 
