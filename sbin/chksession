@@ -68,11 +68,7 @@ while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
 }
   
 $dir = $test ? './wmsession.d/' : '/etc/X11/wmsession.d/' unless $dir;
-opendir D, $dir or die "Can't open $dir\n";
-for (readdir(D)) {
-    my $file = $_;
-    parse_file ("$dir/$file");
-}
+chdir $dir; parse_file ("$dir/$_") for <*>;
 
 sub cat { my ($f) = @_; local *F; open F, $f; join '', <F> }
 my ($e) = cat("/etc/sysconfig/desktop") =~ /(\S+)/;
