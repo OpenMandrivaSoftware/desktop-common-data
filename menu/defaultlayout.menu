@@ -1,12 +1,13 @@
 <Menu>
+<Name>Mandrakelinux</Name>
 <Layout>
-<Merge type="menus"/>
 <Menuname>Office</Menuname>
 <Menuname>Internet</Menuname>
 <Menuname>Multimedia</Menuname>
 <Menuname>System</Menuname>
 <Menuname>More Applications</Menuname>
 <Menuname>Other</Menuname>
+<Merge type="menus"/>
 <Merge type="files"/>
 </Layout>
 </Menu>

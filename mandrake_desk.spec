@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	14mdk
+Release: 	15mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -163,6 +163,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Jan 25 2005 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-15mdk 
+- Fix small errors in default layout menu files
+
 * Tue Dec 14 2004 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-14mdk 
 - Move mdk menu data from menu to mandrake_desk package
 
