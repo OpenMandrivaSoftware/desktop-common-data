@@ -1,214 +1,1024 @@
-2000-08-31 David BAUDENS <baudens@mandrakesoft.com>
+2001-07-31 09:19  Frederic Lepied <flepied@mandrakesoft.com>
 
-	* Add Chmou hack on chkession
+	* mandrake_desk.spec: 8.1-1mdk
 
-2000-08-24 David BAUDENS <baudens@mandrakesoft.com>
+2001-07-31 09:16  Frederic Lepied <flepied@mandrakesoft.com>
 
-	* Add a link "root" to make GDM happy
-	* Remove old .desktop
+	* Makefile: added rules to build test and distrib rpm.
 
-2000-08-23 David BAUDENS <baudens@mandrakesoft.com>
+2001-07-31 09:15  Frederic Lepied <flepied@mandrakesoft.com>
 
-	* Add links default.png and root.png to make KDM happy
+	* mandrake-small.xpm: resync with 8.0-12mdk
 
-2000-08-23 David BAUDENS <baudens@mandrakesoft.com>
+2001-07-31 08:00  Frederic Lepied <flepied@mandrakesoft.com>
 
-	* Convert faces/*.xpm in faces/*.png to make KDM happy
+	* gtkrc, gnome/gnome-Documentation-de.desktop,
+	gnome/gnome-Documentation-en.desktop,
+	gnome/gnome-Documentation-es.desktop,
+	gnome/gnome-Documentation-fr.desktop,
+	gnome/gnome-Documentation-it.desktop, gnome/gnome-Internet.desktop,
+	gnome/gnome-mandrake-campus.desktop,
+	gnome/gnome-mandrake-control-center.desktop,
+	gnome/gnome-mandrake-expert.desktop,
+	gnome/gnome-mandrakecampus.xpm, gnome/gnome-mandrakeexpert.xpm,
+	gnome/gnome-sofware-manager.desktop, gnome/gnomedesktop-network:
+	resync with 8.0-12mdk
 
-2000-08-22 David BAUDENS <baudens@mandrakesoft.com>
+2001-07-31 07:52  Frederic Lepied <flepied@mandrakesoft.com>
 
-	* Move user* pixmaps in faces (/usr/share/faces/)
+	* Makefile, TRANSLATORS, eazel-engine-0.3.tar.bz2,
+	mandrake_desk.spec, backgrounds/DKP1-1024.png,
+	backgrounds/DKP1-1280.png, backgrounds/DKP1-1600.png,
+	backgrounds/DKP1-640.png, backgrounds/DKP1-800.png,
+	backgrounds/DKP2-1024.png, backgrounds/DKP2-1280.png,
+	backgrounds/DKP2-640.png, backgrounds/DKP2-800.png,
+	backgrounds/DKP3-1024.png, backgrounds/DKP3-1280.png,
+	backgrounds/DKP3-1600.png, backgrounds/DKP3-640.png,
+	backgrounds/DKP3-800.png, backgrounds/DKP4-1024.png,
+	backgrounds/DKP4-1280.png, backgrounds/DKP4-1600.png,
+	backgrounds/DKP4-640.png, backgrounds/DKP4-800.png,
+	backgrounds/ICE-1024.png, backgrounds/ICE-1280.png,
+	backgrounds/ICE-1600.png, backgrounds/ICE-640.png,
+	backgrounds/ICE-800.png, backgrounds/PP1-1024.png,
+	backgrounds/PP1-1280.png, backgrounds/PP1-1600.png,
+	backgrounds/PP1-640.png, backgrounds/PP1-800.png,
+	backgrounds/PP2-1024.png, backgrounds/PP2-1280.png,
+	backgrounds/PP2-1600.png, backgrounds/PP2-640.png,
+	backgrounds/PP2-800.png, backgrounds/PP3-1024.png,
+	backgrounds/PP3-1280.png, backgrounds/PP3-1600.png,
+	backgrounds/PP3-640.png, backgrounds/PP3-800.png,
+	backgrounds/PP4-1024.png, backgrounds/PP4-1280.png,
+	backgrounds/PP4-1600.png, backgrounds/PP4-640.png,
+	backgrounds/PP4-800.png, backgrounds/XFdrake-image-test.jpg,
+	backgrounds/logoMDK1-1024.png, backgrounds/logoMDK1-1280.png,
+	backgrounds/logoMDK1-1600.png, backgrounds/logoMDK1-800.png,
+	backgrounds/nature-1024.png, backgrounds/nature-1280.png,
+	backgrounds/nature-1600.png, backgrounds/nature-640.png,
+	backgrounds/nature-800.png, bin/DrakWM, bin/createbackground.sh,
+	bin/print-cups.sh: resync with 8.0-12mdk
 
-2000-07-22  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+2001-07-31 07:30  Frederic Lepied <flepied@mandrakesoft.com>
 
-	* Makefile: Add mandir to be BM compliant.
+	* eazel-engine/: NEWS, README, THANKS, TODO, aclocal.m4,
+	eazel-engine.spec.in, ltmain.sh, make-gtkrc.pl, AUTHORS, COPYING,
+	INSTALL, Makefile.am, Makefile.in, check-data.sh, config.guess,
+	config.h.in, config.sub, configure, configure.in,
+	eazel-engine.spec, gtkrc.in, install-sh, ltconfig, missing,
+	mkinstalldirs, stamp-h.in, test.c, test.glade, Crux/Makefile.am,
+	Crux/Makefile.in, Crux/README, Crux/gtk/Makefile.am,
+	Crux/gtk/Makefile.in, capplet/Makefile.am, capplet/Makefile.in,
+	capplet/eazel-engine-capplet.c,
+	capplet/eazel-engine-properties.desktop, data/Makefile.am,
+	data/Makefile.in, data/arrow_down-spinner.png, data/arrow_down.png,
+	data/arrow_left.png, data/arrow_right.png,
+	data/arrow_up-spinner.png, data/arrow_up.png,
+	data/check-active-default-focus.png, data/check-active-default.png,
+	data/check-active-hilight-focus.png, data/check-active-hilight.png,
+	data/check-active-insensitive.png,
+	data/check-active-pressed-focus.png, data/check-active-pressed.png,
+	data/check-default-focus.png, data/check-default.png,
+	data/check-hilight-focus.png, data/check-hilight.png,
+	data/check-insensitive.png, data/check-pressed-focus.png,
+	data/check-pressed.png, data/progressbar-left.png,
+	data/progressbar-right.png, data/progressbar.png,
+	data/progressbar_trough.png, data/radio-active-default-focus.png,
+	data/radio-active-default.png, data/radio-active-hilight-focus.png,
+	data/radio-active-hilight.png, data/radio-active-insensitive.png,
+	data/radio-active-pressed-focus.png, data/radio-active-pressed.png,
+	data/radio-default-focus.png, data/radio-default.png,
+	data/radio-hilight-focus.png, data/radio-hilight.png,
+	data/radio-insensitive.png, data/radio-pressed-focus.png,
+	data/radio-pressed.png, data/scroller-arrow-down-hilight.png,
+	data/scroller-arrow-down-pressed.png, data/scroller-arrow-down.png,
+	data/scroller-arrow-left-hilight.png,
+	data/scroller-arrow-left-pressed.png, data/scroller-arrow-left.png,
+	data/scroller-arrow-right-hilight.png,
+	data/scroller-arrow-right-pressed.png,
+	data/scroller-arrow-right.png, data/scroller-arrow-up-hilight.png,
+	data/scroller-arrow-up-pressed.png, data/scroller-arrow-up.png,
+	data/scroller-h-hilight.png, data/scroller-h-thumb-hilight.png,
+	data/scroller-h-thumb.png, data/scroller-h-trough.png,
+	data/scroller-h.png, data/scroller-v-hilight.png,
+	data/scroller-v-thumb-hilight.png, data/scroller-v-thumb.png,
+	data/scroller-v-trough.png, data/scroller-v.png,
+	data/slider_h_thumb.png, data/slider_h_trough.png,
+	data/slider_h_trough_focus.png, data/slider_v_thumb.png,
+	data/slider_v_trough.png, data/slider_v_trough_focus.png,
+	data/tab_left-unsel.png, data/tab_left.png, data/tab_right.png,
+	data/tab_sel-bottom.png, data/tab_sel.png,
+	data/tab_usel-bottom-left.png, data/tab_usel-bottom.png,
+	data/tab_usel-left.png, data/tab_usel.png, src/Makefile.am,
+	src/Makefile.in, src/eazel-theme-draw.c,
+	src/eazel-theme-draw.c.dim, src/eazel-theme-gradient.c,
+	src/eazel-theme-hacks.c, src/eazel-theme-main.c,
+	src/eazel-theme-pixmaps.c, src/eazel-theme.h: Initial revision
 
-2000-07-18  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+2001-07-31 07:30  Frederic Lepied <flepied@mandrakesoft.com>
 
-	* sbin/chksession: Set support for KDE2 by default when generating
-	session.
+	* eazel-engine/: NEWS, README, THANKS, TODO, aclocal.m4,
+	eazel-engine.spec.in, ltmain.sh, make-gtkrc.pl, AUTHORS, COPYING,
+	INSTALL, Makefile.am, Makefile.in, check-data.sh, config.guess,
+	config.h.in, config.sub, configure, configure.in,
+	eazel-engine.spec, gtkrc.in, install-sh, ltconfig, missing,
+	mkinstalldirs, stamp-h.in, test.c, test.glade, Crux/Makefile.am,
+	Crux/Makefile.in, Crux/README, Crux/gtk/Makefile.am,
+	Crux/gtk/Makefile.in, capplet/Makefile.am, capplet/Makefile.in,
+	capplet/eazel-engine-capplet.c,
+	capplet/eazel-engine-properties.desktop, data/Makefile.am,
+	data/Makefile.in, data/arrow_down-spinner.png, data/arrow_down.png,
+	data/arrow_left.png, data/arrow_right.png,
+	data/arrow_up-spinner.png, data/arrow_up.png,
+	data/check-active-default-focus.png, data/check-active-default.png,
+	data/check-active-hilight-focus.png, data/check-active-hilight.png,
+	data/check-active-insensitive.png,
+	data/check-active-pressed-focus.png, data/check-active-pressed.png,
+	data/check-default-focus.png, data/check-default.png,
+	data/check-hilight-focus.png, data/check-hilight.png,
+	data/check-insensitive.png, data/check-pressed-focus.png,
+	data/check-pressed.png, data/progressbar-left.png,
+	data/progressbar-right.png, data/progressbar.png,
+	data/progressbar_trough.png, data/radio-active-default-focus.png,
+	data/radio-active-default.png, data/radio-active-hilight-focus.png,
+	data/radio-active-hilight.png, data/radio-active-insensitive.png,
+	data/radio-active-pressed-focus.png, data/radio-active-pressed.png,
+	data/radio-default-focus.png, data/radio-default.png,
+	data/radio-hilight-focus.png, data/radio-hilight.png,
+	data/radio-insensitive.png, data/radio-pressed-focus.png,
+	data/radio-pressed.png, data/scroller-arrow-down-hilight.png,
+	data/scroller-arrow-down-pressed.png, data/scroller-arrow-down.png,
+	data/scroller-arrow-left-hilight.png,
+	data/scroller-arrow-left-pressed.png, data/scroller-arrow-left.png,
+	data/scroller-arrow-right-hilight.png,
+	data/scroller-arrow-right-pressed.png,
+	data/scroller-arrow-right.png, data/scroller-arrow-up-hilight.png,
+	data/scroller-arrow-up-pressed.png, data/scroller-arrow-up.png,
+	data/scroller-h-hilight.png, data/scroller-h-thumb-hilight.png,
+	data/scroller-h-thumb.png, data/scroller-h-trough.png,
+	data/scroller-h.png, data/scroller-v-hilight.png,
+	data/scroller-v-thumb-hilight.png, data/scroller-v-thumb.png,
+	data/scroller-v-trough.png, data/scroller-v.png,
+	data/slider_h_thumb.png, data/slider_h_trough.png,
+	data/slider_h_trough_focus.png, data/slider_v_thumb.png,
+	data/slider_v_trough.png, data/slider_v_trough_focus.png,
+	data/tab_left-unsel.png, data/tab_left.png, data/tab_right.png,
+	data/tab_sel-bottom.png, data/tab_sel.png,
+	data/tab_usel-bottom-left.png, data/tab_usel-bottom.png,
+	data/tab_usel-left.png, data/tab_usel.png, src/Makefile.am,
+	src/Makefile.in, src/eazel-theme-draw.c,
+	src/eazel-theme-draw.c.dim, src/eazel-theme-gradient.c,
+	src/eazel-theme-hacks.c, src/eazel-theme-main.c,
+	src/eazel-theme-pixmaps.c, src/eazel-theme.h: import 0.3
 
-	* bin/DrakWM: Add -i options to launch with xinit.
-	add -a option to provide alias for bash.
+2001-05-06 19:20  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-05-29  dam's  <damien@mandrakesoft.com>
+	* TRANSLATORS: Updated Chinese file
 
-	* window-managers: changed sawmill entry into sawfish
+2001-04-12 06:41  daouda
+
+	* mandrake_desk.spec: cleanups
+
+2001-04-12 06:27  daouda
+
+	* eazel-engine-0.3.tar.bz2: add eazel themes to cvs
+
+2001-04-12 06:26  daouda
+
+	* Makefile: remove kdelnk dir
+
+2001-04-12 06:25  daouda
+
+	* mandrake_desk.spec: macros bis
+
+2001-04-12 06:23  daouda
+
+	* mandrake_desk.spec: macros to ease rpm build from cvs
+
+2001-04-12 06:16  daouda
+
+	* Makefile: fix typo in var RPM
+
+2001-04-12 06:15  daouda
+
+	* mandrake_desk.spec: add define tags
+
+2001-04-12 06:14  daouda
+
+	* Makefile: define RPM var
+
+2001-04-12 06:11  daouda
+
+	* Makefile: commented kdelnk related stuffs
+
+2001-04-12 06:08  daouda
+
+	* Makefile: add eazel themes + gtkrc for rpm build
+
+2001-04-12 06:08  daouda
+
+	* gtkrc: new gtkrc  :resync with spec
+
+2001-04-12 06:06  daouda
+
+	* mandrake_desk.spec: commit
+
+2001-04-12 02:57  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: root, tux.png, tux.xpm, tuxbaby.png, tuxbaby.xpm,
+	tuxbox.png, tuxbox.xpm, tuxcoocker.png, tuxcoocker.xpm, tuxdad.png,
+	tuxdad.xpm, tuxegg.png, tuxegg.xpm, tuxgirl.png, tuxgirl.xpm,
+	tuxhead1.png, tuxhead1.xpm, tuxhead2.png, tuxhead2.xpm, tuxmam.png,
+	tuxmam.xpm, tuxmecano.png, tuxmecano.xpm, user-brunette-mdk.png,
+	user-brunette-mdk.xpm, user-curly-mdk.png, user-curly-mdk.xpm,
+	user-default-mdk.png, user-default-mdk.xpm, user-girl-mdk.png,
+	user-girl-mdk.xpm, user-hat-mdk.png, user-hat-mdk.xpm,
+	user-tie-mdk.png, user-tie-mdk.xpm, user-woman-blond-mdk.png,
+	user-woman-blond-mdk.xpm, utildame.png, utildame.xpm, utilmons.png,
+	utilmons.xpm: [no log message]
+
+2001-04-12 02:52  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: user-brunette-mdk.png, user-curly-mdk.png,
+	user-default-mdk.png, user-girl-mdk.png, user-hat-mdk.png,
+	user-tie-mdk.png, user-woman-blond-mdk.png: [no log message]
+
+2001-04-12 00:53  daouda
+
+	* mandrake_desk.spec: resync specs with cvs
+
+2001-03-29 10:14  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* Makefile, README, TRANSLATORS, xml-i18n-extract.in,
+	xml-i18n-merge.in, xml-i18n-update.in: Now uses xml-i18n-tools to
+	handle i18n
+
+2001-03-24 13:29  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: Updated Korean strings
+
+2001-03-17 17:09  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: updated the Portuguese strings
+
+2001-03-02 20:45  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* bin/DrakWM: Call xvt.
+
+2001-01-07 07:23  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: updated Basque strings
+
+2000-11-17 14:31  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: Added Georgian strings
+
+2000-10-16 02:01  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: updated Brazilian strings
+
+2000-09-13 21:19  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: corrected email address
+
+2000-09-13 12:55  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: Added Azeri strings
+
+2000-09-05 22:48  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: updated Polish strings
+
+2000-08-31 12:31  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Re add a BuildRoot :(
+
+2000-08-31 12:25  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec, mandrake_desk.spec: Update mandrake_desk.spec
+
+2000-08-24 11:51  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update Spec
+
+2000-08-24 11:16  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile: Update Makefile (for .desktop)
+
+2000-08-24 11:10  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update Spec
+
+2000-08-24 11:06  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/: DrakConf.desktop, Netscape.desktop: Remove old .desktop
+
+2000-08-24 11:04  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: default.png, root, root.png: [no log message]
+
+2000-08-24 10:11  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update Spec and Makefile
+
+2000-08-24 10:08  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/root: Add a "root" link to make GDM happy
+
+2000-08-23 19:30  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update Makefile and spec file
+
+2000-08-23 19:28  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: default.png, root.png: Add link default.png and root.png
+	to make KDM happy
+
+2000-08-23 10:44  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: user-brunette-mdk.xpm, user-curly-mdk.xpm,
+	user-default-mdk.xpm, user-girl-mdk.xpm, user-hat-mdk.xpm,
+	user-tie-mdk.xpm, user-woman-blond-mdk.xpm: Removed unneeded files
+
+2000-08-23 10:40  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: user-brunette-mdk.png, user-curly-mdk.png,
+	user-default-mdk.png, user-girl-mdk.png, user-hat-mdk.png,
+	user-tie-mdk.png, user-woman-blond-mdk.png: Convert faces/*.xpm to
+	faces/*.png
+
+2000-08-23 10:39  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile, README.CVS, TRANSLATORS, default_background.jpg,
+	default_logo.jpg, mandrake_desk.spec: [no log message]
+
+2000-08-22 19:10  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Re fix spec
+
+2000-08-22 19:06  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: Fix Makefile and spec
+
+2000-08-22 18:51  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: user-brunette-mdk.xpm, user-curly-mdk.xpm,
+	user-default-mdk.xpm, user-girl-mdk.xpm, user-hat-mdk.xpm,
+	user-tie-mdk.xpm, user-woman-blond-mdk.xpm: Move users icons in
+	/usr/share/faces
+
+2000-08-22 18:46  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile, README.CVS, TRANSLATORS, default_background.jpg,
+	default_logo.jpg, mandrake_desk.spec: [no log message]
+
+2000-08-22 18:41  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: [no log message]
+
+2000-08-19 11:28  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/Netscape.desktop:
+	Added Belarussian strings
+
+2000-08-17 18:13  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Estonian strings
+
+2000-08-15 13:39  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Ukrainian strings
+
+2000-08-14 12:18  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Chinese strings
+
+2000-08-14 11:22  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Bulgarian strings
+
+2000-08-14 09:33  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* gnome/DrakConf.desktop: [no log message]
+
+2000-08-13 11:56  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Greek strings
+
+2000-08-12 17:09  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Serbian strings
+
+2000-08-12 16:25  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Catalan strings
+
+2000-08-12 11:47  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS: fixed an email address
+
+2000-08-07 15:15  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Lithuanian strings
+
+2000-07-22 21:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: BM.
+
+2000-07-18 23:31  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec: * sbin/chksession: Set support for KDE2 by
+	default when generating session.
+
+2000-07-18 11:42  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: window-managers no longer needed.
+
+2000-07-18 11:41  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* window-managers: window-managers is no longer needed.
+
+2000-07-18 11:39  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec, bin/DrakWM: * bin/DrakWM: Add -i options to
+	launch with xinit.  add -a option to provide alias for bash.
+
+2000-07-17 13:20  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: new release
+
+2000-07-16 14:11  Dam's <damien@mandrakesoft.com>
+
+	* window-managers: sawmill -> sawfish
+
+2000-07-11 23:43  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec: sbin/chksession: make window-managers file
+	dynamic by simple entry in /etc/X11/wmsession.d/
+	sbin/convertsession: a new greatest hit.  mandrake_desk.spec: %post
+	with convertsession
+
+2000-07-07 13:22  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Spanish strings
+
+2000-07-06 20:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated French strings
+
+2000-07-03 19:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Czech and Latvian strings
+
+2000-06-30 13:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Norwegia nstrings
+
+2000-06-28 01:15  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Hungarian string
+
+2000-06-26 16:00  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/Netscape.desktop:
+	added Arabic strings
+
+2000-06-11 21:59  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated Czech strings
+
+2000-06-07 18:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop: Added Korean strings
+
+2000-05-29 13:23  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: see changelog
+
+2000-05-27 21:42  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/Netscape.desktop:
+	Updated Serbian strings
+
+2000-05-19 01:43  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/Netscape.desktop:
+	Added Afrikaans strings
+
+2000-05-13 11:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: updated strings
+
+2000-05-13 11:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/Netscape.desktop: Updated French strings
+
+2000-05-12 16:16  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* mandrake_desk.spec:	* 1.0.3-21mdk
+
+2000-05-12 11:21  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: new mdk rel ; added gnome desktop entries
+
+2000-05-09 23:33  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: mdk release
+
+2000-05-09 19:58  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: new release
+
+2000-05-09 19:38  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: no more netscape.desktop
+
+2000-05-09 19:38  Dam's <damien@mandrakesoft.com>
+
+	* Makefile: removed netscape.desktop copy
+
+2000-05-09 17:00  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec, gnome/Netscape.desktop: removed gnome desktop
+	icons...
+
+2000-05-09 10:15  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec, gnome/Netscape.desktop: see changelog. new
+	release, cosmetic fix.
+
+2000-05-08 23:24  Dam's <damien@mandrakesoft.com>
+
+	* gnome/DrakConf.desktop: cosmetic fix
+
+2000-05-06 22:55  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec:	* sbin/chksession: if icewm is not here by
+	default launch twm.
+
+2000-05-05 12:21  Pixel <pixel@mandrakesoft.com>
+
+	* mandrake_desk.spec: no_comment
+
+2000-05-04 16:09  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		mandrake_desk.spec gnome/mandrake.links :cleaned gnome
+	desktop
+
+2000-05-02 16:05  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/: DrakConf.desktop, Netscape.desktop: Updated Romanian
+	strings
+
+2000-04-30 17:28  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		mandrake_desk.spec :bad date
+
+2000-04-30 17:16  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		mandrake_desk.spec :bad release
+
+2000-04-30 17:15  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		ChangeLog mandrake_desk.spec :see Changelog
+
+2000-04-29 19:26  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/Netscape.desktop:
+	Updated Britton, Esperanto and Estonian strings
+
+2000-04-28 16:40  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* TRANSLATORS: - add cdwriter_supermount.xpm - correct TRANSLATOR
+	address - use kdecolors in icons
+
+2000-04-28 14:40  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		ChangeLog mandrake_desk.spec :corrected xfce entry in
+	windowmanagers.
+
+2000-04-28 12:15  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec, window-managers: 
+		ChangeLog mandrake_desk.spec window-managers : recovering
+	old files
+
+2000-04-28 10:27  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		mandrake_desk.spec :fixed bad date
+
+2000-04-28 10:15  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec, window-managers: 
+		ChangeLog mandrake_desk.spec window-managers :corrected
+	xfce entry
+
+2000-04-27 15:57  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		mandrake_desk.spec  : bad date
+
+2000-04-27 15:46  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec, window-managers: 
+		ChangeLog mandrake_desk.spec window-managers :corrected
+	wmaker entry
+		kdelnk/Updates.kdelnk :unfortunally removed, so re-added
+
+2000-04-22 05:09  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/: DrakConf.desktop, Netscape.desktop: added Esperanto
+	strings
+
+2000-04-21 17:55  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec, window-managers: Upload (see ChangeLog)
+
+2000-04-21 05:58  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update .spec
+
+2000-04-20 19:15  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mandrake_desk.spec, window-managers: [no log message]
+
+2000-04-20 17:13  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/: DrakConf.desktop, Netscape.desktop: Updated Icelandic
+	strings
+
+2000-04-20 16:48  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mandrake_desk.spec, window-managers: [no log message]
+
+2000-04-18 15:24  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		mandrake_desk.spec :corrected bad version number
+
+2000-04-18 15:21  Dam's <damien@mandrakesoft.com>
+
+	* Makefile: 
+		Makefile :updated for new mdk relese
+
+2000-04-18 15:18  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+		ChangeLog mandrake_desk.spec : new mdk release
+
+2000-04-18 14:26  Dam's <damien@mandrakesoft.com>
+
+	* window-managers, gnome/RpmDrake.desktop: 
+		window-managers : minor correction
+		gnome/RpmDrake.desktop kdelnk/Gimp.kdelnk
+		kdelnk/RpmDrake.kdelnk kdelnk/Updates.kdelnk
+		kdelnk/XKill.kdelnk : desktops needed to be cleaned
+
+2000-04-18 11:20  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/Netscape.desktop:
+	Added Welsh strings
+
+2000-04-18 10:23  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/: DrakConf.desktop, Netscape.desktop, RpmDrake.desktop:
+	Updated Irish entries
+
+2000-04-17 15:22  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+	Modified Files: 	mandrake_desk.spec updated
+
+2000-04-17 04:56  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* window-managers: Various fix.
+
+2000-04-17 00:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec: Add /usr/bin
+
+2000-04-17 00:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: DrakWM a new greatest hit.
+
+2000-04-17 00:45  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* bin/DrakWM: Add file.
+
+2000-04-16 21:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/RpmDrake.desktop:
+	Added Greek strings
+
+2000-04-16 15:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/: DrakConf.desktop, RpmDrake.desktop: Updated Croatian
+	strings
+
+2000-04-16 15:12  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/RpmDrake.desktop:
+	Added Finnsih strings
+
+2000-04-11 18:55  Dam's <damien@mandrakesoft.com>
+
+	* mandrake_desk.spec: 
+	Modified Files: 	mandrake_desk.spec added ref for
+	/usr/share/icons/*.jpg
+
+2000-04-11 18:21  Dam's <damien@mandrakesoft.com>
+
+	* default_logo.jpg: 
+	Modified Files: 	default_logo.jpg final logo
+
+2000-04-11 17:46  Dam's <damien@mandrakesoft.com>
+
+	* default_background.jpg, default_logo.jpg: 
+	Added Files:	default_background.jpg default_logo.jpg needed for
+	new release of gdm/kdm
+
+2000-04-11 17:43  Dam's <damien@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: 
 	
-2000-07-11  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+	updated icons
 
-	* sbin/chksession:  make window-managers file dynamic by simple
-	entry in /etc/X11/wmsession.d/
-	* sbin/convertsession: a new greatest hit.
-	* mandrake_desk.spec: %post with convertsession
+2000-04-10 22:14  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-05-29  dam's  <damien@mandrakesoft.com>
+	* gnome/: DrakConf.desktop, RpmDrake.desktop: updated German
+	strings
 
-	* corrected doc url in gnome desktop
+2000-04-10 15:49  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-05-12  dam's  <damien@mandrakesoft.com>
+	* gnome/: DrakConf.desktop, Netscape.desktop, RpmDrake.desktop:
+	Updated Galician and Hungarian strings
 
-	* added gnome links.
+2000-04-09 01:42  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-05-09  dam's  <damien@mandrakesoft.com>
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/RpmDrake.desktop:
+	Added Swedish strings
 
-	* added Netscape on desktop
+2000-04-07 03:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-2000-05-09  Pixel  <pixel@mandrakesoft.com>
+	* window-managers: "Seethechangelog"
 
-	* sbin/kdeDesktopCleanup: added handling of URL kdelnk's
+2000-04-05 23:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-2000-05-09  dam's  <damien@mandrakesoft.com>
+	* mandrake_desk.spec, Makefile, mandrake_desk.spec:
+	"Seethechangelog"
 
-	* corrected Netscape and rpmdrake gnome icons
-	
-2000-05-06  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+2000-04-05 23:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-	* sbin/chksession: if icewm is not here by default launch twm.
+	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
-2000-04-30 Stefan Siegel <siegel@linux-mandrake.com>
+2000-04-05 23:41  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-	* icon cleanup
+	* mandrake_desk.spec: "Seethechangelog"
 
-2000-04-30 dam's <damien@mandrakesoft.com>
+2000-04-05 23:38  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-	* Re-added XKill in kdelnk
+	* Makefile, mandrake_desk.spec, window-managers: "Seethechangelog"
 
-2000-04-28 Stefan Siegel <siegel@linux-mandrake.com>
+2000-04-04 23:27  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-	* added cdwriter_supermount.xpm
+	* gnome/: DrakConf.desktop, RpmDrake.desktop: updated Latvian
+	strings
 
-2000-04-28 dam's <damien@mandrakesoft.com>
+2000-04-04 15:57  David Baudens <baudens@mandrakesoft.com>
 
-	* Corrected xfce entry in windowmanagers.
+	* backgrounds/default_background.jpg: Add default background
 
-2000-04-28 dam's <damien@mandrakesoft.com>
+2000-04-04 15:55  David Baudens <baudens@mandrakesoft.com>
 
-	* Window-managers , spec files : the last change was a big mistake, recovering old files
+	* backgrounds/: mandrake_background3_1024.jpg,
+	mandrake_background4_1024.jpg: Add backgrounds
 
-2000-04-28 dam's <damien@mandrakesoft.com>
+2000-04-04 15:53  David Baudens <baudens@mandrakesoft.com>
 
-	* Window-managers : corrected Xfce entry
+	* backgrounds/: mandrake_background1_1024.jpg,
+	mandrake_background2_1024.jpg, mandrake_background_1024-1.jpg,
+	mandrake_background_1024-2.jpg, mandrake_background_1024-3.jpg,
+	mandrake_background_1024.jpg, mandrake_background_800.jpg,
+	mandrake_background_blue_1024.jpg: Add & remove backgrounds
 
-2000-04-27 dam's <damien@mandrakesoft.com>
+2000-03-31 16:45  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-	* Re-added Update.kdelnk (unfortunally removed)
-	* Fixed WindowMaker entry in windowmanagers
+	* gnome/: DrakConf.desktop, Netscape.desktop, RpmDrake.desktop:
+	updated Lithuanian strings
 
-2000-04-26 dam's <damien@mandrakesoft.com>
+2000-03-30 00:32  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-	* Removed unused icons
-	* Changed icons/gnome-mandrake.png : new graphic charter
-	
-2000-04-21 David BAUDENS <baudens@mandrakesoft.com>
+	* gnome/: DrakConf.desktop, RpmDrake.desktop: completed Catalan
+	strings
 
-	* Adjust wmaker path
-	* Maker rpmlint happy
+2000-03-26 20:00  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-04-20	David BAUDENS  <baudens@mandrakesoft.com>
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/Netscape.desktop,
+	gnome/RpmDrake.desktop: Added Slovenian strings
 
-	* Use new icon for doc-mdk.xpm (the others will be add this week-end)
+2000-03-24 13:18  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-04-18  dam's  <damien@mandrakesoft.com>
+	* TRANSLATORS: updated translators list
 
-	* kdelnk: desktop cleaned
+2000-03-24 13:18  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-04-17  dam's  <damien@mandrakesoft.com>
+	* gnome/: DrakConf.desktop, Netscape.desktop, RpmDrake.desktop:
+	Slovakian and Norwegian updates
 
-	* kdelnk: removed KAppFinder.kdelnk
+2000-03-17 17:20  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-04-16  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+	* gnome/: DrakConf.desktop, RpmDrake.desktop: Updated Danish
+	descriptions
 
-	* window-managers: fix wmaker.
-	* bin/DrakWM: a new greatest hit.
-	
-2000-04-11  dam's  <damien@mandrakesoft.com>
+2000-03-08 16:55  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-	* new icons, new place for default background.
+	* gnome/: DrakConf.desktop, RpmDrake.desktop: Updated Dutch entries
 
-2000-04-05  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+2000-03-06 11:08  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-	* mandrake_desk.spec: adjust groups.
-	* Makefile: correct dis and rpm target.
-	* Makefile: don't need to bzip (spec-helper do this job).
-	* window-managers: fix blakbox with last blackbox package.
+	* TRANSLATORS, gnome/DrakConf.desktop, gnome/RpmDrake.desktop:
+	Added Chinese entries
 
-2000-02-02  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+2000-02-02 05:51  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-	* window-managers: Add a sawmill entry (V.Danen).
+	* mandrake_desk.spec, window-managers: "See_The_Changelog"
 
-2000-01-27  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
-	* mandrake_desk.spec: Remove the mandrake_background.xpm
-	* backgrounds/mandrake_background_*: add background from helene.
+2000-01-27 15:50  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-2000-01-10  Pixel  <pixel@mandrakesoft.com>
+	* mandrake_desk.spec: "Seethechangelog"
 
-	* sbin/kdeDesktopCleanup: fix an error case
-	* icons/mini/hd_umount.xpm: renamed in hd_unmount.xpm (for coherence)
+2000-01-27 15:44  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-2000-01-07  Frederic Lepied  <flepied@mandrakesoft.com>
+	* backgrounds/: mandrake_background_1024-1.jpg,
+	mandrake_background_1024-2.jpg, mandrake_background_1024-3.jpg:
+	"Seethechangelog"
 
-	* window-managers (NAME): KDE => kde.
+2000-01-20 11:18  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-2000-01-07  Pixel  <pixel@mandrakesoft.com>
-	* sbin/chksession: look at /etc/sysconfig/desktop to sort
+	* TRANSLATORS: updated Peter email address
 
-2000-01-06  Pixel  <pixel@mandrakesoft.com>
-	* icons/*: convert back and from .gif for kfm compliance :-/
+2000-01-10 00:20  Pixel <pixel@mandrakesoft.com>
 
-2000-01-04  Pixel  <pixel@mandrakesoft.com>
-	* sbin/kdeDesktopCleanup: perl's glob in not " " compliant :(
+	* mandrake_desk.spec: no_comment
 
-2000-01-04 Pablo Saratxga <pablo@mandrakesoft.com>
-	* gnome/*, kdelnk/*: added Latvian and Turkish entries
+2000-01-07 10:59  Pixel <pixel@mandrakesoft.com>
 
-2000-01-04 Chmouel Boudjnah <chmouel@mandrakesoft.com>
-	* kdelnk/DrakeConf: remove the call to kdesu.
-	* gnome/mandrake.links: remove the call to kdesu for DrakeConf.
+	* mandrake_desk.spec, window-managers: no_comment
 
-2000-01-03 Chmouel Boudjnah <chmouel@mandrakesoft.com>
-	* window-managers: fix wrong Enlightenment entry.
+2000-01-07 10:23  Frederic Lepied <flepied@mandrakesoft.com>
 
-1999-12-28  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+	* mandrake_desk.spec: [no log message]
 
-	* sbin/chksession: no errror when there is not a Session.
-	* mandrake_desk.spec (BuildRequires): Add a manpages for
-	chksession from camille.
+2000-01-07 10:20  Frederic Lepied <flepied@mandrakesoft.com>
 
-1999-12-27  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+	* mandrake_desk.spec:	* standard mandrake: none.
 
-	* icons/kdelnk: lot of changes (fix pablo sucks).
-	* sbin/chksession: check if root.
+2000-01-07 07:54  Pixel <pixel@mandrakesoft.com>
 
-1999-12-25 Pablo Saratxga <pablo@mandrakesoft.com>
+	* mandrake_desk.spec: no_comment
 
-	* Makefile,*.spec,gnome/*.desktop: put the handling of Gnome icons
-	on the Makefile; and added menu entries for DrakeConf and RpmDrake
+2000-01-05 23:38  Pixel <pixel@mandrakesoft.com>
 
-1999-12-24 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+	* mandrake_desk.spec: no_comment
 
-	* window-managers: various change from jerome.
+2000-01-05 19:16  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-1999-12-23 Pablo Saratxga <pablo@mandrakesoft.com>
+	* TRANSLATORS, gnome/Netscape.desktop: added Turkish entries
 
-	* gnome/mandrake.links,gnome/mandrake.links.sh,mandrake_desk.spec:
-	moved here the creation of Gnome desktop icons; that makes it
-	easier to manage, easier to update and keep in sync with KDE.
+2000-01-05 17:03  Pablo Saratxaga <pablo@mandrakesoft.com>
 
-1999-12-23 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+	* TRANSLATORS, gnome/Netscape.desktop: added Latvian entries
 
-	* kdelnk/Kppp.kdlnk: new.
+2000-01-05 00:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-1999-12-22  Pixel  <pixel@mandrakesoft.com>
-	
-	* icons/util-*: added user icons for kdm
+	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
-1999-12-22  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+2000-01-04 23:57  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
-	* sbin/fndSession: new script with the new chksession.
-	* sbin/chksession: a new greatest hit.
-	* window-managers: a new list.
+	* gnome/DrakConf.desktop: "Seethechangelog"
 
-1999-12-20 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-01-04 13:24  David Baudens <baudens@mandrakesoft.com>
 
-	* icons/*: new supermount icons.
+	* mandrake_desk.spec, window-managers: Use BBDrake & WMDrake for
+	BlackBox & Window Maker
+
+2000-01-03 02:36  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec, window-managers: "Seethechangelog"
+
+1999-12-31 03:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile: "Seethechangelog"
+
+1999-12-28 23:45  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mandrake_desk.spec: added the Gnome menu entries to the spec file
+
+1999-12-28 17:27  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec, mandrake_desk.spec:
+	"Seethechangelog"
+
+1999-12-27 17:18  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: "Seethechangelog"
+
+1999-12-27 13:56  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* gnome/: DrakConf.desktop, RpmDrake.desktop: corrected icons names
+
+1999-12-27 12:57  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec: "Seethechangelog"
+
+1999-12-27 12:53  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec: "Seethechangelog"
+
+1999-12-27 12:21  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* bin/linuxconf_kdesu: "Seethechangelog"
+
+1999-12-25 20:30  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec, gnome/DrakConf.desktop,
+	gnome/RpmDrake.desktop: added menu entries for Gnome
+
+1999-12-25 20:13  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* window-managers, mandrake_desk.spec: "Seethechangelog"
+
+1999-12-25 20:09  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec: "Seethechangelog"
+
+1999-12-25 18:25  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* window-managers, mandrake_desk.spec: "Seethechangelog"
+
+1999-12-24 13:00  Pixel <pixel@mandrakesoft.com>
+
+	* mandrake_desk.spec: no_comment
+
+1999-12-23 23:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mandrake_desk.spec: added Gnome desktop icons previously done in
+	gmc package
+
+1999-12-23 01:38  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec: "Seethechangelog"
+
+1999-12-23 00:59  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* TRANSLATORS, gnome/Netscape.desktop: added Bulgarian entries
+
+1999-12-22 03:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: "Seethechangelog"
+
+1999-12-22 03:21  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec, window-managers: "Seethechangelog"
+
+1999-12-22 03:08  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* bin/fndSession: "Seethechangelog"
+
+1999-12-21 13:18  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: "Seethechangelog"
+
+1999-12-20 14:59  Pixel <pixel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: no_comment
+
+1999-12-19 19:55  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* bin/fndSession: "Seethechangelog"
+
+1999-12-19 19:50  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec, README.CVS, mandrake_desk.spec,
+	README.CVS, mandrake_desk.spec: "Seethechangelog"
+
+1999-12-19 19:05  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* bin/fndSession, mandrake_desk.spec: "Seethechangelog"
+
+1999-12-19 19:02  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, TRANSLATORS, backgrounds/mandrake_background_1024.jpg,
+	backgrounds/mandrake_background_800.jpg, bin/linuxconf_kdesu,
+	gnome/Netscape.desktop: Initial revision
+
+1999-12-19 19:02  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* Makefile, TRANSLATORS, backgrounds/mandrake_background_1024.jpg,
+	backgrounds/mandrake_background_800.jpg, bin/linuxconf_kdesu,
+	gnome/Netscape.desktop: first
+
