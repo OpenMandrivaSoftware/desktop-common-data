@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.1
-Release:	4mdk
+Release:	5mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -112,9 +112,15 @@ for i in screensavers/*.png ; do install -m 0644 $i %buildroot/%_datadir/mdk/scr
 if [ -f %_sysconfdir/X11/window-managers.rpmsave ];then
 	%_sbindir/convertsession -f %_sysconfdir/X11/window-managers.rpmsave || :
 fi
+# Create a link to allow users to access to Mandrake's backgrounds from KDE
+[ ! -d %_datadir/wallpapers ] && install -d 0755 %_datadir/wallpapers
+[ ! -e %_datadir/wallpapers/mandrake-linux ] && ln -s %_datadir/mdk/backgrounds/ %_datadir/wallpapers/mandrake-linux
 %update_menus
 
 %postun
+# Remove link created to allow users to access to Mandrake's backgrounds from KDE
+[ -e %_datadir/wallpapers ] && rm -f %_datadir/wallpapers/mandrake-linux
+[ $(ls %_datadir/wallpapers/ | wc -l) -eq 0 ] && rm -fr %_datadir/wallpapers/
 %clean_menus
 
 
@@ -160,6 +166,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Jun 04 2003 David BAUDENS <baudens@mandrakesoft.com> 
+- Create a link to allow users to access to Mandrake's backgrounds from KDE
+
 * Thu Mar 13 2003 David BAUDENS <baudens@mandrakesoft.com> 9.1-4mdk
 - Add icons to applications which miss one
 - Remove some broken applications
@@ -680,7 +689,7 @@ rm -fr %buildroot
 - added lt, ru translations
 - added kdelnk/Dos_C.kdelnk icon (will be used as a pattern 
   by initscripts' kdeicons when creating icons for the FAT partitions)
-- the horribly big *.xpm backgrounds are now created at %install time
+- the horribly big *.xpm backgrounds are now created at %%install time
   with 'convert'; that way we avoid the bzip2 taking forever each time
   a new version is done. 
 
