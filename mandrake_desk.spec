@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	2mdk
+Release:	3mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -13,7 +13,18 @@ Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 Requires:   menu
-BuildRequires:	kdelibs-devel libcapplet-devel
+BuildRequires:	kdelibs-devel libcapplet-devel gdk-pixbuf-devel
+BuildRequires:	XFree86-static-libs
+BuildRequires:	arts
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	control-center-devel
+BuildRequires:	freetype2
+BuildRequires:	gcc-c++
+BuildRequires:	gdk-pixbuf-devel
+BuildRequires:	gettext
+BuildRequires:	kdelibs-devel
+BuildRequires:	texinfo
 
 %description
 This package contains useful icons, backgrounds and others goodies for the
@@ -302,6 +313,9 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Sun Jan 27 2002 Stefan van der Eijk <stefan@eijk.nu> 8.2-3mdk
+- BuildRequires
+
 * Thu Jan 24 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-2mdk
 - Fix path used for images in krozat
 
