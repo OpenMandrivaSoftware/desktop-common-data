@@ -1,8 +1,10 @@
 [KDE Desktop Entry]
-Name[fr]=Application
+Name=Internet connection
+Name[es]=Conexión a Internet
+Name[fr]=Connexion à l'Internet
+Name[wa]=Raloyaedje al rantoele daegnrece
 SwallowExec=
 SwallowTitle=
-Comment[fr]=
 BinaryPattern=
 Name=Application
 MimeType=
@@ -10,7 +12,5 @@ Exec=/usr/bin/kppp
 Icon=kppp.xpm
 TerminalOptions=
 Path=
-Name[pt_BR]=Aplicativo
 Type=Application
 Terminal=0
-Name[no]=Applikasjon
