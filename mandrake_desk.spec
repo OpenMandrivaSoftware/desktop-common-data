@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 3mdk
+%define release 4mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
