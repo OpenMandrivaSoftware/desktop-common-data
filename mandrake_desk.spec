@@ -4,7 +4,6 @@ Version:	8.1
 Release:	13mdk
 License:	GPL
 Group:		System/Configuration/Other
-Icon:		mandrake-small.xpm
 Packager:	David BAUDENS <baudens@mandrakesoft.com>
 
 # get the source from our cvs repository (see
