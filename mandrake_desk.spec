@@ -1,4 +1,4 @@
-%define	release	18mdk
+%define	release	19mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Wed May 10 2000 dam's <damien@mandrakesoft.com> 1.0.3-19mdk
+- corrected bugy script. 
+
 * Tue May  9 2000 dam's <damien@mandrakesoft.com> 1.0.3-18mdk
 - added Netscape on desktop.
 
