@@ -1,0 +1,18 @@
+# KDE Config File
+[KDE Desktop Entry]
+Name=Floppy disk
+Icon=3floppy_mount.xpm
+#UnmountIcon=3floppy_unmount.xpm
+#Dev=/dev/fd0
+#MountPoint=/mnt/floppy
+Link=/mnt/floppy
+Comment=File System Device
+Comment[fi]=Tiedostosysteemi
+Comment[pt]=Dispositivo com Sistema de Ficheiros
+Comment[fr]=Périphérique avec système de fichiers
+Comment[pl]=Urz±dzenie
+Comment[it]=Dispositivo con  Sistema File
+Comment[de]=Dateisystem
+ReadOnly=0
+#FSType=Default
+Type=Link

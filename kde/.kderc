@@ -1,0 +1,28 @@
+# KDE Config File
+[KDE]
+widgetStyle=Windows 95
+macStyle=off
+[Standard Keys]
+[WM]
+titleFont=helvetica,12,5,iso-8859-1,75,0
+End=CTRL+End
+Next=PageDown
+Copy=CTRL+C
+Close=CTRL+W
+Find=CTRL+F
+Quit=CTRL+Q
+Insert=CTRL+Insert
+Undo=CTRL+Z
+Print=CTRL+P
+Open=CTRL+O
+Replace=CTRL+R
+Help=F1
+Cut=CTRL+X
+Save=CTRL+S
+Prior=PageUp
+Home=CTRL+Home
+New=CTRL+N
+Paste=CTRL+V
+[General]
+fixedFont=fixed,10,5,iso-8859-1,50,0
+font=helvetica,12,5,iso-8859-1,50,0
