@@ -20,6 +20,7 @@ install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/desktop-links
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/System
+	mkdir -p $(RPM_BUILD_ROOT)/usr/share/faces
 	install -m644 man/*8 $(RPM_BUILD_ROOT)/$(mandir)/man8/
 	install -m755 sbin/* $(RPM_BUILD_ROOT)/usr/sbin/
 	install -m755 bin/* $(RPM_BUILD_ROOT)/usr/bin/
@@ -44,6 +45,7 @@ install:
 		$(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
 	install -m644 gnome/mandrake.links \
 		$(RPM_BUILD_ROOT)/usr/lib/desktop-links
+	install -m644 faces/* $(RPM_BUILD_ROOT)/usr/share/faces
 
 
 dis: 

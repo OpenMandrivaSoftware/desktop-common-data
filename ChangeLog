@@ -1,3 +1,7 @@
+2000-08-22 David BAUDNS <baudens@mandrakesoft.com>
+
+	* Move user* pixmaps in faces (/usr/share/faces/)
+
 2000-07-22  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* Makefile: Add mandir to be BM compliant.
