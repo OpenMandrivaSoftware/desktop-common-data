@@ -162,6 +162,7 @@
 ?package(quanta): needs="kde" kde_filename="quanta" section="Use the Internet" title="Create Web pages" icon="quanta.png" command="quanta" mimetypes="text/html" kde_opt=""
 
 # Dialog using video conference
+?package(gnomemeeting): command="/usr/bin/gnomemeeting" needs="x11" icon="gnomemeeting.png" section="Use the Internet" title="Dialog using video conference"
 
 # Read and send mail
 ?package(kdenetwork-kmail): needs="kde" kde_filename="KMail" section="Use the Internet" title="Read and send mail" icon="kmail.png" command="kmail" kde_command="kmail -caption \"%c\" %i %m" kde_opt="\\nDocPath=kmail/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
@@ -172,7 +173,8 @@
 
 
 ## View, modify or create a picture
-# Import photos
+# Manage, show and print your photos
+?package(flphoto):command="/usr/bin/flphoto" title="Manage, show and print your photos" needs="x11" section="View, modify, or create graphics" icon="graphics_section.png"
 
 # Manipulate pictures
 ?package(gimp): command="gimp" icon="wilbur.png" section="View, modify, or create graphics" title="Manipulate pictures" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;"
