@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	10mdk
+Release:	11mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -74,33 +74,30 @@ This package contains the default Mandrake Linux screensaver for KDE.
 find . -type 'd' -name 'CVS' | xargs rm -fr
 
 %build
-(
 cd eazel-engine
 %configure
 %make
-)
+cd -
 
-(
 cd krootwarning
 make -f admin/Makefile.common
 ./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama --disable-rpath
 %make
-)
+cd -
 
-(
 cd krozat
 make -f admin/Makefile.common
 ./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama --disable-rpath
 %make
-)
+cd -
 
 %install
 rm -rf %buildroot
 
-(
 cd eazel-engine
 %makeinstall_std
-)
+cd -
+
 mkdir -p $RPM_BUILD_ROOT{%{_menudir},%{_datadir}/control-center/capplets/Advanced}
 cat << EOF > $RPM_BUILD_ROOT%{_menudir}/mdk-eazel-engine-capplet
 ?package(mdk-eazel-engine-capplet):command="%{_bindir}/eazel-engine-capplet" \
@@ -108,15 +105,14 @@ needs="gnome" section="Configuration/Gnome/Advanced" title="Crux GTK+ Theme" \
 longtitle="Configuration applet for Crux GTK+ theme"
 EOF
 cp -f $RPM_BUILD_ROOT%_datadir/gnome/apps/Settings/Desktop/eazel-engine-properties.desktop $RPM_BUILD_ROOT%{_datadir}/control-center/capplets/Advanced
-(
+
 cd krootwarning
 %makeinstall_std
-)
+cd -
 
-(
 cd krozat
 %makeinstall_std
-)
+cd -
 
 mkdir -p %buildroot/%_datadir/themes/Mandrake/gtk
 install -m644 gtkrc %buildroot/%_datadir/themes/Mandrake/gtk
@@ -322,6 +318,10 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Tue Feb 26 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-11mdk
+- Add/remove some icons
+- Don't allow spec to skip a build or install step without stop
+
 * Mon Feb 25 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-10mdk
 - Fix mdk-eazel-engine text color (Thanks to Brice Figureau)
 - Update po files
