@@ -29,7 +29,7 @@ SCRIPT:
 }
 exec /usr/bin/enlightenment
 --@@--
-NAME=sawmill
+NAME=Sawmill
 DESC=A new lightweight window manager
 EXEC=/usr/bin/sawmill
 SCRIPT:
