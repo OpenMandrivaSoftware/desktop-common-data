@@ -171,3 +171,7 @@
 
 # Use a terminal emulator
 ?package(kdebase-konsole): needs="kde" kde_filename="konsole" section="Administer your system" title="Use a terminal emulator" icon="konsole.png" command="konsole" kde_opt="\\nEncoding=UTF-8\\nDocPath=konsole/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nGenericName=Terminal Program\\nX-DCOP-ServiceType=Multi\\nX-KDE-AuthorizeAction=shell_access\\n"
+
+# .hidden
+?package(kdepim-kontact): needs="kde" kde_filename="kontact-summary" section=.hidden title="Kontact" icon="knotes.png" command="kontact --module summary" kde_opt="\\nEncoding=UTF-8\\nDocPath=knotes/index.html\\nTerminal=0\\nGenericName=Popup Notes\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
+
