@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.2
-Release: 	3mdk
+Release: 	4mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Mar 29 2005 Frederic Lepied <flepied@mandrakesoft.com> 10.2-4mdk
+- www-browser: test if the $BROWSER variable is set to something valid (bug #14903).
+
 * Wed Mar 23 2005 Frederic Crozat <fcrozat@mandrakesoft.com> 10.2-3mdk 
 - don't use .desktop files for order directive
 
