@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
-Version:	8.2
-Release:	13mdk
+Version:	9.0
+Release:	1mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -126,10 +126,10 @@ mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/X11/wmsession.d/
 rm -f special/mandrake-small.xpm
 
 install -d %buildroot/%_datadir/faces/
-cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/faces/default.png
-cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/mdk/faces/default.png
+cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/faces/default.png
+#cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/mdk/faces/default.png
 # Dadou - 18mdk - This is needed for GDM
-cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/mdk/faces/user-default-mdk.png
+cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/mdk/faces/user-default-mdk.png
 
 install -d %buildroot/%_datadir/mdk/gnome-desktop/
 for l in de en fr it; do
@@ -323,6 +323,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Jul 18 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-1mdk
+- Remove old users images. Add new images. Feedback welcome using cooker@linux-mandrake.com.
+
 * Fri Mar 15 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-13mdk
 - Fix text color in progress bar in Mandrake GTK theme 
 
