@@ -1,3 +1,41 @@
+2005-03-09 14:43  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec, bin/www-browser, bin/xvt: - change
+	  www-browser to use BROWSER variable if set or use running
+	  environment	settings if set.  - xvt script to replace
+	  alternative : choose programs to start based on   running
+	  environment
+
+2005-03-09 14:37  Laurent Montel <lmontel@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/menu, menu/menu-simplified: Remove
+	  alias_inline
+
+2005-03-02 10:57  Laurent Montel <lmontel@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/menu-simplified: Fix order into
+	  simplified menu
+
+2005-03-01 17:20  Laurent Montel <lmontel@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/menu: Fix menu order for Menuname with
+	  id
+
+2005-03-01 16:18  Laurent Montel <lmontel@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/menu: Recreate order as in 10.1
+
+2005-03-01 09:43  Laurent Montel <lmontel@mandrakesoft.com>
+
+	* dm/: KdmGreeterTheme.desktop, mdk-kde.xml: Add kdm theme
+
+2005-02-28 18:08  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec, dm/GdmGreeterTheme.desktop,
+	  dm/disconnect.png, dm/languages.png, dm/mdk-gdm.xml,
+	  dm/reboot.png, dm/screenshot.png, dm/sessions.png, dm/star.png,
+	  dm/system.png: Add shared theme for GDM/KDM
+
 2005-01-25 19:16  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* mandrake_desk.spec, menu/defaultlayout-simplified.menu,
@@ -1723,11 +1761,11 @@
 
 	* mandrake_desk.spec: Update .spec
 
-2000-04-20 19:15  FranÃ§ois Pons <fpons@mandrakesoft.com>
+2000-04-20 19:15  Fançois Pons <fpons@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers: [no log message]
 
-2000-04-20 16:48  FranÃ§ois Pons <fpons@mandrakesoft.com>
+2000-04-20 16:48  Fançois Pons <fpons@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers: [no log message]
 
