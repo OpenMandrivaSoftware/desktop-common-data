@@ -24,6 +24,7 @@ do
 		es*) CAPTION="Conexión a Internet" ;;
 		et*) CAPTION="Internetiühendus" ;;
 		fr*) CAPTION="Connexion à l'Internet" ;;
+		gl*) CAPTION="Conexión a Internet" ;;
 		hr*) CAPTION="Veza s InterNetom" ;;
 		hu*) CAPTION="Internet kapcsolat" ;;
 		id*) CAPTION="Koneksi Internet" ;;
