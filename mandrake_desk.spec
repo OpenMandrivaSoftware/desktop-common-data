@@ -75,7 +75,6 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Dec 23 1999 Pablo Saratxaga <pablo@mandrakesoft.com>
 - included the mandrake.links* files formerly in gmc package
 
->>>>>>> 1.11
 * Wed Dec 22 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - sbin/fndSession: new script with the new chksession.
 - sbin/chksession: a new greatest hit.

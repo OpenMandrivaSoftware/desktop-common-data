@@ -59,7 +59,7 @@ DESC=A Light Window-Manager
 SCRIPT:
 exec /usr/X11R6/bin/icewm
 --@@--
-NAME=Fvwm1   
+NAME=Fvwm1
 EXEC=/usr/X11R6/bin/fvwm
 DESC=A very stable and light window manager
 SCRIPT:
