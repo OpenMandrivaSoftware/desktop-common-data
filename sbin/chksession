@@ -85,6 +85,10 @@ $file = $test ? './window-managers' : '/etc/X11/window-managers' unless $file;
 die "$file don't exist\n" unless -r $file;
 $remove ? remove_entry($remove, $file) : parse_file ($file);
 
+sub cat { my ($f) = @_; local *F; open F, $f; join '', <F> }
+my ($e) = cat("/etc/sysconfig/desktop") =~ /(\S+)/;
+@lf = sort { $b =~ /$e/i <=> $a =~ /$e/i } @lf;
+
 if ($kdm) {
   $session="SessionTypes=";
   for(@lf) { $session .= /$lf[-1]/ ? "$_;failsafe;default" : "$_;"  }
