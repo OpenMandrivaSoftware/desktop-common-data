@@ -167,8 +167,8 @@ if [ "$CAPTION" = "" ]; then CAPTION="DrakConf" ; fi
 #do
 #	if [ "$CAPTION" != "" ]; then break ; fi
 #	case "$i" in
-"		en*) CAPTION="Netscape" ;;
-"		ja*) CAPTION="ネットスケープ" ;;
+#		en*) CAPTION="Netscape" ;;
+#		ja*) CAPTION="ネットスケープ" ;;
 #		ko*) CAPTION="掛什追戚覗" ;;
 #	esac
 #done
