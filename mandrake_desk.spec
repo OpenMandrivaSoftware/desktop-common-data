@@ -70,7 +70,7 @@ This package contains the default Mandrake Linux screensaver for KDE.
 
 %prep
 
-%setup -q -n %name
+%setup -q
 find . -type 'd' -name 'CVS' | xargs rm -fr
 
 %build
@@ -323,6 +323,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Wed Feb 20 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-8mdk
+- Fix building of package
 - Fix english title for "What to do?" menu (Thanks to Till and Phil Lavigna)
 
 * Mon Feb 18 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-7mdk
