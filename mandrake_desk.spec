@@ -58,11 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
-* Fri Jan  7 2000 Frederic Lepied <flepied@mandrakesoft.com> 1.0.1-15mdk
-
-- window-managers (NAME): KDE => kde.
-
 * Fri Jan  7 2000 Pixel <pixel@mandrakesoft.com>
+- window-managers (NAME): KDE => kde.
 - sbin/chksession: look at /etc/sysconfig/desktop to sort
 
 * Thu Jan  6 2000 Pixel <pixel@mandrakesoft.com>
