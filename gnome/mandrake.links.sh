@@ -30,6 +30,7 @@ do
 		hu*) CAPTION="Internet kapcsolat" ;;
 		id*) CAPTION="Koneksi Internet" ;;
 		it*) CAPTION="Connessione a Internet" ;;
+		is*) CAPTION="Lýðnets tenging" ;;
 		nl*) CAPTION="Internet verbinding" ;;
 		no*) CAPTION="Oppkobling Internett" ;;
 		ro*) CAPTION="Conectare la Internet" ;;
