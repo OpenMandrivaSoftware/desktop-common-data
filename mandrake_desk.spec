@@ -1,7 +1,5 @@
-# DO NOT MODIFY THE VERSION HERE, modify in the CVS
-%define	version 1.0.1
-#
-%define release 19mdk
+%define	version 1.0.2
+%define release 1mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -54,6 +52,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Wed Apr  5 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.2-1mdk
+- window-managers: fix blakbox with last blackbox package.
+
 * Wed Feb  2 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.1-19mdk
 - window-managers: Add a sawmill entry (V.Danen).
 

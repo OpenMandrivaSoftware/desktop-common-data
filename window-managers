@@ -40,7 +40,8 @@ ICON=BlackBox.xpm
 EXEC=/usr/X11R6/bin/blackbox
 DESC=A Light but nice looking window manager
 SCRIPT:
-exec /usr/X11R6/bin/bbdrake
+/usr/X11R6/bin/bsetroot -solid Navy
+exec /usr/X11R6/bin/blackbox
 --@@--
 NAME=AfterStep
 ICON=AfterStep.xpm

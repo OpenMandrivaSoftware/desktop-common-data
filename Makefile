@@ -1,28 +1,11 @@
 NAME = mandrake_desk
-VERSION = 1.0.1
+VERSION = $(shell awk '/define version/ { print $$3 }' $(NAME).spec)
 
 all:
 	@echo "Run make install"
 
 clean:
 	find . -type d -name '.xvpics'|xargs rm -rf
-
-dis: clean
-	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
-	mkdir -p $(NAME)-$(VERSION)
-	find . -not -name "$(NAME)-$(VERSION)"|cpio -pd $(NAME)-$(VERSION)/
-	find $(NAME)-$(VERSION) -type d -name CVS -o -name .cvsignore -o -name unused |xargs rm -rf
-	perl -p -i -e 's|^%define version.*|%define version $(VERSION)|' $(NAME).spec
-	tar cf ../$(NAME)-$(VERSION).tar $(NAME)-$(VERSION)
-	bzip2 -9f ../$(NAME)-$(VERSION).tar
-	rm -rf $(NAME)-$(VERSION)
-
-rpm: dis ../mandrake_desk-$(VERSION).tar.bz2 $(RPM)
-	cp -f ../mandrake_desk-$(VERSION).tar.bz2 $(RPM)/SOURCES
-	cp -f mandrake_desk.spec $(RPM)/SPECS/
-	cp -f special/mandrake-small.xpm $(RPM)/SOURCES/
-	-rpm -ba mandrake_desk.spec
-	rm -f ../mandrake_desk-$(VERSION).tar.bz2
 
 install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/sbin
@@ -57,3 +40,19 @@ install:
 		$(RPM_BUILD_ROOT)/usr/lib/desktop-links
 	bzip2 -9f $(RPM_BUILD_ROOT)/usr/man/*/*
 
+
+dis: 
+	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
+	cvs commit
+	mkdir -p $(NAME)-$(VERSION)
+	find . -not -name "$(NAME)-$(VERSION)"|cpio -pd $(NAME)-$(VERSION)/
+	find $(NAME)-$(VERSION) -type d -name CVS -o -name .cvsignore -o -name unused |xargs rm -rf
+	tar cf ../$(NAME)-$(VERSION).tar $(NAME)-$(VERSION)
+	bzip2 -9f ../$(NAME)-$(VERSION).tar
+	rm -rf $(NAME)-$(VERSION)
+
+rpm: dis ../$(NAME)-$(VERSION).tar.bz2 $(RPM)
+	cp -f ../$(NAME)-$(VERSION).tar.bz2 $(RPM)/SOURCES
+	cp -f $(NAME).spec $(RPM)/SPECS/
+	-rpm -ba --clean --rmsource $(NAME).spec
+	rm -f ../$(NAME)-$(VERSION).tar.bz2
