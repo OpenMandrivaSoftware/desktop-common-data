@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2001-09-17 15:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: _translatorinfo.cpp:1 _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr ""
+
+#: _translatorinfo.cpp:3 _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr ""
+
+#: main.cpp:27 main.cpp:41
+msgid "Krootwarning"
+msgstr ""
+
+#: krootwarning.cpp:40
+msgid "Warning"
+msgstr ""
+
+#: krootwarning.cpp:40
+msgid "Logout"
+msgstr ""
+
+#: krootwarning.cpp:40
+msgid "Continue"
+msgstr ""
+
+#: krootwarning.cpp:66
+msgid "You are running a graphical interface as root."
+msgstr ""
+
+#: krootwarning.cpp:67
+msgid ""
+"This is a bad idea because as root, you can damage your system, and nothing "
+"will stop you."
+msgstr ""
+
+#: krootwarning.cpp:68
+msgid "Click on "
+msgstr ""
+
+#: krootwarning.cpp:68
+msgid "'Continue'"
+msgstr ""
+
+#: krootwarning.cpp:68
+msgid " if you really know what you are doing."
+msgstr ""
+
+#: krootwarning.cpp:69
+msgid "Otherwise, please click on "
+msgstr ""
+
+#: krootwarning.cpp:69
+msgid "'Logout' "
+msgstr ""
+
+#: krootwarning.cpp:69
+msgid "and read your manual "
+msgstr ""
+
+#: krootwarning.cpp:70
+msgid "to know how to add a non-privileged user account "
+msgstr ""
+
+#: krootwarning.cpp:71
+msgid "to the system."
+msgstr ""
+
+#: krootwarning.cpp:74
+msgid "Show this window again."
+msgstr ""
