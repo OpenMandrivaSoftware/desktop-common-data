@@ -203,7 +203,6 @@ rm -fr %buildroot
 %doc TRANSLATORS
 #
 #
-%_bindir/DrakWM
 %_bindir/createbackground.sh
 %_bindir/gnomedesktop-network
 %_bindir/print-cups.sh
@@ -324,10 +323,13 @@ rm -fr %buildroot
 #
 %_menudir/krozat
 
+
+
 %changelog
 * Tue Feb 26 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-11mdk
 - Add/remove some icons
 - Don't allow spec to skip a build or install step without stop
+- Remove DrakWM
 
 * Mon Feb 25 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-10mdk
 - Fix mdk-eazel-engine text color (Thanks to Brice Figureau)
