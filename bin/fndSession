@@ -4,6 +4,8 @@
 
 LIST="SessionTypes"
 
+TMP=$(/bin/mktemp /tmp/.kdm.XXXXXXX)
+
 [ -x /usr/bin/kde ] && {
 LIST="$LIST=kde"; FIRST=yes
 }
@@ -62,5 +64,5 @@ if [ $FIRST = "yes" ];then
 else
 	LIST="$LIST=default;failsafe;"
 fi
-sed "s/^SessionTypes.*/"$LIST"/" /usr/share/config/kdmrc > /tmp/$$.kdmrc && \
-mv /tmp/$$.kdmrc /usr/share/config/kdmrc
+sed "s/^SessionTypes.*/"$LIST"/" /usr/share/config/kdmrc > $TMP && \
+mv $TMP /usr/share/config/kdmrc

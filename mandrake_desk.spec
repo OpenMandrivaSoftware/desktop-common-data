@@ -10,6 +10,8 @@ Copyright: GPL
 Group: Base
 Icon: mandrake-small.xpm
 BuildRoot: /tmp/%{name}-buildroot
+# get the source from our cvs repository (see
+# http://www.linuxmandrake.com/en/cvs.php3)
 Source: mandrake_desk-%{version}.tar.bz2
 BuildArchitectures: noarch
 BuildRequires: /usr/X11R6/bin/convert
