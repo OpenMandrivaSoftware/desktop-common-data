@@ -124,7 +124,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Thu Apr 12 2001 Daouda LO <daouda@mandrakesoft.com> 8.0-6mdk
 - remove kde dir and kdelnks 
-- cvs resync 
+- big cleanups and cvs resync 
 
 * Wed Apr 4 2001 Daouda Lo <daouda@mandrakesoft.com> 8.0-5mdk
 - fix zip mount point typo
