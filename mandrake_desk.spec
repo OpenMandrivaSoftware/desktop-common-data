@@ -1,4 +1,4 @@
-%define	release	12mdk
+%define	release	13mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Thu May 04 2000 dam's <damien@mandrakesoft.com> 1.0.3-13mdk
+- cleaned gnome desktop.
+
 * Sun Apr 30 2000 dam's <damien@mandrakesoft.com> 1.0.3-12mdk
 - re-added XKill in kdelnk. 
 
