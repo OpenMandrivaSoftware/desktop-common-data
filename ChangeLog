@@ -1,3 +1,15 @@
+2004-08-31 09:37  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* mandrake_desk.spec: 10.1-6mdk
+
+2004-08-31 09:36  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* bin/www-browser: first version
+
+2004-08-31 09:35  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* Makefile: added standard rules to build packages
+
 2004-08-27 11:51  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Fix typo in gnome-cd
