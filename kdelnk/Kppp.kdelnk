@@ -1,3 +1,4 @@
+# KDE Config File
 [KDE Desktop Entry]
 Name=Internet connection
 Name[bg]=хМРЕПМЕР бПЗГЙЮ
@@ -17,11 +18,12 @@ Name[ro]=Conectare la Internet
 Name[ru]=Internet-соединение
 Name[uk]=З'╓днання з ╕нтернетом
 Name[wa]=Raloyaedje al rantoele daegnrece
-SwallowExec=
 SwallowTitle=
-BinaryPattern=
-Name=Application
-MimeType=
+SwallowExec=
+Comment=
+BinaryPattern=kppp
+Name=Kppp
+MimeType=application/x-rpm;
 Exec=/usr/bin/kppp
 Icon=kppp.xpm
 TerminalOptions=

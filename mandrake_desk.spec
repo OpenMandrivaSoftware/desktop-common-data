@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 4mdk
+%define release 5mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -57,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/lib/desktop-links/mandrake.links
 
 %changelog
+* Mon Dec 27 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+- Various icons changes.
+
 * Fri Dec 24 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - window-managers: various change from (jerome).
 - kdelnk/Kppp.kdlnk: (new).
