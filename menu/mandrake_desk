@@ -3,7 +3,7 @@
 ?package(kdebase-progs): needs="kde" kde_filename="Kfind" section="/" title="Find files" icon="kfind.png" command="kfind" kde_command="kfind -caption \"%c\" %i %m %f" multiple_files="false" accept_url="false" kde_opt="\\nBinaryPattern=kfind;\\nProtocols=file;\\nDocPath=kfind/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # File manager
-?package(kdebase-progs): needs="kde" kde_filename="Home" section="/" title="Manage your files" icon="folder_home.png" command="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
+?package(kdebase-progs): needs="kde" kde_filename="Home" section="/" title="Manage your files" icon="home-mdk.png" command="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
 
 
 
@@ -100,13 +100,26 @@
 # Diagrams
 ?package(dia): needs="x11" section="Use office tools" title="Create flowcharts and diagrams" command="/usr/bin/dia" icon="dia.png"
 
+# Manage your contacts
+?package(kdepim-kaddressbook): needs="x11" kde_filename="kaddressbook" section="Use office tools" title="Manage your contacts" icon="kaddressbook.png" command="kaddressbook" mimetypes="text/x-vcard" kde_opt="\\nEncoding=UTF-8\\nDocPath=kaddressbook/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nServiceTypes=KParts/ReadOnlyPart;Browser/View\\nX-KDE-Library=libkaddressbookpart"
+
 # Manage your finances
+?package(gnucash): command="/usr/bin/gnucash" icon="gnucash.png" needs="x11" section="Use office tools" title="Manage your finances"
+
+# Manage your projects
+?package(mrproject):command="mrproject" needs="x11" section="Use office tools" title="Manage your projects" icon="taskmanagement_section.png" startup_notify="true"
 
 # Manage your time
+package(kdepim-korganizer): needs="x11" kde_filename="korganizer" section="Use office tools" title="Manage your time" icon="korganizer.png" command="korganizer" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nServiceTypes=Browser/View\\nX-KDE-Library=libkorganizer\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
 
 # Send a fax
-?package(kdegraphics-kfax): needs="kde" kde_filename="kdeprintfax" section="Use office tools" title="Send a fax" icon="kdeprintfax.png" command="kdeprintfax %u" kde_command="kdeprintfax -caption \"%c\" %i %m %u" kde_opt="\\nMiniIcon=kdeprintfax\\nTerminal=0"
+?package(kdebase-kdeprinterfax): needs="kde" kde_filename="kdeprintfax" section="Use office tools" title="Send a fax" icon="kdeprintfax.png" command="kdeprintfax %u" kde_command="kdeprintfax -caption \"%c\" %i %m %u" kde_opt="\\nMiniIcon=kdeprintfax\\nTerminal=0"
 
+# Write and stick notes
+?package(kdepim-knotes): needs="kde" kde_filename="knotes" section="Use office tools" title="Write and stick notes" icon="knotes.png" command="knotes" kde_opt="\\nEncoding=UTF-8\\nDocPath=knotes/index.html\\nTerminal=0\\nGenericName=Popup Notes\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
+
+# Set up reminder messages
+?package(kdepim-korganizer): needs="x11" kde_filename="kalarm" section="Use office tools" title="Set up reminder messages" icon="kalarm.png" command="kalarm" kde_command="kalarm -caption \"%c\" %i" kde_opt="\\nEncoding=UTF-8\\nDocPath=kalarm/index.html\\nGenericName=Reminder Message Scheduler\\nTerminal=0\\nX-DCOP-ServiceType=Unique\\nX-KDE-StartupNotify=true"
 
 
 
