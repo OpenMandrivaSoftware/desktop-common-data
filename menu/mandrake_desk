@@ -103,7 +103,7 @@
 ?package(totem): 	command="/usr/bin/totem" 	needs="X11" 	section="Enjoy music and video" 	icon="totem.png" 	mimetypes="video/mpeg,video/msvideo,video/quicktime,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,application/x-ogg,audio/x-mp3,audio/x-mpeg,video/x-fli,audio/x-wav,audio/x-mpegurl,audio/x-ms-asf" 	accept_url="true" 	multiple_files="true" 	title="Watch videos" 	longtitle="Play movies and songs" 	startup_notify="true" 	kde_opt="InitialPreference=15"
 
 # Edit videos
-?package(gnome-media): needs="x11" command="" section="Enjoy music and video" title="Edit videos" icon="/usr/share/pixmaps/gnome-grecord.png" startup_notify="true"
+?package(kdenlive): needs="x11" kde_filename="kdenlive" section="Enjoy music and video" title="Edit videos" icon="kdenlive.png" command="kdenlive" kde_command="kdenlive -caption \"%c\" %i %m  " longtitle="Nonlinear video editor for KDE" kde_opt="\\nEncoding=UTF-8\\nDocPath=kdenlive/index.html\\nTerminal=0"
 
 # Watch television
 ?package(xawtv): command="XawTV" icon="video_section.png" section="Enjoy music and video" title="Watch television" longtitle="The X11 Video4Linux Stream Capture Viewer" needs="x11"
@@ -161,7 +161,7 @@
 ?package(k3b): needs="x11" kde_filename="k3b" section="Administer your system" title="Burn CDs-DVDs" icon="k3b.png" command="k3b" longtitle="CD writing program" mimetypes="application/x-k3b" kde_opt="\\nDocPath=k3b/index.html\\nTerminal=false\\nX-KDE-NativeMimeType=application/x-k3b\\n"
 
 # Backup your data
-##########FIXME
+?package(drakxtools): needs="x11" icon="drakconf.png" section="Administer your system" title="Backup your data" command="/usr/sbin/drakbackup"
 
 # Compress and decompress files
 ?package(kdeutils-ark): needs="x11" kde_filename="ark" section="Administer your system" title="Compress and decompress files" icon="ark.png" command="ark" kde_command="ark -caption \"%c\" %i %m %U" mimetypes="application/x-gzip,application/x-lha,application/x-tar,application/x-tgz,application/x-tbz,application/x-zip,application/x-bzip,application/x-tzo,application/x-lzop,application/x-rar,application/x-zoo,application/x-tarz,application/x-archive,application/x-bzip2,application/x-jar,application/x-deb" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nGenericName=Archiving Tool\\nTerminalOptions=\\nPath=\\nDocPath=ark/index.html\\nTerminal=0\\nSwallowExec=\\nSwallowTitle=\\nBinaryPattern=ark;\\nX-DCOP-ServiceType=Unique\\n"
