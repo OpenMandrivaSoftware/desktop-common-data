@@ -14,7 +14,7 @@ install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/{s,}bin
 	mkdir -p $(RPM_BUILD_ROOT)/$(mandir)/man8/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/
-	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{faces,icons,icons/large,icons/mini,pixmaps/backgrounds/linux-mandrake}
+	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{mdk/faces,icons,icons/large,icons/mini,pixmaps/backgrounds/linux-mandrake}
 	mkdir -p $(RPM_BUILD_ROOT)/etc/X11/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk
 	mkdir -p $(RPM_BUILD_ROOT)/etc/skel/Desktop
@@ -38,7 +38,7 @@ install:
 
 	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
 
-	install -m644 faces/* $(RPM_BUILD_ROOT)/usr/share/faces
+	install -m644 faces/* $(RPM_BUILD_ROOT)/usr/share/mdk/faces
 
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
 	cp gnome/mandrake.links.sh $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts/mandrake.links.sh

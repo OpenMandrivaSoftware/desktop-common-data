@@ -101,13 +101,9 @@ mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
 
 rm -f special/mandrake-small.xpm
 
-cd $RPM_BUILD_ROOT%_datadir/faces
-mkdir -p $RPM_BUILD_ROOT%_datadir/mdk/faces
-mv * $RPM_BUILD_ROOT%_datadir/mdk/faces
-cp $RPM_BUILD_ROOT%_datadir/mdk/faces/user-hat-mdk.png root.png
-cp root.png root
-cp $RPM_BUILD_ROOT%_datadir/mdk/faces/man.png default.png
-cd -
+cp %buildroot/%_datadir/mdk/faces/user-hat-mdk.png %buildroot/%_datadir/faces/root.png
+cp %buildroot/%_datadir/faces/root.png %buildroot/%_datadir/faces/root
+cp %buildroot/%_datadir/mdk/faces/man.png default.png
 
 cd $RPM_BUILD_ROOT%_datadir/pixmaps/backgrounds/linux-mandrake
 ln -s ICE-640.png PP5-640.png
@@ -198,10 +194,6 @@ rm -rf $RPM_BUILD_ROOT
 #
 #
 %_sbindir/*
-#
-#
-%dir %_datadir/faces/
-%_datadir/faces/*
 #
 #
 %_iconsdir/*.xpm
