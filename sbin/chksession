@@ -124,5 +124,13 @@ if ($xsession) {
   exit (0);
 }
 
-print shift @lf, "\n" if $first;
-if ($list) { my $p; for(@lf) { $p .= /$lf[-1]/ ? "$_ default failsafe" : "$_ " } print "$p\n"; }
+@lf ? print shift @lf, "\n" : print "Default\n"
+  if $first;
+
+if ($list) { 
+  if (@lf) {
+    my $p; for(@lf) { $p .= /$lf[-1]/ ? "$_ default failsafe" : "$_ " } print "$p\n";
+ } else {
+    print "Default\n";
+  }
+}

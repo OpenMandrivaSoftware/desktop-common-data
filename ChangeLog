@@ -1,3 +1,7 @@
+1999-12-28  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+
+	* mandrake_desk.spec (BuildRequires): Add a manpages for chksession from camille.
+
 1999-12-27  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* icons/kdelnk: lot of changes (fix pablo sucks).
