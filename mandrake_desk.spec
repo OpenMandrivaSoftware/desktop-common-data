@@ -1,6 +1,6 @@
 %define release 2mdk
 %define name mandrake_desk
-%define version 1.0.3
+%define version 1.0.4
 
 Summary: The Desktop configuration files for Linux Mandrake.
 Name: %{name}
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Mon Apr 14 2000 dam's <damien@mandrakesoft.com> 1.0.3-3mdk
+- removed kdelnk/KAppfinder.kdelnk
+
 * Sun Apr 16 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.3-2mdk
 - DrakWM: a new greatest hit.
 
