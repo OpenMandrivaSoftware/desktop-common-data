@@ -1,12 +1,13 @@
 # KDE Config File
 [KDE Desktop Entry]
+Comment[fr]=Connexion à Internet
 Name=Internet connection
 Name[bg]=Èíòåğíåò Âğúçêà
 Name[ca]=Connexió a Internet
 Name[da]=Internet forbindelse
 Name[es]=Conexión a Internet
 Name[et]=Internetiühendus
-Name[fr]=Connexion à l'Internet
+Name[fr]=Internet
 Name[gl]=Conexión a Internet
 Name[hr]=Veza s InterNetom
 Name[hu]=Internet kapcsolat

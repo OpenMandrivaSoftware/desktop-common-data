@@ -1,5 +1,6 @@
 # KDE Config File
 [KDE Desktop Entry]
+Comment[fr]=
 Name=DrakConf
 SwallowExec=
 SwallowTitle=

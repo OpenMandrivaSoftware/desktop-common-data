@@ -1,5 +1,6 @@
 # KDE Config File
 [KDE Desktop Entry]
+Comment[fr]=Documentation de Linux-Mandrake et de KDE
 Name=Mandrake and KDE documentation
 Name[bg]=Mandrake è KDE äîêóìåíòàöèÿ
 Name[br]=Teuliadur war Mandrake ha KDE
@@ -9,7 +10,7 @@ Name[da]=Mandrake og KDE Dokumentation
 Name[de]=Mandrake und KDE Dokumentation
 Name[es]=Documentación Mandrake y KDE
 Name[et]=Mandrake ja KDE dokumentatsioon
-Name[fr]=Documentation sur Mandrake et KDE
+Name[fr]=Documentation
 Name[ga]=Doiciméid KDE agus Mandrake
 Name[gl]=Documentación de Mandrake e KDE
 Name[hr]=Mandrake i KDE dokumentacija
