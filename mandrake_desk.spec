@@ -21,6 +21,25 @@ This package contains useful icons, backgrounds and others goodies for the
 Mandrake desktop.
 
 
+%package -n krootwarning
+Summary:	Warning box for root user
+Group:		Graphical desktop/KDE
+BuildRequires:	kdelibs-devel
+Requires:	kdebase
+
+%description -n krootwarning
+krootwarning
+
+%package -n krozat
+Summary:	Default Mandrake Linux screensaver for KDE
+Group:		Graphical desktop/KDE
+BuildRequires:	kdelibs-devel
+Requires:	kdebase
+
+%description -n krozat
+This package contains the default Mandrake Linux screensaver for KDE.
+
+
 %prep
 
 %setup -q -n %name
