@@ -13,7 +13,8 @@ dis: clean
 		cpio -pd mandrake_desk-$(VERSION)/
 	find mandrake_desk-$(VERSION) \
 		-type d -name CVS -o -name .cvsignore -o -name unused |xargs rm -rf
-	perl -p -i -e 's|^%define version.*|%define version $(VERSION)|' \
+	egrep "^%define version $(VERSION)" mandrake_desk.spec ||
+		perl -p -i -e 's|^%define version.*|%define version $(VERSION)|' \
 		mandrake_desk.spec
 	tar cf ../mandrake_desk-$(VERSION).tar mandrake_desk-$(VERSION)
 	bzip2 -9f ../mandrake_desk-$(VERSION).tar
