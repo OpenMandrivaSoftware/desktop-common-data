@@ -1,18 +1,19 @@
 #
 # WARNING: This file is in unicode!
 #
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>
+# Iigo Salvador Azurmendi <xalba@euskalnet.net>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mandrake_desk VERSION\n"
-"POT-Creation-Date: 2001-03-29 09:59+0200\n"
-"PO-Revision-Date: 1999-08-25 11:07+0200\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
-"Language-Team: eu\n"
+"POT-Creation-Date: 2001-03-29 10:09+0200\n"
+"PO-Revision-Date: 2001-06-24 16:45GMT+1\n"
+"Last-Translator: IÃ±igo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Euskara <linux-eu@chanae.alphanet.ch>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.8\n"
 
 #: gnome/mandrake.links.desktop.in.h:1 kdelnk/DrakConf.kdelnk.in.h:1
 #: old/DrakConf.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:1
@@ -21,12 +22,11 @@ msgstr "DrakConf"
 
 #: gnome/mandrake.links.desktop.in.h:2 old/mandrake.links.desktop.in.h:2
 msgid "GNOME Web Site"
-msgstr ""
+msgstr "GNOME Web Gunea"
 
 #: gnome/mandrake.links.desktop.in.h:3 old/mandrake.links.desktop.in.h:6
-#, fuzzy
 msgid "Mandrake documentation"
-msgstr "Mandrake eta KDE dokumentazioa"
+msgstr "Mandrake dokumentazioa"
 
 #: gnome/mandrake.links.desktop.in.h:4 kdelnk/Netscape.kdelnk.in.h:1
 #: old/Netscape.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:7
@@ -36,21 +36,21 @@ msgstr "Netscape"
 #: kde/Desktop/Templates/MimeType.noext.kdelnk.in.h:1
 #: old/MimeType.noext.kdelnk.in.h:1
 msgid "Mime Type"
-msgstr ""
+msgstr "Mime Moeta"
 
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
 msgid "Application"
-msgstr ""
+msgstr "Aplikazioa"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr ""
+msgstr "Internet Helbidea (URL)"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
 msgid "World Wide Web URL"
-msgstr ""
+msgstr "World Wide Web URL"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:2
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:1
@@ -58,28 +58,28 @@ msgstr ""
 #: old/CD-ROM.noext.kdelnk.in.h:2 old/Device.noext.kdelnk.in.h:1
 #: old/Floppy.noext.kdelnk.in.h:1
 msgid "File System Device"
-msgstr ""
+msgstr "Fitxategi Sistemaren Gailua"
 
 #: kde/Desktop/Templates/Ftpurl.noext.kdelnk.in.h:1
 #: old/Ftpurl.noext.kdelnk.in.h:1
 msgid "FTP URL"
-msgstr ""
+msgstr "FTP URL"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:1 old/Printer.noext.kdelnk.in.h:1
 msgid "Default printer"
-msgstr ""
+msgstr "Inprimagailu lehenetsia"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr ""
+msgstr "Kudeatu zure inprimagailu ilara"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:2 old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
-msgstr ""
+msgstr "Disketea"
 
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
@@ -104,7 +104,7 @@ msgstr "Internetera lotura"
 
 #: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
-msgstr "Internetera lotura"
+msgstr "Internetera lotura."
 
 #: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
@@ -125,7 +125,7 @@ msgstr "Imprimagailua"
 #: kdelnk/Updates.kdelnk.in.h:1 old/Updates.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:5
 msgid "Mandrake Updates"
-msgstr "Mandrake eguneratzekoak"
+msgstr "Mandrake Eguneratzekoak"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
@@ -137,11 +137,11 @@ msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr ""
+msgstr "Linux Dokumentuak"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
-msgstr ""
+msgstr "RpmDrake"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
