@@ -46,6 +46,7 @@ fi
 #		lv*) CAPTION="Interneta pieslÁgums" ;;
 #		nl*) CAPTION="Internetverbinding" ;;
 #		no*) CAPTION="Oppkobling Internett" ;;
+#		pl*) CAPTION="Po≥±czenie z internetem" ;;
 #		ro*) CAPTION="Conectare la Internet" ;;
 #		ru*) CAPTION="Internet-”œ≈ƒ…Œ≈Œ…≈" ;;
 #		sk*) CAPTION="Pripojenie k internetu" ;;
