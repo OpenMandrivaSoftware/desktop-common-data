@@ -13,6 +13,6 @@ LIST="`/usr/sbin/chksession -k`" perl -pi -e 's|^SessionTypes=.*|$ENV{LIST}|'\
     /usr/share/config/kdm/kdmrc
 fi
 
-if [ -d /etc/X11/gdm/Sessions ];then
+if [ -d /etc/X11/dm/Sessions ];then
 	/usr/sbin/chksession -g
 fi
