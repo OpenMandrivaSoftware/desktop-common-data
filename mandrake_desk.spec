@@ -1,4 +1,4 @@
-%define	release	8mdk
+%define	release	9mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/icons/large/*.xpm
 /usr/share/pixmaps/backgrounds/mandrake
 /usr/share/pixmaps/backgrounds/default_background.jpg
-/etc/skel/Desktop/
+%config /etc/skel/Desktop/
 /usr/share/pixmaps/mdk
 /usr/share/gnome/apps/Internet/*.desktop
 /usr/share/gnome/apps/System/*.desktop
@@ -54,6 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Fri Apr 20 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.3-9mdk
+- Adjust wmaker path
+- Maker rpmlint happy
+
 * Thu Apr 20 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.3-8mdk
 - Update doc icons
 
