@@ -3,6 +3,10 @@
 	* window-managers: fix wmaker.
 	* bin/DrakWM: a new greatest hit.
 	
+2000-04-11  dam's  <damien@mandrakesoft.com>
+
+	* new icons, new place for default background.
+
 2000-04-05  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: adjust groups.
