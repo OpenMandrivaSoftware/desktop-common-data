@@ -115,8 +115,7 @@ msgstr "Noveles di Linux Mandrake sol rantoele"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Bodjîz les fitchîs texes èt postscripts so l' imådjete del sicrirece."
+msgstr "Bodjîz les fitchîs texes èt postscripts so l' imådjete del sicrirece."
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"

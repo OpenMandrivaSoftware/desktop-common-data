@@ -45,8 +45,7 @@ msgstr "Приложение"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr ""
-"Универсальное местоположение ресурса (URL)"
+msgstr "Универсальное местоположение ресурса (URL)"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
@@ -117,9 +116,7 @@ msgstr "Новости Linux Mandrake"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Кладите текстовые и postscript файлы на иконку "
-"PRINTER"
+msgstr "Кладите текстовые и postscript файлы на иконку PRINTER"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"

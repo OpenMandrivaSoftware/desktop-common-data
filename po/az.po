@@ -115,9 +115,7 @@ msgstr "Linux Mandrake Xəbərlər"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Çap edici timsalı üzerində Postscript ve saf mətn faylları buraxıla "
-"bilər"
+msgstr "Çap edici timsalı üzerində Postscript ve saf mətn faylları buraxıla bilər"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"

@@ -116,9 +116,7 @@ msgstr "Навіны Linux Mandrake"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Памясціце тэкставы альбо PostScript файл на "
-"іконку друкаркі"
+msgstr "Памясціце тэкставы альбо PostScript файл на іконку друкаркі"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
@@ -131,9 +129,7 @@ msgstr "Аднаўленні Mandrake"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr ""
-"Не атрымліваецца зачыніць праграму? "
-"Паспрабуйце 'XKill'"
+msgstr "Не атрымліваецца зачыніць праграму? Паспрабуйце 'XKill'"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"

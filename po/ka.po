@@ -91,10 +91,7 @@ msgstr "Mandrake-ის და KDE-ს დოკუმენტაცია."
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr ""
-"Linux Mandrake-ის სისტემური "
-"კონფიგურაციის "
-"ინსტრუმენტები"
+msgstr "Linux Mandrake-ის სისტემური კონფიგურაციის ინსტრუმენტები"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
@@ -107,9 +104,7 @@ msgstr "კავშირი ინტერნეტთან"
 
 #: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
-msgstr ""
-"ინტერნეტთან "
-"დამაკავშირებელი პროგრამა"
+msgstr "ინტერნეტთან დამაკავშირებელი პროგრამა"
 
 #: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
@@ -121,11 +116,7 @@ msgstr "სიახლეები Linux Mandrake-ში"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"ტექსტური (Text) და "
-"პოსტსქრიფტული (PostScript) ფაილები "
-"პრინტერის მინიატურაზე "
-"გადააჩოჩეთ"
+msgstr "ტექსტური (Text) და პოსტსქრიფტული (PostScript) ფაილები პრინტერის მინიატურაზე გადააჩოჩეთ"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
@@ -138,10 +129,7 @@ msgstr "Mandrake-ის განახლება"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr ""
-"თუ რომელიმე ფანჯარა "
-"ჩვეულებრივი გზით არ იხურება, "
-"გამოიყენეთ XKill"
+msgstr "თუ რომელიმე ფანჯარა ჩვეულებრივი გზით არ იხურება, გამოიყენეთ XKill"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"

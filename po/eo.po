@@ -116,8 +116,7 @@ msgstr "Linuks-Mandrejka Novaĵo"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Faligu tekstajn kaj PostScriptaj dosieroj sur la \"PRINTILO\"-n piktogramon"
+msgstr "Faligu tekstajn kaj PostScriptaj dosieroj sur la \"PRINTILO\"-n piktogramon"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"

@@ -128,9 +128,7 @@ msgstr "Mandrake Updates"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr ""
-"Verwenden Sie XKill um Fenster, die sich nicht anderweitg schließen lassen, "
-"zu schließen"
+msgstr "Verwenden Sie XKill um Fenster, die sich nicht anderweitg schließen lassen, zu schließen"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"

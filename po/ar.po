@@ -116,9 +116,7 @@ msgstr "أخبار لينكس ماندريك"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"اسحب ملفات النصوص وملفات بوست سكريبت "
-"postscript إلى أيقونة الطابعة"
+msgstr "اسحب ملفات النصوص وملفات بوست سكريبت postscript إلى أيقونة الطابعة"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"

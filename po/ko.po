@@ -116,9 +116,7 @@ msgstr "리눅스 맨드레이크 뉴스"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"텍스트와 포스트스크립트 화일들을 프린터 아이콘으로 "
-"끌어다 놓으세요."
+msgstr "텍스트와 포스트스크립트 화일들을 프린터 아이콘으로 끌어다 놓으세요."
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"

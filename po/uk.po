@@ -91,8 +91,7 @@ msgstr "Документація по системі Mandrake та KDE"
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr ""
-"Засіб для конфіґурації системи в Linux-Mandrake"
+msgstr "Засіб для конфіґурації системи в Linux-Mandrake"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
@@ -117,10 +116,7 @@ msgstr "Новини про Mandrake Лінакс"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Щоб роздрукувати текстовий або PostScript "
-"файл, покладіть його на піктограму "
-"принтера"
+msgstr "Щоб роздрукувати текстовий або PostScript файл, покладіть його на піктограму принтера"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
@@ -133,9 +129,7 @@ msgstr "Поновлення системи Mandrake"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr ""
-"Користуйтеся XKill, коли вікно не "
-"закривається"
+msgstr "Користуйтеся XKill, коли вікно не закривається"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"

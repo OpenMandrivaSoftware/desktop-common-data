@@ -115,9 +115,7 @@ msgstr "Mandrake Linux Новини"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Пуснете текстови и postscript файлове върху "
-"иконата на ПРИНТЕР"
+msgstr "Пуснете текстови и postscript файлове върху иконата на ПРИНТЕР"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
@@ -130,9 +128,7 @@ msgstr "Mandrake Обновяване"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr ""
-"Ползвайте XKill за да затворите блокирала "
-"програма!"
+msgstr "Ползвайте XKill за да затворите блокирала програма!"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"

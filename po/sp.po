@@ -91,8 +91,7 @@ msgstr "Mandrake и КДЕ документација"
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr ""
-"Linux-Mandrake - системски конфигурациони алати"
+msgstr "Linux-Mandrake - системски конфигурациони алати"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
@@ -117,9 +116,7 @@ msgstr "Linux Mandrake - вести"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Испусти текст и postscript фајлове на икону "
-"штампача"
+msgstr "Испусти текст и postscript фајлове на икону штампача"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
@@ -132,9 +129,7 @@ msgstr "Mandrake Update"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr ""
-"Не можете да затворите прозор- користите "
-"'XKill'"
+msgstr "Не можете да затворите прозор- користите 'XKill'"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"

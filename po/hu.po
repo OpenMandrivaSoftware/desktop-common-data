@@ -116,8 +116,7 @@ msgstr "Mandrake hírek"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"A szöveges és PostScript fájlokat lehet ráejteni a nyomtató ikonjára"
+msgstr "A szöveges és PostScript fájlokat lehet ráejteni a nyomtató ikonjára"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"

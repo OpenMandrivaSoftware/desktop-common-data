@@ -120,8 +120,7 @@ msgstr "Tin Linux Mandrake"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Thả văn bản hay tệp postscript vào biểu tượng của Máy in"
+msgstr "Thả văn bản hay tệp postscript vào biểu tượng của Máy in"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"

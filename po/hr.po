@@ -8,12 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mandrake_desk VERSION\n"
 "POT-Creation-Date: 2001-03-29 09:59+0200\n"
-"PO-Revision-Date: 1999-08-25 11:07+0200\n"
+"PO-Revision-Date: 2001-04-04 17:40GMT02\n"
 "Last-Translator: Vlatko Kosturjak <kost@iname.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.8\n"
 
 #: gnome/mandrake.links.desktop.in.h:1 kdelnk/DrakConf.kdelnk.in.h:1
 #: old/DrakConf.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:1
@@ -71,7 +72,7 @@ msgstr "Podrazumijevani pisač"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr "Uredite vas ispisni red"
+msgstr "Uredite vaš ispisni red"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
@@ -87,7 +88,7 @@ msgstr "Mandrake i KDE dokumentacija"
 
 #: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
-msgstr "Mandrake i KDE dokumentacija"
+msgstr "Mandrake i KDE dokumentacija."
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
@@ -104,7 +105,7 @@ msgstr "Veza s InterNetom"
 
 #: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
-msgstr "Veza s InterNetom"
+msgstr "Veza s InterNetom."
 
 #: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
@@ -146,3 +147,4 @@ msgstr "RpmDrake"
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
 msgstr "Gnom i X aplikacije"
+

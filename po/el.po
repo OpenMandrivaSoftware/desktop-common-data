@@ -91,9 +91,7 @@ msgstr "Τεκμηρίωση Mandrake και KDE"
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr ""
-"Εργαλεία διαχείρισης συστήματος του "
-"Linux-Mandrake"
+msgstr "Εργαλεία διαχείρισης συστήματος του Linux-Mandrake"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
@@ -118,9 +116,7 @@ msgstr "Νέα του Linux Mandrake"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr ""
-"Σύρτε αρχεία κειμένου και Postscript στο "
-"εικονίδιο του εκτυπωτή"
+msgstr "Σύρτε αρχεία κειμένου και Postscript στο εικονίδιο του εκτυπωτή"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
@@ -133,9 +129,7 @@ msgstr "Αναβαθμίσεις του Mandrake"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr ""
-"Δεν μπορείτε να κλείσετε ένα παράθυρο; "
-"Χρησιμοποιείστε το XKill"
+msgstr "Δεν μπορείτε να κλείσετε ένα παράθυρο; Χρησιμοποιείστε το XKill"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"
