@@ -106,7 +106,7 @@ mkdir -p $RPM_BUILD_ROOT%_datadir/mdk/faces
 mv * $RPM_BUILD_ROOT%_datadir/mdk/faces
 cp $RPM_BUILD_ROOT%_datadir/mdk/faces/user-hat-mdk.png root.png
 cp root.png root
-cp $RPM_BUILD_ROOT%_datadir/mdk/faces/user-default-mdk.png default.png
+cp $RPM_BUILD_ROOT%_datadir/mdk/faces/man.png default.png
 cd -
 
 cd $RPM_BUILD_ROOT%_datadir/pixmaps/backgrounds/linux-mandrake
@@ -184,17 +184,17 @@ rm -rf $RPM_BUILD_ROOT
 %doc TRANSLATORS special/*
 #
 #
+%_bindir/DrakWM
+%_bindir/createbackground.sh
+%_bindir/gnomedesktop-network
+%_bindir/print-cups.sh
+#
+#
 %dir %_sysconfdir/X11/wmsession.d/
 #
 #
 %dir %_libdir/mc/desktop-scripts/
 %_libdir/mc/desktop-scripts/*
-#
-%_bindir/DrakWM
-%_bindir/createbackground.sh
-%_bindir/eazel-engine-capplet
-%_bindir/gnomedesktop-network
-%_bindir/print-cups.sh
 #
 #
 %_sbindir/*
@@ -236,6 +236,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 #%dir %_sysconfdir/gtk/
 #%config(noreplace) %_sysconfdir/gtk/gtkrc
+#
+#
+%_bindir/eazel-engine-capplet
+#
 #
 %dir %_datadir/eazel-engine/
 %_datadir/eazel-engine/*.png
@@ -294,10 +298,14 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Sep 04 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-13mdk
+- Remove old icons and nearly all old images
+- Move eazel-engine-capplet in mdk-eazel-engine
+- Use man.png as default image for users
+
 * Tue Sep 04 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-12mdk
 - Make Monseigneur Pascal Rigaux, Prince de DrakX, Marquis de Pixel, happy (aka,
-  move eazel-engine in
-  a separate package)
+  move eazel-engine in a separate package)
 
 * Mon Sep 03 2001 Laurent MONTEL <lmontel@mandrakesoft.com> 8.1-11mdk
 - An other fix for krootwarning
