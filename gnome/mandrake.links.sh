@@ -14,7 +14,7 @@ elif [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape C
 elif [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop ] ; then
 	cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop $HOME/.gnome-desktop/
 fi
-
+re:
 # Documentation
 langg=$(cat /etc/sysconfig/i18n | grep ^LANG= | sed -e 's/LANG=//')
 if [ ! -e ~/.gnome/.doc ] ; then
