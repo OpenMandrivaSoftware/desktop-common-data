@@ -29,6 +29,7 @@ do
 		et*) CAPTION="Internetiühendus" ;;
 		fi*) CAPTION="Internet yhteys" ;;
 		fr*) CAPTION="Connexion à l'Internet" ;;
+		ga*) CAPTION="Nasc idirlíon" ;;
 		gl*) CAPTION="Conexión a Internet" ;;
 		hr*) CAPTION="Veza s InterNetom" ;;
 		hu*) CAPTION="Internet kapcsolat" ;;
