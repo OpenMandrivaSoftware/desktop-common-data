@@ -2,11 +2,11 @@
 # Configure sound settings
 ?package(kdemultimedia): needs="kde" kde_filename="kmix" section="Administer your system" title="Configure sound settings" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kmix;\\nProtocols=\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
-?package(gmix): needs="gnome" section="Administer your system" title="Configure sound settings" command="/usr/bin/gmix" icon="gmix.xpm"
+?package(gnome-media): needs="gnome" section="Administer your system" title="Configure sound settings" command="/usr/bin/gnome-volume-control" icon="/usr/share/gnome/pixmaps/gnome-mixer.png"
 
 
 # Configure KDE/GNOME
-?package(gnome-control-center): command="/usr/bin/gnomecc" icon="/usr/share/pixmaps/control-center.png" title="Configure Gnome" needs="gnome" section="Administer your system"
+?package(gnome-control-center): command="/usr/bin/gnomecc" icon="/usr/share/pixmaps/control-center2.png" title="Configure Gnome" needs="gnome" section="Administer your system"
 
 ?package(kdebase): needs="kde" kde_filename="KControl" section="Administer your system" title="Configure KDE" icon="kcontrol.png" command="kcontrol" kde_command="kcontrol -caption \"%c\" %i %m" kde_opt="\\nDocPath=kcontrol/index.html\\nX-KDE-StartupNotify=true"
 
@@ -59,7 +59,7 @@
 
 
 ## Locate a file
-?package(gnome-utils):needs="gnome" section="/" title="Find files" command="/usr/bin/gsearchtool" icon="gnome-searchtool.xpm"
+?package(gnome-utils):needs="gnome" section="/" title="Find files" command="/usr/bin/gnome-search-tool" icon="gnome-searchtool.xpm"
 
 ?package(kdeutils): needs="kde" kde_filename="Kfind" section="/" title="Find files" icon="kfind.png" command="kfind" kde_command="kfind -caption \"%c\" %i %m %f" multiple_files="false" accept_url="false" kde_opt="\\nBinaryPattern=kfind;\\nProtocols=file;\\nDocPath=kfind/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
@@ -67,13 +67,13 @@
 
 ## Enjoy music & video
 # Listen to a CD
-?package(gnome-media):needs="gnome" command="/usr/bin/gtcd" section="Enjoy music & video" title="Listen to a CD" icon="/usr/share/pixmaps/gtcd.png"
+?package(gnome-media):needs="gnome" command="/usr/bin/gnome-cd" section="Enjoy music & video" title="Listen to a CD" icon="/usr/share/pixmaps/gnome-cd.png"
 
 ?package(kdemultimedia): needs="kde" kde_filename="kscd" section="Enjoy music & video" title="Listen to a CD" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nBinaryPattern=kscd;\\nProtocols=\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
 # Record sounds
-?package(gnome-media):needs="x11" command="/usr/bin/grecord" section="Enjoy music & video" title="Record sounds" icon="/usr/share/pixmaps/gnome-grecord.png"
+?package(gnome-media):needs="x11" command="/usr/bin/gnome-sound-recorder" section="Enjoy music & video" title="Record sounds" icon="/usr/share/pixmaps/gnome-grecord.png"
 
 
 # Rip cd
@@ -205,7 +205,7 @@
 
 ## Read documentation
 # gnome-core
-?package(gnome-core): command="/usr/bin/gnome-help-browser" icon="/usr/share/pixmaps/gnome-help.png" title="Read Gnome documentation" needs=gnome section="Read documentation"
+?package(yelp): command="/usr/bin/gnome-help" icon="/usr/share/pixmaps/gnome-help.png" title="Read Gnome documentation" needs=gnome section="Read documentation"
 
 
 # Howtos
