@@ -9,10 +9,10 @@ Packager:	David BAUDENS <baudens@mandrakesoft.com>
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 # no extra source or patch are allowed here.
-Source:		mandrake_desk.tar.bz2
+Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
-
+Requires:   menu
 BuildRequires:	control-center-devel db1-devel gdk-pixbuf-devel libglade-devel
 
 %description
@@ -26,6 +26,16 @@ Requires:	libgtk+1.2
 
 %description -n mdk-eazel-engine
 This package contains the default GTK theme used in Mandrake Linux distribution.
+
+%package -n mdk-eazel-engine-capplet
+Summary:	Configuration applet for Default GTK theme used in Mandrake Linux distribution
+Group:		Graphical desktop/GNOME
+Requires:	mdk-eazel-engine
+
+%description -n mdk-eazel-engine-capplet
+This package contains the configuration applet for Default GTK theme used in 
+Mandrake Linux distribution
+
 
 %package -n krootwarning
 Summary:	Warning box for root user
@@ -49,7 +59,7 @@ This package contains the default Mandrake Linux screensaver for KDE.
 
 %prep
 
-%setup -q -n %name
+%setup -q -n %name-%{version}
 find . -type 'd' -name "CVS" -print | xargs /bin/rm -fr
 
 %build
@@ -61,12 +71,14 @@ cd eazel-engine
 
 (
 cd krootwarning
+make -f admin/Makefile.common
 ./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama --disable-rpath
 %make
 )
 
 (
 cd krozat
+make -f admin/Makefile.common
 ./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama --disable-rpath
 %make
 )
@@ -77,8 +89,6 @@ rm -rf %buildroot
 (
 cd eazel-engine
 make install DESTDIR=%buildroot
-rm -fr %buildroot/%_datadir/control-center/
-rm -fr %buildroot/%_datadir/themes
 )
 
 (
@@ -91,8 +101,8 @@ cd krozat
 make install DESTDIR=%buildroot
 )
 
-#mkdir -p %buildroot/etc/gtk
-#install -m644 gtkrc %buildroot/etc/gtk
+mkdir -p %buildroot/%_datadir/themes/Mandrake/gtk
+install -m644 gtkrc %buildroot/%_datadir/themes/Mandrake/gtk
 
 make install RPM_BUILD_ROOT=%buildroot mandir=%{_mandir}
 
@@ -134,12 +144,18 @@ kdedesktop2mdkmenu.pl krozat .hidden/ScreenSavers %buildroot/%_datadir/applnk/Sy
 if [ -f /etc/X11/window-managers.rpmsave ];then
 	/usr/sbin/convertsession -f /etc/X11/window-managers.rpmsave || :
 fi
+%update_menus
+
+%postun
+%clean_menus
 
 %post -n krozat
 %update_menus
 
 %postun -n krozat
 %clean_menus
+
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -195,32 +211,35 @@ rm -rf $RPM_BUILD_ROOT
 #
 %dir %_datadir/pixmaps/mdk/
 %_datadir/pixmaps/mdk/*
+#
+%{_menudir}/simplified/mandrake_desk
 
 
 %files -n mdk-eazel-engine
 %defattr(-,root,root,-)
-#%dir %_sysconfdir/gtk/
-#%config(noreplace) %_sysconfdir/gtk/gtkrc
-#
-#
-%_bindir/eazel-engine-capplet
-#
-#
-%dir %_datadir/eazel-engine/
-%_datadir/eazel-engine/*.png
-#
-#
-%dir %_datadir/gnome/
-%dir %_datadir/gnome/apps/
-%dir %_datadir/gnome/apps/Settings/
-%dir %_datadir/gnome/apps/Settings/Desktop/
-%_datadir/gnome/apps/Settings/Desktop/*.desktop
+
+%_datadir/eazel-engine
+
 #
 #
 %dir %_libdir/gtk/
 %dir %_libdir/gtk/themes/
 %dir %_libdir/gtk/themes/engines/
 %_libdir/gtk/themes/engines/*
+
+%dir %_datadir/themes
+%_datadir/themes/Crux
+%_datadir/themes/Mandrake
+
+
+%files -n mdk-eazel-engine-capplet
+%defattr(-,root,root,-)
+%_bindir/eazel-engine-capplet
+%dir %_datadir/gnome/
+%dir %_datadir/gnome/apps/
+%dir %_datadir/gnome/apps/Settings/
+%dir %_datadir/gnome/apps/Settings/Desktop/
+%_datadir/gnome/apps/Settings/Desktop/*.desktop
 
 
 %files -n krootwarning
@@ -270,12 +289,14 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Mon Sep 17 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-17mdk
+* Wed Sep 19 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-17mdk
+- Add simplified menu file
 - Gnome: don't put special icons on root desktop
 - Gnome: fix Internet icon
 - Gnome: fix URL (Fred CROZAT)
 - mv man.png aman.png
 - Remove some obsolete faces (LN)
+- put mdk-eazel-engine capplet to separate package
 
 * Sat Sep 16 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-16mdk
 - Update gnome desktop
