@@ -1,0 +1,69 @@
+.\" Écrit par Camille Bégnis 12/28/99
+.TH CHKSESSION 8 "Dec 1999" "mandrake_desk" "MandrakeSoft"
+.SH NAME
+chksession \- Ajouter/retirer des sessions de gestionnaires de connexion
+.SH SYNOPSIS
+.B chksession 
+[\fIOPTION\fR]...
+.SH DESCRIPTION
+.PP
+.PP
+chksession permet à l'administrateur de gérer la liste des sessions fournies par les gestionnaires gdm et kdm. Il modifie les fichiers de configuration respectifs pour ajouter ou retirer des sessions telles que kde, gnome, icewm...
+.TP
+\fB\-F\fR, \fB\-\-first\fR
+Affiche seulement la première entrée disponible du fichier de configuration.
+.TP
+\fB\-f=FICHIER\fR, \fB\-\-file=FICHIER\fR
+Spécifie un autre fichier de configuration, différent de \fI/etc/X11/window-manager\fR
+.TP
+\fB\-g\fR, \fB\-\-gdm\fR
+Met à jour la liste des gestionnaires de fenêtres pour les sessions gdm avec le fichier de configuration par défaut le FICHIER spécifié par l'option \fB\-f\fR.
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Affiche un message d'aide.
+.TP
+\fB\-k\fR, \fB\-\-kdm\fR
+Met à jour la liste des gestionnaires de fenêtres pour les sessions kdm avec le fichier de configuration par défaut le FICHIER spécifié par l'option \fB\-f\fR.
+.TP
+\fB\-l\fR, \fB\-\-list\fR
+Liste les gestionnaires de fenêtres disponibles dans le fichier de configuration.
+.TP
+\fB\-r=ENTRÉE\fR, \fB\-\-remove=ENTRÉE\fR
+Affiche sur la sortie standard la liste des gestionnaires de fenêtres comme dans le fichier de configuration, où ENTRÉE a été retirée.
+.TP
+\fB\-t\fR, \fB\-\-test\fR
+Entre dans le mode de test.
+.TP
+\fB\-x=ENTRÉE\fR, \fB\-\-xsession=ENTRÉE\fR
+Affiche sur la sortie standard le script utilisé pour lancer le gestionnaire de fenêtres ENTRÉE.
+.SH "STRUCTURE DU FICHIER DE CONFIGURATION"
+Ce fichier décrit chaque gestionnaire de fenêtres qui sera rendu disponible par le gestionnaire de connexion. Chaque entrée de ce fichier est séparée par une ligne \fB\-\-@@\-\-\fR.
+.PP
+.B NAME=
+est le nom de la session tel qu'affiché dans la liste du gestionnaire de connexion.
+.PP
+.B ICON=
+fichier icône (\fI.xpm oo .png\fR) utilisé pour cette session.
+.PP
+.B DESC=
+description courte de la session.
+.PP
+.B EXEC=
+teste la chaîne pour vérifier si le gestionnaire de connexion est installé ou pas.
+.PP
+.B SCRIPT:
+script shell utilisé pour lancer le gestionnaire de fenêtres choisi par l'utilisateur.
+.SH FICHIERS
+.TP 
+\fB\/etc/X11/window-manager\fR
+fichier de configuration par défaut, listant les gestionnaires de fenêtres les plus courants. C'est la base utilisée par \fBchksessio\fRn pour mettre à jour les fichiers de configuration des gestionnaires de connexion gdm et de kdm.
+.SH "RAPPORT DE BOGUES"
+Veuillez signaler les bogues à \fBhttp://www.linux-mandrake.com/bugs/\fR.
+.SH "VOIR AUSSI"
+\fIxdm\fR(1)
+.SH COPYRIGHT
+Copyright \(co 1999 MandrakeSoft.
+.br
+This is a GPL free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+

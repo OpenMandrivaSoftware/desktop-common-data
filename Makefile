@@ -22,7 +22,11 @@ install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/desktop-links
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/System
-	install -m644 man/*8 $(RPM_BUILD_ROOT)/$(mandir)/man8/
+	install -m644 man/C/*8 $(RPM_BUILD_ROOT)/$(mandir)/man8/
+	for i in man/??* ; \
+	    do install -d $(RPM_BUILD_ROOT)/$(mandir)/`basename $$i`/man8 ; \
+	    install -m 644 $$i/*.8 $(RPM_BUILD_ROOT)/$(mandir)/`basename $$i`/man8 ; \
+	done	
 	install -m755 sbin/* $(RPM_BUILD_ROOT)/usr/sbin/
 	install -m755 bin/* $(RPM_BUILD_ROOT)/usr/bin/
 	install -m644 icons/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/
