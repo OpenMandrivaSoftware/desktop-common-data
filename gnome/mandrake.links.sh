@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $(set | grep USERNAME | sed s/USERNAME=//)  != root ] ; then
+if [ "`whoami`" != root ] ; then
 
 	if [ ! -d ~/.gnome-desktop ] ; then
 		mkdir -p ~/.gnome-desktop

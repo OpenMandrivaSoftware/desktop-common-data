@@ -39,9 +39,7 @@ install:
 
 	install -m644 faces/* $(RPM_BUILD_ROOT)/usr/share/mdk/faces
 
-	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
-	cp gnome/mandrake.links.sh $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts/mandrake.links.sh
-	chmod 0755 $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts/mandrake.links.sh
+
 
 # rules to build a test rpm
 
@@ -56,7 +54,7 @@ dir:
 	mkdir $(PACKAGE)-$(VERSION)
 
 localcopy:
-	find . | grep -v -- "$(PACKAGE)-$(VERSION)\|\.bz2\|CVS\|~" |cpio -pd $(PACKAGE)-$(VERSION)/
+	find . | grep -v -- "$(PACKAGE)-$(VERSION)\|\.bz2\|CVS\|~\|.cvsignore" |cpio -pd $(PACKAGE)-$(VERSION)/
 
 tar:
 	tar cvf $(PACKAGE)-$(VERSION).tar $(PACKAGE)-$(VERSION)

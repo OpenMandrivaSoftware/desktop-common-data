@@ -1,5 +1,5 @@
 data_DATA = *.png
-datadir = $(kde_datadir)/krozat/pics
+datadir = $(prefix)/share/mdk/screensaver
 
 EXTRA_DIST = $(data_DATA)
 

@@ -1,9 +1,8 @@
 
 [Desktop Entry]
 Name=Internet
-Name[fr]=Réseau
 Exec=/usr/bin/gnomedesktop-network 
-Icon=networking_www_section.xpm
+Icon=networking_www_section.png
 Terminal=false
 MultipleArgs=false
 Type=Application

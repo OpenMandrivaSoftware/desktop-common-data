@@ -2,7 +2,7 @@
 [Desktop Entry]
 Name=Mandrake Expert
 Icon=/usr/share/pixmaps/mc/mandrakeexpert.xpm
-URL=http://www.mandrakeexpert.com/
+Exec=http://www.mandrakeexpert.com/
 Terminal=false
 MultipleArgs=false
-Type=Link
+Type=URL

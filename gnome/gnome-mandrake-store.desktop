@@ -2,7 +2,7 @@
 [Desktop Entry]
 Name=Mandrake Store
 Icon=/usr/share/pixmaps/mc/mandrakestore.xpm
-URL=http://www.mandrakestore.com/
+Exec=http://www.mandrakestore.com/
 Terminal=false
 MultipleArgs=false
-Type=Links
+Type=URL

@@ -12,7 +12,7 @@
 
 
 # drakfont
-package(drakfont): needs="X11" section="Administer your system" title="Add or remove fonts" command="/usr/X11R6/bin/drakfont" icon="drakfont.xpm"
+?package(drakfont): needs="X11" section="Administer your system" title="Add or remove fonts" command="/usr/X11R6/bin/drakfont" icon="drakfont.xpm"
 
 
 # gnome-linuxconf
@@ -36,7 +36,7 @@ package(drakfont): needs="X11" section="Administer your system" title="Add or re
 
 
 # kdeadmin
-package(kdeadmin): needs="x11" kde_filename="kcron" section="Administer your system" title="Schedule programs to run in the background" icon="kcron.png" command="kcron" kde_command="kcron %i %m -caption \"%c\"" kde_opt="\\nDocPath=kcron/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdeadmin): needs="x11" kde_filename="kcron" section="Administer your system" title="Schedule programs to run in the background" icon="kcron.png" command="kcron" kde_command="kcron %i %m -caption \"%c\"" kde_opt="\\nDocPath=kcron/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
 # kdebase
@@ -80,7 +80,7 @@ package(kdeadmin): needs="x11" kde_filename="kcron" section="Administer your sys
 
 
 # rpmdrake
-?package(rpmdrake):needs="x11"section="Administer your system" title="Add or remove programs" command="rpmdrake"icon="rpmdrake.xpm"
+?package(rpmdrake):needs="x11" section="Administer your system" title="Add or remove programs" command="rpmdrake"icon="rpmdrake.xpm"
 
 ?package(rpmdrake): needs="X11" icon="mandrakeupdate.xpm" section="Administer your system" title="Download and install Mandrake security updates" command="MandrakeUpdate"
 
@@ -360,7 +360,7 @@ package(kdeadmin): needs="x11" kde_filename="kcron" section="Administer your sys
 
 
 # kdenetwork
-package(kdenetwork): needs="kde" kde_filename="kit" section="Use the Internet" title="Dialog using Kit, an AOL instant messenger client" icon="kit.png" command="kit" mimetypes="" kde_opt="\\nBinaryPattern=kit;\\nProtocols=\\nDocPath=kit/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdenetwork): needs="kde" kde_filename="kit" section="Use the Internet" title="Dialog using Kit, an AOL instant messenger client" icon="kit.png" command="kit" mimetypes="" kde_opt="\\nBinaryPattern=kit;\\nProtocols=\\nDocPath=kit/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 ?package(kdenetwork): needs="kde" kde_filename="ksirc" section="Use the Internet" title="Dialog on IRC using KSirc" icon="ksirc.png" command="ksirc" kde_command="ksirc %i %m" mimetypes="" kde_opt="\\nSwallowExec=\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nMapNotify=true"
 
@@ -498,7 +498,7 @@ package(kdenetwork): needs="kde" kde_filename="kit" section="Use the Internet" t
 
 
 # gnome-utils
-gnome-utils:?package(gnome-utils):needs="X11" section="Use office tools (Create an office document)" title="Manage workflow and keep track of the time you spend on projects" command="/usr/bin/gtt" icon="gnome-cromagnon.xpm"
+?package(gnome-utils):needs="X11" section="Use office tools (Create an office document)" title="Manage workflow and keep track of the time you spend on projects" command="/usr/bin/gtt" icon="gnome-cromagnon.xpm"
 
 
 # gnumeric
@@ -534,7 +534,7 @@ gnome-utils:?package(gnome-utils):needs="X11" section="Use office tools (Create 
 
 ?package(koffice): needs="x11" kde_filename="kspread" section="Use office tools (Create an office document)" title="Create spreadsheets using KSpread" icon="kspread.png" command="kspread" mimetypes="application/x-kspread" kde_opt="\\nX-KDE-Library=libkspreadpart\\nServiceTypes=KOfficePart,KParts/ReadOnlyPart,KParts/ReadWritePart,text/x-csv,application/x-kspread-crypt,application/x-quattropro\\nX-KDE-NativeMimeType=application/x-kspread\\nX-DCOP-ServiceType=multi\\nDocPath=kspread/index.html\\nKDE-X-StartupNotify=true"
 
-?package(koffice): needs="x11" kde_filename="kugar" section="Use office tools (Create an office document)" title="Create a report using Kugar" icon="kugar.png" command="kugar" mimetypes="application/x-kugar" kde_opt="\\nDocPath=\\nTerminal=0\\nServiceTypes=KParts/ReadOnlyPart,Browser/View\\nX-KDE-Library=libkugarpart"
+#?package(koffice): needs="x11" kde_filename="kugar" section="Use office tools (Create an office document)" title="Create a report using Kugar" icon="kugar.png" command="kugar" mimetypes="application/x-kugar" kde_opt="\\nDocPath=\\nTerminal=0\\nServiceTypes=KParts/ReadOnlyPart,Browser/View\\nX-KDE-Library=libkugarpart"
 
 ?package(koffice): needs="x11" kde_filename="kword" section="Use office tools (Create an office document)" title="Create a text document using KWord" icon="kword.png" command="kword" mimetypes="application/x-kword" kde_opt="\\nX-KDE-Library=libkwordpart\\nServiceTypes=KOfficePart,KParts/ReadOnlyPart,KParts/ReadWritePart,text/plain,application/x-kword-crypt\\nX-KDE-NativeMimeType=application/x-kword\\nDocPath=kword/index.html\\nKDE-X-StartupNotify=true"
 
@@ -565,9 +565,9 @@ gnome-utils:?package(gnome-utils):needs="X11" section="Use office tools (Create 
 ?package(staroffice-es): title="StarOffice Setup" icon=set52.xpm needs="x11" command="/usr/lib/office52_es/program/setup" section="Use office tools (Create an office document)"
 
 
-?package(staroffice-fr): title="Créez vos documents bureautique en utiliant StarOffice" icon=so52.xpm needs="x11" command="/usr/lib/office52_fr/program/soffice" section="Use office tools (Create an office document)" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
+?package(staroffice-fr): title="Make your office work using StarOffice" icon=so52.xpm needs="x11" command="/usr/lib/office52_fr/program/soffice" section="Use office tools (Create an office document)" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
 
-?package(staroffice-fr): title="Configurez l'impression pour StarOffice" icon=psetup.xpm needs="x11" command="/usr/lib/office52_fr/program/spadmin" section="Use office tools (Create an office document)"
+?package(staroffice-fr): title="Configure your printer for StarOffice" icon=psetup.xpm needs="x11" command="/usr/lib/office52_fr/program/spadmin" section="Use office tools (Create an office document)"
 
 ?package(staroffice-fr): title="StarOffice, configuration" icon=set52.xpm needs="x11" command="/usr/lib/office52_fr/program/setup" section="Use office tools (Create an office document)"
 

@@ -1,10 +1,10 @@
-Summary:	The Desktop configuration files for Linux Mandrake
+Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
-Version:	8.1
-Release:	17mdk
+Version:	8.2
+Release:	1mdk
 License:	GPL
+URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
-Packager:	David BAUDENS <baudens@mandrakesoft.com>
 
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
@@ -13,7 +13,7 @@ Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 Requires:   menu
-BuildRequires:	control-center-devel db1-devel gdk-pixbuf-devel libglade-devel
+BuildRequires:	kdelibs-devel libcapplet-devel
 
 %description
 This package contains useful icons, backgrounds and others goodies for the
@@ -25,7 +25,8 @@ Group:		Graphical desktop/Other
 Requires:	libgtk+1.2
 
 %description -n mdk-eazel-engine
-This package contains the default GTK theme used in Mandrake Linux distribution.
+This package contains the default GTK theme used in Mandrake Linux 
+distribution.
 
 %package -n mdk-eazel-engine-capplet
 Summary:	Configuration applet for Default GTK theme used in Mandrake Linux distribution
@@ -33,14 +34,13 @@ Group:		Graphical desktop/GNOME
 Requires:	mdk-eazel-engine
 
 %description -n mdk-eazel-engine-capplet
-This package contains the configuration applet for Default GTK theme used in 
-Mandrake Linux distribution
+This package contains the configuration applet for Default GTK theme 
+used in Mandrake Linux distribution
 
 
 %package -n krootwarning
 Summary:	Warning box for root user
 Group:		Graphical desktop/KDE
-BuildRequires:	kdelibs-devel
 Requires:	kdebase
 
 %description -n krootwarning
@@ -52,15 +52,14 @@ Summary:	Default Mandrake Linux screensaver for KDE
 Group:		Graphical desktop/KDE
 BuildRequires:	kdelibs-devel
 Requires:	kdebase
+Requires:   mandrake_desk >= 8.2
 
 %description -n krozat
 This package contains the default Mandrake Linux screensaver for KDE.
 
-
 %prep
 
-%setup -q -n %name-%{version}
-find . -type 'd' -name "CVS" -print | xargs /bin/rm -fr
+%setup -q
 
 %build
 (
@@ -88,17 +87,17 @@ rm -rf %buildroot
 
 (
 cd eazel-engine
-make install DESTDIR=%buildroot
+%makeinstall_std
 )
 
 (
 cd krootwarning
-make install DESTDIR=%buildroot
+%makeinstall_std
 )
 
 (
 cd krozat
-make install DESTDIR=%buildroot
+%makeinstall_std
 )
 
 mkdir -p %buildroot/%_datadir/themes/Mandrake/gtk
@@ -106,7 +105,7 @@ install -m644 gtkrc %buildroot/%_datadir/themes/Mandrake/gtk
 
 make install RPM_BUILD_ROOT=%buildroot mandir=%{_mandir}
 
-mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
+mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/X11/wmsession.d/
 
 rm -f special/mandrake-small.xpm
 
@@ -114,12 +113,18 @@ install -d %buildroot/%_datadir/faces/
 cp %buildroot/%_datadir/mdk/faces/user-hat-mdk.png %buildroot/%_datadir/faces/root.png
 cp %buildroot/%_datadir/faces/root.png %buildroot/%_datadir/faces/root
 cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/faces/default.png
+cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/mdk/faces/default.png
+# Dadou - 18mdk - This is needed for GDM
+cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/mdk/faces/user-default-mdk.png
 
 install -d %buildroot/%_datadir/mdk/gnome-desktop/
 for l in de en fr it; do
 	install -m644 gnome/gnome-Documentation-$l.desktop %buildroot/%_datadir/mdk/gnome-desktop/Documentation-$l.desktop
 done
 
+mkdir -p $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts
+cp gnome/mandrake.links.sh $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts/mandrake.links.sh
+chmod 0755 $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts/mandrake.links.sh
 #install -m644 gnome/gnome-mandrake-campus.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Campus.desktop"
 install -m644 gnome/gnome-mandrake-control-center.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Control Center.desktop"
 install -m644 gnome/gnome-mandrake-expert.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Expert.desktop"
@@ -127,22 +132,33 @@ install -m644 gnome/gnome-mandrake-news.desktop "%buildroot/%_datadir/mdk/gnome-
 install -m644 gnome/gnome-mandrake-store.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Store.desktop"
 install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/mdk/gnome-desktop/Connection-to-Internet.desktop
 
-install -d %buildroot/usr/share/pixmaps/mc/
-install -m644 gnome/gnome-mandrakecampus.xpm %buildroot/usr/share/pixmaps/mc/mandrakecampus.xpm
-install -m644 gnome/gnome-mandrakeexpert.xpm %buildroot/usr/share/pixmaps/mc/mandrakeexpert.xpm
-install -m644 gnome/gnome-mandrakenews.xpm %buildroot/usr/share/pixmaps/mc/mandrakenews.xpm
-install -m644 gnome/gnome-mandrakestore.xpm %buildroot/usr/share/pixmaps/mc/mandrakestore.xpm
+mkdir -p $RPM_BUILD_ROOT%_datadir/nautilus/default-desktop
+install -m644 gnome/gnome-mandrake-control-center.desktop "%buildroot/%_datadir/nautilus/default-desktop/Mandrake Control Center.desktop"
+install -m644 gnome/gnome-mandrake-expert.desktop "%buildroot/%_datadir/nautilus/default-desktop/Mandrake Expert.desktop"
+install -m644 gnome/gnome-mandrake-news.desktop "%buildroot/%_datadir/nautilus/default-desktop/Mandrake News.desktop"
+install -m644 gnome/gnome-mandrake-store.desktop "%buildroot/%_datadir/nautilus/default-desktop/Mandrake Store.desktop"
+install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/nautilus/default-desktop/Connection-to-Internet.desktop
+
+
+install -d %buildroot/%_datadir/pixmaps/mc/
+install -m644 gnome/gnome-mandrakecampus.xpm %buildroot/%_datadir/pixmaps/mc/mandrakecampus.xpm
+install -m644 gnome/gnome-mandrakeexpert.xpm %buildroot/%_datadir/pixmaps/mc/mandrakeexpert.xpm
+install -m644 gnome/gnome-mandrakenews.xpm %buildroot/%_datadir/pixmaps/mc/mandrakenews.xpm
+install -m644 gnome/gnome-mandrakestore.xpm %buildroot/%_datadir/pixmaps/mc/mandrakestore.xpm
 
 install -m755 gnome/gnomedesktop-network %buildroot/%_bindir
-
 
 install -d %buildroot/%_menudir
 kdedesktop2mdkmenu.pl krozat .hidden/ScreenSavers %buildroot/%_datadir/applnk/System/ScreenSavers/Krozat.desktop %buildroot/%_menudir/krozat kde
 
+install -d %buildroot/%_menudir/simplified/
+install -m644 menu/mandrake_desk %buildroot/%_menudir/simplified/
+
+
 
 %post
-if [ -f /etc/X11/window-managers.rpmsave ];then
-	/usr/sbin/convertsession -f /etc/X11/window-managers.rpmsave || :
+if [ -f %_sysconfdir/X11/window-managers.rpmsave ];then
+	%_prefix/sbin/convertsession -f %_sysconfdir/X11/window-managers.rpmsave || :
 fi
 %update_menus
 
@@ -197,9 +213,12 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_datadir/mdk/
 %dir %_datadir/mdk/faces/
 %_datadir/mdk/faces/*
+%_datadir/mdk/screensaver
 #
 %dir %_datadir/mdk/gnome-desktop/
 %_datadir/mdk/gnome-desktop/*
+
+%_datadir/nautilus/default-desktop
 #
 #
 %dir %_datadir/pixmaps/backgrounds/
@@ -212,7 +231,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_datadir/pixmaps/mdk/
 %_datadir/pixmaps/mdk/*
 #
-%{_menudir}/simplified/mandrake_desk
+%_menudir/simplified/mandrake_desk
 
 
 %files -n mdk-eazel-engine
@@ -265,11 +284,6 @@ rm -rf $RPM_BUILD_ROOT
 %_bindir/krozat.kss
 #
 #
-%dir %_datadir/apps/krozat/
-%dir %_datadir/apps/krozat/pics/
-%_datadir/apps/krozat/pics/*
-#
-#
 %dir %_datadir/applnk/System/
 %dir %_datadir/applnk/System/ScreenSavers/
 %_datadir/applnk/System/ScreenSavers/*.desktop
@@ -287,8 +301,26 @@ rm -rf $RPM_BUILD_ROOT
 #
 %_menudir/krozat
 
-
 %changelog
+* Fri Jan 11 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-1mdk
+- Move screensaver images to mandrake_desk package
+- Configure default desktop for nautilus
+
+* Mon Dec 24 2001 Stefan van der Eijk <stefan@eijk.nu> 8.1-22mdk
+- BuildRequires
+
+* Thu Oct 18 2001 Stefan van der Eijk <stefan@eijk.nu> 8.1-21mdk
+- BuildRequires: arts
+
+* Fri Sep 21 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-20mdk
+- Fix GMC URL (Frederic Crozat)
+
+* Fri Sep 21 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-19mdk
+- Fix GMC script
+
+* Fri Sep 21 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-18mdk
+- Fix my mistake with default user icon for GDM
+
 * Wed Sep 19 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-17mdk
 - Add simplified menu file
 - Gnome: don't put special icons on root desktop
