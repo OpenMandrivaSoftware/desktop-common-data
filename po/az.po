@@ -1,7 +1,7 @@
 #
 # WARNING: This file is in unicode!
 #
-# Vasif Ismailoglu <azerb_linux@hotmail.com>
+# Vasif Ismailoglu <azerb_linux@hotmail.com>, 2001
 #
 msgid ""
 msgstr ""
@@ -40,7 +40,7 @@ msgstr "Maym Növü"
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
 msgid "Application"
-msgstr "Proqram Tǝ'minatı"
+msgstr "Proqram Tə'minatı"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
@@ -70,7 +70,7 @@ msgstr "Əsas Çap Edici"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr "Çap sorğunuzu idarǝ edin"
+msgstr "Çap sorğunuzu idarə edin"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
@@ -90,11 +90,11 @@ msgstr "Mandrake ve KDE sənədləri"
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr "Linux Mandrakenin sistem quraşdırma vasitǝsi"
+msgstr "Linux Mandrakenin sistem quraşdırma vasitəsi"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
-msgstr "Ev Cǝrgǝsi"
+msgstr "Ev Cərgəsi"
 
 #: kdelnk/Internet.kdelnk.in.h:1 old/Internet.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:3
@@ -115,7 +115,9 @@ msgstr "Linux Mandrake Xəbərlər"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr "Çap edici timsalı üzerində Postscript ve saf mətn faylları buraxıla bilər"
+msgstr ""
+"Çap edici timsalı üzerində Postscript ve saf mətn faylları buraxıla "
+"bilər"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
@@ -128,7 +130,7 @@ msgstr "Mandrake Güncəlləmələri"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr "Bir pǝncǝrǝyi qapada bilmirsiniz? 'XKill'dən istifadə edin."
+msgstr "Bir pəncərəyi qapada bilmirsiniz? 'XKill'dən istifadə edin."
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"
@@ -136,7 +138,7 @@ msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr "Linuks Sǝnǝdlǝri"
+msgstr "Linuks Sənədləri"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
@@ -144,4 +146,4 @@ msgstr "RpmDrake"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
-msgstr "Gnome ve X Proqram Tǝ'minatları"
+msgstr "Gnome ve X Proqram Tə'minatları"
