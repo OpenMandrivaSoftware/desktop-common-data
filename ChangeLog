@@ -1,3 +1,7 @@
+2000-01-27  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+	* mandrake_desk.spec: Remove the mandrake_background.xpm
+	* backgrounds/mandrake_background_*: add background from helene.
+
 2000-01-10  Pixel  <pixel@mandrakesoft.com>
 
 	* icons/mini/hd_umount.xpm: renamed in hd_unmount.xpm (for coherence)

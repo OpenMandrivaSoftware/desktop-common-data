@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 17mdk
+%define release 18mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -16,7 +16,6 @@ BuildRoot: /tmp/%{name}-buildroot
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source: mandrake_desk-%{version}.tar.bz2
 BuildArchitectures: noarch
-BuildRequires: /usr/X11R6/bin/convert
 
 %description
 This package contains useful icons background and .kdelnk files for
@@ -31,9 +30,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %install
 make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT
-pushd $RPM_BUILD_ROOT/usr/share/pixmaps/backgrounds/mandrake && {
-  for i in *.jpg ; do /usr/X11R6/bin/convert $i `basename $i .jpg`.xpm ; done
-} && popd
 rm -f special/mandrake-small.xpm
 
 %clean
@@ -58,6 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Thu Jan 27 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.1-18mdk
+- backgrounds/mandrake_background_*: add background from helene.
+- mandrake_desk.spec: Remove the mandrake_background.xpm
+
 * Mon Jan 10 2000 Pixel <pixel@mandrakesoft.com>
 - icons/mini/hd_umount.xpm: renamed in hd_unmount.xpm (for coherence)
 
