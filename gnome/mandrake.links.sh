@@ -11,10 +11,6 @@ if [ $(set | grep USERNAME | sed s/USERNAME=//)  != root ] ; then
 		cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Galeon.desktop $HOME/.gnome-desktop/
 	elif [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Mozilla.desktop ] ; then
 		cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Mozilla.desktop $HOME/.gnome-desktop/
-	elif [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Communicator.desktop ] ; then
-		cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Communicator.desktop $HOME/.gnome-desktop/
-	elif [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop ] ; then
-		cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop $HOME/.gnome-desktop/
 	fi
 
 	# Documentation
