@@ -3,7 +3,7 @@
 Name=Internet
 Name[fr]=Réseau
 Exec=/usr/bin/gnomedesktop-network 
-Icon=draknet-mdk.png
+Icon=networking_www_section.xpm
 Terminal=false
 MultipleArgs=false
 Type=Application
