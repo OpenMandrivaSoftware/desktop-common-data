@@ -1,0 +1,150 @@
+/****************************************************************************
+** krozatSaver meta object code from reading C++ file 'krozat.h'
+**
+** Created: Fri Aug 24 15:15:27 2001
+**      by: The Qt MOC ($Id$)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#define Q_MOC_OUTPUT_REVISION 9
+#elif Q_MOC_OUTPUT_REVISION != 9
+#error "Moc format conflict - please regenerate all moc files"
+#endif
+
+#include "krozat.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+
+
+const char *krozatSaver::className() const
+{
+    return "krozatSaver";
+}
+
+QMetaObject *krozatSaver::metaObj = 0;
+
+void krozatSaver::initMetaObject()
+{
+    if ( metaObj )
+	return;
+    if ( qstrcmp(KScreenSaver::className(), "KScreenSaver") != 0 )
+	badSuperclassWarning("krozatSaver","KScreenSaver");
+    (void) staticMetaObject();
+}
+
+#ifndef QT_NO_TRANSLATION
+
+QString krozatSaver::tr(const char* s)
+{
+    return qApp->translate( "krozatSaver", s, 0 );
+}
+
+QString krozatSaver::tr(const char* s, const char * c)
+{
+    return qApp->translate( "krozatSaver", s, c );
+}
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* krozatSaver::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    (void) KScreenSaver::staticMetaObject();
+#ifndef QT_NO_PROPERTIES
+#endif // QT_NO_PROPERTIES
+    typedef void (krozatSaver::*m1_t0)();
+    typedef void (QObject::*om1_t0)();
+    m1_t0 v1_0 = &krozatSaver::slotTimeout;
+    om1_t0 ov1_0 = (om1_t0)v1_0;
+    QMetaData *slot_tbl = QMetaObject::new_metadata(1);
+    QMetaData::Access *slot_tbl_access = QMetaObject::new_metaaccess(1);
+    slot_tbl[0].name = "slotTimeout()";
+    slot_tbl[0].ptr = (QMember)ov1_0;
+    slot_tbl_access[0] = QMetaData::Protected;
+    metaObj = QMetaObject::new_metaobject(
+	"krozatSaver", "KScreenSaver",
+	slot_tbl, 1,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    metaObj->set_slot_access( slot_tbl_access );
+#ifndef QT_NO_PROPERTIES
+#endif // QT_NO_PROPERTIES
+    return metaObj;
+}
+
+
+const char *krozatSetup::className() const
+{
+    return "krozatSetup";
+}
+
+QMetaObject *krozatSetup::metaObj = 0;
+
+void krozatSetup::initMetaObject()
+{
+    if ( metaObj )
+	return;
+    if ( qstrcmp(QDialog::className(), "QDialog") != 0 )
+	badSuperclassWarning("krozatSetup","QDialog");
+    (void) staticMetaObject();
+}
+
+#ifndef QT_NO_TRANSLATION
+
+QString krozatSetup::tr(const char* s)
+{
+    return qApp->translate( "krozatSetup", s, 0 );
+}
+
+QString krozatSetup::tr(const char* s, const char * c)
+{
+    return qApp->translate( "krozatSetup", s, c );
+}
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* krozatSetup::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    (void) QDialog::staticMetaObject();
+#ifndef QT_NO_PROPERTIES
+#endif // QT_NO_PROPERTIES
+    typedef void (krozatSetup::*m1_t0)();
+    typedef void (QObject::*om1_t0)();
+    typedef void (krozatSetup::*m1_t1)();
+    typedef void (QObject::*om1_t1)();
+    m1_t0 v1_0 = &krozatSetup::slotOkPressed;
+    om1_t0 ov1_0 = (om1_t0)v1_0;
+    m1_t1 v1_1 = &krozatSetup::slotAbout;
+    om1_t1 ov1_1 = (om1_t1)v1_1;
+    QMetaData *slot_tbl = QMetaObject::new_metadata(2);
+    QMetaData::Access *slot_tbl_access = QMetaObject::new_metaaccess(2);
+    slot_tbl[0].name = "slotOkPressed()";
+    slot_tbl[0].ptr = (QMember)ov1_0;
+    slot_tbl_access[0] = QMetaData::Protected;
+    slot_tbl[1].name = "slotAbout()";
+    slot_tbl[1].ptr = (QMember)ov1_1;
+    slot_tbl_access[1] = QMetaData::Protected;
+    metaObj = QMetaObject::new_metaobject(
+	"krozatSetup", "QDialog",
+	slot_tbl, 2,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    metaObj->set_slot_access( slot_tbl_access );
+#ifndef QT_NO_PROPERTIES
+#endif // QT_NO_PROPERTIES
+    return metaObj;
+}
