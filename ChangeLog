@@ -1,5 +1,6 @@
 2000-04-05  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
+	* mandrake_desk.spec: adjust groups.
 	* Makefile: correct dis and rpm target.
 	* window-managers: fix blakbox with last blackbox package.
 

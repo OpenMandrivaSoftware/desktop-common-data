@@ -53,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Wed Apr  5 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.2-1mdk
+- Makefile: correct dis and rpm target.
 - window-managers: fix blakbox with last blackbox package.
 
 * Wed Feb  2 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.1-19mdk
