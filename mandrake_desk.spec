@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
-Version:	9.2
-Release: 8mdk
+Version:	10.0
+Release: 	2mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -13,7 +13,7 @@ Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildArch:	noarch
-Requires:	menu, mandrake_theme
+Requires:	menu >= 2.1.5-125mdk, mandrake_theme
 
 
 
@@ -169,6 +169,13 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Jan 13 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.0-2mdk
+- Fix drakbackup menu entry
+
+* Tue Jan 13 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.0-1mdk
+- Fix requires with good menu
+- Create simplified menu for MDK 10.0
+
 * Wed Sep 10 2003 Guillaume Cottenceau <gc@mandrakesoft.com> 9.2-8mdk
 - xfdrake-test-card needs to be in .png format since we don't
   have have the jpeg pixbug loader during install
