@@ -37,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc TRANSLATORS special/*
+%doc TRANSLATORS special/* README.CVS
 /usr/bin/*
 /usr/sbin/*
 /usr/share/icons/*
