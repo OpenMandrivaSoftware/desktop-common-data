@@ -1,3 +1,7 @@
+2000-05-29  dam's  <damien@mandrakesoft.com>
+
+	* window-managers changed sawmill entry into sawfish
+	
 2000-07-11  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* sbin/chksession:  make window-managers file dynamic by simple
