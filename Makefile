@@ -40,8 +40,6 @@ install:
 
 	install -m644 faces/* $(RPM_BUILD_ROOT)/usr/share/faces
 
-	install -m644 login/loging100.png $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk
-
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
 	cp gnome/mandrake.links.sh $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts/mandrake.links.sh
 	chmod 0755 $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts/mandrake.links.sh
