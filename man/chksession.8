@@ -1,0 +1,69 @@
+.\" Written by Camille Bégnis 12/28/99
+.TH CHKSESSION 8 "Dec 1999" "mandrake_desk" "MandrakeSoft"
+.SH NAME
+chksession \- Add/remove sessions from display managers
+.SH SYNOPSIS
+.B chksession 
+[\fIOPTION\fR]...
+.SH DESCRIPTION
+.PP
+.PP
+chksession allows system root to manage the sessions list provided by both gdm and kdm display managers. It modifies respective configuration files to add or remove available sessions like kde, gnome, icewm...
+.TP
+\fB\-F\fR, \fB\-\-first\fR
+Print only first available entry of config file.
+.TP
+\fB\-f=FILE\fR, \fB\-\-file=FILE\fR
+Specify an alternate config file, different from \fI/etc/X11/window-manager\fR
+.TP
+\fB\-g\fR, \fB\-\-gdm\fR
+Update window-managers list for gdm sessions using default config file or FILE specified by \fB\-f\fR option.
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Print a short help.
+.TP
+\fB\-k\fR, \fB\-\-kdm\fR
+Update window-managers list for kdm sessions using default config file or FILE specified by \fB\-f\fR option.
+.TP
+\fB\-l\fR, \fB\-\-list\fR
+List window-managers available in config file.
+.TP
+\fB\-r=ENTRY\fR, \fB\-\-remove=ENTRY\fR
+Print to stdout the list of window-managers as in config file, where ENTRY has been removed.
+.TP
+\fB\-t\fR, \fB\-\-test\fR
+Enter test mode.
+.TP
+\fB\-x=ENTRY\fR, \fB\-\-xsession=ENTRY\fR
+Print to stdout the script used to launch ENTRY window-manager.
+.SH "CONFIG FILE STRUCTURE"
+This file describes each window manager that will be made available through display managers. Each entry in this file is separate4d by a \fB\-\-@@\-\-\fR line.
+.PP
+.B NAME=
+is the name of the session as displayed into display manager's list.
+.PP
+.B ICON=
+icon file (\fI.xpm or .png\fR) used for this session.
+.PP
+.B DESC=
+short description of the session.
+.PP
+.B EXEC=
+test string to check wether the session manager has been installed or not.
+.PP
+.B SCRIPT:
+shell script used to run the window-manager choosed by the user.
+.SH FILES
+.TP 
+\fB\/etc/X11/window-manager\fR
+default config file, listing most known window-managers. It is the base used by \fBchksessio\fRn to update config files of both gdm and kdm display managers.
+.SH "REPORTING BUGS"
+Report bugs to \fBhttp://www.linux-mandrake.com/bugs/\fR.
+.SH "SEE ALSO"
+\fIxdm\fR(1)
+.SH COPYRIGHT
+Copyright \(co 1999 MandrakeSoft.
+.br
+This is a GPL free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
