@@ -1,5 +1,8 @@
 2000-07-18  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
+	* sbin/chksession: Set support for KDE2 by default when generating
+	session.
+
 	* bin/DrakWM: Add -i options to launch with xinit.
 	add -a option to provide alias for bash.
 

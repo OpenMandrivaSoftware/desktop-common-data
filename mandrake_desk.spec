@@ -1,6 +1,6 @@
 %define name	mandrake_desk
 %define version	1.0.4
-%define	release	3mdk
+%define release 4mdk
 
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		%{name}
@@ -60,6 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Tue Jul 18 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.4-4mdk
+- sbin/chksession: Set support for KDE2 by default when generating
+  session.
+
 * Tue Jul 18 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.4-3mdk
 - Remove /etc/X11/window-managers
 - bin/DrakWM: 

@@ -80,7 +80,7 @@ my ($e) = cat("/etc/sysconfig/desktop") =~ /(\S+)/;
 
 if ($kdm) {
   $session="SessionTypes=";
-  for(@lf) { $session .= /$lf[-1]/ ? "$_;failsafe;default" : "$_;"  }
+  for(@lf) { $session .= /$lf[-1]/ ? "$_,failsafe,default" : "$_,"  }
   print "$session\n";
   exit(0);
 }
