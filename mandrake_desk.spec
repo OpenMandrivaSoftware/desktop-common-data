@@ -12,6 +12,7 @@ Group:		System/Configuration/Other
 Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
+BuildArch:	noarch
 Requires:	menu
 
 
