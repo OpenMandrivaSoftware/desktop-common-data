@@ -103,7 +103,7 @@ rm -f special/mandrake-small.xpm
 install -d %buildroot/%_datadir/faces/
 cp %buildroot/%_datadir/mdk/faces/user-hat-mdk.png %buildroot/%_datadir/faces/root.png
 cp %buildroot/%_datadir/faces/root.png %buildroot/%_datadir/faces/root
-cp %buildroot/%_datadir/mdk/faces/man.png %buildroot/%_datadir/faces/default.png
+cp %buildroot/%_datadir/mdk/faces/aman.png %buildroot/%_datadir/faces/default.png
 
 install -d %buildroot/%_datadir/mdk/gnome-desktop/
 for l in de en fr it; do
@@ -273,6 +273,8 @@ rm -rf $RPM_BUILD_ROOT
 * Mon Sep 17 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-17mdk
 - Gnome: don't put special icons on root desktop
 - Gnome: fix Internet icon
+- Gnome: fix URL (Fred CROZAT)
+- mv man.png aman.png
 
 * Sat Sep 16 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-16mdk
 - Update gnome desktop
