@@ -1,4 +1,4 @@
-%define	release	12 mdk
+%define	release	12mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
