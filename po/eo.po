@@ -14,7 +14,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/DrakConf.kdelnk
 #: gnome/mandrake.links.desktop.in.h:1 kdelnk/DrakConf.kdelnk.in.h:1
 #: old/DrakConf.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:1
 msgid "DrakConf"
@@ -24,13 +23,11 @@ msgstr "DrakConf"
 msgid "GNOME Web Site"
 msgstr ""
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Doc.kdelnk
 #: gnome/mandrake.links.desktop.in.h:3 old/mandrake.links.desktop.in.h:6
 #, fuzzy
 msgid "Mandrake documentation"
 msgstr "Mandrake kaj KDE dokumentaro"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Netscape.kdelnk
 #: gnome/mandrake.links.desktop.in.h:4 kdelnk/Netscape.kdelnk.in.h:1
 #: old/Netscape.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:7
 msgid "Netscape"
@@ -84,70 +81,57 @@ msgstr ""
 msgid "Floppy disk"
 msgstr ""
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Doc.kdelnk
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
 msgstr "Mandrake kaj KDE dokumentaro"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Doc.kdelnk
 #: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
 msgstr "Mandrake kaj KDE dokumentaro"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/DrakConf.kdelnk
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
 msgstr "La sistemkonfiguriloj de Linuks-Mandrejko"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Home.kdelnk
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
 msgstr "Hejma Dosierujo"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Internet.kdelnk
 #: kdelnk/Internet.kdelnk.in.h:1 old/Internet.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:3
 msgid "Internet connection"
 msgstr "Interreta konekto"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Internet.kdelnk
 #: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
 msgstr "Interreta konekto"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Netscape.kdelnk
 #: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
 msgstr "Netskapa Foliumilo"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/News.kdelnk
 #: kdelnk/News.kdelnk.in.h:1 old/News.kdelnk.in.h:1
 msgid "Linux Mandrake News"
 msgstr "Linuks-Mandrejka Novaĵo"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Printer.kdelnk
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
 msgstr ""
 "Faligu tekstajn kaj PostScriptaj dosieroj sur la \"PRINTILO\"-n piktogramon"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Printer.kdelnk
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
 msgstr "Printilo"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Updates.kdelnk
 #: kdelnk/Updates.kdelnk.in.h:1 old/Updates.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:5
 msgid "Mandrake Updates"
 msgstr "Mandrejkaj Ĝisdatigoj"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/XKill.kdelnk
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
 msgstr "Ne povas fermu fenestro ? uzu 'XKill' (X Mortigu)"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/XKill.kdelnk
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"
 msgstr "XKill (X Mortigu)"
@@ -160,7 +144,6 @@ msgstr ""
 msgid "RpmDrake"
 msgstr ""
 
-# ../../cooker/soft/mandrake_desk/special/Gnome_and_X
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
 msgstr "Gnoma kaj X Aplikaj Programoj"

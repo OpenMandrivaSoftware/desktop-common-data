@@ -14,7 +14,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/DrakConf.kdelnk
 #: gnome/mandrake.links.desktop.in.h:1 kdelnk/DrakConf.kdelnk.in.h:1
 #: old/DrakConf.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:1
 msgid "DrakConf"
@@ -28,7 +27,6 @@ msgstr "Pådje Waibe di GNOME"
 msgid "Mandrake documentation"
 msgstr "Documintåcion di Mandrake"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Netscape.kdelnk
 #: gnome/mandrake.links.desktop.in.h:4 kdelnk/Netscape.kdelnk.in.h:1
 #: old/Netscape.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:7
 msgid "Netscape"
@@ -37,21 +35,21 @@ msgstr "Netscape"
 #: kde/Desktop/Templates/MimeType.noext.kdelnk.in.h:1
 #: old/MimeType.noext.kdelnk.in.h:1
 msgid "Mime Type"
-msgstr ""
+msgstr "S�rte MIME"
 
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
 msgid "Application"
-msgstr ""
+msgstr "Programe"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr ""
+msgstr "Adresse emile (URL)"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
 msgid "World Wide Web URL"
-msgstr ""
+msgstr "H�rd�ye waibe"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:2
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:1
@@ -59,16 +57,16 @@ msgstr ""
 #: old/CD-ROM.noext.kdelnk.in.h:2 old/Device.noext.kdelnk.in.h:1
 #: old/Floppy.noext.kdelnk.in.h:1
 msgid "File System Device"
-msgstr ""
+msgstr "�ndjin avou on sistinme di fitch�s"
 
 #: kde/Desktop/Templates/Ftpurl.noext.kdelnk.in.h:1
 #: old/Ftpurl.noext.kdelnk.in.h:1
 msgid "FTP URL"
-msgstr ""
+msgstr "H�rd�ye FTP"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:1 old/Printer.noext.kdelnk.in.h:1
 msgid "Default printer"
-msgstr ""
+msgstr "Pr�metowe sicrirece"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
@@ -76,89 +74,75 @@ msgstr "Manaedjîz li caweye di vosse sicrirece"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
-msgstr ""
+msgstr "Plake lazer"
 
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:2 old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
-msgstr ""
+msgstr "Plakete"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Doc.kdelnk
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
 msgstr "Documintåcion di Mandrake eyèt KDE"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Doc.kdelnk
 #: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
 msgstr "Documintåcion di Mandrake eyèt KDE"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/DrakConf.kdelnk
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
 msgstr "Les usteyes d' apontiaedje do sistinme di Linux-Mandrake"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Home.kdelnk
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
 msgstr "Ridant Måjhon"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Internet.kdelnk
 #: kdelnk/Internet.kdelnk.in.h:1 old/Internet.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:3
 msgid "Internet connection"
 msgstr "Raloyaedje al rantoele daegnrece"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Internet.kdelnk
 #: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
 msgstr "Raloyaedje al rantoele daegnrece"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Netscape.kdelnk
 #: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
 msgstr "Li betchteu Netscape"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/News.kdelnk
 #: kdelnk/News.kdelnk.in.h:1 old/News.kdelnk.in.h:1
 msgid "Linux Mandrake News"
 msgstr "Noveles di Linux Mandrake sol rantoele"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Printer.kdelnk
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
 msgstr ""
 "Bodjîz les fitchîs texes èt postscripts so l' imådjete del sicrirece."
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Printer.kdelnk
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
 msgstr "Sicrirece"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/Updates.kdelnk
 #: kdelnk/Updates.kdelnk.in.h:1 old/Updates.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:5
 msgid "Mandrake Updates"
 msgstr "Metaedje a djoû di Mandrake"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/XKill.kdelnk
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
 msgstr "Vos n' savoz clôre on purnea? Eployîz «XKill»!"
 
-# ../../cooker/soft/mandrake_desk/kdelnk/XKill.kdelnk
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"
 msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr ""
+msgstr "Documints Linux"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
-msgstr ""
+msgstr "RpmDrake"
 
-# ../../cooker/soft/mandrake_desk/special/Gnome_and_X
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
 msgstr "Programes Gnome eyèt X"
