@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+
+@dirs = (qw(/etc/skel /root), glob("/home/*"));
+@path = split ":", "/sbin:/usr/sbin:/usr/X11R6/bin:/bin:/usr/bin";
+
+foreach $f (map { glob("$_/Desktop/*.kdelnk") } @dirs) {
+    open F, $f or next;
+    L: foreach (<F>) {
+	  $_ = "Exec=linuxconf" if $f =~ /linuxconf/i; # hack
+
+	  ($l) = /^Exec=(?:kdesu\s+-c\s+)?"?(\S+)/ or next;
+	  -x "$_/$l" and last L foreach '', @path;
+	  print STDERR "removing $f\n";
+	  unlink $f;
+	  last;
+    }
+}

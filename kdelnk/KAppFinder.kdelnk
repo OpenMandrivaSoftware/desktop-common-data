@@ -1,0 +1,36 @@
+# KDE Config File
+[KDE Desktop Entry]
+Name=KAppFinder
+Comment=Find X non-KDE applications on your Mandrake system
+Comment[br]=Kavit an arloadoù X an-KDE war ho reizhiad Mandrake
+Comment[ca]=Cerqueu X aplicacions que no són KDE al vostre sistema Mandrake
+Comment[cs]=Vyhledávaè ne-KDE grafickıch aplikací na Va¹em Mandrake systému
+Comment[da]=Find ikke-KDE X applikationer på dit Mandrake system
+Comment[de]=Finden von nicht-KDE Applikationen auf Ihrem Mandrake System
+Comment[es]=Encontrar los programs X no de KDE instalados en su sistema
+Comment[et]=Otsi mitte-KDE X rakendusi oma Mandrake süsteemist
+Comment[fr]=Trouvez les applications X non-KDE sur votre système Linux Mandrake.
+Comment[ga]=Faigh feidhmchláir X gan-KDE ar do chóras Mandrake.
+Comment[gl]=Atopar aplicacións X que non sexan KDE no seu sistema
+Comment[hr]=Naği X ne-KDE aplikacije na va¹em Mandrake sistemu
+Comment[hu]=Nem-KDE alkalmazások feltárása a Mandrake rendszeren.
+Comment[id]=Cari aplikasi X yang bukan aplikasi KDE di sistem Mandrake Anda.
+Comment[is]=Finnur X KDE-ósamhæf forrit í Mandrake kerfinu şínu.
+Comment[it]=Ricerca programmi X (non-KDE) nel sistema.
+Comment[lt]=Rasti ne KDE programas jûsø Mandrake sistemoje
+Comment[nl]=Zoekt X en non-KDE applicaties op het systeem
+Comment[no]=Finner ikke-KDE X applikasjoner på Mandrake systemet ditt.
+Comment[ro]=Gaseºte aplicaşii X non-KDE pe sistemul tãu Mandrake
+Comment[sk]=Nájde X ne-KDE aplikácie vá¹ho Mandrake systému
+Comment[uk]=úÎÁÈÏÄÉÔØ ĞÒÏÇÒÁÍÉ ÄÌÑ X, ÑË¦ ÎÅ ÎÁÌÅÖÁÔØ ÄÏ KDE, Õ ÷ÁÛ¦Ê Mandrake ÓÉÓÔÅÍ¦
+Comment[wa]=Trover les programes è mode grafike nén di KDE so vost éndjole.
+SwallowExec=
+SwallowTitle=
+BinaryPattern=kappfinder;
+MimeType=
+Exec=kappfinder_restart
+Icon=kfind.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=1

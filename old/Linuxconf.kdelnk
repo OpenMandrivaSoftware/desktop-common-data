@@ -1,0 +1,25 @@
+# KDE Config File
+[KDE Desktop Entry]
+Name=LinuxConf
+Name[br]=KefluniaÒ Linux
+Name[ca]=ConfiguraciÛ del Linux
+Name[cs]=NastavenÌ Linuxu
+Name[da]=Linux Configuration
+Name[gl]=ConfiguraciÛn de Linux
+Name[is]=Linux stillingaskr·
+Name[nl]=Linux configuratie
+Name[lt]=Linux konfiguracija
+Name[ro]=Configurare Linux
+Name[sk]=Konfigur·cia Linux
+Name[uk]=ÎœŒ∆¶«’“¡√¶— Ï¶Œ¡À”¡
+Name[wa]=Apontiaedje di Linux
+SwallowTitle=
+SwallowExec=
+BinaryPattern=
+MimeType=
+Exec=kdesu -c  "/usr/bin/linuxconf_kdesu $HOME"
+Icon=linuxconf.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

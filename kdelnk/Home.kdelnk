@@ -1,0 +1,28 @@
+# KDE Config File
+[KDE Desktop Entry]
+Comment=Home Directory
+Comment[br]=Renkell Er-Gêr
+Comment[ca]=Directori inicial
+Comment[cs]=Domácí adresáø
+Comment[da]=Hjemmemappe
+Comment[de]=Persönliches Verzeichnis
+Comment[es]=Directorio personal
+Comment[et]=Kodukataloog
+Comment[fr]=Repertoire Personnel
+Comment[ga]=Eolaire Cinn
+Comment[gl]=Directorio Persoal
+Comment[hr]=Osnovna mapa
+Comment[hu]=Home mappa
+Comment[id]=Direktori Home
+Comment[is]=Heima mappa
+Comment[lt]=Namø katalogas
+Comment[nl]=Home Directory
+Comment[no]=Hjemmekatalog
+Comment[ro]=Directorul Home
+Comment[sk]=Domáci prieèinok
+Comment[uk]=äÏÍÁÛÎÑ ÄÉÒÅËÔÏÒ¦Ñ
+Comment[wa]=Ridant Måjhon
+Type=Link
+URL=file:$HOME
+Icon=kfm_home.xpm
+MiniIcon=kfm_home.xpm

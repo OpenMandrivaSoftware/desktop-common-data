@@ -1,0 +1,66 @@
+# KDE Config File
+[KDE Desktop Entry]
+Name=Printer
+Name[br]=Moullañ
+Name[ca]=Impressora
+Name[cs]=Tiskárna
+Name[da]=Printer
+Name[de]=Drucker
+Name[el]=ÅêôõğùôŞò
+Name[es]=Impresora
+Name[eu]=Irarkola
+Name[fi]=Tulostin
+Name[fr]=Imprimante
+Name[ga]=Printéir
+Name[gl]=Impresora
+Name[hu]=Nyomtató
+Name[is]=Prentari
+Name[it]=Stampante
+Name[ja]=¥×¥ê¥ó¥¿
+Name[ko]=ÀÎ¼â±â
+Name[lt]=Spausdintuvas
+Name[no]=Skriver
+Name[pl]=Drukarka
+Name[pt]=Impressora
+Name[ro]=Imprimantã
+Name[ru]=ğÒÉÎÔÅÒ
+Name[sk]=Tlaèiareò
+Name[sv]=Skrivare
+Name[uk]=ğÒÉÎÔÅÒ
+Name[wa]=Sicrirece
+Name[zh_TW.Big5]=¦Lªí¾÷
+Comment=Drop text and postscript files onto the PRINTER icon
+Comment[br]=Leuskel restroù skrid ha postscript war arlun ar MOULLER
+Comment[ca]=Deixeu anar el text i els fitxers postscript sobre la icona IMPRESSORA
+Comment[da]=Smid tekst og postscript filer på PRINTER ikonet
+Comment[de]=Text- und Postscript-Dateien einfach auf den Drucker ziehen
+Comment[et]=PRINTER ikoonile lohista trükkimiseks text või PostScript failid
+Comment[fr]=Lâchez vos fichiers texte ou postscript sur l'icône de l'imprimante
+Comment[ga]=Cuir comhaid téacsa agus postscript ar an dealbh printéir.
+Comment[gl]=Solte os ficheiros de texto e postscript no icono PRINTER
+Comment[hr]=Stavite tekst i postkript datoteke na ikonu pisaèa
+Comment[hu]=Húzza a szöveg vagy postscript állományt a nyomtató ikonjára
+Comment[id]=Ayo tarik file teks dan postscript ke icon PRINTER ini
+Comment[is]=Dragiğ texta og postscript(eftirskriftarskrár) yfir PRENTARA íkoniğ
+Comment[it]=Muovi file di testo e PostScript sopra l'icona PRINTER
+Comment[lt]=Nutempk tekstà ir postskript bylas ant spausdintuvo piktogramos
+Comment[nl]=Sleep text en postscript files op het PRINTER icoon.
+Comment[no]=Slipp tekst og postscript filer på SKRIVER ikonet.
+Comment[ro]=Puneşi fiºiere text ºi postscript pe icon-ul imprimantei.
+Comment[sk]=Vlo¾te textové alebo postskriptové súbory na ikonu tlaèiarne
+Comment[uk]=ıÏÂ ÒÏÚÄÒÕËÕ×ÁÔÉ ÔÅËÓÔÏ×ÉÊ ÁÂÏ PostScript ÆÁÊÌ, ĞÏËÌÁÄ¦ÔØ ÊÏÇÏ ÎÁ Ğ¦ËÔÏÇÒÁÍÕ ĞÒÉÎÔÅÒÁ
+Comment[wa]=Bodjîz les fitchîs texes èt postscripts so l' imådjete del sicrirece.
+SwallowTitle=
+SwallowExec=
+BinaryPattern=
+MimeType=application/postscript;text/english;text/html;text/plain;text/sgml;text/x-c;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-makefile;text/x-pascal;
+Exec=lpr %f
+Icon=klpq.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+
+
+		
+		

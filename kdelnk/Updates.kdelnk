@@ -1,0 +1,31 @@
+# KDE Config File
+[KDE Desktop Entry]
+Name=Mandrake Updates
+Name[br]=Hizivadurioù Mandrake
+Name[ca]=Actualitzacions del Mandrake
+Name[cs]=Aktualizace Mandrake
+Name[da]=Mandrake Opdateringer
+Name[de]=Mandrake Updates
+Name[es]=Actualizaciones de Mandrake
+Name[fr]=Mises à jour de Mandrake
+Name[gl]=Actualizacións de Mandrake
+Name[hr]=Mandrake nadogradnje
+Name[hu]=Mandrake frissítések
+Name[is]=Mandrake uppfærslur
+Name[lt]=Mandrake atnaujinimai
+Name[nl]=Mandrake Updates
+Name[no]=Mandrake oppdateringer
+Name[ro]=Actualizãri pentru Mandrake
+Name[sk]=Mandrake Updates
+Name[uk]=ğÏÎÏ×ÌÅÎÎÑ ÓÉÓÔÅÍÉ Mandrake
+Name[wa]=Metaedje a djoû di Mandrake
+MimeType=
+Exec=MandrakeUpdate
+Icon=magic.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+SwallowTitle=
+SwallowExec=
+BinaryPattern=MandrakeUpdate;

@@ -1,0 +1,36 @@
+# KDE Config File
+[KDE Desktop Entry]
+Name=RPM
+Comment=RPM Packages Manager
+Comment[br]=Merer pakadoù RPM
+Comment[ca]=Gestor de paquets RPM
+Comment[cs]=Správce RPM balíèkù
+Comment[da]=RPM pakke håndtering
+Comment[de]=RPM Paket Manager
+Comment[es]=Gestor de paquetes RPM gráfico
+Comment[et]=RPM pakettide haldus
+Comment[fr]=Gestionnaire de paquetages RPM
+Comment[ga]=Bainisteoir Pacáiste RPM
+Comment[gl]=Xestor gráfico de paquetes RPM
+Comment[hr]=Upravitelj RPM paketima
+Comment[hu]=RPM csomag menedzser
+Comment[id]=Program Manajemen Paket RPM
+Comment[is]=RPM pakkastjóri
+Comment[it]=Programma di gestione pacchetti RPM
+Comment[lt]=RPM paketø valdymo programa
+Comment[nl]=RPM Packages beheer
+Comment[no]=RPM pakkebehandler
+Comment[ro]=Managerul de pachete RPM
+Comment[sk]=Mana¾ér RPM balíkov
+Comment[uk]=íÅÎÅÄÖÅÒ ĞÁËÅÔ¦× RPM
+Comment[wa]=Manaedjeu grafike di pakets RPM
+SwallowTitle=
+SwallowExec=
+BinaryPattern=kpackage;
+MimeType=
+Exec=kdesu -c /usr/bin/kpackage
+Icon=package2.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

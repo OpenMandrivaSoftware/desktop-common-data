@@ -1,0 +1,6 @@
+This directory holds special menus/icons/etc for Linux Mandrake;
+they are not distributed as part of mandrake_desk rpm package; but
+it helps me to mantain their translations to have them here, along
+all the other Mandrake specific translatable menus and icons
+
+

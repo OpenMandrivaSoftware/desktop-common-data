@@ -1,0 +1,13 @@
+# KDE Config File
+[KDE Desktop Entry]
+Name=RpmDrake
+SwallowExec=
+SwallowTitle=
+BinaryPattern=RpmDrake;
+MimeType=application/x-rpm;
+Exec=/usr/X11R6/bin/rpmdrake
+Icon=rpmdrake.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0

@@ -1,0 +1,13 @@
+# KDE Config File
+[KDE Desktop Entry]
+Name=DrakConf
+SwallowExec=
+SwallowTitle=
+Icon=DrakConf.xpm
+BinaryPattern=DrakConf;
+MimeType=application/x-rpm;
+Exec=/usr/bin/kdesu -c "/usr/X11R6/bin/DrakConf"
+Path=
+Type=Application
+Terminal=0
+TerminalOptions=
