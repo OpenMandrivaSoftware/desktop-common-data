@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.2
-Release: 	2mdk
+Release: 	3mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Mar 23 2005 Frederic Crozat <fcrozat@mandrakesoft.com> 10.2-3mdk 
+- don't use .desktop files for order directive
+
 * Wed Mar 09 2005 Frederic Crozat <fcrozat@mandrakesoft.com> 10.2-2mdk 
 - change www-browser to use BROWSER variable if set or use running environment
   settings if set.
