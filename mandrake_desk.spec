@@ -275,6 +275,7 @@ rm -rf $RPM_BUILD_ROOT
 - Gnome: fix Internet icon
 - Gnome: fix URL (Fred CROZAT)
 - mv man.png aman.png
+- Remove some obsolete faces (LN)
 
 * Sat Sep 16 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-16mdk
 - Update gnome desktop
