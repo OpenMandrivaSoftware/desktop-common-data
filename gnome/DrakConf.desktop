@@ -50,6 +50,7 @@ Comment[no]=Systemkonfigurasjonsverktøyene til Linux-Mandrake
 Comment[sp]=Linux-Mandrake - áØáâÕÜáÚØ ÚŞİäØÓãàĞæØŞİØ ĞÛĞâØ
 Comment[sr]=Linux-Mandrake - sistemski konfiguracioni alati
 Comment[wa]=Les usteyes d' apontiaedje do sistinme di Linux-Mandrake
+Comment[zh_CN.GB2312]=Linux-Mandrake µÄÏµÍ³ÅäÖÃ¹¤¾ß
 Icon=../icons/large/DrakConf.xpm
 TryExec=DrakConf;
 Exec=/usr/X11R6/bin/DrakConf
