@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Name=Mandrake Campus
+Icon=/usr/share/pixmaps/mc/mandrakestore.xpm
+Exec=http://www.mandrakestore.com/
+Terminal=false
+MultipleArgs=false
+Type=URL
