@@ -1,4 +1,4 @@
-%define release 2mdk
+%define release 4mdk
 %define name mandrake_desk
 %define version 1.0.4
 
@@ -54,7 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
-* Mon Apr 14 2000 dam's <damien@mandrakesoft.com> 1.0.3-3mdk
+* Tue Apr 18 2000 dam's <damien@mandrakesoft.com> 1.0.3-4mdk
+- removed some kdelnk for desktop cleaning.
+
+* Mon Apr 17 2000 dam's <damien@mandrakesoft.com> 1.0.3-3mdk
 - removed kdelnk/KAppfinder.kdelnk
 
 * Sun Apr 16 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.3-2mdk
