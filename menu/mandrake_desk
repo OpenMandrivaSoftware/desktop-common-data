@@ -19,7 +19,7 @@
 
 
 # Mandrake Control Center
-?package(drakconf): needs="x11" icon="drakconf.png" section="Administer your system" title="Configure your system" command="/usr/sbin/drakconf"
+?package(drakconf): needs="x11" icon="drakconf.png" section="Administer your system" title="Configure your computer" command="/usr/sbin/drakconf"
 
 
 # Format a floppy
@@ -61,6 +61,23 @@
 
 
 ## Play games
+# Armagetron
+?package(armagetron):command="/usr/games/armagetron" icon="armagetron.png" needs="x11" section="Play games" title="Play ArmageTron"
+
+# Chromium
+?package(chromium):command="/usr/games/chromium" icon="chromium.png" needs="x11" section="Play games" title="Play Chromium"
+
+# Canon Smash
+?package(csmash):command="/usr/bin/csmash" icon="csmash.png" needs="x11" section="Play games" title="Play Cannon Smash"
+
+# Frozen-Bubble
+?package(frozen-bubble):command="/usr/games/frozen-bubble" icon="frozen-bubble.png" needs="X11" section="Play games" title="Play Frozen-Bubble"
+
+#LBreakout
+?package(lbreakout2):needs="x11" section="Play games" title="Play LBreakout" command="/usr/games/lbreakout2" icon="lbreakout2.png"
+
+# TuXRacer
+?package(tuxracer):command="soundwrapper /usr/games/tuxracer" icon="tuxracer.png" needs="x11" section="Play games" title="Play Tuxracer"
 
 
 
@@ -92,7 +109,7 @@
 ?package(OpenOffice.org): needs="x11" section="Use office tools" icon="ooo_impress.png" title="Create a presentation" command="ooimpress" mimetypes="application/vnd.sun.xml.impress;application/vnd.stardivision.impress;application/mspowerpoint"
 
 # Create a text document
-?package(OpenOffice.org): needs="x11" section="Use office tools" icon="ooo_writer.png" title="Write a document" command="oowriter" mimetypes="application/vnd.sun.xml.writer,application/vnd.stardivision.writer,application/msword,application/vnd.ms-word,application/x-doc,text/rtf"
+?package(OpenOffice.org): needs="x11" section="Use office tools" icon="ooo_writer.png" title="Create a text document" command="oowriter" mimetypes="application/vnd.sun.xml.writer,application/vnd.stardivision.writer,application/msword,application/vnd.ms-word,application/x-doc,text/rtf"
 
 # Create a spreadsheet
 ?package(OpenOffice.org): needs="x11" section="Use office tools" icon="ooo_calc.png" title="Create a spreadsheet" command="oocalc" mimetypes="application/vnd.sun.xml.calc,application/vnd.stardivision.calc,application/vnd.stardivision.chart,application/msexcel,application/vnd.ms-excel"
@@ -110,7 +127,7 @@
 ?package(mrproject):command="mrproject" needs="x11" section="Use office tools" title="Manage your projects" icon="taskmanagement_section.png" startup_notify="true"
 
 # Manage your time
-package(kdepim-korganizer): needs="x11" kde_filename="korganizer" section="Use office tools" title="Manage your time" icon="korganizer.png" command="korganizer" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nServiceTypes=Browser/View\\nX-KDE-Library=libkorganizer\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
+?package(kdepim-korganizer): needs="x11" kde_filename="korganizer" section="Use office tools" title="Manage your time" icon="korganizer.png" command="korganizer" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nServiceTypes=Browser/View\\nX-KDE-Library=libkorganizer\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
 
 # Send a fax
 ?package(kdebase-kdeprinterfax): needs="kde" kde_filename="kdeprintfax" section="Use office tools" title="Send a fax" icon="kdeprintfax.png" command="kdeprintfax %u" kde_command="kdeprintfax -caption \"%c\" %i %m %u" kde_opt="\\nMiniIcon=kdeprintfax\\nTerminal=0"
@@ -127,10 +144,10 @@ package(kdepim-korganizer): needs="x11" kde_filename="korganizer" section="Use o
 
 ## Use the Internet
 # Access Newsgroups
-?package(kdenetwork-knode): needs="kde" kde_filename="KNode" section="Use the Internet" title="Access Newsgroups" icon="knode.png" command="knode" kde_command="knode -caption \"%c\" %i %m" kde_opt="\\nDocPath=knode/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdenetwork-knode): needs="kde" kde_filename="KNode" section="Use the Internet" title="Access newsgroups" icon="knode.png" command="knode" kde_command="knode -caption \"%c\" %i %m" kde_opt="\\nDocPath=knode/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # Browse the Web
-?package(kdebase-progs): needs="x11" kde_filename="konqbrowser" section="Use the Internet" title="Browse the Web" icon="networking_www_section.png" command="konqueror --profile webbrowsing" kde_opt="\\nEncoding=UTF-8\\nDocPath=konqueror/index.html"
+?package(kdebase-progs): needs="x11" kde_filename="konqbrowser" section="Use the Internet" title="Browse the Web" icon="konqueror.png" command="konqueror --profile webbrowsing" kde_opt="\\nEncoding=UTF-8\\nDocPath=konqueror/index.html"
 
 # Chat using AIM, ICQ, MSN, Yahoo, Winpopup
 ?package(gaim): needs="x11" command="gaim" icon="gaim.png" title="Chat using AIM, ICQ, MSN, Yahoo, Winpopup" section="Use the Internet"
