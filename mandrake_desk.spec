@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	2mdk
+Release: 	3mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -143,6 +143,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Aug 11 2004 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-3mdk
+- Add GNOME version of task oriented menu
+- Fix capitalisations in task oriented menu
+
 * Thu Aug 05 2004 David Baudens <baudens@mandrakesoft.com> 10.1-2mdk
 - Add "Make a phone call" to task oriented menu
 
