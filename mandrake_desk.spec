@@ -101,7 +101,7 @@ rm -rf %buildroot
 cd eazel-engine
 %makeinstall_std
 )
-mkdir -p $RPM_BUILD_ROOT{%{_menudir},%{_datadir}/control-center/capplet/Advanced}
+mkdir -p $RPM_BUILD_ROOT{%{_menudir},%{_datadir}/control-center/capplets/Advanced}
 cat << EOF > $RPM_BUILD_ROOT%{_menudir}/mdk-eazel-engine-capplet
 ?package(mdk-eazel-engine-capplet):command="%{_bindir}/eazel-engine-capplet" \
 needs="gnome" section="Configuration/Gnome/Advanced" title="Crux GTK+ Theme" \
