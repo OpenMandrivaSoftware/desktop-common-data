@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	13mdk
+Release: 	14mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -13,8 +13,9 @@ Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildArch:	noarch
-Requires:	menu >= 2.1.5-125mdk, mandrake_theme
+Requires:	mandrake_theme
 Conflicts:	kdebase-kdm-config-file < 1:3.2-62mdk
+Conflicts:	menu <= 2.1.12-10mdk
 
 
 %description
@@ -80,9 +81,19 @@ install -m 0644 kde/kdm-mdk-logo.png %buildroot/%_datadir/apps/kdm/pics/
 
 
 ## menu
-install -d -m 0755 %buildroot/%_menudir/simplified/
+install -d -m 0755 %buildroot/%_menudir/simplified/ %buildroot/%_sysconfdir/menu-methods/simplified
 install -m 0644 menu/mandrake_desk %buildroot/%_menudir/simplified/
-
+install -m 0644 menu/menu-simplified %buildroot/%_menudir/simplified/
+install -m 0644 menu/menu %buildroot/%_menudir/
+install -m 0644 menu/translate_menus %buildroot/%_sysconfdir/menu-methods/
+install -m 0644 menu/translate_menus-simplified %buildroot/%_sysconfdir/menu-methods/simplified/translate_menus
+install -d -m 0755 %buildroot/%_miconsdir %buildroot/%_liconsdir
+install -m 0644 menu/icons/*.png %buildroot/%_iconsdir
+install -m 0644 menu/icons/large/*.png %buildroot/%_liconsdir
+install -m 0644 menu/icons/mini/*.png %buildroot/%_miconsdir
+install -d -m 0755 %buildroot/%_localstatedir/menu-xdg/menus/applications-mdk-merged %buildroot/%_localstatedir/menu-xdg/menus/applications-simplified-merged 
+install -m 0644 menu/defaultlayout.menu %buildroot/%_localstatedir/menu-xdg/menus/applications-mdk-merged
+install -m 0644 menu/defaultlayout-simplified.menu %buildroot/%_localstatedir/menu-xdg/menus/applications-simplified-merged
 
 
 # Screensaver
@@ -139,11 +150,22 @@ rm -fr %buildroot
 %dir /usr/share/mdk/screensaver/
 /usr/share/mdk/screensaver/*.png
 #
-%_menudir/simplified/*
+%_localstatedir/menu-xdg/menus/applications-mdk-merged
+%_localstatedir/menu-xdg/menus/applications-simplified-merged
 
+%config(noreplace) %_sysconfdir/menu-methods/translate_menus
+%config(noreplace) %_sysconfdir/menu-methods/simplified/translate_menus
+%_menudir/menu
+%_menudir/simplified/*
+%_iconsdir/*.png
+%_liconsdir/*.png
+%_miconsdir/*.png
 
 
 %changelog
+* Tue Dec 14 2004 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-14mdk 
+- Move mdk menu data from menu to mandrake_desk package
+
 * Wed Sep 29 2004 David Baudens <baudens@mandrakesoft.com> 10.1-13mdk
 - Fix task oriented menu to allow translations of "Listen to Music Files" menu
   entry (Laurent Montel)

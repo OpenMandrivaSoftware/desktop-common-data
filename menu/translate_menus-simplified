@@ -1,0 +1,98 @@
+# Language translators: DO NOT USE THIS FILE! (see note on top of this file)
+
+
+substitute section->section
+  "Office/Tasks management"                               "Organize/Use More Productivity Tools/Tasks Management"
+  "Office/Time management"                               "Organize/Use More Productivity Tools/Time Management"
+  "Office/Tasks Management"                               "Organize/Use More Productivity Tools/Tasks Management"
+  "Office/Time Management"                               "Organize/Use More Productivity Tools/Time Management"
+  Office                                                  "Use Office Tools/Use More Office Tools"
+  "More Applications/Finances"                            "Organize/Use More Productivity Tools/Finances"
+
+  Internet                                                "Surf the Internet/Use More Connectivity Utilities"
+
+  Multimedia/Video                                              "Enjoy Music and Video/Discover More Entertainment Options/Video"
+  Multimedia/Sound                                              "Enjoy Music and Video/Discover More Entertainment Options/Sound"
+  Multimedia/Graphics                                           "View, Modify and Create Graphics/Use More Image Editing Tools"
+
+  "More Applications/Games"                                                    "Play Games/Play More Games"
+  Amusement                                               "Play Games/Play More Games"
+
+  System                                                        "Administer Your System/Use More Administration Tools"
+  "More Applications/Development"                              "Develop/Use More Development Software"
+  "More Applications/Education"                              "Use Education Software/Use More Education Software"
+  "More Applications/Sciences"                              "Use Scientific Software/Use More Sciences Software"
+
+  "More Applications/Accessibility"                         "Administer Your System/Use More Administration Tools/Accessibility"
+  "More Applications/Communications"                         "Administer Your System/Use More Administration Tools/Communications"
+
+  
+  "More Applications/Other"                                           "Use More Applications"
+  "More Applications/Emulators"                                 "Use Emulators"
+  "More Applications/Documentation"                             "Read Documentation/Read More Documentation"
+  "More Applications"                                           "Use More Applications"
+
+
+#### below a modified copy of the main system translation map, adapted for simplified menu
+
+
+  Configuration  "Administer Your System/Use More Administration Tools/Configuration"
+
+  "Applications/Publishing"                               "Use Office Tools/Use More Office Tools/Publishing"
+  Applications/Archiving                                  "Administer Your System/Use More Administration Tools/Archiving"
+  "Applications/File tools"                               "Administer Your System/Use More Administration Tools/File tools"
+  Applications/Monitoring                                 "Administer Your System/Use More Administration Tools/Monitoring"
+  "Applications/Text tools"                               "Administer Your System/Use More Administration Tools/Text tools"
+  Applications                                            "Use More Applications"
+
+  Terminals                                               "Administer Your System/Use More Administration Tools/Terminals"
+
+  Documentation                                           "Read Documentation/Read More Documentation"
+
+  Office/PDA                                              "Use Office Tools/Use More Office Tools/Communications/PDA"
+
+  Networking/IRC                                          "Surf the Internet/Use More Connectivity Utilities/Chat"
+  Networking/WWW                                          "Surf the Internet/Use More Connectivity Utilities/Web Browsers"
+  Networking                                              "Surf the Internet/Use More Connectivity Utilities"
+
+  Amusement                                               "Play Games/Play More Games"
+
+  Session/WindowManagers                                  "Administrer Your System/Use More Administration Tools/Windowmanagers"
+
+  "Office/Address books"                                  "Use Office Tools/Use More Office Tools/Address Books"
+  "Office/Tasks management"                               "Organize/Use More Productivity Tools/Tasks Management"
+  "Office/Time management"                                "Organize/Use More Productivity Tools/Time Management"
+  "Networking/File transfer"                              "Surf the Internet/Use More Connectivity Utilities/File Transfer"
+  "Internet/File transfer"                                "Surf the Internet/Use More Connectivity Utilities/File Transfer"
+  "Networking/Instant messaging"                          "Surf the Internet/Use More Connectivity Utilities/Instant Messaging"
+  "Internet/Instant messaging"                            "Surf the Internet/Use More Connectivity Utilities/Instant Messaging"
+  "Networking/Remote access"                              "Surf the Internet/Use More Connectivity Utilities/Remote Access"
+  "Internet/Remote access"                                "Surf the Internet/Use More Connectivity Utilities/Remote Access"
+  "Internet/Video conference"                             "Surf the Internet/Use More Connectivity Utilities/Video Conference"
+  "Networking/Video conference"                           "Surf the Internet/Use More Connectivity Utilities/Video Conference"
+  "Internet/Web browser"                                  "Surf the Internet/Use More Connectivity Utilities/Web Browsers"
+  "Networking/Web browser"                                "Surf the Internet/Use More Connectivity Utilities/Web Browsers"
+  "Internet/Web editors"                                  "Surf the Internet/Use More Connectivity Utilities/Web Editors"
+  "Networking/Web editors"                                "Surf the Internet/Use More Connectivity Utilities/Web Editors"
+  "System/Archiving/Cd burning"                           "Administer Your System/Use More Administration Tools/Archiving/CD Burning"
+  "Applications/Archiving/Cd burning"                     "Administer Your System/Use More Administration Tools/Archiving/CD Burning"
+  "System/File tools"                                     "Administer Your System/Use More Administration Tools/File Tools"
+  "System/Text tools"                                     "Administer Your System/Use More Administration Tools/Text Tools"
+  "More applications"                                     "Use More Applications"
+  "More applications/Development/Code generators"         "Develop/Use More Development Software/Code Generators"
+  "Applications/Development/Code generators"              "Develop/Use More Development Software/Code Generators"
+  "More applications/Development/Development environments" "Develop/Use More Development Software/Development Environments"
+  "Applications/Development/Development environments"    "Develop/Use More Development Software/Development Environments"
+  "More applications/Sciences/Artificial intelligence"    "Use Scientific Software/Use More Sciences Software/Artificial Intelligence"
+  "Applications/Sciences/Artificial intelligence"         "Use Scientific Software/Use More Sciences Software/Artificial Intelligence"
+  "More applications/Sciences/Data visualization"         "Use Scientific Software/Use More Sciences Software/Data Visualization"
+  "Applications/Sciences/Data visualization"              "Use Scientific Software/Use More Sciences Software/Data Visualization"
+  "More applications/Sciences/Image processing"           "Use Scientific Software/Use More Sciences Software/Image Processing"
+  "Applications/Sciences/Image processing"                "Use Scientific Software/Use More Sciences Software/Image Processing"
+  "More applications/Sciences/Numeric analysis"           "Use Scientific Software/Use More Sciences Software/Numeric Analysis"
+  "Applications/Sciences/Numeric analysis"                "Use Scientific Software/Use More Sciences Software/Numeric Analysis"
+  "More applications/Sciences/Parallel computing"         "Use Scientific Software/Use More Sciences Software/Parallel Computing"
+  "Applications/Sciences/Parallel computing"              "Use Scientific Software/Use More Sciences Software/Parallel Computing"
+
+endtranslate
+

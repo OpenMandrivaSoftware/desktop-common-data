@@ -1,0 +1,21 @@
+<Menu>
+<Layout>
+<Menuname>Use Office Tools</Menuname>
+<Menuname>Organize</Menuname>
+<Menuname>Surf the Internet</Menuname>
+<Menuname>Enjoy Music and Video</Menuname>
+<Menuname>View, Modify and Create Graphics</Menuname>
+<Menuname>Play Games</Menuname>
+<Menuname>Administer Your System</Menuname>
+<Menuname>Read Documentation</Menuname>
+<Menuname>Develop</Menuname>
+<Menuname>Use Education Software</Menuname>
+<Menuname>Use Scientific Software</Menuname>
+<Menuname>Use Emulators</Menuname>
+<Menuname>Use More Applications</Menuname>
+<Merge type="menus"/>
+<Merge type="files"/>
+<Separator/>
+<Menuname>Other</Menuname>
+</Layout>
+</Menu>
