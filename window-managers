@@ -75,10 +75,3 @@ DESC=A CDE like window manager
 SCRIPT:
 [ "x$XFCE_DATA" = "x" ] && XFCE_DATA=/usr/share/xfce
 exec /usr/bin/xfwm
---@@--
-NAME=AnotherLevel
-ICON=AnotherLevel.xpm
-DESC=The AnotherLevel desktop
-EXEC=/usr/share/apps/switchdesk/Xclients.anotherlevel
-SCRIPT:
-exec /usr/share/apps/switchdesk/Xclients.anotherlevel
