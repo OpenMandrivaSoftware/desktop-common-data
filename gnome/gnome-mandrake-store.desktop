@@ -1,6 +1,6 @@
 
 [Desktop Entry]
-Name=Mandrake Campus
+Name=Mandrake Store
 Icon=/usr/share/pixmaps/mc/mandrakestore.xpm
 Exec=http://www.mandrakestore.com/
 Terminal=false
