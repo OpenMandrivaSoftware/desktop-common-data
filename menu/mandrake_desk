@@ -21,6 +21,7 @@
 
 # Consult an Address Book
 ?package(evolution): needs="gnome" section="Use Office Tools" title="Consult an Address Book" icon="evolution.png" command="evolution -c contacts" 
+
 ?package(kdepim-kaddressbook): needs="kde" kde_filename="kontact-kaddressbook" section="Use Office Tools" title="Consult an Address Book" icon="kontact-mdk.png" command="kontact --module kaddressbook" kde_command="kontact --module kaddressbook %u" mimetypes="text/x-vcard,text/x-ldif" multiple_files="false" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nDocPath=kaddressbook/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=kaddressbook\\nServiceTypes=KParts/ReadOnlyPart,Browser/View,DCOP/AddressBook\\nX-KDE-Library=libkaddressbookpart\\n"
 
 # Send a Fax
@@ -47,10 +48,12 @@
 
 # Manage Tasks
 ?package(kdepim-korganizer): needs="kde" kde_filename="kontact-korganizer" section="Organize" title="Manage Tasks" icon="kontact-mdk.png" command="kontact --module todo" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nGenericName=Personal Organizer\\nServiceTypes=Browser/View,DCOP/Organizer\\nX-KDE-Library=libkorganizerpart\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=korganizer\\n"
+
 ?package(evolution): needs="gnome" section="Organize" title="Manage Tasks" icon="evolution.png" command="evolution -c tasks" 
 
 # Organize Your Time
 ?package(kdepim-korganizer): needs="kde" kde_filename="kontact-korganizer-time" section="Organize" title="Organize Your Time" icon="kontact-mdk.png" command="kontact --module korganizer" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nGenericName=Personal Organizer\\nServiceTypes=Browser/View,DCOP/Organizer\\nX-KDE-Library=libkorganizerpart\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=korganizer\\n"
+
 ?package(evolution): needs="gnome" section="Organize" title="Organize Your Time" icon="evolution.png" command="evolution -c calendar" 
 
 # Track Time Spent on Tasks
@@ -70,10 +73,12 @@
 
 # Browse the Web
 ?package(kdebase-progs): needs="kde" kde_filename="konqueror" section="Surf the Internet" title="Browse the Web" icon="konqueror.png" command="konqueror" kde_command="konqueror %U" kde_opt="\\nEncoding=UTF-8\\nX-KDE-Library=libkonqueror\\nX-DCOP-ServiceType=multi\\nX-KDE-StartupNotify=true"
+
 ?package(epiphany): needs="gnome" section="Surf the Internet" title="Browse the Web" icon="epiphany.png" command="epiphany" startup_notify="true"
 
 # Read and Send E-mail
 ?package(kdepim-kmail): needs="kde" kde_filename="kontact-KMail" section="Surf the Internet" title="Read and Send E-mail" icon="kontact-mdk.png" command="kontact --module kmail" kde_command="kontact --module kmail -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=kmail/index.html\\nGenericName=Mail Client\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=kmail\\nServiceTypes=DCOP/ResourceBackend/IMAP\\n"
+
 ?package(evolution): needs="gnome" section="Surf the Internet" title="Read and Send E-mail" icon="evolution.png" command="evolution -c mail" startup_notify="true" 
 
 # Chat
@@ -82,6 +87,7 @@
 
 # Read and Send Newsgroup Messages
 ?package(kdepim-knode): needs="kde" kde_filename="kontact-KNode" section="Surf the Internet" title="Read and Send Newsgroup Messages" icon="kontact-mdk.png" command="kontact --module knode" kde_command="kontact --module kmail -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nTerminal=0\\nDocPath=knode/index.html\\nGenericName=News Reader\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
+
 ?package(pan): needs="gnome" section="Surf the Internet" title="Read and Send Newsgroup Messages" icon="pan.png" command="pan" startup_notify="true"
 
 # Make a Phone Call
@@ -95,6 +101,7 @@
 
 # Transfer Files With FTP
 ?package(kbear): needs="kde" kde_filename="kbear" section="Surf the Internet" title="Transfer files with FTP" icon="kbear.png" command="kbear" longtitle="A Graphical FTP client" kde_opt="\\nEncoding=UTF-8\\nGenericName=FTP Client\\nMiniIcon=kbear\\nDocPath=kbear/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
+
 ?package(gftp): needs="gnome" section="Surf the Internet" title="Transfer Files With FTP" icon="gftp.png" command="gftp" 
 
 
@@ -102,18 +109,22 @@
 ## Enjoy Music and Video
 # Adjust Volume
 ?package(kdemultimedia-kmix): needs="kde" kde_filename="kmix" section="Enjoy Music and Video" title="Adjust Volume" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nGenericName=Sound Mixer\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
+
 ?package(gnome-media): needs="gnome" section="Enjoy Music and Video" title="Adjust Volume" icon="/usr/share/pixmaps/gnome-mixer.png" command="gnome-volume-control" 
 
 # Listen to Audio CDs
 ?package(kdemultimedia-kscd): needs="kde" kde_filename="kscd" section="Enjoy Music and Video" title="Listen to Audio CDs" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nGenericName=CD Player\\nBinaryPattern=kscd;\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
+
 ?package(gnome-media): needs="gnome" section="Enjoy Music and Video" title="Listen to Audio CDs" icon="/usr/share/pixmaps/gnome-cd.png" command="gnome-cd" 
 
 # Listen to Music Files
 ?package(amarok): needs="kde" kde_filename="amarok" section="Enjoy music and video" title="Listen to Music Files" icon="amarok.png" command="amarok" kde_command="amarok %U" kde_mimetype="application/x-ogg;audio/x-vorbis;audio/basic;audio/x-mod;audio/x-mp3;audio/x-scpls;audio/x-mpegurl;audio/x-sid;audio/x-wav" kde_opt="\\nVersion=0.9.4\\nEncoding=UTF-8\\nGenericName=Audio Player\\nDocPath=amarok/index.html\\nTerminal=false\\nActions=Enqueue;\\nX-KDE-StartupNotify=false\\n[Desktop Action Enqueue]\\nExec=amarok -e %U\\nInitialPreference=15"
+
 ?package(rhythmbox): needs="gnome" section="Enjoy Music and Video" title="Listen to Music Files" icon="rhythmbox.png" command="rhythmbox" startup_notify="true" 
 
 # Rip Audio CDs
 ?package(kdemultimedia-kaudiocreator): needs="kde" kde_filename="kaudiocreator" section="Enjoy Music and Video" title="Rip Audio CDs" icon="kaudiocreator.png" command="kaudiocreator" mimetypes="" kde_opt="\\nGenericName=CD Ripper\\nTerminalOptions=\\nPath=\\nTerminal=0\\n"
+
 ?package(sound-juicer): needs="gnome" section="Enjoy Music and Video" title="Rip Audio CDs" icon="sound-juicer.png" command="sound-juicer" 
 
 # Record Sounds
@@ -127,6 +138,7 @@
 
 # Watch Videos
 ?package(kaffeine): needs="kde" kde_filename="kaffeine" section="Enjoy Music and Video" title="Watch Videos" icon="kaffeine.png" command="kaffeine" mimetypes="application/x-ogg;audio/basic;audio/vnd.rn-realaudio;audio/x-aiff;audio/x-mp3;audio/x-mpeg;audio/x-mpegurl;audio/x-ms-wma;audio/x-ogg;audio/x-pn-realaudio;audio/x-pn-realaudio-plugin;audio/x-scpls;audio/x-wav;video/x-matroska;audio/x-matroska;video/mpeg;video/msvideo;video/quicktime;video/vnd.rn-realvideo;video/x-avi;video/x-fli;video/x-flic;video/x-ms-asf;video/x-ms-wmv;video/x-msvideo;application/x-mplayer2;application/smil;application/x-kaffeine" kde_opt="\\nEncoding=UTF-8\\nGenericName=Mediaplayer\\nServiceTypes=\\nTerminal=false\\nInitialPreference=15"
+
 ?package(totem):        command="/usr/bin/totem"        needs="gnome"     section="Enjoy Music and Video"      icon="totem.png"        mimetypes="video/dv,video/mpeg,video/msvideo,video/quicktime,video/x-anim,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,video/x-nsv,video/x-flc,video/x-fli,application/ogg,application/x-ogg,audio/basic,audio/x-mp3,audio/x-mpeg,audio/mpeg,audio/x-wav,audio/x-mpegurl,audio/x-scpls,audio/x-m4a,audio/x-ms-asf,audio/x-ms-asx,audio/x-ms-wax,application/vnd.rn-realmedia,audio/x-real-audio,audio-x-pn-realaudio,application/x-flac,audio/x-flac,misc/ultravox,application/x-matroska"         accept_url="true"       multiple_files="true"   title="Watch Videos"      longtitle="Play movies and songs"       startup_notify="true"   
 
 # Edit Videos
@@ -139,6 +151,7 @@
 ## View, Modify and Create Graphics
 # View Images and Photos
 ?package(kdegraphics-kuickshow): needs="kde" kde_filename="kuickshow" section="View, Modify and Create Graphics" title="View Images and Photos" icon="kuickshow.png" command="kuickshow" kde_command="kuickshow %i %m -caption \"%c\" %U" mimetypes="image/gif,image/x-xpm,image/x-xbm,image/jpeg,image/png,image/tiff,image/x-bmp,image/x-psd,image/x-eim,image/x-portable-bitmap,image/x-portable-pixmap,image/x-portable-greymap" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nDocPath=kuickshow/index.html\\nTerminal=0\\nInitialPreference=15\\nGenericName=Image Viewer\\nX-DCOP-ServiceType=Multi"
+
 ?package(gqview): needs="gnome" section="View, Modify and Create Graphics" title="View Images and Photos" icon="gqview.png" command="gqview" 
 
 # Edit Images and Photos
@@ -148,7 +161,8 @@
 ?package(kdegraphics-kooka): needs="x11" kde_filename="kooka" section="View, Modify and Create Graphics" title="Scan and Use Optical Character Recognition (OCR)" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/index.html\\nGenericName=Scan & OCR Program\\nX-DCOP-ServiceType=Multi\\n"
 
 # Import and Sort Your Photos
-?package(digikam): needs="kde" kde_filename="digikam" section="View, modify and create graphics" title="Import and sort your photos" icon="digikam.png" command="digikam" kde_command="digikam -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=digikam/index.html\\nTerminal=0"
+?package(digikam): needs="kde" kde_filename="digikam" section="View, Modify and Create Graphics" title="Import and sort your photos" icon="digikam.png" command="digikam" kde_command="digikam -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=digikam/index.html\\nTerminal=0"
+
 ?package(gtkam): needs="gnome" section="View, Modify and Create Graphics" title="Import and Sort Your Photos" icon="gtkam.png" command="gtkam" 
 
 # Create a Screenshot
@@ -181,6 +195,7 @@
 ## Administer Your System
 # Configure Your Desktop
 ?package(kdebase-progs): needs="kde" kde_filename="KControl" section="Administer Your System" title="Configure Your Desktop" icon="kcontrol.png" command="kcontrol" kde_command="kcontrol -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=kcontrol/index.html\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nNoDisplay=false"
+
 ?package(gnome-control-center): needs="gnome" section="Administer Your System" title="Configure Your Desktop" icon="control-center2.png" command="gnome-control-center" 
 
 # Configure Your Computer 
@@ -188,6 +203,7 @@
 
 # Change Your Password
 ?package(kdeutils-kdepasswd): needs="kde" kde_filename="kdepasswd" section="Administer Your System" title="Change Your Password" icon="password.png" command="kdepasswd" kde_opt="\\nEncoding=UTF-8\\nTerminalOptions=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
+
 ?package(usermode): needs="gnome" section="Administer Your System" title="Change Your Password" icon="userpasswd.xpm" command="userpasswd" 
 
 # Burn CDs/DVDs
@@ -201,14 +217,17 @@
 
 # Compress and Decompress Files
 ?package(kdeutils-ark): needs="kde" kde_filename="ark" section="Administer Your System" title="Compress and Decompress Files" icon="ark.png" command="ark" kde_command="ark -caption \"%c\" %i %m %U" mimetypes="application/x-gzip,application/x-lha,application/x-tar,application/x-tgz,application/x-tbz,application/x-zip,application/x-bzip,application/x-tzo,application/x-lzop,application/x-rar,application/x-zoo,application/x-tarz,application/x-archive,application/x-bzip2,application/x-jar,application/x-deb" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nGenericName=Archiving Tool\\nTerminalOptions=\\nPath=\\nDocPath=ark/index.html\\nTerminal=0\\nSwallowExec=\\nSwallowTitle=\\nBinaryPattern=ark;\\nX-DCOP-ServiceType=Unique\\n"
+
 ?package(file-roller): needs="gnome" section="Administer Your System" title="Compress and Decompress Files" icon="file-roller.png" command="file-roller" startup_notify="true"
 
 # Format Floppies
 ?package(kdeutils-kfloppy): needs="kde" kde_filename="KFloppy" section="Administer Your System" title="Format Floppies" icon="kfloppy.png" command="kfloppy" kde_command="kfloppy -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nGenericName=Floppy Formatter\\nBinaryPattern=kfloppy;\\nDocPath=kfloppy/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
+
 ?package(gfloppy): needs="gnome" section="Administer Your System" title="Format Floppies" icon="gfloppy.png" command="gfloppy" 
 
 # Use a Terminal Emulator
 ?package(kdebase-konsole): needs="kde" kde_filename="konsole" section="Administer Your System" title="Use a Terminal Emulator" icon="konsole.png" command="konsole" kde_opt="\\nEncoding=UTF-8\\nDocPath=konsole/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nGenericName=Terminal Program\\nX-DCOP-ServiceType=Multi\\nX-KDE-AuthorizeAction=shell_access\\n"
+
 ?package(gnome-terminal): needs="gnome" section="Administer Your System" title="Use a Terminal Emulator" icon="gnome-terminal.png" command="gnome-terminal" 
 
 # .hidden
