@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
 Version:	8.1
-Release:	8mdk
+Release:	13mdk
 License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
@@ -20,6 +20,13 @@ BuildRequires:	control-center-devel db1-devel gdk-pixbuf-devel libglade-devel
 This package contains useful icons, backgrounds and others goodies for the
 Mandrake desktop.
 
+%package -n mdk-eazel-engine
+Summary:	Default GTK theme used in Mandrake Linux distribution
+Group:		Graphical desktop/Other
+Requires:	libgtk+1.2
+
+%description -n mdk-eazel-engine
+This package contains the default GTK theme used in Mandrake Linux distribution.
 
 %package -n krootwarning
 Summary:	Warning box for root user
@@ -28,7 +35,8 @@ BuildRequires:	kdelibs-devel
 Requires:	kdebase
 
 %description -n krootwarning
-krootwarning
+This package contains a warning box displayed when you are using KDE with
+system administrator permissions.
 
 %package -n krozat
 Summary:	Default Mandrake Linux screensaver for KDE
@@ -43,7 +51,7 @@ This package contains the default Mandrake Linux screensaver for KDE.
 %prep
 
 %setup -q -n %name
-find . -type 'd' -name "CVS" -print | xargs /bin/rm -rf 
+find . -type 'd' -name "CVS" -print | xargs /bin/rm -fr
 
 %build
 (
@@ -84,8 +92,8 @@ cd krozat
 make install DESTDIR=%buildroot
 )
 
-mkdir -p %buildroot/etc/gtk
-install -m644 gtkrc %buildroot/etc/gtk
+#mkdir -p %buildroot/etc/gtk
+#install -m644 gtkrc %buildroot/etc/gtk
 
 make install RPM_BUILD_ROOT=%buildroot mandir=%{_mandir}
 
@@ -176,16 +184,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc TRANSLATORS special/*
 #
 #
-%dir %_sysconfdir/gtk/
-%config(noreplace) %_sysconfdir/gtk/gtkrc
-#
 %dir %_sysconfdir/X11/wmsession.d/
 #
-#
-%dir %_libdir/gtk/
-%dir %_libdir/gtk/themes/
-%dir %_libdir/gtk/themes/engines/
-%_libdir/gtk/themes/engines/*
 #
 %dir %_libdir/mc/desktop-scripts/
 %_libdir/mc/desktop-scripts/*
@@ -210,13 +210,7 @@ rm -rf $RPM_BUILD_ROOT
 %_liconsdir/*
 #
 #
-%_mandir/man*/*
-# find_lang doesn't find man pages yet :-(
-%lang(fr) %_mandir/fr/man*/*
-#
-#
-%dir %_datadir/eazel-engine/
-%_datadir/eazel-engine/*.png
+%_mandir/*/*
 #
 #
 %dir %_datadir/mdk/
@@ -238,6 +232,20 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/pixmaps/mdk/*
 
 
+%files -n mdk-eazel-engine
+%defattr(-,root,root,-)
+#%dir %_sysconfdir/gtk/
+#%config(noreplace) %_sysconfdir/gtk/gtkrc
+#
+%dir %_datadir/eazel-engine/
+%_datadir/eazel-engine/*.png
+#
+#
+%dir %_libdir/gtk/
+%dir %_libdir/gtk/themes/
+%dir %_libdir/gtk/themes/engines/
+%_libdir/gtk/themes/engines/*
+
 
 %files -n krootwarning
 %defattr(-,root,root,-)
@@ -252,7 +260,10 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_datadir/applnk/Applications/
 %_datadir/applnk/Applications/krootwarning.desktop
 
+%dir %_datadir/autostart/
+%_datadir/autostart/krootwarning.desktop
 
+%config(noreplace) %_datadir/config/krootwarningrc
 
 %files -n krozat
 %defattr(-,root,root,-)
@@ -283,6 +294,20 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Sep 04 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-12mdk
+- Make Monseigneur Pascal Rigaux, Prince de DrakX, Marquis de Pixel, happy (aka,
+  move eazel-engine in
+  a separate package)
+
+* Mon Sep 03 2001 Laurent MONTEL <lmontel@mandrakesoft.com> 8.1-11mdk
+- An other fix for krootwarning
+
+* Sat Sep 01 2001 Laurent MONTEL <lmontel@mandrakesoft.com> 8.1-10mdk
+- Autostart krootwarning
+
+* Thu Aug 30 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-9mdk
+- Bazoocate /etc/gtkrc to the moon request
+
 * Mon Aug 27 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-8mdk
 - Build without rpath
 
