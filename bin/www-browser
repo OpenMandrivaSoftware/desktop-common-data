@@ -10,11 +10,16 @@
 #---------------------------------------------------------------
 
 strip_browser_var() {
-if [[ -n "$BROWSER" ]]; then
-  if [[ `basename "$BROWSER"` == "www-browser" ]]; then
-    unset BROWSER
-  fi
-fi
+    if [[ -n "$BROWSER" ]]; then
+	if [[ `basename "$BROWSER"` == "www-browser" ]]; then
+	    unset BROWSER
+	else
+	    set $BROWSER
+	    if ! which $1 > /dev/null 2>&1; then
+		unset BROWSER
+	    fi
+	fi
+    fi
 }
 
 strip_browser_var
@@ -24,7 +29,7 @@ if [[ -z "$BROWSER" ]]; then
     if [[ -n "$GNOME_DESKTOP_SESSION_ID" ]]; then
 	BROWSER=`gconftool -g /desktop/gnome/url-handlers/http/command | sed -e 's/ %s//'`
 	if [[ `gconftool -g /desktop/gnome/url-handlers/http/needs_terminal` == "true" ]]; then
-  		BROWSER="xvt -e $BROWSER"
+	    BROWSER="xvt -e $BROWSER"
 	fi
     fi
 
@@ -33,24 +38,26 @@ if [[ -z "$BROWSER" ]]; then
 	NEWBROWSER=`grep -m 1 'BrowserApplication=' $HOME/.kde/share/config/kdeglobals 2>/dev/null`
 	[[ -z "$NEWBROWSER" ]] && NEWBROWSER=`grep -m 1 'BrowserApplication=' /etc/kde/kdeglobals 2>/dev/null`
 	if [[ -n "$NEWBROWSER" ]]; then
-  	  BROWSER=`echo $NEWBROWSER | sed -e 's/BrowserApplication=//' -e 's/!//'`
+	    BROWSER=`echo $NEWBROWSER | sed -e 's/BrowserApplication=//' -e 's/!//'`
 	fi
-        [[ -z "$BROWSER" ]] && which kfmclient 2> /dev/null && BROWSER="kfmclient openProfile webbrowsing"
+        [[ -z "$BROWSER" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
     fi
 
-   strip_browser_var 
-   
+    strip_browser_var
+    
     [[ -z "$BROWSER" ]] && BROWSER=`which mozilla-firefox 2> /dev/null` 
     [[ -z "$BROWSER" ]] && BROWSER=`which epiphany 2> /dev/null`
     [[ -z "$BROWSER" ]] && BROWSER=`which galeon 2> /dev/null`
     [[ -z "$BROWSER" ]] && BROWSER=`which mozilla 2> /dev/null`
-    [[ -z "$BROWSER" ]] && which kfmclient 2> /dev/null && BROWSER="kfmclient openProfile webbrowsing"
+    [[ -z "$BROWSER" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
+    [[ -z "$BROWSER" ]] && which links > /dev/null 2>&1 && BROWSER="xvt -e links"
+    [[ -z "$BROWSER" ]] && which lynx > /dev/null 2>&1 && BROWSER="xvt -e lynx"
 fi
 
 if [[ -n "$BROWSER" ]]; then 
-  exec $BROWSER "$@"
+    exec $BROWSER "$@"
 else
-  echo "no web browser detected"
+    echo "no web browser detected"
 fi
 
 # www-browser ends here
