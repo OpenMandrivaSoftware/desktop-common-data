@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	12mdk
+Release:	13mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -323,6 +323,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Mar 15 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-13mdk
+- Fix text color in progress bar in Mandrake GTK theme 
+
 * Thu Mar  7 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-12mdk
 - No longer create icon for root
 - Modify Mandrake GTK theme - Frederic Crozat

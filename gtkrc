@@ -382,6 +382,13 @@ style "no-gradients"
 class "GtkNotebook" style "no-gradients"
 class "GtkRuler" style "no-gradients"
 
+style "progressbar"
+{
+    fg[NORMAL] = "#ffffff"
+    engine "eazel-engine" {}
+}
+
+class "GtkProgressBar" style "progressbar"
 
 # Style used for (prelighted) menu items
 style "menuitem"
