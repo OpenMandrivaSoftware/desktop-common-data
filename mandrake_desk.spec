@@ -1,12 +1,8 @@
-%define name	mandrake_desk
-%define version	7.1
-%define release 1mdk
-
 Summary:	The Desktop configuration files for Linux Mandrake
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Copyright:	GPL
+Name:		mandrake_desk
+Version:	8.0
+Release:	5mdk
+License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
 Packager:	David BAUDENS <baudens@mandrakesoft.com>
@@ -14,9 +10,10 @@ Packager:	David BAUDENS <baudens@mandrakesoft.com>
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source:		mandrake_desk.tar.bz2
-
-BuildArchitectures: noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+Source1:	eazel-engine-0.3.tar.bz2
+Source2:	gtkrc
+Patch:          mandrake_desk-8.0-zip_mount_typo.patch.bz2
+BuildRoot:	%_tmppath/%name-%version-%release-root
 
 %description
 This package contains useful icons, backgrounds and others goodies for the
@@ -24,10 +21,27 @@ Mandrake desktop.
 
 %prep
 
-%setup -n %{name}
-
+%setup -q -n %name
+%patch -p1
 %build
 find . -type 'd' -name 'CVS'|xargs rm -rf
+
+# Dadou - 8.0-4mdk - Very very Quick and very very very dirty hack to make FredL happy.
+#                    It will be done nicely later
+(
+cd $RPM_BUILD_DIR/mandrake_desk
+tar yxf %SOURCE1
+cd eazel-engine-0.3/
+%configure
+#perl -pi -e "s|imgdir =.*|imgdir = %_datadir/pixmaps/mdk/|" Makefile
+#perl -pi -e "s|imgdir =.*|imgdir = %_datadir/pixmaps/mdk/|" data/Makefile
+%make
+make install DESTDIR=%buildroot
+rm -fr %buildroot/%_datadir/control-center/
+mkdir -p %buildroot/etc/gtk
+install -m644 %SOURCE2 %buildroot/etc/gtk
+rm -fr %buildroot/%_datadir/themes
+)
 
 %install
 make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT mandir=%{_mandir}
@@ -36,11 +50,43 @@ mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
 
 rm -f special/mandrake-small.xpm
 
-cd $RPM_BUILD_ROOT/usr/share/faces
-ln -s user-hat-mdk.png root.png
-ln -s root.png root
-ln -s user-default-mdk.png default.png
+cd $RPM_BUILD_ROOT%_datadir/faces
+cp user-hat-mdk.png root.png
+cp root.png root
+cp user-default-mdk.png default.png
 
+cd $RPM_BUILD_ROOT%_datadir/pixmaps/backgrounds/linux-mandrake
+ln -s ICE-640.png PP5-640.png
+ln -s ICE-800.png PP5-800.png
+ln -s ICE-1024.png PP5-1024.png
+ln -s ICE-1280.png PP5-1280.png
+ln -s ICE-1600.png PP5-1600.png
+ln -s nature-640.png PP6-640.png
+ln -s nature-800.png PP6-800.png
+ln -s nature-1024.png PP6-1024.png
+ln -s nature-1280.png PP6-1280.png
+ln -s nature-1600.png PP6-1600.png
+ln -s logoMDK1-640.png PP7-640.png
+ln -s logoMDK1-800.png PP7-800.png
+ln -s logoMDK1-1024.png PP7-1024.png
+ln -s logoMDK1-1280.png PP7-1280.png
+ln -s logoMDK1-1600.png PP7-1600.png
+
+ln -s ICE-640.png DKP5-640.png
+ln -s ICE-800.png DKP5-800.png
+ln -s ICE-1024.png DKP5-1024.png
+ln -s ICE-1280.png DKP5-1280.png
+ln -s ICE-1600.png DKP5-1600.png
+ln -s nature-640.png DKP6-640.png
+ln -s nature-800.png DKP6-800.png
+ln -s nature-1024.png DKP6-1024.png
+ln -s nature-1280.png DKP6-1280.png
+ln -s nature-1600.png DKP6-1600.png
+ln -s logoMDK1-640.png DKP7-640.png
+ln -s logoMDK1-800.png DKP7-800.png
+ln -s logoMDK1-1024.png DKP7-1024.png
+ln -s logoMDK1-1280.png DKP7-1280.png
+ln -s logoMDK1-1600.png DKP7-1600.png
 
 %post
 if [ -f /etc/X11/window-managers.rpmsave ];then
@@ -53,23 +99,96 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %config /etc/skel/Desktop/
+%config /etc/skel/.kde
+%config /etc/gtk/gtkrc
 %doc TRANSLATORS special/*
 %dir /etc/X11/wmsession.d/
 /usr/sbin/*
-/usr/bin/*
-/usr/share/faces
-/usr/share/icons/*.xpm
-/usr/share/icons/*.jpg
-/usr/share/icons/mini/*.xpm
-/usr/share/icons/large/*.xpm
-/usr/share/pixmaps/backgrounds/mandrake
-/usr/share/pixmaps/backgrounds/default_background.jpg
-/usr/share/pixmaps/mdk
-/usr/lib/mc/desktop-scripts/mandrake.links.sh
-/usr/lib/desktop-links/mandrake.links
+%{_bindir}/*
+%{_datadir}/faces
+%{_iconsdir}/*.xpm
+%{_miconsdir}/*
+%{_liconsdir}/*
+%{_datadir}/pixmaps/backgrounds/linux-mandrake
+%{_datadir}/pixmaps/mdk
+%_datadir/eazel-engine
+%{_libdir}/mc/desktop-scripts/mandrake.links.sh
+/usr/lib/gtk/themes/engines/*
 %{_mandir}/*/*
+%{_datadir}/lmdk/
 
 %changelog
+* Wed Apr 4 2001 Daouda Lo <daouda@mandrakesoft.com> 8.0-5mdk
+- fix zip mount point typo
+
+* Thu Mar 29 2001 David BAUDENS <baudens@mandrakesoft.com> - 8.0-4mdk
+- Add new GTK theme
+
+* Tue Mar 20 2001 Daouda Lo <daouda@mandrakesoft.com> 8.0-3mdk
+- remove Drakconf workaround patch
+
+* Tue Mar 20 2001 Daouda Lo <daouda@mandrakesoft.com> 8.0-2mdk
+- better workaround for DrakConf, waiting for Holy Traktopel to show me the way to fix. 
+
+* Wed Mar 14 2001 Daouda Lo <daouda@mandrakesoft.com> 8.0-1mdk
+- workaround to DrakConf crash (ugly) 
+- update version number to 8.0 
+
+* Mon Oct 09 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-18mdk
+- Fix bugs 750, 732, 625, 623
+
+* Fri Oct 06 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-17mdk
+- Fix META_CLASS detection
+- Redraw some icons (for FPons)
+
+* Fri Oct 06 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-16mdk
+- Fix faces for userdrake
+
+* Fri Oct 06 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-15mdk
+- Fix a typo
+
+* Fri Oct 06 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-14mdk
+- Fix icon for DrakConf
+
+* Fri Oct 06 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-12mdk
+- Fix bug # 639
+
+* Thu Oct 05 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-11mdk
+- Add icons for Pixel
+
+* Wed Oct 04 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-10mdk
+- Really create destdir when not present
+
+* Wed Oct 04 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-9mdk
+- More background & create destdir when not present (createbackground.sh)
+
+* Tue Oct 02 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-8mdk
+- Change default background names in createbackground.sh
+
+* Mon Oct 02 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-7mdk
+- Add createbackground.sh from Frederic CROZAT
+- Remove old default background
+
+* Fri Sep 22 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-6mdk
+- New PATH for Linux-Mandrake backgrounds
+- Put/remove backgrounds
+
+* Wed Sep 20 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-5mdk
+- Add new image for XFdrake
+- Remove Templates and Autostart from /etc/skel/Desktop
+
+* Tue Sep 05 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-4mdk
+- Add KDM pixmap
+
+* Fri Sep 01 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-3mdk
+- Add some icons in faces (aka make Pixel happy)
+
+* Fri Sep 01 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-2mdk
+- Fix CD-ROM & Co links (KDE)
+
+* Thu Aug 31 2000 David BAUDENS <baudens@mandrakesoft.com> 7.2-1mdk
+- KDE 2 compliant
+
 * Thu Aug 31 2000 David BAUDENS <baudens@mandrakesoft.com> 7.1-1mdk
 - Add new Chmouel chksession
 - Update description
