@@ -75,6 +75,7 @@
 
 2000-01-10  Pixel  <pixel@mandrakesoft.com>
 
+	* sbin/kdeDesktopCleanup: fix an error case
 	* icons/mini/hd_umount.xpm: renamed in hd_unmount.xpm (for coherence)
 
 2000-01-07  Frederic Lepied  <flepied@mandrakesoft.com>

@@ -5,7 +5,7 @@
 @dirs = (qw(/etc/skel /root), glob("/home/*"));
 @path = split ":", "/sbin:/usr/sbin:/usr/X11R6/bin:/bin:/usr/bin";
 
-foreach $f (map { grep { /\.kdelnk$/ } all("$_/Desktop") } @dirs) {
+foreach $f (map { grep { /\.kdelnk$/ } eval { all("$_/Desktop") } } @dirs) {
     open F, $f or next;
     L: foreach (<F>) {
 	  $_ = "Exec=linuxconf" if $f =~ /linuxconf/i; # hack

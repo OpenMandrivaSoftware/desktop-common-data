@@ -1,4 +1,5 @@
-%define	release	13mdk
+# DO NOT MODIFY HERE, modify in the CVS
+%define	release	14mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -54,6 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Fri May  5 2000 Pixel <pixel@mandrakesoft.com> 1.0.3-14mdk
+- fix for kdeDesktopCleanup
+
 * Thu May 04 2000 dam's <damien@mandrakesoft.com> 1.0.3-13mdk
 - cleaned gnome desktop.
 
