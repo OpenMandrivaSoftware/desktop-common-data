@@ -49,7 +49,7 @@ fi
 
 # Mandrake Online
 if [ ! -e ~/.gnome/.mdkonline ] ; then
-	cp /usr/share/mdk/gnome-desktop/Mandrake\ Online.desktop ~/.gnome-desktop && touch ~/.gnome/.mdkonline
+	cp /usr/share/gnome/distribution-menus/Mandrake/Configuration/Other/Mandrake\ Online.desktop ~/.gnome-desktop && touch ~/.gnome/.mdkonline
 fi
 
 # Mandrake Store
