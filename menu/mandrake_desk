@@ -74,6 +74,9 @@
 # Read and send newsgroup messages
 ?package(kdepim-knode): needs="x11" kde_filename="kontact-KNode" section="Surf the Internet" title="Read and send newsgroup messages" icon="kontact-mdk.png" command="kontact --module knode" kde_command="kontact --module kmail -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nTerminal=0\\nDocPath=knode/index.html\\nGenericName=News Reader\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
 
+# Make a phone call
+?package(kphone): needs="x11" kde_filename="kphone" section="Surf the Internet" title="Make a phone call" icon="kphone.png" command="kphone" longtitle="A SIP phone" kde_opt="\\nDocPath=kphone/index.html\\nTerminal=0"
+
 # Organize a video conference
 ?package(gnomemeeting): command="/usr/bin/gnomemeeting" needs="x11" icon="gnomemeeting.png" section="Surf the Internet" title="Organize a video conference"
 
@@ -153,10 +156,11 @@
 ?package(lbreakout2):needs=x11 section="Play games" title="LBreakout 2" longtitle="Breakout-style arcade game" command="/usr/games/lbreakout2" icon="lbreakout2.png"
 
 # TuxRacer
-?package(tuxracer):command="soundwrapper /usr/games/tuxracer" 		  icon="tuxracer.png" 		  needs="x11" 		  section="Play games" 		  title="Tuxracer"		  longtitle="A great racing game starring Tux"
+?package(tuxracer):command="soundwrapper /usr/games/tuxracer" icon="tuxracer.png" needs="x11" section="Play games"  title="Tuxracer" longtitle="A great racing game starring Tux"
 
 # CrackAttack
 ?package(crack-attack): command="/usr/games/crack-attack-solo" icon="crack-attack.png" section="Play games" title="Crack Attack! - Solo" longtitle="Tetris like game base on Tetris Attack" needs="x11"
+
 
 ## Administer your system
 # Configure your desktop
