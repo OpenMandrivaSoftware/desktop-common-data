@@ -1,6 +1,6 @@
 %define name	mandrake_desk
-%define version	1.0.4
-%define release 9mdk
+%define version	7.1
+%define release 1mdk
 
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		%{name}
@@ -16,8 +16,8 @@ Source:		mandrake_desk-%{version}.tar.bz2
 BuildArchitectures: noarch
 
 %description
-This package contains useful icons background and .kdelnk files for
-the Mandrake desktop.
+This package contains useful icons, backgrounds and others goodies for the
+Mandrake desktop.
 
 %prep
 
@@ -67,6 +67,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/*
 
 %changelog
+* Thu Aug 31 2000 David BAUDENS <baudens@mandrakesoft.com> 7.1-1mdk
+- Add new Chmouel chksession
+- Update description
+
 * Thu Aug 24 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.4-9mdk
 - Add a link "root" to make GDM happy
 - Remove old links
