@@ -42,9 +42,6 @@
 # Listen to music files
 ?package(totem): needs="x11" command="/usr/bin/totem %U" section="Enjoy music & video" title="Listen to music files" icon="totem.png" mimetypes="video/mpeg,video/msvideo,video/quicktime,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,application/x-ogg,audio/x-mp3,audio/x-mpeg,video/x-fli,audio/x-wav,audio/x-mpegurl" kde_opt="InitialPreference=15"
 
-# Record sounds
-?package(gnome-media):needs="x11" command="/usr/bin/gnome-sound-recorder" section="Enjoy music & video" title="Record sounds" icon="/usr/share/pixmaps/gnome-grecord.png"
-
 # Rip cd
 ?package(kdemultimedia-kaudiocreator):command="kaudiocreator" icon="kaudiocreator.png" title="Rip a CD" needs="x11" section="Enjoy music & video"
 

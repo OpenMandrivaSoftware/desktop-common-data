@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.2
-Release:	5mdk
+Release:	6mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -169,6 +169,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Sep 01 2003 David Baudens <baudens@mandrakesoft.com> 9.2-6mdk
+- Remove "Record sound" in simplified menu
+
 * Thu Aug 28 2003 David Baudens <baudens@mandrakesoft.com> 9.2-5mdk
 - Update simplified menu
 
