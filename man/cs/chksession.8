@@ -1,0 +1,69 @@
+.\" Written by Camille Bégnis 12/28/99
+.TH CHKSESSION 8 "Pro 1999" "mandrake_desk" "MandrakeSoft"
+.SH NÁZEV
+chksession \- Pøidá/odebere sezení ze správcù displeje
+.SH SYNAPSE
+.B chksession 
+[\fIVOLBA\fR]...
+.SH POPIS
+.PP
+.PP
+Program chksession umo¾òuje správci systému spravovat seznam sezení, poskytované správci displeje GDM a KDM. Upravuje odpovídající soubory s nastavením a pøidává nebo odebírá dostupná sezení jako kde, gnome, icewm...
+.TP
+\fB\-F\fR, \fB\-\-first\fR
+Vytiskne ze souboru s nastavením pouze první dostupnou polo¾ku.
+.TP
+\fB\-f=SOUBOR\fR, \fB\-\-file=SOUBOR\fR
+Urèi alternativní soubor s nastavením, jiný ne¾ soubor \fI/etc/X11/window-manager\fR
+.TP
+\fB\-g\fR, \fB\-\-gdm\fR
+Aktualizuje seznam správcù oken pro sezení správce GDM, pou¾ije výchozí soubor s nastavením nebo SOUBOR urèený volbou \fB\-f\fR.
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Vytiskne krátkou nápovìdu.
+.TP
+\fB\-k\fR, \fB\-\-kdm\fR
+Aktualizuje seznam správcù oken pro sezení správce KDM, pou¾ije výchozí soubor s nastavením nebo SOUBOR urèený volbou \fB\-f\fR.
+.TP
+\fB\-l\fR, \fB\-\-list\fR
+Vypí¹e seznam správcù oken, kteøí jsou k dispozici v souboru s nastavením.
+.TP
+\fB\-r=POLO®KA\fR, \fB\-\-remove=POLO®KA\fR
+Vypí¹e na standardní výstup seznam správcù oken ze souboru s nastavením, ze kterého je odstranìna POLO®KA.
+.TP
+\fB\-t\fR, \fB\-\-test\fR
+Aktivuje testovací re¾im.
+.TP
+\fB\-x=POLO®KA\fR, \fB\-\-xsession=POLO®KA\fR
+Vypí¹e na standardní výstup skript, který se pou¾ije ke spu¹tìní správce oken z POLO®KY.
+.SH "STRUKTURA SOUBORU S NASTAVENÍM"
+Tento soubor popisuje ka¾dého správce oken, který bude k dispozici pomocí správcù displeje. Ka¾dá polo¾ka je v tomto souboru oddìlena øádkem se znaky \fB\-\-@@\-\-\fR.
+.PP
+.B NAME=
+název sezení, jak je zobrazen v seznamu správce displeje.
+.PP
+.B ICON=
+soubor s ikonou (\fI.xpm nebo .png\fR), který se pou¾ije pro toto sezení.
+.PP
+.B DESC=
+krátký popis sezení.
+.PP
+.B EXEC=
+testovací øetìzec, který vyzkou¹í, zda-li je instalován správce sezení nebo ne.
+.PP
+.B SCRIPT:
+skript shellu, který spustí správce oken vybraný u¾ivatelem.
+.SH SOUBORY
+.TP 
+\fB\/etc/X11/window-manager\fR
+výchozí soubor s nastavením, obsahuje polo¾ky pro vìt¹inu známých správcù oken. Je to základ pou¾itý programem \fBchksessio\fRn pro aktualizaci souborù s nastavením správcù displeje GDM a KDM.
+.SH "CHYBY"
+Nahlaste chyby na adresu \fBhttp://www.linux-mandrake.com/bugs/\fR.
+.SH "VIZ TAKÉ"
+\fIxdm\fR(1)
+.SH COPYRIGHT
+Copyright (c) 1999 MandrakeSoft.
+.br
+Toto je volnì ¹iøitelný software pod licencí GPL; viz zdrojový kód s podmínkami pro kopírování. 
+Je dodáván BEZ ZÁRUK; vèetnì záruk OBCHODOVATELNOSTI nebo VHODNOSTI PRO URÈITÝ ZPÙSOB U®ITÍ.
+
