@@ -1,8 +1,0 @@
-# KDE Config File
-[KDE Desktop Entry]
-_Comment=Home Directory
-Type=Link
-URL=file:$HOME
-Icon=kfm_home.xpm
-MiniIcon=kfm_home.xpm
-
