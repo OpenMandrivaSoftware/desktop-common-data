@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
-* Thu Apr 26 2000 dam's <damien@mandrakesoft.com> 1.0.3-10mdk
+* Thu Apr 27 2000 dam's <damien@mandrakesoft.com> 1.0.3-10mdk
 - Corrected wmaker path.
 - Added Update.kdelnk.
 
