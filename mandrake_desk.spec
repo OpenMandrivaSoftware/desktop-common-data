@@ -1,4 +1,4 @@
-Summary:	The Desktop configuration files for Mandrake Linux
+Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.0
 Release: 	11mdk
@@ -19,7 +19,7 @@ Conflicts:	kdebase-kdm-config-file < 1:3.2-62mdk
 
 %description
 This package contains useful icons, backgrounds and others goodies for the
-Mandrake desktop.
+Mandrakelinux desktop.
 
 
 
@@ -94,7 +94,7 @@ for i in screensavers/*.png ; do install -m 0644 $i %buildroot/%_datadir/mdk/scr
 if [ -f %_sysconfdir/X11/window-managers.rpmsave ];then
 	%_sbindir/convertsession -f %_sysconfdir/X11/window-managers.rpmsave || :
 fi
-# Create a link to allow users to access to Mandrake's backgrounds from KDE
+# Create a link to allow users to access to Mandrakelinux's backgrounds from KDE
 [ ! -d %_datadir/wallpapers ] && install -d -m 0755 %_datadir/wallpapers
 [ ! -e %_datadir/wallpapers/mandrake-linux ] && ln -s %_datadir/mdk/backgrounds/ %_datadir/wallpapers/mandrake-linux
 %update_menus
@@ -102,7 +102,7 @@ fi
 %make_session
 
 %postun
-# Remove link created to allow users to access to Mandrake's backgrounds from KDE
+# Remove link created to allow users to access to Mandrakelinux's backgrounds from KDE
 [ -e %_datadir/wallpapers ] && rm -f %_datadir/wallpapers/mandrake-linux
 [ $(ls %_datadir/wallpapers/ | wc -l) -eq 0 ] && rm -fr %_datadir/wallpapers/
 %clean_menus
@@ -145,6 +145,7 @@ rm -fr %buildroot
 %changelog
 * Wed Aug  4 2004 Pixel <pixel@mandrakesoft.com> 10.0-11mdk
 - add "chksession -L" used by DrakX to configure ~/.dmrc
+- fix descriptions (use Mandrakelinux instead of simply Mandrake)
 
 * Tue Mar  2 2004 Frederic Lepied <flepied@mandrakesoft.com> 10.0-10mdk
 - in KDE session only pass the session name
