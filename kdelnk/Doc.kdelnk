@@ -25,5 +25,5 @@ Name[uk]=Документац╕я по систем╕ Mandrake та KDE
 Name[wa]=DocumintЕcion di Mandrake eyХt KDE
 Type=Link
 URL=file:/usr/doc/mandrake/
-Icon=magic.xpm
-MiniIcon=magic.xpm
+Icon=doc-mdk.xpm
+MiniIcon=doc-mdk.xpm

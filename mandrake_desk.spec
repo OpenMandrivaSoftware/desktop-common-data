@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
-%define	version 0.9.9
-
-%define release 2mdk
+%define	version 1.0
+#
+%define release 4mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -53,6 +53,12 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/gnome/apps/Internet/*.desktop
 
 %changelog
+* Mon Dec 20 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+- Another icons change.
+
+* Mon Dec 20 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+- Add new icons large and mini.
+
 * Mon Dec 20 1999 Pixel <pixel@mandrakesoft.com>
 - added icons/mini and icons/large
 
