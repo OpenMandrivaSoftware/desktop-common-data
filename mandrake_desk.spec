@@ -39,11 +39,11 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/window-managers
 /usr/sbin/*
 /usr/share/icons/*.xpm
-/usr/share/icons/*.png
+/usr/share/icons/*.jpg
 /usr/share/icons/mini/*.xpm
 /usr/share/icons/large/*.xpm
 /usr/share/pixmaps/backgrounds/mandrake
-/usr/share/pixmaps/backgrounds/*
+/usr/share/pixmaps/backgrounds/default_background.jpg
 /etc/skel/Desktop/
 /usr/share/pixmaps/mdk
 /usr/share/gnome/apps/Internet/*.desktop
