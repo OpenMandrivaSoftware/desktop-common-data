@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.2
-Release:	1mdk
+Release:	2mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -13,7 +13,7 @@ Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildArch:	noarch
-Requires:	menu
+Requires:	menu, mandrake_theme
 
 
 
@@ -38,11 +38,14 @@ rm -rf %buildroot
 
 ## Install backgrounds
 # User & root's backgrounds
+# root
 install -d -m 0755 %buildroot/%_datadir/mdk/backgrounds/root/
-install -m 0644 backgrounds/default.png %buildroot/%_datadir/mdk/backgrounds/default.png
-install -m 0644 backgrounds/flower.jpg %buildroot/%_datadir/mdk/backgrounds/flower.jpg
-install -m 0644 backgrounds/nature.jpg %buildroot/%_datadir/mdk/backgrounds/nature.jpg
-install -m 0644 backgrounds/default-root.png %buildroot/%_datadir/mdk/backgrounds/root/default.png
+install -m 0644 backgrounds/default-root-9.1.png %buildroot/%_datadir/mdk/backgrounds/
+
+# user
+install -m 0644 backgrounds/default-9.1.png %buildroot/%_datadir/mdk/backgrounds/
+install -m 0644 backgrounds/flower.jpg %buildroot/%_datadir/mdk/backgrounds/
+install -m 0644 backgrounds/nature.jpg %buildroot/%_datadir/mdk/backgrounds/
 
 # XFdrake test card
 install -d -m 0755 %buildroot/%_datadir/mdk/xfdrake/
@@ -166,6 +169,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Aug 22 2003 David Baudens <baudens@mandrakesoft.com> 9.2-2mdk
+- Update
+
 * Wed Jul 30 2003 David Baudens <baudens@mandrakesoft.com> 9.2-1mdk
 - Fix %post (thanks to Pixel)
 
