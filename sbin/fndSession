@@ -3,24 +3,94 @@
 # Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 LIST="SessionTypes"
-TMP=`mktemp /tmp/.kdm.XXXXXX`
 
 [ -x /usr/bin/kde ] && {
-LIST="$LIST=kde"; FIRST=yes
+LIST="$LIST=KDE"; FIRST=yes
 }
 [ -x /usr/bin/gnome-session ] && {
 	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;gnome"
+		LIST="$LIST;Gnome"
 	else
-		LIST="$LIST=gnome"
+		LIST="$LIST=Gnome"
 		FIRST="yes"
 	fi
 }
+
+[ -x /usr/X11R6/bin/afterstep ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;AfterStep"
+	else
+		LIST="$LIST=AfterStep"
+		FIRST="yes"
+	fi
+}
+
+
 [ -e /usr/share/apps/switchdesk/Xclients.anotherlevel ] && {
 	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;anotherlevel"
+		LIST="$LIST;AnotherLevel"
 	else
-		LIST="$LIST=anotherlevel"
+		LIST="$LIST=AnotherLevel"
+		FIRST="yes"
+	fi
+}
+
+[ -x /usr/X11R6/bin/bbdrake ] && {
+	if [ "$FIRST" = "yes" ] ; then
+		LIST="$LIST;BlackBox"
+		FIRST="yes"
+	fi
+}
+
+# Work but some end users don't understant how it works. So, we disable it.
+#[ -x /usr/X11R6/bin/bbdrake_kde ] && {
+#	if [ "$FIRST" = "yes" ] ; then
+#		LIST="$LIST;BlackBox/KDE"
+#		FIRST="yes"
+#	fi
+#}
+
+[ -x /usr/bin/enlightenment ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;Enlightenment"
+	else
+		LIST="$LIST=Enlightenment"
+		FIRST="yes"
+	fi
+}
+
+[ -x /usr/X11R6/bin/fvwm ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;FVWM"
+	else
+		LIST="$LIST=FVWM"
+		FIRST="yes"
+	fi
+}
+
+[ -x /usr/X11R6/bin/fvwm2 ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;FVWM2"
+	else
+		LIST="$LIST=FVWM2"
+		FIRST="yes"
+	fi
+}
+
+[ -x /usr/X11R6/bin/icewm ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;IceWM"
+	else
+		LIST="$LIST=IceWM"
+		FIRST="yes"
+	fi
+}
+
+[ -x /usr/X11R6/bin/mwm ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;MWM"
+	else
+		LIST="$LIST=MWM"
 		FIRST="yes"
 	fi
 }
@@ -33,35 +103,20 @@ LIST="$LIST=kde"; FIRST=yes
 		FIRST="yes"
 	fi
 }
-[ -x /usr/X11R6/bin/afterstep ] && {
+
+[ -x /usr/X11R6/bin/startxfce ] && {
 	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;AfterStep"
+		LIST="$LIST;XFCE"
 	else
-		LIST="$LIST=AfterStep"
-		FIRST="yes"
-	fi
-}
-[ -x /usr/X11R6/bin/icewm ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;Icewm"
-	else
-		LIST="$LIST=Icewm"
-		FIRST="yes"
-	fi
-}
-[ -x /usr/bin/xfce ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;Xfce"
-	else
-		LIST="$LIST=Xfce"
+		LIST="$LIST=XFCE"
 		FIRST="yes"
 	fi
 }
 
 if [ $FIRST = "yes" ];then
-	LIST="$LIST;default;failsafe;"
+	LIST="$LIST;default;FailSafe;"
 else
-	LIST="$LIST=default;failsafe;"
+	LIST="$LIST=default;DailSafe;"
 fi
-sed "s/^SessionTypes.*/"$LIST"/" /usr/share/config/kdmrc > $TMP && \
-mv $TMP /usr/share/config/kdmrc
+sed "s/^SessionTypes.*/"$LIST"/" /usr/share/config/kdmrc > /tmp/$$.kdmrc && \
+mv /tmp/$$.kdmrc /usr/share/config/kdmrc
