@@ -35,6 +35,25 @@ find . -type 'd' -name 'CVS' | xargs rm -fr
 rm -rf %buildroot
 
 
+## Install backgrounds
+# User & root's backgrounds
+install -d -m 0755 %buildroot/%_datadir/mdk/backgrounds/root/
+install -m 0644 backgrounds/default.png %buildroot/%_datadir/mdk/backgrounds/default.png
+install -m 0644 backgrounds/default-root.png %buildroot/%_datadir/mdk/backgrounds/root/default.png
+
+# XFdrake test card
+install -d -m 0755 %buildroot/%_datadir/mdk/xfdrake/
+install -m 0644 backgrounds/xfdrake-test-card.jpg %buildroot/%_datadir/mdk/xfdrake/xfdrake-test-card.jpg
+
+
+## Install scripts
+install -d -m 0755 %buildroot/%_bindir/
+for i in bin/*.sh ; do install -m 0755 $i %buildroot/_bindir/ ; done
+
+
+
+
+
 ## Install faces
 install -d 0755 %buildroot/%_datadir/faces/
 cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/faces/default.png
