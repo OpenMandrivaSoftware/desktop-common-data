@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	5mdk
+Release:	6mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -40,6 +40,8 @@ rm -rf %buildroot
 # User & root's backgrounds
 install -d -m 0755 %buildroot/%_datadir/mdk/backgrounds/root/
 install -m 0644 backgrounds/default.png %buildroot/%_datadir/mdk/backgrounds/default.png
+install -m 0644 backgrounds/flower.jpg %buildroot/%_datadir/mdk/backgrounds/flower.jpg
+install -m 0644 backgrounds/nature.jpg %buildroot/%_datadir/mdk/backgrounds/nature.jpg
 install -m 0644 backgrounds/default-root.png %buildroot/%_datadir/mdk/backgrounds/root/default.png
 
 # XFdrake test card
@@ -91,10 +93,6 @@ for i in icons/large/*.png ; do install -m 0644 $i %buildroot/%_liconsdir/ ; don
 if [ -f %_sysconfdir/X11/window-managers.rpmsave ];then
 	%_prefix/sbin/convertsession -f %_sysconfdir/X11/window-managers.rpmsave || :
 fi
-%update_menus
-
-%postun
-%clean_menus
 
 
 
@@ -121,6 +119,7 @@ rm -fr %buildroot
 #
 %dir %_datadir/mdk/backgrounds/
 %dir %_datadir/mdk/backgrounds/root/
+%_datadir/mdk/backgrounds/*.jpg
 %_datadir/mdk/backgrounds/*.png
 %_datadir/mdk/backgrounds/root/*.png
 #
@@ -129,6 +128,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-6mdk
+- Add two new backgrounds
+- Don't run update-menus
+
 * Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-5mdk
 - Remove eazel-mdk-engine, krozat, krootwarnig (moved in their own modules/packages)
 - Add new icons
