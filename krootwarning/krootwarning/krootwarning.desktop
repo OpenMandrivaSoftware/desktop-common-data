@@ -11,3 +11,4 @@ Terminal=0
 Name=Krootwarning
 Name[de]=Krootwarning
 X-KDE-autostart-after=kdesktop
+X-KDE-autostart-condition=krootwarningrc:Parameter:DontShowWindowAtTheNextStartUp:true
