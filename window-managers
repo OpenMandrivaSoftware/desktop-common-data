@@ -18,7 +18,7 @@ ICON=WindowMaker.xpm
 EXEC=/usr/X11R6/bin/wmaker
 DESC=Another NeXt like Window-Manager
 SCRIPT:
-exec /usr/bin/wmaker
+exec /usr/X11R6/bin/wmaker
 --@@--
 NAME=Enlightenment
 DESC=The enlightenment window manager

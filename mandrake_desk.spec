@@ -1,4 +1,4 @@
-%define	release	9mdk
+%define	release	10mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -54,6 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Thu Apr 26 2000 dam's <damien@mandrakesoft.com> 1.0.3-10mdk
+- Corrected wmaker path.
+- Added Update.kdelnk.
+
 * Fri Apr 20 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.3-9mdk
 - Adjust wmaker path
 - Maker rpmlint happy
