@@ -2,7 +2,7 @@
 [Desktop Entry]
 Name=Mandrake Campus
 Icon=/usr/share/pixmaps/mc/mandrakecampus.xpm
-Exec=http://www.mandrakecampus.com/
+URL=http://www.mandrakecampus.com/
 Terminal=false
 MultipleArgs=false
-Type=URL
+Type=Link
