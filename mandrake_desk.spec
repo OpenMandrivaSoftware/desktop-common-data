@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 2mdk
+%define release 3mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -66,10 +66,16 @@ rm -rf $RPM_BUILD_ROOT
 /usr/lib/desktop-links/mandrake.links
 
 %changelog
+* Fri Dec 24 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+- window-managers: various change from (jerome).
+- kdelnk/Kppp.kdlnk: (new).
+- icons/user-*: added user icons for kdm (pixel).
+- gnome/*: sync with kde desktop. (pablo).
 
 * Tue Dec 23 1999 Pablo Saratxaga <pablo@mandrakesoft.com>
 - included the mandrake.links* files formerly in gmc package
 
+>>>>>>> 1.11
 * Wed Dec 22 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - sbin/fndSession: new script with the new chksession.
 - sbin/chksession: a new greatest hit.

@@ -15,13 +15,29 @@ exec gnome-session
 --@@--
 NAME=WindowMaker
 ICON=WindowMaker.xpm
-EXEC=/usr/bin/wmaker
+EXEC=/usr/X11R6/bin/wmaker
 DESC=Another NeXt like Window-Manager
 SCRIPT:
 [ -f $HOME/GNUstep/Defaults/WindowMaker ] || {
 	/usr/X11R6/bin/wmaker.inst -batch
 }
 exec /usr/X11R6/bin/wmaker
+--@@--
+NAME=Enligntenment
+DESC=The enlightened window manager
+EXEC=/usr/bin/enlightenment
+SCRIPT:
+[ -f $HOME ] || {
+/usr/bin/enlightenment.install
+}
+exec /usr/bin/enlightenment
+--@@--
+NAME=BlackBox
+ICON=BlackBox.xpm
+EXEC=/usr/X11R6/bin/blackbox
+DESC=A Light but nice looking window manager
+SCRIPT:
+exec /usr/X11R6/bin/blackbox
 --@@--
 NAME=AfterStep
 ICON=AfterStep.xpm
@@ -30,12 +46,31 @@ DESC=A NeXt like Window-Manager
 SCRIPT:
 exec /usr/X11R6/bin/afterstep
 --@@--
+NAME=Fvwm2
+EXEC=/usr/X11R6/bin/fvwm2
+DESC=A popular window manager
+SCRIPT:
+exec /usr/X11R6/bin/fvwm2
+--@@--
 NAME=Icewm
 ICON=icewm.xpm
 EXEC=/usr/X11R6/bin/icewm
 DESC=A Light Window-Manager
 SCRIPT:
 exec /usr/X11R6/bin/icewm
+--@@--
+NAME=Fvwm1   
+EXEC=/usr/X11R6/bin/fvwm
+DESC=A very stable and light window manager
+SCRIPT:
+exec /usr/X11R6/bin/fvwm
+--@@--
+NAME=Xfce
+EXEC=/usr/bin/xfwm
+DESC=A CDE like window manager
+SCRIPT:
+[ "x$XFCE_DATA" = "x" ] && XFCE_DATA=/usr/share/xfce
+exec /usr/bin/xfwm
 --@@--
 NAME=AnotherLevel
 ICON=AnotherLevel.xpm

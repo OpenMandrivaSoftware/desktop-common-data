@@ -1,4 +1,6 @@
 #!/usr/bin/perl
+# (c) MandrakeSoft,  Pixel <pixel@mandrakesoft.com>
+# Copyright under GPL
 
 @dirs = (qw(/etc/skel /root), glob("/home/*"));
 @path = split ":", "/sbin:/usr/sbin:/usr/X11R6/bin:/bin:/usr/bin";
