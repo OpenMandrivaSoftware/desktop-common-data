@@ -71,7 +71,7 @@ void Krootwarning::initInterface()
       +i18n("to the system.")+"<br></qt>",page);
 
     grid->addMultiCellWidget(info,0,7,1,1);
-    m_showAtTheNewStartUp=new QCheckBox( i18n("Don't show this window again."), page);
+    m_showAtTheNewStartUp=new QCheckBox( i18n("Show this window again."), page);
     grid->addMultiCellWidget(m_showAtTheNewStartUp,8,8,0,1);
     resize(400,280);
 
@@ -104,7 +104,7 @@ void Krootwarning::initInterface()
     if (y + gh > dh)
 	y = dh - gh;
     move( x < 0 ? 0 : x, y < 0 ? 0 : y );
-
+    m_showAtTheNewStartUp->setChecked(false);
     loadConfig();
 }
 
@@ -122,7 +122,7 @@ void Krootwarning::loadConfig()
     if( config->hasGroup("Parameter" ) )
     {
         config->setGroup( "Parameter" );
-        m_showAtTheNewStartUp->setChecked(config->readBoolEntry("ShowWindowAtTheNextStartUp",false));
+        m_showAtTheNewStartUp->setChecked(config->readBoolEntry("DontShowWindowAtTheNextStartUp",false));
     }
 }
 
@@ -137,7 +137,7 @@ void Krootwarning::saveConfig()
 {
     KConfig* config=kapp->config();
     config->setGroup( "Parameter" );
-    config->writeEntry("ShowWindowAtTheNextStartUp", m_showAtTheNewStartUp->isChecked() );
+    config->writeEntry("DontShowWindowAtTheNextStartUp", m_showAtTheNewStartUp->isChecked() );
 }
 
 void Krootwarning::logout()
