@@ -5,6 +5,7 @@ Name[es]=RpmDrake
 Name[nl]=RpmDrake
 Name[no]=RpmDrake
 Name[sk]=RpmDrake
+Name[sl]=RpmDrake
 Name[zh_CN.GB2312]=RpmDrake 软件包管理"
 Exec=/usr/X11R6/bin/rpmdrake
 Icon=../icons/rpmdrake.xpm
