@@ -10,7 +10,7 @@ clean:
 	find . -type d -name '.xvpics'|xargs rm -rf
 
 merge-translations:
-	for i in `find kde kdelnk gnome old special -name "*.in"` ; \
+	for i in `find kde gnome old special -name "*.in"` ; \
 	do \
 		case "$$i" in \
 		*.links.desktop.in) \
