@@ -30,7 +30,6 @@ install:
 	install -m755 sbin/* $(RPM_BUILD_ROOT)/usr/sbin/
 	install -m755 bin/* $(RPM_BUILD_ROOT)/usr/bin/
 	install -m644 icons/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/
-	install -m644 icons/*.png $(RPM_BUILD_ROOT)/usr/share/icons/
 	install -m644 icons/mini/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/mini
 	install -m644 icons/large/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/large
 	install -m644 backgrounds/* \
