@@ -12,7 +12,7 @@ Group:		System/Configuration/Other
 Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
-Requires:   menu
+Requires:	menu
 BuildRequires:	kdelibs-devel libcapplet-devel gdk-pixbuf-devel
 BuildRequires:	XFree86-static-libs
 BuildRequires:	arts
@@ -326,10 +326,13 @@ rm -fr %buildroot
 
 
 %changelog
-* Tue Feb 26 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-12mdk
-- Modify Mandrake GTK theme
+* Thu Feb 28 2002 David BAUDENS <bauden@@mandrakesoft.com> 8.2-12mdk
+- Modify Mandrake GTK theme - Frederic Crozat
 - Change name of Mandrake Control Center to Control Center in GNOME desktop
- (Thanks to Mattias Dahlberg)
+ (Thanks to Mattias Dahlberg) - Frederic Crozat
+- Add icons for cdcom
+#- Update large and mini icons
+#- Remove old faces icons
 
 * Tue Feb 26 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-11mdk
 - Add/remove some icons
