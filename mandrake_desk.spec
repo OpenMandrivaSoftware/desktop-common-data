@@ -1,5 +1,4 @@
-# DO NOT MODIFY HERE, modify in the CVS
-%define	release	14mdk
+%define	release	15mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -55,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Sat May  6 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.3-15mdk
+- sbin/chksession: if icewm is not here by default launch twm.
+
 * Fri May  5 2000 Pixel <pixel@mandrakesoft.com> 1.0.3-14mdk
 - fix for kdeDesktopCleanup
 

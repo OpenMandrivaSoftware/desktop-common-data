@@ -1,3 +1,7 @@
+2000-05-06  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+
+	* sbin/chksession: if icewm is not here by default launch twm.
+
 2000-04-30 Stefan Siegel <siegel@linux-mandrake.com>
 
 	* icon cleanup
