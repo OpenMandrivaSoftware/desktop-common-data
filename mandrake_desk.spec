@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.2
-Release:	4mdk
+Release:	5mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -169,6 +169,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Aug 28 2003 David Baudens <baudens@mandrakesoft.com> 9.2-5mdk
+- Update simplified menu
+
 * Wed Aug 27 2003 Frederic Crozat <fcrozat@mandrakesoft.com> 9.2-4mdk
 - Fix fndSession to look for new gdm session path (fix bug #4572)
 

@@ -40,7 +40,7 @@
 ?package(kdemultimedia-kscd): needs="kde" kde_filename="kscd" section="Enjoy music & video" title="Listen to a CD" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nBinaryPattern=kscd;\\nProtocols=\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # Listen to music files
-?package(totem): needs="x11" command="/usr/bin/totem %U" section="Enjoy music & video" title="Listen to music files" icon="totem.png" mimetypes="video/mpeg;video/msvideo;video/quicktime;video/x-avi;video/x-ms-asf;video/x-ms-wmv;video/x-msvideo;application/x-ogg;audio/x-mp3;audio/x-mpeg;video/x-fli;audio/x-wav" kde_opt="InitialPreference=10"
+?package(totem): needs="x11" command="/usr/bin/totem %U" section="Enjoy music & video" title="Listen to music files" icon="totem.png" mimetypes="video/mpeg,video/msvideo,video/quicktime,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,application/x-ogg,audio/x-mp3,audio/x-mpeg,video/x-fli,audio/x-wav,audio/x-mpegurl" kde_opt="InitialPreference=15"
 
 # Record sounds
 ?package(gnome-media):needs="x11" command="/usr/bin/gnome-sound-recorder" section="Enjoy music & video" title="Record sounds" icon="/usr/share/pixmaps/gnome-grecord.png"
@@ -52,7 +52,7 @@
 ?package(xawtv): command="XawTV" icon="xawtv.png" section="Enjoy music & video" title="Watch TV" needs="x11"
 
 # Watch videos
-?package(totem): needs="x11" command="/usr/bin/totem %U" section="Enjoy music & video" title="Watch videos" icon="totem.png" mimetypes="video/mpeg;video/msvideo;video/quicktime;video/x-avi;video/x-ms-asf;video/x-ms-wmv;video/x-msvideo;application/x-ogg;audio/x-mp3;audio/x-mpeg;video/x-fli;audio/x-wav" kde_opt="InitialPreference=10"
+?package(totem): needs="x11" command="/usr/bin/totem %U" section="Enjoy music & video" title="Watch videos" icon="totem.png" mimetypes="video/mpeg,video/msvideo,video/quicktime,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,application/x-ogg,audio/x-mp3,audio/x-mpeg,video/x-fli,audio/x-wav,audio/x-mpegurl" kde_opt="InitialPreference=15"
 
 
 
@@ -138,6 +138,9 @@
 # Set up reminder messages
 ?package(kdepim-korganizer): needs="x11" kde_filename="kalarm" section="Use office tools" title="Set up reminder messages" icon="kalarm.png" command="kalarm" kde_command="kalarm -caption \"%c\" %i" kde_opt="\\nEncoding=UTF-8\\nDocPath=kalarm/index.html\\nGenericName=Reminder Message Scheduler\\nTerminal=0\\nX-DCOP-ServiceType=Unique\\nX-KDE-StartupNotify=true"
 
+# View fax
+?package(kdegraphics-kfax): needs="x11" kde_filename="kfax" section="Use office tools" title="View fax" icon="kfax.png" command="kfax" kde_command="kfax %f   -caption \"%c\" %i %m" mimetypes="image/fax-g3" multiple_files="false" accept_url="false" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=kfax;\\nGenericName=Fax Viewer\\nTerminalOptions=\\nPath=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi"
+
 
 
 
@@ -166,6 +169,9 @@
 
 # Read and send mail
 ?package(kdenetwork-kmail): needs="kde" kde_filename="KMail" section="Use the Internet" title="Read and send mail" icon="kmail.png" command="kmail" kde_command="kmail -caption \"%c\" %i %m" kde_opt="\\nDocPath=kmail/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+
+# Transfer files using FTP
+?package(kbear): needs="kde" kde_filename="kbear" section="Use the Internet" title="Transfer files using FTP" icon="kbear.png" command="kbear" kde_opt="\\nEncoding=UTF-8\\nGenericName=FTP Client\\nMiniIcon=kbear\\nDocPath=kbear/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
 
 
 
