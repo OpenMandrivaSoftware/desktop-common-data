@@ -1,7 +1,11 @@
+%define name mandrake_desk
+%define version 8.0
+%define release 6mdk
+
 Summary:	The Desktop configuration files for Linux Mandrake
-Name:		mandrake_desk
-Version:	8.0
-Release:	6mdk
+Name:		%name
+Version:	%version
+Release:	%release
 License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
