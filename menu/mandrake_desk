@@ -569,14 +569,14 @@
 
 ?package(staroffice-fr): title="Configure your printer for StarOffice" icon=psetup.xpm needs="x11" command="/usr/lib/office52_fr/program/spadmin" section="Use office tools (Create an office document)"
 
-?package(staroffice-fr): title="StarOffice, configuration" icon=set52.xpm needs="x11" command="/usr/lib/office52_fr/program/setup" section="Use office tools (Create an office document)"
+?package(staroffice-fr): title="StarOffice Setup" icon=set52.xpm needs="x11" command="/usr/lib/office52_fr/program/setup" section="Use office tools (Create an office document)"
 
 
-?package(staroffice-es): title="Esegue il programma StarOffice" icon=so52.xpm needs="x11" command="/usr/lib/office52_es/program/soffice" section="Use office tools (Create an office document)" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
+?package(staroffice-es): title="Make your office work using StarOffice" icon=so52.xpm needs="x11" command="/usr/lib/office52_es/program/soffice" section="Use office tools (Create an office document)" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
 
-?package(staroffice-es): title="Configurazione della stampante per StarOffice" icon=psetup.xpm needs="x11" command="/usr/lib/office52_es/program/spadmin" section="Use office tools (Create an office document)"
+?package(staroffice-es): title="Configure your printer for StarOffice" icon=psetup.xpm needs="x11" command="/usr/lib/office52_es/program/spadmin" section="Use office tools (Create an office document)"
 
-?package(staroffice-es): title="Setup di StarOffice" icon=set52.xpm needs="x11" command="/usr/lib/office52_es/program/setup" section="Use office tools (Create an office document)"
+?package(staroffice-es): title="StarOffice Setup" icon=set52.xpm needs="x11" command="/usr/lib/office52_es/program/setup" section="Use office tools (Create an office document)"
 
 
 

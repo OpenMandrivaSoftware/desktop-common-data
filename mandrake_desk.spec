@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	4mdk
+Release:	5mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -100,7 +100,13 @@ rm -rf %buildroot
 cd eazel-engine
 %makeinstall_std
 )
-
+mkdir -p $RPM_BUILD_ROOT{%{_menudir},%{_datadir}/control-center/capplet/Advanced}
+cat << EOF > $RPM_BUILD_ROOT%{_menudir}/mdk-eazel-engine-capplet
+?package(mdk-eazel-engine-capplet):command="%{_bindir}/eazel-engine-capplet" \
+needs="gnome" section="Configuration/Gnome/Advanced" title="Crux GTK+ Theme" \
+longtitle="Configuration applet for Crux GTK+ theme"
+EOF
+cp -f $RPM_BUILD_ROOT%_datadir/gnome/apps/Settings/Desktop/eazel-engine-properties.desktop $RPM_BUILD_ROOT%{_datadir}/control-center/capplet/Advanced
 (
 cd krootwarning
 %makeinstall_std
@@ -176,6 +182,12 @@ fi
 %update_menus
 
 %postun -n krozat
+%clean_menus
+
+%post -n mdk-eazel-engine-capplet
+%update_menus
+
+%postun -n mdk-eazel-engine-capplet
 %clean_menus
 
 
@@ -265,7 +277,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_datadir/gnome/apps/Settings/
 %dir %_datadir/gnome/apps/Settings/Desktop/
 %_datadir/gnome/apps/Settings/Desktop/*.desktop
-
+%{_menudir}/mdk-eazel-engine-capplet
+%{_datadir}/control-center/capplet/Advanced/*
 
 %files -n krootwarning
 %defattr(-,root,root,-)
@@ -308,6 +321,10 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Tue Jan 29 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-5mdk
+- Add link to Crux configuration applet
+- Fix menu entries for simplified menu
+
 * Mon Jan 28 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-4mdk
 - New icons for GNOME desktop
 
