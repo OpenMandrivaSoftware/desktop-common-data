@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
 Version:	8.1
-Release:	4mdk
+Release:	5mdk
 License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
@@ -35,7 +35,7 @@ cd eazel-engine
 
 (
 cd krootwarning
-./configure --prefix=%_prefix --enable-final --disable-debug
+./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama
 %make
 )
 
@@ -144,40 +144,107 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%config(noreplace) /etc/gtk/gtkrc
 %doc TRANSLATORS special/*
-%dir /etc/X11/wmsession.d/
-%{_prefix}/sbin/*
-%{_bindir}/*
-%{_datadir}/faces
-%{_datadir}/mdk/faces
-%{_iconsdir}/*.xpm
+#
+#
+%dir %_sysconfig/gtk/
+%config(noreplace) %_sysconfdir/gtk/gtkrc
+#
+%dir %_sysconfdir/X11/wmsession.d/
+#
+%_bindir/*
+#
+#
+%dir %_libdir/gtk/
+%dir %_libdir/gtk/themes/
+%dir %_libdir/gtk/themes/engines/
+%_libdir/gtk/themes/engines/*
+#
+%dir %_libdir/mc/desktop-scripts/
+%_libdir/mc/desktop-scripts/*
+#
+%_bindir/DrakWM
+%_bindir/createbackground.sh
+%_bindir/eazel-engine-capplet
+%_bindir/gnomedesktop-network
+%_bindir/print-cups.sh
+#
+#
+%_sbindir/*
+#
+#
+%dir %_datadir/faces/
+%_datadir/faces/*
+#
+#
+%_iconsdir/*.xpm
 %_iconsdir/*.png
-%{_miconsdir}/*
-%{_liconsdir}/*
-%{_datadir}/pixmaps/backgrounds/linux-mandrake
-%{_datadir}/pixmaps/mdk
-%_datadir/eazel-engine
-%{_libdir}/mc/desktop-scripts/mandrake.links.sh
-%{_libdir}/gtk/themes/engines/*
-%{_mandir}/*/*
+%_miconsdir/*
+%_liconsdir/*
+#
+#
+%_mandir/*/*
+#
+#
 %dir %_datadir/mdk/
+%dir %_datadir/mdk/faces/
+%_datadir/mdk/faces/*
+#
 %dir %_datadir/mdk/gnome-desktop/
 %_datadir/mdk/gnome-desktop/*
-%_datadir/pixmaps/mc/*.xpm
+#
+#
+%dir %_datadir/pixmaps/backgrounds/
+%dir %_datadir/pixmaps/backgrounds/linux-mandrake/
+%_datadir/pixmap/backgrounds/linux-mandrake/*
+#
+%dir %_datadir/pixmaps/mc/
+%_datadir/pixmaps/mc/*
+#
+%dir %_datadir/pixmaps/mdk/
+%_datadir/pixmaps/mdk/*
+
+
+
+%files -n krootwarning
+%_bindir/krootwarning
+#
 #
 %dir %_datadir/apps/krootwarning/
 %dir %_datadir/apps/krootwarning/pics/
-%_datadir/apps/krootwarning/pics/*
+%_datadir/apps/krootwarning/pics/*.png
 #
+#
+%dir %_datadir/applnk/Applications/
+%_datadir/applnk/Applications/krootwarning.desktop
+
+
+
+%files -n krozat
 %dir %_datadir/apps/krozat/
 %dir %_datadir/apps/krozat/pics/
 %_datadir/apps/krozat/pics/*
-##
+#
+#
+%dir %_datadir/applnk/System/
+%dir %_datadir/applnk/System/ScreenSavers/
+%_datadir/applnk/System/ScreenSavers/*.desktop
+#
+#
+%dir %_iconsdir/locolor/
+%dir %_iconsdir/locolor/16x16/
+%dir %_iconsdir/locolor/16x16/apps/
 %_iconsdir/locolor/16x16/apps/krootwarning.png
+#
+%dir %_iconsdir/locolor/32x32/
+%dir %_iconsdir/locolor/32x32/apps
 %_iconsdir/locolor/32x32/apps/krootwarning.png
 
+
 %changelog
+* Sat Aug 25 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-5mdk
+- Split package
+
 * Fri Aug 24 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-4mdk
 - Add krozat (our Chef ;)
 
