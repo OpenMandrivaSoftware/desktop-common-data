@@ -137,7 +137,7 @@
 ?package(kdepim-korganizer): needs="x11" kde_filename="korganizer" section="Use office tools" title="Manage your time" icon="korganizer.png" command="korganizer" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nServiceTypes=Browser/View\\nX-KDE-Library=libkorganizer\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
 
 # Send a fax
-?package(kdebase-kdeprinterfax): needs="kde" kde_filename="kdeprintfax" section="Use office tools" title="Send a fax" icon="kdeprintfax.png" command="kdeprintfax %u" kde_command="kdeprintfax -caption \"%c\" %i %m %u" kde_opt="\\nMiniIcon=kdeprintfax\\nTerminal=0"
+?package(kdebase-kdeprintfax): needs="kde" kde_filename="kdeprintfax" section="Use office tools" title="Send a fax" icon="kdeprintfax.png" command="kdeprintfax %u" kde_command="kdeprintfax -caption \"%c\" %i %m %u" kde_opt="\\nMiniIcon=kdeprintfax\\nTerminal=0"
 
 # Write and stick notes
 ?package(kdepim-knotes): needs="kde" kde_filename="knotes" section="Use office tools" title="Write and stick notes" icon="knotes.png" command="knotes" kde_opt="\\nEncoding=UTF-8\\nDocPath=knotes/index.html\\nTerminal=0\\nGenericName=Popup Notes\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
