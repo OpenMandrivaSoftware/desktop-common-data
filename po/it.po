@@ -1,9 +1,9 @@
 #
 # WARNING: This file is in unicode!
 #
-# Giuseppe Ghibo <ghibo@linux-mandrake.com>
+# Giuseppe Ghibo <ghibo@linux-mandrake.com>, 2000
 # 8.0 Tech/Lang proofreading by Roberto Rosselli Del Turco
-# <rosselli@ling.unipi.it>
+#  <rosselli@ling.unipi.it>, 2001
 #
 msgid ""
 msgstr ""
@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: Roberto Rosselli Del Turco <rosselli@ling.unipi.it>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: gnome/mandrake.links.desktop.in.h:1 kdelnk/DrakConf.kdelnk.in.h:1
