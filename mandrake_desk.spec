@@ -152,7 +152,7 @@ rm -fr %buildroot
 %dir %_datadir/mdk/xfdrake/
 %_datadir/mdk/xfdrake/*.jpg
 #
-/usr/share/mdk/screensaver
+%dir /usr/share/mdk/screensaver/
 /usr/share/mdk/screensaver/*.png
 #
 %_menudir/simplified/*
