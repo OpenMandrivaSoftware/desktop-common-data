@@ -45,11 +45,13 @@
 
 
 # Package admin
-?package(rpmdrake):needs="x11" section="Administer your system" title="Add or remove programs" command="rpmdrake"icon="rpmdrake.xpm"
+?package(rpmdrake):needs="x11" section="Administer your system" title="Add programs" command="rpmdrake"icon="rpmdrake.png"
 
-?package(rpmdrake): needs="x11" icon="mandrakeupdate.xpm" section="Administer your system" title="Download and install Mandrake security updates" command="MandrakeUpdate"
+?package(rpmdrake): needs="x11" icon="mandrakeupdate.png" section="Administer your system" title="Download and install Mandrake security updates" command="MandrakeUpdate"
 
-?package(rpmdrake):needs="kde" section=".hidden" title="Software installer" command="rpminst --files %F" mimetypes="application/x-rpm" kde_opt="InitialPreference=6\\nTerminal=false" icon="rpmdrake.xpm"
+?package(rpmdrake):needs="kde" section=".hidden" title="Software installer" command="rpminst --files %F" mimetypes="application/x-rpm" kde_opt="InitialPreference=6\\nTerminal=false" icon="mandrakeupdate.png"
+
+?package(rpmdrake): command="/usr/sbin/rpmdrake-remove" needs="x11" section="Administer your system" icon="rpmdrake-remove.png" title="Remove Software" longtitle="A graphical front end for removing packages"
 
 
 # User admin
@@ -123,7 +125,7 @@
 
 
 # kdegames
-?package(kdegames): needs="kde" kde_filename="kabalone" section="Play games" title="Play Abalone" icon="kabalone.png" command="kabalone" kde_command="kabalone %i %m -caption \"%c\"" kde_opt="\\nDocPath=kabalone/index.html\\nKDE-X-StartupNotify=true"
+#?package(kdegames): needs="kde" kde_filename="kabalone" section="Play games" title="Play Abalone" icon="kabalone.png" command="kabalone" kde_command="kabalone %i %m -caption \"%c\"" kde_opt="\\nDocPath=kabalone/index.html\\nKDE-X-StartupNotify=true"
 
 ?package(kdegames): needs="kde" kde_filename="kasteroids" section="Play games" title="Play KAsteroids" icon="kasteroids.png" command="kasteroids" kde_command="kasteroids %i %m -caption \"%c\"" mimetypes="" kde_opt="\\nBinaryPattern=kasteroids;\\nTerminalOptions=\\nPath=\\nDocPath=kasteroids/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
@@ -145,7 +147,7 @@
 
 
 #TuxRacer
-?package(tuxracer):command="tuxracer" icon="tuxracer.xpm" needs="x11" section="Play games" title="Play Tuxracer, a great racing game starring Tux"
+?package(tuxracer):command="tuxracer" icon="sport_section.png" needs="x11" section="Play games" title="Play Tuxracer, a great racing game starring Tux"
 
 
 #Pingus
@@ -169,7 +171,8 @@
 # Web browser
 ?package(webclient): command="/usr/bin/webclient-gnome" icon="networking_www_section.png" needs="gnome" section="Use the Internet" title="Browse the Web"
 
-?package(webclient): command="/usr/bin/webclient-kde" icon="networking_www_section.png" needs="kde" section="Use the Internet" title="Browse the Web"
+?package(kdebase): needs="x11" kde_filename="konqbrowser" section="Use the Internet" title="Browse the Web" icon="networking_www_section.png" command="konqueror --profile webbrowsing" kde_opt="\\nEncoding=UTF-8\\nDocPath=konqueror/index.html"
+
 
 
 # Newsgroups
@@ -239,7 +242,7 @@
 
 ?package(howto-html-sv): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/sv/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Swedish" section="Read documentation"
 
-?package(howto-html-zh): command="sh -c '$BROWSER /usr/share/doc/HOWTO/HTML/sl/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Chinese" section="Read documentation"
+?package(howto-html-zh): command="sh -c '$BROWSER /usr/share/doc/HOWTO/HTML/zh/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Chinese" section="Read documentation"
 
 
 # Mandrake documentation
@@ -302,6 +305,16 @@
 ?package(staroffice-it): title="Make your office work using StarOffice" icon="butterfly.png" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
 
 
+# OpenOffice
+?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_calc.png" title="Create a spreadsheet using OpenOffice.org" command="oocalc" mimetypes="application/vnd.sun.xml.calc,application/vnd.stardivision.calc,application/vnd.stardivision.chart,application/msexcel,application/vnd.ms-excel"
+
+?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_draw.png" title="Create a draw using OpenOffice.org" command="oodraw" mimetypes="application/vnd.sun.xml.draw,application/vnd.stardivision.draw"
+
+?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_writer.png" title="Write a document using OpenOffice.org" command="oowriter" mimetypes="application/vnd.sun.xml.writer,application/vnd.stardivision.writer,application/msword,application/vnd.ms-word,application/x-doc,text/rtf"
+
+?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_math.png" title="Create formula using OpenOffice.org" command="oomath" mimetypes="application/vnd.stardivision.math,application/vnd.sun.xml.writer.math"
+
+
 ## View, modify or create a picture
 
 # Manipulate pictures
@@ -319,7 +332,7 @@
 
 
 # Koffice
-?package(koffice): needs="x11" kde_filename="kontour" section="View, modify, or create graphics" title="Create a drawing" icon="kontour.png" command="kontour" mimetypes="application/x-kontour" kde_opt="\\nX-KDE-Library=libkontourpart\\nServiceTypes=KOfficePart,KParts/ReadOnlyPart,KParts/ReadWritePart\\nX-KDE-NativeMimeType=application/x-kontour\\nDocPath=kontour/index.html\\nKDE-X-StartupNotify=true"
+?package(koffice): needs="x11" kde_filename="karbon" section="View, modify, or create graphics" title="Create a drawing" icon="karbon.png" command="karbon" mimetypes="application/x-karbon,application/illustrator,image/x-eps,application/postscript" kde_opt="\\nX-KDE-Library=libkarbonpart\\nGenericName=Scalable Graphics\\nInitialPreference=5\\nServiceTypes=KOfficePart,KParts/ReadOnlyPart,KParts/ReadWritePart\\nX-KDE-NativeMimeType=application/x-karbon"
 
 ?package(sodipodi): needs="gnome" icon="sodipodi.xpm" section="View, modify, or create graphics" title="Create a drawing" command="/usr/bin/sodipodi"
 
