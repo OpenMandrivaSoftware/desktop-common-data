@@ -1,122 +1,18 @@
 #!/bin/sh
-# fndSession (c) MandrakeSoft
-# Chmouel Boudjnah <chmouel@mandrakesoft.com>
+# fndSession (c) MandrakeSoft, Chmouel Boudjnah <chmouel@mandrakesoft.com>
+## FindSession for kdm and gdm.
 
-LIST="SessionTypes"
-
-[ -x /usr/bin/kde ] && {
-LIST="$LIST=KDE"; FIRST=yes
-}
-[ -x /usr/bin/gnome-session ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;Gnome"
-	else
-		LIST="$LIST=Gnome"
-		FIRST="yes"
-	fi
+[ -x /usr/sbin/chksession ] || {
+    echo "I can't find /usr/sbin/chksession"
+    echo "check your installation"
+    exit 1
 }
 
-[ -x /usr/X11R6/bin/afterstep ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;AfterStep"
-	else
-		LIST="$LIST=AfterStep"
-		FIRST="yes"
-	fi
-}
-
-
-[ -e /usr/share/apps/switchdesk/Xclients.anotherlevel ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;AnotherLevel"
-	else
-		LIST="$LIST=AnotherLevel"
-		FIRST="yes"
-	fi
-}
-
-[ -x /usr/X11R6/bin/bbdrake ] && {
-	if [ "$FIRST" = "yes" ] ; then
-		LIST="$LIST;BlackBox"
-		FIRST="yes"
-	fi
-}
-
-# Work but some end users don't understant how it works. So, we disable it.
-#[ -x /usr/X11R6/bin/bbdrake_kde ] && {
-#	if [ "$FIRST" = "yes" ] ; then
-#		LIST="$LIST;BlackBox/KDE"
-#		FIRST="yes"
-#	fi
-#}
-
-[ -x /usr/bin/enlightenment ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;Enlightenment"
-	else
-		LIST="$LIST=Enlightenment"
-		FIRST="yes"
-	fi
-}
-
-[ -x /usr/X11R6/bin/fvwm ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;FVWM"
-	else
-		LIST="$LIST=FVWM"
-		FIRST="yes"
-	fi
-}
-
-[ -x /usr/X11R6/bin/fvwm2 ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;FVWM2"
-	else
-		LIST="$LIST=FVWM2"
-		FIRST="yes"
-	fi
-}
-
-[ -x /usr/X11R6/bin/icewm ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;IceWM"
-	else
-		LIST="$LIST=IceWM"
-		FIRST="yes"
-	fi
-}
-
-[ -x /usr/X11R6/bin/mwm ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;MWM"
-	else
-		LIST="$LIST=MWM"
-		FIRST="yes"
-	fi
-}
-
-[ -x /usr/X11R6/bin/wmaker ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;WindowMaker"
-	else
-		LIST="$LIST=WindowMaker"
-		FIRST="yes"
-	fi
-}
-
-[ -x /usr/X11R6/bin/startxfce ] && {
-	if [ "$FIRST" = "yes" ];then
-		LIST="$LIST;XFCE"
-	else
-		LIST="$LIST=XFCE"
-		FIRST="yes"
-	fi
-}
-
-if [ $FIRST = "yes" ];then
-	LIST="$LIST;default;FailSafe;"
-else
-	LIST="$LIST=default;DailSafe;"
+if [ -e /usr/share/config/kdmrc ];then
+LIST="`/usr/sbin/chksession -k`" perl -pi -e 's|^SessionTypes=.*|$ENV{LIST}|'\
+    /usr/share/config/kdmrc
 fi
-sed "s/^SessionTypes.*/"$LIST"/" /usr/share/config/kdmrc > /tmp/$$.kdmrc && \
-mv /tmp/$$.kdmrc /usr/share/config/kdmrc
+
+if [ -d /etc/X11/gdm/Sessions ];then
+	/usr/sbin/chksession -g
+fi

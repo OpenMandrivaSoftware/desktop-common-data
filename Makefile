@@ -1,4 +1,4 @@
-VERSION = 1.0
+VERSION = 1.0.1
 
 all:
 	@echo "Run make install"
@@ -30,10 +30,12 @@ install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/{bin,sbin}
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{icons,icons/large,icons/mini,pixmaps/backgrounds/mandrake}
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
+	mkdir -p $(RPM_BUILD_ROOT)/etc/X11/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk
 	mkdir -p $(RPM_BUILD_ROOT)/etc/skel/Desktop
 	install -m755 bin/* $(RPM_BUILD_ROOT)/usr/bin
 	install -m755 sbin/* $(RPM_BUILD_ROOT)/usr/sbin
+	install -m644 window-managers $(RPM_BUILD_ROOT)/etc/X11/
 	install -m644 icons/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/
 	install -m644 icons/mini/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/mini
 	install -m644 icons/large/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/large

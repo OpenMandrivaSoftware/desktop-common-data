@@ -1,0 +1,127 @@
+#!/usr/bin/perl
+# (c) MandrakeSoft, Chmouel Boudjnah <chmouel@mandrakesoft.com>
+# Copyright under GPL blah blah blah.
+## you'll don't find much info here, see --help.
+
+my @lf;
+
+sub usage {
+  my $e = shift @_;
+  $0 =~ s|.*/||;
+  print {  $e ? STDERR : STDOUT } << "EOF";
+Usage: $0 [OPTION]...
+
+              -F --first:	Print only first available entry.
+	      -t, --test:	Go in test mode.
+	      -l, --list:	List window-managers.
+    -f=FILE, --file=FILE:	Specify an alternarte config files other
+				than /etc/X11/window-manager
+-x=ENTRY, --xsession=ENTRY:	Product window-managers script of ENTRY.
+-r=ENTRY, --remove=ENTRY:	remove an entry (product to stdin).
+	      -k,  --kdm:	Product window-managers list for kdm sessions.
+	      -g,  --gdm:	Product window-managers script for gdm sessions.
+	      -h, --help:	Product this help.
+
+EOF
+  exit($e);
+}
+  
+sub parse_file {
+  my $f=shift @_;
+  open F, $f or die "Can't open $f\n";
+  local $/ = "--@@--";
+  while (<F>) {
+     $n = $1 if /^NAME=(.*)/m;
+     $e = $1 if /^EXEC=(.*)/m;
+     $d = $1 if /^DESC=(.*)/m;
+     $i = $1 if /^ICON=(.*)/m;
+     $s = $1 while /SCRIPT:(.*?)$/gs; chomp $s;
+     if (-x $e) { $script{$n} = $s; $exec{$n} = $e; $desc{$n} = $d; $icon{$n} = $i; push @lf, $n; }
+  }
+}
+
+sub remove_entry {
+  my $e = shift @_;
+  my $f = shift @_;
+  open F, $f or die "Can't open $f\n";
+  local $/ = "--@@--";
+  while (<F>) {
+    next if /^NAME=$e/m;
+    print;
+  }
+}
+
+usage(1)
+  if @ARGV < 1;
+
+while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
+  $_ = shift;
+  if (/^--xsession=([^ ]+)/ || /^-x=([^ ]+)/) {
+    $xsession = $1;
+  } elsif (/^--first/ || /^-F/) {
+    $first++;
+  } elsif (/^--gdm/ || /^-g/) {
+    $gdm++;
+  } elsif (/^--list/ || /^-l/) {
+    $list++;
+  } elsif (/^--kdmsess/ || /^-k/) {
+    $kdm++;
+  } elsif (/^--test/ || /^-t/) {
+    $test++;
+  } elsif (/^--file=([^ ]+)/ || /^-f=([^ ]+)/) {
+    $file = $1;
+  } elsif (/^--remove=([^ ]+)/ || /^-r=([^ ]+)/) {
+    $remove=$1;
+  } elsif (/^--help/ || /^-h/ || /^-\?/) {
+    usage(0);
+  } else {
+    print STDERR "Unrecognized switch: $_\n";
+    usage(1);
+  }
+}
+  
+$file = $test ? './window-managers' : '/etc/X11/window-managers' unless $file;
+die "$file don't exist\n" unless -r $file;
+$remove ? remove_entry($remove, $file) : parse_file ($file);
+
+if ($kdm) {
+  $session="SessionTypes=";
+  for(@lf) { $session .= /$lf[-1]/ ? "$_;failsafe;default" : "$_;"  }
+  print "$session\n";
+  exit(0);
+}
+
+
+if ($gdm) {
+  my $d = '/etc/X11/gdm/Sessions/';
+  chdir $d;
+
+  #Any better way ?
+  opendir D, $d;
+  for ( readdir(D)) { next if /^\.\.?/;next if /^Failsafe/; chmod 0644, $_; }
+  closedir D;
+
+  for my $file (@lf) {
+    open FH, ">/etc/X11/gdm/Sessions/$file" or die "Can't write to /etc/X11/gdm/Sessions/$file\n";
+    print FH "#!/bin/sh";
+    print FH $script{$file};
+    close FH;
+    chmod 0755, $file;
+  }
+  unlink 'Default';
+  symlink shift @lf, 'Default';
+}
+
+if ($xsession) {
+  if ($script{$xsession}) {
+    print "#!/bin/sh\n";
+    print $script{$xsession}
+  } else {
+    print "xterm -geometry 100x25+0+0 &\n";
+    -x '/usr/X11R6/bin/icewm' ? print "icewm\n" : print "xterm -geometry 67x14+384+446\n";
+  }
+  exit (0);
+}
+
+print shift @lf, "\n" if $first;
+if ($list) { my $p; for(@lf) { $p .= /$lf[-1]/ ? "$_ default failsafe" : "$_ " } print "$p\n"; }
