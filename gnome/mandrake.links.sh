@@ -84,7 +84,7 @@ if [ "$CAPTION" = "" ]; then CAPTION="Mandrake Updates" ; fi
 
 /usr/bin/gdesktoplnk \
 	--progname="/usr/X11R6/bin/MandrakeUpdate" \
-	--icon-name="../icons/mdk-updates.xpm" \
+	--icon-name="../icons/updates-mdk.xpm" \
 	--icon-caption="$CAPTION" \
 	--link-name="MDKUpdates" \
 	--desktop-dir="$HOME/.gnome-desktop"
