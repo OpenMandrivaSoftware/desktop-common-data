@@ -1,149 +1,175 @@
 #
-# WARNING: This file is in unicode!
-#
-# Linux-Mandrake desktop message for locale zh_TW
-# Copyright (C) 2001 Free Software Foundation, Inc.
+# WARNING: This file is in UTF-8!
+# 
+# Copyright (C) YEAR Free Software Foundation, Inc.
 # Joe Huang <ha576543@seed.net.tw>, 2001.
+# Joe Man <trmetal@yahoo.com.hk>, 2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mandrake_desk\n"
 "POT-Creation-Date: 2001-03-29 10:09+0200\n"
-"PO-Revision-Date: 2001-05-05 09:04+0800\n"
-"Last-Translator: Joe Huang <ha576543@seed.net.tw>\n"
-"Language-Team: zh_TW Chinese\n"
+"PO-Revision-Date: 2001-06-06 12:31+0800\n"
+"Last-Translator: Joe Man <trmetal@yahoo.com.hk>\n"
+"Language-Team: Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: gnome/mandrake.links.desktop.in.h:1 kdelnk/DrakConf.kdelnk.in.h:1
-#: old/DrakConf.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:1
+#: gnome/mandrake.links.desktop.in.h:1
+#: kdelnk/DrakConf.kdelnk.in.h:1
+#: old/DrakConf.kdelnk.in.h:1
+#: old/mandrake.links.desktop.in.h:1
 msgid "DrakConf"
-msgstr ""
+msgstr "DrakConf"
 
-#: gnome/mandrake.links.desktop.in.h:2 old/mandrake.links.desktop.in.h:2
+#: gnome/mandrake.links.desktop.in.h:2
+#: old/mandrake.links.desktop.in.h:2
 msgid "GNOME Web Site"
-msgstr "GNOME網站"
+msgstr "GNOME 網頁"
 
-#: gnome/mandrake.links.desktop.in.h:3 old/mandrake.links.desktop.in.h:6
+#: gnome/mandrake.links.desktop.in.h:3
+#: old/mandrake.links.desktop.in.h:6
 msgid "Mandrake documentation"
-msgstr "Mandrake文件資源"
+msgstr "Mandrake 說明文件"
 
-#: gnome/mandrake.links.desktop.in.h:4 kdelnk/Netscape.kdelnk.in.h:1
-#: old/Netscape.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:7
+#: gnome/mandrake.links.desktop.in.h:4
+#: kdelnk/Netscape.kdelnk.in.h:1
+#: old/Netscape.kdelnk.in.h:1
+#: old/mandrake.links.desktop.in.h:7
 msgid "Netscape"
-msgstr ""
+msgstr "Netscape"
 
 #: kde/Desktop/Templates/MimeType.noext.kdelnk.in.h:1
 #: old/MimeType.noext.kdelnk.in.h:1
 msgid "Mime Type"
-msgstr "Mime類型"
+msgstr "Mime 類別"
 
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
 msgid "Application"
-msgstr "應用程式"
+msgstr "程式"
 
-#: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
+#: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1
+#: old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr "網際網路位址（URL）"
+msgstr "互聯網地址 (URL)"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
 msgid "World Wide Web URL"
-msgstr "WWW位址"
+msgstr "互聯網 URL"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:2
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:1
 #: kde/Desktop/Templates/Device.noext.kdelnk.in.h:1
-#: old/CD-ROM.noext.kdelnk.in.h:2 old/Device.noext.kdelnk.in.h:1
+#: old/CD-ROM.noext.kdelnk.in.h:2
+#: old/Device.noext.kdelnk.in.h:1
 #: old/Floppy.noext.kdelnk.in.h:1
 msgid "File System Device"
-msgstr "檔案系統設備"
+msgstr "系統檔案裝置"
 
 #: kde/Desktop/Templates/Ftpurl.noext.kdelnk.in.h:1
 #: old/Ftpurl.noext.kdelnk.in.h:1
 msgid "FTP URL"
-msgstr "FTP位址"
+msgstr "檔案傳送協定 (FTP) URL"
 
-#: kde/Desktop/Printer.noext.kdelnk.in.h:1 old/Printer.noext.kdelnk.in.h:1
+#: kde/Desktop/Printer.noext.kdelnk.in.h:1
+#: old/Printer.noext.kdelnk.in.h:1
 msgid "Default printer"
 msgstr "預設印表機"
 
-#: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
+#: kde/Desktop/Printer.noext.kdelnk.in.h:2
+#: old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr "管理您的印表機佇列"
+msgstr "管理列印檔案次序"
 
-#: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
+#: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1
+#: old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
-msgstr ""
+msgstr "唯讀光碟機"
 
-#: kde/Desktop/Floppy.noext.kdelnk.in.h:2 old/Floppy.noext.kdelnk.in.h:2
+#: kde/Desktop/Floppy.noext.kdelnk.in.h:2
+#: old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
-msgstr "軟碟機"
+msgstr "磁碟機"
 
-#: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
+#: kdelnk/Doc.kdelnk.in.h:1
+#: old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
-msgstr "Mandrake和KDE的文件資源"
+msgstr "Mandrake and KDE 說明文件"
 
-#: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
+#: kdelnk/Doc.kdelnk.in.h:2
+#: old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
-msgstr "Mandrake和KDE的文件資源。"
+msgstr "Mandrake and KDE 說明文件。"
 
-#: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
+#: kdelnk/DrakConf.kdelnk.in.h:2
+#: old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr "Linux-Mandrake的系統設定工具"
+msgstr "Linux-Mandrake 的系統設定工具"
 
-#: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
+#: kdelnk/Home.kdelnk.in.h:1
+#: old/Home.kdelnk.in.h:1
 msgid "Home Directory"
-msgstr "使用者的家目錄"
+msgstr "個人目錄"
 
-#: kdelnk/Internet.kdelnk.in.h:1 old/Internet.kdelnk.in.h:1
+#: kdelnk/Internet.kdelnk.in.h:1
+#: old/Internet.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:3
 msgid "Internet connection"
-msgstr "網際網路連線"
+msgstr "互聯網連線"
 
-#: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
+#: kdelnk/Internet.kdelnk.in.h:2
+#: old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
-msgstr "連線至網際網路。"
+msgstr "互聯網連線。"
 
-#: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
+#: kdelnk/Netscape.kdelnk.in.h:2
+#: old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
-msgstr "Netscape瀏覽器"
+msgstr "Netscape 瀏覽視窗"
 
-#: kdelnk/News.kdelnk.in.h:1 old/News.kdelnk.in.h:1
+#: kdelnk/News.kdelnk.in.h:1
+#: old/News.kdelnk.in.h:1
 msgid "Linux Mandrake News"
-msgstr "Linux Mandrake新聞"
+msgstr "Linux Mandrake 新聞組"
 
-#: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
+#: kdelnk/Printer.kdelnk.in.h:1
+#: old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr "將文字檔和PostScript檔案拖放到此印表機的圖示上"
+msgstr "放下文件及 postscript 檔案到印表機圖示"
 
-#: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
+#: kdelnk/Printer.kdelnk.in.h:2
+#: old/Printer.kdelnk.in.h:2
 msgid "Printer"
 msgstr "印表機"
 
-#: kdelnk/Updates.kdelnk.in.h:1 old/Updates.kdelnk.in.h:1
+#: kdelnk/Updates.kdelnk.in.h:1
+#: old/Updates.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:5
 msgid "Mandrake Updates"
-msgstr "Mandrake線上更新"
+msgstr "更新 Mandrake"
 
-#: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
+#: kdelnk/XKill.kdelnk.in.h:1
+#: old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr "無法將視窗關閉？請使用'XKill'"
+msgstr "無法關閉程式？使用 'XKill'"
 
-#: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
+#: kdelnk/XKill.kdelnk.in.h:2
+#: old/XKill.kdelnk.in.h:2
 msgid "XKill"
-msgstr ""
+msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr "Linux文件資源"
+msgstr "Linux 文件"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
-msgstr ""
+msgstr "RpmDrake"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
-msgstr "Gnome和X的應用程式"
+msgstr "Gnome 和 X 的應用程式"
+

@@ -70,7 +70,7 @@ msgstr "Standard skriver"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr "Håndter utskriftkøen din"
+msgstr "HÃ¥ndter utskriftkÃ¸en din"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"

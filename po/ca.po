@@ -70,7 +70,7 @@ msgstr "Impressora per defecte"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr "Gestió de la cua d'impressió"
+msgstr "GestiÃ³ de la cua d'impressiÃ³"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"

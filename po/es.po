@@ -71,7 +71,7 @@ msgstr "Impresora predeterminada"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr "Administrar su cola de impresión"
+msgstr "Administrar su cola de impresiÃ³n"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
