@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=`Crux' GTK+ Theme
-Comment=Configure properties of the `Crux' GTK+ theme
-Exec=eazel-engine-capplet
-TryExec=eazel-engine-capplet
-Terminal=0
-Type=Application
