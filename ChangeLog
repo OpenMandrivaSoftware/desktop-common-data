@@ -2,6 +2,7 @@
 
 	* mandrake_desk.spec: adjust groups.
 	* Makefile: correct dis and rpm target.
+	* Makefile: don't need to bzip (spec-helper do this job).
 	* window-managers: fix blakbox with last blackbox package.
 
 2000-02-02  Chmouel Boudjnah  <chmouel@mandrakesoft.com>

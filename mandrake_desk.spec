@@ -7,9 +7,9 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Copyright: GPL
-Group: Base
+Group: System/Configuration/Other
 Icon: mandrake-small.xpm
-BuildRoot: /tmp/%{name}-buildroot
+BuildRoot: %{_tmppath}/%{name}-buildroot
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source: mandrake_desk-%{version}.tar.bz2
@@ -53,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Wed Apr  5 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.2-1mdk
+- mandrake_desk.spec: adjust groups.
 - Makefile: correct dis and rpm target.
 - window-managers: fix blakbox with last blackbox package.
 

@@ -38,7 +38,6 @@ install:
 		$(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
 	install -m644 gnome/mandrake.links \
 		$(RPM_BUILD_ROOT)/usr/lib/desktop-links
-	bzip2 -9f $(RPM_BUILD_ROOT)/usr/man/*/*
 
 
 dis: 
