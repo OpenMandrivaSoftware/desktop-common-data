@@ -26,6 +26,7 @@ do
 		de*) CAPTION="Internetverbindung" ;;
 		es*) CAPTION="Conexión a Internet" ;;
 		et*) CAPTION="Internetiühendus" ;;
+		fi*) CAPTION="Internet yhteys" ;;
 		fr*) CAPTION="Connexion à l'Internet" ;;
 		gl*) CAPTION="Conexión a Internet" ;;
 		hr*) CAPTION="Veza s InterNetom" ;;
@@ -74,6 +75,7 @@ do
 		de*) CAPTION="Mandrake Updates" ;;
 		es*) CAPTION="Actualizaciones de Mandrake" ;;
 		et*) CAPTION="Mandrake parandused" ;;
+		fi*) CAPTION="Mandrake päivitykset" ;;
 		fr*) CAPTION="Mises à jour de Mandrake" ;;
 		ga*) CAPTION="Nuashonraí Mandrake" ;;
 		gl*) CAPTION="Actualizacións de Mandrake" ;;
