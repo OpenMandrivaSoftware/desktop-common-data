@@ -94,11 +94,20 @@ install -d -m 0755 %buildroot/%_datadir/apps/kdm/pics/
 install -m 0644 kde/kdm-mdk-logo.png %buildroot/%_datadir/apps/kdm/pics/
 
 
+## menu
+install -d -m 0755 %buildroot/%_menudir/simplified/
+install -m 0644 menu/mandrake_desk %buildroot/%_menudir/simplified/
+
+
 
 %post
 if [ -f %_sysconfdir/X11/window-managers.rpmsave ];then
-	%_prefix/sbin/convertsession -f %_sysconfdir/X11/window-managers.rpmsave || :
+	%_sbindir/convertsession -f %_sysconfdir/X11/window-managers.rpmsave || :
 fi
+%update_menus
+
+%postun
+%clean_menus
 
 
 
@@ -134,11 +143,15 @@ rm -fr %buildroot
 #
 %dir %_datadir/mdk/xfdrake/
 %_datadir/mdk/xfdrake/*.jpg
+#
+%_menudir/simplified/*
+
 
 
 %changelog
 * Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-7mdk
 - Add kdm logo
+- Re-add update-menus (and lost menu entries)
 
 * Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-6mdk
 - Add two new backgrounds
