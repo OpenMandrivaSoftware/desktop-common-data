@@ -4,13 +4,15 @@ if [ ! -d ~/.gnome-desktop ] ; then
 	mkdir -p ~/.gnome-desktop
 fi
 
-if [ -e "/usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Communicator.desktop" ] ; then
-	cp -f "/usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Communicator.desktop" $HOME/.gnome-desktop/
-elif [ -e "/usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop" ] ; then
-	cp -f "/usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop" $HOME/.gnome-desktop/
-fi
-if [ -e /usr/share/gnome/distribution-menus/Mandrake/Configuration/Other/DrakConf.desktop ] ; then
-	cp -f /usr/share/gnome/distribution-menus/Mandrake/Configuration/Other/DrakConf.desktop $HOME/.gnome-desktop/ -f
+# Browser
+if [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Galeon.desktop ] ; then
+	cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Galeon.desktop $HOME/.gnome-desktop/
+elif [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Mozilla.desktop ] ; then
+	cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Mozilla.desktop $HOME/.gnome-desktop/
+elif [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Communicator.desktop ] ; then
+	cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Communicator.desktop $HOME/.gnome-desktop/
+elif [ -e /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop ] ; then
+	cp -f /usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop $HOME/.gnome-desktop/
 fi
 
 # Documentation
@@ -34,15 +36,25 @@ elif [ $langg = en ] || [ -z $langg ] && [ -r /usr/share/doc/mandrake/en/index.h
 	fi
 fi
 
-# Mandrake Campus
-if [ ! -e ~/.gnome/.mdkcampus ] ; then
-        cp /usr/share/mdk/gnome-desktop/Mandrake\ Campus.desktop ~/.gnome-desktop && touch ~/.gnome/.mdkcampus
-fi
-
 
 # Mandrake Expert
 if [ ! -e ~/.gnome/.mdkexpert ] ; then
         cp /usr/share/mdk/gnome-desktop/Mandrake\ Expert.desktop ~/.gnome-desktop/ && touch ~/.gnome/.mdkexpert
+fi
+
+# Mandrake News
+if [ ! -e ~/.gnome/.mdknews ] ; then
+	cp /usr/share/mdk/gnome-desktop/Mandrake\ News.desktop ~/.gnome-desktop && touch ~/.gnome/.mdknews
+fi
+
+# Mandrake Online
+if [ ! -e ~/.gnome/.mdkonline ] ; then
+	cp /usr/share/mdk/gnome-desktop/Mandrake\ Online.desktop ~/.gnome-desktop && touch ~/.gnome/.mdkonline
+fi
+
+# Mandrake Store
+if [ ! -e ~/.gnome/.mdkstore ] ; then
+	cp /usr/share/mdk/gnome-desktop/Mandrake\ Store.desktop ~/.gnome-desktop && touch ~/.gnome/.mdkstore
 fi
 
 # Control Center
@@ -51,12 +63,6 @@ if [ ! -e ~/.gnome/.ccenter ] && [ -x /usr/X11R6/bin/DrakConf ] ; then
 fi
 
         
-# Mandrake Update
-if [ ! -e ~/.gnome/.mdkupdate ] && [ -x /usr/bin/rpmdrake ] ; then
-        cp /usr/share/mdk/gnome-desktop/Software\ Manager.desktop ~/.gnome-desktop/ && touch ~/.gnome/.mdkupdate
-fi
-
-
 # Internet
 if [ ! -e ~/.gnome/.internet ] ; then
         if [ -x /usr/sbin/draknet ] ; then
