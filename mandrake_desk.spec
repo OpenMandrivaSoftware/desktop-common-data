@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	15mdk
+Release: 	16mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -100,6 +100,11 @@ install -m 0644 menu/defaultlayout-simplified.menu %buildroot/%_localstatedir/me
 install -d -m 0755 %buildroot/%_datadir/mdk/screensaver/
 for i in screensavers/*.png ; do install -m 0644 $i %buildroot/%_datadir/mdk/screensaver/ ; done
 
+#install theme for GDM/KDM
+install -d -m 0755 %buildroot/%_datadir/mdk/dm
+for i in dm/*.png dm/*.desktop dm/*.xml ; do 
+  install -m 0644 $i %buildroot/%_datadir/mdk/dm/
+done
 
 
 %post
@@ -147,8 +152,10 @@ rm -fr %buildroot
 %dir %_datadir/mdk/xfdrake/
 %_datadir/mdk/xfdrake/*.png
 #
-%dir /usr/share/mdk/screensaver/
-/usr/share/mdk/screensaver/*.png
+%dir %_datadir/mdk/screensaver/
+%_datadir/mdk/screensaver/*.png
+
+%_datadir/mdk/dm
 #
 %_localstatedir/menu-xdg/menus/applications-mdk-merged
 %_localstatedir/menu-xdg/menus/applications-simplified-merged
@@ -163,6 +170,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Feb 28 2005 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-16mdk 
+- Install shared Mdk theme for GDM/KDM
+
 * Tue Jan 25 2005 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-15mdk 
 - Fix small errors in default layout menu files
 
