@@ -189,39 +189,39 @@
 
 
 # Howtos
-?package(howto-html-de): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/de/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in German" section="Read documentation"
+?package(howto-html-de): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/de/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in German" section="Read documentation"
 
-?package(howto-html-el): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/el/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Greek" section="Read documentation"
+?package(howto-html-el): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/el/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Greek" section="Read documentation"
 
-?package(howto-html-en): command="$BROWSER  /usr/share/doc/HOWTO/HTML/en/index.html" icon="howto.xpm" needs="x11" title="Read Howtos in English" section="Read documentation"
+?package(howto-html-en): command="$BROWSER  /usr/share/doc/HOWTO/HTML/en/index.html" icon="documentation_section.png" needs="x11" title="Read Howtos in English" section="Read documentation"
 
-?package(howto-html-es): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/es/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Spanish" section="Read documentation"
+?package(howto-html-es): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/es/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Spanish" section="Read documentation"
 
-?package(howto-html-fr): command="$BROWSER  /usr/share/doc/HOWTO/HTML/fr/index.html" icon="howto.xpm" needs="x11" title="Read Howtos in French" section="Read documentation"
+?package(howto-html-fr): command="$BROWSER  /usr/share/doc/HOWTO/HTML/fr/index.html" icon="documentation_section.png" needs="x11" title="Read Howtos in French" section="Read documentation"
 
-?package(howto-html-hr): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/hr/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Croatian" section="Read documentation"
+?package(howto-html-hr): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/hr/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Croatian" section="Read documentation"
 
-?package(howto-html-hu): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/hu/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Hungarian" section="Read documentation"
+?package(howto-html-hu): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/hu/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Hungarian" section="Read documentation"
 
-?package(howto-html-id): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/id/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Indonesian" section="Read documentation"
+?package(howto-html-id): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/id/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Indonesian" section="Read documentation"
 
-?package(howto-html-it): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/it/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Italian" section="Read documentation"
+?package(howto-html-it): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/it/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Italian" section="Read documentation"
 
-?package(howto-html-ja): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/ja/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Japanese" section="Read documentation"
+?package(howto-html-ja): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/ja/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Japanese" section="Read documentation"
 
-?package(howto-html-ko): command="sh -c '$BROWSER /usr/share/doc/HOWTO/HTML/ko/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Korean" section="Read documentation"
+?package(howto-html-ko): command="sh -c '$BROWSER /usr/share/doc/HOWTO/HTML/ko/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Korean" section="Read documentation"
 
-?package(howto-html-nl): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/nl/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Dutch" section="Read documentation"
+?package(howto-html-nl): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/nl/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Dutch" section="Read documentation"
 
-?package(howto-html-pl): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/pl/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Polish" section="Read documentation"
+?package(howto-html-pl): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/pl/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Polish" section="Read documentation"
 
-?package(howto-html-pl): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/pl/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Polish" section="Read documentation"
+?package(howto-html-pl): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/pl/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Polish" section="Read documentation"
 
-?package(howto-html-sl): command="sh -c '$BROWSER /usr/share/doc/HOWTO/HTML/sl/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Slovenian" section="Read documentation"
+?package(howto-html-sl): command="sh -c '$BROWSER /usr/share/doc/HOWTO/HTML/sl/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Slovenian" section="Read documentation"
 
-?package(howto-html-sv): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/sv/index.html'" icon="howto.xpm" needs="x11" title="Read Howtos in Swedish" section="Read documentation"
+?package(howto-html-sv): command="sh -c '$BROWSER  /usr/share/doc/HOWTO/HTML/sv/index.html'" icon="documentation_section.png" needs="x11" title="Read Howtos in Swedish" section="Read documentation"
 
-?package(howto-html-zh): command="sh -c '$BROWSER /usr/share/doc/HOWTO/HTML/sl/index.html'" icon="howto.xpm" needs="x11" title="Howtos in Chinese" section="Read documentation"
+?package(howto-html-zh): command="sh -c '$BROWSER /usr/share/doc/HOWTO/HTML/sl/index.html'" icon="documentation_section.png" needs="x11" title="Howtos in Chinese" section="Read documentation"
 
 
 # Mandrake documentation
