@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	11mdk
+Release: 	12mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -144,6 +144,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Sep 29 2004 David Baudens <baudens@mandrakesoft.com> 10.1-12mdk
+- Add missing menu entry for french Mandrakelinux documentation
+
 * Wed Sep 29 2004 David Baudens <baudens@mandrakesoft.com> 10.1-11mdk
 - Fix Import and Sort Your Photos menu entry
 
