@@ -162,22 +162,21 @@ if [ "$CAPTION" = "" ]; then CAPTION="DrakConf" ; fi
 ############
 # Netscape #
 ############
-#CAPTION=""
-#for i in $LISTLANG
-#do
-#	if [ "$CAPTION" != "" ]; then break ; fi
-#	case "$i" in
-#		en*) CAPTION="Netscape" ;;
-#		ja*) CAPTION="ΝΓΘⅩⅡ【Ψ";;
-#		ko*) CAPTION="넷스케이프";;
-#	esac
-#done
-#if [ "$CAPTION" = "" ]; then CAPTION="Netscape" ; fi
-#
-#/usr/bin/gdesktoplnk \
-#	--progname="/usr/bin/netscape" \
-#	--icon-name="netscape.png" \
-#	--icon-caption="$CAPTION" \
-#	--link-name="Netscape" \
-#	--desktop-dir="$HOME/.gnome-desktop"
-#
+CAPTION=""
+for i in $LISTLANG
+do
+	if [ "$CAPTION" != "" ]; then break ; fi
+	case "$i" in
+		en*) CAPTION="Netscape" ;;
+		ja*) CAPTION="ΝΓΘⅩⅡ【Ψ" ;;
+		ko*) CAPTION="넷스케이프" ;;
+	esac
+done
+if [ "$CAPTION" = "" ]; then CAPTION="Netscape" ; fi
+
+/usr/bin/gdesktoplnk \
+	--progname="/usr/bin/netscape" \
+	--icon-name="../icons/netscape.xpm" \
+	--icon-caption="$CAPTION" \
+	--link-name="Netscape" \
+	--desktop-dir="$HOME/.gnome-desktop"
