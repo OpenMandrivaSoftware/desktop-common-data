@@ -1,3 +1,8 @@
+1999-12-25 Pablo Saratxga <pablo@mandrakesoft.com>
+
+	* Makefile,*.spec,gnome/*.desktop: put the handling of Gnome icons
+	on the Makefile; and added menu entries for DrakeConf and RpmDrake
+
 1999-12-24 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* window-managers: various change from jerome.

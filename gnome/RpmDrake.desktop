@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=RpmDrake
+Exec=/usr/X11R6/bin/rpmdrake
+Icon=rpmdrake.xpm
+TryExec=/usr/X11R6/bin/rpmdrake
+Exec=/usr/X11R6/bin/rpmdrake
+Terminal=0
+Type=Application
+

@@ -36,15 +36,6 @@ pushd $RPM_BUILD_ROOT/usr/share/pixmaps/backgrounds/mandrake && {
 } && popd
 rm -f special/mandrake-small.xpm
 
-mkdir -p $RPM_BUILD_ROOT/usr/lib/mc/desktop-scripts
-install -m 755 gnome/mandrake.links.sh \
-	$RPM_BUILD_ROOT/usr/lib/mc/desktop-scripts/mandrake.links.sh
-
-mkdir -p $RPM_BUILD_ROOT/usr/lib/desktop-links
-install -m 644 gnome/mandrake.links \
-	$RPM_BUILD_ROOT/usr/lib/desktop-links/mandrake.links
-
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
