@@ -30,7 +30,7 @@ sub parse_file {
   open F, $f or die "Can't open $f\n";
   local $/ = "";
   while (<F>) {
-     $n = $1 if /^NAME=(.*)/m;
+     ($n = $1) =~ s| ||g if /^NAME=(.*)/m;
      $e = $1 if /^EXEC=(.*)/m;
 #     $d = $1 if /^DESC=(.*)/m;
 #     $i = $1 if /^ICON=(.*)/m;
