@@ -161,7 +161,7 @@
 ?package(kdegraphics-kooka): needs="x11" kde_filename="kooka" section="View, Modify and Create Graphics" title="Scan and Use Optical Character Recognition (OCR)" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/index.html\\nGenericName=Scan & OCR Program\\nX-DCOP-ServiceType=Multi\\n"
 
 # Import and Sort Your Photos
-?package(digikam): needs="kde" kde_filename="digikam" section="View, Modify and Create Graphics" title="Import and sort your photos" icon="digikam.png" command="digikam" kde_command="digikam -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=digikam/index.html\\nTerminal=0"
+?package(digikam): needs="kde" kde_filename="digikam" section="View, Modify and Create Graphics" title="Import and Sort Your Photos" icon="digikam.png" command="digikam" kde_command="digikam -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=digikam/index.html\\nTerminal=0"
 
 ?package(gtkam): needs="gnome" section="View, Modify and Create Graphics" title="Import and Sort Your Photos" icon="gtkam.png" command="gtkam" 
 
