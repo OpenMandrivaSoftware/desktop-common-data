@@ -1,18 +1,18 @@
-%define release 6mdk
-%define name mandrake_desk
-%define version 1.0.3
+%define	release	8mdk
+%define name	mandrake_desk
+%define version	1.0.3
 
-Summary: The Desktop configuration files for Linux Mandrake.
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Copyright: GPL
-Group: System/Configuration/Other
-Icon: mandrake-small.xpm
-BuildRoot: %{_tmppath}/%{name}-buildroot
+Summary:	The Desktop configuration files for Linux Mandrake
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Copyright:	GPL
+Group:		System/Configuration/Other
+Icon:		mandrake-small.xpm
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
-Source: mandrake_desk-%{version}.tar.bz2
+Source:		mandrake_desk-%{version}.tar.bz2
 BuildArchitectures: noarch
 
 %description
@@ -54,6 +54,12 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Thu Apr 20 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.3-8mdk
+- Update doc icons
+
+* Thu Apr 20 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.3-7mdk
+- Update doc icons
+
 * Thu Apr 20 2000 François Pons <fpons@mandrakesoft.com> 1.0.3-6mdk
 - updated WindowMaker priority again.
 
