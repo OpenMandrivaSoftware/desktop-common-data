@@ -75,7 +75,7 @@ export:
 
 cvstag:
 	cvs commit
-	cvs tag $(CVSTAGOPT) $(TAG)
+	cvs tag $(CVSTAGOPT) -F $(TAG)
 
 changelog: ../common/username
 	cvs2cl -U ../common/username -I ChangeLog 
