@@ -73,7 +73,6 @@ dist: cleandist dir export tar
 
 export:
 	cvs export -d $(PACKAGE)-$(VERSION) -r $(TAG) $(PACKAGE)
-	cd $(PACKAGE)-$(VERSION); autoconf
 
 cvstag:
 	cvs commit
