@@ -49,7 +49,7 @@ sub parse_file {         # parse a session descriptor file
 }
 
 sub gen_desktops {
-    my ($d, $createdefault) = @_;
+    my ($d, $createdefault, $usesession) = @_;
     -d $d or system("mkdir -p $d");
     system("rm -f $d/*");
 
@@ -60,7 +60,11 @@ sub gen_desktops {
 	print FH "Name=$file\n";
 	print FH "Comment=$file\n";
 	print FH "TryExec=$exe{$file}\n" if $exe{$file};
-	print FH "Exec=/etc/X11/xdm/Xsession $file\n";
+	if ($usesession) {
+	    print FH "Exec=/etc/X11/xdm/Xsession $file\n";
+	} else {
+	    print FH "Exec=$file\n";
+	}
 	print FH "Icon=\n";
 	print FH "Type=Application\n";
 	close FH;
@@ -126,11 +130,11 @@ my ($e) = eval {cat("/etc/sysconfig/desktop")} =~ /DESKTOP=(\S+)/;
 
 
 if ($kdm) {
-    gen_desktops('/usr/share/apps/kdm/sessions', 0);
+    gen_desktops('/usr/share/apps/kdm/sessions', 0, 0);
 }
 
 if ($gdm) {
-    gen_desktops('/etc/X11/dm/Sessions', 1);
+    gen_desktops('/etc/X11/dm/Sessions', 1, 1);
 }
 
 if ($xsession) {
