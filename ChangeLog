@@ -1,3 +1,7 @@
+2001-07-31 09:21  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* Makefile: no need to run autoconf!
+
 2001-07-31 09:19  Frederic Lepied <flepied@mandrakesoft.com>
 
 	* mandrake_desk.spec: 8.1-1mdk
@@ -173,51 +177,51 @@
 
 	* TRANSLATORS: Updated Chinese file
 
-2001-04-12 06:41  daouda
+2001-04-12 06:41  Daouda Lo <daouda@mandrakesoft.com>
 
 	* mandrake_desk.spec: cleanups
 
-2001-04-12 06:27  daouda
+2001-04-12 06:27  Daouda Lo <daouda@mandrakesoft.com>
 
 	* eazel-engine-0.3.tar.bz2: add eazel themes to cvs
 
-2001-04-12 06:26  daouda
+2001-04-12 06:26  Daouda Lo <daouda@mandrakesoft.com>
 
 	* Makefile: remove kdelnk dir
 
-2001-04-12 06:25  daouda
+2001-04-12 06:25  Daouda Lo <daouda@mandrakesoft.com>
 
 	* mandrake_desk.spec: macros bis
 
-2001-04-12 06:23  daouda
+2001-04-12 06:23  Daouda Lo <daouda@mandrakesoft.com>
 
 	* mandrake_desk.spec: macros to ease rpm build from cvs
 
-2001-04-12 06:16  daouda
+2001-04-12 06:16  Daouda Lo <daouda@mandrakesoft.com>
 
 	* Makefile: fix typo in var RPM
 
-2001-04-12 06:15  daouda
+2001-04-12 06:15  Daouda Lo <daouda@mandrakesoft.com>
 
 	* mandrake_desk.spec: add define tags
 
-2001-04-12 06:14  daouda
+2001-04-12 06:14  Daouda Lo <daouda@mandrakesoft.com>
 
 	* Makefile: define RPM var
 
-2001-04-12 06:11  daouda
+2001-04-12 06:11  Daouda Lo <daouda@mandrakesoft.com>
 
 	* Makefile: commented kdelnk related stuffs
 
-2001-04-12 06:08  daouda
+2001-04-12 06:08  Daouda Lo <daouda@mandrakesoft.com>
 
 	* Makefile: add eazel themes + gtkrc for rpm build
 
-2001-04-12 06:08  daouda
+2001-04-12 06:08  Daouda Lo <daouda@mandrakesoft.com>
 
 	* gtkrc: new gtkrc  :resync with spec
 
-2001-04-12 06:06  daouda
+2001-04-12 06:06  Daouda Lo <daouda@mandrakesoft.com>
 
 	* mandrake_desk.spec: commit
 
@@ -241,7 +245,7 @@
 	user-default-mdk.png, user-girl-mdk.png, user-hat-mdk.png,
 	user-tie-mdk.png, user-woman-blond-mdk.png: [no log message]
 
-2001-04-12 00:53  daouda
+2001-04-12 00:53  Daouda Lo <daouda@mandrakesoft.com>
 
 	* mandrake_desk.spec: resync specs with cvs
 
