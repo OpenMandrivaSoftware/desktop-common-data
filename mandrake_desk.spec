@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 8mdk
+%define release 9mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -59,6 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Tue Dec 28 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - Add a manpages for chksession from camille.
+- sbin/chksession: no errror when no Session is present.
 
 * Mon Dec 27 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - Various fix and changes (icons & links).
