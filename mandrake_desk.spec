@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	6mdk
+Release:	7mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -88,6 +88,12 @@ for i in icons/large/*.png ; do install -m 0644 $i %buildroot/%_liconsdir/ ; don
 
 
 
+## KDE
+# kdm
+install -d -m 0755 %buildroot/%_datadir/apps/kdm/pics/
+install -m 0644 kde/kdm-mdk-logo.png %buildroot/%_datadir/apps/kdm/pics/
+
+
 
 %post
 if [ -f %_sysconfdir/X11/window-managers.rpmsave ];then
@@ -123,11 +129,17 @@ rm -fr %buildroot
 %_datadir/mdk/backgrounds/*.png
 %_datadir/mdk/backgrounds/root/*.png
 #
+%dir %_datadir/apps/kdm/pics/
+%_datadir/apps/kdm/pics/*
+#
 %dir %_datadir/mdk/xfdrake/
 %_datadir/mdk/xfdrake/*.jpg
 
 
 %changelog
+* Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-7mdk
+- Add kdm logo
+
 * Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-6mdk
 - Add two new backgrounds
 - Don't run update-menus
