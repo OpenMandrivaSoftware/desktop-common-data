@@ -11,6 +11,9 @@
 
 
 ## Administer your system
+# Burn a CD 
+?package(k3b): needs="x11" kde_filename="k3b" section="Administer your system" title="Burn a CD" icon="k3b.png" command="k3b" mimetypes="application/x-k3b" kde_opt="\\nDocPath=k3b/index.html\\nTerminal=0\\nX-KDE-NativeMimeType=application/x-k3b\\nCategories=Qt;KDE;AudioVideo"
+
 # Configure sound settings
 ?package(kdemultimedia-kmix): needs="kde" kde_filename="kmix" section="Administer your system" title="Configure sound settings" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nGenericName=Sound Mixer\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nCategories=Qt;KDE;AudioVideo"
 
@@ -29,6 +32,10 @@
 # Password change
 ?package(kdeutils-kdepasswd): needs="x11" kde_filename="kdepasswd" section="Administer your system" title="Change your password" icon="password.png" command="kdepasswd" kde_opt="\\nTerminalOptions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
+# Use a terminal emulator 
+?package(kdebase-konsole): needs="kde" kde_filename="konsole" section="Administer your system" title="Use a terminal emulator" icon="konsole.png" command="konsole" kde_opt="\\nEncoding=UTF-8\\nDocPath=konsole/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nGenericName=Terminal Program\\nX-DCOP-ServiceType=Multi\\nX-KDE-AuthorizeAction=shell_access"
+
+
 
 
 
@@ -36,11 +43,14 @@
 
 
 ## Enjoy music & video
-# Listen to a CD
+# Listen to a musical CD
 ?package(kdemultimedia-kscd): needs="kde" kde_filename="kscd" section="Enjoy music & video" title="Listen to a CD" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nBinaryPattern=kscd;\\nProtocols=\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # Listen to music files
 ?package(totem): needs="x11" command="/usr/bin/totem %U" section="Enjoy music & video" title="Listen to music files" icon="totem.png" mimetypes="video/mpeg,video/msvideo,video/quicktime,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,application/x-ogg,audio/x-mp3,audio/x-mpeg,video/x-fli,audio/x-wav,audio/x-mpegurl" kde_opt="InitialPreference=15"
+
+# Record sounds 
+?package(gnome-media): needs="x11" command="/usr/bin/gnome-sound-recorder" section="Enjoy music & video" title="Record sounds" icon="/usr/share/pixmaps/gnome-grecord.png" startup_notify="true"
 
 # Rip cd
 ?package(kdemultimedia-kaudiocreator):command="kaudiocreator" icon="kaudiocreator.png" title="Rip a CD" needs="x11" section="Enjoy music & video"
@@ -70,7 +80,7 @@
 # Frozen-Bubble
 ?package(frozen-bubble):command="/usr/games/frozen-bubble" icon="frozen-bubble.png" needs="X11" section="Play games" title="Play Frozen-Bubble"
 
-#LBreakout
+# LBreakout
 ?package(lbreakout2):needs="x11" section="Play games" title="Play LBreakout" command="/usr/games/lbreakout2" icon="lbreakout2.png"
 
 # TuXRacer
