@@ -1,3 +1,8 @@
+2000-07-18  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+
+	* bin/DrakWM: Add -i options to launch with xinit.
+	add -a option to provide alias for bash.
+
 2000-05-29  dam's  <damien@mandrakesoft.com>
 
 	* window-managers: changed sawmill entry into sawfish

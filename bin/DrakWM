@@ -4,6 +4,7 @@
 # MandrakeSoft Inc.
 # Redistribution of this file is permitted under the terms of the GNU 
 # Public License (GPL)
+# $Id$
 ######################
 # Description: Launch window manager according to
 # /etc/X11/window-manager with various options.
@@ -14,6 +15,8 @@ my ($wm, $command, $window_mgr_file);
 my (@lf);
 
 my @getopt_args = ('l|list-active-session', 
+		   'i|xinit',
+		   'a|alias',
 		   'm|window-manager-file=s',
 		   'g|with-file-manager=s',
 		   'p|picture=s',
@@ -33,6 +36,8 @@ if ($options{l}){
     list_sessions();
     exit(0);
 }
+
+if ($options{a}) {print "alias $_=\'$0 -i $_\';" for @lf; exit 0;}
 
 unless ($ARGV[0]) { 
     print STDERR  "\n\t\tYou need to specify a Window Manager\n\n"; 
@@ -79,8 +84,12 @@ if ($options{x}) {
 }
 
 # END
-$command = $script{$wm} ? $script{$wm} : $script{shift @lf}; 
-exec ("/bin/sh", "-c", "$command");
+if (!$options{i}) {
+    $command = $script{$wm} ? $script{$wm} : $script{shift @lf}; 
+    exec ("/bin/sh", "-c", "$command");
+} else {
+    exec ("xinit $exec{$wm}");
+}
 
 sub parse_file {
   my $f=shift @_;
@@ -104,9 +113,11 @@ sub usage {
   my $e = shift @_;
   (my $basename = $0) =~ s|.*/||;
   print {  $e ? STDERR : STDOUT } << "EOF";
-Usage: $0 [-Fxh] [ -b color ] [ window-manager session]
+Usage: $0 [-Faixh] [ -b color ] [ window-manager session]
 Window-Manager launcher
 
+  -i			--xinit:   Launch with xinit.
+  -a			--alias:   Product alias for bourne shell.
   -b=COLOR   --background=COLOR:   Specify a background color.
   -g        --with-file-manager:   Launch with a filemanager [ KFM | GMC ]
   -x		  --with-xtermM:   Display an xterm.
