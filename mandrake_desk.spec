@@ -1,4 +1,4 @@
-%define release 4mdk
+%define release 5mdk
 %define name mandrake_desk
 %define version 1.0.3
 
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Thu Apr 20 2000 François Pons <fpons@mandrakesoft.com> 1.0.3-5mdk
+- moved WindowMaker to a lower priority.
+
 * Tue Apr 18 2000 dam's <damien@mandrakesoft.com> 1.0.3-4mdk
 - removed some kdelnk for desktop cleaning.
 

@@ -13,13 +13,6 @@ EXEC=/usr/bin/gnome-session
 SCRIPT:
 exec gnome-session
 --@@--
-NAME=WindowMaker
-ICON=WindowMaker.xpm
-EXEC=/usr/bin/wmaker
-DESC=Another NeXt like Window-Manager
-SCRIPT:
-exec /usr/bin/wmaker
---@@--
 NAME=Enlightenment
 DESC=The enlightenment window manager
 EXEC=/usr/bin/enlightenment
@@ -75,3 +68,10 @@ DESC=A CDE like window manager
 SCRIPT:
 [ "x$XFCE_DATA" = "x" ] && XFCE_DATA=/usr/share/xfce
 exec /usr/bin/xfwm
+--@@--
+NAME=WindowMaker
+ICON=WindowMaker.xpm
+EXEC=/usr/bin/wmaker
+DESC=Another NeXt like Window-Manager
+SCRIPT:
+exec /usr/bin/wmaker
