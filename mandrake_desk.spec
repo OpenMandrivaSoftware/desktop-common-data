@@ -1,4 +1,4 @@
-%define	release	16mdk
+%define	release	18mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -54,6 +54,12 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Tue May  9 2000 dam's <damien@mandrakesoft.com> 1.0.3-18mdk
+- added Netscape on desktop.
+
+* Tue May  9 2000 dam's <damien@mandrakesoft.com> 1.0.3-17mdk
+- corrected Netscape and rpmdrake gnome icons
+
 * Tue May  9 2000 dam's <damien@mandrakesoft.com> 1.0.3-16mdk
 - removed Netscape and rpmdrake gnome icons
 
