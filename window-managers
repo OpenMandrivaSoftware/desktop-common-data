@@ -15,10 +15,10 @@ exec gnome-session
 --@@--
 NAME=WindowMaker
 ICON=WindowMaker.xpm
-EXEC=/usr/X11R6/bin/wmdrake
+EXEC=/usr/bin/wmaker
 DESC=Another NeXt like Window-Manager
 SCRIPT:
-exec /usr/X11R6/bin/wmdrake
+exec /usr/bin/wmaker
 --@@--
 NAME=Enlightenment
 DESC=The enlightenment window manager
