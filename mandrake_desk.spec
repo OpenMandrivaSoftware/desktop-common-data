@@ -1,32 +1,50 @@
-%define name mandrake_desk
-%define version 8.0
-%define release 6mdk
-
 Summary:	The Desktop configuration files for Linux Mandrake
-Name:		%name
-Version:	%version
-Release:	%release
+Name:		mandrake_desk
+Version:	8.0
+Release:	12mdk
 License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
 Packager:	David BAUDENS <baudens@mandrakesoft.com>
 
-# get the source from our cvs repository (see	
+# get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
-Source:		%name-%version.tar.bz2
+Source:		mandrake_desk.tar.bz2
 Source1:	eazel-engine-0.3.tar.bz2
 Source2:	gtkrc
-#Patch:          mandrake_desk-8.0-zip_mount_typo.patch.bz2
+
+Source10: gnome-Documentation-de.desktop
+Source11: gnome-Documentation-en.desktop
+Source12: gnome-Documentation-es.desktop
+Source13: gnome-Documentation-fr.desktop
+Source14: gnome-Documentation-it.desktop
+Source15: gnome-mandrake-campus.desktop
+Source16: gnome-mandrake-control-center.desktop
+Source17: gnome-mandrake-expert.desktop
+Source18: gnome-sofware-manager.desktop
+Source50: gnome-Internet.desktop
+Source51: gnomedesktop-network
+
+Source20: gnome-mandrakecampus.xpm
+Source21: gnome-mandrakeexpert.xpm
+
+# (fc) fix eazel engine for gfloppy and xcdroast
+Patch0: eazel-engine-0.3-fixdimension.patch.bz2
+
 BuildRoot:	%_tmppath/%name-%version-%release-root
+
+BuildRequires:	control-center-devel db1-devel gdk-pixbuf-devel libglade-devel
 
 %description
 This package contains useful icons, backgrounds and others goodies for the
 Mandrake desktop.
 
+
 %prep
 
-%setup -q -n %name-%version
-#%patch -p1
+%setup -q -a1 -n %name
+%patch0 -p1 -b .dim
+
 %build
 find . -type 'd' -name 'CVS'|xargs rm -rf
 
@@ -34,11 +52,8 @@ find . -type 'd' -name 'CVS'|xargs rm -rf
 #                    It will be done nicely later
 (
 cd $RPM_BUILD_DIR/mandrake_desk
-tar yxf %SOURCE1
 cd eazel-engine-0.3/
 %configure
-#perl -pi -e "s|imgdir =.*|imgdir = %_datadir/pixmaps/mdk/|" Makefile
-#perl -pi -e "s|imgdir =.*|imgdir = %_datadir/pixmaps/mdk/|" data/Makefile
 %make
 make install DESTDIR=%buildroot
 rm -fr %buildroot/%_datadir/control-center/
@@ -92,6 +107,26 @@ ln -s logoMDK1-1024.png DKP7-1024.png
 ln -s logoMDK1-1280.png DKP7-1280.png
 ln -s logoMDK1-1600.png DKP7-1600.png
 
+
+install -d %buildroot/%_datadir/mdk/gnome-desktop/
+install -m644 %SOURCE10 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-de.desktop
+install -m644 %SOURCE11 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-en.desktop
+install -m644 %SOURCE12 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-es.desktop
+install -m644 %SOURCE13 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-fr.desktop
+install -m644 %SOURCE14 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-it.desktop
+install -m644 %SOURCE15 "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Campus.desktop"
+install -m644 %SOURCE16 "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Control Center.desktop"
+install -m644 %SOURCE17 "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Expert.desktop"
+install -m644 %SOURCE18 "%buildroot/%_datadir/mdk/gnome-desktop/Software Manager.desktop"
+install -m644 %SOURCE50 %buildroot/%_datadir/mdk/gnome-desktop/Connection-to-Internet.desktop
+
+install -d %buildroot/usr/share/pixmaps/mc/
+install -m644 %SOURCE20 %buildroot/usr/share/pixmaps/mc/mandrakecampus.xpm
+install -m644 %SOURCE21 %buildroot/usr/share/pixmaps/mc/mandrakeexpert.xpm
+
+install -m755 %SOURCE51 %buildroot/%_bindir
+
+
 %post
 if [ -f /etc/X11/window-managers.rpmsave ];then
 	/usr/sbin/convertsession -f /etc/X11/window-managers.rpmsave || exit 0
@@ -102,15 +137,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-#%config /etc/skel/Desktop/
-%config /etc/skel/.kde
 %config /etc/gtk/gtkrc
 %doc TRANSLATORS special/*
 %dir /etc/X11/wmsession.d/
-%{_sbindir}/*
+%{_prefix}/sbin/*
 %{_bindir}/*
 %{_datadir}/faces
 %{_iconsdir}/*.xpm
+%_iconsdir/*.png
 %{_miconsdir}/*
 %{_liconsdir}/*
 %{_datadir}/pixmaps/backgrounds/linux-mandrake
@@ -119,12 +153,38 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/mc/desktop-scripts/mandrake.links.sh
 %{_libdir}/gtk/themes/engines/*
 %{_mandir}/*/*
-%{_datadir}/lmdk/
+%dir %_datadir/mdk/
+%dir %_datadir/mdk/gnome-desktop/
+%_datadir/mdk/gnome-desktop/*
+%_datadir/pixmaps/mc/*.xpm
 
 %changelog
-* Thu Apr 12 2001 Daouda LO <daouda@mandrakesoft.com> 8.0-6mdk
-- remove kde dir and kdelnks 
-- big cleanups and cvs resync 
+* Tue Jun 12 2001 Frederic Crozat <fcrozat@mandrakesoft.com> 8.0-12mdk
+- Fix patch0 with authors comments
+
+* Mon Jun 11 2001 David BAUDENS <baudens@mandrakesoft.com> 8.0-11mdk
+- Add control-center-devel, db1-devel, gdk-pixbuf-devel and libglade-devel to
+  BuildRequires (thanks to Stefan van der Eijk)
+
+* Fri Jun  8 2001 Frederic Crozat <fcrozat@mandrakesoft.com> 8.0-10mdk
+- Patch0: fix eazel engine for gfloppy and xcdroast
+
+* Fri Jun  8 2001 Frederic Crozat <fcrozat@mandrakesoft.com> 8.0-9mdk
+- Update eazel-engine to latest CVS snapshot (correct bug in Gimp)
+
+* Wed Apr 18 2001 David BAUDENS <baudens@mandrakesot.com> 8.0-8mdk
+- Fix some bugs in theme
+- Update gnome-desktop
+
+* Sat Apr 15 2001 David BAUDENS <baudens@mandrakesoft.com> 8.0-7mdk
+- chksession: fix Window Managers list for GDM
+- Update gnome-desktop
+
+* Thu Apr 12 2001 David BAUDENS <baudens@mandrakesoft.com> 8.0-6mdk
+- Remove KDE stuff
+- Remove patch #1
+- Add icons for Mandrake Campus and Mandrake Expert
+- Add print-cups.sh script - Frederic CROZAT
 
 * Wed Apr 4 2001 Daouda Lo <daouda@mandrakesoft.com> 8.0-5mdk
 - fix zip mount point typo

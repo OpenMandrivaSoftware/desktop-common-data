@@ -1,7 +1,6 @@
 NAME = mandrake_desk
 VERSION = $(shell awk '/define version/ { print $$3 }' $(NAME).spec)
 mandir=/usr/share/man
-RPM = $(HOME)/RPM
 
 all:
 	@echo "Run make install"
@@ -9,27 +8,11 @@ all:
 clean:
 	find . -type d -name '.xvpics'|xargs rm -rf
 
-merge-translations:
-	for i in `find kde gnome old special -name "*.in"` ; \
-	do \
-		case "$$i" in \
-		*.links.desktop.in) \
-			xml-i18n-merge -d po $$i \
-			    `dirname $$i`/`basename $$i .desktop.in` ;; \
-		*.noext.kdelnk.in) \
-			xml-i18n-merge -d po $$i \
-			    `dirname $$i`/`basename $$i .noext.kdelnk.in` ;; \
-		*.in) \
-			xml-i18n-merge -d po $$i \
-			    `dirname $$i`/`basename $$i .in` ;; \
-	  esac ; \
-	done
-
-install: merge-translations
+install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/{s,}bin
 	mkdir -p $(RPM_BUILD_ROOT)/$(mandir)/man8/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/
-	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{faces,icons,icons/large,icons/mini,pixmaps/backgrounds/mandrake}
+	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{faces,icons,icons/large,icons/mini,pixmaps/backgrounds/linux-mandrake}
 	mkdir -p $(RPM_BUILD_ROOT)/etc/X11/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk
 	mkdir -p $(RPM_BUILD_ROOT)/etc/skel/Desktop
@@ -45,20 +28,17 @@ install: merge-translations
 	install -m644 icons/mini/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/mini
 	install -m644 icons/large/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/large
 	install -m644 backgrounds/* \
-	$(RPM_BUILD_ROOT)/usr/share/pixmaps/backgrounds/mandrake/
-	install -m644 default_background.jpg \
-	$(RPM_BUILD_ROOT)/usr/share/pixmaps/backgrounds/
-	install -m644 default_logo.jpg \
-	$(RPM_BUILD_ROOT)/usr/share/icons/
+	$(RPM_BUILD_ROOT)/usr/share/pixmaps/backgrounds/linux-mandrake/
 
-#	install -m644 kdelnk/*.kdelnk $(RPM_BUILD_ROOT)/etc/skel/Desktop/
 	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
-	install -m755 gnome/mandrake.links.sh \
-		$(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
-	install -m644 gnome/mandrake.links \
-		$(RPM_BUILD_ROOT)/usr/lib/desktop-links
+	
 	install -m644 faces/* $(RPM_BUILD_ROOT)/usr/share/faces
 
+	install -m644 login/loging100.png $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk
+
+	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
+	cp gnome/mandrake.links.sh $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts/mandrake.links.sh
+	chmod 0755 $(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts/mandrake.links.sh
 
 dis: 
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
@@ -71,10 +51,8 @@ dis:
 	rm -rf $(NAME)-$(VERSION)
 
 rpm: dis ../$(NAME)-$(VERSION).tar.bz2 $(RPM)
-	cp -f ../$(NAME)-$(VERSION).tar.bz2 $(RPM)/SOURCES/
+	cp -f ../$(NAME)-$(VERSION).tar.bz2 $(RPM)/SOURCES
 	cp -f special/mandrake-small.xpm $(RPM)/SOURCES/
-	cp -f eazel-engine-0.3.tar.bz2 $(RPM)/SOURCES/
-	cp -f gtkrc $(RPM)/SOURCES/
 	cp -f $(NAME).spec $(RPM)/SPECS/
 	-rpm -ba --clean --rmsource $(NAME).spec
 	rm -f ../$(NAME)-$(VERSION).tar.bz2

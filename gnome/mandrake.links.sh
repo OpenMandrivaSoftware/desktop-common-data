@@ -1,198 +1,65 @@
 #!/bin/bash
 
-if [ -n "$LANGUAGE" ]; then
-	LISTLANG="`echo $LANGUAGE | tr ':' ' '`" ;
-else
-	if [ -n "$LANG" ]; then
-		LISTLANG="$LANG"
-	else
-		LISTLANG=en
+if [ ! -d ~/.gnome-desktop ] ; then
+	mkdir -p ~/.gnome-desktop
+fi
+
+if [ -e "/usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Communicator.desktop" ] ; then
+	cp -f "/usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Communicator.desktop" $HOME/.gnome-desktop/
+elif [ -e "/usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop" ] ; then
+	cp -f "/usr/share/gnome/distribution-menus/Mandrake/Networking/WWW/Netscape Navigator.desktop" $HOME/.gnome-desktop/
+fi
+if [ -e /usr/share/gnome/distribution-menus/Mandrake/Configuration/Other/DrakConf.desktop ] ; then
+	cp -f /usr/share/gnome/distribution-menus/Mandrake/Configuration/Other/DrakConf.desktop $HOME/.gnome-desktop/ -f
+fi
+
+# Documentation
+langg=$(cat /etc/sysconfig/i18n | grep ^LANG= | sed -e 's/LANG=//')
+if [ ! -e ~/.gnome/.doc ] ; then
+	if [ ! -d ~/.gnome/ ] ; then
+		mkdir -p ~/.gnome
+	fi
+	if [ $langg = de ] && [ -r /usr/share/doc/mandrake/de/index.html ] ; then
+		cp /usr/share/mdk/gnome-desktop/Documentation-de.desktop ~/.gnome-desktop/Documentation.desktop && touch ~/.gnome/.doc
+	elif [ $langg = es ] && [ -r /usr/share/doc/mandrake/es/index.html ] ; then
+		cp /usr/share/mdk/gnome-desktop/Documentation-es.desktop ~/.gnome-desktop/Documentation.desktop && touch ~/.gnome/.doc
+	elif [ $langg = fr_FR:fr ] || [ $langg = fr ] && [ -r /usr/share/doc/mandrake/fr/index.html ] ; then
+		cp /usr/share/mdk/gnome-desktop/Documentation-fr.desktop ~/.gnome-desktop/Documentation.desktop && touch ~/.gnome/.doc
+	elif [ $langg = it ] && [ -r /usr/share/doc/mandrake/it/index.html ] ; then
+		cp /usr/share/mdk/gnome-desktop/Documentation-it.desktop ~/.gnome-desktop/Documentation.desktop && touch ~/.gnome/.doc
+elif [ $langg = en ] || [ -z $langg ] && [ -r /usr/share/doc/mandrake/en/index.html ] ; then
+		cp /usr/share/mdk/gnome-desktop/Documentation.desktop ~/.gnome-desktop/Documentation.desktop && touch ~/.gnome/.doc
+	elif [ -r /usr/share/doc/mandrake/en/index.html ] ; then
+		cp /usr/share/mdk/gnome-desktop/Documentation.desktop ~/.gnome-desktop/Documentation.desktop && touch ~/.gnome/.doc
 	fi
 fi
 
-###################
-# Internet connex #
-###################
-#CAPTION=""
-#for i in $LISTLANG
-#do
-#	if [ "$CAPTION" != "" ]; then break ; fi
-#	case "$i" in
-#		en*) CAPTION="Internet connection" ;;
-#		af*) CAPTION="Internetkonneksie" ;;
-#		az*) CAPTION="Ýnternet baðlantýsý" ;;
-#		be*) CAPTION="Çëó÷ýííå ç ñåòêàé ²íòýðíýò" ;;
-#		bg*) CAPTION="Èíòåðíåò Âðúçêà" ;;
-#		br*) CAPTION="Kevreañ ouzh ar genrouedad" ;;
-#		ca*) CAPTION="Connexió a Internet" ;;
-#		cs*) CAPTION="Pøipojení k Internetu" ;;
-#		cy*) CAPTION="Cysylltiad Rhyngrwyd" ;;
-# 		da*) CAPTION="Internet forbindelse" ;;
-#		de*) CAPTION="Internetverbindung" ;;
-#		el*) CAPTION="Óýíäåóç Internet" ;;
-#		eo*) CAPTION="Interreta konekto" ;;
-#		es*) CAPTION="Conexión a Internet" ;;
-#		et*) CAPTION="Internetiühendus" ;;
-#		fi*) CAPTION="Internet yhteys" ;;
-#		fr*) CAPTION="Connexion à l'Internet" ;;
-#		ga*) CAPTION="Nasc idirlíon" ;;
-#		gl*) CAPTION="Conexión a Internet" ;;
-#		hr*) CAPTION="Veza s InterNetom" ;;
-#		hu*) CAPTION="Internet kapcsolat" ;;
-#		id*) CAPTION="Koneksi Internet" ;;
-#		is*) CAPTION="Lýðnets tenging" ;;
-#		it*) CAPTION="Connessione a Internet" ;;
-#		ka*) CAPTION="ÊÀÅÛÉÒÉ ÉÍÔÄÒÍÄÔÈÀÍ" ;;
-#		ko*) CAPTION="ÀÎÅÍ³Ý ¿¬°á" ;;
-#		lt*) CAPTION="Prisijungimas prie interneto" ;;
-#		lv*) CAPTION="Interneta pieslçgums" ;;
-#		nl*) CAPTION="Internetverbinding" ;;
-#		no*) CAPTION="Oppkobling Internett" ;;
-#		pl*) CAPTION="Po³±czenie z internetem" ;;
-#		ro*) CAPTION="Conectare la Internet" ;;
-#		ru*) CAPTION="Internet-ÓÏÅÄÉÎÅÎÉÅ" ;;
-#		sk*) CAPTION="Pripojenie k internetu" ;;
-#		sl*) CAPTION="Povezava v internet" ;;
-#		sp*) CAPTION="¸ÝâÕàÝÕâ ÚÞÝÕÚæØøÕ" ;;
-#		sr*) CAPTION="Internet konekcije" ;;
-#		sv*) CAPTION="Internet uppkoppling" ;;
-#		tr*) CAPTION="Ýnternet baðlantýsý" ;;
-#		uk*) CAPTION="ú'¤ÄÎÁÎÎÑ Ú ¦ÎÔÅÒÎÅÔÏÍ" ;;
-#		wa*) CAPTION="Raloyaedje al rantoele daegnrece" ;;
-#		zh_CN*) CAPTION="»¥ÁªÍøÁ¬½Ó" ;;
-#	esac
-#done
-#if [ "$CAPTION" = "" ]; then CAPTION="Internet connection" ; fi
-#
-#/usr/bin/gdesktoplnk \
-#	--progname="/usr/bin/gnome-ppp" \
-#	--icon-name="gnome-networktool.png" \
-#	--icon-caption="$CAPTION" \
-#	--link-name="MDKppp" \
-#	--desktop-dir="$HOME/.gnome-desktop"
-
-###################
-# Mandrake Update #
-###################
-#CAPTION=""
-#for i in $LISTLANG
-#do
-#	if [ "$CAPTION" != "" ]; then break ; fi
-#	case "$i" in
-#		en*) CAPTION="Mandrake Updates" ;;
-#		af*) CAPTION="Mandrake Opdaterings" ;;
-#		be*) CAPTION="Àäíà¢ëåíí³ Mandrake" ;;
-#		bg*) CAPTION="Mandrake Îáíîâÿâàíå" ;;
-#		br*) CAPTION="Hizivadurioù Mandrake" ;;
-#		ca*) CAPTION="Actualitzacions del Mandrake" ;;
-#		cs*) CAPTION="Aktualizace Mandrake" ;;
-#		cy*) CAPTION="Diweddariadau Mandrake" ;;
-#		da*) CAPTION="Mandrake Opdateringer" ;;
-#		de*) CAPTION="Mandrake Updates" ;;
-#		el*) CAPTION="Áíáâáèìßóåéò ôïõ Mandrake" ;;
-#		eo*) CAPTION="Mandrejkaj Øisdatigoj" ;;
-#		es*) CAPTION="Actualizaciones de Mandrake" ;;
-#		et*) CAPTION="Mandrake parandused" ;;
-#		fi*) CAPTION="Mandrake päivitykset" ;;
-#		fr*) CAPTION="Mises à jour de Mandrake" ;;
-#		ga*) CAPTION="Nuashonraí Mandrake" ;;
-#		gl*) CAPTION="Actualizacións de Mandrake" ;;
-#		hr*) CAPTION="Mandrake nadogradnje" ;;
-#		hu*) CAPTION="Mandrake frissítések" ;;
-#		id*) CAPTION="Situs Update Mandrake" ;;
-#		is*) CAPTION="Mandrake uppfærslur" ;;
-#		it*) CAPTION="Aggiornamenti Mandrake" ;;
-#		ka*) CAPTION="Mandrake-ÉÓ ÂÀÍÀáËÄÁÀ" ;;
-#		ko*) CAPTION="¸Çµå·¹ÀÌÅ© ¾÷µ¥ÀÌÆ®" ;;
-#		lt*) CAPTION="Mandrake atnaujinimai" ;;
-#		lv*) CAPTION="Mandrake atjauninâjumi" ;;
-#		nl*) CAPTION="Mandrake updates" ;;
-#		no*) CAPTION="Mandrake oppdateringer" ;;
-#		ro*) CAPTION="Actualizãri pentru Mandrake" ;;
-#		sk*) CAPTION="Mandrake Updates" ;;
-#		sl*) CAPTION="Nadgradnje Mandrake" ;;
-#		sp*) CAPTION="Mandrake Update" ;;
-#		sr*) CAPTION="Mandrake Update" ;;
-#		sv*) CAPTION="Mandrake Uppdateringar" ;;
-#		tr*) CAPTION="Mandrake güncellemesi" ;;
-#		uk*) CAPTION="ðÏÎÏ×ÌÅÎÎÑ ÓÉÓÔÅÍÉ Mandrake" ;;
-#		wa*) CAPTION="Metaedje a djoû di Mandrake" ;;
-#		zh_CN*) CAPTION="Mandrake Éý¼¶" ;;
-#	esac
-#done
-#if [ "$CAPTION" = "" ]; then CAPTION="Mandrake Updates" ; fi
-#
-#/usr/bin/gdesktoplnk \
-#	--progname="/usr/X11R6/bin/MandrakeUpdate" \
-#	--icon-name="../icons/updates-mdk.xpm" \
-#	--icon-caption="$CAPTION" \
-#	--link-name="Mandrake Updates" \
-#	--desktop-dir="$HOME/.gnome-desktop"
+# Mandrake Campus
+if [ ! -e ~/.gnome/.mdkcampus ] ; then
+        cp /usr/share/mdk/gnome-desktop/Mandrake\ Campus.desktop ~/.gnome-desktop && touch ~/.gnome/.mdkcampus
+fi
 
 
-############
-# DrakConf #
-############
-CAPTION=""
-for i in $LISTLANG
-do
-	if [ "$CAPTION" != "" ]; then break ; fi
-	case "$i" in
-		en*) CAPTION="DrakConf" ;;
-	esac
-done
-if [ "$CAPTION" = "" ]; then CAPTION="DrakConf" ; fi
+# Mandrake Expert
+if [ ! -e ~/.gnome/.mdkexpert ] ; then
+        cp /usr/share/mdk/gnome-desktop/Mandrake\ Expert.desktop ~/.gnome-desktop/ && touch ~/.gnome/.mdkexpert
+fi
 
-/usr/bin/gdesktoplnk \
-	--progname="/usr/X11R6/bin/DrakConf" \
-	--icon-name="../icons/large/DrakConf.xpm" \
-	--icon-caption="$CAPTION" \
-	--link-name="DrakConf" \
-	--desktop-dir="$HOME/.gnome-desktop"
+# Control Center
+if [ ! -e ~/.gnome/.ccenter ] && [ -x /usr/X11R6/bin/DrakConf ] ; then
+        cp /usr/share/mdk/gnome-desktop/Mandrake\ Control\ Center.desktop ~/.gnome-desktop/Mandrake\ Control\ Center.desktop && touch ~/.gnome/.ccenter
+fi
+
+        
+# Mandrake Update
+if [ ! -e ~/.gnome/.mdkupdate ] && [ -x /usr/bin/rpmdrake ] ; then
+        cp /usr/share/mdk/gnome-desktop/Software\ Manager.desktop ~/.gnome-desktop/ && touch ~/.gnome/.mdkupdate
+fi
 
 
-############
-# rpmdrake #
-############
-#CAPTION=""
-#for i in $LISTLANG
-#do
-#	if [ "$CAPTION" != "" ]; then break ; fi
-#	case "$i" in
-#		en*) CAPTION="RpmDrake" ;;
-#		zh_CN*) CAPTION="RpmDrake Èí¼þ°ü¹ÜÀí" ;;
-#	esac
-#done
-#if [ "$CAPTION" = "" ]; then CAPTION="RpmDrake" ; fi
-#
-#/usr/bin/gdesktoplnk \
-#	--progname="/usr/X11R6/bin/rpmdrake" \
-#	--icon-name="../icons/rpmdrake.xpm" \
-#	--icon-caption="$CAPTION" \
-#	--link-name="rpmdrake" \
-#	--desktop-dir="$HOME/.gnome-desktop"
-#
-
-############
-# Netscape #
-############
-#CAPTION=""
-#for i in $LISTLANG
-#do
-#	if [ "$CAPTION" != "" ]; then break ; fi
-#	case "$i" in
-#		en*) CAPTION="Netscape" ;;
-#		ja*) CAPTION="¥Í¥Ã¥È¥¹¥±¡¼¥×" ;;
-#		ko*) CAPTION="³Ý½ºÄÉÀÌÇÁ" ;;
-#	esac
-#done
-#if [ "$CAPTION" = "" ]; then CAPTION="Netscape" ; fi
-#
-#/usr/bin/gdesktoplnk \
-#	--progname="/usr/bin/netscape" \
-#	--icon-name="../icons/netscape.xpm" \
-#	--icon-caption="$CAPTION" \
-#	--link-name="Netscape" \
-#	--desktop-dir="$HOME/.gnome-desktop"
-
-cp /usr/share/gnome/apps/Networking/WWW/Netscape-Navigator.desktop $HOME/.gnome-desktop/ -f
+# Internet
+if [ ! -e ~/.gnome/.internet ] ; then
+        if [ -x /usr/sbin/draknet ] ; then
+                cp /usr/share/mdk/gnome-desktop/Connection-to-Internet.desktop ~/.gnome-desktop/Internet.desktop && touch ~/.gnome/.internet ;
+        fi
+fi

@@ -79,7 +79,7 @@ if ( $options{p} and ! -x '/usr/X11R6/bin/xsetbg') {
     exit(1);
 } else { system("xsetbg", $options{p}) if $options{p}; }
 if ($options{x}) {
-    my $xterm = $ENV{XTERM} ? $ENV{XTERM} : "xvt -bg black -fg white";
+    my $xterm = $ENV{XTERM} ? $ENV{XTERM} : "xterm -bg black -fg white";
     system("$xterm &");
 }
 

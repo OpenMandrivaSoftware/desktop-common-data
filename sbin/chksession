@@ -94,7 +94,7 @@ if ($gdm) {
   for my $file (@lf) {
     open FH, ">/etc/X11/gdm/Sessions/$file" or die "Can't write to /etc/X11/gdm/Sessions/$file\n";
     print FH "#!/bin/sh\n";
-    print FH "exec /etc/X11/xdm/Xsession $file\n";
+    print FH "exec /etc/X11/Xsession $file\n";
     close FH;
     chmod 0755, $file;
   }
