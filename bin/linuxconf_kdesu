@@ -1,6 +1,0 @@
-#! /bin/sh 
-
-ARG=$1
-[ -f ~/.Xauthority ] &&  mv -f ~/.Xauthority ~/.Xauthority.$$ 
-ln -sf $ARG/.Xauthority /root/ && linuxconf
-[ -f ~/.Xauthority.$$ ] && mv -f ~/.Xauthority.$$ ~/.Xauthority
