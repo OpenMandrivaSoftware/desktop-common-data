@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
 Version:	8.1
-Release:	15mdk
+Release:	17mdk
 License:	GPL
 Group:		System/Configuration/Other
 Packager:	David BAUDENS <baudens@mandrakesoft.com>
@@ -110,14 +110,18 @@ for l in de en fr it; do
 	install -m644 gnome/gnome-Documentation-$l.desktop %buildroot/%_datadir/mdk/gnome-desktop/Documentation-$l.desktop
 done
 
-install -m644 gnome/gnome-mandrake-campus.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Campus.desktop"
+#install -m644 gnome/gnome-mandrake-campus.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Campus.desktop"
 install -m644 gnome/gnome-mandrake-control-center.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Control Center.desktop"
 install -m644 gnome/gnome-mandrake-expert.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Expert.desktop"
+install -m644 gnome/gnome-mandrake-news.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake News.desktop"
+install -m644 gnome/gnome-mandrake-store.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Store.desktop"
 install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/mdk/gnome-desktop/Connection-to-Internet.desktop
 
 install -d %buildroot/usr/share/pixmaps/mc/
 install -m644 gnome/gnome-mandrakecampus.xpm %buildroot/usr/share/pixmaps/mc/mandrakecampus.xpm
 install -m644 gnome/gnome-mandrakeexpert.xpm %buildroot/usr/share/pixmaps/mc/mandrakeexpert.xpm
+install -m644 gnome/gnome-mandrakenews.xpm %buildroot/usr/share/pixmaps/mc/mandrakenews.xpm
+install -m644 gnome/gnome-mandrakestore.xpm %buildroot/usr/share/pixmaps/mc/mandrakestore.xpm
 
 install -m755 gnome/gnomedesktop-network %buildroot/%_bindir
 
@@ -266,6 +270,13 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Sep 17 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-17mdk
+- Gnome: don't put special icons on root desktop
+- Gnome: fix Internet icon
+
+* Sat Sep 16 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-16mdk
+- Update gnome desktop
+
 * Fri Sep 14 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-15mdk
 - Update ga translations
 
