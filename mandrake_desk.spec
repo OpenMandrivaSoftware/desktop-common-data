@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	7mdk
+Release:	8mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -322,6 +322,9 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Wed Feb 20 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-8mdk
+- Fix english title for "What to do?" menu (Thanks to Till and Phil Lavigna)
+
 * Mon Feb 18 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-7mdk
 - Various fixes for simplified menu
 

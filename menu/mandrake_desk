@@ -65,93 +65,93 @@
 
 
 
-## Entertain yourself
+## Enjoy music & video
 # Listen to a CD
-?package(gnome-media):needs="gnome" command="/usr/bin/gtcd" section="Entertain yourself" title="Listen to a CD" icon="/usr/share/pixmaps/gtcd.png"
+?package(gnome-media):needs="gnome" command="/usr/bin/gtcd" section="Enjoy music & video" title="Listen to a CD" icon="/usr/share/pixmaps/gtcd.png"
 
-?package(kdemultimedia): needs="kde" kde_filename="kscd" section="Entertain yourself" title="Listen to a CD" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nBinaryPattern=kscd;\\nProtocols=\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdemultimedia): needs="kde" kde_filename="kscd" section="Enjoy music & video" title="Listen to a CD" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nBinaryPattern=kscd;\\nProtocols=\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
 # Record sounds
-?package(gnome-media):needs="x11" command="/usr/bin/grecord" section="Entertain yourself" title="Record sounds" icon="/usr/share/pixmaps/gnome-grecord.png"
+?package(gnome-media):needs="x11" command="/usr/bin/grecord" section="Enjoy music & video" title="Record sounds" icon="/usr/share/pixmaps/gnome-grecord.png"
 
 
 # Rip cd
-?package(grip):command="/usr/bin/grip" icon="grip.png" title="Rip a CD" needs="x11" section="Entertain yourself"
+?package(grip):command="/usr/bin/grip" icon="grip.png" title="Rip a CD" needs="x11" section="Enjoy music & video"
 
 
 # Watch videos
-?package(xmovie): needs="x11" icon="xmovie.xpm" section="Entertain yourself" title="Watch videos" kde_opt="InitialPreference=10" mimetypes="video/x-msvideo;video/quicktime;video/x-flic;video/mpeg;video/x-mpeg" command="/usr/X11R6/bin/xmovie"
+?package(xmovie): needs="x11" icon="xmovie.xpm" section="Enjoy music & video" title="Watch videos" kde_opt="InitialPreference=10" mimetypes="video/x-msvideo;video/quicktime;video/x-flic;video/mpeg;video/x-mpeg" command="/usr/X11R6/bin/xmovie"
 
 
 # Watch TV
-?package(xawtv): command="XawTV" icon="xawtv.png" section="Entertain yourself" title="Watch TV" needs="x11"
+?package(xawtv): command="XawTV" icon="xawtv.png" section="Enjoy music & video" title="Watch TV" needs="x11"
 
 
 # Listen to music files
-?package(xmms): needs="x11" section="Entertain yourself" title="Listen to musicfiles"  command="soundwrapper xmms" mimetypes="video/mpeg;audio/x-mp3;audio/x-ogg;audio/x-mpegurl;audio/x-wav" icon="xmms.xpm"
+?package(xmms): needs="x11" section="Enjoy music & video" title="Listen to music files"  command="soundwrapper xmms" mimetypes="video/mpeg;audio/x-mp3;audio/x-ogg;audio/x-mpegurl;audio/x-wav" icon="xmms.xpm"
 
 
 
-## Play a game
+## Play games
 # armagetron
-?package(armagetron):command="/usr/games/armagetron" icon="armagetron.xpm" needs="x11" section="Play a game" title="Play ArmageTron, a 3D lightcycle game"
+?package(armagetron):command="/usr/games/armagetron" icon="armagetron.xpm" needs="x11" section="Play games" title="Play ArmageTron, a 3D lightcycle game"
 
-?package(frozen-bubble):command="/usr/bin/frozen-bubble" icon="frozen-bubble.png" needs="x11" section="Play a game" title="Play Frozen-Buggle"
+?package(frozen-bubble):command="/usr/bin/frozen-bubble" icon="frozen-bubble.png" needs="x11" section="Play games" title="Play Frozen-Buggle"
 
 
 # chromium
-?package(chromium):command="/usr/games/chromium" icon="chromium.xpm" needs="x11" section="Play a game" title="Play Chromium, a 3D shoot them up"
+?package(chromium):command="/usr/games/chromium" icon="chromium.xpm" needs="x11" section="Play games" title="Play Chromium, a 3D shoot them up"
 
 # csmach
-?package(csmash):command="/usr/bin/csmash" icon="csmash.png" needs="x11" section="Play a game" title="Play Cannon Smash, a 3D tabletennis game"
+?package(csmash):command="/usr/bin/csmash" icon="csmash.png" needs="x11" section="Play games" title="Play Cannon Smash, a 3D tabletennis game"
 
 # freeciv
-?package(freeciv):needs="x11" section="Play a game" title="Play Freeciv, the free Civilization clone" command="/usr/games/civclient" icon="freeciv-client.xpm"
+?package(freeciv):needs="x11" section="Play games" title="Play Freeciv, the free Civilization clone" command="/usr/games/civclient" icon="freeciv-client.xpm"
 
-?package(freeciv):needs="text" section="Play a game" title="Start Freeciv server" command="/usr/games/civserver" icon="freeciv-server.xpm"
+?package(freeciv):needs="text" section="Play games" title="Start Freeciv server" command="/usr/games/civserver" icon="freeciv-server.xpm"
 
 
 # gnome-games
-?package(gnome-games): title="Play FreeCell" command="/usr/bin/freecell" icon="gnome-cardgame.xpm" needs="gnome" section="Play a game"
+?package(gnome-games): title="Play FreeCell" command="/usr/bin/freecell" icon="gnome-cardgame.xpm" needs="gnome" section="Play games"
 
-?package(gnome-games): title="Play Gnome Mines" command="/usr/bin/gnomine" icon="gnome-gnomine.xpm" needs="gnome" section="Play a game"
+?package(gnome-games): title="Play Gnome Mines" command="/usr/bin/gnomine" icon="gnome-gnomine.xpm" needs="gnome" section="Play games"
 
-?package(gnome-games): title="Play Mahjongg" command="/usr/bin/mahjongg" icon="gnome-mahjongg.xpm" needs="gnome" section="Play a game"
+?package(gnome-games): title="Play Mahjongg" command="/usr/bin/mahjongg" icon="gnome-mahjongg.xpm" needs="gnome" section="Play games"
 
-?package(gnome-games): icon="iagno.xpm" title="Play reversi" command="/usr/bin/iagno" needs="gnome" section="Play a game"
+?package(gnome-games): icon="iagno.xpm" title="Play reversi" command="/usr/bin/iagno" needs="gnome" section="Play games"
 
-?package(gnome-games): title="Play solitaire" command="/usr/bin/sol" icon="gnome-aisleriot.xpm" needs="gnome" section="Play a game"
+?package(gnome-games): title="Play solitaire" command="/usr/bin/sol" icon="gnome-aisleriot.xpm" needs="gnome" section="Play games"
 
 
 # kdegames
-?package(kdegames): needs="kde" kde_filename="kabalone" section="Play a game" title="Play Abalone" icon="kabalone.png" command="kabalone" kde_command="kabalone %i %m -caption \"%c\"" kde_opt="\\nDocPath=kabalone/index.html\\nKDE-X-StartupNotify=true"
+?package(kdegames): needs="kde" kde_filename="kabalone" section="Play games" title="Play Abalone" icon="kabalone.png" command="kabalone" kde_command="kabalone %i %m -caption \"%c\"" kde_opt="\\nDocPath=kabalone/index.html\\nKDE-X-StartupNotify=true"
 
-?package(kdegames): needs="kde" kde_filename="kasteroids" section="Play a game" title="Play KAsteroids" icon="kasteroids.png" command="kasteroids" kde_command="kasteroids %i %m -caption \"%c\"" mimetypes="" kde_opt="\\nBinaryPattern=kasteroids;\\nTerminalOptions=\\nPath=\\nDocPath=kasteroids/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdegames): needs="kde" kde_filename="kasteroids" section="Play games" title="Play KAsteroids" icon="kasteroids.png" command="kasteroids" kde_command="kasteroids %i %m -caption \"%c\"" mimetypes="" kde_opt="\\nBinaryPattern=kasteroids;\\nTerminalOptions=\\nPath=\\nDocPath=kasteroids/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
-?package(kdegames): needs="kde" kde_filename="kmahjongg" section="Play a game" icon="kmahjongg.png" command="kmahjongg" kde_command="kmahjongg %i %m -caption \"%c\"" title="Play Mahjongg, a smart mahjongg game" kde_opt="\\nDocPath=kmahjongg/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdegames): needs="kde" kde_filename="kmahjongg" section="Play games" icon="kmahjongg.png" command="kmahjongg" kde_command="kmahjongg %i %m -caption \"%c\"" title="Play Mahjongg, a smart mahjongg game" kde_opt="\\nDocPath=kmahjongg/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
-?package(kdegames): needs="kde" kde_filename="kmines" section="Play a game" icon="kmines.png" command="kmines" kde_command="kmines -caption \"%c\" %i %m" title="Play Minesweeper, a KDE replacement for xbombs" kde_opt="\\nDocPath=kmines/index.html\\nKDE-X-StartupNotify=true"
+?package(kdegames): needs="kde" kde_filename="kmines" section="Play games" icon="kmines.png" command="kmines" kde_command="kmines -caption \"%c\" %i %m" title="Play Minesweeper, a KDE replacement for xbombs" kde_opt="\\nDocPath=kmines/index.html\\nKDE-X-StartupNotify=true"
 
-?package(kdegames): needs="kde" kde_filename="kpat" section="Play a game" icon="kpat.png" command="kpat" kde_command="kpat %i %m -caption \"%c\"" title="Play Kpat, several nice card games" kde_opt="\\nDocPath=kpat/index.html"
+?package(kdegames): needs="kde" kde_filename="kpat" section="Play games" icon="kpat.png" command="kpat" kde_command="kpat %i %m -caption \"%c\"" title="Play Kpat, several nice card games" kde_opt="\\nDocPath=kpat/index.html"
 
-?package(kdegames): needs="kde" kde_filename="kpoker" section="Play a game" title="Play Poker" icon="kpoker.png" command="kpoker" kde_command="kpoker %i %m -caption \"%c\"" kde_opt="\\nMiniicon=kpoker.png\\nDocPath=kpoker/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdegames): needs="kde" kde_filename="kpoker" section="Play games" title="Play Poker" icon="kpoker.png" command="kpoker" kde_command="kpoker %i %m -caption \"%c\"" kde_opt="\\nMiniicon=kpoker.png\\nDocPath=kpoker/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
-?package(kdegames): needs="kde" kde_filename="kreversi" section="Play a game" icon="kreversi.png" command="kreversi" kde_command="kreversi %i %m -caption \"%c\"" title="Play Reversi against the computer" kde_opt="\\nDocPath=kreversi/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdegames): needs="kde" kde_filename="kreversi" section="Play games" icon="kreversi.png" command="kreversi" kde_command="kreversi %i %m -caption \"%c\"" title="Play Reversi against the computer" kde_opt="\\nDocPath=kreversi/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
-?package(kdegames): needs="kde" kde_filename="ksirtet" section="Play a game" icon="ksirtet.png" command="ksirtet" kde_command="ksirtet -caption \"%c\" %i %m" title="Play KSirtet, a Tetris clone" kde_opt="\\nDocPath=ksirtet/index.html\\nKDE-X-StartupNotify=true"
+?package(kdegames): needs="kde" kde_filename="ksirtet" section="Play games" icon="ksirtet.png" command="ksirtet" kde_command="ksirtet -caption \"%c\" %i %m" title="Play KSirtet, a Tetris clone" kde_opt="\\nDocPath=ksirtet/index.html\\nKDE-X-StartupNotify=true"
 
 
 # Maelstrom
-?package(Maelstrom):command="/usr/bin/Maelstrom" title="Play Maelstrom, an asteroids game" needs="x11" icon="Maelstrom.png" section="Play a game"
+?package(Maelstrom):command="/usr/bin/Maelstrom" title="Play Maelstrom, an asteroids game" needs="x11" icon="Maelstrom.png" section="Play games"
 
 
 #TuxRacer
-?package(tuxracer):command="tuxracer" icon="tuxracer.xpm" needs="x11" section="Play a game" title="Play Tuxracer, a great racing game starring Tux"
+?package(tuxracer):command="tuxracer" icon="tuxracer.xpm" needs="x11" section="Play games" title="Play Tuxracer, a great racing game starring Tux"
 
 
 #Pingus
-?package(pingus):command="Pingus" icon="pingus.png" needs="x11" section="Play a game" title="Play Pingus, a Lemmings clone"
+?package(pingus):command="Pingus" icon="pingus.png" needs="x11" section="Play games" title="Play Pingus, a Lemmings clone"
 
 
 
@@ -186,20 +186,20 @@
 ?package(kdenetwork): needs="x11" kde_filename="Kppp" section="Use the Internet" title="Connect to the Internet" icon="kppp.png" command="kppp" kde_command="kppp %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kppp;\\nProtocols=\\nDocPath=kppp/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
-# Dialog on IRC
-?package(kdenetwork): needs="kde" kde_filename="ksirc" section="Use the Internet" title="Dialog on IRC" icon="ksirc.png" command="ksirc" kde_command="ksirc %i %m" mimetypes="" kde_opt="\\nSwallowExec=\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nMapNotify=true"
+# Chat on IRC
+?package(kdenetwork): needs="kde" kde_filename="ksirc" section="Use the Internet" title="Chat on IRC" icon="ksirc.png" command="ksirc" kde_command="ksirc %i %m" mimetypes="" kde_opt="\\nSwallowExec=\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nMapNotify=true"
 
-?package(xchat):needs="gnome" section="Use the Internet" title="Dialog on IRC" command="xchat" icon="xchat.xpm"
+?package(xchat):needs="gnome" section="Use the Internet" title="Chat on IRC" command="xchat" icon="xchat.xpm"
 
 
 # ICQ
-?package(gnomeicu):needs="gnome" section="Use the Internet" title="Dialog using an ICQ instant messager client" command="gnomeicu -a" icon="gnomeicu.xpm"
-?package(licq):command="licq"icon="licq.xpm" title="Dialog using an ICQ instant messager client" needs="kde" section="Use the Internet"
+?package(gnomeicu):needs="gnome" section="Use the Internet" title="Chat using an ICQ instant messager client" command="gnomeicu -a" icon="gnomeicu.xpm"
+?package(licq):command="licq"icon="licq.xpm" title="Chat using an ICQ instant messager client" needs="kde" section="Use the Internet"
 
 # AOL
-?package(gaim):command="gaim" icon="gaim.xpm" title="Dialog using an AOL instant messager client" needs="gnome" section="Use the Internet"
+?package(gaim):command="gaim" icon="gaim.xpm" title="Chat using an AOL instant messager client" needs="gnome" section="Use the Internet"
 
-?package(kdenetwork): needs="kde" kde_filename="kit" section="Use the Internet" title="Dialog using an AOL instant messager client" icon="kit.png" command="kit" mimetypes="" kde_opt="\\nBinaryPattern=kit;\\nProtocols=\\nDocPath=kit/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdenetwork): needs="kde" kde_filename="kit" section="Use the Internet" title="Chat using an AOL instant messager client" icon="kit.png" command="kit" mimetypes="" kde_opt="\\nBinaryPattern=kit;\\nProtocols=\\nDocPath=kit/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
 
@@ -307,21 +307,21 @@
 ## View, modify or create a picture
 
 # Manipulate pictures
-?package(gimp): command="gimp" icon="wilbur.png" section="View, modify or create a picture" title="Manipulate pictures" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;"
+?package(gimp): command="gimp" icon="wilbur.png" section="View, modify, or create graphics" title="Manipulate pictures" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;"
 
 # Take a screenshot
-?package(kdegraphics): needs="kde" kde_filename="ksnapshot" section="View, modify or create a picture" title="Take a screenshot" icon="ksnapshot.png" command="ksnapshot" kde_command="ksnapshot %i %m" mimetypes="" kde_opt="\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nDocPath=ksnapshot/index.html\\nKDE-X-StartupNotify=true"
+?package(kdegraphics): needs="kde" kde_filename="ksnapshot" section="View, modify, or create graphics" title="Take a screenshot" icon="ksnapshot.png" command="ksnapshot" kde_command="ksnapshot %i %m" mimetypes="" kde_opt="\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nDocPath=ksnapshot/index.html\\nKDE-X-StartupNotify=true"
 
-?package(gnome-core): needs="gnome" section="View, modify or create a picture" title="Take a screenshot" icon="ksnapshot.png" command="gnome-panel-screenshot"
+?package(gnome-core): needs="gnome" section="View, modify, or create graphics" title="Take a screenshot" icon="ksnapshot.png" command="gnome-panel-screenshot"
 
 # Image acquisition
-?package(kdegraphics): needs="gnome" section="View, modify or create a picture" title="Acquire images using a scanner" icon="/usr/share/icons/hicolor/48x48/devices/scanner.png" command="kooka" multiple_files="true" accept_url="true"
+?package(kdegraphics): needs="gnome" section="View, modify, or create graphics" title="Acquire images using a scanner" icon="/usr/share/icons/hicolor/48x48/devices/scanner.png" command="kooka" multiple_files="true" accept_url="true"
 
-?package(kdegraphics): needs="kde" kde_filename="kooka" section="View, modify or create a picture" title="Acquire images using a scanner" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/kooka.html"
+?package(kdegraphics): needs="kde" kde_filename="kooka" section="View, modify, or create graphics" title="Acquire images using a scanner" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/kooka.html"
 
 
 # Koffice
-?package(koffice): needs="x11" kde_filename="kontour" section="View, modify or create a picture" title="Create vector based draws" icon="kontour.png" command="kontour" mimetypes="application/x-kontour" kde_opt="\\nX-KDE-Library=libkontourpart\\nServiceTypes=KOfficePart,KParts/ReadOnlyPart,KParts/ReadWritePart\\nX-KDE-NativeMimeType=application/x-kontour\\nDocPath=kontour/index.html\\nKDE-X-StartupNotify=true"
+?package(koffice): needs="x11" kde_filename="kontour" section="View, modify, or create graphics" title="Create a drawing" icon="kontour.png" command="kontour" mimetypes="application/x-kontour" kde_opt="\\nX-KDE-Library=libkontourpart\\nServiceTypes=KOfficePart,KParts/ReadOnlyPart,KParts/ReadWritePart\\nX-KDE-NativeMimeType=application/x-kontour\\nDocPath=kontour/index.html\\nKDE-X-StartupNotify=true"
 
-?package(sodipodi): needs="gnome" icon="sodipodi.xpm" section="View, modify or create a picture" title="Create vector based draws" command="/usr/bin/sodipodi"
+?package(sodipodi): needs="gnome" icon="sodipodi.xpm" section="View, modify, or create graphics" title="Create a drawing" command="/usr/bin/sodipodi"
 
