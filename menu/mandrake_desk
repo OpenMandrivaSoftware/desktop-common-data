@@ -97,10 +97,10 @@
 ?package(gnomemeeting): command="/usr/bin/gnomemeeting" needs="x11" icon="gnomemeeting.png" section="Surf the Internet" title="Organize a Video Conference" startup_notify="true"
 
 # Create Your Own Web Site
-?package(quanta): needs="x11" kde_filename="quanta" section="Surf the Internet" title="Create Your Own Web Site" icon="quanta.png" command="quanta" longtitle="Web Development Environment" mimetypes="text/html" kde_opt="\\nEncoding=UTF-8\\nDocPath=quanta/index.html\\nGenericName=Web Development Environment\\n"
+?package(quanta): needs="x11" kde_filename="quanta" section="Surf the Internet" title="Create Your Own Web Site" icon="quanta.png" command="quanta" mimetypes="text/html" kde_opt="\\nEncoding=UTF-8\\nDocPath=quanta/index.html\\nGenericName=Web Development Environment\\n"
 
 # Transfer Files With FTP
-?package(kbear): needs="kde" kde_filename="kbear" section="Surf the Internet" title="Transfer files with FTP" icon="kbear.png" command="kbear" longtitle="A Graphical FTP client" kde_opt="\\nEncoding=UTF-8\\nGenericName=FTP Client\\nMiniIcon=kbear\\nDocPath=kbear/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
+?package(kbear): needs="kde" kde_filename="kbear" section="Surf the Internet" title="Transfer files with FTP" icon="kbear.png" command="kbear" kde_opt="\\nEncoding=UTF-8\\nGenericName=FTP Client\\nMiniIcon=kbear\\nDocPath=kbear/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
 
 ?package(gftp): needs="gnome" section="Surf the Internet" title="Transfer Files With FTP" icon="gftp.png" command="gftp" 
 
@@ -131,7 +131,7 @@
 ?package(gnome-media): needs="x11" command="/usr/bin/gnome-sound-recorder" section="Enjoy Music and Video" title="Record Sounds" icon="/usr/share/pixmaps/gnome-grecord.png" startup_notify="true"
 
 # Mix Music
-?package(audacity): command="/usr/bin/audacity" needs="X11" icon="audacity.png" section="Enjoy Music and Video" title="Mix Music" longtitle="Digital Audio Waveforms Editor"
+?package(audacity): command="/usr/bin/audacity" needs="X11" icon="audacity.png" section="Enjoy Music and Video" title="Mix Music"
 
 # Compose Music
 ?package(rosegarden4): needs="x11" kde_filename="rosegarden" section="Enjoy Music and Video" title="Compose Music" icon="rosegarden.png" command="rosegarden" kde_command="rosegarden -caption \"%c\" %i %m" mimetypes="audio/x-rosegarden,audio/x-rosegarden-device" kde_opt="\\nX-KDE-NativeMimeType=audio/x-rosegarden\\nMiniIcon=rosegarden.png\\nDocPath=rosegarden/index.html\\nTerminal=0"
@@ -139,10 +139,10 @@
 # Watch Videos
 ?package(kaffeine): needs="kde" kde_filename="kaffeine" section="Enjoy Music and Video" title="Watch Videos" icon="kaffeine.png" command="kaffeine" mimetypes="application/x-ogg;audio/basic;audio/vnd.rn-realaudio;audio/x-aiff;audio/x-mp3;audio/x-mpeg;audio/x-mpegurl;audio/x-ms-wma;audio/x-ogg;audio/x-pn-realaudio;audio/x-pn-realaudio-plugin;audio/x-scpls;audio/x-wav;video/x-matroska;audio/x-matroska;video/mpeg;video/msvideo;video/quicktime;video/vnd.rn-realvideo;video/x-avi;video/x-fli;video/x-flic;video/x-ms-asf;video/x-ms-wmv;video/x-msvideo;application/x-mplayer2;application/smil;application/x-kaffeine" kde_opt="\\nEncoding=UTF-8\\nGenericName=Mediaplayer\\nServiceTypes=\\nTerminal=false\\nInitialPreference=15"
 
-?package(totem):        command="/usr/bin/totem"        needs="gnome"     section="Enjoy Music and Video"      icon="totem.png"        mimetypes="video/dv,video/mpeg,video/msvideo,video/quicktime,video/x-anim,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,video/x-nsv,video/x-flc,video/x-fli,application/ogg,application/x-ogg,audio/basic,audio/x-mp3,audio/x-mpeg,audio/mpeg,audio/x-wav,audio/x-mpegurl,audio/x-scpls,audio/x-m4a,audio/x-ms-asf,audio/x-ms-asx,audio/x-ms-wax,application/vnd.rn-realmedia,audio/x-real-audio,audio-x-pn-realaudio,application/x-flac,audio/x-flac,misc/ultravox,application/x-matroska"         accept_url="true"       multiple_files="true"   title="Watch Videos"      longtitle="Play movies and songs"       startup_notify="true"   
+?package(totem): command="/usr/bin/totem" needs="gnome" section="Enjoy Music and Video" icon="totem.png" mimetypes="video/dv,video/mpeg,video/msvideo,video/quicktime,video/x-anim,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,video/x-nsv,video/x-flc,video/x-fli,application/ogg,application/x-ogg,audio/basic,audio/x-mp3,audio/x-mpeg,audio/mpeg,audio/x-wav,audio/x-mpegurl,audio/x-scpls,audio/x-m4a,audio/x-ms-asf,audio/x-ms-asx,audio/x-ms-wax,application/vnd.rn-realmedia,audio/x-real-audio,audio-x-pn-realaudio,application/x-flac,audio/x-flac,misc/ultravox,application/x-matroska" accept_url="true" multiple_files="true" title="Watch Videos" startup_notify="true"   
 
 # Edit Videos
-?package(kdenlive): needs="x11" kde_filename="kdenlive" section="Enjoy Music and Video" title="Edit Videos" icon="kdenlive.png" command="kdenlive" kde_command="kdenlive -caption \"%c\" %i %m  " longtitle="Nonlinear video editor for KDE" kde_opt="\\nEncoding=UTF-8\\nDocPath=kdenlive/index.html\\nTerminal=0"
+?package(kdenlive): needs="x11" kde_filename="kdenlive" section="Enjoy Music and Video" title="Edit Videos" icon="kdenlive.png" command="kdenlive" kde_command="kdenlive -caption \"%c\" %i %m  " kde_opt="\\nEncoding=UTF-8\\nDocPath=kdenlive/index.html\\nTerminal=0"
 
 # Watch Television
 ?package(kdetv): needs="x11" kde_filename="kdetv" section="Enjoy Music and Video" title="Watch Television" icon="kdetv.png" command="kdetv" kde_command="kdetv -caption \"%c\" %i %m" mimetypes="text/x-tv-channels" kde_opt="\\nEncoding=UTF-8\\nMiniIcon=kdetv\\nGenericName=TV Viewer\\nTerminal=0"
@@ -171,25 +171,25 @@
 
 ## Play games
 # Frozen-Bubble
-?package(frozen-bubble):command="/usr/games/frozen-bubble" icon="frozen-bubble.png"   needs="X11" section="Play Games" title="Frozen-Bubble"   longtitle="Frozen Bubble arcade game"
+?package(frozen-bubble):command="/usr/games/frozen-bubble" icon="frozen-bubble.png"   needs="X11" section="Play Games" title="Frozen-Bubble" 
 
 # Armagetron
-?package(armagetron):command="/usr/games/armagetron" 		  icon="armagetron.png" 		  needs="x11" 		  section="Play Games" 		  title="ArmageTron" 		  longtitle="Another 3d lightcycle game"
+?package(armagetron):command="/usr/games/armagetron" 		  icon="armagetron.png" 		  needs="x11" 		  section="Play Games" 		  title="ArmageTron" 
 
 # CannonSmash
-?package(csmash):command="/usr/bin/csmash" icon="csmash.png"   needs="x11" section="Play Games" title="Cannon Smash"   longtitle="CannonSmash, a 3D tabletennis game"
+?package(csmash):command="/usr/bin/csmash" icon="csmash.png"   needs="x11" section="Play Games" title="Cannon Smash"
 
 # Chromium B.S.U
-?package(chromium):command="/usr/games/chromium" icon="chromium.png"   needs="x11" section="Play Games" title="Chromium"   longtitle="OpenGL shoot them up"
+?package(chromium):command="/usr/games/chromium" icon="chromium.png"   needs="x11" section="Play Games" title="Chromium" 
 
 # LBreakout 2
-?package(lbreakout2):needs=x11 section="Play Games" title="LBreakout 2" longtitle="Breakout-style arcade game" command="/usr/games/lbreakout2" icon="lbreakout2.png"
+?package(lbreakout2):needs=x11 section="Play Games" title="LBreakout 2" command="/usr/games/lbreakout2" icon="lbreakout2.png"
 
 # TuxRacer
-?package(tuxracer):command="soundwrapper /usr/games/tuxracer" icon="tuxracer.png" needs="x11" section="Play Games"  title="Tuxracer" longtitle="A great racing game starring Tux"
+?package(tuxracer):command="soundwrapper /usr/games/tuxracer" icon="tuxracer.png" needs="x11" section="Play Games"  title="Tuxracer"
 
 # CrackAttack
-?package(crack-attack): command="/usr/games/crack-attack-solo" icon="crack-attack.png" section="Play Games" title="Crack Attack! - Solo" longtitle="Tetris like game base on Tetris Attack" needs="x11"
+?package(crack-attack): command="/usr/games/crack-attack-solo" icon="crack-attack.png" section="Play Games" title="Crack Attack! - Solo" needs="x11"
 
 
 ## Administer Your System
@@ -207,10 +207,10 @@
 ?package(usermode): needs="gnome" section="Administer Your System" title="Change Your Password" icon="userpasswd.xpm" command="userpasswd" 
 
 # Burn CDs/DVDs
-?package(k3b): needs="x11" kde_filename="k3b" section="Administer Your System" title="Burn CDs-DVDs" icon="k3b.png" command="k3b" longtitle="CD Writing Program" mimetypes="application/x-k3b" kde_opt="\\nDocPath=k3b/index.html\\nTerminal=false\\nX-KDE-NativeMimeType=application/x-k3b\\n"
+?package(k3b): needs="x11" kde_filename="k3b" section="Administer Your System" title="Burn CDs-DVDs" icon="k3b.png" command="k3b" mimetypes="application/x-k3b" kde_opt="\\nDocPath=k3b/index.html\\nTerminal=false\\nX-KDE-NativeMimeType=application/x-k3b\\n"
 
 # Design a CD Cover
-?package(kover): needs="x11" kde_filename="kover" section="Administer Your System" title="Design a CD Cover" icon="kover.png" command="kover" kde_command="kover" longtitle="CD Kover Printer" kde_mimetype="application/x-kover" kde_opt="\\nTerminal=0"
+?package(kover): needs="x11" kde_filename="kover" section="Administer Your System" title="Design a CD Cover" icon="kover.png" command="kover" kde_command="kover" kde_mimetype="application/x-kover" kde_opt="\\nTerminal=0"
 
 # Backup Your Data
 ?package(drakxtools): needs="x11" icon="drakconf.png" section="Administer Your System" title="Backup Your Data" command="/usr/sbin/drakbackup"

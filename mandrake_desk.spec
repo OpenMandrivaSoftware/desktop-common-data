@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	7mdk
+Release: 	9mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -144,6 +144,12 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Sep 09 2004 David Baudens <baudens@mandrakesoft.com> 10.1-9mdk
+- Remove all longtitle
+
+* Thu Sep 09 2004 David Baudens <baudens@mandrakesoft.com> 10.1-8mdk
+- Fix task oriented menu (kphone)
+
 * Wed Sep 01 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.1-7mdk
 - Fix capitalization in simplified menu
 
