@@ -17,6 +17,7 @@ Usage: $0 [OPTION]...
               -F --first:   Print only first available entry.
 	      -t, --test:   Go in test mode.
 	      -l, --list:   List window-managers.
+	      -L:           List window-managers including the order number
        -d=DIR, --dir=DIR:   Specifies a directory of w-m configuration files.
 			    Default is /etc/X11/wmsession.d/
 -x=ENTRY, --xsession=ENTRY: Produce window-managers script of ENTRY.
@@ -86,6 +87,8 @@ while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
     $gdm++;
   } elsif (/^--list/ || /^-l/) {
     $list++;
+  } elsif (/^-L/) {
+    $list_order++;
   } elsif (/^--kdmsess/ || /^-k/) {
     $kdm++;
   } elsif (/^--test/ || /^-t/) {
@@ -151,5 +154,7 @@ if ($list) {
  } else {
     print "Default\n";
   }
+} elsif ($list_order) { 
+    print join(' ', map { "$_=$order{$_}" } @lf), "\n";
 }
 
