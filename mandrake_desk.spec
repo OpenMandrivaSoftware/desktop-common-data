@@ -169,6 +169,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Jan 29 2004 David Baudens <baudens@mandrakesoft.com> 10.0-3mdk
+- Remove old files
+
 * Tue Jan 13 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.0-2mdk
 - Fix drakbackup menu entry
 
