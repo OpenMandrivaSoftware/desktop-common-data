@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	10.0
-Release: 	9mdk
+Release: 	10mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -143,6 +143,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Mar  2 2004 Frederic Lepied <flepied@mandrakesoft.com> 10.0-10mdk
+- in KDE session only pass the session name
+
 * Fri Feb 27 2004 Frederic Lepied <flepied@mandrakesoft.com> 10.0-9mdk
 - fixed KDM sessions
 
