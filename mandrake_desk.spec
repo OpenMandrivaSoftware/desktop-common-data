@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	10.0
-Release: 	4mdk
+Release: 	6mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -141,6 +141,12 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Feb 05 2004 David Baudens <baudens@mandrakesoft.com> 10.0-6mdk
+- Fix simplified menu
+
+* Thu Feb 05 2004 David Baudens <baudens@mandrakesoft.com> 10.0-5mdk
+- Fix typos in simplified menu
+
 * Thu Jan 29 2004 David Baudens <baudens@mandrakesoft.com> 10.0-4mdk
 - Remove old files
 
