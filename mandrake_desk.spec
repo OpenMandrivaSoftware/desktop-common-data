@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	16mdk
+Release: 	17mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -170,6 +170,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Mar 01 2005 Laurent MONTEL <lmontel@mandrakesoft.com> 10.1-17mdk
+- Update menu order
+
 * Mon Feb 28 2005 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-16mdk 
 - Install shared Mdk theme for GDM/KDM
 
