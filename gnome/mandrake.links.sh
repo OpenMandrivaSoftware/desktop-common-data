@@ -38,6 +38,7 @@ do
 		no*) CAPTION="Oppkobling Internett" ;;
 		ro*) CAPTION="Conectare la Internet" ;;
 		ru*) CAPTION="Internet-соединение" ;;
+		su*) CAPTION="Pripojenie k internetu" ;;
 		tr*) CAPTION="щnternet baПlantЩsЩ" ;;
 		uk*) CAPTION="З'╓днання з ╕нтернетом" ;;
 		wa*) CAPTION="Raloyaedje al rantoele daegnrece" ;;
