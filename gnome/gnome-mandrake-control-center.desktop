@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Name=Mandrake Control Center
+Icon=/usr/share/icons/drakconf.xpm
+Exec=/usr/X11R6/bin/DrakConf
+Terminal=false
+MultipleArgs=false
+Type=Application

@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Name=Documentation
+Icon=/usr/share/icons/documentation_section.xpm
+Exec=$HELP_BROWSER /usr/share/doc/mandrake/es/index.html 
+Terminal=false
+MultipleArgs=false
+Type=Application

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ -e /etc/sysconfig/network-scripts/net_cnx_pg ] ; then
+        exec /etc/sysconfig/network-scripts/net_cnx_pg ;
+else exec /usr/sbin/draknet
+fi

@@ -222,14 +222,14 @@ style "default"
 	recolor = <1>
       }
       "H_SCROLLBAR_HI" {
-	image = "scroller-h-hilight.png"
+	image = "scroller-h.png"
 	border = { 3, 3, 1, 1 }
 	recolor = <1>
       }
       "H_SCROLLBAR_INACTIVE" {
 	image = "scroller-h.png"
 	border = { 3, 3, 1, 1 }
-	recolor = <2>
+	recolor = <1>
       }
       "H_SCROLLBAR_THUMB" {
 	image = "scroller-h-thumb.png"
@@ -241,7 +241,7 @@ style "default"
       }
       "H_SCROLLBAR_THUMB_INACTIVE" {
 	image = "scroller-h-thumb.png"
-	recolor = <2>
+	recolor = <1>
       }
       "V_SCROLLBAR" {
 	image = "scroller-v.png"
@@ -268,7 +268,7 @@ style "default"
       }
       "V_SCROLLBAR_THUMB_INACTIVE" {
 	image = "scroller-v-thumb.png"
-	recolor = <2>
+	recolor = <1>
       }
       "PROGRESS_BAR" {
 	image = "progressbar.png"
@@ -285,7 +285,7 @@ style "default"
       "PROGRESS_BAR_INACTIVE" {
 	image = "progressbar.png"
 	border = { 4, 4, 1, 1 }
-	recolor = <2>
+	recolor = <1>
       }
       "PROGRESS_TROUGH" {
 	image = "progressbar_trough.png"
