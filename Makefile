@@ -1,6 +1,7 @@
 NAME = mandrake_desk
 VERSION = $(shell awk '/define version/ { print $$3 }' $(NAME).spec)
 mandir=/usr/share/man
+RPM = $(HOME)/RPM/
 
 all:
 	@echo "Run make install"
