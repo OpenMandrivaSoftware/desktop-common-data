@@ -1,6 +1,8 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=XKill
+Name[da]=XKill
+Name[es]=XKill
 Name[nl]=XKill
 Name[zh_CN.GB2312]=XKill ÖÐÖ¹³ÌÐò
 Comment=Can't close a window ? use 'XKill'
