@@ -1,3 +1,7 @@
+2000-02-02  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+
+	* window-managers: Add a sawmill entry (V.Danen).
+
 2000-01-27  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 	* mandrake_desk.spec: Remove the mandrake_background.xpm
 	* backgrounds/mandrake_background_*: add background from helene.

@@ -29,6 +29,12 @@ SCRIPT:
 }
 exec /usr/bin/enlightenment
 --@@--
+NAME=sawmill
+DESC=A new lightweight window manager
+EXEC=/usr/bin/sawmill
+SCRIPT:
+exec sawmill
+--@@--
 NAME=BlackBox
 ICON=BlackBox.xpm
 EXEC=/usr/X11R6/bin/blackbox
