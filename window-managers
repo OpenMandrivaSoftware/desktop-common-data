@@ -70,8 +70,8 @@ SCRIPT:
 exec /usr/X11R6/bin/fvwm
 --@@--
 NAME=Xfce
-EXEC=/usr/X11R6/bin/xfce
+EXEC=/usr/X11R6/bin/xfwm
 DESC=A CDE like window manager
 SCRIPT:
 [ "x$XFCE_DATA" = "x" ] && XFCE_DATA=/usr/share/xfce
-exec /usr/X11R6/bin/xfce
+exec /usr/X11R6/bin/xfwm
