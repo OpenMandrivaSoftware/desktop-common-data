@@ -1,3 +1,7 @@
+2001-08-07 19:17  vincent
+
+	* mandrake_desk.spec: - Move face in /usr/share/mdk/faces
+
 2001-07-31 09:21  Frederic Lepied <flepied@mandrakesoft.com>
 
 	* Makefile: no need to run autoconf!
