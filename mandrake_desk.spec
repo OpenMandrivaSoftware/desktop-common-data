@@ -1,6 +1,6 @@
-%define	release	1mdk
 %define name	mandrake_desk
 %define version	1.0.4
+%define	release	2mdk
 
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		%{name}
@@ -61,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Mon Jul 17 2000 dam's <damien@mandrakesoft.com> 1.0.4-2mdk
+- replaced sawmill by sawfish
+
 * Tue Jul 11 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.4-1mdk
 - Add convertsession
 - Make window-managers file dynamic and set them in /etc/X11/wmsession.d/.
