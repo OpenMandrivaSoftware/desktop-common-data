@@ -1,5 +1,5 @@
 Now the desktop files internationalization is handled trough xml-i18n-tools;
-so DON'T EDIT DUIRECTLY THOSE FILES, they will be overwritten; instead
+so DON'T EDIT THOSE FILES DIRECTLY, they will be overwritten; instead
 edit the corresponding *.in file.
 
 In those *.in files each entry preceded by an underscore (_) means there
