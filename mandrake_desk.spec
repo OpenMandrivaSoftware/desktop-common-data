@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	11mdk
+Release:	12mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -160,6 +160,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Aug 22 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-12mdk
+- New XFdrake image
+
 * Thu Aug 22 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-11mdk
 - New images for screensavers
 
@@ -207,7 +210,7 @@ rm -fr %buildroot
 - No longer create icon for root
 - Modify Mandrake GTK theme - Frederic Crozat
 - Change name of Mandrake Control Center to Control Center in GNOME desktop
- (Thanks to Mattias Dahlberg) - Frederic Crozat
+  (Thanks to Mattias Dahlberg) - Frederic Crozat
 
 * Tue Feb 26 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-11mdk
 - Add/remove some icons
