@@ -1,4 +1,4 @@
-%define	release	20mdk
+%define	release	21mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Fri May 12 2000 Frederic Lepied <flepied@mandrakesoft.com> 1.0.3-21mdk
+- corrected chksession for gnome.
+
 * Fri May 12 2000 dam's <damien@mandrakesoft.com> 1.0.3-20mdk
 - added gnome desktop entries.
 
