@@ -1,4 +1,4 @@
-%define	release	21mdk
+%define	release	22mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Mon May 29 2000 dam's <damien@mandrakesoft.com> 1.0.3-22mdk
+- corrected doc url on gnome-desktop
+
 * Fri May 12 2000 Frederic Lepied <flepied@mandrakesoft.com> 1.0.3-21mdk
 - corrected chksession for gnome.
 
@@ -61,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 - added gnome desktop entries.
 
 * Wed May 10 2000 dam's <damien@mandrakesoft.com> 1.0.3-19mdk
-- corrected bugy script. 
+- corrected buggy script. 
 
 * Tue May  9 2000 dam's <damien@mandrakesoft.com> 1.0.3-18mdk
 - added Netscape on desktop.
