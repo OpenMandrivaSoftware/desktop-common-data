@@ -101,6 +101,7 @@ if ($kdm) {
 
 if ($gdm) {
   my $d = '/etc/X11/dm/Sessions/';
+  -d $d or system("mkdir -p $d");
   chdir $d;
 
   for my $file (@lf) {
@@ -115,6 +116,17 @@ if ($gdm) {
     close FH;
     chmod 0755, $file;
   }
+  open FH, ">/etc/X11/dm/Sessions/Default.desktop" or die "Can't write to /etc/X11/dm/Sessions/Default.desktop\n";
+  print FH "[Desktop Entry]\n";
+  print FH "Encoding=UTF-8\n";
+  print FH "Name=Default\n";
+  print FH "Comment=Default\n";
+  print FH "Exec=/etc/X11/xdm/Xsession\n";
+  print FH "Icon=\n";
+  print FH "Type=Application\n";
+  close FH;
+  chmod 0755, $file;
+
 
 }
 
