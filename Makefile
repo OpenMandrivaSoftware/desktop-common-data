@@ -1,15 +1,44 @@
-VERSION=0.9.8
+VERSION=0.9.9
 
 all:
-	echo "Run make dis"
+	@echo "Run make install"
 
 clean:
 	find . -type d -name '.xvpics'|xargs rm -rf
 
-install: clean
+dis: clean
+	rm -rf mandrake_desk-$(VERSION) ../mandrake_desk-$(VERSION).tar*
+	mkdir -p mandrake_desk-$(VERSION)
+	find . -not -name "mandrake_desk-$(VERSION)"|\
+		cpio -pd mandrake_desk-$(VERSION)/
+	find mandrake_desk-$(VERSION) \
+		-type d -name CVS -o -name .cvsignore -o -name unused |xargs rm -rf
+	perl -p -i -e 's|^%define version.*|%define version $(VERSION)|' \
+		mandrake_desk.spec
+	tar cf ../mandrake_desk-$(VERSION).tar mandrake_desk-$(VERSION)
+	bzip2 -9f ../mandrake_desk-$(VERSION).tar
 	rm -rf mandrake_desk-$(VERSION)
-	mkdir mandrake_desk-$(VERSION)
-	find . ! -name mandrake_desk-$(VERSION)|cpio -pvd mandrake_desk-$(VERSION) 
-	find mandrake_desk-$(VERSION) -type d -name CVS|xargs rm -rf
-	tar cyf ../mandrake_desk-$(VERSION).tar.bz2 mandrake_desk-$(VERSION)
-	rm -rf mandrake_desk-$(VERSION)
+
+rpm: dis ../mandrake_desk-$(VERSION).tar.bz2 $(RPM)
+	cp -f ../mandrake_desk-$(VERSION).tar.bz2 $(RPM)/SOURCES
+	cp -f mandrake_desk.spec $(RPM)/SPECS/
+	cp -f special/mandrake-small.xpm $(RPM)/SOURCES/
+	-rpm -ba mandrake_desk.spec
+	rm -f ../mandrake_desk-$(VERSION).tar.bz2
+
+install:
+	mkdir -p $(RPM_BUILD_ROOT)/usr/{bin,sbin}
+	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{icons,pixmaps/backgrounds/mandrake}
+	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
+	mkdir -p $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk
+	mkdir -p $(RPM_BUILD_ROOT)/etc/skel/Desktop
+	install -m755 bin/* $(RPM_BUILD_ROOT)/usr/bin
+	install -m755 sbin/* $(RPM_BUILD_ROOT)/usr/sbin
+	install -m644 icons/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/
+	install -m644 backgrounds/* \
+	$(RPM_BUILD_ROOT)/usr/share/pixmaps/backgrounds/mandrake/
+	install -m644 kdelnk/* $(RPM_BUILD_ROOT)/etc/skel/Desktop/
+	install -m644 icons/magic.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
+	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
+	install -m644 gnome/Netscape.desktop \
+		$(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet

@@ -1,5 +1,5 @@
-%define	version 0.9.8
-%define release 9mdk
+%define	version 0.9.9
+%define release 1mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -12,13 +12,46 @@ Icon: mandrake-small.xpm
 BuildRoot: /tmp/%{name}-buildroot
 Source: mandrake_desk-%{version}.tar.bz2
 BuildArchitectures: noarch
-BuildRequires: ImageMagick
+BuildRequires: /usr/X11R6/bin/convert
 
 %description
 This package contains useful icons background and .kdelnk files for
 the Mandrake desktop.
 
+%prep
+rm -rf $RPM_BUILD_ROOT
+
+%setup
+
+%build
+
+%install
+make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT
+pushd $RPM_BUILD_ROOT/usr/share/pixmaps/backgrounds/mandrake && {
+  for i in *.jpg ; do /usr/X11R6/bin/convert $i `basename $i .jpg`.xpm ; done
+} && popd
+rm -f special/mandrake-small.xpm
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+%doc TRANSLATORS special/*
+/usr/bin/*
+/usr/sbin/*
+/usr/share/icons/*
+/usr/share/pixmaps/backgrounds/mandrake
+/etc/skel/Desktop/
+/usr/share/pixmaps/mdk
+/usr/share/gnome/apps/Internet/*.desktop
+
 %changelog
+* Sun Dec 19 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+- Add fndSession.
+- Use mktemp instead of $$ for fndSession.
+- Add a real Makefile and clean-up the .spec.
+
 * Fri Dec 17 1999 Pixel <pixel@mandrakesoft.com>
 - add perl script to remove icons pointing to binaries not present
 
@@ -126,54 +159,3 @@ the Mandrake desktop.
 
 * Sat May 01 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - Add new icons.
-
-%prep
-rm -rf $RPM_BUILD_ROOT
-
-%setup
-
-%build
-
-%install
-
-mkdir -p $RPM_BUILD_ROOT/usr/bin/
-cp -af bin/* $RPM_BUILD_ROOT/usr/bin
-
-mkdir -p $RPM_BUILD_ROOT/usr/sbin/
-cp -af sbin/* $RPM_BUILD_ROOT/usr/sbin
-
-mkdir -p $RPM_BUILD_ROOT/usr/share/icons/
-cp -arf icons/*.xpm $RPM_BUILD_ROOT/usr/share/icons/
-
-mkdir -p $RPM_BUILD_ROOT/usr/share/pixmaps/backgrounds/
-cp -arf backgrounds $RPM_BUILD_ROOT/usr/share/pixmaps/backgrounds/mandrake
-pushd $RPM_BUILD_ROOT/usr/share/pixmaps/backgrounds/mandrake && {
-  for i in *.jpg ; do convert $i `basename $i .jpg`.xpm ; done
-} && popd
-
-mkdir -p $RPM_BUILD_ROOT/etc/skel/Desktop
-cp -avrf kdelnk/* $RPM_BUILD_ROOT/etc/skel/Desktop/
-rm -f $RPM_BUILD_ROOT/etc/skel/Desktop/floppy.kdelnk
-rm -f $RPM_BUILD_ROOT/etc/skel/Desktop/Cd-Rom.kdelnk
-
-# for Gnome
-mkdir -p $RPM_BUILD_ROOT/usr/share/gnome/apps/Internet
-mkdir -p $RPM_BUILD_ROOT/usr/share/pixmaps/mdk
-
-install -m 655 icons/magic.xpm $RPM_BUILD_ROOT/usr/share/pixmaps/mdk
-install -m 655 icons/mandrake* $RPM_BUILD_ROOT/usr/share/pixmaps/mdk
-install -m 655 gnome/Netscape.desktop $RPM_BUILD_ROOT/usr/share/gnome/apps/Internet
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-%files
-%defattr(-,root,root)
-%doc TRANSLATORS special/*
-/usr/bin/*
-/usr/sbin/*
-/usr/share/icons/*
-/usr/share/pixmaps/backgrounds/mandrake
-/etc/skel/Desktop/
-/usr/share/pixmaps/mdk
-/usr/share/gnome/apps/Internet/*.desktop
