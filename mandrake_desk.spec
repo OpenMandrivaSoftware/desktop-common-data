@@ -16,6 +16,7 @@ Packager:	David BAUDENS <baudens@mandrakesoft.com>
 Source:		mandrake_desk.tar.bz2
 
 BuildArchitectures: noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 This package contains useful icons, backgrounds and others goodies for the
