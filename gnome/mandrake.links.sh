@@ -181,4 +181,4 @@ if [ "$CAPTION" = "" ]; then CAPTION="DrakConf" ; fi
 #	--link-name="Netscape" \
 #	--desktop-dir="$HOME/.gnome-desktop"
 
-cp /usr/share/gnome/apps/Networking/WWW/Netscape-Navigator $HOME/.gnome-desktop/ -f
+cp /usr/share/gnome/apps/Networking/WWW/Netscape-Navigator.desktop $HOME/.gnome-desktop/ -f
