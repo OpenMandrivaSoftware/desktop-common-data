@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	5mdk
+Release:	6mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -321,6 +321,9 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Tue Feb 12 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-6mdk
+- Clean simplified menu
+
 * Tue Jan 29 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-5mdk
 - Add link to Crux configuration applet
 - Fix menu entries for simplified menu
