@@ -9,10 +9,12 @@ Release:	%{release}
 Copyright:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+Packager:	David BAUDENS <baudens@mandrakesoft.com>
+
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
-Source:		mandrake_desk-%{version}.tar.bz2
+Source:		mandrake_desk.tar.bz2
+
 BuildArchitectures: noarch
 
 %description
