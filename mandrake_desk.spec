@@ -153,24 +153,7 @@ rm -fr %buildroot
 %_datadir/mdk/xfdrake/*.jpg
 #
 /usr/share/mdk/screensaver
-/usr/share/mdk/screensaver/1-boot&init.png
-/usr/share/mdk/screensaver/10-service.png
-/usr/share/mdk/screensaver/11-support.png
-/usr/share/mdk/screensaver/12-Xdrake.png
-/usr/share/mdk/screensaver/13-filetools.png
-/usr/share/mdk/screensaver/14-filetransfert.png
-/usr/share/mdk/screensaver/15-tux.png
-/usr/share/mdk/screensaver/16-chess.png
-/usr/share/mdk/screensaver/17-floppy.png
-/usr/share/mdk/screensaver/18-disc.png
-/usr/share/mdk/screensaver/2-hardware.png
-/usr/share/mdk/screensaver/3-rouage.png
-/usr/share/mdk/screensaver/4-rpmsecu.png
-/usr/share/mdk/screensaver/5-carte.png
-/usr/share/mdk/screensaver/6-shell.png
-/usr/share/mdk/screensaver/7-bugfix.png
-/usr/share/mdk/screensaver/8-bureau.png
-/usr/share/mdk/screensaver/9-docu.png
+/usr/share/mdk/screensaver/*.png
 #
 %_menudir/simplified/*
 
