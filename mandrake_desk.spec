@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
 Version:	8.1
-Release:	14mdk
+Release:	15mdk
 License:	GPL
 Group:		System/Configuration/Other
 Packager:	David BAUDENS <baudens@mandrakesoft.com>
@@ -266,6 +266,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Sep 14 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-15mdk
+- Update ga translations
+
 * Tue Sep 13 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-14mdk
 - Re-add mandrakeexpert and mandrakecampus icons
 
