@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 10mdk
+%define release 11mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -58,9 +58,12 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Tue Jan 04 2000 - David BAUDENS <baudens@mandrakesoft.com>
+- Use BBDrake & WMDrake for BlackBox & Window Maker
 
-* Mon Jan 03 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com>
-- window-managers: fix wrong Enlightenment entry.
+* Fri Dec 31 1999 Pixel <pixel@mandrakesoft.com>
+- Makefile (dis): added a missing \
+- kdelnk: Name field changes (dadou)
 
 * Tue Dec 28 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - Add a manpages for chksession from camille.
