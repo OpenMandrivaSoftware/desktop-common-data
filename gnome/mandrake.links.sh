@@ -146,7 +146,7 @@ do
 	if [ "$CAPTION" != "" ]; then break ; fi
 	case "$i" in
 		en*) CAPTION="RpmDrake" ;;
-		zh_CN*); CAPTION="RpmDrake 软件包管理" ;;
+		zh_CN*) CAPTION="RpmDrake 软件包管理" ;;
 	esac
 done
 if [ "$CAPTION" = "" ]; then CAPTION="RpmDrake" ; fi
@@ -167,9 +167,9 @@ for i in $LISTLANG
 do
 	if [ "$CAPTION" != "" ]; then break ; fi
 	case "$i" in
-		en*) CAPTION="Netscape" ;
-		ja*) CAPTION="ネットスケ〖プ";
-		ko*) CAPTION="齿胶纳捞橇";
+		en*) CAPTION="Netscape" ;;
+		ja*) CAPTION="ネットスケ〖プ";;
+		ko*) CAPTION="齿胶纳捞橇";;
 	esac
 done
 if [ "$CAPTION" = "" ]; then CAPTION="Netscape" ; fi
