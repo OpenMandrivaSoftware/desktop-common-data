@@ -38,6 +38,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc TRANSLATORS special/* README.CVS
 %config /etc/X11/window-managers
 /usr/sbin/*
+/usr/bin/*
 /usr/share/icons/*.xpm
 /usr/share/icons/*.jpg
 /usr/share/icons/mini/*.xpm
