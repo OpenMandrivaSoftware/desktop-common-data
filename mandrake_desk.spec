@@ -1,4 +1,4 @@
-%define release 1mdk
+%define release 2mdk
 %define name mandrake_desk
 %define version 1.0.3
 
@@ -53,6 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Sun Apr 16 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.3-2mdk
+- DrakWM: a new greatest hit.
+
 * Tue Apr 11 2000 dam's <damien@mandrakesoft.com> 1.0.3-1mdk
 - new icons, new place for default background.
 
