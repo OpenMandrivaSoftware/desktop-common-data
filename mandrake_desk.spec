@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	6mdk
+Release:	7mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -70,7 +70,8 @@ This package contains the default Mandrake Linux screensaver for KDE.
 
 %prep
 
-%setup -q
+%setup -q -n %name
+find . -type 'd' -name 'CVS' | xargs rm -fr
 
 %build
 (
@@ -321,6 +322,9 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Mon Feb 18 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-7mdk
+- Various fixes for simplified menu
+
 * Tue Feb 12 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-6mdk
 - Clean simplified menu
 
