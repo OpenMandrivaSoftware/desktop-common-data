@@ -33,6 +33,7 @@ do
 		id*) CAPTION="Koneksi Internet" ;;
 		it*) CAPTION="Connessione a Internet" ;;
 		is*) CAPTION="Lýðnets tenging" ;;
+		lt*) CAPTION="Prisijungimas prie interneto" ;;
 		lv*) CAPTION="Interneta pieslçgums" ;;
 		nl*) CAPTION="Internetverbinding" ;;
 		no*) CAPTION="Oppkobling Internett" ;;
