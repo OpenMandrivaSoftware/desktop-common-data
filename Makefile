@@ -36,8 +36,8 @@ install:
 
 	install -m644 kdelnk/* $(RPM_BUILD_ROOT)/etc/skel/Desktop/
 	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
-	install -m644 gnome/Netscape.desktop \
-		$(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
+#	install -m644 gnome/Netscape.desktop \
+#		$(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
 	install -m644 gnome/DrakConf.desktop \
 		$(RPM_BUILD_ROOT)/usr/share/gnome/apps/System
 	install -m755 gnome/mandrake.links.sh \
