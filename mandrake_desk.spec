@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.1
-Release:	2mdk
+Release:	3mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -160,6 +160,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Mar 12 2003 David BAUDENS <baudens@mandrakesoft.com> 9.1-3mdk
+- Update icons and screensavers images
+
 * Fri Feb 14 2003 David BAUDENS <baudens@mandrakesoft.com> 9.1-1mdk
 - Update default backgrounds
 
