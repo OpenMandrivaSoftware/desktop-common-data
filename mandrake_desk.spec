@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 14mdk
+%define release 15mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -58,6 +58,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Fri Jan  7 2000 Frederic Lepied <flepied@mandrakesoft.com> 1.0.1-15mdk
+
+- window-managers (NAME): KDE => kde.
+
 * Fri Jan  7 2000 Pixel <pixel@mandrakesoft.com>
 - sbin/chksession: look at /etc/sysconfig/desktop to sort
 

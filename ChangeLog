@@ -1,3 +1,7 @@
+2000-01-07  Frederic Lepied  <flepied@mandrakesoft.com>
+
+	* window-managers (NAME): KDE => kde.
+
 2000-01-07  Pixel  <pixel@mandrakesoft.com>
 	* sbin/chksession: look at /etc/sysconfig/desktop to sort
 
