@@ -91,6 +91,8 @@ make -f admin/Makefile.common
 %make
 cd -
 
+
+
 %install
 rm -rf %buildroot
 
@@ -152,7 +154,6 @@ install -m644 gnome/gnome-mandrake-news.desktop %buildroot/%_datadir/nautilus/de
 install -m644 gnome/gnome-mandrake-store.desktop %buildroot/%_datadir/nautilus/default-desktop
 install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/nautilus/default-desktop
 
-
 install -d %buildroot/%_datadir/pixmaps
 install -m644 gnome/*.png %buildroot/%_datadir/pixmaps
 
@@ -163,6 +164,9 @@ kdedesktop2mdkmenu.pl krozat .hidden/ScreenSavers %buildroot/%_datadir/applnk/Sy
 
 install -d %buildroot/%_menudir/simplified/
 install -m644 menu/mandrake_desk %buildroot/%_menudir/simplified/
+
+install -d -m 0755 %buildroot/%_iconsdir/
+install -m 0644 icons/*.png %buildroot/%_iconsdir/
 
 
 
@@ -190,7 +194,9 @@ fi
 
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -fr %buildroot
+
+
 
 %files
 %defattr(-,root,root)
@@ -218,6 +224,7 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/faces/root
 #
 #
+%_iconsdir/*.png
 %_iconsdir/*.xpm
 %_miconsdir/*
 %_liconsdir/*
