@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=DrakConf
+Name[br]=DrakConf
 Name[ca]=DrakConf
 Name[cy]=DrakConf
 Name[da]=DrakConf
@@ -8,6 +9,7 @@ Name[de]=DrakConf
 Name[el]=DrakConf
 Name[eo]=DrakConf
 Name[es]=DrakConf
+Name[et]=DrakConf
 Name[fi]=DrakConf
 Name[fr]=DrakConf
 Name[ga]=DrakConf

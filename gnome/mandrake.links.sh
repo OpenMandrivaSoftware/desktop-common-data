@@ -20,6 +20,7 @@ do
 	case "$i" in
 		en*) CAPTION="Internet connection" ;;
 		bg*) CAPTION="Интернет Връзка" ;;
+		br*) CAPTION="Kevreaс ouzh ar genrouedad" ;;
 		ca*) CAPTION="Connexiу a Internet" ;;
 		cs*) CAPTION="Pшipojenн k Internetu" ;;
 		cy*) CAPTION="Cysylltiad Rhyngrwyd" ;;

@@ -2,6 +2,7 @@
 [KDE Desktop Entry]
 Name=Internet connection
 Name[bg]=Èíòåğíåò Âğúçêà
+Name[br]=Kevreañ ouzh ar genrouedad
 Name[ca]=Connexió a Internet
 Name[da]=Internet forbindelse
 Name[cs]=Pøipojení k Internetu
@@ -35,6 +36,7 @@ Name[wa]=Raloyaedje al rantoele daegnrece
 Name[zh_CN.GB2312]=»¥ÁªÍøÁ¬½Ó
 Comment=Internet connection
 Comment[bg]=Èíòåğíåò Âğúçêà
+Comment[br]=Kevreañ ouzh ar genrouedad
 Comment[ca]=Connexió a Internet
 Comment[cs]=Pøipojení k Internetu
 Comment[cy]=Cysylltiad Rhyngrwyd
