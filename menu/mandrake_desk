@@ -125,27 +125,27 @@
 # Create a screenshot
 ?package(kdegraphics-ksnapshot): needs="x11" kde_filename="ksnapshot" section="View, modify and create graphics" title="Create a screenshot" icon="ksnapshot.png" command="ksnapshot" kde_command="ksnapshot -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nGenericName=Screen Capture Program\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nDocPath=ksnapshot/index.html\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
 
-## Play Games
+## Play games
 # Frozen-Bubble
-?package(frozen-bubble):command="/usr/games/frozen-bubble" icon="frozen-bubble.png"   needs="X11" section="Play Games" title="Frozen-Bubble"   longtitle="Frozen Bubble arcade game"
+?package(frozen-bubble):command="/usr/games/frozen-bubble" icon="frozen-bubble.png"   needs="X11" section="Play games" title="Frozen-Bubble"   longtitle="Frozen Bubble arcade game"
 
 # Armagetron
-?package(armagetron):command="/usr/games/armagetron" 		  icon="armagetron.png" 		  needs="x11" 		  section="Play Games" 		  title="ArmageTron" 		  longtitle="Another 3d lightcycle game"
+?package(armagetron):command="/usr/games/armagetron" 		  icon="armagetron.png" 		  needs="x11" 		  section="Play games" 		  title="ArmageTron" 		  longtitle="Another 3d lightcycle game"
 
 # CannonSmash
-?package(csmash):command="/usr/bin/csmash" icon="csmash.png"   needs="x11" section="Play Games" title="Cannon Smash"   longtitle="CannonSmash, a 3D tabletennis game"
+?package(csmash):command="/usr/bin/csmash" icon="csmash.png"   needs="x11" section="Play games" title="Cannon Smash"   longtitle="CannonSmash, a 3D tabletennis game"
 
 # Chromium B.S.U
-?package(chromium):command="/usr/games/chromium" icon="chromium.png"   needs="x11" section="Play Games" title="Chromium"   longtitle="OpenGL shoot them up"
+?package(chromium):command="/usr/games/chromium" icon="chromium.png"   needs="x11" section="Play games" title="Chromium"   longtitle="OpenGL shoot them up"
 
 # LBreakout 2
-?package(lbreakout2):needs=x11 section="Play Games" title="LBreakout 2" longtitle="Breakout-style arcade game" command="/usr/games/lbreakout2" icon="lbreakout2.png"
+?package(lbreakout2):needs=x11 section="Play games" title="LBreakout 2" longtitle="Breakout-style arcade game" command="/usr/games/lbreakout2" icon="lbreakout2.png"
 
 # TuxRacer
-?package(tuxracer):command="soundwrapper /usr/games/tuxracer" 		  icon="tuxracer.png" 		  needs="x11" 		  section="Play Games" 		  title="Tuxracer"		  longtitle="A great racing game starring Tux"
+?package(tuxracer):command="soundwrapper /usr/games/tuxracer" 		  icon="tuxracer.png" 		  needs="x11" 		  section="Play games" 		  title="Tuxracer"		  longtitle="A great racing game starring Tux"
 
 # CrackAttack
-?package(crack-attack): command="/usr/games/crack-attack-solo" icon="crack-attack.png" section="Play Games" title="Crack Attack! - Solo" longtitle="Tetris like game base on Tetris Attack" needs="x11"
+?package(crack-attack): command="/usr/games/crack-attack-solo" icon="crack-attack.png" section="Play games" title="Crack Attack! - Solo" longtitle="Tetris like game base on Tetris Attack" needs="x11"
 
 ## Administer your system
 # Configure your desktop
