@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 15mdk
+%define release 16mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -65,11 +65,11 @@ rm -rf $RPM_BUILD_ROOT
 * Thu Jan  6 2000 Pixel <pixel@mandrakesoft.com>
 - icons/*: convert back and from .gif for kfm compliance :-/
 
-* Tue Jan  4 2000 Pixel <pixel@mandrakesoft.com>
-- sbin/kdeDesktopCleanup: perl's glob in not " " compliant :(
-
 * Wed Jan  5 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.1-13mdk
 - Fix gnome links.
+
+* Tue Jan  4 2000 Pixel <pixel@mandrakesoft.com>
+- sbin/kdeDesktopCleanup: perl's glob in not " " compliant :(
 
 * Tue Jan 04 2000 David BAUDENS <baudens@mandrakesoft.com>
 - Use BBDrake & WMDrake for BlackBox & Window Maker
