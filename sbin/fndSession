@@ -9,10 +9,9 @@
 }
 
 if [ -e /usr/share/config/kdm/kdmrc ];then
-LIST="`/usr/sbin/chksession -k`" perl -pi -e 's|^SessionTypes=.*|$ENV{LIST}|'\
-    /usr/share/config/kdm/kdmrc
+    /usr/sbin/chksession -k
 fi
 
 if [ -d /etc/X11/dm/Sessions ];then
-	/usr/sbin/chksession -g
+    /usr/sbin/chksession -g
 fi
