@@ -1,6 +1,6 @@
 %define name	mandrake_desk
 %define version	1.0.4
-%define release 4mdk
+%define release 5mdk
 
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		%{name}
@@ -27,7 +27,7 @@ rm -rf $RPM_BUILD_ROOT
 %build
 
 %install
-make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT
+make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT mandir=%{_mandir}
 mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
 rm -f special/mandrake-small.xpm
 
@@ -57,9 +57,12 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/gnome/apps/System/*.desktop
 /usr/lib/mc/desktop-scripts/mandrake.links.sh
 /usr/lib/desktop-links/mandrake.links
-/usr/man/*/*
+%{_mandir}/*/*
 
 %changelog
+* Sat Jul 22 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.4-5mdk
+- Oups forgot the BM.
+
 * Tue Jul 18 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.4-4mdk
 - sbin/chksession: Set support for KDE2 by default when generating
   session.

@@ -1,3 +1,7 @@
+2000-07-22  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+
+	* Makefile: Add mandir to be BM compliant.
+
 2000-07-18  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* sbin/chksession: Set support for KDE2 by default when generating
