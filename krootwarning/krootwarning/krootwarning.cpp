@@ -29,6 +29,13 @@
 #include <klocale.h>
 #include <kstddirs.h>
 
+extern "C" {
+#ifdef HAVE_XINERAMA
+# include <X11/XKBlib.h>
+# include <X11/extensions/Xinerama.h>
+#endif
+};
+
 Krootwarning::Krootwarning(QWidget *parent, const char *name)
  :KDialogBase( parent, "urldialog", true, i18n("Warning"), User1|User2, User1, true,i18n("Logout"),i18n("Continue") )
 {
@@ -67,6 +74,37 @@ void Krootwarning::initInterface()
     m_showAtTheNewStartUp=new QCheckBox( i18n("Don't show this window again."), page);
     grid->addMultiCellWidget(m_showAtTheNewStartUp,8,8,0,1);
     resize(400,280);
+
+    int dw, dh, gw, gh, x, y;
+#ifdef HAVE_XINERAMA
+    int numHeads;
+    XineramaScreenInfo *xineramaInfo;
+    if (XineramaIsActive(qt_xdisplay()) &&
+        ((xineramaInfo = XineramaQueryScreens(qt_xdisplay(), &numHeads)))) {
+	dw = xineramaInfo->width;
+	dh = xineramaInfo->height;
+	XFree(xineramaInfo);
+    } else
+#endif
+    {
+	dw = QApplication::desktop()->width();
+	dh = QApplication::desktop()->height();
+    }
+
+    gw = width();
+    gh = height();
+    x = dw/2;
+    y = dh/2;
+
+    x -= gw/2;
+    y -= gh/2;
+
+    if (x + gw > dw)
+	x = dw - gw;
+    if (y + gh > dh)
+	y = dh - gh;
+    move( x < 0 ? 0 : x, y < 0 ? 0 : y );
+
     loadConfig();
 }
 
