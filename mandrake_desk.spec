@@ -1,4 +1,4 @@
-%define	release	15mdk
+%define	release	16mdk
 %define name	mandrake_desk
 %define version	1.0.3
 
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Tue May  9 2000 dam's <damien@mandrakesoft.com> 1.0.3-16mdk
+- corrected Netscape and rpmdrake gnome icons
+
 * Sat May  6 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.3-15mdk
 - sbin/chksession: if icewm is not here by default launch twm.
 

@@ -1,3 +1,7 @@
+2000-05-09  dam's  <damien@mandrakesoft.com>
+
+	* corrected Netscape and rpmdrake gnome icons
+	
 2000-05-06  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* sbin/chksession: if icewm is not here by default launch twm.
