@@ -34,6 +34,7 @@ Name[tr]=DrakConf
 Name[wa]=DrakConf
 Name[zh_CN.GB2312]=DrakConf
 Comment=The system configuration tools of Linux-Mandrake
+Comment[hu]=A Linux-Mandrake rendszerkonfigurációs eszközei
 Comment[wa]=Les usteyes d' apontiaedje do sistinme di Linux-Mandrake
 Icon=../icons/large/DrakConf.xpm
 TryExec=DrakConf;
