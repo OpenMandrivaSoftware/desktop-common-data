@@ -28,8 +28,15 @@ find . -type 'd' -name 'CVS'|xargs rm -rf
 
 %install
 make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT mandir=%{_mandir}
+
 mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
+
 rm -f special/mandrake-small.xpm
+
+ln -s user-hat-mdk.png root.png
+ln -s root.png root
+ln -s user-default-mdk.png default.png
+
 
 %post
 if [ -f /etc/X11/window-managers.rpmsave ];then
@@ -41,21 +48,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc TRANSLATORS special/* README.CVS
+%config /etc/skel/Desktop/
+%doc TRANSLATORS special/*
 %dir /etc/X11/wmsession.d/
 /usr/sbin/*
 /usr/bin/*
-/usr/share/faces/*
+/usr/share/faces
 /usr/share/icons/*.xpm
 /usr/share/icons/*.jpg
 /usr/share/icons/mini/*.xpm
 /usr/share/icons/large/*.xpm
 /usr/share/pixmaps/backgrounds/mandrake
 /usr/share/pixmaps/backgrounds/default_background.jpg
-%config /etc/skel/Desktop/
 /usr/share/pixmaps/mdk
-#/usr/share/gnome/apps/Internet/*.desktop
-/usr/share/gnome/apps/System/*.desktop
 /usr/lib/mc/desktop-scripts/mandrake.links.sh
 /usr/lib/desktop-links/mandrake.links
 %{_mandir}/*/*
@@ -63,6 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Thu Aug 24 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.4-9mdk
 - Add a link "root" to make GDM happy
+- Remove old links
 
 * Wed Aug 23 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.4-8mdk
 - Add links default.png and root.png to make KDM happy
