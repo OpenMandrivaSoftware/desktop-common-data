@@ -1,7 +1,8 @@
 #
 # WARNING: This file is in unicode!
 #
-# Iigo Salvador Azurmendi <xalba@euskalnet.net>
+# Iigo Salvador Azurmendi <xalba@euskalnet.net>, 2001
+# Elhuyar, 2002
 #
 msgid ""
 msgstr ""
@@ -22,11 +23,11 @@ msgstr "DrakConf"
 
 #: gnome/mandrake.links.desktop.in.h:2 old/mandrake.links.desktop.in.h:2
 msgid "GNOME Web Site"
-msgstr "GNOME Web Gunea"
+msgstr "GNOMEren web gunea"
 
 #: gnome/mandrake.links.desktop.in.h:3 old/mandrake.links.desktop.in.h:6
 msgid "Mandrake documentation"
-msgstr "Mandrake dokumentazioa"
+msgstr "Mandrake-ren dokumentazioa"
 
 #: gnome/mandrake.links.desktop.in.h:4 kdelnk/Netscape.kdelnk.in.h:1
 #: old/Netscape.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:7
@@ -36,7 +37,7 @@ msgstr "Netscape"
 #: kde/Desktop/Templates/MimeType.noext.kdelnk.in.h:1
 #: old/MimeType.noext.kdelnk.in.h:1
 msgid "Mime Type"
-msgstr "Mime Moeta"
+msgstr "Mime mota"
 
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
@@ -45,12 +46,12 @@ msgstr "Aplikazioa"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr "Internet Helbidea (URL)"
+msgstr "Internet helbidea (URL)"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
 msgid "World Wide Web URL"
-msgstr "World Wide Web URL"
+msgstr "World Wide Web-eko URLa"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:2
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:1
@@ -58,7 +59,7 @@ msgstr "World Wide Web URL"
 #: old/CD-ROM.noext.kdelnk.in.h:2 old/Device.noext.kdelnk.in.h:1
 #: old/Floppy.noext.kdelnk.in.h:1
 msgid "File System Device"
-msgstr "Fitxategi Sistemaren Gailua"
+msgstr "Fitxategi-sistemaren gailua"
 
 #: kde/Desktop/Templates/Ftpurl.noext.kdelnk.in.h:1
 #: old/Ftpurl.noext.kdelnk.in.h:1
@@ -67,15 +68,15 @@ msgstr "FTP URL"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:1 old/Printer.noext.kdelnk.in.h:1
 msgid "Default printer"
-msgstr "Inprimagailu lehenetsia"
+msgstr "Inprimagailua lehenetsi"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr "Kudeatu zure inprimagailu ilara"
+msgstr "Inprimaketa-ilara kudeatu"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
-msgstr "CD-ROM"
+msgstr "CD-ROMa"
 
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:2 old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
@@ -83,53 +84,53 @@ msgstr "Disketea"
 
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
-msgstr "Mandrake eta KDE dokumentazioa"
+msgstr "Mandrake eta KDEren dokumentazioa"
 
 #: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
-msgstr "Mandrake eta KDE dokumentazioa"
+msgstr "Mandrake eta KDEren dokumentazioa."
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr "Linux-Mandrakeren sistema ezarketa tresnak"
+msgstr "Linux Mandrake-ren sistemaren konfigurazio-tresnak"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
-msgstr "Atariko karpeta"
+msgstr "Etxeko direktorioa"
 
 #: kdelnk/Internet.kdelnk.in.h:1 old/Internet.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:3
 msgid "Internet connection"
-msgstr "Internetera lotura"
+msgstr "Interneteko konexioa"
 
 #: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
-msgstr "Internetera lotura."
+msgstr "Interneteko konexioa."
 
 #: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
-msgstr "Netscape nabigatzailea"
+msgstr "Netscape-ren arakatzailea"
 
 #: kdelnk/News.kdelnk.in.h:1 old/News.kdelnk.in.h:1
 msgid "Linux Mandrake News"
-msgstr "Linux Mandrakeren berriak"
+msgstr "Linux Mandrake-ren Berriak"
 
 #: kdelnk/Printer.kdelnk.in.h:1 old/Printer.kdelnk.in.h:1
 msgid "Drop text and postscript files onto the PRINTER icon"
-msgstr "Utzi textu eta postscript fitxategiak IMPRIMAGAILU ikono gainean"
+msgstr "Kokatu testua eta postscript fitxategiak INPRIMAGAILUAREN ikonoan"
 
 #: kdelnk/Printer.kdelnk.in.h:2 old/Printer.kdelnk.in.h:2
 msgid "Printer"
-msgstr "Imprimagailua"
+msgstr "Inprimagailua"
 
 #: kdelnk/Updates.kdelnk.in.h:1 old/Updates.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:5
 msgid "Mandrake Updates"
-msgstr "Mandrake Eguneratzekoak"
+msgstr "Mandrake-ren eguneratzeak"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr "Leihoa ezin itxi ? erabili 'XKill'"
+msgstr "Ezin duzu leihoa itxi? erabili 'XKill'"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"
@@ -137,7 +138,7 @@ msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr "Linux Dokumentuak"
+msgstr "Linux dokumentuak"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
@@ -145,4 +146,4 @@ msgstr "RpmDrake"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
-msgstr "Gnome eta X aplikazioak"
+msgstr "Gnome eta X Aplik"
