@@ -38,8 +38,9 @@ fi
 #		hr*) CAPTION="Veza s InterNetom" ;;
 #		hu*) CAPTION="Internet kapcsolat" ;;
 #		id*) CAPTION="Koneksi Internet" ;;
-#		it*) CAPTION="Connessione a Internet" ;;
 #		is*) CAPTION="Lýðnets tenging" ;;
+#		it*) CAPTION="Connessione a Internet" ;;
+#		ko*) CAPTION="ÀÎÅÍ³Ý ¿¬°á" ;;
 #		lt*) CAPTION="Prisijungimas prie interneto" ;;
 #		lv*) CAPTION="Interneta pieslçgums" ;;
 #		nl*) CAPTION="Internetverbinding" ;;
@@ -96,6 +97,7 @@ fi
 #		id*) CAPTION="Situs Update Mandrake" ;;
 #		is*) CAPTION="Mandrake uppfærslur" ;;
 #		it*) CAPTION="Aggiornamenti Mandrake" ;;
+#		ko*) CAPTION="¸Çµå·¹ÀÌÅ© ¾÷µ¥ÀÌÆ®" ;;
 #		lt*) CAPTION="Mandrake atnaujinimai" ;;
 #		lv*) CAPTION="Mandrake atjauninâjumi" ;;
 #		nl*) CAPTION="Mandrake updates" ;;
