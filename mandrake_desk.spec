@@ -1,6 +1,6 @@
-%define	release	22mdk
+%define	release	1mdk
 %define name	mandrake_desk
-%define version	1.0.3
+%define version	1.0.4
 
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		%{name}
@@ -28,7 +28,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %install
 make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
 rm -f special/mandrake-small.xpm
+
+%post
+if [ -f /etc/X11/window-managers.rpmsave ];then
+	/usr/sbin/convertsession -f /etc/X11/window-managers.rpmsave || exit 0
+fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -37,6 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc TRANSLATORS special/* README.CVS
 %config /etc/X11/window-managers
+%dir /etc/X11/wmsession.d/
 /usr/sbin/*
 /usr/bin/*
 /usr/share/icons/*.xpm
@@ -54,6 +61,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Tue Jul 11 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.4-1mdk
+- Add convertsession
+- Make window-managers file dynamic and set them in /etc/X11/wmsession.d/.
+
 * Mon May 29 2000 dam's <damien@mandrakesoft.com> 1.0.3-22mdk
 - corrected doc url on gnome-desktop
 

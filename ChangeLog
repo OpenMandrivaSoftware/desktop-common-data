@@ -1,3 +1,10 @@
+2000-07-11  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
+
+	* sbin/chksession:  make window-managers file dynamic by simple
+	entry in /etc/X11/wmsession.d/
+	* sbin/convertsession: a new greatest hit.
+	* mandrake_desk.spec: %post with convertsession
+
 2000-05-29  dam's  <damien@mandrakesoft.com>
 
 	* corrected doc url in gnome desktop
