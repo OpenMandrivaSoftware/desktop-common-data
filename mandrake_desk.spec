@@ -13,7 +13,7 @@ Packager:	David BAUDENS <baudens@mandrakesoft.com>
 
 # get the source from our cvs repository (see	
 # http://www.linuxmandrake.com/en/cvs.php3)
-Source:		mandrake_desk.tar.bz2
+Source:		%{name}-%{version}.tar.bz2
 Source1:	eazel-engine-0.3.tar.bz2
 Source2:	gtkrc
 #Patch:          mandrake_desk-8.0-zip_mount_typo.patch.bz2
