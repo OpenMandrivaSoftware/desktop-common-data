@@ -2,6 +2,7 @@
 [KDE Desktop Entry]
 Name=XKill
 Name[af]=XKill
+Name[ar]=XKill
 Name[ca]=XKill
 Name[cs]=XKill
 Name[cy]=XKill
@@ -31,6 +32,7 @@ Name[wa]=XKill
 Name[zh_CN.GB2312]=XKill ÷–÷є≥ћ–т
 Comment=Can't close a window ? use 'XKill'
 Comment[af]=Sukkel om 'n venster toe te maak? Gebruik 'XKill' !
+Comment[ar]=д«  ” „кў ≈Џд«в ж«б–…њ «” ќѕе 'XKill'
 Comment[bg]=ѕолзвайте XKill за да затворите блокирала програма!
 Comment[br]=Pa n'hellit ket serriс ur prenestr, implijit 'XKill' !
 Comment[ca]=No podeu tancar una finestra? Utilitzeu 'XKill'
