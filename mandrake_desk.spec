@@ -166,7 +166,7 @@ rm -fr %buildroot
 
 
 %changelog
-* Wed Jun 04 2003 David BAUDENS <baudens@mandrakesoft.com> 
+* Wed Jun 04 2003 David BAUDENS <baudens@mandrakesoft.com> 9.1-5mdk
 - Create a link to allow users to access to Mandrake's backgrounds from KDE
 
 * Thu Mar 13 2003 David BAUDENS <baudens@mandrakesoft.com> 9.1-4mdk
