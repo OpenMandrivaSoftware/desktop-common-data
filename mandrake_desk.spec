@@ -70,7 +70,7 @@ for i in faces/*.png ; do install -m 0644 $i %buildroot/%_datadir/mdk/faces/ ; d
 install -m 0644 faces/default.png %buildroot/%_datadir/faces/default.png
 
 # David - 9.0-5mdk - For GDM
-install -m 0644 faces/default.png %buildroot/%_datadir/mdk/faces/user-default-mdk.png
+install -m 0644 faces/default.png %buildroot/%_datadir/faces/user-default-mdk.png
 
 
 
