@@ -66,54 +66,54 @@ fi
 ###################
 # Mandrake Update #
 ###################
-CAPTION=""
-for i in $LISTLANG
-do
-	if [ "$CAPTION" != "" ]; then break ; fi
-	case "$i" in
-		en*) CAPTION="Mandrake Updates" ;;
-		bg*) CAPTION="Mandrake Îáíîâÿâàíå" ;;
-		br*) CAPTION="Hizivadurioù Mandrake" ;;
-		ca*) CAPTION="Actualitzacions del Mandrake" ;;
-		cs*) CAPTION="Aktualizace Mandrake" ;;
-		cy*) CAPTION="Diweddariadau Mandrake" ;;
-		da*) CAPTION="Mandrake Opdateringer" ;;
-		de*) CAPTION="Mandrake Updates" ;;
-		el*) CAPTION="Áíáâáèìßóåéò ôïõ Mandrake" ;;
-		eo*) CAPTION="Mandrejkaj Øisdatigoj" ;;
-		es*) CAPTION="Actualizaciones de Mandrake" ;;
-		et*) CAPTION="Mandrake parandused" ;;
-		fi*) CAPTION="Mandrake päivitykset" ;;
-		fr*) CAPTION="Mises à jour de Mandrake" ;;
-		ga*) CAPTION="Nuashonraí Mandrake" ;;
-		gl*) CAPTION="Actualizacións de Mandrake" ;;
-		hr*) CAPTION="Mandrake nadogradnje" ;;
-		hu*) CAPTION="Mandrake frissítések" ;;
-		id*) CAPTION="Situs Update Mandrake" ;;
-		is*) CAPTION="Mandrake uppfærslur" ;;
-		it*) CAPTION="Aggiornamenti Mandrake" ;;
-		lt*) CAPTION="Mandrake atnaujinimai" ;;
-		lv*) CAPTION="Mandrake atjauninâjumi" ;;
-		nl*) CAPTION="Mandrake updates" ;;
-		no*) CAPTION="Mandrake oppdateringer" ;;
-		ro*) CAPTION="Actualizãri pentru Mandrake" ;;
-		sk*) CAPTION="Mandrake Updates" ;;
-		sl*) CAPTION="Nadgradnje Mandrake" ;;
-		sv*) CAPTION="Mandrake Uppdateringar" ;;
-		tr*) CAPTION="Mandrake güncellemesi" ;;
-		uk*) CAPTION="ğÏÎÏ×ÌÅÎÎÑ ÓÉÓÔÅÍÉ Mandrake" ;;
-		wa*) CAPTION="Metaedje a djoû di Mandrake" ;;
-		zh_CN*) CAPTION="Mandrake Éı¼¶" ;;
-	esac
-done
-if [ "$CAPTION" = "" ]; then CAPTION="Mandrake Updates" ; fi
-
-/usr/bin/gdesktoplnk \
-	--progname="/usr/X11R6/bin/MandrakeUpdate" \
-	--icon-name="../icons/updates-mdk.xpm" \
-	--icon-caption="$CAPTION" \
-	--link-name="Mandrake Updates" \
-	--desktop-dir="$HOME/.gnome-desktop"
+#CAPTION=""
+#for i in $LISTLANG
+#do
+#	if [ "$CAPTION" != "" ]; then break ; fi
+#	case "$i" in
+#		en*) CAPTION="Mandrake Updates" ;;
+#		bg*) CAPTION="Mandrake Îáíîâÿâàíå" ;;
+#		br*) CAPTION="Hizivadurioù Mandrake" ;;
+#		ca*) CAPTION="Actualitzacions del Mandrake" ;;
+#		cs*) CAPTION="Aktualizace Mandrake" ;;
+#		cy*) CAPTION="Diweddariadau Mandrake" ;;
+#		da*) CAPTION="Mandrake Opdateringer" ;;
+#		de*) CAPTION="Mandrake Updates" ;;
+#		el*) CAPTION="Áíáâáèìßóåéò ôïõ Mandrake" ;;
+#		eo*) CAPTION="Mandrejkaj Øisdatigoj" ;;
+#		es*) CAPTION="Actualizaciones de Mandrake" ;;
+#		et*) CAPTION="Mandrake parandused" ;;
+#		fi*) CAPTION="Mandrake päivitykset" ;;
+#		fr*) CAPTION="Mises à jour de Mandrake" ;;
+#		ga*) CAPTION="Nuashonraí Mandrake" ;;
+#		gl*) CAPTION="Actualizacións de Mandrake" ;;
+#		hr*) CAPTION="Mandrake nadogradnje" ;;
+#		hu*) CAPTION="Mandrake frissítések" ;;
+#		id*) CAPTION="Situs Update Mandrake" ;;
+#		is*) CAPTION="Mandrake uppfærslur" ;;
+#		it*) CAPTION="Aggiornamenti Mandrake" ;;
+#		lt*) CAPTION="Mandrake atnaujinimai" ;;
+#		lv*) CAPTION="Mandrake atjauninâjumi" ;;
+#		nl*) CAPTION="Mandrake updates" ;;
+#		no*) CAPTION="Mandrake oppdateringer" ;;
+#		ro*) CAPTION="Actualizãri pentru Mandrake" ;;
+#		sk*) CAPTION="Mandrake Updates" ;;
+#		sl*) CAPTION="Nadgradnje Mandrake" ;;
+#		sv*) CAPTION="Mandrake Uppdateringar" ;;
+#		tr*) CAPTION="Mandrake güncellemesi" ;;
+#		uk*) CAPTION="ğÏÎÏ×ÌÅÎÎÑ ÓÉÓÔÅÍÉ Mandrake" ;;
+#		wa*) CAPTION="Metaedje a djoû di Mandrake" ;;
+#		zh_CN*) CAPTION="Mandrake Éı¼¶" ;;
+#	esac
+#done
+#if [ "$CAPTION" = "" ]; then CAPTION="Mandrake Updates" ; fi
+#
+#/usr/bin/gdesktoplnk \
+#	--progname="/usr/X11R6/bin/MandrakeUpdate" \
+#	--icon-name="../icons/updates-mdk.xpm" \
+#	--icon-caption="$CAPTION" \
+#	--link-name="Mandrake Updates" \
+#	--desktop-dir="$HOME/.gnome-desktop"
 
 
 ############
