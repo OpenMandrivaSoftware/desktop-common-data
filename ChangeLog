@@ -1,4 +1,8 @@
-2000-08-22 David BAUDNS <baudens@mandrakesoft.com>
+2000-08-23 David BAUDENS <baudens@mandrakesoft.com>
+
+	* Convert faces/*.xpm in faces/*.png to make KDM happy
+
+2000-08-22 David BAUDENS <baudens@mandrakesoft.com>
 
 	* Move user* pixmaps in faces (/usr/share/faces/)
 

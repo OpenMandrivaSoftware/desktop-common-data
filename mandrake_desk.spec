@@ -1,6 +1,6 @@
 %define name	mandrake_desk
 %define version	1.0.4
-%define release 6mdk
+%define release 7mdk
 
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		%{name}
@@ -61,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/*
 
 %changelog
+* Wed Aug 23 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.4-7mdk
+- Convert /usr/share/faces/*.xpm to /usr/share/faces/*.png to make KDM happy
+
 * Tue Aug 22 2000 David BAUDENS <baudens@mandrakesoft.com> 1.0.4-6mdk
 - Move user icons in /usr/share/faces
 
