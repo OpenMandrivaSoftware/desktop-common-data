@@ -121,7 +121,7 @@ void krozatSaver::initNextScreen()
 void krozatSaver::readConfig()
 {
     //Change this directory
-    mDirectory="/usr/share/apps/krozat/pics/";
+    mDirectory="/usr/share/mdk/screensaver/";
     mDelay = 5000; //in milli-second
 
     loadDirectory();
