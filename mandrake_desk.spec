@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
-* Fir Apr 28 2000 dam's <damien@mandrakesoft.com> 1.0.3-11mdk
+* Fri Apr 28 2000 dam's <damien@mandrakesoft.com> 1.0.3-11mdk
 - Corrected Xfce entry.
 
 * Thu Apr 27 2000 dam's <damien@mandrakesoft.com> 1.0.3-10mdk
