@@ -1,7 +1,10 @@
 #!/usr/bin/perl
 # (c) MandrakeSoft, Chmouel Boudjnah <chmouel@mandrakesoft.com>
 # Copyright under GPL blah blah blah.
-## you'll don't find much info here, see --help.
+## For info, see "chksession --help" or  "man chksession"
+
+# Modified by Bernard Lang on August 21, 2003.
+
 
 my @lf;
 
@@ -11,25 +14,30 @@ sub usage {
   print {  $e ? STDERR : STDOUT } << "EOF";
 Usage: $0 [OPTION]...
 
-              -F --first:	Print only first available entry.
-	      -t, --test:	Go in test mode.
-	      -l, --list:	List window-managers.
-    -f=FILE, --file=FILE:	Specify an alternarte config files other
-				than /etc/X11/window-manager
--x=ENTRY, --xsession=ENTRY:	Product window-managers script of ENTRY.
-	      -k,  --kdm:	Product window-managers list for kdm sessions.
-	      -g,  --gdm:	Product window-managers script for gdm sessions.
-	      -h, --help:	Product this help.
+              -F --first:   Print only first available entry.
+	      -t, --test:   Go in test mode.
+	      -l, --list:   List window-managers.
+       -d=DIR, --dir=DIR:   Specifies a directory of w-m configuration files.
+			    Default is /etc/X11/wmsession.d/
+-x=ENTRY, --xsession=ENTRY: Produce window-managers script of ENTRY.
+	      -k,  --kdm:   Produce window-managers list for kdm sessions.
+	      -g,  --gdm:   Produce window-managers script for gdm sessions.
+	      -h, --help:   Produce this help.
 
 EOF
   exit($e);
 }
-  
-sub parse_file {
-  my $f=shift @_;
+
+sub cat {   # returns content of argument file as a single string
+  my ($f) = @_;
+  local *F;
   open F, $f or die "Can't open $f\n";
   local $/ = "";
-  while (<F>) {
+  <F>
+  }
+  
+sub parse_file {         # parse a session descriptor file
+     $_ = cat (shift @_);
      ($n = $1) =~ s| ||g if /^NAME=(.*)/m;
      $e = $1 if /^EXEC=(.*)/m;
 #     $d = $1 if /^DESC=(.*)/m;
@@ -37,7 +45,6 @@ sub parse_file {
      $s = $1 while /SCRIPT:(.*?)$/gs; chomp $s;
      if (-x $e) { $script{$n} = $s; push @lf, $n; }
 #     if (-x $e) { $script{$n} = $s; $exec{$n} = $e; $desc{$n} = $d; $icon{$n} = $i; push @lf, $n; }
-  }
 }
 
 usage(1)
@@ -68,25 +75,29 @@ while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
   }
 }
   
+# Parse all relevant files in session directory $dir
 $dir = $test ? './wmsession.d/' : '/etc/X11/wmsession.d/' unless $dir;
 chdir $dir; 
 for (<*>) {
     next if /.*~/;
-    next if /.*\\.rpm(save|old)/;
-    parse_file ("$dir/$_");
+    next if /.*\.rpm(save|old)/;
+    parse_file ("$_");
 }
 
-sub cat { my ($f) = @_; local *F; open F, $f; join '', <F> }
-my ($e) = cat("/etc/sysconfig/desktop") =~ /(\S+)/;
-@lf = sort { $b =~ /$e/i <=> $a =~ /$e/i } @lf;
+my ($e) = eval {cat("/etc/sysconfig/desktop")} =~ /(\S+)/;
+# The first string (without spaces) in the file is copied to $e.
+
+# If $e is one of the names in @lf, then it is placed first (leftmost).
+# Order of names in @lf is otherwise unchanged.
+@lf = sort { $b =~ /^$e$/i <=> $a =~ /^$e$/i } @lf;
+
 
 if ($kdm) {
   $session="SessionTypes=";
-  for(@lf) { $session .= /$lf[-1]/ ? "$_,failsafe,default" : "$_,"  }
+  for(@lf) { $session .= /$lf[-1]$/ ? "$_,failsafe,default" : "$_,"  }
   print "$session\n";
   exit(0);
 }
-
 
 if ($gdm) {
   my $d = '/etc/X11/dm/Sessions/';
@@ -129,8 +140,9 @@ if ($xsession) {
 
 if ($list) { 
   if (@lf) {
-    my $p; for(@lf) { $p .= /$lf[-1]/ ? "$_ default failsafe" : "$_ " } print "$p\n";
+    my $p; for(@lf) { $p .= /^$lf[-1]$/ ? "$_ default failsafe" : "$_ " } print "$p\n";
  } else {
     print "Default\n";
   }
 }
+
