@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	5mdk
+Release: 	6mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -51,6 +51,7 @@ install -m 0644 backgrounds/xfdrake-test-card.png %buildroot/%_datadir/mdk/xfdra
 # /usr/bin/
 install -d -m 0755 %buildroot/%_bindir/
 for i in bin/*.sh ; do install -m 0755 $i %buildroot/%_bindir/ ; done
+install -m 0755 bin/www-browser %buildroot/%_bindir/
 
 # /usr/sbin/
 install -d -m 0755 %buildroot/%_sbindir/
@@ -143,6 +144,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Aug 31 2004 Frederic Lepied <flepied@mandrakesoft.com> 10.1-6mdk
+- added the script www-browser
+
 * Fri Aug 27 2004 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-5mdk
 - Fix typo in gnome-cd entry
 
