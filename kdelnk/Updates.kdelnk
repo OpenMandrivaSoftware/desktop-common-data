@@ -22,6 +22,7 @@ Name[sk]=Mandrake Updates
 Name[tr]=Mandrake Güncellemeleri
 Name[uk]=ğÏÎÏ×ÌÅÎÎÑ ÓÉÓÔÅÍÉ Mandrake
 Name[wa]=Metaedje a djoû di Mandrake
+Name[zh_CN.GB2312]=Mandrake Éı¼¶
 MimeType=
 Exec=MandrakeUpdate
 Icon=updates-mdk.xpm

@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=XKill
+Name[zh_CN.GB2312]=XKill ÖĞÖ¹³ÌĞò
 Comment=Can't close a window ? use 'XKill'
 Comment[bg]=Ïîëçâàéòå XKill çà äà çàòâîğèòå áëîêèğàëà ïğîãğàìà!
 Comment[br]=Pa n'hellit ket serriñ ur prenestr, implijit 'XKill' !
@@ -26,7 +27,8 @@ Comment[ro]=Nu poşi închide o fereastrã? Foloseºte 'XKill'
 Comment[sk]=Nemo¾no zatvori» okno? Pou¾ite 'XKill'.
 Comment[tr]=Bir pencereyi kapatamıyor musunuz? 'XKill' kullanın.
 Comment[uk]=ëÏÒÉÓÔÕÊÔÅÓÑ XKill, ËÏÌÉ ×¦ËÎÏ ÎÅ ÚÁËÒÉ×Á¤ÔØÓÑ
-Comment[wa]=Vos n' savoz clôre on purnea? Eployîz 'Xkill'
+Comment[wa]=Vos n' savoz clôre on purnea? Eployîz 'XKill'
+Comment[zh_CN.GB2312]=´°¿Ú¹Ø²»µôÁË? Ê¹ÓÃ 'XKill'
 SwallowExec=
 SwallowTitle=
 BinaryPattern=xkill;

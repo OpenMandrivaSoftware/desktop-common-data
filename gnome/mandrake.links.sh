@@ -10,47 +10,48 @@ else
 	fi
 fi
 
-# ###################
-# # Internet connex #
-# ###################
-# CAPTION=""
-# for i in $LISTLANG
-# do
-# 	if [ "$CAPTION" != "" ]; then break ; fi
-# 	case "$i" in
-# 		en*) CAPTION="Internet connection" ;;
-# 		bg*) CAPTION="Èíòåğíåò Âğúçêà" ;;
-# 		ca*) CAPTION="Connexió a Internet" ;;
-#		cs*) CAPTION="Pøipojení k Internetu" ;;
-# 		da*) CAPTION="Internet forbindelse" ;;
-# 		de*) CAPTION="Internetverbindung" ;;
-# 		es*) CAPTION="Conexión a Internet" ;;
-# 		et*) CAPTION="Internetiühendus" ;;
-# 		fr*) CAPTION="Connexion à l'Internet" ;;
-# 		gl*) CAPTION="Conexión a Internet" ;;
-# 		hr*) CAPTION="Veza s InterNetom" ;;
-# 		hu*) CAPTION="Internet kapcsolat" ;;
-# 		id*) CAPTION="Koneksi Internet" ;;
-# 		it*) CAPTION="Connessione a Internet" ;;
-# 		is*) CAPTION="Lığnets tenging" ;;
-#		lv*) CAPTION="Interneta pieslçgums" ;;
-# 		nl*) CAPTION="Internet verbinding" ;;
-# 		no*) CAPTION="Oppkobling Internett" ;;
-# 		ro*) CAPTION="Conectare la Internet" ;;
-# 		ru*) CAPTION="Internet-ÓÏÅÄÉÎÅÎÉÅ" ;;
-#		tr*) CAPTION="İnternet bağlantısı" ;;
-# 		uk*) CAPTION="ú'¤ÄÎÁÎÎÑ Ú ¦ÎÔÅÒÎÅÔÏÍ" ;;
-# 		wa*) CAPTION="Raloyaedje al rantoele daegnrece" ;;
-# 	esac
-# done
-# if [ "$CAPTION" = "" ]; then CAPTION="Internet connection" ; fi
-# 
-# /usr/bin/gdesktoplnk \
-# 	--progname="/usr/bin/gnome-ppp" \
-# 	--icon-name="gnome-networktool.png" \
-# 	--icon-caption="$CAPTION" \
-# 	--link-name="MDKppp" \
-# 	--desktop-dir="$HOME/.gnome-desktop"
+###################
+# Internet connex #
+###################
+CAPTION=""
+for i in $LISTLANG
+do
+	if [ "$CAPTION" != "" ]; then break ; fi
+	case "$i" in
+		en*) CAPTION="Internet connection" ;;
+		bg*) CAPTION="Èíòåğíåò Âğúçêà" ;;
+		ca*) CAPTION="Connexió a Internet" ;;
+		cs*) CAPTION="Pøipojení k Internetu" ;;
+ 		da*) CAPTION="Internet forbindelse" ;;
+		de*) CAPTION="Internetverbindung" ;;
+		es*) CAPTION="Conexión a Internet" ;;
+		et*) CAPTION="Internetiühendus" ;;
+		fr*) CAPTION="Connexion à l'Internet" ;;
+		gl*) CAPTION="Conexión a Internet" ;;
+		hr*) CAPTION="Veza s InterNetom" ;;
+		hu*) CAPTION="Internet kapcsolat" ;;
+		id*) CAPTION="Koneksi Internet" ;;
+		it*) CAPTION="Connessione a Internet" ;;
+		is*) CAPTION="Lığnets tenging" ;;
+		lv*) CAPTION="Interneta pieslçgums" ;;
+		nl*) CAPTION="Internet verbinding" ;;
+		no*) CAPTION="Oppkobling Internett" ;;
+		ro*) CAPTION="Conectare la Internet" ;;
+		ru*) CAPTION="Internet-ÓÏÅÄÉÎÅÎÉÅ" ;;
+		tr*) CAPTION="İnternet bağlantısı" ;;
+		uk*) CAPTION="ú'¤ÄÎÁÎÎÑ Ú ¦ÎÔÅÒÎÅÔÏÍ" ;;
+		wa*) CAPTION="Raloyaedje al rantoele daegnrece" ;;
+		zh_CN*) CAPTION="»¥ÁªÍøÁ¬½Ó" ;;
+	esac
+done
+if [ "$CAPTION" = "" ]; then CAPTION="Internet connection" ; fi
+
+/usr/bin/gdesktoplnk \
+	--progname="/usr/bin/gnome-ppp" \
+	--icon-name="gnome-networktool.png" \
+	--icon-caption="$CAPTION" \
+	--link-name="MDKppp" \
+	--desktop-dir="$HOME/.gnome-desktop"
 
 ###################
 # Mandrake Update #
@@ -85,6 +86,7 @@ do
 		tr*) CAPTION="Mandrake güncellemesi" ;;
 		uk*) CAPTION="ğÏÎÏ×ÌÅÎÎÑ ÓÉÓÔÅÍÉ Mandrake" ;;
 		wa*) CAPTION="Metaedje a djoû di Mandrake" ;;
+		zh_CN*) CAPTION="Mandrake Éı¼¶" ;;
 	esac
 done
 if [ "$CAPTION" = "" ]; then CAPTION="Mandrake Updates" ; fi
@@ -127,6 +129,7 @@ do
 	if [ "$CAPTION" != "" ]; then break ; fi
 	case "$i" in
 		en*) CAPTION="RpmDrake" ;;
+		zh_CN*); CAPTION="RpmDrake Èí¼ş°ü¹ÜÀí" ;;
 	esac
 done
 if [ "$CAPTION" = "" ]; then CAPTION="RpmDrake" ; fi

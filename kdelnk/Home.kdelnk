@@ -25,6 +25,7 @@ Comment[sk]=DomАci prieХinok
 Comment[tr]=Ev dizini
 Comment[uk]=Домашня директор╕я
 Comment[wa]=Ridant MЕjhon
+Comment[zh_CN.GB2312]=жВд©б╪
 Type=Link
 URL=file:$HOME
 Icon=kfm_home.xpm

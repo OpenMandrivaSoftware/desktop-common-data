@@ -72,6 +72,7 @@ Comment[sv]=GNU Image Manipulation Program
 Comment[tr]=GNU GЖrЭntЭ щЧleme ProgramЩ
 Comment[uk]=Програма GNU для обробки зображень
 Comment[wa]=Li programe da GNU po-z aspougnН des imЕdjes
+Comment[zh_CN.GB2312]=GNU м╪оС╢╕юМЁлпР
 SwallowTitle=
 SwallowExec=
 BinaryPattern=gimp;

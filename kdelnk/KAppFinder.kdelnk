@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=KAppFinder
+Name[zh_CN.GB2312]=KAppFinder ³ÌĞòËÑË÷
 Comment=Find X non-KDE applications on your Mandrake system
 Comment[bg]=Òúğñè X íå-KDE ïğîãğàìè âúâ âàøàòà Mandrake ñèñòåìà
 Comment[br]=Kavit an arloadoù X an-KDE war ho reizhiad Mandrake
@@ -27,6 +28,7 @@ Comment[sk]=Nájde X ne-KDE aplikácie vá¹ho Mandrake systému
 Comment[tr]=Mandrake Linux üzerindeki KDE dışında olan uygulamaları bulur
 Comment[uk]=úÎÁÈÏÄÉÔØ ĞÒÏÇÒÁÍÉ ÄÌÑ X, ÑË¦ ÎÅ ÎÁÌÅÖÁÔØ ÄÏ KDE, Õ ÷ÁÛ¦Ê Mandrake ÓÉÓÔÅÍ¦
 Comment[wa]=Trover les programes è mode grafike nén di KDE so vost éndjole
+Comment[zh_CN.GB2312]=°ïÄã²éÕÒÕâ¸öÏµÍ³ÉÏ¿ÉÓÃµÄ·Ç KDE Ó¦ÓÃ³ÌĞò
 SwallowExec=
 SwallowTitle=
 BinaryPattern=kappfinder;
