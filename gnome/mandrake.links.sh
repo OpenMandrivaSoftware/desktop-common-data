@@ -32,6 +32,7 @@ fi
 # 		id*) CAPTION="Koneksi Internet" ;;
 # 		it*) CAPTION="Connessione a Internet" ;;
 # 		is*) CAPTION="Lýðnets tenging" ;;
+#		lv*) CAPTION="Interneta pieslçgums" ;;
 # 		nl*) CAPTION="Internet verbinding" ;;
 # 		no*) CAPTION="Oppkobling Internett" ;;
 # 		ro*) CAPTION="Conectare la Internet" ;;
@@ -48,7 +49,7 @@ fi
 # 	--icon-caption="$CAPTION" \
 # 	--link-name="MDKppp" \
 # 	--desktop-dir="$HOME/.gnome-desktop"
-#
+
 ###################
 # Mandrake Update #
 ###################
@@ -75,6 +76,7 @@ do
 		is*) CAPTION="Mandrake uppfærslur" ;;
 		it*) CAPTION="Aggiornamenti Mandrake" ;;
 		lt*) CAPTION="Mandrake atnaujinimai" ;;
+		lv*) CAPTION="Mandrake atjauninâjumi" ;;
 		nl*) CAPTION="Mandrake updates" ;;
 		no*) CAPTION="Mandrake oppdateringer" ;;
 		ro*) CAPTION="Actualizãri pentru Mandrake" ;;
