@@ -1,18 +1,18 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
 Version:	8.0
-Release:	5mdk
+Release:	6mdk
 License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
 Packager:	David BAUDENS <baudens@mandrakesoft.com>
 
-# get the source from our cvs repository (see
+# get the source from our cvs repository (see	
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source:		mandrake_desk.tar.bz2
 Source1:	eazel-engine-0.3.tar.bz2
 Source2:	gtkrc
-Patch:          mandrake_desk-8.0-zip_mount_typo.patch.bz2
+#Patch:          mandrake_desk-8.0-zip_mount_typo.patch.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 
 %description
@@ -22,7 +22,7 @@ Mandrake desktop.
 %prep
 
 %setup -q -n %name
-%patch -p1
+#%patch -p1
 %build
 find . -type 'd' -name 'CVS'|xargs rm -rf
 
@@ -98,12 +98,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%config /etc/skel/Desktop/
+#%config /etc/skel/Desktop/
 %config /etc/skel/.kde
 %config /etc/gtk/gtkrc
 %doc TRANSLATORS special/*
 %dir /etc/X11/wmsession.d/
-/usr/sbin/*
+%{_sbindir}/*
 %{_bindir}/*
 %{_datadir}/faces
 %{_iconsdir}/*.xpm
@@ -113,11 +113,15 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pixmaps/mdk
 %_datadir/eazel-engine
 %{_libdir}/mc/desktop-scripts/mandrake.links.sh
-/usr/lib/gtk/themes/engines/*
+%{_libdir}/gtk/themes/engines/*
 %{_mandir}/*/*
 %{_datadir}/lmdk/
 
 %changelog
+* Thu Apr 12 2001 Daouda LO <daouda@mandrakesoft.com> 8.0-6mdk
+- remove kde dir and kdelnks 
+- cvs resync 
+
 * Wed Apr 4 2001 Daouda Lo <daouda@mandrakesoft.com> 8.0-5mdk
 - fix zip mount point typo
 
