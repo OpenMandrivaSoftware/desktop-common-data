@@ -9,11 +9,14 @@
 ?package(OpenOffice.org): needs="x11" section="Use office tools" icon="ooo_impress.png" title="Create a presentation" command="ooimpress" mimetypes="application/vnd.sun.xml.impress;application/vnd.stardivision.impress;application/mspowerpoint"
 
 # Create a drawing
-?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_draw.png" title="Create a drawing" longtitle="OpenOffice.org Drawing" command="oodraw" mimetypes="application/vnd.sun.xml.draw,application/vnd.stardivision.draw"
+?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_draw.png" title="Create a drawing" command="oodraw" mimetypes="application/vnd.sun.xml.draw,application/vnd.stardivision.draw"
 
 
 # Diagrams
-?package(dia): needs="x11" section="Use office tools" title="Create flowcharts and diagrams" command="/usr/bin/dia" icon="dia.png"
+?package(koffice-kivio): needs="x11" kde_filename="kivio" section="Use office tools" title="Create flowcharts and diagrams" icon="kivio.png" command="kivio" kde_command="kivio %u" mimetypes="application/x-kivio" multiple_files="false" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nGenericName=Flowchart & Diagram Editing\\nX-KDE-NativeMimeType=application/x-kivio\\nDocPath=kivio/index.html\\nX-DCOP-ServiceType=Multi"
+
+# Design a layout
+?package(scribus): needs="x11" section="Use office tools" command="scribus" title="Design a layout" needs="x11" icon="wordprocessor_section.png"
 
 # Consult an address book
 ?package(kdepim-kaddressbook): needs="x11" kde_filename="kontact-kaddressbook" section="Use office tools" title="Consult an address book" icon="kontact-mdk.png" command="kontact --module kaddressbook" kde_command="kontact --module kaddressbook %u" mimetypes="text/x-vcard,text/x-ldif" multiple_files="false" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nDocPath=kaddressbook/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=kaddressbook\\nServiceTypes=KParts/ReadOnlyPart,Browser/View,DCOP/AddressBook\\nX-KDE-Library=libkaddressbookpart\\n"
@@ -53,9 +56,11 @@
 # Manage your finances
 ?package(gnucash): command="/usr/bin/gnucash" icon="gnucash.png" needs="X11" section="Organize" title="Manage your finances"
 
+
+
 ## Surf the Internet
 # Connect to the Internet
-?package(kdenetwork-kppp): needs="x11" kde_filename="Kppp" section="Surf the Internet" title="Connect to the Internet" icon="kppp.png" command="kppp" kde_command="kppp %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nGenericName=Internet Dial-up Tool\\nBinaryPattern=kppp;\\nDocPath=kppp/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
+?package(kdenetwork-kppp): needs="x11" kde_filename="Kppp" section="Surf the Internet" title="Dial up" icon="kppp.png" command="kppp" kde_command="kppp %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nGenericName=Internet Dial-up Tool\\nBinaryPattern=kppp;\\nDocPath=kppp/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
 
 # Browse the Web
 ?package(kdebase-progs): needs="x11" kde_filename="konqueror" section="Surf the Internet" title="Browse the Web" icon="konqueror.png" command="konqueror" kde_command="konqueror %U" kde_opt="\\nEncoding=UTF-8\\nX-KDE-Library=libkonqueror\\nX-DCOP-ServiceType=multi\\nX-KDE-StartupNotify=true"
@@ -72,6 +77,8 @@
 # Organize a video conference
 ?package(gnomemeeting): command="/usr/bin/gnomemeeting" needs="x11" icon="gnomemeeting.png" section="Surf the Internet" title="Organize a video conference"
 
+# Make a phone call
+
 
 # Create your own Web site
 ?package(quanta): needs="x11" kde_filename="quanta" section="Surf the Internet" title="Create your own Web site" icon="quanta.png" command="quanta" longtitle="Web Development Environment" mimetypes="text/html" kde_opt="\\nEncoding=UTF-8\\nDocPath=quanta/index.html\\nGenericName=Web Development Environment\\n"
@@ -79,8 +86,9 @@
 # Transfer files with FTP
 ?package(kbear): needs="kde" kde_filename="kbear" section="Surf the Internet" title="Transfer files with FTP" icon="kbear.png" command="kbear" longtitle="A Graphical FTP client" kde_opt="\\nEncoding=UTF-8\\nGenericName=FTP Client\\nMiniIcon=kbear\\nDocPath=kbear/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique"
 
-## Enjoy music and video
 
+
+## Enjoy music and video
 # Adjust the volume
 ?package(kdemultimedia-kmix): needs="kde" kde_filename="kmix" section="Enjoy music and video" title="Adjust the volume" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nGenericName=Sound Mixer\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
 
@@ -88,7 +96,7 @@
 ?package(kdemultimedia-kscd): needs="kde" kde_filename="kscd" section="Enjoy music and video" title="Listen to audio CDs" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nGenericName=CD Player\\nBinaryPattern=kscd;\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
 
 # Listen to music files
-?package(totem): 	command="/usr/bin/totem" 	needs="X11" 	section="Enjoy music and video" 	icon="totem.png" 	title="Listen to music files" 	startup_notify="true" 	kde_opt="InitialPreference=15"
+?package(amarok): needs="x11" kde_filename="amarok" section="Enjoy music and video" title="Amarok" icon="amarok.png" command="amarok" kde_command="amarok %U" kde_mimetype="application/x-ogg;audio/x-vorbis;audio/basic;audio/x-mod;audio/x-mp3;audio/x-scpls;audio/x-mpegurl;audio/x-sid;audio/x-wav" kde_opt="\\nVersion=0.9.4\\nEncoding=UTF-8\\nGenericName=Audio Player\\nDocPath=amarok/index.html\\nTerminal=false\\nActions=Enqueue;\\nX-KDE-StartupNotify=false\\n[Desktop Action Enqueue]\\nExec=amarok -e %U\\nInitialPreference=15"
 
 # Rip audio CDs
 ?package(kdemultimedia-kaudiocreator): needs="kde" kde_filename="kaudiocreator" section="Enjoy music and video" title="Rip audio CDs" icon="kaudiocreator.png" command="kaudiocreator" mimetypes="" kde_opt="\\nGenericName=CD Ripper\\nTerminalOptions=\\nPath=\\nTerminal=0\\n"
@@ -99,28 +107,31 @@
 # Mix music
 ?package(audacity): command="/usr/bin/audacity" needs="X11" icon="audacity.png" section="Enjoy music and video" title="Mix music" longtitle="Digital audio waveforms editor"
 
+# Compose music
+?package(rosegarden4): needs="x11" kde_filename="rosegarden" section="Enjoy music and video" title="Compose music" icon="rosegarden.png" command="rosegarden" kde_command="rosegarden -caption \"%c\" %i %m" mimetypes="audio/x-rosegarden,audio/x-rosegarden-device" kde_opt="\\nX-KDE-NativeMimeType=audio/x-rosegarden\\nMiniIcon=rosegarden.png\\nDocPath=rosegarden/index.html\\nTerminal=0"
+
 # Watch videos
-?package(totem): 	command="/usr/bin/totem" 	needs="X11" 	section="Enjoy music and video" 	icon="totem.png" 	mimetypes="video/mpeg,video/msvideo,video/quicktime,video/x-avi,video/x-ms-asf,video/x-ms-wmv,video/x-msvideo,application/x-ogg,audio/x-mp3,audio/x-mpeg,video/x-fli,audio/x-wav,audio/x-mpegurl,audio/x-ms-asf" 	accept_url="true" 	multiple_files="true" 	title="Watch videos" 	longtitle="Play movies and songs" 	startup_notify="true" 	kde_opt="InitialPreference=15"
+?package(kaffeine): needs="kde" kde_filename="kaffeine" section="Enjoy music and video" title="Watch videos" icon="kaffeine.png" command="kaffeine" mimetypes="application/x-ogg;audio/basic;audio/vnd.rn-realaudio;audio/x-aiff;audio/x-mp3;audio/x-mpeg;audio/x-mpegurl;audio/x-ms-wma;audio/x-ogg;audio/x-pn-realaudio;audio/x-pn-realaudio-plugin;audio/x-scpls;audio/x-wav;video/x-matroska;audio/x-matroska;video/mpeg;video/msvideo;video/quicktime;video/vnd.rn-realvideo;video/x-avi;video/x-fli;video/x-flic;video/x-ms-asf;video/x-ms-wmv;video/x-msvideo;application/x-mplayer2;application/smil;application/x-kaffeine" kde_opt="\\nEncoding=UTF-8\\nGenericName=Mediaplayer\\nServiceTypes=\\nTerminal=false\\nInitialPreference=15"
 
 # Edit videos
 ?package(kdenlive): needs="x11" kde_filename="kdenlive" section="Enjoy music and video" title="Edit videos" icon="kdenlive.png" command="kdenlive" kde_command="kdenlive -caption \"%c\" %i %m  " longtitle="Nonlinear video editor for KDE" kde_opt="\\nEncoding=UTF-8\\nDocPath=kdenlive/index.html\\nTerminal=0"
 
 # Watch television
-?package(xawtv): command="XawTV" icon="video_section.png" section="Enjoy music and video" title="Watch television" longtitle="The X11 Video4Linux Stream Capture Viewer" needs="x11"
+?package(kdetv): needs="x11" kde_filename="kdetv" section="Enjoy music and video" title="Watch television" icon="kdetv.png" command="kdetv" kde_command="kdetv -caption \"%c\" %i %m" mimetypes="text/x-tv-channels" kde_opt="\\nEncoding=UTF-8\\nMiniIcon=kdetv\\nGenericName=TV Viewer\\nTerminal=0"
 
 
 ## View, modify and create graphics
 # View images and photos
-?package(gqview):  command="/usr/bin/gqview"  icon="gqview.png"  title="View images and photos"  longtitle="A browser for graphics files"  needs="x11"  section="View, modify and create graphics"
+?package(kdegraphics-kuickshow): needs="x11" kde_filename="kuickshow" section="View, modify and create graphics" title="View images and photos" icon="kuickshow.png" command="kuickshow" kde_command="kuickshow %i %m -caption \"%c\" %U" mimetypes="image/gif,image/x-xpm,image/x-xbm,image/jpeg,image/png,image/tiff,image/x-bmp,image/x-psd,image/x-eim,image/x-portable-bitmap,image/x-portable-pixmap,image/x-portable-greymap" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nDocPath=kuickshow/index.html\\nTerminal=0\\nInitialPreference=15\\nGenericName=Image Viewer\\nX-DCOP-ServiceType=Multi"
 
 # Edit images and photos
-?package(gimp): command="gimp-remote -n -f" icon="wilbur.png" section="View, modify and create graphics" title="Edit images and photos" longtitle="The GNU Image Manipulation Program" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;image/x-bmp;image/x-xcf" accept_url="true" multiples_files="true" startup_notify="false"
+?package(gimp2_0): command="/usr/bin/gimp-remote-2.0" icon="wilber-icon.png" section="View, modify and create graphics" title="Edit images and photos" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;image/x-bmp;image/x-xcf" startup_notify="true"
 
 # Scan and use Optical Character Recognition (OCR) 
 ?package(kdegraphics-kooka): needs="x11" kde_filename="kooka" section="View, modify and create graphics" title="Scan and use Optical Character Recognition (OCR)" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/index.html\\nGenericName=Scan & OCR Program\\nX-DCOP-ServiceType=Multi\\n"
 
 # Import and sort your photos
-?package(kimdaba): needs="x11" kde_filename="kimdaba" section="View, modify and create graphics" title="Import and sort your photos" icon="kimdaba.png" command="kimdaba" kde_opt="\\nEncoding=UTF-8\\nGenericName=K Image Database\\nTerminal=0\\nX-KDE-StartupNotify=true\\n"
+?package(digikam): needs="x11" kde_filename="digikam" section="View, modify and create graphic" title="Import and sort your photos" icon="digikam.png" command="digikam" kde_command="digikam -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=digikam/index.html\\nTerminal=0"
 
 # Create a screenshot
 ?package(kdegraphics-ksnapshot): needs="x11" kde_filename="ksnapshot" section="View, modify and create graphics" title="Create a screenshot" icon="ksnapshot.png" command="ksnapshot" kde_command="ksnapshot -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nGenericName=Screen Capture Program\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nDocPath=ksnapshot/index.html\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
@@ -159,6 +170,9 @@
 
 # Burn CDs/DVDs
 ?package(k3b): needs="x11" kde_filename="k3b" section="Administer your system" title="Burn CDs-DVDs" icon="k3b.png" command="k3b" longtitle="CD writing program" mimetypes="application/x-k3b" kde_opt="\\nDocPath=k3b/index.html\\nTerminal=false\\nX-KDE-NativeMimeType=application/x-k3b\\n"
+
+# Design a CD cover
+?package(kover): needs="x11" kde_filename="kover" section="Administer your system" title="Design a CD cover" icon="kover.png" command="kover" kde_command="kover" longtitle="CD Kover Printer" kde_mimetype="application/x-kover" kde_opt="\\nTerminal=0"
 
 # Backup your data
 ?package(drakxtools): needs="x11" icon="drakconf.png" section="Administer your system" title="Backup your data" command="/usr/sbin/drakbackup"
