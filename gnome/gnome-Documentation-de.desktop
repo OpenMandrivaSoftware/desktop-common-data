@@ -1,8 +1,0 @@
-
-[Desktop Entry]
-Name=Documentation
-Icon=gnome-documentation.png
-Exec=$HELP_BROWSER /usr/share/doc/mandrake/de/index.html 
-Terminal=false
-MultipleArgs=false
-Type=Application

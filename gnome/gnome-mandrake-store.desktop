@@ -1,8 +1,0 @@
-
-[Desktop Entry]
-Name=Mandrake Store
-Icon=gnome-mandrakestore.png
-Exec=http://www.mandrakestore.com/
-Terminal=false
-MultipleArgs=false
-Type=URL

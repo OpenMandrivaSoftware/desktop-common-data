@@ -1,8 +1,0 @@
-
-[Desktop Entry]
-Name=Internet
-Exec=/usr/bin/gnomedesktop-network 
-Icon=gnome-internet.png
-Terminal=false
-MultipleArgs=false
-Type=Application

@@ -1,8 +1,0 @@
-
-[Desktop Entry]
-Name=Control Center
-Icon=gnome-mcc.png
-Exec=/usr/X11R6/bin/DrakConf
-Terminal=false
-MultipleArgs=false
-Type=Application
