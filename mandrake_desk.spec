@@ -48,21 +48,40 @@ install -m 0644 backgrounds/xfdrake-test-card.jpg %buildroot/%_datadir/mdk/xfdra
 
 
 ## Install scripts
+# /usr/bin/
 install -d -m 0755 %buildroot/%_bindir/
-for i in bin/*.sh ; do install -m 0755 $i %buildroot/_bindir/ ; done
+for i in bin/*.sh ; do install -m 0755 $i %buildroot/%_bindir/ ; done
+
+# /usr/sbin/
+install -d -m 0755 %buildroot/%_sbindir/
+for i in sbin/* ; do install -m 0755 $i %buildroot/%_sbindir/ ; done
 
 
 
 ## Install faces
 install -d -m 0755 %buildroot/%_datadir/mdk/faces/
 install -d -m 0755 %buildroot/%_datadir/faces/
-for i in faces/*.png ; do install -m 0644 $i %buildroot/%_datadir/faces/
+for i in faces/*.png ; do install -m 0644 $i %buildroot/%_datadir/faces/ ; done
 		
 # David - 9.0-5mdk - For KDE
 install -m 0644 faces/default.png %buildroot/%_datadir/faces/default.png
 
 # David - 9.0-5mdk - For GDM
 install -m 0644 faces/default.png %buildroot/%_datadir/mdk/faces/user-default-mdk.png
+
+
+
+## Install icons
+# 16
+install -d -m 0755 %buildroot/%_miconsdir/
+for i in icons/mini/*.png ; do install -m 0644 $i %buildroot/%_miconsdir/ ; done
+
+# 32
+for i in icons/*.png ; do install -m 0644 $i %buildroot/%_iconsdir/ ; done
+
+# 48
+install -d -m 0755 %buildroot/%_liconsdir/
+for i in icons/large/*.png ; do install -m 0644 $i %buildroot/%_liconsdir/ ; done
 
 
 
@@ -85,7 +104,27 @@ rm -fr %buildroot
 
 %files
 %defattr(-,root,root,-)
-
+%_bindir/*
+#
+%_sbindir/*
+#
+%dir %_datadir/faces/
+%dir %_datadir/mdk/
+%dir %_datadir/mdk/faces/
+%_datadir/faces/*
+%_datadir/mdk/faces/*
+#
+%_iconsdir/*.*
+%_liconsdir/*
+%_miconsdir/*
+#
+%dir %_datadir/mdk/backgrounds/
+%dir %_datadir/mdk/backgrounds/root/
+%_datadir/mdk/backgrounds/*.png
+%_datadir/mdk/backgrounds/root/*.png
+#
+%dir %_datadir/mdk/xfdrake/
+%_datadir/mdk/xfdrake/*.jpg
 
 
 %changelog
