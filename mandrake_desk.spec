@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	3mdk
+Release: 	4mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -143,6 +143,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Aug 16 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.1-4mdk
+- Fix "Play Games" menu entry
+
 * Wed Aug 11 2004 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-3mdk
 - Add GNOME version of task oriented menu
 - Fix capitalisations in task oriented menu
