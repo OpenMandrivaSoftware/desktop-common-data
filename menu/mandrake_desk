@@ -116,8 +116,8 @@
 # Edit images and photos
 ?package(gimp): command="gimp-remote -n -f" icon="wilbur.png" section="View, modify and create graphics" title="Edit images and photos" longtitle="The GNU Image Manipulation Program" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;image/x-bmp;image/x-xcf" accept_url="true" multiples_files="true" startup_notify="false"
 
-# Scan and use Optical Character Recognition (ORC) 
-?package(kdegraphics-kooka): needs="x11" kde_filename="kooka" section="View, modify and create graphics" title="Scan and use Optical Character Recognition (ORC)" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/index.html\\nGenericName=Scan & OCR Program\\nX-DCOP-ServiceType=Multi\\n"
+# Scan and use Optical Character Recognition (OCR) 
+?package(kdegraphics-kooka): needs="x11" kde_filename="kooka" section="View, modify and create graphics" title="Scan and use Optical Character Recognition (OCR)" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/index.html\\nGenericName=Scan & OCR Program\\nX-DCOP-ServiceType=Multi\\n"
 
 # Import and sort your photos
 ?package(kimdaba): needs="x11" kde_filename="kimdaba" section="View, modify and create graphics" title="Import and sort your photos" icon="kimdaba.png" command="kimdaba" kde_opt="\\nEncoding=UTF-8\\nGenericName=K Image Database\\nTerminal=0\\nX-KDE-StartupNotify=true\\n"
