@@ -327,6 +327,7 @@ rm -fr %buildroot
 
 %changelog
 * Tue Feb 26 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-12mdk
+- Modify Mandrake GTK theme
 - Change name of Mandrake Control Center to Control Center in GNOME desktop
  (Thanks to Mattias Dahlberg)
 

@@ -56,7 +56,7 @@ style "default"
   engine "eazel-engine" {
 
     # The focus/selection color
-    palette[0] = { "#dcdcdc" }
+    palette[0] = { "#21449c" }
 
     # The gradient used for recoloring images
     palette[1] = { "#000000", <0>, "#ffffff" }
@@ -65,11 +65,11 @@ style "default"
     palette[2] = { "#000000", "#888888", "#ffffff" }
 
     # Set these colors here, so we can just reference the palette
-#    bg[SELECTED] = <0>
-#    base[SELECTED] = <0>
+    bg[SELECTED] = <0>
+    base[SELECTED] = <0>
 
-#    focus_color = <0>
-#    insensitive_colors = "#636563", "#cecfce"
+    focus_color = <0>
+    insensitive_colors = "#636563", "#cecfce"
 
     # Create the default (only) stock image table. This maps from
     # identifiers used in the engine to reference image parts to
@@ -222,26 +222,26 @@ style "default"
 	recolor = <1>
       }
       "H_SCROLLBAR_HI" {
-	image = "scroller-h.png"
+	image = "scroller-h-hilight.png"
 	border = { 3, 3, 1, 1 }
 	recolor = <1>
       }
       "H_SCROLLBAR_INACTIVE" {
 	image = "scroller-h.png"
 	border = { 3, 3, 1, 1 }
-	recolor = <1>
+	recolor = <2>
       }
       "H_SCROLLBAR_THUMB" {
 	image = "scroller-h-thumb.png"
 	recolor = <1>
       }
       "H_SCROLLBAR_THUMB_HI" {
-	image = "scroller-h-thumb.png"
+	image = "scroller-h-thumb-hilight.png"
 	recolor = <1>
       }
       "H_SCROLLBAR_THUMB_INACTIVE" {
 	image = "scroller-h-thumb.png"
-	recolor = <1>
+	recolor = <2>
       }
       "V_SCROLLBAR" {
 	image = "scroller-v.png"
@@ -249,26 +249,26 @@ style "default"
 	recolor = <1>
       }
       "V_SCROLLBAR_HI" {
-	image = "scroller-v.png"
+	image = "scroller-v-hilight.png"
 	border = { 1, 1, 3, 3 }
 	recolor = <1>
       }
       "V_SCROLLBAR_INACTIVE" {
 	image = "scroller-v.png"
 	border = { 1, 1, 3, 3 }
-	recolor = <1>
+	recolor = <2>
       }
       "V_SCROLLBAR_THUMB" {
 	image = "scroller-v-thumb.png"
 	recolor = <1>
       }
       "V_SCROLLBAR_THUMB_HI" {
-	image = "scroller-v-thumb.png"
+	image = "scroller-v-thumb-hilight.png"
 	recolor = <1>
       }
       "V_SCROLLBAR_THUMB_INACTIVE" {
 	image = "scroller-v-thumb.png"
-	recolor = <1>
+	recolor = <2>
       }
       "PROGRESS_BAR" {
 	image = "progressbar.png"
@@ -386,7 +386,7 @@ class "GtkRuler" style "no-gradients"
 # Style used for (prelighted) menu items
 style "menuitem"
 {
-  fg[PRELIGHT] = "#000000"
+  fg[PRELIGHT] = "#ffffff"
   
   engine "eazel-engine"
   {
@@ -396,8 +396,7 @@ style "menuitem"
     gradient[ACTIVE] = {}
     gradient[SELECTED] = {}
     # by default menuitem_gradient just references <0>
-    gradient[PRELIGHT] = { "#f2f2f2" }
-#	{ vertical : <0,0.5> [3] <0> [10] <0> [2] <0,0.6> }
+    gradient[PRELIGHT] = { vertical : <0,0.5> [3] <0> [10] <0> [2] <0,0.6> }
   }
 }
 
