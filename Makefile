@@ -35,7 +35,7 @@ install:
 	install -m644 backgrounds/* \
 	$(RPM_BUILD_ROOT)/usr/share/pixmaps/backgrounds/linux-mandrake/
 
-	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
+	install -m644 icons/mandrake*.png $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
 
 	install -m644 faces/* $(RPM_BUILD_ROOT)/usr/share/mdk/faces
 
