@@ -8,14 +8,15 @@
 foreach $f (map { grep { /\.kdelnk$/ } eval { all("$_/Desktop") } } @dirs) {
     open F, $f or next;
     L: foreach (<F>) {
-	  $_ = "Exec=linuxconf" if $f =~ /linuxconf/i; # hack
-
-	  ($l) = /^Exec=(?:kdesu\s+-c\s+)?"?(\S+)/ or next;
-	  -x "$_/$l" and last L foreach '', @path;
+	  if (/^Exec=(?:kdesu\s+-c\s+)?"?(\S+)/) {
+	      -x "$_/$1" and last L foreach '', @path;
+	  } elsif (m|^URL=file:(/.*)|) {	  
+	      -e $1 and last;
+	  } else { next }
 	  print STDERR "removing $f\n";
 	  unlink $f;
 	  last;
-    }
+      }
 }
 
 sub all {
