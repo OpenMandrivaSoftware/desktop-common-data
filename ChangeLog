@@ -1,3 +1,6 @@
+2000-01-04 Pablo Saratxga <pablo@mandrakesoft.com>
+	* gnome/*, kdelnk/*: added Latvian and Turkish entries
+
 2000-01-04 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 	* kdelnk/DrakeConf: remove the call to kdesu.
 	* gnome/mandrake.links: remove the call to kdesu for DrakeConf.
