@@ -22,6 +22,7 @@ do
 		bg*) CAPTION="Θνςεπνες Βπϊηκΰ" ;;
 		ca*) CAPTION="Connexiσ a Internet" ;;
 		cs*) CAPTION="Pψipojenν k Internetu" ;;
+		cy*) CAPTION="Cysylltiad Rhyngrwyd" ;;
  		da*) CAPTION="Internet forbindelse" ;;
 		de*) CAPTION="Internetverbindung" ;;
 		el*) CAPTION="Σύνδεση Internet" ;;
@@ -73,6 +74,7 @@ do
 		br*) CAPTION="Hizivadurioω Mandrake" ;;
 		ca*) CAPTION="Actualitzacions del Mandrake" ;;
 		cs*) CAPTION="Aktualizace Mandrake" ;;
+		cy*) CAPTION="Diweddariadau Mandrake" ;;
 		da*) CAPTION="Mandrake Opdateringer" ;;
 		de*) CAPTION="Mandrake Updates" ;;
 		el*) CAPTION="Αναβαθμίσεις του Mandrake" ;;
