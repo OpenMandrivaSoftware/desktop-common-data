@@ -1,8 +1,0 @@
-#
-# This is for the KDE menu that displays as sub-menus the Gnome menu
-# and the menus of other non-KDE X11 programs
-#
-# To send to mosfet each time new languages are added
-#
-_Name=Gnome and X Apps
-
