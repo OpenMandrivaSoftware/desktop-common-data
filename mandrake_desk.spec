@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	9mdk
+Release:	10mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -322,6 +322,10 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Mon Feb 25 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-10mdk
+- Fix mdk-eazel-engine text color (Thanks to Brice Figureau)
+- Update po files
+
 * Wed Feb 20 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-9mdk
 - Oops, fix location of capplet for mdk-eazel-engine
 
