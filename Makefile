@@ -50,7 +50,7 @@ install: merge-translations
 	install -m644 default_logo.jpg \
 	$(RPM_BUILD_ROOT)/usr/share/icons/
 
-	install -m644 kdelnk/*.kdelnk $(RPM_BUILD_ROOT)/etc/skel/Desktop/
+#	install -m644 kdelnk/*.kdelnk $(RPM_BUILD_ROOT)/etc/skel/Desktop/
 	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
 	install -m755 gnome/mandrake.links.sh \
 		$(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts
