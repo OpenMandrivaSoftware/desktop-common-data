@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	4mdk
+Release: 	5mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -143,6 +143,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Aug 27 2004 Frederic Crozat <fcrozat@mandrakesoft.com> 10.1-5mdk
+- Fix typo in gnome-cd entry
+
 * Mon Aug 16 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.1-4mdk
 - Fix "Play Games" menu entry
 

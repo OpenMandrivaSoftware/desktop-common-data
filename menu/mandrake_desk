@@ -106,7 +106,7 @@
 
 # Listen to Audio CDs
 ?package(kdemultimedia-kscd): needs="kde" kde_filename="kscd" section="Enjoy Music and Video" title="Listen to Audio CDs" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nGenericName=CD Player\\nBinaryPattern=kscd;\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
-?package(gnome-media): needs="gnome" section="Enjoy Music and Video" title="Listen to Audio CDs" icon="usr/share/pixmaps/gnome-cd.png" command="gnome-cd" 
+?package(gnome-media): needs="gnome" section="Enjoy Music and Video" title="Listen to Audio CDs" icon="/usr/share/pixmaps/gnome-cd.png" command="gnome-cd" 
 
 # Listen to Music Files
 ?package(amarok): needs="kde" kde_filename="amarok" section="Enjoy music and video" title="Listen to Music Files" icon="amarok.png" command="amarok" kde_command="amarok %U" kde_mimetype="application/x-ogg;audio/x-vorbis;audio/basic;audio/x-mod;audio/x-mp3;audio/x-scpls;audio/x-mpegurl;audio/x-sid;audio/x-wav" kde_opt="\\nVersion=0.9.4\\nEncoding=UTF-8\\nGenericName=Audio Player\\nDocPath=amarok/index.html\\nTerminal=false\\nActions=Enqueue;\\nX-KDE-StartupNotify=false\\n[Desktop Action Enqueue]\\nExec=amarok -e %U\\nInitialPreference=15"
