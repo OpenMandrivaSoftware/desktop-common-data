@@ -2,12 +2,13 @@
 # WARNING: This file is in unicode!
 #
 # Ja�-Mai Drapier <jdrapier@mail.dotcom.fr>
+# Thierry Vignaud <tvignaud@mandrakesoft.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mandrake_desk VERSION\n"
 "POT-Creation-Date: 2001-03-29 09:59+0200\n"
-"PO-Revision-Date: 1999-08-25 11:07+0200\n"
+"PO-Revision-Date: 2001-07-12 17:57+0200\n"
 "Last-Translator: Ja�-Mai Drapier <jdrapier@mail.dotcom.fr>\n"
 "Language-Team: br\n"
 "MIME-Version: 1.0\n"
@@ -35,21 +36,21 @@ msgstr "Netscape"
 #: kde/Desktop/Templates/MimeType.noext.kdelnk.in.h:1
 #: old/MimeType.noext.kdelnk.in.h:1
 msgid "Mime Type"
-msgstr ""
+msgstr "Rizhoù Mime"
 
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
 msgid "Application"
-msgstr ""
+msgstr "Arloadoù"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr ""
+msgstr "URL"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
 msgid "World Wide Web URL"
-msgstr ""
+msgstr "URL WWW"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:2
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:1
@@ -57,16 +58,16 @@ msgstr ""
 #: old/CD-ROM.noext.kdelnk.in.h:2 old/Device.noext.kdelnk.in.h:1
 #: old/Floppy.noext.kdelnk.in.h:1
 msgid "File System Device"
-msgstr ""
+msgstr "Trobarzhelloù reizhiad restr"
 
 #: kde/Desktop/Templates/Ftpurl.noext.kdelnk.in.h:1
 #: old/Ftpurl.noext.kdelnk.in.h:1
 msgid "FTP URL"
-msgstr ""
+msgstr "url FTP"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:1 old/Printer.noext.kdelnk.in.h:1
 msgid "Default printer"
-msgstr ""
+msgstr "Moulerez dre ziouer"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
@@ -74,11 +75,11 @@ msgstr ""
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:2 old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
-msgstr ""
+msgstr "Pladennig"
 
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
@@ -90,7 +91,7 @@ msgstr "Teuliadur war Mandrake ha KDE"
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr ""
+msgstr "Kefluniadur reizhiad Linux-Mandrake"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
@@ -132,15 +133,15 @@ msgstr "Pa n'hellit ket serriñ ur prenestr, implijit 'XKill' !"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"
-msgstr ""
+msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr ""
+msgstr "Teulioù Linux"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
-msgstr ""
+msgstr "RpmDrake"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
