@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Name=Mandrake News
+Icon=/usr/share/pixmaps/mc/mandrakenews.xpm
+Exec=http://www.mandrakesoft.com/community/mandrakesoftnews
+Terminal=false
+MultipleArgs=false
+Type=URL
