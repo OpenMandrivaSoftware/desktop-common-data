@@ -3,7 +3,7 @@
 ?package(kdebase-progs): needs="kde" kde_filename="Kfind" section="/" title="Find files" icon="kfind.png" command="kfind" kde_command="kfind -caption \"%c\" %i %m %f" multiple_files="false" accept_url="false" kde_opt="\\nBinaryPattern=kfind;\\nProtocols=file;\\nDocPath=kfind/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # File manager
-?package(kdebase-progs): needs="kde" kde_filename="Home" section="Administer your system" title="Manage your files" icon="folder_home.png" command="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
+?package(kdebase-progs): needs="kde" kde_filename="Home" section="/" title="Manage your files" icon="folder_home.png" command="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
 
 
 
@@ -12,8 +12,7 @@
 
 ## Administer your system
 # Configure sound settings
-?package(kdemultimedia-kmix) needs="kde" kde_filename="kmix" section="Administer your system" title="Configure sound settings" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kmix;\\nProtocols=\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
-
+?package(kdemultimedia-kmix): needs="kde" kde_filename="kmix" section="Administer your system" title="Configure sound settings" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nGenericName=Sound Mixer\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nCategories=Qt;KDE;AudioVideo"
 
 # Configure KDE
 ?package(kdebase-progs): needs="kde" kde_filename="KControl" section="Administer your system" title="Configure your desktop" icon="kcontrol.png" command="kcontrol" kde_command="kcontrol -caption \"%c\" %i %m" kde_opt="\\nDocPath=kcontrol/index.html\\nX-KDE-StartupNotify=true"
