@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	12mdk
+Release: 	13mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -144,6 +144,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Sep 29 2004 David Baudens <baudens@mandrakesoft.com> 10.1-13mdk
+- Fix task oriented menu to allow translations of "Listen to Music Files" menu
+  entry (Laurent Montel)
+
 * Wed Sep 29 2004 David Baudens <baudens@mandrakesoft.com> 10.1-12mdk
 - Add missing menu entry for french Mandrakelinux documentation
 
