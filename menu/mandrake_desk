@@ -97,7 +97,7 @@
 # armagetron
 ?package(armagetron):command="/usr/games/armagetron" icon="armagetron.xpm" needs="x11" section="Play games" title="Play ArmageTron, a 3D lightcycle game"
 
-?package(frozen-bubble):command="/usr/bin/frozen-bubble" icon="frozen-bubble.png" needs="x11" section="Play games" title="Play Frozen-Buggle"
+?package(frozen-bubble):command="/usr/bin/frozen-bubble" icon="frozen-bubble.png" needs="x11" section="Play games" title="Play Frozen-Bubble"
 
 
 # chromium
