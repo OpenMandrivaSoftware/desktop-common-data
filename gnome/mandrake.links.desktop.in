@@ -1,0 +1,60 @@
+#########
+# NOTE: program launcher icons are done in mandrake.links.sh for now
+######### 
+
+#[Printer]
+#D'n'd printer icon is provided by g-print rpm package
+
+#[MDKppp]
+#_title=Internet connection
+#Icon=gnome-networktool.png
+#Exec=/usr/bin/gnome-ppp
+
+[MDKgnome]
+_title=GNOME Web Site
+type=url
+url=http://www.gnome.org/
+icon=gnome-logo-icon-transparent.png
+
+#[MDKldp]
+#_title=Linux Documents
+#type=url
+#url=http://metalab.unc.edu/LDP/
+#icon=mc/ldp.xpm
+
+#[MDKupdates]
+#_title=Mandrake Updates
+#MiniIcon=
+#Exec=/usr/X11R6/bin/MandrakeUpdate
+#icon=../icons/updates-mdk.xpm
+
+[MDKsupport]
+_title=Mandrake documentation
+type=url
+url=/usr/doc/mandrake/
+icon=../icons/doc-mdk.xpm
+
+#[MDK.com]
+#title=www.linux-mandrake.com
+#type=url
+#url=http://www.linux-mandrake.com/
+#icon=../icons/news-mdk.xpm
+
+[DrakConf]
+_title=DrakConf
+MiniIcon=
+Exec=/usr/X11R6/bin/DrakConf
+icon=../icons/DrakConf.xpm
+
+[Netscape]
+_title=Netscape
+MiniIcon=
+Exec=/usr/bin/netscape
+icon=../icons/netscape.xpm
+
+#[rpmdrake]
+#_title=RpmDrake
+#MiniIcon=
+#Exec=/usr/X11R6/bin/rpmdrake
+#icon=../icons/large/rpmdrake.xpm
+

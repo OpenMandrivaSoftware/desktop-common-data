@@ -1,0 +1,15 @@
+# KDE Config File
+[KDE Desktop Entry]
+_Name=Internet connection
+_Comment=Internet connection.
+SwallowTitle=
+SwallowExec=
+BinaryPattern=kppp
+MimeType=application/x-rpm;
+Exec=/usr/bin/kppp
+Icon=kppp.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+

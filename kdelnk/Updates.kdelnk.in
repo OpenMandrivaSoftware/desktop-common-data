@@ -1,0 +1,14 @@
+# KDE Config File
+[KDE Desktop Entry]
+_Name=Mandrake Updates
+MimeType=
+Exec=MandrakeUpdate
+Icon=updates-mdk.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+SwallowTitle=
+SwallowExec=
+BinaryPattern=MandrakeUpdate;
+

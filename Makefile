@@ -8,7 +8,23 @@ all:
 clean:
 	find . -type d -name '.xvpics'|xargs rm -rf
 
-install:
+merge-translations:
+	for i in `find kde kdelnk gnome old special -name "*.in"` ; \
+	do \
+		case "$$i" in \
+		*.links.desktop.in) \
+			xml-i18n-merge -d po $$i \
+			    `dirname $$i`/`basename $$i .desktop.in` ;; \
+		*.noext.kdelnk.in) \
+			xml-i18n-merge -d po $$i \
+			    `dirname $$i`/`basename $$i .noext.kdelnk.in` ;; \
+		*.in) \
+			xml-i18n-merge -d po $$i \
+			    `dirname $$i`/`basename $$i .in` ;; \
+	  esac ; \
+	done
+
+install: merge-translations
 	mkdir -p $(RPM_BUILD_ROOT)/usr/{s,}bin
 	mkdir -p $(RPM_BUILD_ROOT)/$(mandir)/man8/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/
@@ -34,7 +50,7 @@ install:
 	install -m644 default_logo.jpg \
 	$(RPM_BUILD_ROOT)/usr/share/icons/
 
-	install -m644 kdelnk/* $(RPM_BUILD_ROOT)/etc/skel/Desktop/
+	install -m644 kdelnk/*.kdelnk $(RPM_BUILD_ROOT)/etc/skel/Desktop/
 	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
 	install -m755 gnome/mandrake.links.sh \
 		$(RPM_BUILD_ROOT)/usr/lib/mc/desktop-scripts

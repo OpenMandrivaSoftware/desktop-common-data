@@ -1,0 +1,15 @@
+# KDE Config File
+[KDE Desktop Entry]
+_Name=Printer
+_Comment=Drop text and postscript files onto the PRINTER icon
+SwallowTitle=
+SwallowExec=
+BinaryPattern=
+MimeType=application/postscript;text/english;text/html;text/plain;text/sgml;text/x-c;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-makefile;text/x-pascal;
+Exec=lpr %f
+Icon=klpq.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+
