@@ -1,3 +1,7 @@
+2005-03-09 15:04  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* bin/www-browser: fix stripping value from GNOME
+
 2005-03-09 14:43  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* mandrake_desk.spec, bin/www-browser, bin/xvt: - change
