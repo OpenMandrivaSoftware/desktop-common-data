@@ -10,45 +10,45 @@ else
 	fi
 fi
 
-###################
-# Internet connex #
-###################
-CAPTION=""
-for i in $LISTLANG
-do
-	if [ "$CAPTION" != "" ]; then break ; fi
-	case "$i" in
-		en*) CAPTION="Internet connection" ;;
-		bg*) CAPTION="Èíòåðíåò Âðúçêà" ;;
-		ca*) CAPTION="Connexió a Internet" ;;
-		da*) CAPTION="Internet forbindelse" ;;
-		de*) CAPTION="Internetverbindung" ;;
-		es*) CAPTION="Conexión a Internet" ;;
-		et*) CAPTION="Internetiühendus" ;;
-		fr*) CAPTION="Connexion à l'Internet" ;;
-		gl*) CAPTION="Conexión a Internet" ;;
-		hr*) CAPTION="Veza s InterNetom" ;;
-		hu*) CAPTION="Internet kapcsolat" ;;
-		id*) CAPTION="Koneksi Internet" ;;
-		it*) CAPTION="Connessione a Internet" ;;
-		is*) CAPTION="Lýðnets tenging" ;;
-		nl*) CAPTION="Internet verbinding" ;;
-		no*) CAPTION="Oppkobling Internett" ;;
-		ro*) CAPTION="Conectare la Internet" ;;
-		ru*) CAPTION="Internet-ÓÏÅÄÉÎÅÎÉÅ" ;;
-		uk*) CAPTION="ú'¤ÄÎÁÎÎÑ Ú ¦ÎÔÅÒÎÅÔÏÍ" ;;
-		wa*) CAPTION="Raloyaedje al rantoele daegnrece" ;;
-	esac
-done
-if [ "$CAPTION" = "" ]; then CAPTION="Internet connection" ; fi
-
-/usr/bin/gdesktoplnk \
-	--progname="/usr/bin/gnome-ppp" \
-	--icon-name="gnome-networktool.png" \
-	--icon-caption="$CAPTION" \
-	--link-name="MDKppp" \
-	--desktop-dir="$HOME/.gnome-desktop"
-
+# ###################
+# # Internet connex #
+# ###################
+# CAPTION=""
+# for i in $LISTLANG
+# do
+# 	if [ "$CAPTION" != "" ]; then break ; fi
+# 	case "$i" in
+# 		en*) CAPTION="Internet connection" ;;
+# 		bg*) CAPTION="Èíòåðíåò Âðúçêà" ;;
+# 		ca*) CAPTION="Connexió a Internet" ;;
+# 		da*) CAPTION="Internet forbindelse" ;;
+# 		de*) CAPTION="Internetverbindung" ;;
+# 		es*) CAPTION="Conexión a Internet" ;;
+# 		et*) CAPTION="Internetiühendus" ;;
+# 		fr*) CAPTION="Connexion à l'Internet" ;;
+# 		gl*) CAPTION="Conexión a Internet" ;;
+# 		hr*) CAPTION="Veza s InterNetom" ;;
+# 		hu*) CAPTION="Internet kapcsolat" ;;
+# 		id*) CAPTION="Koneksi Internet" ;;
+# 		it*) CAPTION="Connessione a Internet" ;;
+# 		is*) CAPTION="Lýðnets tenging" ;;
+# 		nl*) CAPTION="Internet verbinding" ;;
+# 		no*) CAPTION="Oppkobling Internett" ;;
+# 		ro*) CAPTION="Conectare la Internet" ;;
+# 		ru*) CAPTION="Internet-ÓÏÅÄÉÎÅÎÉÅ" ;;
+# 		uk*) CAPTION="ú'¤ÄÎÁÎÎÑ Ú ¦ÎÔÅÒÎÅÔÏÍ" ;;
+# 		wa*) CAPTION="Raloyaedje al rantoele daegnrece" ;;
+# 	esac
+# done
+# if [ "$CAPTION" = "" ]; then CAPTION="Internet connection" ; fi
+# 
+# /usr/bin/gdesktoplnk \
+# 	--progname="/usr/bin/gnome-ppp" \
+# 	--icon-name="gnome-networktool.png" \
+# 	--icon-caption="$CAPTION" \
+# 	--link-name="MDKppp" \
+# 	--desktop-dir="$HOME/.gnome-desktop"
+#
 ###################
 # Mandrake Update #
 ###################
@@ -106,7 +106,7 @@ done
 if [ "$CAPTION" = "" ]; then CAPTION="DrakConf" ; fi
 
 /usr/bin/gdesktoplnk \
-	--progname="/usr/bin/kdesu -c '/usr/X11R6/bin/DrakConf'" \
+	--progname="/usr/X11R6/bin/DrakConf" \
 	--icon-name="../icons/DrakConf.xpm" \
 	--icon-caption="$CAPTION" \
 	--link-name="DrakConf" \

@@ -2,6 +2,6 @@
 Name=DrakConf
 Icon=../icons/DrakConf.xpm
 TryExec=DrakConf;
-Exec=/usr/bin/kdesu -c "/usr/X11R6/bin/DrakConf"
+Exec=/usr/X11R6/bin/DrakConf
 Terminal=0
 Type=Application
