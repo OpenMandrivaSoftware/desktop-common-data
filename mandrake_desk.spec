@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
 Version:	8.1
-Release:	1mdk
+Release:	4mdk
 License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
@@ -10,7 +10,7 @@ Packager:	David BAUDENS <baudens@mandrakesoft.com>
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 # no extra source or patch are allowed here.
-Source:		mandrake_desk-%{version}.tar.bz2
+Source:		mandrake_desk.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 
@@ -23,21 +23,47 @@ Mandrake desktop.
 
 %prep
 
-%setup -q
+%setup -q -n %name
+find . -type 'd' -name "CVS" -print | xargs /bin/rm -rf 
 
 %build
+(
 cd eazel-engine
 %configure
 %make
+)
+
+(
+cd krootwarning
+./configure --prefix=%_prefix --enable-final --disable-debug
+%make
+)
+
+(
+cd krozat
+./configure --prefix=%_prefix --enable-final --disable-debug
+%make
+)
 
 %install
 rm -rf %buildroot
 
+(
 cd eazel-engine
 make install DESTDIR=%buildroot
 rm -fr %buildroot/%_datadir/control-center/
 rm -fr %buildroot/%_datadir/themes
-cd -
+)
+
+(
+cd krootwarning
+make install DESTDIR=%buildroot
+)
+
+(
+cd krozat
+make install DESTDIR=%buildroot
+)
 
 mkdir -p %buildroot/etc/gtk
 install -m644 gtkrc %buildroot/etc/gtk
@@ -139,9 +165,26 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_datadir/mdk/gnome-desktop/
 %_datadir/mdk/gnome-desktop/*
 %_datadir/pixmaps/mc/*.xpm
+#
+%dir %_datadir/apps/krootwarning/
+%dir %_datadir/apps/krootwarning/pics/
+%_datadir/apps/krootwarning/pics/*
+#
+%dir %_datadir/apps/krozat/
+%dir %_datadir/apps/krozat/pics/
+%_datadir/apps/krozat/pics/*
+##
+%_iconsdir/locolor/16x16/apps/krootwarning.png
+%_iconsdir/locolor/32x32/apps/krootwarning.png
 
 %changelog
-* Tue Aout 07 2001 Vincent Saugey <vince@mandrakesoft.com>
+* Fri Aug 24 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-4mdk
+- Add krozat (our Chef ;)
+
+* Tue Aug 08 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-3mdk
+- Add krootwarning
+
+* Tue Aug 07 2001 Vincent Saugey <vince@mandrakesoft.com> 8.1-2mdk
 - Move faces png to /usr/share/mdk/faces
 
 * Tue Jul 31 2001 Frederic Lepied <flepied@mandrakesoft.com> 8.1-1mdk
