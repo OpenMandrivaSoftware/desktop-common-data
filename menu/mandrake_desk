@@ -134,7 +134,7 @@
 ?package(kdegraphics-kooka): needs="x11" kde_filename="kooka" section="View, modify and create graphics" title="Scan and use Optical Character Recognition (OCR)" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/index.html\\nGenericName=Scan & OCR Program\\nX-DCOP-ServiceType=Multi\\n"
 
 # Import and sort your photos
-?package(digikam): needs="x11" kde_filename="digikam" section="View, modify and create graphic" title="Import and sort your photos" icon="digikam.png" command="digikam" kde_command="digikam -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=digikam/index.html\\nTerminal=0"
+?package(digikam): needs="x11" kde_filename="digikam" section="View, modify and create graphics" title="Import and sort your photos" icon="digikam.png" command="digikam" kde_command="digikam -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=digikam/index.html\\nTerminal=0"
 
 # Create a screenshot
 ?package(kdegraphics-ksnapshot): needs="x11" kde_filename="ksnapshot" section="View, modify and create graphics" title="Create a screenshot" icon="ksnapshot.png" command="ksnapshot" kde_command="ksnapshot -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nGenericName=Screen Capture Program\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nDocPath=ksnapshot/index.html\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
