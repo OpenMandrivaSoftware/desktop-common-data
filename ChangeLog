@@ -1,3 +1,9 @@
+2000-01-06  Pixel  <pixel@mandrakesoft.com>
+	* icons/*: convert back and from .gif for kfm compliance :-/
+
+2000-01-04  Pixel  <pixel@mandrakesoft.com>
+	* sbin/kdeDesktopCleanup: perl's glob in not " " compliant :(
+
 2000-01-04 Pablo Saratxga <pablo@mandrakesoft.com>
 	* gnome/*, kdelnk/*: added Latvian and Turkish entries
 
