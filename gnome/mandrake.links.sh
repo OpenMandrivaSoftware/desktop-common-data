@@ -22,6 +22,7 @@ do
 		bg*) CAPTION="Èíòåğíåò Âğúçêà" ;;
 		ca*) CAPTION="Connexió a Internet" ;;
 		da*) CAPTION="Internet forbindelse" ;;
+		de*) CAPTION="Internetverbindung" ;;
 		es*) CAPTION="Conexión a Internet" ;;
 		et*) CAPTION="Internetiühendus" ;;
 		fr*) CAPTION="Connexion à l'Internet" ;;
