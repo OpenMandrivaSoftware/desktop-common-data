@@ -1,7 +1,0 @@
-# KDE Config File
-[KDE Desktop Entry]
-_Name=Mandrake and KDE documentation
-_Comment=Mandrake and KDE documentation.
-Type=Link
-URL=file:/usr/doc/mandrake/
-Icon=doc-mdk.xpm
