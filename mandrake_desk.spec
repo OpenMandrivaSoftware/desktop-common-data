@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	11mdk
+Release:	12mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -326,6 +326,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Feb 26 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-12mdk
+- Change name of Mandrake Control Center to Control Center in GNOME desktop
+ (Thanks to Mattias Dahlberg)
+
 * Tue Feb 26 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-11mdk
 - Add/remove some icons
 - Don't allow spec to skip a build or install step without stop
