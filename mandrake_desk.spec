@@ -326,13 +326,10 @@ rm -fr %buildroot
 
 
 %changelog
-* Thu Feb 28 2002 David BAUDENS <bauden@@mandrakesoft.com> 8.2-12mdk
+* Thu Mar  7 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-12mdk
 - Modify Mandrake GTK theme - Frederic Crozat
 - Change name of Mandrake Control Center to Control Center in GNOME desktop
  (Thanks to Mattias Dahlberg) - Frederic Crozat
-- Add icons for cdcom
-#- Update large and mini icons
-#- Remove old faces icons
 
 * Tue Feb 26 2002 David BAUDENS <baudens@mandrakesoft.com> 8.2-11mdk
 - Add/remove some icons
