@@ -49,9 +49,11 @@ mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
 rm -f special/mandrake-small.xpm
 
 cd $RPM_BUILD_ROOT%_datadir/faces
-cp user-hat-mdk.png root.png
+mkdir -p $RPM_BUILD_ROOT%_datadir/mdk/faces
+mv * $RPM_BUILD_ROOT%_datadir/mdk/faces
+cp $RPM_BUILD_ROOT%_datadir/mdk/faces/user-hat-mdk.png root.png
 cp root.png root
-cp user-default-mdk.png default.png
+cp $RPM_BUILD_ROOT%_datadir/mdk/faces/user-default-mdk.png default.png
 cd -
 
 cd $RPM_BUILD_ROOT%_datadir/pixmaps/backgrounds/linux-mandrake
@@ -122,6 +124,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/sbin/*
 %{_bindir}/*
 %{_datadir}/faces
+%{_datadir}/mdk/faces
 %{_iconsdir}/*.xpm
 %_iconsdir/*.png
 %{_miconsdir}/*
@@ -138,6 +141,9 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/pixmaps/mc/*.xpm
 
 %changelog
+* Tue Aout 07 2001 Vincent Saugey <vince@mandrakesoft.com>
+- Move faces png to /usr/share/mdk/faces
+
 * Tue Jul 31 2001 Frederic Lepied <flepied@mandrakesoft.com> 8.1-1mdk
 - reworked Makefile and spec
 - resync with cvs
