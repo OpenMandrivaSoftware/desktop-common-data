@@ -40,7 +40,7 @@ rm -rf %buildroot
 # User & root's backgrounds
 # root
 install -d -m 0755 %buildroot/%_datadir/mdk/backgrounds/root/
-install -m 0644 backgrounds/default-root-9.1.png %buildroot/%_datadir/mdk/backgrounds/
+install -m 0644 backgrounds/default-root-9.1.png %buildroot/%_datadir/mdk/backgrounds/root/
 
 # user
 install -m 0644 backgrounds/default-9.1.png %buildroot/%_datadir/mdk/backgrounds/
