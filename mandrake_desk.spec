@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
-Version:	10.0
-Release: 	11mdk
+Version:	10.1
+Release: 	2mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -143,6 +143,12 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Aug 05 2004 David Baudens <baudens@mandrakesoft.com> 10.1-2mdk
+- Add "Make a phone call" to task oriented menu
+
+* Thu Aug 05 2004 David Baudens <baudens@mandrakesoft.com> 10.1-1mdk
+- Update task oriented menu
+
 * Wed Aug  4 2004 Pixel <pixel@mandrakesoft.com> 10.0-11mdk
 - add "chksession -L" used by DrakX to configure ~/.dmrc
 - fix descriptions (use Mandrakelinux instead of simply Mandrake)
