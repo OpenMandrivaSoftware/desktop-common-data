@@ -1,3 +1,366 @@
+2004-12-14 16:01  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/defaultlayout-simplified.menu,
+	  menu/defaultlayout.menu, menu/menu, menu/menu-simplified,
+	  menu/translate_menus, menu/translate_menus-simplified,
+	  menu/icons/accessibility_section.png,
+	  menu/icons/addressbook_section.png,
+	  menu/icons/adventure_section.png,
+	  menu/icons/amusement_section.png,
+	  menu/icons/applications_section.png,
+	  menu/icons/arcade_section.png, menu/icons/archiving_section.png,
+	  menu/icons/artificial_intelligence_section.png,
+	  menu/icons/astronomy_section.png, menu/icons/backup_section.png,
+	  menu/icons/biology_section.png, menu/icons/boards_section.png,
+	  menu/icons/boot_init_section.png, menu/icons/cards_section.png,
+	  menu/icons/cd_burning_section.png, menu/icons/chat_section.png,
+	  menu/icons/chemistry_section.png, menu/icons/chinese_section.png,
+	  menu/icons/code_generator_section.png,
+	  menu/icons/communications_fax_section.png,
+	  menu/icons/communications_other_section.png,
+	  menu/icons/communications_phone_section.png,
+	  menu/icons/communications_section.png,
+	  menu/icons/compression_section.png,
+	  menu/icons/computer_science_section.png,
+	  menu/icons/configuration_section.png,
+	  menu/icons/data_visualization_section.png,
+	  menu/icons/databases_section.png,
+	  menu/icons/development_environment_section.png,
+	  menu/icons/development_section.png,
+	  menu/icons/development_tools_section.png,
+	  menu/icons/documentation_section.png,
+	  menu/icons/editors_section.png,
+	  menu/icons/education_economy_section.png,
+	  menu/icons/education_geography_section.png,
+	  menu/icons/education_history_section.png,
+	  menu/icons/education_languages_section.png,
+	  menu/icons/education_literature_section.png,
+	  menu/icons/education_mathematics.png,
+	  menu/icons/education_other_section.png,
+	  menu/icons/education_sciences.png,
+	  menu/icons/education_section.png,
+	  menu/icons/education_sport_section.png,
+	  menu/icons/education_tool.png,
+	  menu/icons/electricity_section.png,
+	  menu/icons/emulators_section.png,
+	  menu/icons/file_tools_section.png,
+	  menu/icons/file_transfer_section.png,
+	  menu/icons/finances_section.png,
+	  menu/icons/geosciences_section.png, menu/icons/gnome_section.png,
+	  menu/icons/graphics_section.png, menu/icons/graphs_section.png,
+	  menu/icons/hardware_configuration_section.png,
+	  menu/icons/hardware_section.png,
+	  menu/icons/image_processing_section.png,
+	  menu/icons/instant_messaging_section.png,
+	  menu/icons/internet_section.png,
+	  menu/icons/interpreters_section.png, menu/icons/irc_section.png,
+	  menu/icons/kde_section.png, menu/icons/mail_section.png,
+	  menu/icons/mandrake.png, menu/icons/mathematics_section.png,
+	  menu/icons/monitoring_section.png,
+	  menu/icons/more_applications_other_section.png,
+	  menu/icons/more_applications_section.png,
+	  menu/icons/multimedia_section.png,
+	  menu/icons/networking_configuration_section.png,
+	  menu/icons/networking_section.png,
+	  menu/icons/networking_www_section.png,
+	  menu/icons/news_section.png,
+	  menu/icons/numerical_analysis_section.png,
+	  menu/icons/office_accessories_section.png,
+	  menu/icons/office_drawing_section.png,
+	  menu/icons/office_section.png, menu/icons/other_amusement.png,
+	  menu/icons/other_archiving.png,
+	  menu/icons/other_configuration.png,
+	  menu/icons/other_networking.png, menu/icons/other_sciences.png,
+	  menu/icons/packaging_section.png,
+	  menu/icons/parallel_computing_section.png,
+	  menu/icons/pda_section.png, menu/icons/physics_section.png,
+	  menu/icons/presentation_section.png,
+	  menu/icons/printing_section.png,
+	  menu/icons/publishing_section.png, menu/icons/puzzle_section.png,
+	  menu/icons/remote_access_section.png,
+	  menu/icons/robotics_section.png, menu/icons/sciences_section.png,
+	  menu/icons/shells_section.png, menu/icons/sound_section.png,
+	  menu/icons/sport_section.png, menu/icons/spreadsheet_section.png,
+	  menu/icons/strategy_section.png,
+	  menu/icons/system_other_section.png,
+	  menu/icons/system_section.png,
+	  menu/icons/taskmanagement_section.png,
+	  menu/icons/terminals_section.png,
+	  menu/icons/text_tools_section.png,
+	  menu/icons/timemanagement_section.png,
+	  menu/icons/toys_section.png,
+	  menu/icons/video_conferences_section.png,
+	  menu/icons/video_section.png, menu/icons/web_browser_section.png,
+	  menu/icons/web_editors_section.png,
+	  menu/icons/windowmanager_section.png,
+	  menu/icons/wordprocessor_section.png,
+	  menu/icons/large/accessibility_section.png,
+	  menu/icons/large/addressbook_section.png,
+	  menu/icons/large/adventure_section.png,
+	  menu/icons/large/amusement_section.png,
+	  menu/icons/large/applications_section.png,
+	  menu/icons/large/arcade_section.png,
+	  menu/icons/large/archiving_section.png,
+	  menu/icons/large/artificial_intelligence_section.png,
+	  menu/icons/large/astronomy_section.png,
+	  menu/icons/large/backup_section.png,
+	  menu/icons/large/biology_section.png,
+	  menu/icons/large/boards_section.png,
+	  menu/icons/large/boot_init_section.png,
+	  menu/icons/large/cards_section.png,
+	  menu/icons/large/cd_burning_section.png,
+	  menu/icons/large/chat_section.png,
+	  menu/icons/large/chemistry_section.png,
+	  menu/icons/large/chinese_section.png,
+	  menu/icons/large/code_generator_section.png,
+	  menu/icons/large/communications_fax_section.png,
+	  menu/icons/large/communications_other_section.png,
+	  menu/icons/large/communications_phone_section.png,
+	  menu/icons/large/communications_section.png,
+	  menu/icons/large/compression_section.png,
+	  menu/icons/large/computer_science_section.png,
+	  menu/icons/large/configuration_section.png,
+	  menu/icons/large/data_visualization_section.png,
+	  menu/icons/large/databases_section.png,
+	  menu/icons/large/development_environment_section.png,
+	  menu/icons/large/development_section.png,
+	  menu/icons/large/development_tools_section.png,
+	  menu/icons/large/documentation_section.png,
+	  menu/icons/large/editors_section.png,
+	  menu/icons/large/education_economy_section.png,
+	  menu/icons/large/education_geography_section.png,
+	  menu/icons/large/education_history_section.png,
+	  menu/icons/large/education_languages_section.png,
+	  menu/icons/large/education_literature_section.png,
+	  menu/icons/large/education_mathematics.png,
+	  menu/icons/large/education_other_section.png,
+	  menu/icons/large/education_sciences.png,
+	  menu/icons/large/education_section.png,
+	  menu/icons/large/education_sport_section.png,
+	  menu/icons/large/education_tool.png,
+	  menu/icons/large/electricity_section.png,
+	  menu/icons/large/emulators_section.png,
+	  menu/icons/large/file_tools_section.png,
+	  menu/icons/large/file_transfer_section.png,
+	  menu/icons/large/finances_section.png,
+	  menu/icons/large/geosciences_section.png,
+	  menu/icons/large/gnome_section.png,
+	  menu/icons/large/graphics_section.png,
+	  menu/icons/large/graphs_section.png,
+	  menu/icons/large/hardware_configuration_section.png,
+	  menu/icons/large/hardware_section.png,
+	  menu/icons/large/image_processing_section.png,
+	  menu/icons/large/instant_messaging_section.png,
+	  menu/icons/large/internet_section.png,
+	  menu/icons/large/interpreters_section.png,
+	  menu/icons/large/irc_section.png,
+	  menu/icons/large/kde_section.png,
+	  menu/icons/large/mail_section.png, menu/icons/large/mandrake.png,
+	  menu/icons/large/mathematics_section.png,
+	  menu/icons/large/monitoring_section.png,
+	  menu/icons/large/more_applications_other_section.png,
+	  menu/icons/large/more_applications_section.png,
+	  menu/icons/large/multimedia_section.png,
+	  menu/icons/large/networking_configuration_section.png,
+	  menu/icons/large/networking_section.png,
+	  menu/icons/large/networking_www_section.png,
+	  menu/icons/large/news_section.png,
+	  menu/icons/large/numerical_analysis_section.png,
+	  menu/icons/large/office_accessories_section.png,
+	  menu/icons/large/office_drawing_section.png,
+	  menu/icons/large/office_section.png,
+	  menu/icons/large/other_amusement.png,
+	  menu/icons/large/other_archiving.png,
+	  menu/icons/large/other_configuration.png,
+	  menu/icons/large/other_networking.png,
+	  menu/icons/large/other_sciences.png,
+	  menu/icons/large/packaging_section.png,
+	  menu/icons/large/parallel_computing_section.png,
+	  menu/icons/large/pda_section.png,
+	  menu/icons/large/physics_section.png,
+	  menu/icons/large/presentation_section.png,
+	  menu/icons/large/printing_section.png,
+	  menu/icons/large/publishing_section.png,
+	  menu/icons/large/puzzle_section.png,
+	  menu/icons/large/remote_access_section.png,
+	  menu/icons/large/robotics_section.png,
+	  menu/icons/large/sciences_section.png,
+	  menu/icons/large/shells_section.png,
+	  menu/icons/large/sound_section.png,
+	  menu/icons/large/sport_section.png,
+	  menu/icons/large/spreadsheet_section.png,
+	  menu/icons/large/strategy_section.png,
+	  menu/icons/large/system_other_section.png,
+	  menu/icons/large/system_section.png,
+	  menu/icons/large/taskmanagement_section.png,
+	  menu/icons/large/terminals_section.png,
+	  menu/icons/large/text_tools_section.png,
+	  menu/icons/large/timemanagement_section.png,
+	  menu/icons/large/toys_section.png,
+	  menu/icons/large/video_conferences_section.png,
+	  menu/icons/large/video_section.png,
+	  menu/icons/large/web_browser_section.png,
+	  menu/icons/large/web_editors_section.png,
+	  menu/icons/large/windowmanager_section.png,
+	  menu/icons/large/wordprocessor_section.png,
+	  menu/icons/mini/accessibility_section.png,
+	  menu/icons/mini/addressbook_section.png,
+	  menu/icons/mini/adventure_section.png,
+	  menu/icons/mini/amusement_section.png,
+	  menu/icons/mini/applications_section.png,
+	  menu/icons/mini/arcade_section.png,
+	  menu/icons/mini/archiving_section.png,
+	  menu/icons/mini/artificial_intelligence_section.png,
+	  menu/icons/mini/astronomy_section.png,
+	  menu/icons/mini/backup_section.png,
+	  menu/icons/mini/biology_section.png,
+	  menu/icons/mini/boards_section.png,
+	  menu/icons/mini/boot_init_section.png,
+	  menu/icons/mini/cards_section.png,
+	  menu/icons/mini/cd_burning_section.png,
+	  menu/icons/mini/chat_section.png,
+	  menu/icons/mini/chemistry_section.png,
+	  menu/icons/mini/chinese_section.png,
+	  menu/icons/mini/code_generator_section.png,
+	  menu/icons/mini/communications_fax_section.png,
+	  menu/icons/mini/communications_other_section.png,
+	  menu/icons/mini/communications_phone_section.png,
+	  menu/icons/mini/communications_section.png,
+	  menu/icons/mini/compression_section.png,
+	  menu/icons/mini/computer_science_section.png,
+	  menu/icons/mini/configuration_section.png,
+	  menu/icons/mini/data_visualization_section.png,
+	  menu/icons/mini/databases_section.png,
+	  menu/icons/mini/development_environment_section.png,
+	  menu/icons/mini/development_section.png,
+	  menu/icons/mini/development_tools_section.png,
+	  menu/icons/mini/documentation_section.png,
+	  menu/icons/mini/editors_section.png,
+	  menu/icons/mini/education_economy_section.png,
+	  menu/icons/mini/education_geography_section.png,
+	  menu/icons/mini/education_history_section.png,
+	  menu/icons/mini/education_languages_section.png,
+	  menu/icons/mini/education_literature_section.png,
+	  menu/icons/mini/education_mathematics.png,
+	  menu/icons/mini/education_other_section.png,
+	  menu/icons/mini/education_sciences.png,
+	  menu/icons/mini/education_section.png,
+	  menu/icons/mini/education_sport_section.png,
+	  menu/icons/mini/education_tool.png,
+	  menu/icons/mini/electricity_section.png,
+	  menu/icons/mini/emulators_section.png,
+	  menu/icons/mini/file_tools_section.png,
+	  menu/icons/mini/file_transfer_section.png,
+	  menu/icons/mini/finances_section.png,
+	  menu/icons/mini/geosciences_section.png,
+	  menu/icons/mini/gnome_section.png,
+	  menu/icons/mini/graphics_section.png,
+	  menu/icons/mini/graphs_section.png,
+	  menu/icons/mini/hardware_configuration_section.png,
+	  menu/icons/mini/hardware_section.png,
+	  menu/icons/mini/image_processing_section.png,
+	  menu/icons/mini/instant_messaging_section.png,
+	  menu/icons/mini/internet_section.png,
+	  menu/icons/mini/interpreters_section.png,
+	  menu/icons/mini/irc_section.png, menu/icons/mini/kde_section.png,
+	  menu/icons/mini/mail_section.png, menu/icons/mini/mandrake.png,
+	  menu/icons/mini/mathematics_section.png,
+	  menu/icons/mini/monitoring_section.png,
+	  menu/icons/mini/more_applications_other_section.png,
+	  menu/icons/mini/more_applications_section.png,
+	  menu/icons/mini/multimedia_section.png,
+	  menu/icons/mini/networking_configuration_section.png,
+	  menu/icons/mini/networking_section.png,
+	  menu/icons/mini/networking_www_section.png,
+	  menu/icons/mini/news_section.png,
+	  menu/icons/mini/numerical_analysis_section.png,
+	  menu/icons/mini/office_accessories_section.png,
+	  menu/icons/mini/office_drawing_section.png,
+	  menu/icons/mini/office_section.png,
+	  menu/icons/mini/other_amusement.png,
+	  menu/icons/mini/other_archiving.png,
+	  menu/icons/mini/other_configuration.png,
+	  menu/icons/mini/other_networking.png,
+	  menu/icons/mini/other_sciences.png,
+	  menu/icons/mini/packaging_section.png,
+	  menu/icons/mini/parallel_computing_section.png,
+	  menu/icons/mini/pda_section.png,
+	  menu/icons/mini/physics_section.png,
+	  menu/icons/mini/presentation_section.png,
+	  menu/icons/mini/printing_section.png,
+	  menu/icons/mini/publishing_section.png,
+	  menu/icons/mini/puzzle_section.png,
+	  menu/icons/mini/remote_access_section.png,
+	  menu/icons/mini/robotics_section.png,
+	  menu/icons/mini/sciences_section.png,
+	  menu/icons/mini/shells_section.png,
+	  menu/icons/mini/sound_section.png,
+	  menu/icons/mini/sport_section.png,
+	  menu/icons/mini/spreadsheet_section.png,
+	  menu/icons/mini/strategy_section.png,
+	  menu/icons/mini/system_other_section.png,
+	  menu/icons/mini/system_section.png,
+	  menu/icons/mini/taskmanagement_section.png,
+	  menu/icons/mini/terminals_section.png,
+	  menu/icons/mini/text_tools_section.png,
+	  menu/icons/mini/timemanagement_section.png,
+	  menu/icons/mini/toys_section.png,
+	  menu/icons/mini/video_conferences_section.png,
+	  menu/icons/mini/video_section.png,
+	  menu/icons/mini/web_browser_section.png,
+	  menu/icons/mini/web_editors_section.png,
+	  menu/icons/mini/windowmanager_section.png,
+	  menu/icons/mini/wordprocessor_section.png: Move all menu
+	  informations (layout/icons) from menu to mandrake_desk package
+
+2004-09-29 11:51  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/mandrake_desk: Fix "Listen to Music
+	  Files" menu entry
+
+2004-09-29 10:08  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update
+
+2004-09-29 10:08  David Baudens <baudens@mandrakesoft.com>
+
+	* menu/mandrake_desk: Add missing menu entry for french
+	  mandrakelinux documentation
+
+2004-09-29 09:25  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update
+
+2004-09-29 09:24  David Baudens <baudens@mandrakesoft.com>
+
+	* menu/mandrake_desk: Fix import and sort your photos
+
+2004-09-10 08:48  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/mandrake_desk: Add Mandrakelinux
+	  documentation
+
+2004-09-09 12:35  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/mandrake_desk: Remove all longtitle
+
+2004-09-09 12:27  Laurent Montel <lmontel@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/mandrake_desk: Update last changes
+
+2004-09-09 12:19  David Baudens <baudens@mandrakesoft.com>
+
+	* menu/mandrake_desk: Remove non task oriented description for
+	  KPhone
+
+2004-09-07 10:40  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* man/it/chksession.8: Added Italian Man page
+
+2004-09-01 08:31  Laurent Montel <lmontel@mandrakesoft.com>
+
+	* menu/mandrake_desk: Update menu Fix capitalization
+
 2004-08-31 09:37  Frederic Lepied <flepied@mandrakesoft.com>
 
 	* mandrake_desk.spec: 10.1-6mdk
@@ -166,7 +529,7 @@
 
 	* menu/mandrake_desk-9.2: Save old version
 
-2003-09-10 17:11  Guillaume Cottenceau
+2003-09-10 17:11  Guillaume Cottenceau <gc@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec, backgrounds/xfdrake-test-card.jpg,
 	  backgrounds/xfdrake-test-card.png: xfdrake-test-card needs to be
@@ -177,7 +540,7 @@
 
 	* mandrake_desk.spec, menu/mandrake_desk: Update
 
-2003-09-06 15:29  Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>
+2003-09-06 15:29  alus
 
 	* README: TYPO fix
 
@@ -421,7 +784,7 @@
 	  2-hardware.png, 3-rouage.png, 4-rpmsecu.png, 5-carte.png,
 	  6-shell.png, 7-bugfix.png, 8-bureau.png, 9-docu.png: Add
 
-2002-08-01 12:12  Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>
+2002-08-01 12:12  alus
 
 	* TRANSLATORS: polish translator added
 
@@ -690,7 +1053,7 @@
 	* menu/mandrake_desk: - Fix some menu entries - Use new default png
 	  icons when it is needed
 
-2002-01-14 11:37  Chmouel Boudjnah
+2002-01-14 11:37  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* sbin/chksession: Remove space in name.
 
@@ -860,7 +1223,7 @@
 
 	* mandrake_desk.spec: Update spec file
 
-2001-08-13 15:20  Chmouel Boudjnah
+2001-08-13 15:20  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* sbin/fndSession: Fix path of kdmrc.
 
@@ -885,7 +1248,7 @@
 
 	* mandrake_desk.spec: - Move face in /usr/share/mdk/faces
 
-2001-07-31 15:29  Chmouel Boudjnah
+2001-07-31 15:29  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* sbin/chksession: Ignore backup files. Cleanup codes.
 
@@ -1039,7 +1402,7 @@
 
 	* TRANSLATORS: updated the Portuguese strings
 
-2001-03-02 20:45  Chmouel Boudjnah
+2001-03-02 20:45  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* bin/DrakWM: Call xvt.
 
@@ -1083,7 +1446,7 @@
 
 	* mandrake_desk.spec: Update mandrake_desk.spec
 
-2000-08-31 03:51  Chmouel Boudjnah
+2000-08-31 03:51  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* sbin/chksession: Avoid opendir use csh internal globing...
 
@@ -1171,41 +1534,41 @@
 
 	* TRANSLATORS: fixed an email address
 
-2000-07-22 21:28  Chmouel Boudjnah
+2000-07-22 21:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec: BM.
 
-2000-07-18 23:31  Chmouel Boudjnah
+2000-07-18 23:31  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec, sbin/chksession: * sbin/chksession: Set
 	  support for KDE2 by default when generating session.
 
-2000-07-18 11:42  Chmouel Boudjnah
+2000-07-18 11:42  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec: window-managers no longer needed.
 
-2000-07-18 11:41  Chmouel Boudjnah
+2000-07-18 11:41  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* window-managers: window-managers is no longer needed.
 
-2000-07-18 11:39  Chmouel Boudjnah
+2000-07-18 11:39  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec, bin/DrakWM: * bin/DrakWM: Add -i options to
 	  launch with xinit.  add -a option to provide alias for bash.
 
-2000-07-17 13:20  Dam's
+2000-07-17 13:20  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec: new release
 
-2000-07-16 14:11  Dam's
+2000-07-16 14:11  Dam's <damien@mandrakesoft.com>
 
 	* window-managers: sawmill -> sawfish
 
-2000-07-11 23:43  Chmouel Boudjnah
+2000-07-11 23:43  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* sbin/convertsession: A new greatest hit.
 
-2000-07-11 23:43  Chmouel Boudjnah
+2000-07-11 23:43  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec, sbin/chksession: sbin/chksession: make
 	  window-managers file dynamic by simple entry in
@@ -1220,7 +1583,7 @@
 
 	* TRANSLATORS: Added Korean strings
 
-2000-05-29 13:23  Dam's
+2000-05-29 13:23  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec: see changelog
 
@@ -1240,15 +1603,15 @@
 
 	* mandrake_desk.spec:	* 1.0.3-21mdk
 
-2000-05-12 11:21  Dam's
+2000-05-12 11:21  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec: new mdk rel ; added gnome desktop entries
 
-2000-05-09 23:33  Dam's
+2000-05-09 23:33  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec: mdk release
 
-2000-05-09 19:58  Dam's
+2000-05-09 19:58  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec: new release
 
@@ -1256,23 +1619,23 @@
 
 	* sbin/kdeDesktopCleanup: [no log message]
 
-2000-05-09 19:38  Dam's
+2000-05-09 19:38  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec: no more netscape.desktop
 
-2000-05-09 19:38  Dam's
+2000-05-09 19:38  Dam's <damien@mandrakesoft.com>
 
 	* Makefile: removed netscape.desktop copy
 
-2000-05-09 17:00  Dam's
+2000-05-09 17:00  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec: removed gnome desktop icons...
 
-2000-05-09 10:15  Dam's
+2000-05-09 10:15  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec: see changelog. new release, cosmetic fix.
 
-2000-05-06 22:55  Chmouel Boudjnah
+2000-05-06 22:55  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec, sbin/chksession:	* sbin/chksession: if icewm
 	  is not here by default launch twm.
@@ -1281,23 +1644,23 @@
 
 	* mandrake_desk.spec, sbin/kdeDesktopCleanup: no_comment
 
-2000-05-04 16:09  Dam's
+2000-05-04 16:09  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec gnome/mandrake.links :cleaned gnome
 	  desktop
 
-2000-04-30 17:28  Dam's
+2000-04-30 17:28  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec :bad date
 
-2000-04-30 17:16  Dam's
+2000-04-30 17:16  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec :bad release
 
-2000-04-30 17:15  Dam's
+2000-04-30 17:15  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  ChangeLog mandrake_desk.spec :see Changelog
@@ -1311,35 +1674,35 @@
 	* TRANSLATORS: - add cdwriter_supermount.xpm - correct TRANSLATOR
 	  address - use kdecolors in icons
 
-2000-04-28 14:40  Dam's
+2000-04-28 14:40  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  ChangeLog mandrake_desk.spec :corrected xfce entry in
 	  windowmanagers.
 
-2000-04-28 12:15  Dam's
+2000-04-28 12:15  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers:
 		  ChangeLog mandrake_desk.spec window-managers : recovering
 	  old files
 
-2000-04-28 10:27  Dam's
+2000-04-28 10:27  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec :fixed bad date
 
-2000-04-28 10:15  Dam's
+2000-04-28 10:15  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers:
 		  ChangeLog mandrake_desk.spec window-managers :corrected
 	  xfce entry
 
-2000-04-27 15:57  Dam's
+2000-04-27 15:57  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec  : bad date
 
-2000-04-27 15:46  Dam's
+2000-04-27 15:46  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers:
 		  ChangeLog mandrake_desk.spec window-managers :corrected
@@ -1354,30 +1717,30 @@
 
 	* mandrake_desk.spec: Update .spec
 
-2000-04-20 19:15  Fançois Pons
+2000-04-20 19:15  Fançois Pons <fpons@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers: [no log message]
 
-2000-04-20 16:48  Fançois Pons
+2000-04-20 16:48  Fançois Pons <fpons@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers: [no log message]
 
-2000-04-18 15:24  Dam's
+2000-04-18 15:24  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec :corrected bad version number
 
-2000-04-18 15:21  Dam's
+2000-04-18 15:21  Dam's <damien@mandrakesoft.com>
 
 	* Makefile:
 		  Makefile :updated for new mdk relese
 
-2000-04-18 15:18  Dam's
+2000-04-18 15:18  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 		  ChangeLog mandrake_desk.spec : new mdk release
 
-2000-04-18 14:26  Dam's
+2000-04-18 14:26  Dam's <damien@mandrakesoft.com>
 
 	* window-managers:
 		  window-managers : minor correction
@@ -1389,24 +1752,24 @@
 
 	* TRANSLATORS: Added Welsh strings
 
-2000-04-17 15:22  Dam's
+2000-04-17 15:22  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 	  Modified Files:	  mandrake_desk.spec updated
 
-2000-04-17 04:56  Chmouel Boudjnah
+2000-04-17 04:56  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* window-managers: Various fix.
 
-2000-04-17 00:49  Chmouel Boudjnah
+2000-04-17 00:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: Add /usr/bin
 
-2000-04-17 00:46  Chmouel Boudjnah
+2000-04-17 00:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec: DrakWM a new greatest hit.
 
-2000-04-17 00:45  Chmouel Boudjnah
+2000-04-17 00:45  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* bin/DrakWM: Add file.
 
@@ -1418,24 +1781,24 @@
 
 	* TRANSLATORS: Added Finnsih strings
 
-2000-04-11 18:55  Dam's
+2000-04-11 18:55  Dam's <damien@mandrakesoft.com>
 
 	* mandrake_desk.spec:
 	  Modified Files:	  mandrake_desk.spec added ref for
 	  /usr/share/icons/*.jpg
 
-2000-04-11 18:21  Dam's
+2000-04-11 18:21  Dam's <damien@mandrakesoft.com>
 
 	* default_logo.jpg:
 	  Modified Files:	  default_logo.jpg final logo
 
-2000-04-11 17:46  Dam's
+2000-04-11 17:46  Dam's <damien@mandrakesoft.com>
 
 	* default_background.jpg, default_logo.jpg:
 	  Added Files:	  default_background.jpg default_logo.jpg needed
 	  for new release of gdm/kdm
 
-2000-04-11 17:43  Dam's
+2000-04-11 17:43  Dam's <damien@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec:
 
@@ -1445,23 +1808,23 @@
 
 	* TRANSLATORS: Added Swedish strings
 
-2000-04-07 03:46  Chmouel Boudjnah
+2000-04-07 03:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* window-managers: "Seethechangelog"
 
-2000-04-05 23:49  Chmouel Boudjnah
+2000-04-05 23:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec, Makefile: "Seethechangelog"
 
-2000-04-05 23:46  Chmouel Boudjnah
+2000-04-05 23:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
-2000-04-05 23:41  Chmouel Boudjnah
+2000-04-05 23:41  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-2000-04-05 23:38  Chmouel Boudjnah
+2000-04-05 23:38  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec, window-managers: "Seethechangelog"
 
@@ -1494,15 +1857,15 @@
 
 	* TRANSLATORS: Added Chinese entries
 
-2000-02-02 05:51  Chmouel Boudjnah
+2000-02-02 05:51  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers: "See_The_Changelog"
 
-2000-01-27 15:50  Chmouel Boudjnah
+2000-01-27 15:50  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-2000-01-27 15:44  Chmouel Boudjnah
+2000-01-27 15:44  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* backgrounds/: mandrake_background_1024-1.jpg,
 	  mandrake_background_1024-2.jpg, mandrake_background_1024-3.jpg:
@@ -1544,7 +1907,7 @@
 
 	* TRANSLATORS: added Latvian entries
 
-2000-01-05 00:49  Chmouel Boudjnah
+2000-01-05 00:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
@@ -1553,11 +1916,11 @@
 	* mandrake_desk.spec, window-managers: Use BBDrake & WMDrake for
 	  BlackBox & Window Maker
 
-2000-01-03 02:36  Chmouel Boudjnah
+2000-01-03 02:36  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec, window-managers: "Seethechangelog"
 
-1999-12-31 03:28  Chmouel Boudjnah
+1999-12-31 03:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile: "Seethechangelog"
 
@@ -1565,27 +1928,27 @@
 
 	* mandrake_desk.spec: added the Gnome menu entries to the spec file
 
-1999-12-28 17:27  Chmouel Boudjnah
+1999-12-28 17:27  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec, sbin/chksession: "Seethechangelog"
 
-1999-12-28 16:12  Chmouel Boudjnah
+1999-12-28 16:12  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* man/chksession.8: "Seethechangelog"
 
-1999-12-27 17:18  Chmouel Boudjnah
+1999-12-27 17:18  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec, sbin/chksession: "Seethechangelog"
 
-1999-12-27 12:57  Chmouel Boudjnah
+1999-12-27 12:57  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-1999-12-27 12:53  Chmouel Boudjnah
+1999-12-27 12:53  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-1999-12-27 12:21  Chmouel Boudjnah
+1999-12-27 12:21  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* bin/linuxconf_kdesu: "Seethechangelog"
 
@@ -1593,15 +1956,15 @@
 
 	* Makefile, mandrake_desk.spec: added menu entries for Gnome
 
-1999-12-25 20:13  Chmouel Boudjnah
+1999-12-25 20:13  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* window-managers, mandrake_desk.spec: "Seethechangelog"
 
-1999-12-25 20:09  Chmouel Boudjnah
+1999-12-25 20:09  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-1999-12-25 18:25  Chmouel Boudjnah
+1999-12-25 18:25  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* window-managers, mandrake_desk.spec, sbin/kdeDesktopCleanup:
 	  "Seethechangelog"
@@ -1615,7 +1978,7 @@
 	* mandrake_desk.spec: added Gnome desktop icons previously done in
 	  gmc package
 
-1999-12-23 01:38  Chmouel Boudjnah
+1999-12-23 01:38  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: "Seethechangelog"
 
@@ -1623,20 +1986,20 @@
 
 	* TRANSLATORS: added Bulgarian entries
 
-1999-12-22 03:28  Chmouel Boudjnah
+1999-12-22 03:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
-1999-12-22 03:21  Chmouel Boudjnah
+1999-12-22 03:21  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec, sbin/fndSession, sbin/chksession,
 	  window-managers: "Seethechangelog"
 
-1999-12-22 03:08  Chmouel Boudjnah
+1999-12-22 03:08  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* bin/fndSession, sbin/Xsession: "Seethechangelog"
 
-1999-12-21 13:18  Chmouel Boudjnah
+1999-12-21 13:18  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
@@ -1649,29 +2012,29 @@
 
 	* Makefile, mandrake_desk.spec: no_comment
 
-1999-12-19 19:55  Chmouel Boudjnah
+1999-12-19 19:55  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* bin/fndSession: "Seethechangelog"
 
-1999-12-19 19:50  Chmouel Boudjnah
+1999-12-19 19:50  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, mandrake_desk.spec, README.CVS: "Seethechangelog"
 
-1999-12-19 19:09  Chmouel Boudjnah
+1999-12-19 19:09  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* sbin/fndSession: "Seethechangelog"
 
-1999-12-19 19:05  Chmouel Boudjnah
+1999-12-19 19:05  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* bin/fndSession, mandrake_desk.spec: "Seethechangelog"
 
-1999-12-19 19:02  Chmouel Boudjnah
+1999-12-19 19:02  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, TRANSLATORS, backgrounds/mandrake_background_1024.jpg,
 	  backgrounds/mandrake_background_800.jpg, bin/linuxconf_kdesu,
 	  sbin/kdeDesktopCleanup: Initial revision
 
-1999-12-19 19:02  Chmouel Boudjnah
+1999-12-19 19:02  Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* Makefile, TRANSLATORS, backgrounds/mandrake_background_1024.jpg,
 	  backgrounds/mandrake_background_800.jpg, bin/linuxconf_kdesu,
