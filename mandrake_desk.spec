@@ -1,5 +1,5 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
-%define	version 1.0
+%define	version 1.0.1
 #
 %define release 1mdk
 %define name mandrake_desk
@@ -42,6 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %doc TRANSLATORS special/* README.CVS
+%config /etc/X11/window-managers
 /usr/bin/*
 /usr/sbin/*
 /usr/share/icons/*.xpm
@@ -53,6 +54,12 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/gnome/apps/Internet/*.desktop
 
 %changelog
+
+* Wed Dec 22 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+- sbin/fndSession: new script with the new chksession.
+- sbin/chksession: a new greatest hit.
+- window-managers: list of current window manager.
+
 * Mon Dec 20 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - Another icons change.
 
