@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	16mdk
+Release:	17mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -160,6 +160,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Aug 29 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-17mdk
+- Update screensavers
+
 * Thu Aug 29 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-16mdk
 - Tux family is back
 
