@@ -41,6 +41,7 @@ do
 		ru*) CAPTION="Internet-соединение" ;;
 		sk*) CAPTION="Pripojenie k internetu" ;;
 		sl*) CAPTION="Povezava v internet" ;;
+		sv*) CAPTION="Internet uppkoppling" ;;
 		tr*) CAPTION="щnternet baПlantЩsЩ" ;;
 		uk*) CAPTION="З'╓днання з ╕нтернетом" ;;
 		wa*) CAPTION="Raloyaedje al rantoele daegnrece" ;;
@@ -88,6 +89,7 @@ do
 		ro*) CAPTION="ActualizЦri pentru Mandrake" ;;
 		sk*) CAPTION="Mandrake Updates" ;;
 		sl*) CAPTION="Nadgradnje Mandrake" ;;
+		sv*) CAPTION="Mandrake Uppdateringar" ;;
 		tr*) CAPTION="Mandrake gЭncellemesi" ;;
 		uk*) CAPTION="Поновлення системи Mandrake" ;;
 		wa*) CAPTION="Metaedje a djoШ di Mandrake" ;;
