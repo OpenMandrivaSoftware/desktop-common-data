@@ -1,6 +1,6 @@
 %define release 4mdk
 %define name mandrake_desk
-%define version 1.0.4
+%define version 1.0.3
 
 Summary: The Desktop configuration files for Linux Mandrake.
 Name: %{name}
