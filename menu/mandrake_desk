@@ -12,7 +12,7 @@
 
 
 # Mandrake Control Center
-?package(drakconf): needs="x11" icon="drakconf.png" section="Administer your system" title="Mandrake Control Center" command="/usr/X11R6/bin/drakconf"
+?package(drakconf): needs="x11" icon="drakconf.png" section="Administer your system" title="Mandrake Control Center" command="/usr/sbin/drakconf"
 
 
 # Font configuration
