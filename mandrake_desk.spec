@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
 Version:	8.1
-Release:	5mdk
+Release:	8mdk
 License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
@@ -54,13 +54,13 @@ cd eazel-engine
 
 (
 cd krootwarning
-./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama
+./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama --disable-rpath
 %make
 )
 
 (
 cd krozat
-./configure --prefix=%_prefix --enable-final --disable-debug
+./configure --prefix=%_prefix --enable-final --disable-debug --with-xinerama --disable-rpath
 %make
 )
 
@@ -153,10 +153,20 @@ install -m644 gnome/gnome-mandrakeexpert.xpm %buildroot/usr/share/pixmaps/mc/man
 install -m755 gnome/gnomedesktop-network %buildroot/%_bindir
 
 
+install -d %buildroot/%_menudir
+kdedesktop2mdkmenu.pl krozat .hidden/ScreenSavers %buildroot/%_datadir/applnk/System/ScreenSavers/Krozat.desktop %buildroot/%_menudir/krozat kde
+
+
 %post
 if [ -f /etc/X11/window-managers.rpmsave ];then
 	/usr/sbin/convertsession -f /etc/X11/window-managers.rpmsave || :
 fi
+
+%post -n krozat
+%update_menus
+
+%postun -n krozat
+%clean_menus
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -166,12 +176,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc TRANSLATORS special/*
 #
 #
-%dir %_sysconfig/gtk/
+%dir %_sysconfdir/gtk/
 %config(noreplace) %_sysconfdir/gtk/gtkrc
 #
 %dir %_sysconfdir/X11/wmsession.d/
-#
-%_bindir/*
 #
 #
 %dir %_libdir/gtk/
@@ -205,6 +213,10 @@ rm -rf $RPM_BUILD_ROOT
 %_mandir/*/*
 #
 #
+%dir %_datadir/eazel-engine/
+%_datadir/eazel-engine/*.png
+#
+#
 %dir %_datadir/mdk/
 %dir %_datadir/mdk/faces/
 %_datadir/mdk/faces/*
@@ -215,7 +227,7 @@ rm -rf $RPM_BUILD_ROOT
 #
 %dir %_datadir/pixmaps/backgrounds/
 %dir %_datadir/pixmaps/backgrounds/linux-mandrake/
-%_datadir/pixmap/backgrounds/linux-mandrake/*
+%_datadir/pixmaps/backgrounds/linux-mandrake/*
 #
 %dir %_datadir/pixmaps/mc/
 %_datadir/pixmaps/mc/*
@@ -226,6 +238,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %files -n krootwarning
+%defattr(-,root,root,-)
 %_bindir/krootwarning
 #
 #
@@ -240,6 +253,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %files -n krozat
+%defattr(-,root,root,-)
+%_bindir/krozat.kss
+#
+#
 %dir %_datadir/apps/krozat/
 %dir %_datadir/apps/krozat/pics/
 %_datadir/apps/krozat/pics/*
@@ -258,9 +275,21 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_iconsdir/locolor/32x32/
 %dir %_iconsdir/locolor/32x32/apps
 %_iconsdir/locolor/32x32/apps/krootwarning.png
+#
+#
+%_menudir/krozat
 
 
 %changelog
+* Mon Aug 27 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-8mdk
+- Build without rpath
+
+* Mon Aug 27 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-7mdk
+- Add menu entry for krozat
+
+* Mon Aug 27 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-6mdk
+- Fix %%defattr
+
 * Sat Aug 25 2001 David BAUDENS <baudens@mandrakesoft.com> 8.1-5mdk
 - Split package
 
