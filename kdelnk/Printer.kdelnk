@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=Printer
+Name[af]=Drukker
 Name[bg]=Принтер
 Name[br]=Moullerez
 Name[ca]=Impressora
@@ -39,6 +40,7 @@ Name[wa]=Sicrirece
 Name[zh_CN.GB2312]=ґтУЎ»ъ
 Name[zh_TW.Big5]=¦LЄнѕч
 Comment=Drop text and postscript files onto the PRINTER icon
+Comment[af]=Smyt teks en PostScript lкers hier op die drukkerikoon
 Comment[bg]=Пуснете текстови и postscript файлове върху иконата на ПРИНТЕР
 Comment[br]=Leuskel restroщ skrid ha postscript war arlun ar VOULLEREZ
 Comment[ca]=Deixeu anar el text i els fitxers postscript sobre la icona IMPRESSORA

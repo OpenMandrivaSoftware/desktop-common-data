@@ -5,6 +5,7 @@
 # To send to mosfet each time new languages are added
 #
 Name=Gnome and X Apps
+Name[af]=Gnome en X applikasies
 Name[bg]=Gnome и приложения за X
 Name[br]=Arloadoщ X ha Gnome
 Name[ca]=Gnome i aplicacions X

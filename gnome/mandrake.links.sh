@@ -19,6 +19,7 @@ fi
 #	if [ "$CAPTION" != "" ]; then break ; fi
 #	case "$i" in
 #		en*) CAPTION="Internet connection" ;;
+#		af*) CAPTION="Internetkonneksie" ;;
 #		bg*) CAPTION="Интернет Връзка" ;;
 #		br*) CAPTION="Kevreaс ouzh ar genrouedad" ;;
 #		ca*) CAPTION="Connexiу a Internet" ;;
@@ -72,6 +73,7 @@ fi
 #	if [ "$CAPTION" != "" ]; then break ; fi
 #	case "$i" in
 #		en*) CAPTION="Mandrake Updates" ;;
+#		af*) CAPTION="Mandrake Opdaterings" ;;
 #		bg*) CAPTION="Mandrake Обновяване" ;;
 #		br*) CAPTION="Hizivadurioщ Mandrake" ;;
 #		ca*) CAPTION="Actualitzacions del Mandrake" ;;

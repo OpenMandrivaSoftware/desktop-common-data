@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=Internet connection
+Name[af]=Internetkonneksie
 Name[bg]=Èíòåğíåò Âğúçêà
 Name[br]=Kevreañ ouzh ar genrouedad
 Name[ca]=Connexió a Internet
@@ -35,6 +36,7 @@ Name[uk]=ú'¤ÄÎÁÎÎÑ Ú ¦ÎÔÅÒÎÅÔÏÍ
 Name[wa]=Raloyaedje al rantoele daegnrece
 Name[zh_CN.GB2312]=»¥ÁªÍøÁ¬½Ó
 Comment=Internet connection
+Comment[af]=Internetkonneksie
 Comment[bg]=Èíòåğíåò Âğúçêà
 Comment[br]=Kevreañ ouzh ar genrouedad
 Comment[ca]=Connexió a Internet
