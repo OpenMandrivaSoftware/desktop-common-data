@@ -1,10 +1,9 @@
 ##
 # Locate a file
-?package(kdeutils): needs="kde" kde_filename="Kfind" section="/" title="Find files" icon="kfind.png" command="kfind" kde_command="kfind -caption \"%c\" %i %m %f" multiple_files="false" accept_url="false" kde_opt="\\nBinaryPattern=kfind;\\nProtocols=file;\\nDocPath=kfind/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdebase-progs): needs="kde" kde_filename="Kfind" section="/" title="Find files" icon="kfind.png" command="kfind" kde_command="kfind -caption \"%c\" %i %m %f" multiple_files="false" accept_url="false" kde_opt="\\nBinaryPattern=kfind;\\nProtocols=file;\\nDocPath=kfind/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # File manager
-?package(kdebase): needs="kde" kde_filename="Home" section="Administer your system" title="Manage your files" icon="folder_home.png" comman
-d="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
+?package(kdebase-progs): needs="kde" kde_filename="Home" section="Administer your system" title="Manage your files" icon="folder_home.png" command="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
 
 
 
@@ -13,11 +12,11 @@ d="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
 
 ## Administer your system
 # Configure sound settings
-?package(kdemultimedia): needs="kde" kde_filename="kmix" section="Administer your system" title="Configure sound settings" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kmix;\\nProtocols=\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdemultimedia-kmix) needs="kde" kde_filename="kmix" section="Administer your system" title="Configure sound settings" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kmix;\\nProtocols=\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
 # Configure KDE
-?package(kdebase): needs="kde" kde_filename="KControl" section="Administer your system" title="Configure your desktop" icon="kcontrol.png" command="kcontrol" kde_command="kcontrol -caption \"%c\" %i %m" kde_opt="\\nDocPath=kcontrol/index.html\\nX-KDE-StartupNotify=true"
+?package(kdebase-progs): needs="kde" kde_filename="KControl" section="Administer your system" title="Configure your desktop" icon="kcontrol.png" command="kcontrol" kde_command="kcontrol -caption \"%c\" %i %m" kde_opt="\\nDocPath=kcontrol/index.html\\nX-KDE-StartupNotify=true"
 
 
 # Mandrake Control Center
@@ -25,11 +24,11 @@ d="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
 
 
 # Format a floppy
-?package(kdeutils): needs="kde" kde_filename="KFloppy" section="Administer your system" title="Format a floppy" icon="kfloppy.png" command="kfloppy" kde_command="kfloppy -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kfloppy;\\nProtocols=\\nDocPath=kfloppy/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdeutils-kfloppy): needs="kde" kde_filename="KFloppy" section="Administer your system" title="Format a floppy" icon="kfloppy.png" command="kfloppy" kde_command="kfloppy -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kfloppy;\\nProtocols=\\nDocPath=kfloppy/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
 # Password change
-?package(kdeutils): needs="x11" kde_filename="kdepasswd" section="Administer your system" title="Change your password" icon="password.png" command="kdepasswd" kde_opt="\\nTerminalOptions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdeutils-kdepasswd): needs="x11" kde_filename="kdepasswd" section="Administer your system" title="Change your password" icon="password.png" command="kdepasswd" kde_opt="\\nTerminalOptions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
 
@@ -39,7 +38,7 @@ d="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
 
 ## Enjoy music & video
 # Listen to a CD
-?package(kdemultimedia): needs="kde" kde_filename="kscd" section="Enjoy music & video" title="Listen to a CD" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nBinaryPattern=kscd;\\nProtocols=\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdemultimedia-kscd): needs="kde" kde_filename="kscd" section="Enjoy music & video" title="Listen to a CD" icon="kscd.png" command="kscd" kde_command="kscd -caption \"%c\" %i %m" kde_opt="\\nBinaryPattern=kscd;\\nProtocols=\\nDocPath=kscd/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # Listen to music files
 ?package(totem): needs="x11" command="/usr/bin/totem %U" section="Enjoy music & video" title="Listen to music files" icon="totem.png" mimetypes="video/mpeg;video/msvideo;video/quicktime;video/x-avi;video/x-ms-asf;video/x-ms-wmv;video/x-msvideo;application/x-ogg;audio/x-mp3;audio/x-mpeg;video/x-fli;audio/x-wav" kde_opt="InitialPreference=10"
@@ -48,7 +47,7 @@ d="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
 ?package(gnome-media):needs="x11" command="/usr/bin/gnome-sound-recorder" section="Enjoy music & video" title="Record sounds" icon="/usr/share/pixmaps/gnome-grecord.png"
 
 # Rip cd
-?package(grip):command="kaudiocreator" icon="kaudiocreator.png" title="Rip a CD" needs="x11" section="Enjoy music & video"
+?package(kdemultimedia-kaudiocreator):command="kaudiocreator" icon="kaudiocreator.png" title="Rip a CD" needs="x11" section="Enjoy music & video"
 
 # Watch TV
 ?package(xawtv): command="XawTV" icon="xawtv.png" section="Enjoy music & video" title="Watch TV" needs="x11"
@@ -71,11 +70,9 @@ d="kfmclient openProfile filemanagement" kde_opt="\\nTerminal=0"
 
 ## Read documentation
 # Read Mandrake documentation
-?package(mandrake_doc-de): command="sh -c '$BROWSER /usr/share/doc/mandrake/de/index.html'" icon="documentation_section.png" needs="x11" ti
-tle="Mandrake documentation in german" section="Read documentation"
+?package(mandrake_doc-de): command="sh -c '$BROWSER /usr/share/doc/mandrake/de/index.html'" icon="documentation_section.png" needs="x11" title="Mandrake documentation in german" section="Read documentation"
 
-?package(mandrake_doc-en): command="sh -c '$BROWSER /usr/share/doc/mandrake/en/index.html'" icon="documentation_section.png" needs="x11" ti
-tle="Mandrake documentation in english" section="Read documentation"
+?package(mandrake_doc-en): command="sh -c '$BROWSER /usr/share/doc/mandrake/en/index.html'" icon="documentation_section.png" needs="x11" title="Mandrake documentation in english" section="Read documentation"
 
 ?package(mandrake_doc-es): command="sh -c '$BROWSER /usr/share/doc/mandrake/es/index.html'" icon="documentation_section.png" needs="x11" title="Mandrake documentation in spanish" section="Read documentation"
 
@@ -84,7 +81,7 @@ tle="Mandrake documentation in english" section="Read documentation"
 ?package(mandrake_doc-it): command="sh -c '$BROWSER /usr/share/doc/mandrake/it/index.html'" icon="documentation_section.png" needs="x11" title="Mandrake documentation in italian" section="Read documentation"
 
 # Read KDE documentation
-?package(kdebase): needs="kde" kde_filename="Help" section="Read documentation" title="Read KDE documentation" icon="khelpcenter.png" command="khelpcenter" kde_opt="\\nDocPath=khelpcenter/index.html\\nTerminal=0"
+?package(kdebase-progs): needs="kde" kde_filename="Help" section="Read documentation" title="Read KDE documentation" icon="khelpcenter.png" command="khelpcenter" kde_opt="\\nDocPath=khelpcenter/index.html\\nTerminal=0"
 
 
 
@@ -93,26 +90,23 @@ tle="Mandrake documentation in english" section="Read documentation"
 
 ## Use office tools
 # Create a presentation
-?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_impress.png" title="Create a presentation" command="ooimpress" mimetypes="application/vnd.sun.xml.impress;application/vnd.stardivision.impress;application/mspowerpoint"
+?package(OpenOffice.org): needs="x11" section="Use office tools" icon="ooo_impress.png" title="Create a presentation" command="ooimpress" mimetypes="application/vnd.sun.xml.impress;application/vnd.stardivision.impress;application/mspowerpoint"
 
 # Create a text document
-?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_writer.png" title="Write a document" command="oowriter" mimetypes=
-"application/vnd.sun.xml.writer,application/vnd.stardivision.writer,application/msword,application/vnd.ms-word,application/x-doc,text/rtf"
+?package(OpenOffice.org): needs="x11" section="Use office tools" icon="ooo_writer.png" title="Write a document" command="oowriter" mimetypes="application/vnd.sun.xml.writer,application/vnd.stardivision.writer,application/msword,application/vnd.ms-word,application/x-doc,text/rtf"
 
 # Create a spreadsheet
-?package(OpenOffice.org): needs=x11 section="Use office tools" icon="ooo_calc.png" title="Create a spreadsheet" command="oocalc" mimetypes=
-"application/vnd.sun.xml.calc,application/vnd.stardivision.calc,application/vnd.stardivision.chart,application/msexcel,application/vnd.ms-e
-xcel"
+?package(OpenOffice.org): needs="x11" section="Use office tools" icon="ooo_calc.png" title="Create a spreadsheet" command="oocalc" mimetypes="application/vnd.sun.xml.calc,application/vnd.stardivision.calc,application/vnd.stardivision.chart,application/msexcel,application/vnd.ms-excel"
 
 # Diagrams
-?package(dia): needs="gnome" section="Use office tools" title="Create flowcharts and diagrams" command="/usr/bin/dia" icon="dia.png"
+?package(dia): needs="x11" section="Use office tools" title="Create flowcharts and diagrams" command="/usr/bin/dia" icon="dia.png"
 
 # Manage your finances
 
 # Manage your time
 
 # Send a fax
-?package(kdebase): needs="kde" kde_filename="kdeprintfax" section="Use office tools" title="Send a fax" icon="kdeprintfax.png" command="kdeprintfax %u" kde_command="kdeprintfax -caption \"%c\" %i %m %u" kde_opt="\\nMiniIcon=kdeprintfax\\nTerminal=0"
+?package(kdegraphics-kfax): needs="kde" kde_filename="kdeprintfax" section="Use office tools" title="Send a fax" icon="kdeprintfax.png" command="kdeprintfax %u" kde_command="kdeprintfax -caption \"%c\" %i %m %u" kde_opt="\\nMiniIcon=kdeprintfax\\nTerminal=0"
 
 
 
@@ -121,11 +115,10 @@ xcel"
 
 ## Use the Internet
 # Access Newsgroups
-?package(kdenetwork): needs="kde" kde_filename="KNode" section="Use the Internet" title="Access Newsgroups" icon="knode.png" command="knode" kde_command="knode -caption \"%c\" %i %m" kde_opt="\\nDocPath=knode/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdenetwork-knode): needs="kde" kde_filename="KNode" section="Use the Internet" title="Access Newsgroups" icon="knode.png" command="knode" kde_command="knode -caption \"%c\" %i %m" kde_opt="\\nDocPath=knode/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # Browse the Web
-?package(kdebase): needs="x11" kde_filename="konqbrowser" section="Use the Internet" title="Browse the Web" icon="networking_www_section.pn
-g" command="konqueror --profile webbrowsing" kde_opt="\\nEncoding=UTF-8\\nDocPath=konqueror/index.html"
+?package(kdebase-progs): needs="x11" kde_filename="konqbrowser" section="Use the Internet" title="Browse the Web" icon="networking_www_section.png" command="konqueror --profile webbrowsing" kde_opt="\\nEncoding=UTF-8\\nDocPath=konqueror/index.html"
 
 # Chat using AIM, ICQ, MSN, Yahoo, Winpopup
 ?package(gaim): needs="x11" command="gaim" icon="gaim.png" title="Chat using AIM, ICQ, MSN, Yahoo, Winpopup" section="Use the Internet"
@@ -134,9 +127,7 @@ g" command="konqueror --profile webbrowsing" kde_opt="\\nEncoding=UTF-8\\nDocPat
 ?package(xchat):needs="x11" section="Use the Internet" title="Chat using IRC" command="xchat" icon="xchat.png"
 
 # Connect to the Internet
-?package(kdenetwork): needs="x11" kde_filename="Kppp" section="Use the Internet" title="Connect to the Internet" icon="kppp.png" command="k
-ppp" kde_command="kppp %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kppp;\\nProtocols=\\nDocPath=kppp/index.html\\nTerminalOptions=\\nPath
-=\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdenetwork-kppp): needs="x11" kde_filename="Kppp" section="Use the Internet" title="Connect to the Internet" icon="kppp.png" command="kppp" kde_command="kppp %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kppp;\\nProtocols=\\nDocPath=kppp/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 # Create Web pages
 ?package(quanta): needs="kde" kde_filename="quanta" section="Use the Internet" title="Create Web pages" icon="quanta.png" command="quanta" mimetypes="text/html" kde_opt=""
@@ -144,7 +135,7 @@ ppp" kde_command="kppp %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kppp;\\nPro
 # Dialog using video conference
 
 # Read and send mail
-?package(kdenetwork): needs="kde" kde_filename="KMail" section="Use the Internet" title="Read and send mail" icon="kmail.png" command="kmail" kde_command="kmail -caption \"%c\" %i %m" kde_opt="\\nDocPath=kmail/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
+?package(kdenetwork-kmail): needs="kde" kde_filename="KMail" section="Use the Internet" title="Read and send mail" icon="kmail.png" command="kmail" kde_command="kmail -caption \"%c\" %i %m" kde_opt="\\nDocPath=kmail/index.html\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
 
 
@@ -158,9 +149,8 @@ ppp" kde_command="kppp %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kppp;\\nPro
 ?package(gimp): command="gimp" icon="wilbur.png" section="View, modify, or create graphics" title="Manipulate pictures" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;"
 
 # Scan and use an OCR
-?package(kdegraphics): needs="kde" kde_filename="kooka" section="View, modify, or create graphics" title="Scan and use an OCR" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nTerminalOptions=\\nPath=
-\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/kooka.html"
+?package(kdegraphics-kooka): needs="kde" kde_filename="kooka" section="View, modify, or create graphics" title="Scan and use an OCR" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/kooka.html"
 
 # Take a screenshot
-?package(kdegraphics): needs="kde" kde_filename="ksnapshot" section="View, modify, or create graphics" title="Take a screenshot" icon="ksnapshot.png" command="ksnapshot" kde_command="ksnapshot %i %m" mimetypes="" kde_opt="\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nDocPath=ksnapshot/index.html\\nKDE-X-StartupNotify=true"
+?package(kdegraphics-ksnapshot): needs="kde" kde_filename="ksnapshot" section="View, modify, or create graphics" title="Take a screenshot" icon="ksnapshot.png" command="ksnapshot" kde_command="ksnapshot %i %m" mimetypes="" kde_opt="\\nBinaryPattern=\\nTerminalOptions=\\nPath=\\nTerminal=0\\nDocPath=ksnapshot/index.html\\nKDE-X-StartupNotify=true"
 
