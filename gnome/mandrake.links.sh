@@ -21,6 +21,7 @@ fi
 # 		en*) CAPTION="Internet connection" ;;
 # 		bg*) CAPTION="Интернет Връзка" ;;
 # 		ca*) CAPTION="Connexiу a Internet" ;;
+#		cs*) CAPTION="Pшipojenн k Internetu" ;;
 # 		da*) CAPTION="Internet forbindelse" ;;
 # 		de*) CAPTION="Internetverbindung" ;;
 # 		es*) CAPTION="Conexiуn a Internet" ;;
