@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	1mdk
+Release:	2mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -302,6 +302,9 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Thu Jan 24 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-2mdk
+- Fix path used for images in krozat
+
 * Fri Jan 11 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-1mdk
 - Move screensaver images to mandrake_desk package
 - Configure default desktop for nautilus
