@@ -66,9 +66,9 @@ buildrpm:
 
 # rules to build a distributable rpm
 
-rpm: changelog cvstag dist buildrpm
+rpm: dist buildrpm
 
-dist: cleandist dir export tar
+dist: changelog cvstag cleandist dir export tar
 
 export:
 	cvs export -d $(PACKAGE)-$(VERSION) -r $(TAG) $(PACKAGE)

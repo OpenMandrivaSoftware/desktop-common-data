@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	8mdk
+Release:	9mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -107,7 +107,7 @@ cat << EOF > $RPM_BUILD_ROOT%{_menudir}/mdk-eazel-engine-capplet
 needs="gnome" section="Configuration/Gnome/Advanced" title="Crux GTK+ Theme" \
 longtitle="Configuration applet for Crux GTK+ theme"
 EOF
-cp -f $RPM_BUILD_ROOT%_datadir/gnome/apps/Settings/Desktop/eazel-engine-properties.desktop $RPM_BUILD_ROOT%{_datadir}/control-center/capplet/Advanced
+cp -f $RPM_BUILD_ROOT%_datadir/gnome/apps/Settings/Desktop/eazel-engine-properties.desktop $RPM_BUILD_ROOT%{_datadir}/control-center/capplets/Advanced
 (
 cd krootwarning
 %makeinstall_std
@@ -279,7 +279,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_datadir/gnome/apps/Settings/Desktop/
 %_datadir/gnome/apps/Settings/Desktop/*.desktop
 %{_menudir}/mdk-eazel-engine-capplet
-%{_datadir}/control-center/capplet/Advanced/*
+%{_datadir}/control-center/capplets/Advanced/*
 
 %files -n krootwarning
 %defattr(-,root,root,-)
@@ -322,6 +322,9 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Wed Feb 20 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-9mdk
+- Oops, fix location of capplet for mdk-eazel-engine
+
 * Wed Feb 20 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-8mdk
 - Fix building of package
 - Fix english title for "What to do?" menu (Thanks to Till and Phil Lavigna)
