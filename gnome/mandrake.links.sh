@@ -31,6 +31,7 @@ do
 		it*) CAPTION="Connessione a Internet" ;;
 		nl*) CAPTION="Internet verbinding" ;;
 		no*) CAPTION="Oppkobling Internett" ;;
+		ro*) CAPTION="Conectare la Internet" ;;
 		ru*) CAPTION="Internet-соединение" ;;
 		uk*) CAPTION="З'╓днання з ╕нтернетом" ;;
 		wa*) CAPTION="Raloyaedje al rantoele daegnrece" ;;
