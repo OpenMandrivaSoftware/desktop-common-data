@@ -20,7 +20,7 @@
 
 
 # Format a floppy
-?package(gnome-utils): needs="gnome" section="Administer your system" title="Format a floppy" command="/usr/bin/gfloppy" icon="gfloppy.xpm"
+?package(gnome-utils): needs="gnome" section="Administer your system" title="Format a floppy" command="/usr/bin/gfloppy" icon="gfloppy.png"
 
 ?package(kdeutils): needs="kde" kde_filename="KFloppy" section="Administer your system" title="Format a floppy" icon="kfloppy.png" command="kfloppy" kde_command="kfloppy -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kfloppy;\\nProtocols=\\nDocPath=kfloppy/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
@@ -41,8 +41,6 @@
 
 
 # samba configuration
-?package(samba-swat):command="gnome-moz-remote http://localhost:901/" needs="gnome" icon="swat.xpm" section="Administer your system" title="Configure samba"
-
 ?package(samba-swat):command="sh -c '$BROWSER http://localhost:901/'" needs="x11" icon="swat.xpm" section="Administer your system" title="Configure samba"
 
 
@@ -59,7 +57,7 @@
 
 
 ## Locate a file
-?package(gnome-utils):needs="gnome" section="/" title="Find files" command="/usr/bin/gnome-search-tool" icon="gnome-searchtool.xpm"
+?package(gnome-utils):needs="gnome" section="/" title="Find files" command="/usr/bin/gnome-search-tool" icon="gnome-searchtool.png"
 
 ?package(kdeutils): needs="kde" kde_filename="Kfind" section="/" title="Find files" icon="kfind.png" command="kfind" kde_command="kfind -caption \"%c\" %i %m %f" multiple_files="false" accept_url="false" kde_opt="\\nBinaryPattern=kfind;\\nProtocols=file;\\nDocPath=kfind/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
@@ -157,7 +155,7 @@
 
 ## Use the Internet
 # HTML Editor
-?package(mozilla):icon="mozilla.xpm" needs="gnome" section="Use the Internet" title="Create Web pages" command="NO_XALF /usr/bin/mozilla --editor"
+?package(mozilla):icon="mozilla.png" needs="gnome" section="Use the Internet" title="Create Web pages" command="/usr/bin/mozilla --editor"
 
 ?package(quanta): needs="kde" kde_filename="quanta" section="Use the Internet" title="Create Web pages" icon="quanta.png" command="quanta" mimetypes="text/html" kde_opt=""
 
@@ -277,7 +275,7 @@
 
 
 # Diagrams
-?package(dia): needs="gnome" section="Use office tools" title="Create flowcharts and diagrams" command="/usr/bin/dia" icon="dia.xpm"
+?package(dia): needs="gnome" section="Use office tools" title="Create flowcharts and diagrams" command="/usr/bin/dia" icon="dia.png"
 
 ?package(koffice): needs="kde" kde_filename="kivio" section="Use office tools" title="Create flowcharts and diagrams" icon="kivio.png" command="kivio" mimetypes="application/x-kivio" kde_opt="\\nX-KDE-Library=libkiviopart\\nServiceTypes=KOfficePart,KParts/ReadOnlyPart,KParts/ReadWritePart\\nX-KDE-NativeMimeType=application/x-kivio"
 
