@@ -1,3 +1,233 @@
+2002-02-18 22:51  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Fix and update spec
+
+2002-02-12 18:16  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec: Fix simplified menu
+
+2002-01-29 16:14  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec: Add menu entry for Mdk Eazel engine Fix menu
+	entry for Simplified menu
+
+2002-01-28 17:38  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec, gnome/gnome-Documentation-de.desktop,
+	gnome/gnome-Documentation-en.desktop,
+	gnome/gnome-Documentation-es.desktop,
+	gnome/gnome-Documentation-fr.desktop,
+	gnome/gnome-Documentation-it.desktop, gnome/gnome-Internet.desktop,
+	gnome/gnome-documentation.png, gnome/gnome-internet.png,
+	gnome/gnome-mandrake-campus.desktop,
+	gnome/gnome-mandrake-control-center.desktop,
+	gnome/gnome-mandrake-expert.desktop,
+	gnome/gnome-mandrake-news.desktop,
+	gnome/gnome-mandrake-store.desktop, gnome/gnome-mandrakeexpert.png,
+	gnome/gnome-mandrakenews.png, gnome/gnome-mandrakeonline.png,
+	gnome/gnome-mandrakestore.png, gnome/gnome-mcc.png: Fix icons for
+	GNOME Desktop
+
+2002-01-28 14:00  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec: Release 8.2-3mdk
+
+2002-01-28 13:59  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec: Release 8.2-2mdk
+
+2002-01-11 18:03  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec, gnome/gnome-Internet.desktop,
+	gnome/gnome-mandrake-expert.desktop,
+	gnome/gnome-mandrake-store.desktop: Resync with package Remove
+	generated files Fix screensaver images
+
+2001-10-02 10:32  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* README.CVS: fixed URL
+
+2001-09-20 10:02  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* .cvsignore: Clean cvs
+
+2001-09-19 20:34  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec: Remove generated files, fix package
+	generation add mdk-eazel-engine-capplet package
+
+2001-09-19 13:25  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: aman.png, avn-rat.png, dadou-fish.png,
+	dear-chief-moon.png, gwegwe-rat.png, lmonspread-dog.png,
+	ln-cendrillon.png, renaud-sun.png, vince-donut.png,
+	warly-roller.png, woman.png: Fix icons to allow clean display on a
+	white background
+
+2001-09-19 11:16  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec file
+
+2001-09-19 11:14  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/: gnome-mandrake-news.desktop, gnome-mandrakenews.xpm: Add
+	gnome-mandrake-news.desktop gnome-mandrakenews.xpm
+
+2001-09-18 18:08  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: tuxegg.png, user-brunette-mdk.png, user-default-mdk.png,
+	user-tie-mdk.png, user-woman-blond-mdk.png: Remove some old faces
+	(LN)
+
+2001-09-18 16:36  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec, mandrake_desk.spec: Update spec
+
+2001-09-18 16:35  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: aman.png, man.png: mv man.png aman.png to display it by
+	default in DrakX
+
+2001-09-18 15:59  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* gnome/: gnome-mandrake-campus.desktop,
+	gnome-mandrake-expert.desktop, gnome-mandrake-store.desktop: Use
+	spec compliant desktop file
+
+2001-09-18 12:33  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/gnome-Internet.desktop: Sync
+
+2001-09-17 18:02  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/gnome-mandrakestore.xpm: [no log message]
+
+2001-09-17 17:51  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/: gnome-mandrake-store.desktop, gnome-mandrakestore.xpm:
+	Add icons
+
+2001-09-17 16:56  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/gnome-mandrake-store.desktop: Add
+	gnome-mandrake-store.desktop
+
+2001-09-17 16:54  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/gnome-mandrake-control-center.desktop: [no log message]
+
+2001-09-17 15:39  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/: gnome-Documentation-de.desktop,
+	gnome-Documentation-en.desktop, gnome-Documentation-fr.desktop,
+	gnome-Documentation-it.desktop, gnome-Internet.desktop: Remove hard
+	coded icon PATH
+
+2001-09-14 13:55  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec, gnome/gnome-mandrakecampus.xpm,
+	gnome/gnome-mandrakeexpert.xpm, gnome/gnome-mandrakestore.xpm: Add
+	gnome-mandrakestore.xpm and updaet gnome-mandrakecampus.xpm and
+	gnome-mandrakeexpert.xpm
+
+2001-09-13 19:32  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec
+
+2001-09-13 17:04  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile: Update Makefile
+
+2001-09-13 16:00  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec
+
+2001-09-13 15:52  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: [no log message]
+
+2001-09-12 17:44  David Baudens <baudens@mandrakesoft.com>
+
+	* gnome/gnome-sofware-manager.desktop: Remove
+	gnome-software-manager from Desktop
+
+2001-09-12 17:42  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: tux.xpm, tuxbaby.xpm, tuxbox.xpm, tuxcoocker.xpm,
+	tuxdad.xpm, tuxegg.xpm, tuxgirl.xpm, tuxhead1.xpm, tuxhead2.xpm,
+	tuxmam.xpm, tuxmecano.xpm, user-brunette-mdk.xpm,
+	user-curly-mdk.xpm, user-default-mdk.xpm, user-girl-mdk.xpm,
+	user-hat-mdk.xpm, user-tie-mdk.xpm, user-woman-blond-mdk.xpm,
+	utildame.xpm, utilmons.xpm: Remove xpm faces
+
+2001-09-12 17:31  David Baudens <baudens@mandrakesoft.com>
+
+	* backgrounds/: DKP1-1024.png, DKP1-1280.png, DKP1-1600.png,
+	DKP1-640.png, DKP1-800.png, DKP2-1024.png, DKP2-1280.png,
+	DKP2-640.png, DKP2-800.png, DKP3-1024.png, DKP3-1280.png,
+	DKP3-1600.png, DKP3-640.png, DKP3-800.png, DKP4-1024.png,
+	DKP4-1280.png, DKP4-1600.png, DKP4-640.png, DKP4-800.png,
+	PP1-1024.png, PP1-1280.png, PP1-1600.png, PP1-640.png, PP1-800.png,
+	PP2-1024.png, PP2-1280.png, PP2-1600.png, PP2-640.png, PP2-800.png,
+	PP3-1024.png, PP3-1280.png, PP3-1600.png, PP3-640.png, PP3-800.png,
+	PP4-1024.png, PP4-1280.png, PP4-1600.png, PP4-640.png, PP4-800.png,
+	default_background.jpg, logoMDK1-1024.png, logoMDK1-1280.png,
+	logoMDK1-1600.png, logoMDK1-800.png, mandrake_background1_1024.jpg,
+	mandrake_background2_1024.jpg, mandrake_background3_1024.jpg,
+	mandrake_background4_1024.jpg, mandrake_background_blue_1024.jpg,
+	nature-1024.png, nature-1280.png, nature-1600.png, nature-640.png,
+	nature-800.png: Remove old backgrounds
+
+2001-09-04 17:43  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile: Update Makefile, remove login/loging100.png and
+	krozat/config.cache
+
+2001-09-04 17:35  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec
+
+2001-09-04 17:18  David Baudens <baudens@mandrakesoft.com>
+
+	* default_background.jpg, default_logo.jpg, mandrake-small.xpm:
+	Remove some old images
+
+2001-09-04 16:58  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec
+
+2001-09-03 03:10  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mandrake_desk.spec: added French man page to the spec file
+
+2001-09-03 03:02  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* Makefile: Added French man page, moved English page to its own
+	directory
+
+2001-08-27 14:06  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec
+
+2001-08-27 12:51  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec
+
+2001-08-27 12:40  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec
+
+2001-08-24 19:11  David Baudens <baudens@mandrakesoft.com>
+
+	* faces/: avn-rat.png, dadou-fish.png, dear-chief-moon.png,
+	gwegwe-rat.png, lmonspread-dog.png, ln-cendrillon.png, man.png,
+	renaud-sun.png, vince-donut.png, warly-roller.png, woman.png: Add
+	some MandrakeSoft employees :o)
+
+2001-08-24 18:39  David Baudens <baudens@mandrakesoft.com>
+
+	* mandrake_desk.spec: Update spec file
+
 2001-08-07 19:17  vincent
 
 	* mandrake_desk.spec: - Move face in /usr/share/mdk/faces
