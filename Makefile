@@ -2,7 +2,6 @@ PACKAGE = mandrake_desk
 NAME = mandrake_desk
 VERSION:=$(shell grep 'Version:' $(PACKAGE).spec| cut -f 2)
 RELEASE:=$(shell grep 'Release:' $(PACKAGE).spec| cut -f 2)
-RPM=$(HOME)/rpm
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 mandir=/usr/share/man
 
@@ -17,8 +16,6 @@ dis: clean
 	tar jcf ../$(NAME)-$(VERSION).tar.bz2 $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
-rpm: dis ../$(NAME)-$(VERSION).tar.bz2 $(RPM)
-	cp -f ../$(NAME)-$(VERSION).tar.bz2 $(RPM)/SOURCES
-	cp -f $(NAME).spec $(RPM)/SPECS/
-	rpm -ba --clean --rmsource $(NAME).spec
+rpm: dis
+	rpm -ta --clean --rmsource ../$(NAME)-$(VERSION).tar.bz2
 	rm -f ../$(NAME)-$(VERSION).tar.bz2
