@@ -1,0 +1,57 @@
+#!/bin/sh
+#---------------------------------------------------------------
+# Project         : Mandrakelinux
+# Module          : bin
+# File            : xvt
+# Version         : $Id$
+# Author          : Frederic Lepied
+# Created On      : Tue Aug 31 16:26:54 2004
+# Purpose         : launch a terminal emulator
+#---------------------------------------------------------------
+
+strip_terminal_var() {
+if [[ -n "$TERMINAL" ]]; then
+  if [[ `basename "$TERMINAL"` == "xvt" ]]; then
+    unset TERMINAL
+  fi
+fi
+}
+
+strip_terminal_var
+if [[ -z "$TERMINAL" ]]; then
+ 
+    # using GNOME
+    if [[ -n "$GNOME_DESKTOP_SESSION_ID" ]]; then
+	TERMINAL=`gconftool -g /desktop/gnome/applications/terminal/exec`
+    fi
+
+    #using KDE
+    if [[ -n "$KDE_FULL_SESSION" ]]; then
+	NEWTERMINAL=`grep -m 1 'TerminalApplication=' $HOME/.kde/share/config/kdeglobals 2>/dev/null`
+	[[ -z "$NEWTERMINAL" ]] && NEWTERMINAL=`grep -m 1 'TerminalApplication=' /etc/kde/kdeglobals 2>/dev/null`
+	if [[ -n "$NEWTERMINAL" ]]; then
+  	  TERMINAL=`echo $NEWTERMINAL| sed -e 's/TerminalApplication=//' -e 's/!//'`
+	fi
+        [[ -z "$TERMINAL" ]] && which kconsole 2> /dev/null && TERMINAL="konsole"
+    fi
+
+   strip_terminal_var 
+   
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which rxvt 2> /dev/null` 
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which xterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which gnome-terminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which konsole 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which aterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which Eterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which kterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which multi-gnome-terminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which multixterm 2> /dev/null`
+fi
+
+if [[ -n "$TERMINAL" ]]; then 
+  exec $TERMINAL "$@"
+else
+  echo "no terminal emulator detected"
+fi
+
+# www-browser ends here

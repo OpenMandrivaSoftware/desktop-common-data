@@ -9,18 +9,48 @@
 # Purpose         : launch a web browser
 #---------------------------------------------------------------
 
+strip_browser_var() {
+if [[ -n "$BROWSER" ]]; then
+  if [[ `basename "$BROWSER"` == "www-browser" ]]; then
+    unset BROWSER
+  fi
+fi
+}
+
+strip_browser_var
 if [[ -z "$BROWSER" ]]; then
-    if /sbin/pidof gnome-session > /dev/null; then
-	BROWSER=`which epiphany 2> /dev/null`
-	[[ -z "$BROWSER" ]] && BROWSER=`which galeon 2> /dev/null`
+ 
+    # using GNOME
+    if [[ -n "$GNOME_DESKTOP_SESSION_ID" ]]; then
+	BROWSER=`gconftool -g /desktop/gnome/url-handlers/http/command | sed -e 's/%s//'`
+	if [[ `gconftool -g /desktop/gnome/url-handlers/http/needs_terminal` == "true" ]]; then
+  		BROWSER="xvt -e $BROWSER"
+	fi
     fi
-    [[ -z "$BROWSER" ]] && which kfmclient 2> /dev/null && BROWSER="kfmclient openProfile webbrowsing"
+
+    #using KDE
+    if [[ -n "$KDE_FULL_SESSION" ]]; then
+	NEWBROWSER=`grep -m 1 'BrowserApplication=' $HOME/.kde/share/config/kdeglobals 2>/dev/null`
+	[[ -z "$NEWBROWSER" ]] && NEWBROWSER=`grep -m 1 'BrowserApplication=' /etc/kde/kdeglobals 2>/dev/null`
+	if [[ -n "$NEWBROWSER" ]]; then
+  	  BROWSER=`echo $NEWBROWSER | sed -e 's/BrowserApplication=//' -e 's/!//'`
+	fi
+        [[ -z "$BROWSER" ]] && which kfmclient 2> /dev/null && BROWSER="kfmclient openProfile webbrowsing"
+    fi
+
+   strip_browser_var 
+   
+    [[ -z "$BROWSER" ]] && BROWSER=`which mozilla-firefox 2> /dev/null` 
     [[ -z "$BROWSER" ]] && BROWSER=`which epiphany 2> /dev/null`
     [[ -z "$BROWSER" ]] && BROWSER=`which galeon 2> /dev/null`
     [[ -z "$BROWSER" ]] && BROWSER=`which mozilla 2> /dev/null`
+    [[ -z "$BROWSER" ]] && which kfmclient 2> /dev/null && BROWSER="kfmclient openProfile webbrowsing"
 fi
 
-echo "$BROWSER $@"
-exec $BROWSER "$@"
+if [[ -n "$BROWSER" ]]; then 
+  exec $BROWSER "$@"
+else
+  echo "no web browser detected"
+fi
 
 # www-browser ends here

@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.2
-Release: 	1mdk
+Release: 	2mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -53,6 +53,7 @@ install -m 0644 backgrounds/xfdrake-test-card.png %buildroot/%_datadir/mdk/xfdra
 install -d -m 0755 %buildroot/%_bindir/
 for i in bin/*.sh ; do install -m 0755 $i %buildroot/%_bindir/ ; done
 install -m 0755 bin/www-browser %buildroot/%_bindir/
+install -m 0755 bin/xvt %buildroot/%_bindir/
 
 # /usr/sbin/
 install -d -m 0755 %buildroot/%_sbindir/
@@ -170,6 +171,12 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Mar 09 2005 Frederic Crozat <fcrozat@mandrakesoft.com> 10.2-2mdk 
+- change www-browser to use BROWSER variable if set or use running environment
+  settings if set.
+- xvt script to replace alternative : choose programs to start based on
+  running environment
+
 * Mon Mar 07 2005 Laurent MONTEL <lmontel@mandrakesoft.com> 10.2-1mdk
 - Fix error into menu
 
