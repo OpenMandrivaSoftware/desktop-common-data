@@ -3,6 +3,7 @@
 Name=Internet connection
 Name[af]=Internetkonneksie
 Name[ar]=ÇÊÕÇä ÈÇäÇæÊÑæÊ
+Name[az]=İnternet bağlantısı
 Name[be]=Çëó÷ıííå ç ñåòêàé ²íòığíıò
 Name[bg]=Èíòåğíåò Âğúçêà
 Name[br]=Kevreañ ouzh ar genrouedad
@@ -44,6 +45,7 @@ Name[zh_CN.GB2312]=»¥ÁªÍøÁ¬½Ó
 Comment=Internet connection.
 Comment[af]=Internetkonneksie
 Comment[ar]=ÇÊÕÇä ÈÇäÇæÊÑæÊ
+Comment[az]=İnternet bağlantısı
 Comment[be]=Çëó÷ıííå ç ñåòêàé ²íòığíıò.
 Comment[bg]=Èíòåğíåò Âğúçêà
 Comment[br]=Kevreañ ouzh ar genrouedad

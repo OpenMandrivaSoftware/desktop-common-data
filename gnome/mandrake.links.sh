@@ -20,7 +20,8 @@ fi
 #	case "$i" in
 #		en*) CAPTION="Internet connection" ;;
 #		af*) CAPTION="Internetkonneksie" ;;
-#		bg*) CAPTION="Злучэнне з сеткай Інтэрнэт" ;;
+#		az*) CAPTION="Эnternet baрlantэsэ" ;;
+#		be*) CAPTION="Злучэнне з сеткай Інтэрнэт" ;;
 #		bg*) CAPTION="Интернет Връзка" ;;
 #		br*) CAPTION="Kevreaс ouzh ar genrouedad" ;;
 #		ca*) CAPTION="Connexiу a Internet" ;;
