@@ -1,3 +1,8 @@
+2002-02-20 19:06  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* Makefile, mandrake_desk.spec: Fix location of mdk-eazel-engine
+	capplet
+
 2002-02-20 14:36  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* mandrake_desk.spec: Fix build
