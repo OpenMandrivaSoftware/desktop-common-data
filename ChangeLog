@@ -1,8 +1,15 @@
+2000-04-26 dam's <damien@mandrakesoft.com>
+
+	* Removed unused icons
+	* Changed icons/gnome-mandrake.png : new graphic charter
+	
 2000-04-21 David BAUDENS <baudens@mandrakesoft.com>
+
 	* Adjust wmaker path
 	* Maker rpmlint happy
 
 2000-04-20	David BAUDENS  <baudens@mandrakesoft.com>
+
 	* Use new icon for doc-mdk.xpm (the others will be add this week-end)
 
 2000-04-18  dam's  <damien@mandrakesoft.com>
