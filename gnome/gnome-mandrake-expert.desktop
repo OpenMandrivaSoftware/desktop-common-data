@@ -1,7 +1,7 @@
 
 [Desktop Entry]
 Name=Mandrake Expert
-Icon=/usr/share/pixmaps/mc/mandrakeexpert.xpm
+Icon=gnome-mandrakeexpert.png
 Exec=http://www.mandrakeexpert.com/
 Terminal=false
 MultipleArgs=false

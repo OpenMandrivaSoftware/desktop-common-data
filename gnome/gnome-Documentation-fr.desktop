@@ -1,7 +1,7 @@
 
 [Desktop Entry]
 Name=Documentation
-Icon=documentation_section.xpm
+Icon=gnome-documentation.png
 Exec=$HELP_BROWSER /usr/share/doc/mandrake/fr/index.html 
 Terminal=false
 MultipleArgs=false

@@ -1,7 +1,7 @@
 
 [Desktop Entry]
 Name=Mandrake Store
-Icon=/usr/share/pixmaps/mc/mandrakestore.xpm
+Icon=gnome-mandrakestore.png
 Exec=http://www.mandrakestore.com/
 Terminal=false
 MultipleArgs=false

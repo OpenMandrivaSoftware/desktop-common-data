@@ -1,7 +1,7 @@
 
 [Desktop Entry]
 Name=Mandrake News
-Icon=/usr/share/pixmaps/mc/mandrakenews.xpm
+Icon=gnome-mandrakenews.png
 Exec=http://www.mandrakesoft.com/community/mandrakesoftnews
 Terminal=false
 MultipleArgs=false

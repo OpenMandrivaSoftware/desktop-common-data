@@ -1,7 +1,7 @@
 
 [Desktop Entry]
 Name=Mandrake Control Center
-Icon=drakconf.xpm
+Icon=gnome-mcc.png
 Exec=/usr/X11R6/bin/DrakConf
 Terminal=false
 MultipleArgs=false

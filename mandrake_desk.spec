@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	8.2
-Release:	3mdk
+Release:	4mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -136,26 +136,22 @@ done
 mkdir -p $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts
 cp gnome/mandrake.links.sh $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts/mandrake.links.sh
 chmod 0755 $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts/mandrake.links.sh
-#install -m644 gnome/gnome-mandrake-campus.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Campus.desktop"
-install -m644 gnome/gnome-mandrake-control-center.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Control Center.desktop"
-install -m644 gnome/gnome-mandrake-expert.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Expert.desktop"
-install -m644 gnome/gnome-mandrake-news.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake News.desktop"
-install -m644 gnome/gnome-mandrake-store.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Store.desktop"
-install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/mdk/gnome-desktop/Connection-to-Internet.desktop
+install -m644 gnome/gnome-mandrake-control-center.desktop %buildroot/%_datadir/mdk/gnome-desktop
+install -m644 gnome/gnome-mandrake-expert.desktop %buildroot/%_datadir/mdk/gnome-desktop
+install -m644 gnome/gnome-mandrake-news.desktop %buildroot/%_datadir/mdk/gnome-desktop
+install -m644 gnome/gnome-mandrake-store.desktop %buildroot/%_datadir/mdk/gnome-desktop
+install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/mdk/gnome-desktop
 
 mkdir -p $RPM_BUILD_ROOT%_datadir/nautilus/default-desktop
-install -m644 gnome/gnome-mandrake-control-center.desktop "%buildroot/%_datadir/nautilus/default-desktop/Mandrake Control Center.desktop"
-install -m644 gnome/gnome-mandrake-expert.desktop "%buildroot/%_datadir/nautilus/default-desktop/Mandrake Expert.desktop"
-install -m644 gnome/gnome-mandrake-news.desktop "%buildroot/%_datadir/nautilus/default-desktop/Mandrake News.desktop"
-install -m644 gnome/gnome-mandrake-store.desktop "%buildroot/%_datadir/nautilus/default-desktop/Mandrake Store.desktop"
-install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/nautilus/default-desktop/Connection-to-Internet.desktop
+install -m644 gnome/gnome-mandrake-control-center.desktop %buildroot/%_datadir/nautilus/default-desktop
+install -m644 gnome/gnome-mandrake-expert.desktop %buildroot/%_datadir/nautilus/default-desktop
+install -m644 gnome/gnome-mandrake-news.desktop %buildroot/%_datadir/nautilus/default-desktop
+install -m644 gnome/gnome-mandrake-store.desktop %buildroot/%_datadir/nautilus/default-desktop
+install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/nautilus/default-desktop
 
 
-install -d %buildroot/%_datadir/pixmaps/mc/
-install -m644 gnome/gnome-mandrakecampus.xpm %buildroot/%_datadir/pixmaps/mc/mandrakecampus.xpm
-install -m644 gnome/gnome-mandrakeexpert.xpm %buildroot/%_datadir/pixmaps/mc/mandrakeexpert.xpm
-install -m644 gnome/gnome-mandrakenews.xpm %buildroot/%_datadir/pixmaps/mc/mandrakenews.xpm
-install -m644 gnome/gnome-mandrakestore.xpm %buildroot/%_datadir/pixmaps/mc/mandrakestore.xpm
+install -d %buildroot/%_datadir/pixmaps
+install -m644 gnome/*.png %buildroot/%_datadir/pixmaps
 
 install -m755 gnome/gnomedesktop-network %buildroot/%_bindir
 
@@ -236,11 +232,10 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_datadir/pixmaps/backgrounds/linux-mandrake/
 %_datadir/pixmaps/backgrounds/linux-mandrake/*
 #
-%dir %_datadir/pixmaps/mc/
-%_datadir/pixmaps/mc/*
-#
+
 %dir %_datadir/pixmaps/mdk/
 %_datadir/pixmaps/mdk/*
+%_datadir/pixmaps/*.png
 #
 %_menudir/simplified/mandrake_desk
 
@@ -313,6 +308,9 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/krozat
 
 %changelog
+* Mon Jan 28 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 8.2-4mdk
+- New icons for GNOME desktop
+
 * Sun Jan 27 2002 Stefan van der Eijk <stefan@eijk.nu> 8.2-3mdk
 - BuildRequires
 
