@@ -1,14 +1,15 @@
 #
 # WARNING: This file is in unicode!
 #
-# Mohamed El-dawy <msdawy@hotmail.com>
+# Mohamed El-dawy <msdawy@hotmail.com>, 2001
+# Mohammed Gamal <f2c2001@yahoo.com>, 2001
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mandrake_desk VERSION\n"
 "POT-Creation-Date: 2001-03-29 09:59+0200\n"
 "PO-Revision-Date: 1999-08-25 11:07+0200\n"
-"Last-Translator: Mohamed El-dawy <msdawy@hotmail.com>\n"
+"Last-Translator: Mohammed Gamal <f2c2001@yahoo.com>\n"
 "Language-Team: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,12 +22,11 @@ msgstr "DrakConf"
 
 #: gnome/mandrake.links.desktop.in.h:2 old/mandrake.links.desktop.in.h:2
 msgid "GNOME Web Site"
-msgstr ""
+msgstr "موقع GNOME"
 
 #: gnome/mandrake.links.desktop.in.h:3 old/mandrake.links.desktop.in.h:6
-#, fuzzy
 msgid "Mandrake documentation"
-msgstr "ŐáÍÇĘ ĺÓÇŮĎÉ ĺÇćĎŃęă čăęĎę KDE"
+msgstr "وثائق ماندريك"
 
 #: gnome/mandrake.links.desktop.in.h:4 kdelnk/Netscape.kdelnk.in.h:1
 #: old/Netscape.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:7
@@ -36,21 +36,21 @@ msgstr "نتسكيب Netscape"
 #: kde/Desktop/Templates/MimeType.noext.kdelnk.in.h:1
 #: old/MimeType.noext.kdelnk.in.h:1
 msgid "Mime Type"
-msgstr ""
+msgstr "نسق ملفات"
 
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
 msgid "Application"
-msgstr ""
+msgstr "تطبيق"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr ""
+msgstr "عنوان انترنت (URL)"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
 msgid "World Wide Web URL"
-msgstr ""
+msgstr "عنوان الشبكة العالمية"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:2
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:1
@@ -58,44 +58,44 @@ msgstr ""
 #: old/CD-ROM.noext.kdelnk.in.h:2 old/Device.noext.kdelnk.in.h:1
 #: old/Floppy.noext.kdelnk.in.h:1
 msgid "File System Device"
-msgstr ""
+msgstr "جهاز نظام ملفات"
 
 #: kde/Desktop/Templates/Ftpurl.noext.kdelnk.in.h:1
 #: old/Ftpurl.noext.kdelnk.in.h:1
 msgid "FTP URL"
-msgstr ""
+msgstr "عنوان FTP"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:1 old/Printer.noext.kdelnk.in.h:1
 msgid "Default printer"
-msgstr ""
+msgstr "الطابغة الإفتراضية"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr ""
+msgstr "ادارة طابور الطباعة"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
-msgstr ""
+msgstr "قرص مدمج"
 
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:2 old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
-msgstr ""
+msgstr "قرص مرن"
 
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
-msgstr "ŐáÍÇĘ ĺÓÇŮĎÉ ĺÇćĎŃęă čăęĎę KDE"
+msgstr "وثائق ماندريك و KDE"
 
 #: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
-msgstr "ŐáÍÇĘ ĺÓÇŮĎÉ ĺÇćĎŃęă čăęĎę KDE"
+msgstr "وثائق ماندريك و KDE"
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr ""
+msgstr "أدوات تهيئة النظام في لينكس-ماندريك"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
-msgstr "المجلد الأم (Home Directory)"
+msgstr "المجلد الأب (Home Directory)"
 
 #: kdelnk/Internet.kdelnk.in.h:1 old/Internet.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:3
@@ -137,11 +137,11 @@ msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr ""
+msgstr "وثائق لينكس"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
-msgstr ""
+msgstr "RpmDrake"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
