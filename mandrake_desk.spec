@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	10.0
-Release: 	8mdk
+Release: 	9mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -14,7 +14,7 @@ Source:		mandrake_desk-%{version}.tar.bz2
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildArch:	noarch
 Requires:	menu >= 2.1.5-125mdk, mandrake_theme
-
+Conflicts:	kdebase-kdm-config-file < 3.2-62mdk
 
 
 %description
@@ -141,6 +141,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Feb 27 2004 Frederic Lepied <flepied@mandrakesoft.com> 10.0-9mdk
+- fixed KDM sessions
+
 * Fri Feb 27 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.0-8mdk
 - Fix typo reported by Per Øyvind Karlsen
 
