@@ -22,7 +22,7 @@ if [[ -z "$BROWSER" ]]; then
  
     # using GNOME
     if [[ -n "$GNOME_DESKTOP_SESSION_ID" ]]; then
-	BROWSER=`gconftool -g /desktop/gnome/url-handlers/http/command | sed -e 's/%s//'`
+	BROWSER=`gconftool -g /desktop/gnome/url-handlers/http/command | sed -e 's/ %s//'`
 	if [[ `gconftool -g /desktop/gnome/url-handlers/http/needs_terminal` == "true" ]]; then
   		BROWSER="xvt -e $BROWSER"
 	fi
