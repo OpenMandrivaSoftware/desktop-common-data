@@ -14,8 +14,7 @@ dis: clean
 	mkdir -p $(NAME)-$(VERSION)
 	find . -not -name "$(NAME)-$(VERSION)"|cpio -pd $(NAME)-$(VERSION)/
 	find $(NAME)-$(VERSION) -type d -name CVS -o -name .cvsignore |xargs rm -rf
-	tar cf ../$(NAME)-$(VERSION).tar $(NAME)-$(VERSION)
-	bzip2 -9f ../$(NAME)-$(VERSION).tar
+	tar jcf ../$(NAME)-$(VERSION).tar.bz2 $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
 rpm: dis ../$(NAME)-$(VERSION).tar.bz2 $(RPM)

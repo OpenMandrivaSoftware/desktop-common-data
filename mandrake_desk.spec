@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.2
-Release:	7mdk
+Release: 8mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -49,7 +49,7 @@ install -m 0644 backgrounds/nature.jpg %buildroot/%_datadir/mdk/backgrounds/
 
 # XFdrake test card
 install -d -m 0755 %buildroot/%_datadir/mdk/xfdrake/
-install -m 0644 backgrounds/xfdrake-test-card.jpg %buildroot/%_datadir/mdk/xfdrake/xfdrake-test-card.jpg
+install -m 0644 backgrounds/xfdrake-test-card.png %buildroot/%_datadir/mdk/xfdrake/xfdrake-test-card.png
 
 
 
@@ -159,7 +159,7 @@ rm -fr %buildroot
 %_datadir/apps/kdm/pics/*
 #
 %dir %_datadir/mdk/xfdrake/
-%_datadir/mdk/xfdrake/*.jpg
+%_datadir/mdk/xfdrake/*.png
 #
 %dir /usr/share/mdk/screensaver/
 /usr/share/mdk/screensaver/*.png
@@ -169,6 +169,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Sep 10 2003 Guillaume Cottenceau <gc@mandrakesoft.com> 9.2-8mdk
+- xfdrake-test-card needs to be in .png format since we don't
+  have have the jpeg pixbug loader during install
+
 * Fri Sep 05 2003 David Baudens <baudens@mandrakesoft.com> 9.2-7mdk
 - Update simplified menu
 
