@@ -33,6 +33,7 @@ mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
 
 rm -f special/mandrake-small.xpm
 
+cd $RPM_BUILD_ROOT/usr/share/faces
 ln -s user-hat-mdk.png root.png
 ln -s root.png root
 ln -s user-default-mdk.png default.png
@@ -89,8 +90,8 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Jul 18 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.4-3mdk
 - Remove /etc/X11/window-managers
 - bin/DrakWM: 
-			  Add -i options to launch with xinit.
-		      Add -a option to provide alias for bash.
+  	* Add -i options to launch with xinit.
+	* Add -a option to provide alias for bash.
  
 * Mon Jul 17 2000 dam's <damien@mandrakesoft.com> 1.0.4-2mdk
 - replaced sawmill by sawfish
