@@ -1,7 +1,3 @@
-2000-04-06  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
-
-	* window-managers: no need AnotherLevel (depreciated).
-
 2000-04-05  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* mandrake_desk.spec: adjust groups.

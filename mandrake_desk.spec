@@ -1,6 +1,6 @@
 %define release 1mdk
 %define name mandrake_desk
-%define version 1.0.2
+%define version 1.0.3
 
 Summary: The Desktop configuration files for Linux Mandrake.
 Name: %{name}
@@ -43,6 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/icons/mini/*.xpm
 /usr/share/icons/large/*.xpm
 /usr/share/pixmaps/backgrounds/mandrake
+/usr/share/pixmaps/backgrounds/*
 /etc/skel/Desktop/
 /usr/share/pixmaps/mdk
 /usr/share/gnome/apps/Internet/*.desktop
@@ -52,6 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Tue Apr 11 2000 dam's <damien@mandrakesoft.com> 1.0.3-1mdk
+- new icons, new place for default background.
+
 * Wed Apr  5 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.2-1mdk
 - mandrake_desk.spec: adjust groups.
 - Makefile: correct dis and rpm target.

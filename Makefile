@@ -28,6 +28,11 @@ install:
 	install -m644 icons/large/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/large
 	install -m644 backgrounds/* \
 	$(RPM_BUILD_ROOT)/usr/share/pixmaps/backgrounds/mandrake/
+	install -m644 default_background.jpg \
+	$(RPM_BUILD_ROOT)/usr/share/pixmaps/backgrounds/
+	install -m644 default_logo.jpg \
+	$(RPM_BUILD_ROOT)/usr/share/icons/
+
 	install -m644 kdelnk/* $(RPM_BUILD_ROOT)/etc/skel/Desktop/
 	install -m644 icons/mandrake*.xpm $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk/
 	install -m644 gnome/Netscape.desktop \
