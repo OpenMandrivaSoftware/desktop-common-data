@@ -1,0 +1,66 @@
+#!/bin/sh
+# fndSession (c) MandrakeSoft
+# Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+LIST="SessionTypes"
+
+[ -x /usr/bin/kde ] && {
+LIST="$LIST=kde"; FIRST=yes
+}
+[ -x /usr/bin/gnome-session ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;gnome"
+	else
+		LIST="$LIST=gnome"
+		FIRST="yes"
+	fi
+}
+[ -e /usr/share/apps/switchdesk/Xclients.anotherlevel ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;anotherlevel"
+	else
+		LIST="$LIST=anotherlevel"
+		FIRST="yes"
+	fi
+}
+
+[ -x /usr/X11R6/bin/wmaker ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;WindowMaker"
+	else
+		LIST="$LIST=WindowMaker"
+		FIRST="yes"
+	fi
+}
+[ -x /usr/X11R6/bin/afterstep ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;AfterStep"
+	else
+		LIST="$LIST=AfterStep"
+		FIRST="yes"
+	fi
+}
+[ -x /usr/X11R6/bin/icewm ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;Icewm"
+	else
+		LIST="$LIST=Icewm"
+		FIRST="yes"
+	fi
+}
+[ -x /usr/bin/xfce ] && {
+	if [ "$FIRST" = "yes" ];then
+		LIST="$LIST;Xfce"
+	else
+		LIST="$LIST=Xfce"
+		FIRST="yes"
+	fi
+}
+
+if [ $FIRST = "yes" ];then
+	LIST="$LIST;default;failsafe;"
+else
+	LIST="$LIST=default;failsafe;"
+fi
+sed "s/^SessionTypes.*/"$LIST"/" /usr/share/config/kdmrc > /tmp/$$.kdmrc && \
+mv /tmp/$$.kdmrc /usr/share/config/kdmrc
