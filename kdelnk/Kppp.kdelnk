@@ -1,0 +1,16 @@
+[KDE Desktop Entry]
+Name[fr]=Application
+SwallowExec=
+SwallowTitle=
+Comment[fr]=
+BinaryPattern=
+Name=Application
+MimeType=
+Exec=/usr/bin/kppp
+Icon=kppp.xpm
+TerminalOptions=
+Path=
+Name[pt_BR]=Aplicativo
+Type=Application
+Terminal=0
+Name[no]=Applikasjon
