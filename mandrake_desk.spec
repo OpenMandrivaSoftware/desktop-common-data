@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	4mdk
+Release:	5mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -13,172 +13,34 @@ Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 Requires:	menu
-BuildRequires:	kdelibs-devel libcapplet-devel gdk-pixbuf-devel
-BuildRequires:	XFree86-static-libs
-BuildRequires:	arts
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	control-center-devel
-BuildRequires:	freetype2
-BuildRequires:	gcc-c++
-BuildRequires:	gdk-pixbuf-devel
-BuildRequires:	gettext
-BuildRequires:	kdelibs-devel
-BuildRequires:	texinfo
+
+
 
 %description
 This package contains useful icons, backgrounds and others goodies for the
 Mandrake desktop.
 
-%package -n mdk-eazel-engine
-Summary:	Default GTK theme used in Mandrake Linux distribution
-Group:		Graphical desktop/Other
-Requires:	libgtk+1.2
 
-%description -n mdk-eazel-engine
-This package contains the default GTK theme used in Mandrake Linux 
-distribution.
-
-%package -n mdk-eazel-engine-capplet
-Summary:	Configuration applet for Default GTK theme used in Mandrake Linux distribution
-Group:		Graphical desktop/GNOME
-Requires:	mdk-eazel-engine
-
-%description -n mdk-eazel-engine-capplet
-This package contains the configuration applet for Default GTK theme 
-used in Mandrake Linux distribution
-
-
-%package -n krootwarning
-Summary:	Warning box for root user
-Group:		Graphical desktop/KDE
-Requires:	kdebase
-
-%description -n krootwarning
-This package contains a warning box displayed when you are using KDE with
-system administrator permissions.
-
-%package -n krozat
-Summary:	Default Mandrake Linux screensaver for KDE
-Group:		Graphical desktop/KDE
-BuildRequires:	kdelibs-devel
-Requires:	kdebase 
-Requires:   mandrake_desk >= 8.3
-
-%description -n krozat
-This package contains the default Mandrake Linux screensaver for KDE.
 
 %prep
 
+
+
 %setup -q
 find . -type 'd' -name 'CVS' | xargs rm -fr
-
-%build
-cd eazel-engine
-%configure
-%make
-cd -
-
-cd krootwarning
-make -f admin/Makefile.common
-
-# Search for qt/kde libraries in the right directories (avoid patch)
-# NOTE: please don't regenerate configure script past this line
-perl -pi -e "s@/lib(\"|\b[^/])@/%_lib\1@g if /(kde|qt)_(libdirs|libraries)=/" configure
-
-./configure \
-	--prefix=%_prefix --libdir=%_libdir \
-	--enable-final --disable-debug --with-xinerama --disable-rpath
-%make
-cd -
-
-cd krozat
-make -f admin/Makefile.common
-
-# Search for qt/kde libraries in the right directories (avoid patch)
-# NOTE: please don't regenerate configure script past this line
-perl -pi -e "s@/lib(\"|\b[^/])@/%_lib\1@g if /(kde|qt)_(libdirs|libraries)=/" configure
-
-./configure \
-	--prefix=%_prefix --libdir=%_libdir \
-	--enable-final --disable-debug --with-xinerama --disable-rpath
-%make
-cd -
 
 
 
 %install
 rm -rf %buildroot
 
-cd eazel-engine
-%makeinstall_std
-cd -
 
-mkdir -p $RPM_BUILD_ROOT{%{_menudir},%{_datadir}/control-center/capplets/Advanced}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/mdk-eazel-engine-capplet
-?package(mdk-eazel-engine-capplet):command="%{_bindir}/eazel-engine-capplet" \
-needs="gnome" icon="/usr/share/pixmaps/gnome-ccthemes.png" section="Configuration/GNOME/Advanced" title="Crux GTK+ Theme" \
-longtitle="Configuration applet for Crux GTK+ theme"
-EOF
-cp -f $RPM_BUILD_ROOT%_datadir/gnome/apps/Settings/Desktop/eazel-engine-properties.desktop $RPM_BUILD_ROOT%{_datadir}/control-center/capplets/Advanced
-
-cd krootwarning
-%makeinstall_std
-cd -
-
-cd krozat
-%makeinstall_std
-cd -
-
-mkdir -p %buildroot/%_datadir/themes/Mandrake/gtk
-install -m644 gtkrc %buildroot/%_datadir/themes/Mandrake/gtk
-
-make install RPM_BUILD_ROOT=%buildroot mandir=%{_mandir}
-
-mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/X11/wmsession.d/
-
-rm -f special/mandrake-small.xpm
-
-install -d %buildroot/%_datadir/faces/
+## Install faces
+install -d 0755 %buildroot/%_datadir/faces/
 cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/faces/default.png
-#cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/mdk/faces/default.png
-# Dadou - 18mdk - This is needed for GDM
+# Dadou - 8.1-18mdk - This is needed for GDM
 cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/mdk/faces/user-default-mdk.png
 
-install -d %buildroot/%_datadir/mdk/gnome-desktop/
-for l in de en fr it; do
-	install -m644 gnome/gnome-Documentation-$l.desktop %buildroot/%_datadir/mdk/gnome-desktop/Documentation-$l.desktop
-done
-
-mkdir -p $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts
-cp gnome/mandrake.links.sh $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts/mandrake.links.sh
-chmod 0755 $RPM_BUILD_ROOT%_libdir/mc/desktop-scripts/mandrake.links.sh
-install -m644 gnome/gnome-mandrake-control-center.desktop %buildroot/%_datadir/mdk/gnome-desktop
-install -m644 gnome/gnome-mandrake-expert.desktop %buildroot/%_datadir/mdk/gnome-desktop
-install -m644 gnome/gnome-mandrake-news.desktop %buildroot/%_datadir/mdk/gnome-desktop
-install -m644 gnome/gnome-mandrake-store.desktop %buildroot/%_datadir/mdk/gnome-desktop
-install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/mdk/gnome-desktop
-
-mkdir -p $RPM_BUILD_ROOT%_datadir/nautilus/default-desktop
-install -m644 gnome/gnome-mandrake-control-center.desktop %buildroot/%_datadir/nautilus/default-desktop
-install -m644 gnome/gnome-mandrake-expert.desktop %buildroot/%_datadir/nautilus/default-desktop
-install -m644 gnome/gnome-mandrake-news.desktop %buildroot/%_datadir/nautilus/default-desktop
-install -m644 gnome/gnome-mandrake-store.desktop %buildroot/%_datadir/nautilus/default-desktop
-install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/nautilus/default-desktop
-
-install -d %buildroot/%_datadir/pixmaps
-install -m644 gnome/*.png %buildroot/%_datadir/pixmaps
-
-install -m755 gnome/gnomedesktop-network %buildroot/%_bindir
-
-install -d %buildroot/%_menudir
-kdedesktop2mdkmenu.pl krozat .hidden/ScreenSavers %buildroot/%_datadir/applnk/System/ScreenSavers/Krozat.desktop %buildroot/%_menudir/krozat kde
-
-install -d %buildroot/%_menudir/simplified/
-install -m644 menu/mandrake_desk %buildroot/%_menudir/simplified/
-
-install -d -m 0755 %buildroot/%_iconsdir/
-install -m 0644 icons/*.png %buildroot/%_iconsdir/
 
 
 
@@ -191,18 +53,6 @@ fi
 %postun
 %clean_menus
 
-%post -n krozat
-%update_menus
-
-%postun -n krozat
-%clean_menus
-
-%post -n mdk-eazel-engine-capplet
-%update_menus
-
-%postun -n mdk-eazel-engine-capplet
-%clean_menus
-
 
 
 %clean
@@ -211,132 +61,16 @@ rm -fr %buildroot
 
 
 %files
-%defattr(-,root,root)
-%doc TRANSLATORS
-#
-#
-%_bindir/createbackground.sh
-%_bindir/gnomedesktop-network
-%_bindir/print-cups.sh
-#
-#
-%dir %_sysconfdir/X11/wmsession.d/
-#
-#
-%dir %_libdir/mc/desktop-scripts/
-%_libdir/mc/desktop-scripts/*
-#
-#
-%_sbindir/*
-#
-#
-%dir %_datadir/faces/
-%_datadir/faces/*.png
-#
-#
-%_iconsdir/*.png
-%_iconsdir/*.xpm
-%_miconsdir/*
-%_liconsdir/*
-#
-#
-%_mandir/*/*
-#
-#
-%dir %_datadir/mdk/
-%dir %_datadir/mdk/faces/
-%_datadir/mdk/faces/*
-%_datadir/mdk/screensaver
-#
-%dir %_datadir/mdk/gnome-desktop/
-%_datadir/mdk/gnome-desktop/*
-
-%_datadir/nautilus/default-desktop
-#
-#
-%dir %_datadir/pixmaps/backgrounds/
-%dir %_datadir/pixmaps/backgrounds/linux-mandrake/
-%_datadir/pixmaps/backgrounds/linux-mandrake/*
-#
-
-%dir %_datadir/pixmaps/mdk/
-%_datadir/pixmaps/mdk/*
-%_datadir/pixmaps/*.png
-#
-%_menudir/simplified/mandrake_desk
-
-
-%files -n mdk-eazel-engine
 %defattr(-,root,root,-)
-
-%_datadir/eazel-engine
-
-#
-#
-%dir %_libdir/gtk/
-%dir %_libdir/gtk/themes/
-%dir %_libdir/gtk/themes/engines/
-%_libdir/gtk/themes/engines/*
-
-%dir %_datadir/themes
-%_datadir/themes/Crux
-%_datadir/themes/Mandrake
-
-
-%files -n mdk-eazel-engine-capplet
-%defattr(-,root,root,-)
-%_bindir/eazel-engine-capplet
-%dir %_datadir/gnome/
-%dir %_datadir/gnome/apps/
-%dir %_datadir/gnome/apps/Settings/
-%dir %_datadir/gnome/apps/Settings/Desktop/
-%_datadir/gnome/apps/Settings/Desktop/*.desktop
-%{_menudir}/mdk-eazel-engine-capplet
-%{_datadir}/control-center/capplets/Advanced/*
-
-%files -n krootwarning
-%defattr(-,root,root,-)
-%_bindir/krootwarning
-#
-#
-%dir %_datadir/apps/krootwarning/
-%dir %_datadir/apps/krootwarning/pics/
-%_datadir/apps/krootwarning/pics/*.png
-#
-#
-%dir %_datadir/applnk/Applications/
-%_datadir/applnk/Applications/krootwarning.desktop
-
-%dir %_datadir/autostart/
-%_datadir/autostart/krootwarning.desktop
-
-%config(noreplace) %_datadir/config/krootwarningrc
-
-%files -n krozat
-%defattr(-,root,root,-)
-%_bindir/krozat.kss
-#
-#
-%dir %_datadir/applnk/System/
-%dir %_datadir/applnk/System/ScreenSavers/
-%_datadir/applnk/System/ScreenSavers/*.desktop
-#
-#
-%dir %_iconsdir/locolor/
-%dir %_iconsdir/locolor/16x16/
-%dir %_iconsdir/locolor/16x16/apps/
-%_iconsdir/locolor/16x16/apps/krootwarning.png
-#
-%dir %_iconsdir/locolor/32x32/
-%dir %_iconsdir/locolor/32x32/apps
-%_iconsdir/locolor/32x32/apps/krootwarning.png
-#
-#
-%_menudir/krozat
 
 
 
 %changelog
+* Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-5mdk
+- Remove eazel-mdk-engine, krozat, krootwarnig (moved in their own modules/packages)
+- Add new icons
+- Rewrite spec
+
 * Wed Jul 31 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 9.0-4mdk
 - Fix GNOME entry for Crux theme applet
 - Fix menu entries for simplified menu
