@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
 Version:	10.1
-Release: 	6mdk
+Release: 	7mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -144,6 +144,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Sep 01 2004 Laurent MONTEL <lmontel@mandrakesoft.com> 10.1-7mdk
+- Fix capitalization in simplified menu
+
 * Tue Aug 31 2004 Frederic Lepied <flepied@mandrakesoft.com> 10.1-6mdk
 - added the script www-browser
 
