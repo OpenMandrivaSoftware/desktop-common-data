@@ -1,11 +1,13 @@
 [KDE Desktop Entry]
 Name=Internet connection
+Name[bg]=Èíòåğíåò Âğúçêà
 Name[es]=Conexión a Internet
 Name[et]=Internetiühendus
 Name[fr]=Connexion à l'Internet
 Name[hr]=Veza s InterNetom
 Name[id]=Koneksi Internet
 Name[nl]=Internet verbinding
+Name[ru]=Internet-ÓÏÅÄÉÎÅÎÉÅ
 Name[uk]=ú'¤ÄÎÁÎÎÑ Ú ¦ÎÔÅÒÎÅÔÏÍ
 Name[wa]=Raloyaedje al rantoele daegnrece
 SwallowExec=
