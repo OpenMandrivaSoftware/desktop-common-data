@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=XKill
+Name[ca]=XKill
 Name[da]=XKill
 Name[es]=XKill
 Name[nl]=XKill

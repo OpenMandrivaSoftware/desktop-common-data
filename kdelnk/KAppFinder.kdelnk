@@ -1,6 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Name=KAppFinder
+Name[ca]=KAppFinder
 Name[da]=KAppFinder
 Name[es]=KAppFinder
 Name[nl]=KAppFinder
