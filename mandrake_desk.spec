@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	18mdk
+Release:	19mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -160,6 +160,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Sep 02 2002 Laurent MONTEL <lmontel@mandrakesoft.com> 9.0-19mdk
+- Fix drakconf menu entry
+
 * Thu Aug 29 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-18mdk
 - Enhance tux family images (Hélène)
 
