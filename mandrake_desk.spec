@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	7mdk
+Release:	9mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -81,6 +81,7 @@ for i in icons/mini/*.png ; do install -m 0644 $i %buildroot/%_miconsdir/ ; done
 
 # 32
 for i in icons/*.png ; do install -m 0644 $i %buildroot/%_iconsdir/ ; done
+for i in icons/*.xpm ; do install -m 0644 $i %buildroot/%_iconsdir/ ; done
 
 # 48
 install -d -m 0755 %buildroot/%_liconsdir/
@@ -94,9 +95,16 @@ install -d -m 0755 %buildroot/%_datadir/apps/kdm/pics/
 install -m 0644 kde/kdm-mdk-logo.png %buildroot/%_datadir/apps/kdm/pics/
 
 
+
 ## menu
 install -d -m 0755 %buildroot/%_menudir/simplified/
 install -m 0644 menu/mandrake_desk %buildroot/%_menudir/simplified/
+
+
+
+# Screensaver
+install -d -m 0755 %buildroot/%_datadir/mdk/screensaver/
+for i in screensavers/*.png ; do install -m 0644 $i %buildroot/%_datadir/mdk/screensaver/ ; done
 
 
 
@@ -144,11 +152,37 @@ rm -fr %buildroot
 %dir %_datadir/mdk/xfdrake/
 %_datadir/mdk/xfdrake/*.jpg
 #
+/usr/share/mdk/screensaver
+/usr/share/mdk/screensaver/1-boot&init.png
+/usr/share/mdk/screensaver/10-service.png
+/usr/share/mdk/screensaver/11-support.png
+/usr/share/mdk/screensaver/12-Xdrake.png
+/usr/share/mdk/screensaver/13-filetools.png
+/usr/share/mdk/screensaver/14-filetransfert.png
+/usr/share/mdk/screensaver/15-tux.png
+/usr/share/mdk/screensaver/16-chess.png
+/usr/share/mdk/screensaver/17-floppy.png
+/usr/share/mdk/screensaver/18-disc.png
+/usr/share/mdk/screensaver/2-hardware.png
+/usr/share/mdk/screensaver/3-rouage.png
+/usr/share/mdk/screensaver/4-rpmsecu.png
+/usr/share/mdk/screensaver/5-carte.png
+/usr/share/mdk/screensaver/6-shell.png
+/usr/share/mdk/screensaver/7-bugfix.png
+/usr/share/mdk/screensaver/8-bureau.png
+/usr/share/mdk/screensaver/9-docu.png
+#
 %_menudir/simplified/*
 
 
 
 %changelog
+* Thu Aug 01 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-9mdk
+- Add screensavers images
+
+* Thu Aug 01 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-8mdk
+- Re-add gnome.xpm & kde.xpm icons for Lord Pixel
+
 * Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-7mdk
 - Add kdm logo
 - Re-add update-menus (and lost menu entries)
