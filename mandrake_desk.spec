@@ -42,7 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %doc TRANSLATORS special/* README.CVS
-%config /etc/X11/window-managers
 %dir /etc/X11/wmsession.d/
 /usr/sbin/*
 /usr/bin/*
@@ -62,6 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Tue Jul 18 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.4-3mdk
+- Remove /etc/X11/window-managers
 - bin/DrakWM: 
 			  Add -i options to launch with xinit.
 		      Add -a option to provide alias for bash.

@@ -22,7 +22,6 @@ install:
 	install -m644 man/*8 $(RPM_BUILD_ROOT)/usr/man/man8/
 	install -m755 sbin/* $(RPM_BUILD_ROOT)/usr/sbin/
 	install -m755 bin/* $(RPM_BUILD_ROOT)/usr/bin/
-	install -m644 window-managers $(RPM_BUILD_ROOT)/etc/X11/
 	install -m644 icons/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/
 	install -m644 icons/*.png $(RPM_BUILD_ROOT)/usr/share/icons/
 	install -m644 icons/mini/*.xpm $(RPM_BUILD_ROOT)/usr/share/icons/mini
