@@ -49,9 +49,9 @@ sub parse_file {         # parse a session descriptor file
 }
 
 sub gen_desktops {
-    my ($d) = @_;
+    my ($d, $createdefault) = @_;
     -d $d or system("mkdir -p $d");
-    chdir $d;
+    system("rm -f $d/*");
 
     for my $file (@lf) {
 	open FH, ">$d/$order{$file}$file.desktop" or die "Can't write to $d/$order{$file}.desktop\n";
@@ -66,16 +66,18 @@ sub gen_desktops {
 	close FH;
 	chmod 0755, $file;
     }
-    open FH, ">$d/Default.desktop" or die "Can't write to $d/Default.desktop\n";
-    print FH "[Desktop Entry]\n";
-    print FH "Encoding=UTF-8\n";
-    print FH "Name=Default\n";
-    print FH "Comment=Default\n";
-    print FH "Exec=/etc/X11/xdm/Xsession\n";
-    print FH "Icon=\n";
-    print FH "Type=Application\n";
-    close FH;
-    chmod 0755, $file;
+    if ($createdefault) {
+	open FH, ">$d/Default.desktop" or die "Can't write to $d/Default.desktop\n";
+	print FH "[Desktop Entry]\n";
+	print FH "Encoding=UTF-8\n";
+	print FH "Name=Default\n";
+	print FH "Comment=Default\n";
+	print FH "Exec=/etc/X11/xdm/Xsession\n";
+	print FH "Icon=\n";
+	print FH "Type=Application\n";
+	close FH;
+	chmod 0755, $file;
+    }
 }
 
 usage(1)
@@ -124,11 +126,11 @@ my ($e) = eval {cat("/etc/sysconfig/desktop")} =~ /DESKTOP=(\S+)/;
 
 
 if ($kdm) {
-    gen_desktops '/usr/share/apps/kdm/sessions';
+    gen_desktops('/usr/share/apps/kdm/sessions', 0);
 }
 
 if ($gdm) {
-    gen_desktops '/etc/X11/dm/Sessions';
+    gen_desktops('/etc/X11/dm/Sessions', 1);
 }
 
 if ($xsession) {
