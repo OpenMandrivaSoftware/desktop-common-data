@@ -46,19 +46,23 @@ install -d -m 0755 %buildroot/%_datadir/mdk/xfdrake/
 install -m 0644 backgrounds/xfdrake-test-card.jpg %buildroot/%_datadir/mdk/xfdrake/xfdrake-test-card.jpg
 
 
+
 ## Install scripts
 install -d -m 0755 %buildroot/%_bindir/
 for i in bin/*.sh ; do install -m 0755 $i %buildroot/_bindir/ ; done
 
 
 
-
-
 ## Install faces
-install -d 0755 %buildroot/%_datadir/faces/
-cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/faces/default.png
-# Dadou - 8.1-18mdk - This is needed for GDM
-cp %buildroot/%_datadir/mdk/faces/default.png %buildroot/%_datadir/mdk/faces/user-default-mdk.png
+install -d -m 0755 %buildroot/%_datadir/mdk/faces/
+install -d -m 0755 %buildroot/%_datadir/faces/
+for i in faces/*.png ; do install -m 0644 $i %buildroot/%_datadir/faces/
+		
+# David - 9.0-5mdk - For KDE
+install -m 0644 faces/default.png %buildroot/%_datadir/faces/default.png
+
+# David - 9.0-5mdk - For GDM
+install -m 0644 faces/default.png %buildroot/%_datadir/mdk/faces/user-default-mdk.png
 
 
 
