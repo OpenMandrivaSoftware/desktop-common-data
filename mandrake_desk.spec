@@ -47,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/pixmaps/backgrounds/default_background.jpg
 %config /etc/skel/Desktop/
 /usr/share/pixmaps/mdk
-/usr/share/gnome/apps/Internet/*.desktop
+#/usr/share/gnome/apps/Internet/*.desktop
 /usr/share/gnome/apps/System/*.desktop
 /usr/lib/mc/desktop-scripts/mandrake.links.sh
 /usr/lib/desktop-links/mandrake.links
