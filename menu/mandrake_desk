@@ -245,6 +245,9 @@
 # Mandrakelinux documentation in spanish
 ?package(mandrake-doc-es): command="/usr/bin/www-browser /usr/share/doc/mandrake/es/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Spanish" section="Read Documentation"
 
+# Mandrakelinux documentation in spanish
+?package(mandrake-doc-fr): command="/usr/bin/www-browser /usr/share/doc/mandrake/fr/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in French" section="Read Documentation"
+
 # Mandrakelinux documentation in italian
 ?package(mandrake-doc-it): command="/usr/bin/www-browser /usr/share/doc/mandrake/it/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Italian" section="Read Documentation"
 
