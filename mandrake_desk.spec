@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
-Version:	9.1
-Release:	6mdk
+Version:	9.2
+Release:	1mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -113,7 +113,7 @@ if [ -f %_sysconfdir/X11/window-managers.rpmsave ];then
 	%_sbindir/convertsession -f %_sysconfdir/X11/window-managers.rpmsave || :
 fi
 # Create a link to allow users to access to Mandrake's backgrounds from KDE
-[ ! -d %_datadir/wallpapers ] && install -d 0755 %_datadir/wallpapers
+[ ! -d %_datadir/wallpapers ] && install -d -m 0755 %_datadir/wallpapers
 [ ! -e %_datadir/wallpapers/mandrake-linux ] && ln -s %_datadir/mdk/backgrounds/ %_datadir/wallpapers/mandrake-linux
 %update_menus
 
@@ -166,6 +166,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Jul 30 2003 David Baudens <baudens@mandrakesoft.com> 9.2-1mdk
+- Fix %post (thanks to Pixel)
+
 * Fri Jun 13 2003 Frederic Crozat <fcrozat@mandrakesoft.com> - 9.1-6mdk
 - gdm session format has changed, fix chksession
 
