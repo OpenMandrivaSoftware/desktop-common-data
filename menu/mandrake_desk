@@ -16,7 +16,7 @@
 ?package(dia): needs="x11" section="Use office tools" title="Create flowcharts and diagrams" command="/usr/bin/dia" icon="dia.png"
 
 # Consult an address book
-?package(kdepim-kaddressbook): needs="x11" kde_filename="kontact-kaddressbook" section="Use office tools" title="Consult an address book" icon="kaddressbook.png" command="kontact --module kaddressbook" kde_command="kontact --module kaddressbook %u" mimetypes="text/x-vcard,text/x-ldif" multiple_files="false" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nDocPath=kaddressbook/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=kaddressbook\\nServiceTypes=KParts/ReadOnlyPart,Browser/View,DCOP/AddressBook\\nX-KDE-Library=libkaddressbookpart\\n"
+?package(kdepim-kaddressbook): needs="x11" kde_filename="kontact-kaddressbook" section="Use office tools" title="Consult an address book" icon="kontact-mdk.png" command="kontact --module kaddressbook" kde_command="kontact --module kaddressbook %u" mimetypes="text/x-vcard,text/x-ldif" multiple_files="false" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nDocPath=kaddressbook/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=kaddressbook\\nServiceTypes=KParts/ReadOnlyPart,Browser/View,DCOP/AddressBook\\nX-KDE-Library=libkaddressbookpart\\n"
 
 # Send a fax
 ?package(kdebase-kdeprintfax): needs="kde" kde_filename="kdeprintfax" section="Use office tools" title="Send a fax" icon="kdeprintfax.png" command="kdeprintfax     %u" kde_command="kdeprintfax -caption \"%c\" %i %m %u" kde_opt="\\nEncoding=UTF-8\\nGenericName=Fax Utility\\nMiniIcon=kdeprintfax\\nTerminal=0\\nX-DCOP-ServiceType=Multi\\n"
@@ -36,13 +36,13 @@
 
 ## Organize
 # Write notes
-?package(kdepim-knotes): needs="kde" kde_filename="kontact-knotes" section="Organize" title="Write notes" icon="knotes.png" command="kontact --module knotes" kde_opt="\\nEncoding=UTF-8\\nDocPath=knotes/index.html\\nTerminal=0\\nGenericName=Popup Notes\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
+?package(kdepim-knotes): needs="kde" kde_filename="kontact-knotes" section="Organize" title="Write notes" icon="kontact-mdk.png" command="kontact --module knotes" kde_opt="\\nEncoding=UTF-8\\nDocPath=knotes/index.html\\nTerminal=0\\nGenericName=Popup Notes\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
 
 # Manage tasks
-?package(kdepim-korganizer): needs="x11" kde_filename="kontact-korganizer" section="Organize" title="Manage tasks" icon="korganizer.png" command="kontact --module todo" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nGenericName=Personal Organizer\\nServiceTypes=Browser/View,DCOP/Organizer\\nX-KDE-Library=libkorganizerpart\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=korganizer\\n"
+?package(kdepim-korganizer): needs="x11" kde_filename="kontact-korganizer" section="Organize" title="Manage tasks" icon="kontact-mdk.png" command="kontact --module todo" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nGenericName=Personal Organizer\\nServiceTypes=Browser/View,DCOP/Organizer\\nX-KDE-Library=libkorganizerpart\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=korganizer\\n"
 
 # Organize your time
-?package(kdepim-korganizer): needs="x11" kde_filename="kontact-korganizer-time" section="Organize" title="Organize your time" icon="korganizer.png" command="kontact --module korganizer" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nGenericName=Personal Organizer\\nServiceTypes=Browser/View,DCOP/Organizer\\nX-KDE-Library=libkorganizerpart\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=korganizer\\n"
+?package(kdepim-korganizer): needs="x11" kde_filename="kontact-korganizer-time" section="Organize" title="Organize your time" icon="kontact-mdk.png" command="kontact --module korganizer" mimetypes="text/calendar,text/x-vcalendar" kde_opt="\\nEncoding=UTF-8\\nBinaryPattern=korganizer;\\nTerminalOptions=\\nPath=\\nDocPath=korganizer/index.html\\nTerminal=0\\nGenericName=Personal Organizer\\nServiceTypes=Browser/View,DCOP/Organizer\\nX-KDE-Library=libkorganizerpart\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=korganizer\\n"
 
 # Track time spent on tasks
 ?package(kdepim-karm): needs="x11" kde_filename="karm" section="Organize" title="Track time spent on tasks" icon="karm.png" command="karm" kde_command="karm  -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nGenericName=Personal Time Tracker\\nTerminalOptions=\\nPath=\\nDocPath=karm/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
@@ -61,13 +61,13 @@
 ?package(kdebase-progs): needs="x11" kde_filename="konqueror" section="Surf the Internet" title="Browse the Web" icon="konqueror.png" command="konqueror" kde_command="konqueror %U" kde_opt="\\nEncoding=UTF-8\\nX-KDE-Library=libkonqueror\\nX-DCOP-ServiceType=multi\\nX-KDE-StartupNotify=true"
 
 # Read and send e-mail
-?package(kdepim-kmail): needs="x11" kde_filename="kontact-KMail" section="Surf the Internet" title="Read and send e-mail" icon="kmail.png" command="kontact --module kmail" kde_command="kontact --module kmail -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=kmail/index.html\\nGenericName=Mail Client\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=kmail\\nServiceTypes=DCOP/ResourceBackend/IMAP\\n"
+?package(kdepim-kmail): needs="x11" kde_filename="kontact-KMail" section="Surf the Internet" title="Read and send e-mail" icon="kontact-mdk.png" command="kontact --module kmail" kde_command="kontact --module kmail -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nDocPath=kmail/index.html\\nGenericName=Mail Client\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\nX-DCOP-ServiceName=kmail\\nServiceTypes=DCOP/ResourceBackend/IMAP\\n"
 
 # Chat
 ?package(kdenetwork-kopete): needs="x11" kde_filename="kopete" section="Surf the Internet" title="Chat" icon="kopete.png" command="kopete" kde_command="kopete %i %m -caption \"%c\"" kde_opt="\\nGenericName=Instant Messenger\\nTerminal=0\\n"
 
 # Read and send newsgroup messages
-?package(kdepim-knode): needs="x11" kde_filename="kontact-KNode" section="Surf the Internet" title="Read and send newsgroup messages" icon="knode.png" command="kontact --module knode" kde_command="kontact --module kmail -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nTerminal=0\\nDocPath=knode/index.html\\nGenericName=News Reader\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
+?package(kdepim-knode): needs="x11" kde_filename="kontact-KNode" section="Surf the Internet" title="Read and send newsgroup messages" icon="kontact-mdk.png" command="kontact --module knode" kde_command="kontact --module kmail -caption \"%c\" %i %m" kde_opt="\\nEncoding=UTF-8\\nTerminal=0\\nDocPath=knode/index.html\\nGenericName=News Reader\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
 
 # Organize a video conference
 ?package(gnomemeeting): command="/usr/bin/gnomemeeting" needs="x11" icon="gnomemeeting.png" section="Surf the Internet" title="Organize a video conference"
@@ -173,5 +173,5 @@
 ?package(kdebase-konsole): needs="kde" kde_filename="konsole" section="Administer your system" title="Use a terminal emulator" icon="konsole.png" command="konsole" kde_opt="\\nEncoding=UTF-8\\nDocPath=konsole/index.html\\nTerminal=0\\nX-KDE-StartupNotify=true\\nGenericName=Terminal Program\\nX-DCOP-ServiceType=Multi\\nX-KDE-AuthorizeAction=shell_access\\n"
 
 # .hidden
-?package(kdepim-kontact): needs="kde" kde_filename="kontact-summary" section=.hidden title="Kontact" icon="knotes.png" command="kontact --module summary" kde_opt="\\nEncoding=UTF-8\\nDocPath=knotes/index.html\\nTerminal=0\\nGenericName=Popup Notes\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
+?package(kdepim-kontact): needs="kde" kde_filename="kontact-summary" section=.hidden title="Kontact" icon="kontact-mdk.png" command="kontact --module summary" kde_opt="\\nEncoding=UTF-8\\nDocPath=knotes/index.html\\nTerminal=0\\nGenericName=Popup Notes\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Unique\\n"
 
