@@ -32,10 +32,11 @@ sub parse_file {
   while (<F>) {
      $n = $1 if /^NAME=(.*)/m;
      $e = $1 if /^EXEC=(.*)/m;
-     $d = $1 if /^DESC=(.*)/m;
-     $i = $1 if /^ICON=(.*)/m;
+#     $d = $1 if /^DESC=(.*)/m;
+#     $i = $1 if /^ICON=(.*)/m;
      $s = $1 while /SCRIPT:(.*?)$/gs; chomp $s;
-     if (-x $e) { $script{$n} = $s; $exec{$n} = $e; $desc{$n} = $d; $icon{$n} = $i; push @lf, $n; }
+     if (-x $e) { $script{$n} = $s; push @lf, $n; }
+#     if (-x $e) { $script{$n} = $s; $exec{$n} = $e; $desc{$n} = $d; $icon{$n} = $i; push @lf, $n; }
   }
 }
 
@@ -68,7 +69,12 @@ while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
 }
   
 $dir = $test ? './wmsession.d/' : '/etc/X11/wmsession.d/' unless $dir;
-chdir $dir; parse_file ("$dir/$_") for <*>;
+chdir $dir; 
+for (<*>) {
+    next if /.*~/;
+    next if /.*\\.rpm(save|old)/;
+    parse_file ("$dir/$_");
+}
 
 sub cat { my ($f) = @_; local *F; open F, $f; join '', <F> }
 my ($e) = cat("/etc/sysconfig/desktop") =~ /(\S+)/;
