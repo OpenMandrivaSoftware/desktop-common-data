@@ -1,3 +1,7 @@
+2000-01-03 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+
+	* window-managers: fix wrong Enlightenment entry.
+
 1999-12-28  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
 
 	* sbin/chksession: no errror when there is not a Session.

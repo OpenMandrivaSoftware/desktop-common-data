@@ -23,8 +23,8 @@ SCRIPT:
 }
 exec /usr/X11R6/bin/wmaker
 --@@--
-NAME=Enligntenment
-DESC=The enlightened window manager
+NAME=Enlightenment
+DESC=The enlightenment window manager
 EXEC=/usr/bin/enlightenment
 SCRIPT:
 [ -f $HOME ] || {
