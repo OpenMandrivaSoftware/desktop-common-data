@@ -1,3 +1,12 @@
+2005-03-23 17:44  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* menu/menu-simplified: Forgot simplified menu
+
+2005-03-23 16:48  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* mandrake_desk.spec, menu/menu: - don't use .desktop files for
+	  order directive
+
 2005-03-09 15:04  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* bin/www-browser: fix stripping value from GNOME
