@@ -2,11 +2,11 @@
 # Configure sound settings
 ?package(kdemultimedia): needs="kde" kde_filename="kmix" section="Administer your system" title="Configure sound settings" icon="kmix.png" command="kmix" kde_command="kmix -caption \"%c\" %i %m" mimetypes="" kde_opt="\\nBinaryPattern=kmix;\\nProtocols=\\nDocPath=kmix/index.html\\nTerminalOptions=\\nPath=\\nExtensions=\\nTerminal=0\\nKDE-X-StartupNotify=true"
 
-?package(gnome-media): needs="gnome" section="Administer your system" title="Configure sound settings" command="/usr/bin/gnome-volume-control" icon="/usr/share/gnome/pixmaps/gnome-mixer.png"
+?package(gnome-media): needs="gnome" section="Administer your system" title="Configure sound settings" command="/usr/bin/gnome-volume-control" icon="/usr/share/pixmaps/gnome-mixer.png"
 
 
 # Configure KDE/GNOME
-?package(gnome-control-center): command="/usr/bin/gnomecc" icon="/usr/share/pixmaps/control-center2.png" title="Configure Gnome" needs="gnome" section="Administer your system"
+?package(gnome-control-center): command="/usr/bin/gnome-control-center" icon="/usr/share/pixmaps/control-center2.png" title="Configure Gnome" needs="gnome" section="Administer your system"
 
 ?package(kdebase): needs="kde" kde_filename="KControl" section="Administer your system" title="Configure KDE" icon="kcontrol.png" command="kcontrol" kde_command="kcontrol -caption \"%c\" %i %m" kde_opt="\\nDocPath=kcontrol/index.html\\nX-KDE-StartupNotify=true"
 
@@ -111,15 +111,15 @@
 
 
 # gnome-games
-?package(gnome-games): title="Play FreeCell" command="/usr/bin/freecell" icon="gnome-cardgame.xpm" needs="gnome" section="Play games"
+?package(gnome-games): title="Play FreeCell" command="/usr/bin/freecell" icon="gnome-cardgame.png" needs="gnome" section="Play games"
 
-?package(gnome-games): title="Play Gnome Mines" command="/usr/bin/gnomine" icon="gnome-gnomine.xpm" needs="gnome" section="Play games"
+?package(gnome-games): title="Play Gnome Mines" command="/usr/bin/gnomine" icon="gnome-gnomine.png" needs="gnome" section="Play games"
 
-?package(gnome-games): title="Play Mahjongg" command="/usr/bin/mahjongg" icon="gnome-mahjongg.xpm" needs="gnome" section="Play games"
+?package(gnome-games): title="Play Mahjongg" command="/usr/bin/mahjongg" icon="gnome-mahjongg.png" needs="gnome" section="Play games"
 
-?package(gnome-games): icon="iagno.xpm" title="Play reversi" command="/usr/bin/iagno" needs="gnome" section="Play games"
+?package(gnome-games): icon="iagno.png" title="Play reversi" command="/usr/bin/iagno" needs="gnome" section="Play games"
 
-?package(gnome-games): title="Play solitaire" command="/usr/bin/sol" icon="gnome-aisleriot.xpm" needs="gnome" section="Play games"
+?package(gnome-games): title="Play solitaire" command="/usr/bin/sol" icon="gnome-aisleriot.png" needs="gnome" section="Play games"
 
 
 # kdegames
@@ -291,15 +291,15 @@
 
 
 # StarOffice
-?package(staroffice-de): title="Make your office work using StarOffice" icon="so52.xpm" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
+?package(staroffice-de): title="Make your office work using StarOffice" icon="butterfly.png" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
 
-?package(staroffice-en): title="Make your office work using StarOffice" icon="so52.xpm" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
+?package(staroffice-en): title="Make your office work using StarOffice" icon="butterfly.png" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
 
-?package(staroffice-es): title="Make your office work using StarOffice" icon="so52.xpm" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
+?package(staroffice-es): title="Make your office work using StarOffice" icon="butterfly.png" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
 
-?package(staroffice-fr): title="Make your office work using StarOffice" icon=so52.xpm needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
+?package(staroffice-fr): title="Make your office work using StarOffice" icon="butterfly.png" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
 
-?package(staroffice-it): title="Make your office work using StarOffice" icon="so52.xpm" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
+?package(staroffice-it): title="Make your office work using StarOffice" icon="butterfly.png" needs="x11" command="soffice" section="Use office tools" mimetypes="application/x-scalc;application/x-smf;application/x-sdraw;application/x-sds;application/x-swriter;application/x-sgl;application/x-sda;audio/x-wav;image/gif;image/jpeg;image/tiff;image/x-xbm;image/x-xpm;text/html;text/plain;"
 
 
 ## View, modify or create a picture

@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrake Linux
 Name:		mandrake_desk
 Version:	9.0
-Release:	3mdk
+Release:	4mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -117,7 +117,7 @@ cd -
 mkdir -p $RPM_BUILD_ROOT{%{_menudir},%{_datadir}/control-center/capplets/Advanced}
 cat << EOF > $RPM_BUILD_ROOT%{_menudir}/mdk-eazel-engine-capplet
 ?package(mdk-eazel-engine-capplet):command="%{_bindir}/eazel-engine-capplet" \
-needs="gnome" section="Configuration/Gnome/Advanced" title="Crux GTK+ Theme" \
+needs="gnome" icon="/usr/share/pixmaps/gnome-ccthemes.png" section="Configuration/GNOME/Advanced" title="Crux GTK+ Theme" \
 longtitle="Configuration applet for Crux GTK+ theme"
 EOF
 cp -f $RPM_BUILD_ROOT%_datadir/gnome/apps/Settings/Desktop/eazel-engine-properties.desktop $RPM_BUILD_ROOT%{_datadir}/control-center/capplets/Advanced
@@ -337,6 +337,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Jul 31 2002 Frederic Crozat <fcrozat@mandrakesoft.com> 9.0-4mdk
+- Fix GNOME entry for Crux theme applet
+- Fix menu entries for simplified menu
+
 * Tue Jul 30 2002 David BAUDENS <baudens@mandrakesoft.com> 9.0-3mdk
 - New default user image
 
