@@ -21,7 +21,7 @@ msgstr ""
 #: old/DrakConf.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:1
 msgid "DrakConf"
-msgstr "DrakConf"
+msgstr "DrakConf 控制中心"
 
 #: gnome/mandrake.links.desktop.in.h:2
 #: old/mandrake.links.desktop.in.h:2
@@ -92,7 +92,7 @@ msgstr "唯讀光碟機"
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:2
 #: old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
-msgstr "磁碟機"
+msgstr "軟式磁碟機"
 
 #: kdelnk/Doc.kdelnk.in.h:1
 #: old/Doc.kdelnk.in.h:1
@@ -154,12 +154,12 @@ msgstr "更新 Mandrake"
 #: kdelnk/XKill.kdelnk.in.h:1
 #: old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr "無法關閉程式？使用 'XKill'"
+msgstr "無法關閉程式？使用 'XKill' 程式剎手"
 
 #: kdelnk/XKill.kdelnk.in.h:2
 #: old/XKill.kdelnk.in.h:2
 msgid "XKill"
-msgstr "XKill"
+msgstr "XKill 程式剎手"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
@@ -167,9 +167,9 @@ msgstr "Linux 文件"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
-msgstr "RpmDrake"
+msgstr "RpmDrake 套件管理員"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
-msgstr "Gnome 和 X 的應用程式"
+msgstr "Gnome 及 X Apps"
 
