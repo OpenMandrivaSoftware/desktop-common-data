@@ -36,6 +36,15 @@ pushd $RPM_BUILD_ROOT/usr/share/pixmaps/backgrounds/mandrake && {
 } && popd
 rm -f special/mandrake-small.xpm
 
+mkdir -p $RPM_BUILD_ROOT/usr/lib/mc/desktop-scripts
+install -m 755 gnome/mandrake.links.sh \
+	$RPM_BUILD_ROOT/usr/lib/mc/desktop-scripts/mandrake.links.sh
+
+mkdir -p $RPM_BUILD_ROOT/usr/lib/desktop-links
+install -m 644 gnome/mandrake.links \
+	$RPM_BUILD_ROOT/usr/lib/desktop-links/mandrake.links
+
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -53,8 +62,13 @@ rm -rf $RPM_BUILD_ROOT
 /etc/skel/Desktop/
 /usr/share/pixmaps/mdk
 /usr/share/gnome/apps/Internet/*.desktop
+/usr/lib/mc/desktop-scripts/mandrake.links.sh
+/usr/lib/desktop-links/mandrake.links
 
 %changelog
+
+* Tue Dec 23 1999 Pablo Saratxaga <pablo@mandrakesoft.com>
+- included the mandrake.links* files formerly in gmc package
 
 * Wed Dec 22 1999 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 - sbin/fndSession: new script with the new chksession.

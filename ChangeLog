@@ -1,3 +1,9 @@
+1999-12-23 Pablo Saratxga <pablo@mandrakesoft.com>
+
+	* gnome/mandrake.links,gnome/mandrake.links.sh,mandrake_desk.spec:
+	moved here the creation of Gnome desktop icons; that makes it
+	easier to manage, easier to update and keep in sync with KDE.
+
 1999-12-23 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 
 	* kdelnk/Kppp.kdlnk: new.
