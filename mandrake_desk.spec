@@ -22,7 +22,7 @@ the Mandrake desktop.
 %prep
 rm -rf $RPM_BUILD_ROOT
 
-%setup
+%setup -n %{name}
 
 %build
 

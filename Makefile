@@ -12,7 +12,7 @@ install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/{s,}bin
 	mkdir -p $(RPM_BUILD_ROOT)/$(mandir)/man8/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/mc/
-	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{icons,icons/large,icons/mini,pixmaps/backgrounds/mandrake}
+	mkdir -p $(RPM_BUILD_ROOT)/usr/share/{faces,icons,icons/large,icons/mini,pixmaps/backgrounds/mandrake}
 	mkdir -p $(RPM_BUILD_ROOT)/etc/X11/
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/pixmaps/mdk
 	mkdir -p $(RPM_BUILD_ROOT)/etc/skel/Desktop
@@ -20,7 +20,6 @@ install:
 	mkdir -p $(RPM_BUILD_ROOT)/usr/lib/desktop-links
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/Internet
 	mkdir -p $(RPM_BUILD_ROOT)/usr/share/gnome/apps/System
-	mkdir -p $(RPM_BUILD_ROOT)/usr/share/faces
 	install -m644 man/*8 $(RPM_BUILD_ROOT)/$(mandir)/man8/
 	install -m755 sbin/* $(RPM_BUILD_ROOT)/usr/sbin/
 	install -m755 bin/* $(RPM_BUILD_ROOT)/usr/bin/
