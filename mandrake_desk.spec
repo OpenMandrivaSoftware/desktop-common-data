@@ -1,7 +1,5 @@
-# DO NOT MODIFY THE VERSION HERE, modify in the CVS
-%define	version 1.0.1
-#
-%define release 11mdk
+%define version 1.0.1
+%define release 13mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -58,7 +56,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
-* Tue Jan 04 2000 - David BAUDENS <baudens@mandrakesoft.com>
+* Wed Jan  5 2000 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.0.1-13mdk
+- Fix gnome links.
+
+* Tue Jan 04 2000 David BAUDENS <baudens@mandrakesoft.com>
 - Use BBDrake & WMDrake for BlackBox & Window Maker
 
 * Fri Dec 31 1999 Pixel <pixel@mandrakesoft.com>

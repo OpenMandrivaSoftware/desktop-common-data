@@ -1,3 +1,4 @@
+NAME = mandrake_desk
 VERSION = 1.0.1
 
 all:
@@ -7,18 +8,14 @@ clean:
 	find . -type d -name '.xvpics'|xargs rm -rf
 
 dis: clean
-	rm -rf mandrake_desk-$(VERSION) ../mandrake_desk-$(VERSION).tar*
-	mkdir -p mandrake_desk-$(VERSION)
-	find . -not -name "mandrake_desk-$(VERSION)"|\
-		cpio -pd mandrake_desk-$(VERSION)/
-	find mandrake_desk-$(VERSION) \
-		-type d -name CVS -o -name .cvsignore -o -name unused |xargs rm -rf
-	egrep "^%define version $(VERSION)" mandrake_desk.spec ||
-		perl -p -i -e 's|^%define version.*|%define version $(VERSION)|' \
-		mandrake_desk.spec
-	tar cf ../mandrake_desk-$(VERSION).tar mandrake_desk-$(VERSION)
-	bzip2 -9f ../mandrake_desk-$(VERSION).tar
-	rm -rf mandrake_desk-$(VERSION)
+	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
+	mkdir -p $(NAME)-$(VERSION)
+	find . -not -name "$(NAME)-$(VERSION)"|cpio -pd $(NAME)-$(VERSION)/
+	find $(NAME)-$(VERSION) -type d -name CVS -o -name .cvsignore -o -name unused |xargs rm -rf
+	perl -p -i -e 's|^%define version.*|%define version $(VERSION)|' $(NAME).spec
+	tar cf ../$(NAME)-$(VERSION).tar $(NAME)-$(VERSION)
+	bzip2 -9f ../$(NAME)-$(VERSION).tar
+	rm -rf $(NAME)-$(VERSION)
 
 rpm: dis ../mandrake_desk-$(VERSION).tar.bz2 $(RPM)
 	cp -f ../mandrake_desk-$(VERSION).tar.bz2 $(RPM)/SOURCES

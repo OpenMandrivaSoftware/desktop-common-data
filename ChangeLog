@@ -1,5 +1,8 @@
-2000-01-03 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-01-04 Chmouel Boudjnah <chmouel@mandrakesoft.com>
+	* kdelnk/DrakeConf: remove the call to kdesu.
+	* gnome/mandrake.links: remove the call to kdesu for DrakeConf.
 
+2000-01-03 Chmouel Boudjnah <chmouel@mandrakesoft.com>
 	* window-managers: fix wrong Enlightenment entry.
 
 1999-12-28  Chmouel Boudjnah  <chmouel@mandrakesoft.com>
