@@ -1,8 +1,0 @@
-
-[Desktop Entry]
-Name=Software Manager
-Icon=/usr/share/icons/rpmdrake.xpm
-Exec=/usr/bin/rpmdrake
-Terminal=false
-MultipleArgs=false
-Type=Application
