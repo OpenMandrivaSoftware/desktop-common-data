@@ -46,6 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/bin/*
 /usr/sbin/*
 /usr/share/icons/*.xpm
+/usr/share/icons/*.png
 /usr/share/icons/mini/*.xpm
 /usr/share/icons/large/*.xpm
 /usr/share/pixmaps/backgrounds/mandrake
