@@ -1,0 +1,32 @@
+# KDE Config File
+[KDE Desktop Entry]
+UnmountIcon=unknown.xpm
+MountPoint=
+Icon=unknown.xpm
+Dev=
+ReadOnly=0
+FSType=Default
+Type=FSDevice
+Name=File System Device
+Name[ca]=Dispositiu de sistema de fitxers
+Name[cs]=Zařízení souborového systému
+Name[da]=Filsystemsenhed
+Name[de]=Dateisystem
+Name[es]=Dispositivo de sistema de archivos
+Name[fi]=Tiedostosysteemi
+Name[fr]=Périphérique avec système de fichiers
+Name[hr]=Uređaj datotečnog sustava
+Name[hu]=Fájlrendszer Eszköz
+Name[is]=Skráakerfistæki
+Name[it]=Dispositivo con  Sistema File
+Name[ja]=ファイル システム デバイス
+Name[no]=Filsystemenhet
+Name[pl]=Urządzenie
+Name[pt]=Dispositivo com Sistema de Ficheiros
+Name[pt_BR]=Dispositivo de sistema de arquivos
+Name[ro]=Dispozitiv de sistem de fişiere
+Name[ru]=Файл Системного Устройства
+Name[sk]=Zariadenie súborového systému (File System Device)
+Name[sl]=Datoteka za enoto
+Name[sv]=Filsystemsenhet
+

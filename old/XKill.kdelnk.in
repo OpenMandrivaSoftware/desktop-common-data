@@ -1,0 +1,15 @@
+# KDE Config File
+[KDE Desktop Entry]
+_Name=XKill
+_Comment=Can't close a window ? use 'XKill'
+SwallowExec=
+SwallowTitle=
+BinaryPattern=xkill;
+MimeType=
+Exec=/usr/bin/X11/xkill
+Icon=xkill-mdk.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+

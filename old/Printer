@@ -1,0 +1,16 @@
+# KDE Config File
+[KDE Desktop Entry]
+SwallowTitle=
+SwallowExec=
+BinaryPattern=
+MimeType=
+Exec=klpq %u
+Icon=klpq.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+Name=Default printer
+Comment=Manage your print queue
+Comment[wa]=Manaedjîz li caweye di vosse sicrirece
+

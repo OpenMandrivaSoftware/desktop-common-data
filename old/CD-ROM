@@ -1,0 +1,33 @@
+# KDE Config File
+[KDE Desktop Entry]
+Icon=cdrom_mount
+UnmountIcon=cdrom_unmount
+#MountPoint=/mnt/cdrom
+#Dev=/dev/cdrom
+Link=/mnt/cdrom
+ReadOnly=1
+FSType=Default
+Type=Link
+Name=CD-ROM
+Comment=File System Device
+Comment[ca]=Dispositiu de sistema de fitxers
+Comment[cs]=Zařízení souborového systému
+Comment[da]=Filsystemsenhed
+Comment[de]=Dateisystem
+Comment[es]=Dispositivo de sistema de archivos
+Comment[fi]=Tiedostosysteemi
+Comment[fr]=Périphérique avec système de fichiers
+Comment[hr]=Uređaj datotečnog sustava
+Comment[hu]=Fájlrendszer Eszköz
+Comment[is]=Skráakerfistæki
+Comment[it]=Dispositivo con  Sistema File
+Comment[ja]=ファイル システム デバイス
+Comment[no]=Filsystemenhet
+Comment[pl]=Urządzenie
+Comment[pt]=Dispositivo com Sistema de Ficheiros
+Comment[pt_BR]=Dispositivo de sistema de arquivos
+Comment[ro]=Dispozitiv de sistem de fişiere
+Comment[ru]=Файл Системного Устройства
+Comment[sk]=Zariadenie súborového systému (File System Device)
+Comment[sl]=Datoteka za enoto
+Comment[sv]=Filsystemsenhet

@@ -1,0 +1,15 @@
+# KDE Config File
+[KDE Desktop Entry]
+_Name=Netscape
+_Comment=Netscape browser
+SwallowTitle=
+SwallowExec=
+BinaryPattern=netscape;
+MimeType=
+Exec=netscape
+Icon=netscape.xpm
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+
