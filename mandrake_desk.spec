@@ -1,7 +1,7 @@
 # DO NOT MODIFY THE VERSION HERE, modify in the CVS
 %define	version 1.0.1
 #
-%define release 16mdk
+%define release 17mdk
 %define name mandrake_desk
 
 Summary: The Desktop configuration files for Linux Mandrake.
@@ -58,6 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/*/*
 
 %changelog
+* Mon Jan 10 2000 Pixel <pixel@mandrakesoft.com>
+- icons/mini/hd_umount.xpm: renamed in hd_unmount.xpm (for coherence)
+
 * Fri Jan  7 2000 Pixel <pixel@mandrakesoft.com>
 - window-managers (NAME): KDE => kde.
 - sbin/chksession: look at /etc/sysconfig/desktop to sort
