@@ -1,17 +1,15 @@
-#
-# WARNING: This file is in unicode!
-#
 # Vitauts Stochka <vit@dpu.lv>
+# Juris Kudiòğ <cooker@inbox.lv>, 2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mandrake_desk VERSION\n"
 "POT-Creation-Date: 2001-03-29 09:59+0200\n"
-"PO-Revision-Date: 1999-08-25 11:07+0200\n"
-"Last-Translator: Vitauts Stochka <vit@dpu.lv>\n"
+"PO-Revision-Date: 2001-08-14 13:32+0200\n"
+"Last-Translator: Juris Kudiòğ <cooker@inbox.lv>\n"
 "Language-Team: lv\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=iso-8859-13\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: gnome/mandrake.links.desktop.in.h:1 kdelnk/DrakConf.kdelnk.in.h:1
@@ -21,11 +19,11 @@ msgstr "DrakConf"
 
 #: gnome/mandrake.links.desktop.in.h:2 old/mandrake.links.desktop.in.h:2
 msgid "GNOME Web Site"
-msgstr "GNOME mÄjas lapa"
+msgstr "GNOME mâjas lapa"
 
 #: gnome/mandrake.links.desktop.in.h:3 old/mandrake.links.desktop.in.h:6
 msgid "Mandrake documentation"
-msgstr "Mandrake dokumentÄcija"
+msgstr "Mandrake dokumentâcija"
 
 #: gnome/mandrake.links.desktop.in.h:4 kdelnk/Netscape.kdelnk.in.h:1
 #: old/Netscape.kdelnk.in.h:1 old/mandrake.links.desktop.in.h:7
@@ -35,21 +33,21 @@ msgstr "Netscape"
 #: kde/Desktop/Templates/MimeType.noext.kdelnk.in.h:1
 #: old/MimeType.noext.kdelnk.in.h:1
 msgid "Mime Type"
-msgstr ""
+msgstr "Mime tips"
 
 #: kde/Desktop/Templates/Program.noext.kdelnk.in.h:1
 #: old/Program.noext.kdelnk.in.h:1
 msgid "Application"
-msgstr ""
+msgstr "Aplikâcija"
 
 #: kde/Desktop/Templates/URL.noext.kdelnk.in.h:1 old/URL.noext.kdelnk.in.h:1
 msgid "Internet Address (URL)"
-msgstr ""
+msgstr "Interneta adrese (URL)"
 
 #: kde/Desktop/Templates/WWWUrl.noext.kdelnk.in.h:1
 #: old/WWWUrl.noext.kdelnk.in.h:1
 msgid "World Wide Web URL"
-msgstr ""
+msgstr "Vispasaules tîkla URL"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:2
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:1
@@ -57,53 +55,53 @@ msgstr ""
 #: old/CD-ROM.noext.kdelnk.in.h:2 old/Device.noext.kdelnk.in.h:1
 #: old/Floppy.noext.kdelnk.in.h:1
 msgid "File System Device"
-msgstr ""
+msgstr "Failu sistçmas ierîce"
 
 #: kde/Desktop/Templates/Ftpurl.noext.kdelnk.in.h:1
 #: old/Ftpurl.noext.kdelnk.in.h:1
 msgid "FTP URL"
-msgstr ""
+msgstr "FTP URL"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:1 old/Printer.noext.kdelnk.in.h:1
 msgid "Default printer"
-msgstr ""
+msgstr "Noklusçtais printeris"
 
 #: kde/Desktop/Printer.noext.kdelnk.in.h:2 old/Printer.noext.kdelnk.in.h:2
 msgid "Manage your print queue"
-msgstr ""
+msgstr "Vdiet Jûsu printera rindu"
 
 #: kde/Desktop/CD-ROM.noext.kdelnk.in.h:1 old/CD-ROM.noext.kdelnk.in.h:1
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 #: kde/Desktop/Floppy.noext.kdelnk.in.h:2 old/Floppy.noext.kdelnk.in.h:2
 msgid "Floppy disk"
-msgstr ""
+msgstr "Mîkstâ diskete"
 
 #: kdelnk/Doc.kdelnk.in.h:1 old/Doc.kdelnk.in.h:1
 msgid "Mandrake and KDE documentation"
-msgstr "Mandrake un KDE dokumentÄcija"
+msgstr "Mandrake un KDE dokumentâcija"
 
 #: kdelnk/Doc.kdelnk.in.h:2 old/Doc.kdelnk.in.h:2
 msgid "Mandrake and KDE documentation."
-msgstr "Mandrake un KDE dokumentÄcija"
+msgstr "Mandrake un KDE dokumentâcija"
 
 #: kdelnk/DrakConf.kdelnk.in.h:2 old/DrakConf.kdelnk.in.h:2
 msgid "The system configuration tools of Linux-Mandrake"
-msgstr "Linux-Mandrake sistÄ“mas konfigurÄ“Å¡anas rÄ«ki"
+msgstr "Linux-Mandrake sistçmas konfigurçğanas rîki"
 
 #: kdelnk/Home.kdelnk.in.h:1 old/Home.kdelnk.in.h:1
 msgid "Home Directory"
-msgstr "MÄjas katalogs"
+msgstr "Mâjas katalogs"
 
 #: kdelnk/Internet.kdelnk.in.h:1 old/Internet.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:3
 msgid "Internet connection"
-msgstr "Interneta pieslÄ“gums"
+msgstr "Interneta pieslçgums"
 
 #: kdelnk/Internet.kdelnk.in.h:2 old/Internet.kdelnk.in.h:2
 msgid "Internet connection."
-msgstr "Interneta pieslÄ“gums"
+msgstr "Interneta pieslçgums"
 
 #: kdelnk/Netscape.kdelnk.in.h:2 old/Netscape.kdelnk.in.h:2
 msgid "Netscape browser"
@@ -124,11 +122,11 @@ msgstr "Printeris"
 #: kdelnk/Updates.kdelnk.in.h:1 old/Updates.kdelnk.in.h:1
 #: old/mandrake.links.desktop.in.h:5
 msgid "Mandrake Updates"
-msgstr "Mandrake atjauninÄjumi"
+msgstr "Mandrake jaunujumi"
 
 #: kdelnk/XKill.kdelnk.in.h:1 old/XKill.kdelnk.in.h:1
 msgid "Can't close a window ? use 'XKill'"
-msgstr "Nevarat aizvÄ“rt logu? Izmantojiet 'XKill'"
+msgstr "Nevarat aizvçrt logu? Izmantojiet 'XKill'"
 
 #: kdelnk/XKill.kdelnk.in.h:2 old/XKill.kdelnk.in.h:2
 msgid "XKill"
@@ -136,12 +134,12 @@ msgstr "XKill"
 
 #: old/mandrake.links.desktop.in.h:4
 msgid "Linux Documents"
-msgstr ""
+msgstr "Linux dokimsnti"
 
 #: old/mandrake.links.desktop.in.h:8
 msgid "RpmDrake"
-msgstr ""
+msgstr "RpmDrake"
 
 #: special/Gnome_and_X.desktop.in.h:1
 msgid "Gnome and X Apps"
-msgstr "Gnome un X aplikÄcijas"
+msgstr "Gnome un X aplikâcijas"
