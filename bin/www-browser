@@ -1,0 +1,26 @@
+#!/bin/sh
+#---------------------------------------------------------------
+# Project         : Mandrakelinux
+# Module          : bin
+# File            : www-browser
+# Version         : $Id$
+# Author          : Frederic Lepied
+# Created On      : Tue Aug 31 16:26:54 2004
+# Purpose         : launch a web browser
+#---------------------------------------------------------------
+
+if [[ -z "$BROWSER" ]]; then
+    if /sbin/pidof gnome-session > /dev/null; then
+	BROWSER=`which epiphany 2> /dev/null`
+	[[ -z "$BROWSER" ]] && BROWSER=`which galeon 2> /dev/null`
+    fi
+    [[ -z "$BROWSER" ]] && which kfmclient 2> /dev/null && BROWSER="kfmclient openProfile webbrowsing"
+    [[ -z "$BROWSER" ]] && BROWSER=`which epiphany 2> /dev/null`
+    [[ -z "$BROWSER" ]] && BROWSER=`which galeon 2> /dev/null`
+    [[ -z "$BROWSER" ]] && BROWSER=`which mozilla 2> /dev/null`
+fi
+
+echo "$BROWSER $@"
+exec $BROWSER "$@"
+
+# www-browser ends here
