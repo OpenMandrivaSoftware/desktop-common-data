@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Mandrakelinux
 Name:		mandrake_desk
-Version:	10.1
-Release: 	19mdk
+Version:	10.2
+Release: 	1mdk
 License:	GPL
 URL:		http://www.mandrakelinux.com/
 Group:		System/Configuration/Other
@@ -170,6 +170,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Mar 07 2005 Laurent MONTEL <lmontel@mandrakesoft.com> 10.2-1mdk
+- Fix error into menu
+
 * Wed Mar 02 2005 Laurent MONTEL <lmontel@mandrakesoft.com> 10.1-19mdk
 - Fix order for simplified menu
 

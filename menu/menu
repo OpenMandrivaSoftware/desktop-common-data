@@ -90,7 +90,7 @@
 ?package(menu): needs=x11 section="More Applications/Education" title="Other" icon="education_other_section.png"
 #
 ?package(menu): needs=x11 section="More Applications" title="Emulators" icon="emulators_section.png"
-?package(menu): needs=x11 section="More Applications" title="Finances" icon="finances_section.png" order="_mergemenu_,Mandrakelinux-MoreApplications-Finances-GnuCash.desktop,Mandrakelinux-MoreApplications-Finances-kmymoney2.desktop,_mergefile"
+?package(menu): needs=x11 section="More Applications" title="Finances" icon="finances_section.png" order="_mergemenu_,Mandrakelinux-MoreApplications-Finances-GnuCash.desktop,Mandrakelinux-MoreApplications-Finances-kmymoney2.desktop,_mergefile_"
 #
 ?package(menu): needs=x11 section="More Applications" title="Games" icon="amusement_section.png" order="Adventure,Arcade,Boards,Cards,Puzzles,Sports,Strategy,Toys,_mergemenu_,_mergefile_"
 ?package(menu): needs=x11 section="More Applications/Games" title="Adventure" icon="adventure_section.png"
