@@ -1,3 +1,11 @@
+2002-02-25 17:09  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* gtkrc, mandrake_desk.spec: Fix default mdk theme with evolution
+
+2002-02-20 19:20  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* Makefile: Fix tagging
+
 2002-02-20 19:12  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* mandrake_desk.spec: Really fix mdk-eazel-engine-capplet location
