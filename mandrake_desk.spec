@@ -1,7 +1,7 @@
 Summary:	The Desktop configuration files for Linux Mandrake
 Name:		mandrake_desk
-Version:	8.0
-Release:	12mdk
+Version:	8.1
+Release:	1mdk
 License:	GPL
 Group:		System/Configuration/Other
 Icon:		mandrake-small.xpm
@@ -9,27 +9,8 @@ Packager:	David BAUDENS <baudens@mandrakesoft.com>
 
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
-Source:		mandrake_desk.tar.bz2
-Source1:	eazel-engine-0.3.tar.bz2
-Source2:	gtkrc
-
-Source10: gnome-Documentation-de.desktop
-Source11: gnome-Documentation-en.desktop
-Source12: gnome-Documentation-es.desktop
-Source13: gnome-Documentation-fr.desktop
-Source14: gnome-Documentation-it.desktop
-Source15: gnome-mandrake-campus.desktop
-Source16: gnome-mandrake-control-center.desktop
-Source17: gnome-mandrake-expert.desktop
-Source18: gnome-sofware-manager.desktop
-Source50: gnome-Internet.desktop
-Source51: gnomedesktop-network
-
-Source20: gnome-mandrakecampus.xpm
-Source21: gnome-mandrakeexpert.xpm
-
-# (fc) fix eazel engine for gfloppy and xcdroast
-Patch0: eazel-engine-0.3-fixdimension.patch.bz2
+# no extra source or patch are allowed here.
+Source:		mandrake_desk-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 
@@ -42,28 +23,26 @@ Mandrake desktop.
 
 %prep
 
-%setup -q -a1 -n %name
-%patch0 -p1 -b .dim
+%setup -q
 
 %build
-find . -type 'd' -name 'CVS'|xargs rm -rf
-
-# Dadou - 8.0-4mdk - Very very Quick and very very very dirty hack to make FredL happy.
-#                    It will be done nicely later
-(
-cd $RPM_BUILD_DIR/mandrake_desk
-cd eazel-engine-0.3/
+cd eazel-engine
 %configure
 %make
-make install DESTDIR=%buildroot
-rm -fr %buildroot/%_datadir/control-center/
-mkdir -p %buildroot/etc/gtk
-install -m644 %SOURCE2 %buildroot/etc/gtk
-rm -fr %buildroot/%_datadir/themes
-)
 
 %install
-make install RPM_BUILD_ROOT=$RPM_BUILD_ROOT mandir=%{_mandir}
+rm -rf %buildroot
+
+cd eazel-engine
+make install DESTDIR=%buildroot
+rm -fr %buildroot/%_datadir/control-center/
+rm -fr %buildroot/%_datadir/themes
+cd -
+
+mkdir -p %buildroot/etc/gtk
+install -m644 gtkrc %buildroot/etc/gtk
+
+make install RPM_BUILD_ROOT=%buildroot mandir=%{_mandir}
 
 mkdir -p $RPM_BUILD_ROOT/etc/X11/wmsession.d/
 
@@ -73,6 +52,7 @@ cd $RPM_BUILD_ROOT%_datadir/faces
 cp user-hat-mdk.png root.png
 cp root.png root
 cp user-default-mdk.png default.png
+cd -
 
 cd $RPM_BUILD_ROOT%_datadir/pixmaps/backgrounds/linux-mandrake
 ln -s ICE-640.png PP5-640.png
@@ -106,30 +86,29 @@ ln -s logoMDK1-800.png DKP7-800.png
 ln -s logoMDK1-1024.png DKP7-1024.png
 ln -s logoMDK1-1280.png DKP7-1280.png
 ln -s logoMDK1-1600.png DKP7-1600.png
-
+cd -
 
 install -d %buildroot/%_datadir/mdk/gnome-desktop/
-install -m644 %SOURCE10 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-de.desktop
-install -m644 %SOURCE11 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-en.desktop
-install -m644 %SOURCE12 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-es.desktop
-install -m644 %SOURCE13 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-fr.desktop
-install -m644 %SOURCE14 %buildroot/%_datadir/mdk/gnome-desktop/Documentation-it.desktop
-install -m644 %SOURCE15 "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Campus.desktop"
-install -m644 %SOURCE16 "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Control Center.desktop"
-install -m644 %SOURCE17 "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Expert.desktop"
-install -m644 %SOURCE18 "%buildroot/%_datadir/mdk/gnome-desktop/Software Manager.desktop"
-install -m644 %SOURCE50 %buildroot/%_datadir/mdk/gnome-desktop/Connection-to-Internet.desktop
+for l in de en fr it; do
+	install -m644 gnome/gnome-Documentation-$l.desktop %buildroot/%_datadir/mdk/gnome-desktop/Documentation-$l.desktop
+done
+
+install -m644 gnome/gnome-mandrake-campus.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Campus.desktop"
+install -m644 gnome/gnome-mandrake-control-center.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Control Center.desktop"
+install -m644 gnome/gnome-mandrake-expert.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Mandrake Expert.desktop"
+install -m644 gnome/gnome-sofware-manager.desktop "%buildroot/%_datadir/mdk/gnome-desktop/Software Manager.desktop"
+install -m644 gnome/gnome-Internet.desktop %buildroot/%_datadir/mdk/gnome-desktop/Connection-to-Internet.desktop
 
 install -d %buildroot/usr/share/pixmaps/mc/
-install -m644 %SOURCE20 %buildroot/usr/share/pixmaps/mc/mandrakecampus.xpm
-install -m644 %SOURCE21 %buildroot/usr/share/pixmaps/mc/mandrakeexpert.xpm
+install -m644 gnome/gnome-mandrakecampus.xpm %buildroot/usr/share/pixmaps/mc/mandrakecampus.xpm
+install -m644 gnome/gnome-mandrakeexpert.xpm %buildroot/usr/share/pixmaps/mc/mandrakeexpert.xpm
 
-install -m755 %SOURCE51 %buildroot/%_bindir
+install -m755 gnome/gnomedesktop-network %buildroot/%_bindir
 
 
 %post
 if [ -f /etc/X11/window-managers.rpmsave ];then
-	/usr/sbin/convertsession -f /etc/X11/window-managers.rpmsave || exit 0
+	/usr/sbin/convertsession -f /etc/X11/window-managers.rpmsave || :
 fi
 
 %clean
@@ -137,7 +116,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%config /etc/gtk/gtkrc
+%config(noreplace) /etc/gtk/gtkrc
 %doc TRANSLATORS special/*
 %dir /etc/X11/wmsession.d/
 %{_prefix}/sbin/*
@@ -159,6 +138,11 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/pixmaps/mc/*.xpm
 
 %changelog
+* Tue Jul 31 2001 Frederic Lepied <flepied@mandrakesoft.com> 8.1-1mdk
+- reworked Makefile and spec
+- resync with cvs
+- generate the kdm sessions with the right path to Xsession.
+
 * Tue Jun 12 2001 Frederic Crozat <fcrozat@mandrakesoft.com> 8.0-12mdk
 - Fix patch0 with authors comments
 
