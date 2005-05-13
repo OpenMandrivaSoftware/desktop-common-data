@@ -1,5 +1,5 @@
-PACKAGE = mandrake_desk
-NAME = mandrake_desk
+PACKAGE = desktop-common-data
+NAME = desktop-common-data
 VERSION:=$(shell rpm -q --qf '%{VERSION}\n' --specfile $(PACKAGE).spec | head -1)
 RELEASE:=$(shell rpm -q --qf '%{RELEASE}\n' --specfile $(PACKAGE).spec | head -1)
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')

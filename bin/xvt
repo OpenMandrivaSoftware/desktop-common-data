@@ -32,7 +32,7 @@ if [[ -z "$TERMINAL" ]]; then
 	if [[ -n "$NEWTERMINAL" ]]; then
   	  TERMINAL=`echo $NEWTERMINAL| sed -e 's/TerminalApplication=//' -e 's/!//'`
 	fi
-        [[ -z "$TERMINAL" ]] && which kconsole 2> /dev/null && TERMINAL="konsole"
+        [[ -z "$TERMINAL" ]] && which konsole 2> /dev/null && TERMINAL="konsole"
     fi
 
    strip_terminal_var 
