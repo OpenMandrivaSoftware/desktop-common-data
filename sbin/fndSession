@@ -1,17 +1,21 @@
 #!/bin/sh
-# fndSession (c) MandrakeSoft, Chmouel Boudjnah <chmouel@mandrakesoft.com>
-## FindSession for kdm and gdm.
+#---------------------------------------------------------------
+# Project         : Mandriva Linux
+# Module          : sbin
+# File            : fndSession
+# Version         : $Id$
+# Author          : Frederic Lepied
+# Created On      : Mon May 30 10:43:12 2005
+# Purpose         : find sessions for display managers
+#---------------------------------------------------------------
 
-[ -x /usr/sbin/chksession ] || {
-    echo "I can't find /usr/sbin/chksession"
-    echo "check your installation"
-    exit 1
-}
+for f in /etc/X11/dm.d/*.conf; do
+    EXEC=
+    FNDSESSION_EXEC=
+    eval `grep 'EXEC=' "$f"`
+    if [ -x "$EXEC" -a -n "$FNDSESSION_EXEC" ]; then
+	$FNDSESSION_EXEC
+    fi
+done
 
-if [ -e /usr/share/config/kdm/kdmrc ];then
-    /usr/sbin/chksession -k
-fi
-
-if [ -d /etc/X11/dm/Sessions ];then
-    /usr/sbin/chksession -g
-fi
+# fndSession ends here
