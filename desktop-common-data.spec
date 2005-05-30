@@ -1,9 +1,9 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
-Version:	10.2
-Release: 	5mdk
+Version:	10.3
+Release: 	1mdk
 License:	GPL
-URL:		http://www.mandrakelinux.com/
+URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
 
 # get the source from our cvs repository (see
@@ -18,7 +18,7 @@ Obsoletes:	mandrake_desk
 Provides:	mandrake_desk
 Conflicts:	kdebase-kdm-config-file < 1:3.2-62mdk
 Conflicts:	menu <= 2.1.12-10mdk
-
+Requires:	xinitrc >= 2.4.12
 
 %description
 This package contains useful icons, menu structure and others goodies for the
@@ -165,6 +165,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon May 30 2005 Frederic Lepied <flepied@mandriva.com> 10.3-1mdk
+- fndSession: use the new generic framework
+
 * Fri May 13 2005 Frederic Crozat <fcrozat@mandriva.com> 10.2-5mdk 
 - change package name
 - xvt : fix typo (bug #15836)
