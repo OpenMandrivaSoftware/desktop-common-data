@@ -1,6 +1,6 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
-Version:	10.3
+Version:	10.3.1
 Release: 	1mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
@@ -165,6 +165,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Jun  6 2005 Frederic Lepied <flepied@mandriva.com> 10.3.1-1mdk
+- rebuild to have the correct fndSession (bug #16255)
+
 * Mon May 30 2005 Frederic Lepied <flepied@mandriva.com> 10.3-1mdk
 - fndSession: use the new generic framework
 
