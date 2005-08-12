@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # -*- Mode: cperl -*-
-# Copyright (C) 2000 by Chmouel Boudjnah <chmouel@mandrakesoft.com>
+# Copyright (C) 2000 by Chmouel Boudjnah <chmouel@mandriva.com>
 # Redistribution of this file is permitted under the terms of the GNU 
 # Public License (GPL)
 ## description: Convert a file /etc/X11/window-managers to a

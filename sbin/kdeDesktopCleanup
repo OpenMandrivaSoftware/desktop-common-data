@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# (c) MandrakeSoft,  Pixel <pixel@mandrakesoft.com>
+# (c) Mandriva,  Pixel <pixel@mandriva.com>
 # Copyright under GPL
 
 @dirs = (qw(/etc/skel /root), glob("/home/*"));
