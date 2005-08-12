@@ -4,8 +4,8 @@
 [GdmGreeterTheme]
 Encoding=UTF-8
 Greeter=mdk-gdm.xml
-Name=Mandrakelinux
-Description=Mandrakelinux theme
-Author=Mandrakesoft graphic team
-Copyright=(c) 2002-2005 Mandrakesoft
+Name=Mandriva Linux
+Description=Mandriva Linux theme
+Author=Mandriva graphic team
+Copyright=(c) 2002-2005 Mandriva
 Screenshot=screenshot.png
