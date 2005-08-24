@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	10.3.1
-Release: 	2mdk
+Release: 	3mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -19,6 +19,7 @@ Provides:	mandrake_desk
 Conflicts:	kdebase-kdm-config-file < 1:3.2-62mdk
 Conflicts:	menu <= 2.1.12-10mdk
 Requires:	xinitrc >= 2.4.12
+Requires:	mdk-menu-messages >= 10.2-7mdk
 
 %description
 This package contains useful icons, menu structure and others goodies for the
@@ -165,6 +166,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Aug 24 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-3mdk 
+- Add default directories xinit.d script
+
 * Tue Aug 23 2005 Laurent MONTEL <lmontel@mandriva.com> 10.3.1-2mdk
 - Mandrake->Mandriva
 
