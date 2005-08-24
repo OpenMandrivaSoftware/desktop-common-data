@@ -1,3 +1,7 @@
+2005-08-24 20:01  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* desktop-common-data.spec: installing scripts works better
+
 2005-08-24 19:48  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* desktop-common-data.spec: - Add default directories xinit.d
