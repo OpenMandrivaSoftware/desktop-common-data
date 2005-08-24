@@ -60,6 +60,9 @@ install -m 0755 bin/xvt %buildroot/%_bindir/
 install -d -m 0755 %buildroot/%_sbindir/
 for i in sbin/* ; do install -m 0755 $i %buildroot/%_sbindir/ ; done
 
+# /etc/X11/xinit.d/
+install -d -m 0755 %buildroot/%_sysconfdir/X11/xinit.d/
+for i in xinit.d/* ; do install -m 0755 $i %buildroot/%_sysconfdir/X11/xinit.d/ ; done
 
 
 ## Install faces
@@ -134,6 +137,8 @@ rm -fr %buildroot
 %_bindir/*
 #
 %_sbindir/*
+
+%_sysconfdir/X11/xinit.d/*
 #
 %dir %_datadir/faces/
 %dir %_datadir/mdk/
