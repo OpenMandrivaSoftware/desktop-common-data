@@ -3,12 +3,15 @@
 USER_STAMP=$HOME/.mdk-desktop
 
 if [ ! -f $USER_STAMP ]; then
-    for file in /usr/share/mdk/menu/*-mdk.desktop.in ; do
+    for file in /usr/share/mdk/menu/*-mdk.desktop.template ; do
 	    echo $file
 	    DIRECTORY_PATH="$HOME/`grep URL $file | sed -e 's|URL=file://\$HOME/||g'`"
-	    FILE_PATH=$HOME/`basename $file .in`
+	    FILE_PATH=$HOME/`basename $file .template`
 	    [ -d "$DIRECTORY_PATH" ] || mkdir -p $DIRECTORY_PATH
 	    [ -f $FILE_PATH ] || cat $file | sed -e "s|\$HOME|${HOME}|g" > $FILE_PATH
+	    if [ "$file" != "/usr/share/mdk/menu/desktop-mdk.desktop.template" ]; then
+  		    echo "file://$FILE_PATH" >> $HOME/.gtk-bookmarks
+	    fi
     done
     touch $USER_STAMP
 fi
