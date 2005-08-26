@@ -39,9 +39,7 @@ if [ ! -e $USER_STAMP ]; then
 
 	    ln -f -s $DIRECTORY_PATH $SYMLINK
 	    [ -f $FILE_PATH ] || cat $file | sed -e "s|\$HOME.*|$DIRECTORY_PATH|g" > $FILE_PATH
-	    if [ "$file" != "/usr/share/mdk/menu/desktop-mdk.desktop.template" ]; then
-  		    echo "file://$FILE_PATH" >> $HOME/.gtk-bookmarks
-	    fi
+	    echo "file://$FILE_PATH" >> $HOME/.gtk-bookmarks
     done
     touch $USER_STAMP
 fi
