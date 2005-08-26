@@ -1,14 +1,44 @@
 #!/bin/sh
 
-USER_STAMP=$HOME/.mdk-desktop
+USER_STAMP=$HOME/.mdk-folders
 
-if [ ! -f $USER_STAMP ]; then
+if [ ! -e $USER_STAMP ]; then
+   locale=C
+   if [ ! -z "$LC_ALL" ]; then
+        locale=$LC_ALL
+   elif [ ! -z "$LC_CTYPE" ]; then
+        locale=$LC_CTYPE
+   elif [ ! -z "$LANG" ]; then
+        locale=$LANG
+   fi
+
+   [ -d $HOME/.mdk-folders ] || mkdir -p $HOME/.mdk-folders
+
     for file in /usr/share/mdk/menu/*-mdk.desktop.template ; do
-	    echo $file
-	    DIRECTORY_PATH="$HOME/`grep URL $file | sed -e 's|URL=file://\$HOME/||g'`"
-	    FILE_PATH=$HOME/`basename $file .template`
+	    TARGET_DIR=`grep Name[$locale] $file | sed -e 's|.*=||g'`
+	    if [ -z "$TARGET_DIR" ]; then
+		locale=`echo $locale | sed -e 's/_.*//g' -e 's/@.*//g'`
+	    	TARGET_DIR=`grep -F Name[$locale] $file | sed -e 's|.*=||g'`
+	    fi
+
+	    if [ -z "$TARGET_DIR" ]; then
+	    	TARGET_DIR=`grep -F Name $file | sed -e 's|.*=||g'`
+	    fi
+
+	    if [ "$CHARSET" != "UTF-8" ]; then
+		    TARGET_DIR=`echo $TARGET_DIR | iconv -f UTF-8 -t "$CHARSET"`
+	    fi
+
+
+	    DIRECTORY_PATH="$HOME/$TARGET_DIR"
 	    [ -d "$DIRECTORY_PATH" ] || mkdir -p $DIRECTORY_PATH
-	    [ -f $FILE_PATH ] || cat $file | sed -e "s|\$HOME|${HOME}|g" > $FILE_PATH
+	    echo -e [Desktop Entry]\\n`grep Icon= $file` > $DIRECTORY_PATH/.directory
+
+	    FILE_PATH=$HOME/.mdk-folders/`basename $file .template`
+	    SYMLINK=$HOME/.mdk-folders/`basename $file -mdk.desktop.template`
+
+	    ln -f -s $DIRECTORY_PATH $SYMLINK
+	    [ -f $FILE_PATH ] || cat $file | sed -e "s|\$HOME.*|$DIRECTORY_PATH|g" > $FILE_PATH
 	    if [ "$file" != "/usr/share/mdk/menu/desktop-mdk.desktop.template" ]; then
   		    echo "file://$FILE_PATH" >> $HOME/.gtk-bookmarks
 	    fi
