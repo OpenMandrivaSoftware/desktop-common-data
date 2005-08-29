@@ -1,3 +1,12 @@
+2005-08-29 11:57  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* desktop-common-data.spec: Fix default directories when no
+	  translation is available
+
+2005-08-29 11:56  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* xinit.d/desktop-directories: Fix when no translation is available
+
 2005-08-26 19:34  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* xinit.d/desktop-directories: Remove desktop special case, it is
