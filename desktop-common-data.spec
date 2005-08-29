@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	10.3.1
-Release: 	4mdk
+Release: 	5mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Aug 29 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-5mdk 
+- Fix default directories script when no translation is available
+
 * Fri Aug 26 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-4mdk 
 - New scheme for default directories
 
