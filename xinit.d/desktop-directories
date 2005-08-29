@@ -3,6 +3,7 @@
 USER_STAMP=$HOME/.mdk-folders
 
 if [ ! -e $USER_STAMP ]; then
+. /etc/profile.d/10lang.sh
    locale=C
    if [ ! -z "$LC_ALL" ]; then
         locale=$LC_ALL
@@ -11,22 +12,23 @@ if [ ! -e $USER_STAMP ]; then
    elif [ ! -z "$LANG" ]; then
         locale=$LANG
    fi
+   CHARSET=`locale charmap`
 
    [ -d $HOME/.mdk-folders ] || mkdir -p $HOME/.mdk-folders
 
     for file in /usr/share/mdk/menu/*-mdk.desktop.template ; do
-	    TARGET_DIR=`grep Name[$locale] $file | sed -e 's|.*=||g'`
+	    TARGET_DIR=`grep -m1 -F Name[$locale]= $file | sed -e 's|.*=||g'`
 	    if [ -z "$TARGET_DIR" ]; then
 		locale=`echo $locale | sed -e 's/_.*//g' -e 's/@.*//g'`
-	    	TARGET_DIR=`grep -F Name[$locale] $file | sed -e 's|.*=||g'`
+	    	TARGET_DIR=`grep -m1 -F Name[$locale]= $file | sed -e 's|.*=||g'`
 	    fi
 
 	    if [ -z "$TARGET_DIR" ]; then
-	    	TARGET_DIR=`grep -F Name $file | sed -e 's|.*=||g'`
+	    	TARGET_DIR=`grep -m1 -F Name= $file | sed -e 's|.*=||g'`
 	    fi
 
 	    if [ "$CHARSET" != "UTF-8" ]; then
-		    TARGET_DIR=`echo $TARGET_DIR | iconv -f UTF-8 -t "$CHARSET"`
+		    TARGET_DIR=`echo $TARGET_DIR | iconv -f UTF-8 -t "$CHARSET" 2>/dev/null`
 	    fi
 
 
