@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	10.3.1
-Release: 	5mdk
+Release: 	6mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Sep 08 2005 Laurent MONTEL <lmontel@mandriva.com> 10.3.1-6mdk
+- Add separator in simplified menu
+
 * Mon Aug 29 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-5mdk 
 - Fix default directories script when no translation is available
 
