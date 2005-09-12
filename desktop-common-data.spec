@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	10.3.1
-Release: 	6mdk
+Release: 	7mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Sep 12 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-7mdk 
+- Fix package name and command for gimp in simplified menu (Mdk bug #17627)
+
 * Thu Sep 08 2005 Laurent MONTEL <lmontel@mandriva.com> 10.3.1-6mdk
 - Add separator in simplified menu
 
