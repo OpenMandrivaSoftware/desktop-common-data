@@ -155,7 +155,7 @@
 ?package(gqview): needs="gnome" section="View, Modify and Create Graphics" title="View Images and Photos" icon="gqview.png" command="gqview" 
 
 # Edit Images and Photos
-?package(gimp): command="/usr/bin/gimp-remote-2.2" icon="wilber-icon.png" section="View, Modify and Create Graphics" title="Edit Images and Photos" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;image/x-bmp;image/x-xcf" startup_notify="true"
+?package(gimp): command="/usr/bin/gimp-remote" icon="wilber-icon.png" section="View, Modify and Create Graphics" title="Edit Images and Photos" needs="x11" mimetypes="image/gif;image/jpeg;image/png;image/tiff;image/x-xbm;image/x-xpm;image/bmp;image/fits;image/pcx;image/pix;image/pnm;image/x-bmp;image/x-xcf" startup_notify="true"
 
 # Scan and Use Optical Character Recognition (OCR) 
 ?package(kdegraphics-kooka): needs="x11" kde_filename="kooka" section="View, Modify and Create Graphics" title="Scan and Use Optical Character Recognition (OCR)" icon="scanner.png" command="kooka" kde_command="kooka %i %m %U" multiple_files="true" accept_url="true" kde_opt="\\nEncoding=UTF-8\\nTerminalOptions=\\nPath=\\nTerminal=0\\nBinaryPattern=kooka\\nDocPath=kooka/index.html\\nGenericName=Scan & OCR Program\\nX-DCOP-ServiceType=Multi\\n"
