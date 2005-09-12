@@ -1,3 +1,13 @@
+2005-09-12 16:14  Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* desktop-common-data.spec, menu/desktop-common-data: - Fix package
+	  name and command for gimp in simplified menu (Mdk bug #17627)
+
+2005-09-08 15:46  Laurent Montel <lmontel@mandrakesoft.com>
+
+	* desktop-common-data.spec, menu/menu-simplified: Add separator in
+	  simplified menu
+
 2005-08-29 11:57  Frederic Crozat <fcrozat@mandrakesoft.com>
 
 	* desktop-common-data.spec: Fix default directories when no
