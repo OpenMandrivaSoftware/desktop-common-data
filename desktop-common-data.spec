@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	10.3.1
-Release: 	7mdk
+Release: 	8mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Sep 19 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-8mdk 
+- Fix loop in www-browser (patch from Andrey Borzenkov)
+
 * Mon Sep 12 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-7mdk 
 - Fix package name and command for gimp in simplified menu (Mdk bug #17627)
 

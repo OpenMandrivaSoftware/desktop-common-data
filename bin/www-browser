@@ -40,6 +40,8 @@ if [[ -z "$BROWSER" ]]; then
 	if [[ -n "$NEWBROWSER" ]]; then
 	    BROWSER=`echo $NEWBROWSER | sed -e 's/BrowserApplication=//' -e 's/!//'`
 	fi
+	# check for loop BrowserApplication=www-browser
+	strip_browser_var
         [[ -z "$BROWSER" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
     fi
 
