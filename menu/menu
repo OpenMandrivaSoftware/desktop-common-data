@@ -19,7 +19,7 @@
 ?package(menu): needs=x11 section="Office" title="Other" icon="office_section.png"
 #
 #
-?package(menu): needs=x11 section="/" title="Internet" icon="internet_section.png" order="Remote Access,Web Browsers,Mail,Instant Messaging,Chat,News,File Transfer,Video Conference,Web Editors,Other,_mergemenu_,_mergefile_"
+?package(menu): needs=x11 section="/" title="Internet" icon="internet_section.png" order="Web Browsers,Mail,Instant Messaging,Chat,News,File Transfer,Video Conference,Web Editors,Remote Access,Other,_mergemenu_,_mergefile_"
 ?package(menu): needs=x11 section="Internet" title="Chat" icon="chat_section.png" order="_mergemenu_,ksirc,_mergefile_"
 ?package(menu): needs=x11 section="Internet" title="File Transfer" icon="file_transfer_section.png" order="_mergemenu_,kbear,Gtm,_mergefile_"
 ?package(menu): needs=x11 section="Internet" title="Instant Messaging" icon="instant_messaging_section.png" order="_mergemenu_,kopete,Gaim,_mergefile_"

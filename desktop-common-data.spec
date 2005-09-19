@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	10.3.1
-Release: 	8mdk
+Release: 	9mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Sep 19 2005 Laurent MONTEL <lmontel@mandriva.com> 10.3.1-9mdk
+- Fix menu order
+
 * Mon Sep 19 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-8mdk 
 - Fix loop in www-browser (based on patch from Andrey Borzenkov)
 
