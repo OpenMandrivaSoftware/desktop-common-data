@@ -172,7 +172,7 @@ rm -fr %buildroot
 
 %changelog
 * Mon Sep 19 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-8mdk 
-- Fix loop in www-browser (patch from Andrey Borzenkov)
+- Fix loop in www-browser (based on patch from Andrey Borzenkov)
 
 * Mon Sep 12 2005 Frederic Crozat <fcrozat@mandriva.com> 10.3.1-7mdk 
 - Fix package name and command for gimp in simplified menu (Mdk bug #17627)
