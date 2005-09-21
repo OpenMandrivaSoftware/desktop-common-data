@@ -237,19 +237,19 @@
 
 ## Read documentation
 # Mandrakelinux documentation in german
-?package(mandrake-doc-de): command="/usr/bin/www-browser /usr/share/doc/mandrake/de/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in German" section="Read Documentation"
+?package(mandrake-doc-de): command="/usr/bin/www-browser /usr/share/doc/mandriva/de/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in German" section="Read Documentation"
 
 # Mandrakelinux documentation in english
-?package(mandrake-doc-en): command="/usr/bin/www-browser /usr/share/doc/mandrake/en/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in English" section="Read Documentation"
+?package(mandrake-doc-en): command="/usr/bin/www-browser /usr/share/doc/mandriva/en/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in English" section="Read Documentation"
 
 # Mandrakelinux documentation in spanish
-?package(mandrake-doc-es): command="/usr/bin/www-browser /usr/share/doc/mandrake/es/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Spanish" section="Read Documentation"
+?package(mandrake-doc-es): command="/usr/bin/www-browser /usr/share/doc/mandriva/es/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Spanish" section="Read Documentation"
 
 # Mandrakelinux documentation in spanish
-?package(mandrake-doc-fr): command="/usr/bin/www-browser /usr/share/doc/mandrake/fr/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in French" section="Read Documentation"
+?package(mandrake-doc-fr): command="/usr/bin/www-browser /usr/share/doc/mandriva/fr/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in French" section="Read Documentation"
 
 # Mandrakelinux documentation in italian
-?package(mandrake-doc-it): command="/usr/bin/www-browser /usr/share/doc/mandrake/it/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Italian" section="Read Documentation"
+?package(mandrake-doc-it): command="/usr/bin/www-browser /usr/share/doc/mandriva/it/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Italian" section="Read Documentation"
 
 # Mandrakelinux documentation in chinese
-?package(mandrake-doc-zh_cn): command="/usr/bin/www-browser /usr/share/doc/mandrake/zh_cn/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux documentation in Chinese" section="Read Documentation"
+?package(mandrake-doc-zh_cn): command="/usr/bin/www-browser /usr/share/doc/mandriva/zh_cn/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux documentation in Chinese" section="Read Documentation"
