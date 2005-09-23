@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
-Version:	10.3.1
-Release: 	9mdk
+Version:	2006
+Release: 	1mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Sep 23 2005 Frederic Lepied <flepied@mandriva.com> 2006-1mdk
+- Mandriva
+- fixed simplified menu
+
 * Mon Sep 19 2005 Laurent MONTEL <lmontel@mandriva.com> 10.3.1-9mdk
 - Fix menu order
 
