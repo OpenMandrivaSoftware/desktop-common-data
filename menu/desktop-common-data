@@ -72,7 +72,7 @@
 ?package(kdenetwork-kppp): needs="x11" kde_filename="Kppp" section="Surf the Internet" title="Dial up" icon="kppp.png" command="kppp" kde_command="kppp %i %m" mimetypes="" kde_opt="\\nEncoding=UTF-8\\nGenericName=Internet Dial-up Tool\\nBinaryPattern=kppp;\\nDocPath=kppp/index.html\\nTerminalOptions=\\nPath=\\nTerminal=0\\nX-KDE-StartupNotify=true\\nX-DCOP-ServiceType=Multi\\n"
 
 # Browse the Web
-?package(kdebase-progs): needs="kde" kde_filename="konqueror" section="Surf the Internet" title="Browse the Web" icon="konqueror.png" command="konqueror" kde_command="konqueror %U" kde_opt="\\nEncoding=UTF-8\\nX-KDE-Library=libkonqueror\\nX-DCOP-ServiceType=multi\\nX-KDE-StartupNotify=true"
+?package(mozilla-firefox): needs="x11" command="/usr/bin/mozilla-firefox" icon="mozilla-firefox.png" section="Surf the Internet" title="Browse the Web" startup_notify="true" longtitle="Lightweight Web Browser" accept_url="true" mimetypes="text/html,text/xml,application/xhtml+xml,application/vnd.mozilla.xul+xml,text/mml"
 
 ?package(epiphany): needs="gnome" section="Surf the Internet" title="Browse the Web" icon="epiphany.png" command="epiphany" startup_notify="true"
 
@@ -236,20 +236,20 @@
 
 
 ## Read documentation
-# Mandrakelinux documentation in german
-?package(mandrake-doc-de): command="/usr/bin/www-browser /usr/share/doc/mandriva/de/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in German" section="Read Documentation"
+# Mandriva Linux documentation in german
+#?package(mandrake-doc-de): command="/usr/bin/www-browser /usr/share/doc/mandriva/de/" icon="documentation_section.png" needs="x11" title="Mandriva Linux Documentation in German" section="Read Documentation"
 
-# Mandrakelinux documentation in english
-?package(mandrake-doc-en): command="/usr/bin/www-browser /usr/share/doc/mandriva/en/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in English" section="Read Documentation"
+# Mandriva Linux documentation in english
+?package(mandriva-doc-Discovery-en): command="/usr/bin/www-browser /usr/share/doc/mandriva/en/Discovery/Discovery.html/index.html" icon="documentation_section.png" needs="x11" title="Mandriva Linux Documentation in English" section="Read Documentation"
 
-# Mandrakelinux documentation in spanish
-?package(mandrake-doc-es): command="/usr/bin/www-browser /usr/share/doc/mandriva/es/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Spanish" section="Read Documentation"
+# Mandriva Linux documentation in spanish
+#?package(mandrake-doc-es): command="/usr/bin/www-browser /usr/share/doc/mandriva/es/" icon="documentation_section.png" needs="x11" title="Mandriva Linux Documentation in Spanish" section="Read Documentation"
 
-# Mandrakelinux documentation in spanish
-?package(mandrake-doc-fr): command="/usr/bin/www-browser /usr/share/doc/mandriva/fr/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in French" section="Read Documentation"
+# Mandriva Linux documentation in spanish
+?package(mandriva-doc-Discovery-fr): command="/usr/bin/www-browser /usr/share/doc/mandriva/fr/Discovery/Discovery.html/index.html" icon="documentation_section.png" needs="x11" title="Mandriva Linux Documentation in French" section="Read Documentation"
 
-# Mandrakelinux documentation in italian
-?package(mandrake-doc-it): command="/usr/bin/www-browser /usr/share/doc/mandriva/it/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux Documentation in Italian" section="Read Documentation"
+# Mandriva Linux documentation in italian
+#?package(mandrake-doc-it): command="/usr/bin/www-browser /usr/share/doc/mandriva/it/" icon="documentation_section.png" needs="x11" title="Mandriva Linux Documentation in Italian" section="Read Documentation"
 
-# Mandrakelinux documentation in chinese
-?package(mandrake-doc-zh_cn): command="/usr/bin/www-browser /usr/share/doc/mandriva/zh_cn/index.html" icon="documentation_section.png" needs="x11" title="Mandrakelinux documentation in Chinese" section="Read Documentation"
+# Mandriva Linux documentation in chinese
+#?package(mandrake-doc-zh_cn): command="/usr/bin/www-browser /usr/share/doc/mandriva/zh_cn/" icon="documentation_section.png" needs="x11" title="Mandriva Linux documentation in Chinese" section="Read Documentation"
