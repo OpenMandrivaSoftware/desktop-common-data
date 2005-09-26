@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	1mdk
+Release: 	2mdk
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -171,6 +171,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Sep 26 2005 Frederic Crozat <fcrozat@mandriva.com> 2006-2mdk 
+- Fix desktop-directory script (UTF encoded URL, hidden .directory file)
+  Mdk bug #18853
+
 * Fri Sep 23 2005 Frederic Lepied <flepied@mandriva.com> 2006-1mdk
 - Mandriva
 - fixed simplified menu
