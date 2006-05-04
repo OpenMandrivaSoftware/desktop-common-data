@@ -1,130 +1,146 @@
-2005-09-26 15:13  Frederic Crozat <fcrozat@mandrakesoft.com>
+2006-05-04 18:23  Frederic Crozat <fcrozat at mandriva.com>
+
+	* Makefile, desktop-common-data.spec: Fix menu location
+
+2006-05-04 18:19  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-mdk.menu, menu/menu,
+	  menu/update-menus, menu/xdg_menu: - Add applications-mdk.menu
+	  file for XDG menu system - Add xdg_menu script from SUSE to
+	  support old WM - Don't ship defaultlayout.menu anymore, it is
+	  merged into main menu - Fix typo in old menu file
+
+2006-05-04 18:18  Frederic Crozat <fcrozat at mandriva.com>
+
+	* Makefile: Add support for mkrel
+
+2005-09-26 15:13  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec: - Fix desktop-directory script (UTF
 	  encoded URL, hidden .directory file)	 Mdk bug #18853
 
-2005-09-26 15:12  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-09-26 15:12  Frederic Crozat <fcrozat at mandriva.com>
 
 	* xinit.d/desktop-directories: -create .directory as hidden file
 	  -encode url in UTF8
 
-2005-09-23 16:36  Frederic Lepied <flepied@mandrakesoft.com>
+2005-09-23 16:36  Frederic Lepied <flepied at mandriva.com>
 
 	* desktop-common-data.spec: 2006-1mdk
 
-2005-09-23 16:33  Frederic Lepied <flepied@mandrakesoft.com>
+2005-09-23 16:33  Frederic Lepied <flepied at mandriva.com>
 
 	* menu/menu-simplified: fixed Read Documentation entry
 
-2005-09-23 14:35  Frederic Lepied <flepied@mandrakesoft.com>
+2005-09-23 14:35  Frederic Lepied <flepied at mandriva.com>
 
 	* menu/menu-simplified: fix documentation menu tuxracer =>  ppracer
 
-2005-09-23 14:34  Frederic Lepied <flepied@mandrakesoft.com>
+2005-09-23 14:34  Frederic Lepied <flepied at mandriva.com>
 
 	* menu/desktop-common-data: fix doc fix default web browser to be
 	  firefox
 
-2005-09-21 13:45  Laurent Montel <lmontel@mandrakesoft.com>
+2005-09-21 13:45  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/desktop-common-data: Fix doc url
 
-2005-09-19 19:43  Laurent Montel <lmontel@mandrakesoft.com>
+2005-09-19 19:43  Laurent Montel <lmontel at mandriva.com>
 
 	* desktop-common-data.spec, menu/menu: Fix menu entry
 
-2005-09-19 12:07  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-09-19 12:07  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, bin/www-browser: Fix previous commit
 
-2005-09-19 10:48  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-09-19 10:48  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, bin/www-browser: - Fix loop in
 	  www-browser (patch from Andrey Borzenkov)
 
-2005-09-12 16:43  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-09-12 16:43  Frederic Crozat <fcrozat at mandriva.com>
 
 	* menu/desktop-common-data: use gimp-remote, not gimp-remote-2.2
 
-2005-09-12 16:14  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-09-12 16:14  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/desktop-common-data: - Fix package
 	  name and command for gimp in simplified menu (Mdk bug #17627)
 
-2005-09-08 15:46  Laurent Montel <lmontel@mandrakesoft.com>
+2005-09-08 15:46  Laurent Montel <lmontel at mandriva.com>
 
 	* desktop-common-data.spec, menu/menu-simplified: Add separator in
 	  simplified menu
 
-2005-08-29 11:57  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-08-29 11:57  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec: Fix default directories when no
 	  translation is available
 
-2005-08-29 11:56  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-08-29 11:56  Frederic Crozat <fcrozat at mandriva.com>
 
 	* xinit.d/desktop-directories: Fix when no translation is available
 
-2005-08-26 19:34  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-08-26 19:34  Frederic Crozat <fcrozat at mandriva.com>
 
 	* xinit.d/desktop-directories: Remove desktop special case, it is
 	  no longer created
 
-2005-08-26 19:19  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-08-26 19:19  Frederic Crozat <fcrozat at mandriva.com>
 
 	* xinit.d/desktop-directories, desktop-common-data.spec: New scheme
 	  for default directories
 
-2005-08-24 20:01  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-08-24 20:01  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec: installing scripts works better
 
-2005-08-24 19:48  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-08-24 19:48  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec: - Add default directories xinit.d
 	  script
 
-2005-08-24 19:29  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-08-24 19:29  Frederic Crozat <fcrozat at mandriva.com>
 
 	* xinit.d/desktop-directories: Rename .desktop.in into
 	  .desktop.template add gtk-bookmarks support
 
-2005-08-23 18:56  Laurent Montel <lmontel@mandrakesoft.com>
+2005-08-23 18:56  Laurent Montel <lmontel at mandriva.com>
 
 	* desktop-common-data.spec: Update spec file
 
-2005-08-12 19:58  fwang
+2005-08-12 19:58  Funda Wang <fundawang at linux.net.cn>
 
 	* sbin/: chksession, convertsession, kdeDesktopCleanup:
 	  s/Mandrake/Mandriva/
 
-2005-08-12 19:57  fwang
+2005-08-12 19:57  Funda Wang <fundawang at linux.net.cn>
 
 	* dm/: GdmGreeterTheme.desktop, KdmGreeterTheme.desktop:
 	  s/Mandrake/Mandriva.
 
-2005-08-10 07:51  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-08-10 07:51  Frederic Crozat <fcrozat at mandriva.com>
 
 	* xinit.d/desktop-directories: Generate .desktop from templates and
 	  copy them to $HOME at login
 
-2005-06-06 06:44  Frederic Lepied <flepied@mandrakesoft.com>
+2005-06-06 06:44  Frederic Lepied <flepied at mandriva.com>
 
 	* desktop-common-data.spec: 10.3.1-1mdk
 
-2005-05-30 04:42  Frederic Lepied <flepied@mandrakesoft.com>
+2005-05-30 04:42  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec: no more used
 
-2005-05-30 04:41  Frederic Lepied <flepied@mandrakesoft.com>
+2005-05-30 04:41  Frederic Lepied <flepied at mandriva.com>
 
 	* desktop-common-data.spec: 10.3-1mdk
 
-2005-05-30 04:41  Frederic Lepied <flepied@mandrakesoft.com>
+2005-05-30 04:41  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/fndSession: use the new framework in /etc/X11/dm.d.
 
-2005-05-13 09:12  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-05-13 09:12  Frederic Crozat <fcrozat at mandriva.com>
 
 	* Makefile, desktop-common-data.spec, bin/xvt,
 	  menu/desktop-common-data, menu/mandrake_desk,
@@ -133,29 +149,29 @@
 	  translation-map - remove screensaver images, moved in theme
 	  package
 
-2005-03-29 18:29  Frederic Lepied <flepied@mandrakesoft.com>
+2005-03-29 18:29  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec: 10.2-4mdk
 
-2005-03-29 18:26  Frederic Lepied <flepied@mandrakesoft.com>
+2005-03-29 18:26  Frederic Lepied <flepied at mandriva.com>
 
 	* bin/www-browser: test if the $BROWSER variable is set to
 	  something valid (bug #14903).
 
-2005-03-23 17:44  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-03-23 17:44  Frederic Crozat <fcrozat at mandriva.com>
 
 	* menu/menu-simplified: Forgot simplified menu
 
-2005-03-23 16:48  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-03-23 16:48  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/menu: - don't use .desktop files for
 	  order directive
 
-2005-03-09 15:04  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-03-09 15:04  Frederic Crozat <fcrozat at mandriva.com>
 
 	* bin/www-browser: fix stripping value from GNOME
 
-2005-03-09 14:43  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-03-09 14:43  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, bin/www-browser, bin/xvt: - change
 	  www-browser to use BROWSER variable if set or use running
@@ -163,43 +179,43 @@
 	  alternative : choose programs to start based on   running
 	  environment
 
-2005-03-09 14:37  Laurent Montel <lmontel@mandrakesoft.com>
+2005-03-09 14:37  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec, menu/menu, menu/menu-simplified: Remove
 	  alias_inline
 
-2005-03-02 10:57  Laurent Montel <lmontel@mandrakesoft.com>
+2005-03-02 10:57  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec, menu/menu-simplified: Fix order into
 	  simplified menu
 
-2005-03-01 17:20  Laurent Montel <lmontel@mandrakesoft.com>
+2005-03-01 17:20  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec, menu/menu: Fix menu order for Menuname with
 	  id
 
-2005-03-01 16:18  Laurent Montel <lmontel@mandrakesoft.com>
+2005-03-01 16:18  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec, menu/menu: Recreate order as in 10.1
 
-2005-03-01 09:43  Laurent Montel <lmontel@mandrakesoft.com>
+2005-03-01 09:43  Laurent Montel <lmontel at mandriva.com>
 
 	* dm/: KdmGreeterTheme.desktop, mdk-kde.xml: Add kdm theme
 
-2005-02-28 18:08  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-02-28 18:08  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, dm/GdmGreeterTheme.desktop,
 	  dm/disconnect.png, dm/languages.png, dm/mdk-gdm.xml,
 	  dm/reboot.png, dm/screenshot.png, dm/sessions.png, dm/star.png,
 	  dm/system.png: Add shared theme for GDM/KDM
 
-2005-01-25 19:16  Frederic Crozat <fcrozat@mandrakesoft.com>
+2005-01-25 19:16  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/defaultlayout-simplified.menu,
 	  menu/defaultlayout.menu: Fix small errors in default layout menu
 	  files
 
-2004-12-14 16:01  Frederic Crozat <fcrozat@mandrakesoft.com>
+2004-12-14 16:01  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/defaultlayout-simplified.menu,
 	  menu/defaultlayout.menu, menu/menu, menu/menu-simplified,
@@ -514,193 +530,193 @@
 	  menu/icons/mini/wordprocessor_section.png: Move all menu
 	  informations (layout/icons) from menu to mandrake_desk package
 
-2004-09-29 11:51  David Baudens <baudens@mandrakesoft.com>
+2004-09-29 11:51  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Fix "Listen to Music
 	  Files" menu entry
 
-2004-09-29 10:08  David Baudens <baudens@mandrakesoft.com>
+2004-09-29 10:08  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-09-29 10:08  David Baudens <baudens@mandrakesoft.com>
+2004-09-29 10:08  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Add missing menu entry for french
 	  mandrakelinux documentation
 
-2004-09-29 09:25  David Baudens <baudens@mandrakesoft.com>
+2004-09-29 09:25  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-09-29 09:24  David Baudens <baudens@mandrakesoft.com>
+2004-09-29 09:24  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Fix import and sort your photos
 
-2004-09-10 08:48  David Baudens <baudens@mandrakesoft.com>
+2004-09-10 08:48  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Add Mandrakelinux
 	  documentation
 
-2004-09-09 12:35  David Baudens <baudens@mandrakesoft.com>
+2004-09-09 12:35  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Remove all longtitle
 
-2004-09-09 12:27  Laurent Montel <lmontel@mandrakesoft.com>
+2004-09-09 12:27  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Update last changes
 
-2004-09-09 12:19  David Baudens <baudens@mandrakesoft.com>
+2004-09-09 12:19  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Remove non task oriented description for
 	  KPhone
 
-2004-09-07 10:40  Pablo Saratxaga <pablo@mandrakesoft.com>
+2004-09-07 10:40  Pablo Saratxaga <pablo at mandriva.com>
 
 	* man/it/chksession.8: Added Italian Man page
 
-2004-09-01 08:31  Laurent Montel <lmontel@mandrakesoft.com>
+2004-09-01 08:31  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk: Update menu Fix capitalization
 
-2004-08-31 09:37  Frederic Lepied <flepied@mandrakesoft.com>
+2004-08-31 09:37  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec: 10.1-6mdk
 
-2004-08-31 09:36  Frederic Lepied <flepied@mandrakesoft.com>
+2004-08-31 09:36  Frederic Lepied <flepied at mandriva.com>
 
 	* bin/www-browser: first version
 
-2004-08-31 09:35  Frederic Lepied <flepied@mandrakesoft.com>
+2004-08-31 09:35  Frederic Lepied <flepied at mandriva.com>
 
 	* Makefile: added standard rules to build packages
 
-2004-08-27 11:51  Frederic Crozat <fcrozat@mandrakesoft.com>
+2004-08-27 11:51  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Fix typo in gnome-cd
 	  entry
 
-2004-08-16 04:18  Laurent Montel <lmontel@mandrakesoft.com>
+2004-08-16 04:18  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec: Fix "Play Games" entry
 
-2004-08-16 04:12  Laurent Montel <lmontel@mandrakesoft.com>
+2004-08-16 04:12  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk: Fix "Play Games" entry
 
-2004-08-11 12:31  Frederic Crozat <fcrozat@mandrakesoft.com>
+2004-08-11 12:31  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: - Add GNOME version of
 	  task oriented menu - Fix capitalisations in task oriented menu
 
-2004-08-05 11:21  David Baudens <baudens@mandrakesoft.com>
+2004-08-05 11:21  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Fix typo
 
-2004-08-05 09:24  David Baudens <baudens@mandrakesoft.com>
+2004-08-05 09:24  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-08-05 09:23  David Baudens <baudens@mandrakesoft.com>
+2004-08-05 09:23  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Add "Make a phone call" (using kphone at
 	  present time)
 
-2004-08-05 08:41  David Baudens <baudens@mandrakesoft.com>
+2004-08-05 08:41  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Update task oriented menu
 
-2004-08-04 09:52  Pixel <pixel@mandrakesoft.com>
+2004-08-04 09:52  Pixel <pixel at mandriva.com>
 
 	* mandrake_desk.spec: fix descriptions (use Mandrakelinux instead
 	  of simply Mandrake)
 
-2004-08-04 09:49  Pixel <pixel@mandrakesoft.com>
+2004-08-04 09:49  Pixel <pixel at mandriva.com>
 
 	* mandrake_desk.spec, sbin/chksession: add "chksession -L" used by
 	  DrakX to configure ~/.dmrc
 
-2004-08-04 09:39  Pixel <pixel@mandrakesoft.com>
+2004-08-04 09:39  Pixel <pixel at mandriva.com>
 
 	* sbin/chksession: - don't generate
 	  /etc/X11/dm/Sessions/Default.desktop (otherwise gdm gives 2
 	  "default" entries) - cleanup
 
-2004-03-02 09:43  Frederic Lepied <flepied@mandrakesoft.com>
+2004-03-02 09:43  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec: 10.0-10mdk
 
-2004-03-02 09:42  Frederic Lepied <flepied@mandrakesoft.com>
+2004-03-02 09:42  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/chksession: don't pass /etc/X11/xdm/Xsession in Exec field
 	  for the KDE sessions
 
-2004-02-27 18:28  Frederic Lepied <flepied@mandrakesoft.com>
+2004-02-27 18:28  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec: call fndSession in %post
 
-2004-02-27 18:26  Frederic Lepied <flepied@mandrakesoft.com>
+2004-02-27 18:26  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/fndSession: use simply chksession -k for kdm
 
-2004-02-27 18:24  Frederic Lepied <flepied@mandrakesoft.com>
+2004-02-27 18:24  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/chksession: do not generate Default session for kdm remove
 	  files before generating the sessions
 
-2004-02-27 18:00  Frederic Lepied <flepied@mandrakesoft.com>
+2004-02-27 18:00  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec: 10.0-9mdk
 
-2004-02-27 17:59  Frederic Lepied <flepied@mandrakesoft.com>
+2004-02-27 17:59  Frederic Lepied <flepied at mandriva.com>
 
 	* Makefile: use rpm -ta to build an rpm
 
-2004-02-27 17:56  Frederic Lepied <flepied@mandrakesoft.com>
+2004-02-27 17:56  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/chksession: fix KDE sessions
 
-2004-02-27 17:20  Laurent Montel <lmontel@mandrakesoft.com>
+2004-02-27 17:20  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-02-27 09:44  Laurent Montel <lmontel@mandrakesoft.com>
+2004-02-27 09:44  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk: s/ORC/OCR
 
-2004-02-24 11:14  Laurent Montel <lmontel@mandrakesoft.com>
+2004-02-24 11:14  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-02-24 11:09  David Baudens <baudens@mandrakesoft.com>
+2004-02-24 11:09  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-02-24 11:05  Laurent Montel <lmontel@mandrakesoft.com>
+2004-02-24 11:05  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk: Fix icons
 
-2004-02-05 15:54  David Baudens <baudens@mandrakesoft.com>
+2004-02-05 15:54  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Fix simplified menu
 
-2004-02-05 14:49  David Baudens <baudens@mandrakesoft.com>
+2004-02-05 14:49  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Fix title of "Organize your time" in
 	  simplified menu
 
-2004-02-05 14:26  David Baudens <baudens@mandrakesoft.com>
+2004-02-05 14:26  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Fix typos
 
-2004-01-29 18:21  David Baudens <baudens@mandrakesoft.com>
+2004-01-29 18:21  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-01-29 17:29  David Baudens <baudens@mandrakesoft.com>
+2004-01-29 17:29  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-01-29 17:11  David Baudens <baudens@mandrakesoft.com>
+2004-01-29 17:11  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: default-9.1.png, default-root-9.1.png,
 	  default-root.png, default.png, discovery-1280x1024.png,
@@ -710,103 +726,103 @@
 	  pwp-ps-root-1280x1024.png, pwp-ps-root.png, pwp-ps.png: Remove
 	  old images
 
-2004-01-19 16:39  Laurent Montel <lmontel@mandrakesoft.com>
+2004-01-19 16:39  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk: Add "kontact" entry
 
-2004-01-13 18:43  Laurent Montel <lmontel@mandrakesoft.com>
+2004-01-13 18:43  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2004-01-13 18:29  Laurent Montel <lmontel@mandrakesoft.com>
+2004-01-13 18:29  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk: Fix drakbackup menu entry
 
-2004-01-13 17:48  Laurent Montel <lmontel@mandrakesoft.com>
+2004-01-13 17:48  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk: Update new simplified menu
 
-2004-01-13 14:07  Laurent Montel <lmontel@mandrakesoft.com>
+2004-01-13 14:07  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk-9.2: Save old version
 
-2003-09-10 17:11  Guillaume Cottenceau <gc@mandrakesoft.com>
+2003-09-10 17:11  Guillaume Cottenceau
 
 	* Makefile, mandrake_desk.spec, backgrounds/xfdrake-test-card.jpg,
 	  backgrounds/xfdrake-test-card.png: xfdrake-test-card needs to be
 	  in .png format since we don't have have the jpeg pixbug loader
 	  during install
 
-2003-09-10 17:09  David Baudens <baudens@mandrakesoft.com>
+2003-09-10 17:09  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Update
 
-2003-09-06 15:29  alus
+2003-09-06 15:29  Arkadiusz Lipiec <alipiec at elka.pw.edu.pl>
 
 	* README: TYPO fix
 
-2003-09-05 17:53  David Baudens <baudens@mandrakesoft.com>
+2003-09-05 17:53  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Update
 
-2003-09-01 16:40  David Baudens <baudens@mandrakesoft.com>
+2003-09-01 16:40  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Remove Record sound entry
 
-2003-08-28 22:33  David Baudens <baudens@mandrakesoft.com>
+2003-08-28 22:33  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Update
 
-2003-08-28 19:23  David Baudens <baudens@mandrakesoft.com>
+2003-08-28 19:23  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Update
 
-2003-08-28 17:54  David Baudens <baudens@mandrakesoft.com>
+2003-08-28 17:54  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Update
 
-2003-08-28 11:54  David Baudens <baudens@mandrakesoft.com>
+2003-08-28 11:54  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Update
 
-2003-08-27 19:15  David Baudens <baudens@mandrakesoft.com>
+2003-08-27 19:15  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Fix kmix entry
 
-2003-08-27 18:49  David Baudens <baudens@mandrakesoft.com>
+2003-08-27 18:49  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Fix bad end of lines
 
-2003-08-27 18:23  David Baudens <baudens@mandrakesoft.com>
+2003-08-27 18:23  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Begin to update
 
-2003-08-27 17:15  Frederic Crozat <fcrozat@mandrakesoft.com>
+2003-08-27 17:15  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, sbin/fndSession: Fix bug 4572 (bad path for
 	  gdm session in fndSession)
 
-2003-08-26 18:21  David Baudens <baudens@mandrakesoft.com>
+2003-08-26 18:21  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2003-08-26 18:13  Frederic Crozat <fcrozat@mandrakesoft.com>
+2003-08-26 18:13  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec: Release 9.2-3mdk
 
-2003-08-26 18:09  Frederic Crozat <fcrozat@mandrakesoft.com>
+2003-08-26 18:09  Frederic Crozat <fcrozat at mandriva.com>
 
 	* sbin/chksession: Add default session for GDM
 
-2003-08-26 17:46  Frederic Lepied <flepied@mandrakesoft.com>
+2003-08-26 17:46  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/chksession: Corrections by Bernard Lang
 
-2003-08-22 15:02  David Baudens <baudens@mandrakesoft.com>
+2003-08-22 15:02  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2003-08-22 14:04  David Baudens <baudens@mandrakesoft.com>
+2003-08-22 14:04  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: default-9.1.png, default-root-9.1.png,
 	  discovery-1280x1024.png, discovery-root-1280x1024.png,
@@ -815,90 +831,90 @@
 	  pwp-ps-1280x1024.png, pwp-ps-root-1280x1024.png, pwp-ps-root.png,
 	  pwp-ps.png: New images for 9.2
 
-2003-08-22 09:25  Frederic Lepied <flepied@mandrakesoft.com>
+2003-08-22 09:25  Frederic Lepied <flepied at mandriva.com>
 
 	* man/C/chksession.8: corrections by Bernard Lang
 
-2003-07-30 17:31  David Baudens <baudens@mandrakesoft.com>
+2003-07-30 17:31  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Fix %post (thanks to Pixel)
 
-2003-06-13 18:52  Frederic Crozat <fcrozat@mandrakesoft.com>
+2003-06-13 18:52  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, sbin/chksession: gdm session format has
 	  changed, fix chksession
 
-2003-06-04 12:09  David Baudens <baudens@mandrakesoft.com>
+2003-06-04 12:09  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Add version in %changelog
 
-2003-06-04 12:08  David Baudens <baudens@mandrakesoft.com>
+2003-06-04 12:08  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Create a link to allow users to access to
 	  Mandrake's backgrounds from KDE
 
-2003-05-08 11:42  Pablo Saratxaga <pablo@mandrakesoft.com>
+2003-05-08 11:42  Pablo Saratxaga <pablo at mandriva.com>
 
 	* man/uk/chksession.8: Added Ukrainian file
 
-2003-03-14 12:37  David Baudens <baudens@mandrakesoft.com>
+2003-03-14 12:37  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2003-03-14 12:36  David Baudens <baudens@mandrakesoft.com>
+2003-03-14 12:36  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Update for 9.1
 
-2003-03-12 15:46  David Baudens <baudens@mandrakesoft.com>
+2003-03-12 15:46  David Baudens <baudens at mandriva.com>
 
 	* screensavers/: 1.png, 18.png, 19.png, 2.png, 20.png, 21.png,
 	  22.png, 23.png, 24.png, 25.png, 26.png, 27.png, 3.png, 4.png,
 	  5.png, 6.png, 7.png, 8.png, 9.png: Update
 
-2003-03-12 15:43  David Baudens <baudens@mandrakesoft.com>
+2003-03-12 15:43  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, screensavers/10.png, screensavers/11.png,
 	  screensavers/12.png, screensavers/13.png, screensavers/14.png,
 	  screensavers/15.png, screensavers/16.png, screensavers/17.png:
 	  Update
 
-2003-02-14 11:43  David Baudens <baudens@mandrakesoft.com>
+2003-02-14 11:43  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, backgrounds/default-root.png,
 	  backgrounds/default.png: New default bacground for MDK 9.1
 
-2003-01-31 13:07  Pablo Saratxaga <pablo@mandrakesoft.com>
+2003-01-31 13:07  Pablo Saratxaga <pablo at mandriva.com>
 
 	* man/et/chksession.8: Added Estonian man page
 
-2002-09-06 15:16  David Baudens <baudens@mandrakesoft.com>
+2002-09-06 15:16  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec Add mandrake-club icon
 
-2002-09-02 13:36  Laurent Montel <lmontel@mandrakesoft.com>
+2002-09-02 13:36  Laurent Montel <lmontel at mandriva.com>
 
 	* mandrake_desk.spec: Update spec file
 
-2002-09-02 13:25  Laurent Montel <lmontel@mandrakesoft.com>
+2002-09-02 13:25  Laurent Montel <lmontel at mandriva.com>
 
 	* menu/mandrake_desk: Fix drakconf menu entry
 
-2002-08-29 18:24  David Baudens <baudens@mandrakesoft.com>
+2002-08-29 18:24  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-08-29 18:22  David Baudens <baudens@mandrakesoft.com>
+2002-08-29 18:22  David Baudens <baudens at mandriva.com>
 
 	* faces/: ic-tux1.png, ic-tux2.png, ic-tux3.png, ic-tux4.png,
 	  ic-tux5.png, ic-tuxgeneric.png: New tux family
 
-2002-08-29 18:21  David Baudens <baudens@mandrakesoft.com>
+2002-08-29 18:21  David Baudens <baudens at mandriva.com>
 
 	* faces/: ic-util-tux1.png, ic-util-tux2.png, ic-util-tux2bis.png,
 	  ic-util-tux3.png, ic-util-tux4.png, ic-util-tuxgeneric.png:
 	  Remove
 
-2002-08-29 17:37  David Baudens <baudens@mandrakesoft.com>
+2002-08-29 17:37  David Baudens <baudens at mandriva.com>
 
 	* screensavers/01.png, screensavers/02.png, screensavers/03.png,
 	  screensavers/04.png, screensavers/05.png, screensavers/06.png,
@@ -910,57 +926,57 @@
 	  screensavers/22.png, screensavers/23.png, mandrake_desk.spec:
 	  Update
 
-2002-08-29 11:58  David Baudens <baudens@mandrakesoft.com>
+2002-08-29 11:58  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-08-29 11:58  David Baudens <baudens@mandrakesoft.com>
+2002-08-29 11:58  David Baudens <baudens at mandriva.com>
 
 	* faces/: ic-util-tux1.png, ic-util-tux2.png, ic-util-tux2bis.png,
 	  ic-util-tux3.png, ic-util-tux4.png, ic-util-tuxgeneric.png: Tux
 	  family is back
 
-2002-08-27 15:32  David Baudens <baudens@mandrakesoft.com>
+2002-08-27 15:32  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-08-27 15:29  David Baudens <baudens@mandrakesoft.com>
+2002-08-27 15:29  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, screensavers/02.png: Update
 
-2002-08-26 17:29  Pablo Saratxaga <pablo@mandrakesoft.com>
+2002-08-26 17:29  Pablo Saratxaga <pablo at mandriva.com>
 
 	* man/: cs/chksession.8, ru/chksession.8: Added Czech and Russian
 	  man pages
 
-2002-08-23 16:48  David Baudens <baudens@mandrakesoft.com>
+2002-08-23 16:48  David Baudens <baudens at mandriva.com>
 
 	* screensavers/02.png, mandrake_desk.spec: Update
 
-2002-08-23 16:13  David Baudens <baudens@mandrakesoft.com>
+2002-08-23 16:13  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, backgrounds/xfdrake-test-card.jpg: Update
 
-2002-08-22 17:16  David Baudens <baudens@mandrakesoft.com>
+2002-08-22 17:16  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-08-22 17:12  David Baudens <baudens@mandrakesoft.com>
+2002-08-22 17:12  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/xfdrake-test-card.jpg: Update for 9.0
 
-2002-08-22 11:10  David Baudens <baudens@mandrakesoft.com>
+2002-08-22 11:10  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-08-22 11:09  David Baudens <baudens@mandrakesoft.com>
+2002-08-22 11:09  David Baudens <baudens at mandriva.com>
 
 	* screensavers/: 01.png, 02.png, 03.png, 04.png, 05.png, 06.png,
 	  07.png, 08.png, 09.png, 10.png, 11.png, 12.png, 13.png, 14.png,
 	  15.png, 16.png, 17.png, 18.png, 19.png, 20.png, 21.png, 22.png,
 	  23.png: Add new images for 9.0
 
-2002-08-22 11:07  David Baudens <baudens@mandrakesoft.com>
+2002-08-22 11:07  David Baudens <baudens at mandriva.com>
 
 	* screensavers/: 1-boot&init.png, 10-service.png, 11-support.png,
 	  12-Xdrake.png, 13-filetools.png, 14-filetransfert.png,
@@ -969,15 +985,15 @@
 	  6-shell.png, 7-bugfix.png, 8-bureau.png, 9-docu.png: Remove 8.2
 	  images
 
-2002-08-02 14:03  David Baudens <baudens@mandrakesoft.com>
+2002-08-02 14:03  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-08-01 17:57  David Baudens <baudens@mandrakesoft.com>
+2002-08-01 17:57  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-08-01 17:52  David Baudens <baudens@mandrakesoft.com>
+2002-08-01 17:52  David Baudens <baudens at mandriva.com>
 
 	* screensavers/: 1-boot&init.png, 10-service.png, 11-support.png,
 	  12-Xdrake.png, 13-filetools.png, 14-filetransfert.png,
@@ -985,74 +1001,74 @@
 	  2-hardware.png, 3-rouage.png, 4-rpmsecu.png, 5-carte.png,
 	  6-shell.png, 7-bugfix.png, 8-bureau.png, 9-docu.png: Add
 
-2002-08-01 12:12  alus
+2002-08-01 12:12  Arkadiusz Lipiec <alipiec at elka.pw.edu.pl>
 
 	* TRANSLATORS: polish translator added
 
-2002-07-31 18:06  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 18:06  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-07-31 17:54  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 17:54  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-07-31 17:50  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 17:50  David Baudens <baudens at mandriva.com>
 
 	* kde/kdm-mdk-logo.png: Add kdm logo
 
-2002-07-31 17:16  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 17:16  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-07-31 17:12  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 17:12  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: flower.jpg, nature.jpg: Add new backgrounds
 
-2002-07-31 16:46  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 16:46  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-07-31 16:02  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 16:02  David Baudens <baudens at mandriva.com>
 
 	* xml-i18n-extract.in, xml-i18n-merge.in, xml-i18n-update.in:
 	  Remove old xml-i18n stuff
 
-2002-07-31 15:58  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 15:58  David Baudens <baudens at mandriva.com>
 
 	* Makefile, mandrake_desk.spec: Update
 
-2002-07-31 15:20  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 15:20  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
 
-2002-07-31 15:13  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 15:13  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, bin/DrakWM, bin/createbackground.sh: Update
 
-2002-07-31 14:55  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 14:55  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: XFdrake-test-card.jpg, xfdrake-test-card.jpg: Fix
 	  typo
 
-2002-07-31 14:53  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 14:53  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: XFdrake-image-test.jpg, XFdrake-test-card.jpg:
 	  Rename xfdrake test card
 
-2002-07-31 14:49  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 14:49  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/default-root.png: Add default background for root
 
-2002-07-31 14:42  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 14:42  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/default.png: New default background
 
-2002-07-31 14:41  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 14:41  David Baudens <baudens at mandriva.com>
 
 	* README.CVS, mandrake_desk.spec: Update
 
-2002-07-31 13:19  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 13:19  David Baudens <baudens at mandriva.com>
 
 	* gtkrc, krootwarning/AUTHORS, krootwarning/COPYING,
 	  krootwarning/INSTALL, krootwarning/Makefile.am,
@@ -1064,33 +1080,33 @@
 	  krootwarning/messages.log, krootwarning/subdirs: Remove
 	  krootwarning & krozat stuff. Moved in their own modules
 
-2002-07-31 11:14  David Baudens <baudens@mandrakesoft.com>
+2002-07-31 11:14  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: ICE-1024.png, ICE-1280.png, ICE-1600.png,
 	  ICE-640.png, ICE-800.png: Remove old badgrouds
 
-2002-07-31 11:03  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-07-31 11:03  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: -Fix GNOME entry for Crux
 	  theme applet - Fix menu entries for simplified menu
 
-2002-07-30 10:01  David Baudens <baudens@mandrakesoft.com>
+2002-07-30 10:01  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2002-07-30 09:59  David Baudens <baudens@mandrakesoft.com>
+2002-07-30 09:59  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Upload Laurent Montel's spec file
 
-2002-07-30 09:52  David Baudens <baudens@mandrakesoft.com>
+2002-07-30 09:52  David Baudens <baudens at mandriva.com>
 
 	* faces/default.png: New defalt user image
 
-2002-07-23 14:52  David Baudens <baudens@mandrakesoft.com>
+2002-07-23 14:52  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2002-07-18 17:56  David Baudens <baudens@mandrakesoft.com>
+2002-07-18 17:56  David Baudens <baudens at mandriva.com>
 
 	* faces/: default.png, ic-bird.png, ic-bird2.png, ic-cat.png,
 	  ic-dog.png, ic-fish.png, ic-flower1.png, ic-flower2.png,
@@ -1098,37 +1114,37 @@
 	  ic-nature2.png, ic-nature3.png, ic-nature4.png, ic-nature5.png:
 	  Add new users images for 9.0 beta 1
 
-2002-07-18 17:52  David Baudens <baudens@mandrakesoft.com>
+2002-07-18 17:52  David Baudens <baudens at mandriva.com>
 
 	* faces/: aman.png, cinderella.png, dog.png, donuts.png, fish.png,
 	  moon.png, mouse.png, mouse2.png, roller.png, sun.png, woman.png:
 	  Remove old users icons
 
-2002-06-28 11:28  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-06-28 11:28  Frederic Crozat <fcrozat at mandriva.com>
 
 	* menu/mandrake_desk: Png icons
 
-2002-06-28 10:33  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-06-28 10:33  Frederic Crozat <fcrozat at mandriva.com>
 
 	* menu/mandrake_desk: GNOME 2 adaption (by Goetz Waschk)
 
-2002-03-15 15:10  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-03-15 15:10  Frederic Crozat <fcrozat at mandriva.com>
 
 	* gtkrc, mandrake_desk.spec: Fix default gtk theme
 
-2002-03-07 15:50  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-03-07 15:50  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, faces/root: fix root icons (remove it)
 
-2002-03-07 15:32  David Baudens <baudens@mandrakesoft.com>
+2002-03-07 15:32  David Baudens <baudens at mandriva.com>
 
 	* faces/: aman.png, woman.png: Add new faces
 
-2002-03-07 15:21  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-03-07 15:21  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec: Release 8.2-12mdk
 
-2002-03-05 19:38  David Baudens <baudens@mandrakesoft.com>
+2002-03-05 19:38  David Baudens <baudens at mandriva.com>
 
 	* faces/: aman.png, avn-rat.png, cinderella.png, dadou-fish.png,
 	  dear-chief-moon.png, dog.png, donuts.png, fish.png,
@@ -1136,151 +1152,151 @@
 	  mouse.png, mouse2.png, renaud-sun.png, roller.png, sun.png,
 	  vince-donut.png, warly-roller.png, woman.png: [no log message]
 
-2002-03-05 19:23  David Baudens <baudens@mandrakesoft.com>
+2002-03-05 19:23  David Baudens <baudens at mandriva.com>
 
 	* faces/aman.png: Remove obsoletes faces
 
-2002-03-05 18:42  David Baudens <baudens@mandrakesoft.com>
+2002-03-05 18:42  David Baudens <baudens at mandriva.com>
 
 	* faces/: user-curly-mdk.png, user-girl-mdk.png, user-hat-mdk.png,
 	  utildame.png, utilmons.png: Remove old faces
 
-2002-03-05 18:35  David Baudens <baudens@mandrakesoft.com>
+2002-03-05 18:35  David Baudens <baudens at mandriva.com>
 
 	* faces/: tux.png, tuxbaby.png, tuxbox.png, tuxcoocker.png,
 	  tuxdad.png, tuxgirl.png, tuxhead1.png, tuxhead2.png, tuxmam.png,
 	  tuxmecano.png: Remove obsolete faces
 
-2002-03-01 16:35  David Baudens <baudens@mandrakesoft.com>
+2002-03-01 16:35  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: [no log message]
 
-2002-02-28 04:19  David Baudens <baudens@mandrakesoft.com>
+2002-02-28 04:19  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: [no log message]
 
-2002-02-26 16:28  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-26 16:28  Frederic Crozat <fcrozat at mandriva.com>
 
 	* gtkrc, mandrake_desk.spec: Fix default GTK theme
 
-2002-02-26 14:43  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-26 14:43  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec: Change Mandrake Control Center to Control
 	  Center in GNOME
 
-2002-02-26 03:20  David Baudens <baudens@mandrakesoft.com>
+2002-02-26 03:20  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: [no log message]
 
-2002-02-26 03:05  David Baudens <baudens@mandrakesoft.com>
+2002-02-26 03:05  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: [no log message]
 
-2002-02-26 02:54  David Baudens <baudens@mandrakesoft.com>
+2002-02-26 02:54  David Baudens <baudens at mandriva.com>
 
 	* Makefile: Install png icons instead xpm in
 	  /usr/share/pixmaps/mdk/
 
-2002-02-26 02:49  David Baudens <baudens@mandrakesoft.com>
+2002-02-26 02:49  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: [no log message]
 
-2002-02-25 17:09  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-25 17:09  Frederic Crozat <fcrozat at mandriva.com>
 
 	* gtkrc, mandrake_desk.spec: Fix default mdk theme with evolution
 
-2002-02-22 21:13  Pablo Saratxaga <pablo@mandrakesoft.com>
+2002-02-22 21:13  Pablo Saratxaga <pablo at mandriva.com>
 
 	* man/eu/chksession.8: Added Basque file
 
-2002-02-20 19:20  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-20 19:20  Frederic Crozat <fcrozat at mandriva.com>
 
 	* Makefile: Fix tagging
 
-2002-02-20 19:12  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-20 19:12  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec: Really fix mdk-eazel-engine-capplet location
 
-2002-02-20 19:06  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-20 19:06  Frederic Crozat <fcrozat at mandriva.com>
 
 	* Makefile, mandrake_desk.spec: Fix location of mdk-eazel-engine
 	  capplet
 
-2002-02-20 14:36  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-20 14:36  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec: Fix build
 
-2002-02-20 14:31  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-20 14:31  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Fix english strings and
 	  makefile
 
-2002-02-18 22:51  David Baudens <baudens@mandrakesoft.com>
+2002-02-18 22:51  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Fix and update spec
 
-2002-02-18 05:26  David Baudens <baudens@mandrakesoft.com>
+2002-02-18 05:26  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Various fix for simplified menu (fix typos,
 	  icons, remove duplicate entries with kdebase, etc.)
 
-2002-02-18 05:12  David Baudens <baudens@mandrakesoft.com>
+2002-02-18 05:12  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Fix icon for howto (simplified menu)
 
-2002-02-12 18:16  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-02-12 18:16  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Fix simplified menu
 
-2002-01-29 16:14  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-01-29 16:14  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, menu/mandrake_desk: Add menu entry for Mdk
 	  Eazel engine Fix menu entry for Simplified menu
 
-2002-01-28 17:38  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-01-28 17:38  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec: Fix icons for GNOME Desktop
 
-2002-01-28 14:00  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-01-28 14:00  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec: Release 8.2-3mdk
 
-2002-01-28 13:59  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-01-28 13:59  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec: Release 8.2-2mdk
 
-2002-01-26 21:50  David Baudens <baudens@mandrakesoft.com>
+2002-01-26 21:50  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: - Fix some menu entries - Use new default png
 	  icons when it is needed
 
-2002-01-14 11:37  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2002-01-14 11:37  Chmouel Boudjnah
 
 	* sbin/chksession: Remove space in name.
 
-2002-01-11 18:03  Frederic Crozat <fcrozat@mandrakesoft.com>
+2002-01-11 18:03  Frederic Crozat <fcrozat at mandriva.com>
 
 	* Makefile, mandrake_desk.spec, man/C/chksession.8,
 	  menu/mandrake_desk: Resync with package Remove generated files
 	  Fix screensaver images
 
-2001-10-02 10:32  Stefan Siegel <siegel@linux-mandrake.com>
+2001-10-02 10:32  Stefan Siegel <siegel at linux-mandrake.com>
 
 	* README.CVS: fixed URL
 
-2001-10-02 10:29  Stefan Siegel <siegel@linux-mandrake.com>
+2001-10-02 10:29  Stefan Siegel <siegel at linux-mandrake.com>
 
 	* man/: C/chksession.8, fr/chksession.8: fixed link for bug reports
 
-2001-09-20 12:08  David Baudens <baudens@mandrakesoft.com>
+2001-09-20 12:08  David Baudens <baudens at mandriva.com>
 
 	* menu/mandrake_desk: Add support for simplified menu
 
-2001-09-20 10:02  Frederic Crozat <fcrozat@mandrakesoft.com>
+2001-09-20 10:02  Frederic Crozat <fcrozat at mandriva.com>
 
 	* .cvsignore, krootwarning/.cvsignore: Clean cvs
 
-2001-09-19 20:34  Frederic Crozat <fcrozat@mandrakesoft.com>
+2001-09-19 20:34  Frederic Crozat <fcrozat at mandriva.com>
 
 	* mandrake_desk.spec, krootwarning/Makefile.in,
 	  krootwarning/acinclude.m4, krootwarning/aclocal.m4,
@@ -1288,7 +1304,7 @@
 	  krootwarning/stamp-h.in: Remove generated files, fix package
 	  generation add mdk-eazel-engine-capplet package
 
-2001-09-19 13:25  David Baudens <baudens@mandrakesoft.com>
+2001-09-19 13:25  David Baudens <baudens at mandriva.com>
 
 	* faces/: aman.png, avn-rat.png, dadou-fish.png,
 	  dear-chief-moon.png, gwegwe-rat.png, lmonspread-dog.png,
@@ -1296,51 +1312,51 @@
 	  warly-roller.png, woman.png: Fix icons to allow clean display on
 	  a white background
 
-2001-09-19 11:16  David Baudens <baudens@mandrakesoft.com>
+2001-09-19 11:16  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec file
 
-2001-09-18 18:08  David Baudens <baudens@mandrakesoft.com>
+2001-09-18 18:08  David Baudens <baudens at mandriva.com>
 
 	* faces/: tuxegg.png, user-brunette-mdk.png, user-default-mdk.png,
 	  user-tie-mdk.png, user-woman-blond-mdk.png: Remove some old faces
 	  (LN)
 
-2001-09-18 16:36  David Baudens <baudens@mandrakesoft.com>
+2001-09-18 16:36  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2001-09-18 16:35  David Baudens <baudens@mandrakesoft.com>
+2001-09-18 16:35  David Baudens <baudens at mandriva.com>
 
 	* faces/: aman.png, man.png: mv man.png aman.png to display it by
 	  default in DrakX
 
-2001-09-17 15:27  Laurent Montel <lmontel@mandrakesoft.com>
+2001-09-17 15:27  Laurent Montel <lmontel at mandriva.com>
 
 	* krootwarning/Makefile.am: Fix makefile error
 
-2001-09-14 13:55  David Baudens <baudens@mandrakesoft.com>
+2001-09-14 13:55  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Add gnome-mandrakestore.xpm and updaet
 	  gnome-mandrakecampus.xpm and gnome-mandrakeexpert.xpm
 
-2001-09-13 19:32  David Baudens <baudens@mandrakesoft.com>
+2001-09-13 19:32  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2001-09-13 17:04  David Baudens <baudens@mandrakesoft.com>
+2001-09-13 17:04  David Baudens <baudens at mandriva.com>
 
 	* Makefile: Update Makefile
 
-2001-09-13 16:00  David Baudens <baudens@mandrakesoft.com>
+2001-09-13 16:00  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2001-09-13 15:52  David Baudens <baudens@mandrakesoft.com>
+2001-09-13 15:52  David Baudens <baudens at mandriva.com>
 
 	* Makefile, mandrake_desk.spec: [no log message]
 
-2001-09-12 17:42  David Baudens <baudens@mandrakesoft.com>
+2001-09-12 17:42  David Baudens <baudens at mandriva.com>
 
 	* faces/: tux.xpm, tuxbaby.xpm, tuxbox.xpm, tuxcoocker.xpm,
 	  tuxdad.xpm, tuxegg.xpm, tuxgirl.xpm, tuxhead1.xpm, tuxhead2.xpm,
@@ -1349,7 +1365,7 @@
 	  user-hat-mdk.xpm, user-tie-mdk.xpm, user-woman-blond-mdk.xpm,
 	  utildame.xpm, utilmons.xpm: Remove xpm faces
 
-2001-09-12 17:31  David Baudens <baudens@mandrakesoft.com>
+2001-09-12 17:31  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: DKP1-1024.png, DKP1-1280.png, DKP1-1600.png,
 	  DKP1-640.png, DKP1-800.png, DKP2-1024.png, DKP2-1280.png,
@@ -1369,66 +1385,66 @@
 	  nature-1280.png, nature-1600.png, nature-640.png, nature-800.png:
 	  Remove old backgrounds
 
-2001-09-04 17:43  David Baudens <baudens@mandrakesoft.com>
+2001-09-04 17:43  David Baudens <baudens at mandriva.com>
 
 	* Makefile: Update Makefile, remove login/loging100.png and
 	  krozat/config.cache
 
-2001-09-04 17:35  David Baudens <baudens@mandrakesoft.com>
+2001-09-04 17:35  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2001-09-04 17:18  David Baudens <baudens@mandrakesoft.com>
+2001-09-04 17:18  David Baudens <baudens at mandriva.com>
 
 	* default_background.jpg, default_logo.jpg, mandrake-small.xpm:
 	  Remove some old images
 
-2001-09-04 16:58  David Baudens <baudens@mandrakesoft.com>
+2001-09-04 16:58  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2001-09-03 03:10  Pablo Saratxaga <pablo@mandrakesoft.com>
+2001-09-03 03:10  Pablo Saratxaga <pablo at mandriva.com>
 
 	* mandrake_desk.spec: added French man page to the spec file
 
-2001-09-03 03:02  Pablo Saratxaga <pablo@mandrakesoft.com>
+2001-09-03 03:02  Pablo Saratxaga <pablo at mandriva.com>
 
 	* Makefile, man/chksession.8, man/C/chksession.8,
 	  man/fr/chksession.8: Added French man page, moved English page to
 	  its own directory
 
-2001-09-01 16:01  Laurent Montel <lmontel@mandrakesoft.com>
+2001-09-01 16:01  Laurent Montel <lmontel at mandriva.com>
 
 	* krootwarning/Makefile.in: Autostart
 
-2001-08-27 14:06  David Baudens <baudens@mandrakesoft.com>
+2001-08-27 14:06  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2001-08-27 12:51  David Baudens <baudens@mandrakesoft.com>
+2001-08-27 12:51  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2001-08-27 12:40  David Baudens <baudens@mandrakesoft.com>
+2001-08-27 12:40  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec
 
-2001-08-24 19:11  David Baudens <baudens@mandrakesoft.com>
+2001-08-24 19:11  David Baudens <baudens at mandriva.com>
 
 	* faces/: avn-rat.png, dadou-fish.png, dear-chief-moon.png,
 	  gwegwe-rat.png, lmonspread-dog.png, ln-cendrillon.png, man.png,
 	  renaud-sun.png, vince-donut.png, warly-roller.png, woman.png: Add
 	  some MandrakeSoft employees :o)
 
-2001-08-24 18:39  David Baudens <baudens@mandrakesoft.com>
+2001-08-24 18:39  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update spec file
 
-2001-08-13 15:20  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2001-08-13 15:20  Chmouel Boudjnah
 
 	* sbin/fndSession: Fix path of kdmrc.
 
-2001-08-08 15:49  David Baudens <baudens@mandrakesoft.com>
+2001-08-08 15:49  David Baudens <baudens at mandriva.com>
 
 	* krootwarning/: Makefile.dist, TODO, AUTHORS, COPYING, INSTALL,
 	  Makefile.am, Makefile.in, README, acinclude.m4, aclocal.m4,
@@ -1436,7 +1452,7 @@
 	  configure.in.in, krootwarning.kdevprj, krootwarning.kdevses,
 	  krootwarning.lsm, messages.log, stamp-h.in, subdirs: v 0.1
 
-2001-08-08 15:19  David Baudens <baudens@mandrakesoft.com>
+2001-08-08 15:19  David Baudens <baudens at mandriva.com>
 
 	* krootwarning/: AUTHORS, COPYING, INSTALL, Makefile.am,
 	  Makefile.dist, Makefile.in, README, TODO, acinclude.m4,
@@ -1449,36 +1465,36 @@
 
 	* mandrake_desk.spec: - Move face in /usr/share/mdk/faces
 
-2001-07-31 15:29  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2001-07-31 15:29  Chmouel Boudjnah
 
 	* sbin/chksession: Ignore backup files. Cleanup codes.
 
-2001-07-31 09:21  Frederic Lepied <flepied@mandrakesoft.com>
+2001-07-31 09:21  Frederic Lepied <flepied at mandriva.com>
 
 	* Makefile: no need to run autoconf!
 
-2001-07-31 09:19  Frederic Lepied <flepied@mandrakesoft.com>
+2001-07-31 09:19  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec: 8.1-1mdk
 
-2001-07-31 09:17  Frederic Lepied <flepied@mandrakesoft.com>
+2001-07-31 09:17  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/chksession: put back my change to the Xsession path that was
 	  reverted by the resync.
 
-2001-07-31 09:16  Frederic Lepied <flepied@mandrakesoft.com>
+2001-07-31 09:16  Frederic Lepied <flepied at mandriva.com>
 
 	* Makefile: added rules to build test and distrib rpm.
 
-2001-07-31 09:15  Frederic Lepied <flepied@mandrakesoft.com>
+2001-07-31 09:15  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake-small.xpm: resync with 8.0-12mdk
 
-2001-07-31 08:00  Frederic Lepied <flepied@mandrakesoft.com>
+2001-07-31 08:00  Frederic Lepied <flepied at mandriva.com>
 
 	* gtkrc: resync with 8.0-12mdk
 
-2001-07-31 07:52  Frederic Lepied <flepied@mandrakesoft.com>
+2001-07-31 07:52  Frederic Lepied <flepied at mandriva.com>
 
 	* Makefile, TRANSLATORS, mandrake_desk.spec,
 	  backgrounds/DKP1-1024.png, backgrounds/DKP1-1280.png,
@@ -1511,60 +1527,60 @@
 	  backgrounds/nature-800.png, bin/DrakWM, bin/createbackground.sh,
 	  bin/print-cups.sh, sbin/chksession: resync with 8.0-12mdk
 
-2001-07-26 11:35  Frederic Lepied <flepied@mandrakesoft.com>
+2001-07-26 11:35  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/chksession: use /etc/X11/xdm/Xsession instead of
 	  /etc/X11/Xsession for gdm sessions.
 
-2001-05-06 19:20  Pablo Saratxaga <pablo@mandrakesoft.com>
+2001-05-06 19:20  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Updated Chinese file
 
-2001-04-12 06:41  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:41  Daouda Lo <daouda at mandriva.com>
 
 	* mandrake_desk.spec: cleanups
 
-2001-04-12 06:26  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:26  Daouda Lo <daouda at mandriva.com>
 
 	* Makefile: remove kdelnk dir
 
-2001-04-12 06:25  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:25  Daouda Lo <daouda at mandriva.com>
 
 	* mandrake_desk.spec: macros bis
 
-2001-04-12 06:23  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:23  Daouda Lo <daouda at mandriva.com>
 
 	* mandrake_desk.spec: macros to ease rpm build from cvs
 
-2001-04-12 06:16  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:16  Daouda Lo <daouda at mandriva.com>
 
 	* Makefile: fix typo in var RPM
 
-2001-04-12 06:15  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:15  Daouda Lo <daouda at mandriva.com>
 
 	* mandrake_desk.spec: add define tags
 
-2001-04-12 06:14  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:14  Daouda Lo <daouda at mandriva.com>
 
 	* Makefile: define RPM var
 
-2001-04-12 06:11  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:11  Daouda Lo <daouda at mandriva.com>
 
 	* Makefile: commented kdelnk related stuffs
 
-2001-04-12 06:08  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:08  Daouda Lo <daouda at mandriva.com>
 
 	* Makefile: add eazel themes + gtkrc for rpm build
 
-2001-04-12 06:08  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:08  Daouda Lo <daouda at mandriva.com>
 
 	* gtkrc: new gtkrc  :resync with spec
 
-2001-04-12 06:06  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 06:06  Daouda Lo <daouda at mandriva.com>
 
 	* mandrake_desk.spec: commit
 
-2001-04-12 02:57  David Baudens <baudens@mandrakesoft.com>
+2001-04-12 02:57  David Baudens <baudens at mandriva.com>
 
 	* faces/: root, tux.png, tux.xpm, tuxbaby.png, tuxbaby.xpm,
 	  tuxbox.png, tuxbox.xpm, tuxcoocker.png, tuxcoocker.xpm,
@@ -1579,369 +1595,369 @@
 	  user-woman-blond-mdk.xpm, utildame.png, utildame.xpm,
 	  utilmons.png, utilmons.xpm: [no log message]
 
-2001-04-12 02:52  David Baudens <baudens@mandrakesoft.com>
+2001-04-12 02:52  David Baudens <baudens at mandriva.com>
 
 	* faces/: user-brunette-mdk.png, user-curly-mdk.png,
 	  user-default-mdk.png, user-girl-mdk.png, user-hat-mdk.png,
 	  user-tie-mdk.png, user-woman-blond-mdk.png: [no log message]
 
-2001-04-12 00:53  Daouda Lo <daouda@mandrakesoft.com>
+2001-04-12 00:53  Daouda Lo <daouda at mandriva.com>
 
 	* mandrake_desk.spec: resync specs with cvs
 
-2001-03-29 10:14  Pablo Saratxaga <pablo@mandrakesoft.com>
+2001-03-29 10:14  Pablo Saratxaga <pablo at mandriva.com>
 
 	* Makefile, README, TRANSLATORS, xml-i18n-extract.in,
 	  xml-i18n-merge.in, xml-i18n-update.in: Now uses xml-i18n-tools to
 	  handle i18n
 
-2001-03-24 13:29  Pablo Saratxaga <pablo@mandrakesoft.com>
+2001-03-24 13:29  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Updated Korean strings
 
-2001-03-17 17:09  Pablo Saratxaga <pablo@mandrakesoft.com>
+2001-03-17 17:09  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: updated the Portuguese strings
 
-2001-03-02 20:45  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2001-03-02 20:45  Chmouel Boudjnah
 
 	* bin/DrakWM: Call xvt.
 
-2001-01-07 07:23  Pablo Saratxaga <pablo@mandrakesoft.com>
+2001-01-07 07:23  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: updated Basque strings
 
-2000-11-17 14:31  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-11-17 14:31  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Georgian strings
 
-2000-10-16 02:01  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-10-16 02:01  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: updated Brazilian strings
 
-2000-09-13 21:19  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-09-13 21:19  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: corrected email address
 
-2000-09-13 12:55  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-09-13 12:55  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Azeri strings
 
-2000-09-05 22:48  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-09-05 22:48  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: updated Polish strings
 
-2000-08-31 22:39  David Baudens <baudens@mandrakesoft.com>
+2000-08-31 22:39  David Baudens <baudens at mandriva.com>
 
 	* kde/.kderc: [no log message]
 
-2000-08-31 19:20  David Baudens <baudens@mandrakesoft.com>
+2000-08-31 19:20  David Baudens <baudens at mandriva.com>
 
 	* kde/.kderc: [no log message]
 
-2000-08-31 12:31  David Baudens <baudens@mandrakesoft.com>
+2000-08-31 12:31  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Re add a BuildRoot :(
 
-2000-08-31 12:25  David Baudens <baudens@mandrakesoft.com>
+2000-08-31 12:25  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update mandrake_desk.spec
 
-2000-08-31 03:51  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-08-31 03:51  Chmouel Boudjnah
 
 	* sbin/chksession: Avoid opendir use csh internal globing...
 
-2000-08-24 11:51  David Baudens <baudens@mandrakesoft.com>
+2000-08-24 11:51  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update Spec
 
-2000-08-24 11:16  David Baudens <baudens@mandrakesoft.com>
+2000-08-24 11:16  David Baudens <baudens at mandriva.com>
 
 	* Makefile: Update Makefile (for .desktop)
 
-2000-08-24 11:10  David Baudens <baudens@mandrakesoft.com>
+2000-08-24 11:10  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update Spec
 
-2000-08-24 11:04  David Baudens <baudens@mandrakesoft.com>
+2000-08-24 11:04  David Baudens <baudens at mandriva.com>
 
 	* faces/: default.png, root, root.png: [no log message]
 
-2000-08-24 10:11  David Baudens <baudens@mandrakesoft.com>
+2000-08-24 10:11  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update Spec and Makefile
 
-2000-08-24 10:08  David Baudens <baudens@mandrakesoft.com>
+2000-08-24 10:08  David Baudens <baudens at mandriva.com>
 
 	* faces/root: Add a "root" link to make GDM happy
 
-2000-08-23 19:30  David Baudens <baudens@mandrakesoft.com>
+2000-08-23 19:30  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update Makefile and spec file
 
-2000-08-23 19:28  David Baudens <baudens@mandrakesoft.com>
+2000-08-23 19:28  David Baudens <baudens at mandriva.com>
 
 	* faces/: default.png, root.png: Add link default.png and root.png
 	  to make KDM happy
 
-2000-08-23 10:44  David Baudens <baudens@mandrakesoft.com>
+2000-08-23 10:44  David Baudens <baudens at mandriva.com>
 
 	* faces/: user-brunette-mdk.xpm, user-curly-mdk.xpm,
 	  user-default-mdk.xpm, user-girl-mdk.xpm, user-hat-mdk.xpm,
 	  user-tie-mdk.xpm, user-woman-blond-mdk.xpm: Removed unneeded
 	  files
 
-2000-08-23 10:40  David Baudens <baudens@mandrakesoft.com>
+2000-08-23 10:40  David Baudens <baudens at mandriva.com>
 
 	* faces/: user-brunette-mdk.png, user-curly-mdk.png,
 	  user-default-mdk.png, user-girl-mdk.png, user-hat-mdk.png,
 	  user-tie-mdk.png, user-woman-blond-mdk.png: Convert faces/*.xpm
 	  to faces/*.png
 
-2000-08-23 10:39  David Baudens <baudens@mandrakesoft.com>
+2000-08-23 10:39  David Baudens <baudens at mandriva.com>
 
 	* Makefile, README.CVS, TRANSLATORS, default_background.jpg,
 	  default_logo.jpg, mandrake_desk.spec: [no log message]
 
-2000-08-22 19:10  David Baudens <baudens@mandrakesoft.com>
+2000-08-22 19:10  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Re fix spec
 
-2000-08-22 19:06  David Baudens <baudens@mandrakesoft.com>
+2000-08-22 19:06  David Baudens <baudens at mandriva.com>
 
 	* Makefile, mandrake_desk.spec: Fix Makefile and spec
 
-2000-08-22 18:51  David Baudens <baudens@mandrakesoft.com>
+2000-08-22 18:51  David Baudens <baudens at mandriva.com>
 
 	* faces/: user-brunette-mdk.xpm, user-curly-mdk.xpm,
 	  user-default-mdk.xpm, user-girl-mdk.xpm, user-hat-mdk.xpm,
 	  user-tie-mdk.xpm, user-woman-blond-mdk.xpm: Move users icons in
 	  /usr/share/faces
 
-2000-08-22 18:46  David Baudens <baudens@mandrakesoft.com>
+2000-08-22 18:46  David Baudens <baudens at mandriva.com>
 
 	* Makefile, README.CVS, TRANSLATORS, default_background.jpg,
 	  default_logo.jpg, mandrake_desk.spec: [no log message]
 
-2000-08-22 18:41  David Baudens <baudens@mandrakesoft.com>
+2000-08-22 18:41  David Baudens <baudens at mandriva.com>
 
 	* Makefile, mandrake_desk.spec: [no log message]
 
-2000-08-19 11:28  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-08-19 11:28  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Belarussian strings
 
-2000-08-12 11:47  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-08-12 11:47  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: fixed an email address
 
-2000-07-22 21:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-07-22 21:28  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec: BM.
 
-2000-07-18 23:31  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-07-18 23:31  Chmouel Boudjnah
 
 	* mandrake_desk.spec, sbin/chksession: * sbin/chksession: Set
 	  support for KDE2 by default when generating session.
 
-2000-07-18 11:42  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-07-18 11:42  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec: window-managers no longer needed.
 
-2000-07-18 11:41  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-07-18 11:41  Chmouel Boudjnah
 
 	* window-managers: window-managers is no longer needed.
 
-2000-07-18 11:39  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-07-18 11:39  Chmouel Boudjnah
 
 	* mandrake_desk.spec, bin/DrakWM: * bin/DrakWM: Add -i options to
 	  launch with xinit.  add -a option to provide alias for bash.
 
-2000-07-17 13:20  Dam's <damien@mandrakesoft.com>
+2000-07-17 13:20  Dam's
 
 	* mandrake_desk.spec: new release
 
-2000-07-16 14:11  Dam's <damien@mandrakesoft.com>
+2000-07-16 14:11  Dam's
 
 	* window-managers: sawmill -> sawfish
 
-2000-07-11 23:43  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-07-11 23:43  Chmouel Boudjnah
 
 	* sbin/convertsession: A new greatest hit.
 
-2000-07-11 23:43  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-07-11 23:43  Chmouel Boudjnah
 
 	* mandrake_desk.spec, sbin/chksession: sbin/chksession: make
 	  window-managers file dynamic by simple entry in
 	  /etc/X11/wmsession.d/ sbin/convertsession: a new greatest hit.
 	  mandrake_desk.spec: %post with convertsession
 
-2000-06-26 16:00  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-06-26 16:00  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: added Arabic strings
 
-2000-06-07 18:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-06-07 18:37  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Korean strings
 
-2000-05-29 13:23  Dam's <damien@mandrakesoft.com>
+2000-05-29 13:23  Dam's
 
 	* mandrake_desk.spec: see changelog
 
-2000-05-27 21:42  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-05-27 21:42  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Updated Serbian strings
 
-2000-05-19 01:43  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-05-19 01:43  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Afrikaans strings
 
-2000-05-12 16:16  Frederic Lepied <flepied@mandrakesoft.com>
+2000-05-12 16:16  Frederic Lepied <flepied at mandriva.com>
 
 	* sbin/chksession:	* use /etc/X11/Xsession for gnome sessions.
 
-2000-05-12 16:16  Frederic Lepied <flepied@mandrakesoft.com>
+2000-05-12 16:16  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec:	* 1.0.3-21mdk
 
-2000-05-12 11:21  Dam's <damien@mandrakesoft.com>
+2000-05-12 11:21  Dam's
 
 	* mandrake_desk.spec: new mdk rel ; added gnome desktop entries
 
-2000-05-09 23:33  Dam's <damien@mandrakesoft.com>
+2000-05-09 23:33  Dam's
 
 	* mandrake_desk.spec: mdk release
 
-2000-05-09 19:58  Dam's <damien@mandrakesoft.com>
+2000-05-09 19:58  Dam's
 
 	* mandrake_desk.spec: new release
 
-2000-05-09 19:53  Pixel <pixel@mandrakesoft.com>
+2000-05-09 19:53  Pixel <pixel at mandriva.com>
 
 	* sbin/kdeDesktopCleanup: [no log message]
 
-2000-05-09 19:38  Dam's <damien@mandrakesoft.com>
+2000-05-09 19:38  Dam's
 
 	* mandrake_desk.spec: no more netscape.desktop
 
-2000-05-09 19:38  Dam's <damien@mandrakesoft.com>
+2000-05-09 19:38  Dam's
 
 	* Makefile: removed netscape.desktop copy
 
-2000-05-09 17:00  Dam's <damien@mandrakesoft.com>
+2000-05-09 17:00  Dam's
 
 	* mandrake_desk.spec: removed gnome desktop icons...
 
-2000-05-09 10:15  Dam's <damien@mandrakesoft.com>
+2000-05-09 10:15  Dam's
 
 	* mandrake_desk.spec: see changelog. new release, cosmetic fix.
 
-2000-05-06 22:55  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-05-06 22:55  Chmouel Boudjnah
 
 	* mandrake_desk.spec, sbin/chksession:	* sbin/chksession: if icewm
 	  is not here by default launch twm.
 
-2000-05-05 12:21  Pixel <pixel@mandrakesoft.com>
+2000-05-05 12:21  Pixel <pixel at mandriva.com>
 
 	* mandrake_desk.spec, sbin/kdeDesktopCleanup: no_comment
 
-2000-05-04 16:09  Dam's <damien@mandrakesoft.com>
+2000-05-04 16:09  Dam's
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec gnome/mandrake.links :cleaned gnome
 	  desktop
 
-2000-04-30 17:28  Dam's <damien@mandrakesoft.com>
+2000-04-30 17:28  Dam's
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec :bad date
 
-2000-04-30 17:16  Dam's <damien@mandrakesoft.com>
+2000-04-30 17:16  Dam's
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec :bad release
 
-2000-04-30 17:15  Dam's <damien@mandrakesoft.com>
+2000-04-30 17:15  Dam's
 
 	* mandrake_desk.spec:
 		  ChangeLog mandrake_desk.spec :see Changelog
 
-2000-04-29 19:26  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-04-29 19:26  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Updated Britton, Esperanto and Estonian strings
 
-2000-04-28 16:40  Stefan Siegel <siegel@linux-mandrake.com>
+2000-04-28 16:40  Stefan Siegel <siegel at linux-mandrake.com>
 
 	* TRANSLATORS: - add cdwriter_supermount.xpm - correct TRANSLATOR
 	  address - use kdecolors in icons
 
-2000-04-28 14:40  Dam's <damien@mandrakesoft.com>
+2000-04-28 14:40  Dam's
 
 	* mandrake_desk.spec:
 		  ChangeLog mandrake_desk.spec :corrected xfce entry in
 	  windowmanagers.
 
-2000-04-28 12:15  Dam's <damien@mandrakesoft.com>
+2000-04-28 12:15  Dam's
 
 	* mandrake_desk.spec, window-managers:
 		  ChangeLog mandrake_desk.spec window-managers : recovering
 	  old files
 
-2000-04-28 10:27  Dam's <damien@mandrakesoft.com>
+2000-04-28 10:27  Dam's
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec :fixed bad date
 
-2000-04-28 10:15  Dam's <damien@mandrakesoft.com>
+2000-04-28 10:15  Dam's
 
 	* mandrake_desk.spec, window-managers:
 		  ChangeLog mandrake_desk.spec window-managers :corrected
 	  xfce entry
 
-2000-04-27 15:57  Dam's <damien@mandrakesoft.com>
+2000-04-27 15:57  Dam's
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec  : bad date
 
-2000-04-27 15:46  Dam's <damien@mandrakesoft.com>
+2000-04-27 15:46  Dam's
 
 	* mandrake_desk.spec, window-managers:
 		  ChangeLog mandrake_desk.spec window-managers :corrected
 	  wmaker entry
 		  kdelnk/Updates.kdelnk :unfortunally removed, so re-added
 
-2000-04-21 17:55  David Baudens <baudens@mandrakesoft.com>
+2000-04-21 17:55  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, window-managers: Upload (see ChangeLog)
 
-2000-04-21 05:58  David Baudens <baudens@mandrakesoft.com>
+2000-04-21 05:58  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update .spec
 
-2000-04-20 19:15  Fançois Pons <fpons@mandrakesoft.com>
+2000-04-20 19:15  FanÃ§ois Pons
 
 	* mandrake_desk.spec, window-managers: [no log message]
 
-2000-04-20 16:48  Fançois Pons <fpons@mandrakesoft.com>
+2000-04-20 16:48  FanÃ§ois Pons
 
 	* mandrake_desk.spec, window-managers: [no log message]
 
-2000-04-18 15:24  Dam's <damien@mandrakesoft.com>
+2000-04-18 15:24  Dam's
 
 	* mandrake_desk.spec:
 		  mandrake_desk.spec :corrected bad version number
 
-2000-04-18 15:21  Dam's <damien@mandrakesoft.com>
+2000-04-18 15:21  Dam's
 
 	* Makefile:
 		  Makefile :updated for new mdk relese
 
-2000-04-18 15:18  Dam's <damien@mandrakesoft.com>
+2000-04-18 15:18  Dam's
 
 	* mandrake_desk.spec:
 		  ChangeLog mandrake_desk.spec : new mdk release
 
-2000-04-18 14:26  Dam's <damien@mandrakesoft.com>
+2000-04-18 14:26  Dam's
 
 	* window-managers:
 		  window-managers : minor correction
@@ -1949,96 +1965,96 @@
 		  kdelnk/RpmDrake.kdelnk kdelnk/Updates.kdelnk
 		  kdelnk/XKill.kdelnk : desktops needed to be cleaned
 
-2000-04-18 11:20  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-04-18 11:20  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Welsh strings
 
-2000-04-17 15:22  Dam's <damien@mandrakesoft.com>
+2000-04-17 15:22  Dam's
 
 	* mandrake_desk.spec:
 	  Modified Files:	  mandrake_desk.spec updated
 
-2000-04-17 04:56  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-17 04:56  Chmouel Boudjnah
 
 	* window-managers: Various fix.
 
-2000-04-17 00:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-17 00:49  Chmouel Boudjnah
 
 	* mandrake_desk.spec: Add /usr/bin
 
-2000-04-17 00:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-17 00:46  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec: DrakWM a new greatest hit.
 
-2000-04-17 00:45  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-17 00:45  Chmouel Boudjnah
 
 	* bin/DrakWM: Add file.
 
-2000-04-16 21:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-04-16 21:37  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Greek strings
 
-2000-04-16 15:12  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-04-16 15:12  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Finnsih strings
 
-2000-04-11 18:55  Dam's <damien@mandrakesoft.com>
+2000-04-11 18:55  Dam's
 
 	* mandrake_desk.spec:
 	  Modified Files:	  mandrake_desk.spec added ref for
 	  /usr/share/icons/*.jpg
 
-2000-04-11 18:21  Dam's <damien@mandrakesoft.com>
+2000-04-11 18:21  Dam's
 
 	* default_logo.jpg:
 	  Modified Files:	  default_logo.jpg final logo
 
-2000-04-11 17:46  Dam's <damien@mandrakesoft.com>
+2000-04-11 17:46  Dam's
 
 	* default_background.jpg, default_logo.jpg:
 	  Added Files:	  default_background.jpg default_logo.jpg needed
 	  for new release of gdm/kdm
 
-2000-04-11 17:43  Dam's <damien@mandrakesoft.com>
+2000-04-11 17:43  Dam's
 
 	* Makefile, mandrake_desk.spec:
 
 	  updated icons
 
-2000-04-09 01:42  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-04-09 01:42  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Swedish strings
 
-2000-04-07 03:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-07 03:46  Chmouel Boudjnah
 
 	* window-managers: "Seethechangelog"
 
-2000-04-05 23:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-05 23:49  Chmouel Boudjnah
 
 	* mandrake_desk.spec, Makefile: "Seethechangelog"
 
-2000-04-05 23:46  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-05 23:46  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
-2000-04-05 23:41  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-05 23:41  Chmouel Boudjnah
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-2000-04-05 23:38  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-04-05 23:38  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec, window-managers: "Seethechangelog"
 
-2000-04-04 15:57  David Baudens <baudens@mandrakesoft.com>
+2000-04-04 15:57  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/default_background.jpg: Add default background
 
-2000-04-04 15:55  David Baudens <baudens@mandrakesoft.com>
+2000-04-04 15:55  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: mandrake_background3_1024.jpg,
 	  mandrake_background4_1024.jpg: Add backgrounds
 
-2000-04-04 15:53  David Baudens <baudens@mandrakesoft.com>
+2000-04-04 15:53  David Baudens <baudens at mandriva.com>
 
 	* backgrounds/: mandrake_background1_1024.jpg,
 	  mandrake_background2_1024.jpg, mandrake_background_1024-1.jpg,
@@ -2046,196 +2062,196 @@
 	  mandrake_background_1024.jpg, mandrake_background_800.jpg,
 	  mandrake_background_blue_1024.jpg: Add & remove backgrounds
 
-2000-03-26 20:00  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-03-26 20:00  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Slovenian strings
 
-2000-03-24 13:18  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-03-24 13:18  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: updated translators list
 
-2000-03-06 11:08  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-03-06 11:08  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: Added Chinese entries
 
-2000-02-02 05:51  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-02-02 05:51  Chmouel Boudjnah
 
 	* mandrake_desk.spec, window-managers: "See_The_Changelog"
 
-2000-01-27 15:50  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-01-27 15:50  Chmouel Boudjnah
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-2000-01-27 15:44  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-01-27 15:44  Chmouel Boudjnah
 
 	* backgrounds/: mandrake_background_1024-1.jpg,
 	  mandrake_background_1024-2.jpg, mandrake_background_1024-3.jpg:
 	  "Seethechangelog"
 
-2000-01-20 11:18  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-01-20 11:18  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: updated Peter email address
 
-2000-01-10 00:20  Pixel <pixel@mandrakesoft.com>
+2000-01-10 00:20  Pixel <pixel at mandriva.com>
 
 	* mandrake_desk.spec: no_comment
 
-2000-01-07 10:59  Pixel <pixel@mandrakesoft.com>
+2000-01-07 10:59  Pixel <pixel at mandriva.com>
 
 	* mandrake_desk.spec, window-managers: no_comment
 
-2000-01-07 10:23  Frederic Lepied <flepied@mandrakesoft.com>
+2000-01-07 10:23  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec: [no log message]
 
-2000-01-07 10:20  Frederic Lepied <flepied@mandrakesoft.com>
+2000-01-07 10:20  Frederic Lepied <flepied at mandriva.com>
 
 	* mandrake_desk.spec:	* standard mandrake: none.
 
-2000-01-07 07:54  Pixel <pixel@mandrakesoft.com>
+2000-01-07 07:54  Pixel <pixel at mandriva.com>
 
 	* mandrake_desk.spec, sbin/chksession: no_comment
 
-2000-01-05 23:38  Pixel <pixel@mandrakesoft.com>
+2000-01-05 23:38  Pixel <pixel at mandriva.com>
 
 	* mandrake_desk.spec, sbin/kdeDesktopCleanup: no_comment
 
-2000-01-05 19:16  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-01-05 19:16  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: added Turkish entries
 
-2000-01-05 17:03  Pablo Saratxaga <pablo@mandrakesoft.com>
+2000-01-05 17:03  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: added Latvian entries
 
-2000-01-05 00:49  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-01-05 00:49  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
-2000-01-04 13:24  David Baudens <baudens@mandrakesoft.com>
+2000-01-04 13:24  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec, window-managers: Use BBDrake & WMDrake for
 	  BlackBox & Window Maker
 
-2000-01-03 02:36  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+2000-01-03 02:36  Chmouel Boudjnah
 
 	* mandrake_desk.spec, window-managers: "Seethechangelog"
 
-1999-12-31 03:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-31 03:28  Chmouel Boudjnah
 
 	* Makefile: "Seethechangelog"
 
-1999-12-28 23:45  Pablo Saratxaga <pablo@mandrakesoft.com>
+1999-12-28 23:45  Pablo Saratxaga <pablo at mandriva.com>
 
 	* mandrake_desk.spec: added the Gnome menu entries to the spec file
 
-1999-12-28 17:27  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-28 17:27  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec, sbin/chksession: "Seethechangelog"
 
-1999-12-28 16:12  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-28 16:12  Chmouel Boudjnah
 
 	* man/chksession.8: "Seethechangelog"
 
-1999-12-27 17:18  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-27 17:18  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec, sbin/chksession: "Seethechangelog"
 
-1999-12-27 12:57  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-27 12:57  Chmouel Boudjnah
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-1999-12-27 12:53  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-27 12:53  Chmouel Boudjnah
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-1999-12-27 12:21  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-27 12:21  Chmouel Boudjnah
 
 	* bin/linuxconf_kdesu: "Seethechangelog"
 
-1999-12-25 20:30  Pablo Saratxaga <pablo@mandrakesoft.com>
+1999-12-25 20:30  Pablo Saratxaga <pablo at mandriva.com>
 
 	* Makefile, mandrake_desk.spec: added menu entries for Gnome
 
-1999-12-25 20:13  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-25 20:13  Chmouel Boudjnah
 
 	* window-managers, mandrake_desk.spec: "Seethechangelog"
 
-1999-12-25 20:09  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-25 20:09  Chmouel Boudjnah
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-1999-12-25 18:25  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-25 18:25  Chmouel Boudjnah
 
 	* window-managers, mandrake_desk.spec, sbin/kdeDesktopCleanup:
 	  "Seethechangelog"
 
-1999-12-24 13:00  Pixel <pixel@mandrakesoft.com>
+1999-12-24 13:00  Pixel <pixel at mandriva.com>
 
 	* mandrake_desk.spec: no_comment
 
-1999-12-23 23:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+1999-12-23 23:34  Pablo Saratxaga <pablo at mandriva.com>
 
 	* mandrake_desk.spec: added Gnome desktop icons previously done in
 	  gmc package
 
-1999-12-23 01:38  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-23 01:38  Chmouel Boudjnah
 
 	* mandrake_desk.spec: "Seethechangelog"
 
-1999-12-23 00:59  Pablo Saratxaga <pablo@mandrakesoft.com>
+1999-12-23 00:59  Pablo Saratxaga <pablo at mandriva.com>
 
 	* TRANSLATORS: added Bulgarian entries
 
-1999-12-22 03:28  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-22 03:28  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
-1999-12-22 03:21  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-22 03:21  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec, sbin/fndSession, sbin/chksession,
 	  window-managers: "Seethechangelog"
 
-1999-12-22 03:08  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-22 03:08  Chmouel Boudjnah
 
 	* bin/fndSession, sbin/Xsession: "Seethechangelog"
 
-1999-12-21 13:18  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-21 13:18  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec: "Seethechangelog"
 
-1999-12-21 02:00  David Baudens <baudens@mandrakesoft.com>
+1999-12-21 02:00  David Baudens <baudens at mandriva.com>
 
 	* sbin/: Xsession, fndSession:
 	  Add some WM.	Sort in alphabetic order-
 
-1999-12-20 14:59  Pixel <pixel@mandrakesoft.com>
+1999-12-20 14:59  Pixel <pixel at mandriva.com>
 
 	* Makefile, mandrake_desk.spec: no_comment
 
-1999-12-19 19:55  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-19 19:55  Chmouel Boudjnah
 
 	* bin/fndSession: "Seethechangelog"
 
-1999-12-19 19:50  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-19 19:50  Chmouel Boudjnah
 
 	* Makefile, mandrake_desk.spec, README.CVS: "Seethechangelog"
 
-1999-12-19 19:09  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-19 19:09  Chmouel Boudjnah
 
 	* sbin/fndSession: "Seethechangelog"
 
-1999-12-19 19:05  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-19 19:05  Chmouel Boudjnah
 
 	* bin/fndSession, mandrake_desk.spec: "Seethechangelog"
 
-1999-12-19 19:02  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-19 19:02  Chmouel Boudjnah
 
 	* Makefile, TRANSLATORS, backgrounds/mandrake_background_1024.jpg,
 	  backgrounds/mandrake_background_800.jpg, bin/linuxconf_kdesu,
 	  sbin/kdeDesktopCleanup: Initial revision
 
-1999-12-19 19:02  Chmouel Boudjnah <chmouel@mandrakesoft.com>
+1999-12-19 19:02  Chmouel Boudjnah
 
 	* Makefile, TRANSLATORS, backgrounds/mandrake_background_1024.jpg,
 	  backgrounds/mandrake_background_800.jpg, bin/linuxconf_kdesu,
