@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	2mdk
+Release: 	%mkrel 3
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -97,8 +97,16 @@ install -m 0644 menu/icons/*.png %buildroot/%_iconsdir
 install -m 0644 menu/icons/large/*.png %buildroot/%_liconsdir
 install -m 0644 menu/icons/mini/*.png %buildroot/%_miconsdir
 install -d -m 0755 %buildroot/%_localstatedir/menu-xdg/menus/applications-mdk-merged %buildroot/%_localstatedir/menu-xdg/menus/applications-simplified-merged 
-install -m 0644 menu/defaultlayout.menu %buildroot/%_localstatedir/menu-xdg/menus/applications-mdk-merged
+#install -m 0644 menu/defaultlayout.menu %buildroot/%_localstatedir/menu-xdg/menus/applications-mdk-merged
 install -m 0644 menu/defaultlayout-simplified.menu %buildroot/%_localstatedir/menu-xdg/menus/applications-simplified-merged
+
+# XDG menus
+install -d -m 0755 %buildroot/%_sysconfdir/xdg/menus/applications-merged
+install -d -m 0755 %buildroot/%_sysconfdir/menu.d
+install -m 0644 menu/applications-mdk.menu %buildroot/%_sysconfdir/xdg/
+install -m 0755 menu/xdg_menu %buildroot/%_bindir
+#temporary name
+install -m 0755 menu/update-menus %buildroot/%_bindir/update-menus-xdg
 
 
 #install theme for GDM/KDM
@@ -139,6 +147,9 @@ rm -fr %buildroot
 %_sbindir/*
 
 %_sysconfdir/X11/xinit.d/*
+%dir %_sysconfdir/menu.d
+%_sysconfdir/xdg
+
 #
 %dir %_datadir/faces/
 %dir %_datadir/mdk/
@@ -171,6 +182,12 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu May 04 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-3mdk
+- Add applications-mdk.menu file for XDG menu system
+- Add xdg_menu script from SUSE to support old WM
+- Don't ship defaultlayout.menu anymore, it is merged into main menu
+- Fix typo in old menu file
+
 * Mon Sep 26 2005 Frederic Crozat <fcrozat@mandriva.com> 2006-2mdk 
 - Fix desktop-directory script (UTF encoded URL, hidden .directory file)
   Mdk bug #18853

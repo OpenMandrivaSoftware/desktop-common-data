@@ -1,0 +1,1117 @@
+<?xml version="1.0"?>
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://standards.freedesktop.org/menu-spec/menu-1.0.dtd">
+<Menu>
+  <Name>Mandriva Linux</Name>
+  <Layout>
+    <Menuname>Office</Menuname>
+    <Menuname>Internet</Menuname>
+    <Menuname>Multimedia</Menuname>
+    <Menuname>System</Menuname>
+    <Menuname>More Applications</Menuname>
+    <Menuname>Other</Menuname>
+    <Merge type="menus"/>
+    <Merge type="files"/>
+  </Layout>
+  <DefaultLayout inline="true" inline_limit="1" inline_header="false">
+    <Merge type="menus"/>
+    <Merge type="files"/>
+  </DefaultLayout>
+
+<!--  <DefaultMergeDirs/>-->
+  <AppDir>/var/lib/menu-xdg/applications</AppDir>
+  <DirectoryDir>/var/lib/menu-xdg/desktop-directories</DirectoryDir>
+<!--  <KDELegacyDirs/>-->
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+  <Directory>mandrakelinux.directory</Directory>
+  <Include>
+    <Category>X-Mandrakelinux</Category>
+  </Include>
+  <Menu>
+    <Name>Office</Name>
+    <Layout>
+      <Menuname>Wordprocessors</Menuname>
+      <Menuname>Spreadsheets</Menuname>
+      <Menuname>Presentations</Menuname>
+      <Menuname>Drawing</Menuname>
+      <Menuname>Graphs</Menuname>
+      <Menuname>Publishing</Menuname>
+      <Menuname>Tasks Management</Menuname>
+      <Menuname>Time Management</Menuname>
+      <Menuname>Address Books</Menuname>
+      <Menuname>Communications</Menuname>
+      <Menuname>Accessories</Menuname>
+      <Menuname>Other</Menuname>
+      <Merge type="menus"/>
+      <Merge type="files"/>
+    </Layout>
+    <Directory>mandrakelinux$2doffice.directory</Directory>
+    <Include>
+      <Or>
+        <Category>X-Mandrakelinux-Office</Category>
+      </Or>
+    </Include>
+    <Menu>
+      <Name>Accessories</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-Accessories-kcalc.desktop</Filename>
+        <Filename>Mandrakelinux-Office-Accessories-oooqs.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2daccessories.directory</Directory>
+      <Include>
+	<Or>
+        <Category>X-Mandrakelinux-Office-Accessories</Category>
+	<Category>Calculator</Category>
+	</Or>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Address Books</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-AddressBooks-kaddressbook.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2daddressbooks.directory</Directory>
+      <Include>
+       <Or>
+        <Category>X-Mandrakelinux-Office-AddressBooks</Category>
+	<Category>ContactManagement</Category>
+       </Or>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Communications</Name>
+      <Layout>
+        <Menuname>Fax</Menuname>
+        <Menuname>Phone</Menuname>
+        <Menuname>PDA</Menuname>
+        <Menuname>Other</Menuname>
+        <Merge type="menus"/>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2dcommunications.directory</Directory>
+      <Include>
+       <Or>
+        <Category>X-Mandrakelinux-Office-Communications</Category>
+       </Or>
+      </Include>
+      <Menu>
+        <Name>Fax</Name>
+        <Directory>mandrakelinux$2doffice$2dcommunications$2dfax.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-Office-Communications-Fax</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>PDA</Name>
+        <Layout>
+          <Merge type="menus"/>
+          <Filename>Mandrakelinux-Office-Communications-PDA-kpilot.desktop</Filename>
+          <Merge type="files"/>
+        </Layout>
+        <Directory>mandrakelinux$2doffice$2dcommunications$2dpda.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-Office-Communications-PDA</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Phone</Name>
+        <Directory>mandrakelinux$2doffice$2dcommunications$2dphone.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-Office-Communications-Phone</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Other</Name>
+        <Directory>mandrakelinux$2doffice$2dcommunications$2dother.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-Office-Communications-Other</Category>
+        </Include>
+      </Menu>
+    </Menu>
+    <Menu>
+      <Name>Drawing</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-Drawing-OpenOffice.org Draw.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2ddrawing.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Office-Drawing</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Graphs</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-Graphs-Dia.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2dgraphs.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Office-Graphs</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Presentations</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-Presentations-OpenOffice.org Impress.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2dpresentations.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Office-Presentations</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Publishing</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-Publishing-Xpdf.desktop</Filename>
+        <Filename>Mandrakelinux-Office-Publishing-GhostView.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2dpublishing.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Office-Publishing</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Spreadsheets</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-Spreadsheets-OpenOffice.org Calc.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2dspreadsheets.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Office-Spreadsheets</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Tasks Management</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-TasksManagement-Planner.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2dtasksmanagement.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Office-TasksManagement</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Time Management</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-TimeManagement-korganizer.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2dtimemanagement.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Office-TimeManagement</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Other</Name>
+      <Directory>mandrakelinux$2doffice$2dother.directory</Directory>
+      <Include>
+	<Or>
+        <Category>X-Mandrakelinux-Office-Other</Category>
+	</Or>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Wordprocessors</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Office-Wordprocessors-OpenOffice.org Writer.desktop</Filename>
+        <Filename>Mandrakelinux-Office-Wordprocessors-OpenOffice.org Math.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2doffice$2dwordprocessors.directory</Directory>
+      <Include>
+	<Or>
+        <Category>X-Mandrakelinux-Office-Wordprocessors</Category>
+	<Category>Wordprocessor</Category>
+	</Or>
+      </Include>
+    </Menu>
+  </Menu>
+  <Menu>
+    <Name>Internet</Name>
+    <Layout>
+      <Menuname>Web Browsers</Menuname>
+      <Menuname>Mail</Menuname>
+      <Menuname>Instant Messaging</Menuname>
+      <Menuname>Chat</Menuname>
+      <Menuname>News</Menuname>
+      <Menuname>File Transfer</Menuname>
+      <Menuname>Video Conference</Menuname>
+      <Menuname>Web Editors</Menuname>
+      <Menuname>Remote Access</Menuname>
+      <Menuname>Other</Menuname>
+      <Merge type="menus"/>
+      <Merge type="files"/>
+    </Layout>
+    <Directory>mandrakelinux$2dinternet.directory</Directory>
+    <Include>
+      <Category>X-Mandrakelinux-Internet</Category>
+    </Include>
+    <Menu>
+      <Name>Chat</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Internet-Chat-ksirc.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dinternet$2dchat.directory</Directory>
+      <Include>
+       <Or>
+        <Category>X-Mandrakelinux-Internet-Chat</Category>
+        <Category>IRCClient</Category>
+       </Or>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>File Transfer</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Internet-FileTransfer-kbear.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-FileTransfer-Gtm.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dinternet$2dfiletransfert.directory</Directory>
+      <Include>
+       <Or>
+        <Category>X-Mandrakelinux-FileTransfer</Category>
+       </Or>
+      </Include>
+    </Menu>
+
+    <Menu>
+      <Name>Instant Messaging</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Internet-InstantMessaging-kopete.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-InstantMessaging-Gaim.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dinternet$2dinstantmessaging.directory</Directory>
+      <Include>
+	<Or>
+        <Category>X-Mandrakelinux-Internet-InstantMessaging</Category>
+        <Category>InstantMessaging</Category>
+	</Or>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Mail</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Internet-Mail-Kontact.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-Mail-Evolution.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-Mail-Mozilla Thunderbird.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dinternet$2dmail.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Internet-Mail</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>News</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Internet-News-KNode.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dinternet$2dnews.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Internet-News</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Video Conference</Name>
+      <Directory>mandrakelinux$2dinternet$2dkppp.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Internet-VideoConference</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Other</Name>
+      <Directory>mandrakelinux$2dinternet$2dother.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Internet-Other</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Remote Access</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Internet-RemoteAccess-Kppp.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dinternet$2dremoteaccess.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Internet-RemoteAccess</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Web Browsers</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Internet-WebBrowsers-konqbrowser.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-WebBrowsers-Mozilla.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-WebBrowsers-Mozilla Firefox.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-WebBrowsers-Epiphany Web Browser.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-WebBrowsers-Epiphany Bookmarks Editor.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dinternet$2dwebbrowsers.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Internet-WebBrowsers</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Web Editors</Name>
+      <Directory>mandrakelinux$2dinternet$2dwebeditors.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Internet-WebEditors</Category>
+      </Include>
+    </Menu>
+  </Menu>
+  <Menu>
+    <Name>More Applications</Name>
+    <Layout>
+      <Menuname>Accessibility</Menuname>
+      <Menuname>Development</Menuname>
+      <Menuname>Editors</Menuname>
+      <Menuname>Emulators</Menuname>
+      <Menuname>Finances</Menuname>
+      <Menuname>Databases</Menuname>
+      <Menuname>Education</Menuname>
+      <Menuname>Sciences</Menuname>
+      <Menuname>Communications</Menuname>
+      <Menuname>Games</Menuname>
+      <Menuname>Documentation</Menuname>
+      <Menuname>Other</Menuname>
+      <Merge type="menus"/>
+      <Merge type="files"/>
+    </Layout>
+    <Directory>mandrakelinux$2dmoreapplications.directory</Directory>
+    <Include>
+      <Category>X-Mandrakelinux-MoreApplications</Category>
+    </Include>
+    <Menu>
+      <Name>Accessibility</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-MoreApplications-Accessibility-kmag.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmoreapplications$2daccessibility.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Accessibility</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Communications</Name>
+      <Directory>mandrakelinux$2dmoreapplications$2dcommunications.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Communications</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Databases</Name>
+      <Directory>mandrakelinux$2dmoreapplications$2ddatabases.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Databases</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Development</Name>
+      <Layout>
+        <Menuname>Development Environment</Menuname>
+        <Menuname>Interpreters</Menuname>
+        <Menuname>Tools</Menuname>
+        <Menuname>Code Generators</Menuname>
+        <Merge type="menus"/>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmoreapplications$2ddevelopment.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Development</Category>
+      </Include>
+      <Menu>
+        <Name>Development Environments</Name>
+        <Layout>
+          <Merge type="menus"/>
+          <Filename>Mandrakelinux-MoreApplications-Development-DevelopmentEnvironments-kdevelop.desktop</Filename>
+          <Merge type="files"/>
+        </Layout>
+        <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2ddevelopmentenvironments.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Development-DevelopmentEnvironments</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Interpreters</Name>
+        <Layout>
+          <Merge type="menus"/>
+          <Filename>Mandrakelinux-MoreApplications-Development-Interpreters-GNU Prolog.desktop</Filename>
+          <Merge type="files"/>
+        </Layout>
+        <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2dinterpreters.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Development-Interpreters</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Tools</Name>
+        <Layout>
+          <Merge type="menus"/>
+          <Filename>Mandrakelinux-MoreApplications-Development-Tools-Gdb.desktop</Filename>
+          <Merge type="files"/>
+        </Layout>
+        <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2dtools.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Development-Tools</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Other</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2dother.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Development-Other</Category>
+        </Include>
+      </Menu>
+    </Menu>
+    <Menu>
+      <Name>Documentation</Name>
+      <Directory>mandrakelinux$2dmoreapplications$2ddocumentation.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Documentation</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Other</Name>
+      <Directory>mandrakelinux$2dmoreapplications$2dother.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Other</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Editors</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-MoreApplications-Editors-Emacs.desktop</Filename>
+        <Filename>Mandrakelinux-MoreApplications-Editors-XEmacs.desktop</Filename>
+        <Filename>Mandrakelinux-MoreApplications-Editors-VI editor.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmoreapplications$2deditors.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Editors</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Education</Name>
+       <Layout>
+        <Menuname>Economy</Menuname>
+        <Menuname>Geography</Menuname>
+        <Menuname>History</Menuname>
+        <Menuname>Languages</Menuname>
+        <Menuname>Literature</Menuname>
+        <Menuname>Sciences</Menuname>
+        <Menuname>Sports</Menuname>
+        <Menuname>Other</Menuname>
+        <Merge type="menus"/>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmoreapplications$2deducation.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Education</Category>
+      </Include>
+      <Menu>
+        <Name>Economy</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2deducation$2deconomy.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Education-Economy</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Geography</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2deducatino$2dgeography.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Education-Geography</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>History</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dhistory.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Education-History</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Languages</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dlanguages.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Education-Languages</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Literature</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dliterature.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Education-Literature</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Sciences</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dsciences.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Education-Sciences</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Sports</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dsports.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Education-Sports</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Other</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dother.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Education-Other</Category>
+        </Include>
+      </Menu>
+     </Menu>
+
+    <Menu>
+      <Name>Games</Name>
+      <Layout>
+        <Menuname>Adventure</Menuname>
+        <Menuname>Arcade</Menuname>
+        <Menuname>Boards</Menuname>
+        <Menuname>Cards</Menuname>
+        <Menuname>Puzzles</Menuname>
+        <Menuname>Sports</Menuname>
+        <Menuname>Strategy</Menuname>
+        <Menuname>Toys</Menuname>
+        <Merge type="menus"/>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmoreapplications$2dgames.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Games</Category>
+      </Include>
+      <Menu>
+        <Name>Adventure</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dadventure.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Adventure</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Arcade</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2darcade.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Arcade</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Boards</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dboards.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Boards</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Cards</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dcards.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Cards</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Puzzles</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dpuzzles.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Puzzles</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Sports</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dsports.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Sports</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Strategy</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dstrategy.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Strategy</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Other</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dother.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Other</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Toys</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dtoys.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Games-Toys</Category>
+        </Include>
+      </Menu>
+    </Menu>
+    <Menu>
+      <Name>Sciences</Name>
+      <Layout>
+        <Menuname>Artificial Intelligence</Menuname>
+        <Menuname>Astronomy</Menuname>
+        <Menuname>Biology</Menuname>
+        <Menuname>Chemistry</Menuname>
+        <Menuname>Computer Science</Menuname>
+        <Menuname>Data Visualization</Menuname>
+        <Menuname>Electricity</Menuname>
+        <Menuname>Geosciences</Menuname>
+        <Menuname>Image Processing</Menuname>
+        <Menuname>Mathematics</Menuname>
+        <Menuname>Numeric analysis</Menuname>
+        <Menuname>Parallel Computing</Menuname>
+        <Menuname>Physics</Menuname>
+        <Menuname>Robotics</Menuname>
+        <Menuname>Other</Menuname>
+        <Merge type="menus"/>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmoreapplications$2dsciences.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Sciences</Category>
+      </Include>
+      <Menu>
+        <Name>Artificial Intelligence</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dartificialintelligence.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-ArtificialIntelligence</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Astronomy</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dastronomy.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Astronomy</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Biology</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dbiology.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Biology</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Chemistry</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dchemistry.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Chemistry</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Computer Science</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dcomputerscience.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-ComputerScience</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Data Visualization</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2ddatavisualization.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-DataVisualization</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Electricity</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2delectricity.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Electricity</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Geosciences</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dgeosciences.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Geosciences</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Image Processing</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dimageprocessing.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-ImageProcessing</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Mathematics</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dmathematics.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Mathematics</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Numeric Analysis</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dnumericanalysis.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-NumericAnalysis</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Parallel Computing</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dparallelcomputing.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-ParallelComptuting</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Physics</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dphysics.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Physics</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Robotics</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2drobotics.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Robotics</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Other</Name>
+        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dother.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-MoreApplications-Sciences-Other</Category>
+        </Include>
+      </Menu>
+    </Menu>
+  </Menu>
+  <Menu>
+    <Name>Multimedia</Name>
+    <Layout>
+      <Menuname>Sound</Menuname>
+      <Menuname>Video</Menuname>
+      <Menuname>Graphics</Menuname>
+      <Menuname>Other</Menuname>
+      <Merge type="menus"/>
+      <Merge type="files"/>
+    </Layout>
+    <Directory>mandrakelinux$2dmultimedia.directory</Directory>
+    <Include>
+      <Category>X-Mandrakelinux-Multimedia</Category>
+    </Include>
+    <Menu>
+      <Name>Graphics</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Multimedia-Graphics-The GIMP.desktop</Filename>
+        <Filename>Mandrakelinux-Multimedia-Graphics-kooka.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmultimedia$2dgraphics.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Multimedia-Graphics</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Sound</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Multimedia-Sound-kscd.desktop</Filename>
+        <Filename>Mandrakelinux-Multimedia-Sound-Totem Media Player.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmultimedia$2dsound.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Multimedia-Sound</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Video</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-Multimedia-Video-Totem Movie Player.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dmultimedia$2dvideo.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Multimedia-Video</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Other</Name>
+      <Directory>mandrakelinux$2dmultimedia$2dother.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-Multimedia-Other</Category>
+      </Include>
+    </Menu>
+  </Menu>
+  <Menu>
+    <Name>System</Name>
+    <Layout>
+      <Menuname>Terminals</Menuname>
+      <Menuname>Text Tools</Menuname>
+      <Menuname>Configuration</Menuname>
+      <Menuname>Archiving</Menuname>
+      <Menuname>File Tools</Menuname>
+      <Menuname>Monitoring</Menuname>
+      <Menuname>Session</Menuname>
+      <Merge type="menus"/>
+      <Merge type="files"/>
+    </Layout>
+    <Directory>mandrakelinux$2dsystem.directory</Directory>
+    <Include>
+      <Category>X-Mandrakelinux-System</Category>
+    </Include>
+    <Menu>
+      <Name>Archiving</Name>
+      <Layout>
+        <Menuname>Backup</Menuname>
+        <Menuname>CD Burning</Menuname>
+        <Menuname>Compression</Menuname>
+        <Menuname>Other</Menuname>
+        <Merge type="menus"/>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dsystem$2darchiving.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-System-Archiving</Category>
+      </Include>
+      <Menu>
+        <Name>Backup</Name>
+        <Layout>
+          <Merge type="menus"/>
+          <Filename>Mandrakelinux-System-Archiving-Backup-DrakSync.desktop</Filename>
+          <Merge type="files"/>
+        </Layout>
+        <Directory>mandrakelinux$2dsystem$2darchiving$2dbackup.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Archiving-Backup</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>CD Burning</Name>
+        <Layout>
+          <Merge type="menus"/>
+          <Filename>Mandrakelinux-System-Archiving-CDBurning-k3b.desktop</Filename>
+          <Merge type="files"/>
+        </Layout>
+        <Directory>mandrakelinux$2dsystem$2darchiving$2dcdburning.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Archiving-CDBurning</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Compression</Name>
+        <Directory>mandrakelinux$2dsystem$2darchiving$2dcompression.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Archiving-Compression</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Other</Name>
+        <Directory>mandrakelinux$2dsystem$2darchiving$2dother.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Archiving-Other</Category>
+        </Include>
+      </Menu>
+    </Menu>
+    <Menu>
+      <Name>Configuration</Name>
+      <Layout>
+        <Filename>Mandrakelinux-System-Configuration-KControl.desktop</Filename>
+        <Filename>Mandrakelinux-System-Configuration-Configure Your Computer.desktop</Filename>
+        <Menuname>Boot and Init</Menuname>
+        <Menuname>KDE</Menuname>
+        <Menuname>GNOME</Menuname>
+        <Menuname>Hardware</Menuname>
+        <Menuname>Networking</Menuname>
+        <Menuname>Packaging</Menuname>
+        <Menuname>Printing</Menuname>
+        <Merge type="menus"/>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dsystem$2dconfiguration.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-System-Configuration</Category>
+      </Include>
+      <Menu>
+        <Name>Boot and Init</Name>
+        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dbootandinit.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Configuration-BootandInit</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>GNOME</Name>
+        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dgnome.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Configuration-GNOME</Category>
+        </Include>
+        <Menu>
+          <Name>Advanced</Name>
+          <Directory>mandrakelinux$2dsystem$2dconfiguration$2dgnome$2dadvanced.directory</Directory>
+          <Include>
+            <Category>X-Mandrakelinux-System-Configuration-GNOME-Advanced</Category>
+          </Include>
+        </Menu>
+      </Menu>
+      <Menu>
+        <Name>KDE</Name>
+        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Configuration-KDE</Category>
+        </Include>
+        <Menu>
+          <Name>Components</Name>
+          <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dcomponents.directory</Directory>
+          <Include>
+            <Category>X-Mandrakelinux-System-Configuration-KDE-Components</Category>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>System</Name>
+          <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dsystem.directory</Directory>
+          <Include>
+            <Category>X-Mandrakelinux-System-Configuration-KDE-System</Category>
+          </Include>
+        </Menu>
+      </Menu>
+      <Menu>
+        <Name>Networking</Name>
+        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dnetworking.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Configuration-Networking</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Packaging</Name>
+        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dpackaging.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Configuration-Packaging</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Printing</Name>
+        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dprinting.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Configuration-Printing</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Users</Name>
+        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dusers.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Configuration-Users</Category>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Other</Name>
+        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dother.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Configuration-Other</Category>
+        </Include>
+      </Menu>
+    </Menu>
+    <Menu>
+      <Name>File Tools</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-System-FileTools-Kfind.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dsystem$2dfiletools.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-System-FileTools</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Monitoring</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-System-Monitoring-ksysguard.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dsystem$2dmonitoring.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-System-Monitoring</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Session</Name>
+      <Directory>mandrakelinux$2dsystem$2dsession.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-System-Session</Category>
+      </Include>
+      <Menu>
+        <Name>Windowmanagers</Name>
+        <Directory>mandrakelinux$2dsystem$2dsession$2dwindowmanagers.directory</Directory>
+        <Include>
+          <Category>X-Mandrakelinux-System-Session-Windowmanagers</Category>
+        </Include>
+      </Menu>
+    </Menu>
+    <Menu>
+      <Name>Terminals</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-System-Terminals-konsole.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dsystem$2dterminals.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-System-Terminals</Category>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Text Tools</Name>
+      <Layout>
+        <Merge type="menus"/>
+        <Filename>Mandrakelinux-System-TextTools-kdict.desktop</Filename>
+        <Merge type="files"/>
+      </Layout>
+      <Directory>mandrakelinux$2dsystem$2dtexttools.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-System-TextTools</Category>
+      </Include>
+    </Menu>
+  </Menu>
+  <Menu>
+    <Name>Other</Name>
+    <Directory>mandrakelinux$2d$2eother.directory</Directory>
+    <Include>
+      <Category>X-Mandrakelinux-Other</Category>
+    </Include>
+  </Menu>
+  <Menu>
+    <Name>.hidden</Name>
+    <Directory>mandrakelinux$2d$2ehidden.directory</Directory>
+    <Include>
+      <Category>X-Mandrakelinux-.hidden</Category>
+    </Include>
+  </Menu>
+</Menu>

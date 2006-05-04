@@ -69,7 +69,7 @@
 ?package(menu): needs=x11 section="More Applications" title="Communications" icon="communications_section.png"
 ?package(menu): needs=x11 section="More Applications" title="Databases" icon="databases_section.png"
 #
-?package(menu): needs=x11 section="More Applications" title="Development" icon="development_section.png" order="Development Environment,Interpreter,Tools,Code Generators,_mergemenu_,_mergefile_"
+?package(menu): needs=x11 section="More Applications" title="Development" icon="development_section.png" order="Development Environment,Interpreters,Tools,Code Generators,_mergemenu_,_mergefile_"
 ?package(menu): needs=x11 section="More Applications/Development" title="Code Generators" icon="code_generator_section.png"
 ?package(menu): needs=x11 section="More Applications/Development" title="Development Environments" icon="development_environment_section.png" order="_mergemenu_,kdevelop,_mergefile_"
 ?package(menu): needs=x11 section="More Applications/Development" title="Interpreters" icon="interpreters_section.png" order="_mergemenu_,GNU Prolog,_mergefile_"

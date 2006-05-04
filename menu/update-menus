@@ -1,0 +1,40 @@
+#!/bin/sh
+
+usage() {
+echo "Usage: update-menus [options]"
+echo "  -v                     Be verbose about what is going on."
+echo "  -u  generate only user menu (useful for root user)"
+echo "  -h, --help             This message."
+
+exit 0	
+}
+
+
+VERBOSE=0
+
+if [ "$UID" == "0" ]; then 
+ USER_MENU=0 
+else 
+ USER_MENU=1
+fi
+
+if [ $# != 0 ]; then
+
+while getopts ":vunh" option
+do
+  case $option in
+    v     ) VERBOSE=1 ; RUN_PARTS_ARG="--verbose" ;;
+    u     ) USER_MENU=1 ;;
+    h     ) usage ;;
+  esac
+done
+fi
+
+export VERBOSE
+export USER_MENU
+
+if [ -d /etc/menu.d ]; then 
+   run-parts $RUN_PARTS_ARG /etc/menu.d 
+ echo 
+fi
+
