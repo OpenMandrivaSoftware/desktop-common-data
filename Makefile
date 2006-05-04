@@ -22,7 +22,7 @@ dir:
 
 localcopy:
 	find . -not -name "$(PACKAGE)-$(VERSION)"|cpio -pd $(PACKAGE)-$(VERSION)/
-	find $(PACKAGE)-$(VERSION) -type d -name CVS -o -name .cvsignore |xargs rm -rf
+	find $(PACKAGE)-$(VERSION) -type d -name CVS -o -name .cvsignore -name '*~' |xargs rm -rf
 
 tar:
 	tar cvf $(PACKAGE)-$(VERSION).tar $(PACKAGE)-$(VERSION)

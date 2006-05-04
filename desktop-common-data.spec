@@ -103,7 +103,7 @@ install -m 0644 menu/defaultlayout-simplified.menu %buildroot/%_localstatedir/me
 # XDG menus
 install -d -m 0755 %buildroot/%_sysconfdir/xdg/menus/applications-merged
 install -d -m 0755 %buildroot/%_sysconfdir/menu.d
-install -m 0644 menu/applications-mdk.menu %buildroot/%_sysconfdir/xdg/
+install -m 0644 menu/applications-mdk.menu %buildroot/%_sysconfdir/xdg/menus
 install -m 0755 menu/xdg_menu %buildroot/%_bindir
 #temporary name
 install -m 0755 menu/update-menus %buildroot/%_bindir/update-menus-xdg
@@ -148,7 +148,10 @@ rm -fr %buildroot
 
 %_sysconfdir/X11/xinit.d/*
 %dir %_sysconfdir/menu.d
-%_sysconfdir/xdg
+%dir %_sysconfdir/xdg
+%dir %_sysconfdir/xdg/menus
+%dir %_sysconfdir/xdg/menus/applications-merged
+%config(noreplace) %_sysconfdir/xdg/menus/*.menu
 
 #
 %dir %_datadir/faces/
