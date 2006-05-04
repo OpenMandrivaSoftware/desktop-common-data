@@ -1,7 +1,7 @@
 PACKAGE = desktop-common-data
 NAME = desktop-common-data
 VERSION:=$(shell rpm -q --qf '%{VERSION}\n' --specfile $(PACKAGE).spec | head -1)
-RELEASE:=$(shell rpm -q --qf '%{RELEASE}\n' --specfile $(PACKAGE).spec | head -1| sed -e 's/%mkrel \(.*\)/\1mdk/g)
+RELEASE:=$(shell rpm -q --qf '%{RELEASE}\n' --specfile $(PACKAGE).spec | head -1| sed -e 's/%mkrel \(.*\)/\1mdk/g')
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 mandir=/usr/share/man
 
