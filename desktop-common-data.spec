@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	%mkrel 3
+Release: 	%mkrel 4
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -185,6 +185,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed May 10 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-4mdk
+- Add missing catergories in menu file (laurent)
+
 * Thu May 04 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-3mdk
 - Add applications-mdk.menu file for XDG menu system
 - Add xdg_menu script from SUSE to support old WM
