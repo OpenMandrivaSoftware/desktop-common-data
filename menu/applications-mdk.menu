@@ -397,7 +397,7 @@
       <Menuname>Databases</Menuname>
       <Menuname>Education</Menuname>
       <Menuname>Sciences</Menuname>
-      <Menuname>Communications</Menuname>
+	  <Menuname>Communications</Menuname>
       <Menuname>Games</Menuname>
       <Menuname>Documentation</Menuname>
       <Menuname>Other</Menuname>
@@ -426,7 +426,14 @@
       <Include>
         <Category>X-Mandrakelinux-MoreApplications-Communications</Category>
       </Include>
-    </Menu>
+	</Menu>
+    <Menu>
+      <Name>Finances</Name>
+      <Directory>mandrakelinux$2dmoreapplications$2dfinances.directory</Directory>
+      <Include>
+        <Category>X-Mandrakelinux-MoreApplications-Finances</Category>
+      </Include>
+    </Menu>	
     <Menu>
       <Name>Databases</Name>
       <Directory>mandrakelinux$2dmoreapplications$2ddatabases.directory</Directory>
@@ -992,7 +999,63 @@
           <Include>
             <Category>X-Mandrakelinux-System-Configuration-KDE-Components</Category>
           </Include>
-        </Menu>
+  		</Menu>
+		<Menu>
+			<Name>Information</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dinformation.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-Information</Category>
+		</Include>
+		</Menu>
+		<Menu>
+			<Name>LookNFeel</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dlooknfeel.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-LookNFeel</Category>
+		</Include>
+		</Menu>
+		<Menu>
+			<Name>Network</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dnetwork.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-Network</Category>
+		</Include>
+		</Menu>
+		<Menu>
+			<Name>Peripherals</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dperipherals.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-Peripherals</Category>
+		</Include>
+		</Menu>
+		<Menu>
+			<Name>PowerControl</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dpowercontrol.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-PowerControl</Category>
+		</Include>
+		</Menu>
+		<Menu>
+			<Name>Security</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dsecurity.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-Security</Category>
+		</Include>
+		</Menu>
+		<Menu>
+			<Name>Sound</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dsound.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-Sound</Category>
+		</Include>
+		</Menu>
+		<Menu>
+		<Name>WebBrowsing</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dwebbrowsing.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-WebBrowsing</Category>
+		</Include>
+		</Menu>
         <Menu>
           <Name>System</Name>
           <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dsystem.directory</Directory>
