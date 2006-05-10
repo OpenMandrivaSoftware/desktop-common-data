@@ -1,3 +1,11 @@
+2006-05-10 11:17  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec: Add missing categories (laurent)
+
+2006-05-10 11:04  Laurent Montel <lmontel at mandriva.com>
+
+	* menu/applications-mdk.menu: Fix missing menu entry (fix kcontrol)
+
 2006-05-04 18:26  Frederic Crozat <fcrozat at mandriva.com>
 
 	* Makefile: fix typo
