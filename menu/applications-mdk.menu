@@ -55,7 +55,7 @@
       <Name>Accessories</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Office-Accessories-kcalc.desktop</Filename>
+        <Filename>kde-kcalc.desktop</Filename>
         <Filename>Mandrakelinux-Office-Accessories-oooqs.desktop</Filename>
         <Merge type="files"/>
       </Layout>
@@ -71,7 +71,7 @@
       <Name>Address Books</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Office-AddressBooks-kaddressbook.desktop</Filename>
+        <Filename>kde-kaddressbook.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2doffice$2daddressbooks.directory</Directory>
@@ -109,7 +109,7 @@
         <Name>PDA</Name>
         <Layout>
           <Merge type="menus"/>
-          <Filename>Mandrakelinux-Office-Communications-PDA-kpilot.desktop</Filename>
+          <Filename>kde-kpilot.desktop</Filename>
           <Merge type="files"/>
         </Layout>
         <Directory>mandrakelinux$2doffice$2dcommunications$2dpda.directory</Directory>
@@ -209,7 +209,7 @@
       <Name>Time Management</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Office-TimeManagement-korganizer.desktop</Filename>
+        <Filename>kde-korganizer.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2doffice$2dtimemanagement.directory</Directory>
@@ -267,7 +267,7 @@
       <Name>Chat</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Internet-Chat-ksirc.desktop</Filename>
+        <Filename>kde-ksirc.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dinternet$2dchat.directory</Directory>
@@ -298,7 +298,7 @@
       <Name>Instant Messaging</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Internet-InstantMessaging-kopete.desktop</Filename>
+        <Filename>kde-kopete.desktop</Filename>
         <Filename>Mandrakelinux-Internet-InstantMessaging-Gaim.desktop</Filename>
         <Merge type="files"/>
       </Layout>
@@ -314,7 +314,7 @@
       <Name>Mail</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Internet-Mail-Kontact.desktop</Filename>
+        <Filename>kde-Kontact.desktop</Filename>
         <Filename>Mandrakelinux-Internet-Mail-Evolution.desktop</Filename>
         <Filename>Mandrakelinux-Internet-Mail-Mozilla Thunderbird.desktop</Filename>
         <Merge type="files"/>
@@ -328,7 +328,7 @@
       <Name>News</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Internet-News-KNode.desktop</Filename>
+        <Filename>kde-KNode.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dinternet$2dnews.directory</Directory>
@@ -354,7 +354,7 @@
       <Name>Remote Access</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Internet-RemoteAccess-Kppp.desktop</Filename>
+        <Filename>kde-Kppp.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dinternet$2dremoteaccess.directory</Directory>
@@ -366,9 +366,9 @@
       <Name>Web Browsers</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Internet-WebBrowsers-konqbrowser.desktop</Filename>
-        <Filename>Mandrakelinux-Internet-WebBrowsers-Mozilla.desktop</Filename>
+        <Filename>kde-konqbrowser.desktop</Filename>
         <Filename>Mandrakelinux-Internet-WebBrowsers-Mozilla Firefox.desktop</Filename>
+        <Filename>Mandrakelinux-Internet-WebBrowsers-Mozilla.desktop</Filename>
         <Filename>Mandrakelinux-Internet-WebBrowsers-Epiphany Web Browser.desktop</Filename>
         <Filename>Mandrakelinux-Internet-WebBrowsers-Epiphany Bookmarks Editor.desktop</Filename>
         <Merge type="files"/>
@@ -412,7 +412,7 @@
       <Name>Accessibility</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-MoreApplications-Accessibility-kmag.desktop</Filename>
+        <Filename>kde-kmag.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dmoreapplications$2daccessibility.directory</Directory>
@@ -459,7 +459,7 @@
         <Name>Development Environments</Name>
         <Layout>
           <Merge type="menus"/>
-          <Filename>Mandrakelinux-MoreApplications-Development-DevelopmentEnvironments-kdevelop.desktop</Filename>
+          <Filename>kde-kdevelop.desktop</Filename>
           <Merge type="files"/>
         </Layout>
         <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2ddevelopmentenvironments.directory</Directory>
@@ -836,7 +836,7 @@
       <Layout>
         <Merge type="menus"/>
         <Filename>Mandrakelinux-Multimedia-Graphics-The GIMP.desktop</Filename>
-        <Filename>Mandrakelinux-Multimedia-Graphics-kooka.desktop</Filename>
+        <Filename>kde-kooka.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dmultimedia$2dgraphics.directory</Directory>
@@ -848,7 +848,7 @@
       <Name>Sound</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-Multimedia-Sound-kscd.desktop</Filename>
+        <Filename>kde-kscd.desktop</Filename>
         <Filename>Mandrakelinux-Multimedia-Sound-Totem Media Player.desktop</Filename>
         <Merge type="files"/>
       </Layout>
@@ -924,7 +924,7 @@
         <Name>CD Burning</Name>
         <Layout>
           <Merge type="menus"/>
-          <Filename>Mandrakelinux-System-Archiving-CDBurning-k3b.desktop</Filename>
+          <Filename>kde-k3b.desktop</Filename>
           <Merge type="files"/>
         </Layout>
         <Directory>mandrakelinux$2dsystem$2darchiving$2dcdburning.directory</Directory>
@@ -950,7 +950,7 @@
     <Menu>
       <Name>Configuration</Name>
       <Layout>
-        <Filename>Mandrakelinux-System-Configuration-KControl.desktop</Filename>
+        <Filename>kde-KControl.desktop</Filename>
         <Filename>Mandrakelinux-System-Configuration-Configure Your Computer.desktop</Filename>
         <Menuname>Boot and Init</Menuname>
         <Menuname>KDE</Menuname>
@@ -1104,7 +1104,7 @@
       <Name>File Tools</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-System-FileTools-Kfind.desktop</Filename>
+        <Filename>kde-Kfind.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dsystem$2dfiletools.directory</Directory>
@@ -1116,7 +1116,7 @@
       <Name>Monitoring</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-System-Monitoring-ksysguard.desktop</Filename>
+        <Filename>kde-ksysguard.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dsystem$2dmonitoring.directory</Directory>
@@ -1142,7 +1142,7 @@
       <Name>Terminals</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-System-Terminals-konsole.desktop</Filename>
+        <Filename>kde-konsole.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dsystem$2dterminals.directory</Directory>
@@ -1154,7 +1154,7 @@
       <Name>Text Tools</Name>
       <Layout>
         <Merge type="menus"/>
-        <Filename>Mandrakelinux-System-TextTools-kdict.desktop</Filename>
+        <Filename>kde-kdict.desktop</Filename>
         <Merge type="files"/>
       </Layout>
       <Directory>mandrakelinux$2dsystem$2dtexttools.directory</Directory>
