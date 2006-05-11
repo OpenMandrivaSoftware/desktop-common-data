@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	%mkrel 4
+Release: 	%mkrel 5
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -185,6 +185,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu May 11 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-5mdk
+- Update menu file with new filename for kde
+
 * Wed May 10 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-4mdk
 - Add missing catergories in menu file (laurent)
 
