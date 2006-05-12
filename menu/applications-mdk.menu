@@ -992,7 +992,14 @@
         <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Configuration-KDE</Category>
-        </Include>
+  		</Include>
+		<Menu>
+			<Name>Accessibility</Name>
+			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2daccessibility.directory</Directory>
+		<Include>
+			<Category>X-Mandrakelinux-System-Configuration-KDE-Accessibility</Category>
+		</Include>
+		</Menu>
         <Menu>
           <Name>Components</Name>
           <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dcomponents.directory</Directory>
