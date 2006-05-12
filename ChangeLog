@@ -1,3 +1,11 @@
+2006-05-12 11:24  Frederic Crozat <fcrozat at mandriva.com>
+
+	* screensavers/: 01.png, 02.png, 03.png, 04.png, 05.png, 06.png,
+	  07.png, 08.png, 09.png, 1.png, 10.png, 11.png, 12.png, 13.png,
+	  14.png, 15.png, 16.png, 17.png, 18.png, 19.png, 2.png, 20.png,
+	  21.png, 22.png, 23.png, 24.png, 25.png, 26.png, 27.png, 3.png,
+	  4.png, 5.png, 6.png, 7.png, 8.png, 9.png: Readd screensaver files
+
 2006-05-11 18:08  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec: Use new filenames for kde .desktop file
@@ -885,18 +893,9 @@
 
 	* menu/mandrake_desk: Update for 9.1
 
-2003-03-12 15:46  David Baudens <baudens at mandriva.com>
-
-	* screensavers/: 1.png, 18.png, 19.png, 2.png, 20.png, 21.png,
-	  22.png, 23.png, 24.png, 25.png, 26.png, 27.png, 3.png, 4.png,
-	  5.png, 6.png, 7.png, 8.png, 9.png: Update
-
 2003-03-12 15:43  David Baudens <baudens at mandriva.com>
 
-	* mandrake_desk.spec, screensavers/10.png, screensavers/11.png,
-	  screensavers/12.png, screensavers/13.png, screensavers/14.png,
-	  screensavers/15.png, screensavers/16.png, screensavers/17.png:
-	  Update
+	* mandrake_desk.spec: Update
 
 2003-02-14 11:43  David Baudens <baudens at mandriva.com>
 
@@ -934,17 +933,9 @@
 	  ic-util-tux3.png, ic-util-tux4.png, ic-util-tuxgeneric.png:
 	  Remove
 
-2002-08-29 17:37  David Baudens <baudens at mandriva.com>
+2002-08-29 17:38  David Baudens <baudens at mandriva.com>
 
-	* screensavers/01.png, screensavers/02.png, screensavers/03.png,
-	  screensavers/04.png, screensavers/05.png, screensavers/06.png,
-	  screensavers/07.png, screensavers/08.png, screensavers/09.png,
-	  screensavers/10.png, screensavers/11.png, screensavers/12.png,
-	  screensavers/13.png, screensavers/14.png, screensavers/15.png,
-	  screensavers/16.png, screensavers/17.png, screensavers/18.png,
-	  screensavers/19.png, screensavers/20.png, screensavers/21.png,
-	  screensavers/22.png, screensavers/23.png, mandrake_desk.spec:
-	  Update
+	* mandrake_desk.spec: Update
 
 2002-08-29 11:58  David Baudens <baudens at mandriva.com>
 
@@ -962,16 +953,16 @@
 
 2002-08-27 15:29  David Baudens <baudens at mandriva.com>
 
-	* mandrake_desk.spec, screensavers/02.png: Update
+	* mandrake_desk.spec: Update
 
 2002-08-26 17:29  Pablo Saratxaga <pablo at mandriva.com>
 
 	* man/: cs/chksession.8, ru/chksession.8: Added Czech and Russian
 	  man pages
 
-2002-08-23 16:48  David Baudens <baudens at mandriva.com>
+2002-08-23 16:49  David Baudens <baudens at mandriva.com>
 
-	* screensavers/02.png, mandrake_desk.spec: Update
+	* mandrake_desk.spec: Update
 
 2002-08-23 16:13  David Baudens <baudens at mandriva.com>
 
@@ -989,22 +980,6 @@
 
 	* mandrake_desk.spec: Update
 
-2002-08-22 11:09  David Baudens <baudens at mandriva.com>
-
-	* screensavers/: 01.png, 02.png, 03.png, 04.png, 05.png, 06.png,
-	  07.png, 08.png, 09.png, 10.png, 11.png, 12.png, 13.png, 14.png,
-	  15.png, 16.png, 17.png, 18.png, 19.png, 20.png, 21.png, 22.png,
-	  23.png: Add new images for 9.0
-
-2002-08-22 11:07  David Baudens <baudens at mandriva.com>
-
-	* screensavers/: 1-boot&init.png, 10-service.png, 11-support.png,
-	  12-Xdrake.png, 13-filetools.png, 14-filetransfert.png,
-	  15-tux.png, 16-chess.png, 17-floppy.png, 18-disc.png,
-	  2-hardware.png, 3-rouage.png, 4-rpmsecu.png, 5-carte.png,
-	  6-shell.png, 7-bugfix.png, 8-bureau.png, 9-docu.png: Remove 8.2
-	  images
-
 2002-08-02 14:03  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
@@ -1012,14 +987,6 @@
 2002-08-01 17:57  David Baudens <baudens at mandriva.com>
 
 	* mandrake_desk.spec: Update
-
-2002-08-01 17:52  David Baudens <baudens at mandriva.com>
-
-	* screensavers/: 1-boot&init.png, 10-service.png, 11-support.png,
-	  12-Xdrake.png, 13-filetools.png, 14-filetransfert.png,
-	  15-tux.png, 16-chess.png, 17-floppy.png, 18-disc.png,
-	  2-hardware.png, 3-rouage.png, 4-rpmsecu.png, 5-carte.png,
-	  6-shell.png, 7-bugfix.png, 8-bureau.png, 9-docu.png: Add
 
 2002-08-01 12:12  Arkadiusz Lipiec <alipiec at elka.pw.edu.pl>
 
