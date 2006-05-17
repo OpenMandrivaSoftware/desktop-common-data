@@ -117,8 +117,8 @@ for i in %_datadir/locale/*/LC_MESSAGES/menu-messages.mo ; do
  msgunfmt $i > tmp-l10n/`echo $i | sed -e 's|%{_datadir}/locale/||' -e 's|/LC.*||'`.po
 done
  
-for i in menus/desktop-directories/*.in ; do
- %{_bindir}/intltool-merge --desktop-style -c tmp-l10n/cache tmp-l10n $i $buildroot/%_datadir/desktop-directories/`basename $i .in` 
+for i in menu/desktop-directories/*.in ; do
+ %{_bindir}/intltool-merge --desktop-style -c tmp-l10n/cache tmp-l10n $i %buildroot/%_datadir/desktop-directories/`basename $i .in` 
 done
 
 
