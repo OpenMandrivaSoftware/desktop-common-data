@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	%mkrel 6
+Release: 	%mkrel 7
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -12,6 +12,9 @@ Group:		System/Configuration/Other
 Source:		%{name}-%{version}.tar.bz2
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
+BuildRequires:	intltool
+BuildRequires:  mdk-menu-messages
+BuildRequires:  gettext
 BuildArch:	noarch
 Requires:	mandrake_theme
 Obsoletes:	mandrake_desk
@@ -108,6 +111,16 @@ install -m 0755 menu/xdg_menu %buildroot/%_bindir
 #temporary name
 install -m 0755 menu/update-menus %buildroot/%_bindir/update-menus-xdg
 
+install -d -m 0755 %buildroot/%_datadir/desktop-directories
+mkdir tmp-l10n
+for i in %_datadir/locale/*/LC_MESSAGES/menu-messages.mo ; do
+ msgunfmt $i > tmp-l10n/`echo $i | sed -e 's|%{_datadir}/locale/||' -e 's|/LC.*||'`.po
+done
+ 
+for i in menus/desktop-directories/*.in ; do
+ %{_bindir}/intltool-merge --desktop-style -c tmp-l10n/cache tmp-l10n $i $buildroot/%_datadir/desktop-directories/`basename $i .in` 
+done
+
 
 #install theme for GDM/KDM
 install -d -m 0755 %buildroot/%_datadir/mdk/dm
@@ -183,8 +196,15 @@ rm -fr %buildroot
 %_liconsdir/*.png
 %_miconsdir/*.png
 
+%_datadir/desktop-directories/*.directory
+
 
 %changelog
+* Wed May 17 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-7mdk
+- ship our own .directory files now
+- use kde .directory files when possible
+- add more upstream categories
+
 * Fri May 12 2006 Laurent MONTEL <lmontel@mandriva.com> 2006-6
 - Update for missing kcontrol entry
 
