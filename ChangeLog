@@ -1,3 +1,100 @@
+2006-05-17 19:01  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec: - ship our own .directory files now -
+	  use kde .directory files when possible - add more upstream
+	  categories
+
+2006-05-17 18:35  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/applications-mdk.menu: -use our own .directory files -use
+	  more official categories -use kde .directory when available
+
+2006-05-17 18:31  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/desktop-directories/: mandriva-hidden.directory.in,
+	  mandriva-internet-chat.directory.in,
+	  mandriva-internet-filetransfer.directory.in,
+	  mandriva-internet-instantmessaging.directory.in,
+	  mandriva-internet-mail.directory.in,
+	  mandriva-internet-news.directory.in,
+	  mandriva-internet-other.directory.in,
+	  mandriva-internet-remoteaccess.directory.in,
+	  mandriva-internet-videoconference.directory.in,
+	  mandriva-internet-webbrowsers.directory.in,
+	  mandriva-internet-webeditors.directory.in,
+	  mandriva-internet.directory.in,
+	  mandriva-moreapplications-accessibility.directory.in,
+	  mandriva-moreapplications-communications.directory.in,
+	  mandriva-moreapplications-databases.directory.in,
+	  mandriva-moreapplications-development-developmentenvironments.directory.in,
+	  mandriva-moreapplications-development-tools.directory.in,
+	  mandriva-moreapplications-development.directory.in,
+	  mandriva-moreapplications-documentation.directory.in,
+	  mandriva-moreapplications-editors.directory.in,
+	  mandriva-moreapplications-education-languages.directory.in,
+	  mandriva-moreapplications-education-other.directory.in,
+	  mandriva-moreapplications-education-sciences.directory.in,
+	  mandriva-moreapplications-education.directory.in,
+	  mandriva-moreapplications-finances.directory.in,
+	  mandriva-moreapplications-games-arcade.directory.in,
+	  mandriva-moreapplications-games-boards.directory.in,
+	  mandriva-moreapplications-games-cards.directory.in,
+	  mandriva-moreapplications-games-other.directory.in,
+	  mandriva-moreapplications-games-puzzles.directory.in,
+	  mandriva-moreapplications-games-toys.directory.in,
+	  mandriva-moreapplications-games.directory.in,
+	  mandriva-moreapplications-sciences-mathematics.directory.in,
+	  mandriva-moreapplications-sciences.directory.in,
+	  mandriva-moreapplications.directory.in,
+	  mandriva-multimedia-graphics.directory.in,
+	  mandriva-multimedia-sound.directory.in,
+	  mandriva-multimedia-video.directory.in,
+	  mandriva-multimedia.directory.in,
+	  mandriva-networking.directory.in,
+	  mandriva-office-accessories.directory.in,
+	  mandriva-office-addressbooks.directory.in,
+	  mandriva-office-communications-fax.directory.in,
+	  mandriva-office-communications-pda.directory.in,
+	  mandriva-office-communications-phone.directory.in,
+	  mandriva-office-communications.directory.in,
+	  mandriva-office-drawing.directory.in,
+	  mandriva-office-graphs.directory.in,
+	  mandriva-office-presentations.directory.in,
+	  mandriva-office-publishing.directory.in,
+	  mandriva-office-spreadsheets.directory.in,
+	  mandriva-office-tasksmanagement.directory.in,
+	  mandriva-office-timemanagement.directory.in,
+	  mandriva-office-wordprocessors.directory.in,
+	  mandriva-office.directory.in,
+	  mandriva-system-archiving-cdburning.directory.in,
+	  mandriva-system-archiving-compression.directory.in,
+	  mandriva-system-archiving.directory.in,
+	  mandriva-system-configuration-bootandinit.directory.in,
+	  mandriva-system-configuration-gnome-accessibility.directory.in,
+	  mandriva-system-configuration-gnome-advanced.directory.in,
+	  mandriva-system-configuration-gnome.directory.in,
+	  mandriva-system-configuration-hardware.directory.in,
+	  mandriva-system-configuration-kde.directory.in,
+	  mandriva-system-configuration-networking.directory.in,
+	  mandriva-system-configuration-other.directory.in,
+	  mandriva-system-configuration-packaging.directory.in,
+	  mandriva-system-configuration-printing.directory.in,
+	  mandriva-system-configuration.directory.in,
+	  mandriva-system-filetools.directory.in,
+	  mandriva-system-monitoring.directory.in,
+	  mandriva-system-terminals.directory.in,
+	  mandriva-system-texttools.directory.in,
+	  mandriva-system.directory.in: Add untranslated directory files
+
+2006-05-12 17:34  Laurent Montel <lmontel at mandriva.com>
+
+	* desktop-common-data.spec: Fix for missing entry
+
+2006-05-12 17:30  Laurent Montel <lmontel at mandriva.com>
+
+	* menu/applications-mdk.menu: Fix missing entry reported by Nicolas
+	  Chipaux
+
 2006-05-12 11:24  Frederic Crozat <fcrozat at mandriva.com>
 
 	* screensavers/: 01.png, 02.png, 03.png, 04.png, 05.png, 06.png,
