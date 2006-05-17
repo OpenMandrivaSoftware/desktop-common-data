@@ -19,11 +19,10 @@
 
 <!--  <DefaultMergeDirs/>-->
   <AppDir>/var/lib/menu-xdg/applications</AppDir>
-  <DirectoryDir>/var/lib/menu-xdg/desktop-directories</DirectoryDir>
 <!--  <KDELegacyDirs/>-->
   <DefaultAppDirs/>
   <DefaultDirectoryDirs/>
-  <Directory>mandrakelinux.directory</Directory>
+  <Directory>mandrivalinux.directory</Directory>
   <Include>
     <Category>X-Mandrakelinux</Category>
   </Include>
@@ -45,7 +44,7 @@
       <Merge type="menus"/>
       <Merge type="files"/>
     </Layout>
-    <Directory>mandrakelinux$2doffice.directory</Directory>
+    <Directory>mandriva-office.directory</Directory>
     <Include>
       <Or>
         <Category>X-Mandrakelinux-Office</Category>
@@ -59,11 +58,11 @@
         <Filename>Mandrakelinux-Office-Accessories-oooqs.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2daccessories.directory</Directory>
+      <Directory>mandriva-office-accessories.directory</Directory>
       <Include>
 	<Or>
-        <Category>X-Mandrakelinux-Office-Accessories</Category>
-	<Category>Calculator</Category>
+         <Category>X-Mandrakelinux-Office-Accessories</Category>
+	 <Category>Calculator</Category>
 	</Or>
       </Include>
     </Menu>
@@ -74,7 +73,7 @@
         <Filename>kde-kaddressbook.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2daddressbooks.directory</Directory>
+      <Directory>mandriva-office-addressbooks.directory</Directory>
       <Include>
        <Or>
         <Category>X-Mandrakelinux-Office-AddressBooks</Category>
@@ -92,7 +91,7 @@
         <Merge type="menus"/>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2dcommunications.directory</Directory>
+      <Directory>mandriva-office-communications.directory</Directory>
       <Include>
        <Or>
         <Category>X-Mandrakelinux-Office-Communications</Category>
@@ -100,7 +99,7 @@
       </Include>
       <Menu>
         <Name>Fax</Name>
-        <Directory>mandrakelinux$2doffice$2dcommunications$2dfax.directory</Directory>
+        <Directory>mandriva-office-communications-fax.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-Office-Communications-Fax</Category>
         </Include>
@@ -112,21 +111,26 @@
           <Filename>kde-kpilot.desktop</Filename>
           <Merge type="files"/>
         </Layout>
-        <Directory>mandrakelinux$2doffice$2dcommunications$2dpda.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-Office-Communications-PDA</Category>
+        <Directory>mandriva-office-communications-pda.directory</Directory>
+	<Include>
+	  <Or>
+		  <Category>PDA</Category>
+		  <Category>X-Mandrakelinux-Office-Communications-PDA</Category>
+	  </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Phone</Name>
-        <Directory>mandrakelinux$2doffice$2dcommunications$2dphone.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-Office-Communications-Phone</Category>
+        <Directory>mandriva-office-communications-phone.directory</Directory>
+	<Include>
+	  <Or>
+		  <Category>X-Mandrakelinux-Office-Communications-Phone</Category>
+	  </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
-        <Directory>mandrakelinux$2doffice$2dcommunications$2dother.directory</Directory>
+        <Directory>mandriva-office-communications-other.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-Office-Communications-Other</Category>
         </Include>
@@ -139,7 +143,7 @@
         <Filename>Mandrakelinux-Office-Drawing-OpenOffice.org Draw.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2ddrawing.directory</Directory>
+      <Directory>mandriva-office-drawing.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-Office-Drawing</Category>
       </Include>
@@ -151,7 +155,7 @@
         <Filename>Mandrakelinux-Office-Graphs-Dia.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2dgraphs.directory</Directory>
+      <Directory>mandriva-office-graphs.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-Office-Graphs</Category>
       </Include>
@@ -163,9 +167,12 @@
         <Filename>Mandrakelinux-Office-Presentations-OpenOffice.org Impress.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2dpresentations.directory</Directory>
+      <Directory>mandriva-office-presentations.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Office-Presentations</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Office-Presentations</Category>
+		      <Category>Presentation</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -176,9 +183,17 @@
         <Filename>Mandrakelinux-Office-Publishing-GhostView.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2dpublishing.directory</Directory>
+      <Directory>mandriva-office-publishing.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Office-Publishing</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Office-Publishing</Category>
+		      <Category>Scanning</Category>
+		      <Category>OCR</Category>
+		      <And>
+			      <Category>Office</Category>
+			      <Category>Viewer</Category>
+		      </And>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -188,9 +203,12 @@
         <Filename>Mandrakelinux-Office-Spreadsheets-OpenOffice.org Calc.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2dspreadsheets.directory</Directory>
+      <Directory>mandriva-office-spreadsheets.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Office-Spreadsheets</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Office-Spreadsheets</Category>
+		      <Category>Spreadsheet</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -200,7 +218,7 @@
         <Filename>Mandrakelinux-Office-TasksManagement-Planner.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2dtasksmanagement.directory</Directory>
+      <Directory>mandriva-office-tasksmanagement.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-Office-TasksManagement</Category>
       </Include>
@@ -212,14 +230,17 @@
         <Filename>kde-korganizer.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2dtimemanagement.directory</Directory>
+      <Directory>mandriva-office-timemanagement.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Office-TimeManagement</Category>
+	 <Or>
+		 <Category>X-Mandrakelinux-Office-TimeManagement</Category>
+		 <Category>Calendar</Category>
+	 </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
-      <Directory>mandrakelinux$2doffice$2dother.directory</Directory>
+      <Directory>mandriva-office-other.directory</Directory>
       <Include>
 	<Or>
         <Category>X-Mandrakelinux-Office-Other</Category>
@@ -234,7 +255,7 @@
         <Filename>Mandrakelinux-Office-Wordprocessors-OpenOffice.org Math.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2doffice$2dwordprocessors.directory</Directory>
+      <Directory>mandriva-office-wordprocessors.directory</Directory>
       <Include>
 	<Or>
         <Category>X-Mandrakelinux-Office-Wordprocessors</Category>
@@ -259,7 +280,7 @@
       <Merge type="menus"/>
       <Merge type="files"/>
     </Layout>
-    <Directory>mandrakelinux$2dinternet.directory</Directory>
+    <Directory>mandriva-internet.directory</Directory>
     <Include>
       <Category>X-Mandrakelinux-Internet</Category>
     </Include>
@@ -270,7 +291,7 @@
         <Filename>kde-ksirc.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dinternet$2dchat.directory</Directory>
+      <Directory>mandriva-internet-chat.directory</Directory>
       <Include>
        <Or>
         <Category>X-Mandrakelinux-Internet-Chat</Category>
@@ -286,10 +307,12 @@
         <Filename>Mandrakelinux-Internet-FileTransfer-Gtm.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dinternet$2dfiletransfert.directory</Directory>
+      <Directory>mandriva-internet-filetransfer.directory</Directory>
       <Include>
        <Or>
-        <Category>X-Mandrakelinux-FileTransfer</Category>
+        <Category>X-Mandrakelinux-Internet-FileTransfer</Category>
+        <Category>FileTransfer</Category>
+        <Category>P2P</Category>
        </Or>
       </Include>
     </Menu>
@@ -302,7 +325,7 @@
         <Filename>Mandrakelinux-Internet-InstantMessaging-Gaim.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dinternet$2dinstantmessaging.directory</Directory>
+      <Directory>mandriva-internet-instantmessaging.directory</Directory>
       <Include>
 	<Or>
         <Category>X-Mandrakelinux-Internet-InstantMessaging</Category>
@@ -319,9 +342,12 @@
         <Filename>Mandrakelinux-Internet-Mail-Mozilla Thunderbird.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dinternet$2dmail.directory</Directory>
+      <Directory>mandriva-internet-mail.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Internet-Mail</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Internet-Mail</Category>
+		      <Category>Email</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -331,21 +357,24 @@
         <Filename>kde-KNode.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dinternet$2dnews.directory</Directory>
+      <Directory>mandriva-internet-news.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Internet-News</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Internet-News</Category>
+		      <Category>News</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Video Conference</Name>
-      <Directory>mandrakelinux$2dinternet$2dkppp.directory</Directory>
+      <Directory>mandriva-internet-kppp.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-Internet-VideoConference</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
-      <Directory>mandrakelinux$2dinternet$2dother.directory</Directory>
+      <Directory>mandriva-internet-other.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-Internet-Other</Category>
       </Include>
@@ -357,9 +386,13 @@
         <Filename>kde-Kppp.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dinternet$2dremoteaccess.directory</Directory>
+      <Directory>mandriva-internet-remoteaccess.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Internet-RemoteAccess</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Internet-RemoteAccess</Category>
+		      <Category>RemoteAccess</Category>
+		      <Category>Dialup</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -373,16 +406,22 @@
         <Filename>Mandrakelinux-Internet-WebBrowsers-Epiphany Bookmarks Editor.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dinternet$2dwebbrowsers.directory</Directory>
+      <Directory>mandriva-internet-webbrowsers.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Internet-WebBrowsers</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Internet-WebBrowsers</Category>
+		      <Category>WebBrowser</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Web Editors</Name>
-      <Directory>mandrakelinux$2dinternet$2dwebeditors.directory</Directory>
+      <Directory>mandriva-internet-webeditors.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Internet-WebEditors</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Internet-WebEditors</Category>
+		      <Category>WebDevelopment</Category>
+	      </Or>
       </Include>
     </Menu>
   </Menu>
@@ -404,7 +443,7 @@
       <Merge type="menus"/>
       <Merge type="files"/>
     </Layout>
-    <Directory>mandrakelinux$2dmoreapplications.directory</Directory>
+    <Directory>mandriva-moreapplications.directory</Directory>
     <Include>
       <Category>X-Mandrakelinux-MoreApplications</Category>
     </Include>
@@ -415,28 +454,37 @@
         <Filename>kde-kmag.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmoreapplications$2daccessibility.directory</Directory>
+      <Directory>mandriva-moreapplications-accessibility.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-MoreApplications-Accessibility</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-MoreApplications-Accessibility</Category>
+		      <Category>Accessibility</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Communications</Name>
-      <Directory>mandrakelinux$2dmoreapplications$2dcommunications.directory</Directory>
+      <Directory>mandriva-moreapplications-communications.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-MoreApplications-Communications</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-MoreApplications-Communications</Category>
+		      <Category>Communications</Category>
+	      </Or>
       </Include>
-	</Menu>
+    </Menu>
     <Menu>
       <Name>Finances</Name>
-      <Directory>mandrakelinux$2dmoreapplications$2dfinances.directory</Directory>
+      <Directory>mandriva-moreapplications-finances.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-MoreApplications-Finances</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-MoreApplications-Finances</Category>
+		      <Category>Finance</Category>
+	      </Or>
       </Include>
     </Menu>	
     <Menu>
       <Name>Databases</Name>
-      <Directory>mandrakelinux$2dmoreapplications$2ddatabases.directory</Directory>
+      <Directory>mandriva-moreapplications-databases.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-MoreApplications-Databases</Category>
       </Include>
@@ -451,9 +499,12 @@
         <Merge type="menus"/>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmoreapplications$2ddevelopment.directory</Directory>
+      <Directory>mandriva-moreapplications-development.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-MoreApplications-Development</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-MoreApplications-Development</Category>
+		      <Category>Development</Category>
+	      </Or>
       </Include>
       <Menu>
         <Name>Development Environments</Name>
@@ -462,9 +513,13 @@
           <Filename>kde-kdevelop.desktop</Filename>
           <Merge type="files"/>
         </Layout>
-        <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2ddevelopmentenvironments.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Development-DevelopmentEnvironments</Category>
+        <Directory>mandriva-moreapplications-development-developmentenvironments.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Development-DevelopmentEnvironments</Category>
+			<Category>IDE</Category>
+			<Category>GUIDesigner</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
@@ -474,7 +529,7 @@
           <Filename>Mandrakelinux-MoreApplications-Development-Interpreters-GNU Prolog.desktop</Filename>
           <Merge type="files"/>
         </Layout>
-        <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2dinterpreters.directory</Directory>
+        <Directory>mandriva-moreapplications-development-interpreters.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Development-Interpreters</Category>
         </Include>
@@ -486,14 +541,23 @@
           <Filename>Mandrakelinux-MoreApplications-Development-Tools-Gdb.desktop</Filename>
           <Merge type="files"/>
         </Layout>
-        <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2dtools.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Development-Tools</Category>
+        <Directory>mandriva-moreapplications-development-tools.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Development-Tools</Category>
+			<Category>Profiling</Category>
+			<Category>Debugger</Category>
+			<Category>RevisionControl</Category>
+			<And>
+				<Category>Development</Category>
+				<Category>Translation</Category>
+			</And>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2ddevelopment$2dother.directory</Directory>
+        <Directory>mandriva-moreapplications-development-other.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Development-Other</Category>
         </Include>
@@ -501,14 +565,14 @@
     </Menu>
     <Menu>
       <Name>Documentation</Name>
-      <Directory>mandrakelinux$2dmoreapplications$2ddocumentation.directory</Directory>
+      <Directory>mandriva-moreapplications-documentation.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-MoreApplications-Documentation</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
-      <Directory>mandrakelinux$2dmoreapplications$2dother.directory</Directory>
+      <Directory>mandriva-moreapplications-other.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-MoreApplications-Other</Category>
       </Include>
@@ -522,9 +586,12 @@
         <Filename>Mandrakelinux-MoreApplications-Editors-VI editor.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmoreapplications$2deditors.directory</Directory>
+      <Directory>mandriva-moreapplications-editors.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-MoreApplications-Editors</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-MoreApplications-Editors</Category>
+		      <Category>TextEditor</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -541,64 +608,87 @@
         <Merge type="menus"/>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmoreapplications$2deducation.directory</Directory>
+      <Directory>mandriva-moreapplications-education.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-MoreApplications-Education</Category>
       </Include>
       <Menu>
         <Name>Economy</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2deducation$2deconomy.directory</Directory>
+        <Directory>mandriva-moreapplications-education-economy.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Education-Economy</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Geography</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2deducatino$2dgeography.directory</Directory>
+        <Directory>mandriva-moreapplications-educatino-geography.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Education-Geography</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>History</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dhistory.directory</Directory>
+        <Directory>mandriva-moreapplications-education-history.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Education-History</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Languages</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dlanguages.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Education-Languages</Category>
+        <Directory>mandriva-moreapplications-education-languages.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Education-Languages</Category>
+			<And>
+				<Category>Education</Category>
+				<Category>Languages</Category>
+			</And>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Literature</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dliterature.directory</Directory>
+        <Directory>mandriva-moreapplications-education-literature.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Education-Literature</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Sciences</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dsciences.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Education-Sciences</Category>
+        <Directory>mandriva-moreapplications-education-sciences.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Education-Sciences</Category>
+			<And>
+				<Category>Education</Category>
+				<Category>Languages</Category>
+			</And>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Sports</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dsports.directory</Directory>
+        <Directory>mandriva-moreapplications-education-sports.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Education-Sports</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2deducation$2dother.directory</Directory>
+        <Directory>mandriva-moreapplications-education-other.directory</Directory>
         <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Education-Other</Category>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Education-Other</Category>
+			<And>
+				<Category>Education</Category>
+				<Or>
+					<Category>Art</Category>
+					<Category>Construction</Category>
+					<Category>Music</Category>
+					<Category>Teaching</Category>
+				</Or>
+			</And>
+		</Or>
         </Include>
       </Menu>
      </Menu>
@@ -617,71 +707,106 @@
         <Merge type="menus"/>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmoreapplications$2dgames.directory</Directory>
+      <Directory>mandriva-moreapplications-games.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-MoreApplications-Games</Category>
       </Include>
       <Menu>
         <Name>Adventure</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dadventure.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Adventure</Category>
+        <Directory>mandriva-moreapplications-games-adventure.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Adventure</Category>
+			<Category>AdventureGame</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Arcade</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2darcade.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Arcade</Category>
+        <Directory>mandriva-moreapplications-games-arcade.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Arcade</Category>
+			<Category>ArcadeGame</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Boards</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dboards.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Boards</Category>
+        <Directory>mandriva-moreapplications-games-boards.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Boards</Category>
+			<Category>BoardGame</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Cards</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dcards.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Cards</Category>
+        <Directory>mandriva-moreapplications-games-cards.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Cards</Category>
+			<Category>CardGame</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Puzzles</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dpuzzles.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Puzzles</Category>
+        <Directory>mandriva-moreapplications-games-puzzles.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Puzzles</Category>
+			<Category>LogicGame</Category>
+			<Category>BlocksGame</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Sports</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dsports.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Sports</Category>
+        <Directory>mandriva-moreapplications-games-sports.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Sports</Category>
+			<Category>SportsGame</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Strategy</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dstrategy.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Strategy</Category>
+        <Directory>mandriva-moreapplications-games-strategy.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Strategy</Category>
+			<Category>StrategyGame</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dother.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Other</Category>
+        <Directory>mandriva-moreapplications-games-other.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Other</Category>
+			<And>
+				<Category>Game</Category>
+				<Or>
+					<Category>KidsGame</Category>
+					<Category>RolePlaying</Category>
+					<Category>Simulation</Category>
+				</Or>
+			</And>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Toys</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dgames$2dtoys.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Games-Toys</Category>
+        <Directory>mandriva-moreapplications-games-toys.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Games-Toys</Category>
+			<Category>Amusement</Category>
+		</Or>
         </Include>
       </Menu>
     </Menu>
@@ -706,111 +831,126 @@
         <Merge type="menus"/>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmoreapplications$2dsciences.directory</Directory>
+      <Directory>mandriva-moreapplications-sciences.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-MoreApplications-Sciences</Category>
       </Include>
       <Menu>
         <Name>Artificial Intelligence</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dartificialintelligence.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-artificialintelligence.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-ArtificialIntelligence</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Astronomy</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dastronomy.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Sciences-Astronomy</Category>
+        <Directory>mandriva-moreapplications-sciences-astronomy.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Sciences-Astronomy</Category>
+			<Category>Astronomy</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Biology</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dbiology.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Sciences-Biology</Category>
+        <Directory>mandriva-moreapplications-sciences-biology.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Sciences-Biology</Category>
+			<Category>Biology</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Chemistry</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dchemistry.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Sciences-Chemistry</Category>
+        <Directory>mandriva-moreapplications-sciences-chemistry.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Sciences-Chemistry</Category>
+			<Category>Chemistry</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Computer Science</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dcomputerscience.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-computerscience.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-ComputerScience</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Data Visualization</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2ddatavisualization.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-datavisualization.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-DataVisualization</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Electricity</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2delectricity.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-electricity.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-Electricity</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Geosciences</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dgeosciences.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-geosciences.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-Geosciences</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Image Processing</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dimageprocessing.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-imageprocessing.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-ImageProcessing</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Mathematics</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dmathematics.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Sciences-Mathematics</Category>
+        <Directory>mandriva-moreapplications-sciences-mathematics.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Sciences-Mathematics</Category>
+			<Category>Math</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Numeric Analysis</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dnumericanalysis.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-numericanalysis.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-NumericAnalysis</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Parallel Computing</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dparallelcomputing.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-parallelcomputing.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-ParallelComptuting</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Physics</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dphysics.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-MoreApplications-Sciences-Physics</Category>
+        <Directory>mandriva-moreapplications-sciences-physics.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-MoreApplications-Sciences-Physics</Category>
+			<Category>Physics</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Robotics</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2drobotics.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-robotics.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-Robotics</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
-        <Directory>mandrakelinux$2dmoreapplications$2dsciences$2dother.directory</Directory>
+        <Directory>mandriva-moreapplications-sciences-other.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-MoreApplications-Sciences-Other</Category>
         </Include>
@@ -827,7 +967,7 @@
       <Merge type="menus"/>
       <Merge type="files"/>
     </Layout>
-    <Directory>mandrakelinux$2dmultimedia.directory</Directory>
+    <Directory>mandriva-multimedia.directory</Directory>
     <Include>
       <Category>X-Mandrakelinux-Multimedia</Category>
     </Include>
@@ -839,9 +979,17 @@
         <Filename>kde-kooka.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmultimedia$2dgraphics.directory</Directory>
+      <Directory>mandriva-multimedia-graphics.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Multimedia-Graphics</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Multimedia-Graphics</Category>
+		      <Category>Graphics</Category>
+		      <Category>Photography</Category>
+		      <Category>3DGraphics</Category>
+		      <And>
+			      <Category>Viewer</Category>
+		      </And>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -852,9 +1000,24 @@
         <Filename>Mandrakelinux-Multimedia-Sound-Totem Media Player.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmultimedia$2dsound.directory</Directory>
+      <Directory>mandriva-multimedia-sound.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Multimedia-Sound</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Multimedia-Sound</Category>
+		      <Category>Audio</Category>
+		      <Category>Midi</Category>
+		      <Category>Mixer</Category>
+		      <Category>Sequencer</Category>
+		      <Category>Tuner</Category>
+		      <And>
+			      <Category>Audio</Category>
+			      <Or>
+				      <Category>AudioVideoEdition</Category>
+				      <Category>Player</Category>
+				      <Category>Recorder</Category>
+			      </Or>
+		      </And>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -864,14 +1027,26 @@
         <Filename>Mandrakelinux-Multimedia-Video-Totem Movie Player.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dmultimedia$2dvideo.directory</Directory>
+      <Directory>mandriva-multimedia-video.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-Multimedia-Video</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-Multimedia-Video</Category>
+		      <Category>Video</Category>
+		      <Category>TV</Category>
+		      <And>
+			      <Category>Video</Category>
+			      <Or>
+				      <Category>AudioVideoEdition</Category>
+				      <Category>Player</Category>
+				      <Category>Recorder</Category>
+			      </Or>
+		      </And>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
-      <Directory>mandrakelinux$2dmultimedia$2dother.directory</Directory>
+      <Directory>mandriva-multimedia-other.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-Multimedia-Other</Category>
       </Include>
@@ -890,7 +1065,7 @@
       <Merge type="menus"/>
       <Merge type="files"/>
     </Layout>
-    <Directory>mandrakelinux$2dsystem.directory</Directory>
+    <Directory>mandriva-system.directory</Directory>
     <Include>
       <Category>X-Mandrakelinux-System</Category>
     </Include>
@@ -904,9 +1079,9 @@
         <Merge type="menus"/>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dsystem$2darchiving.directory</Directory>
+      <Directory>mandriva-system-archiving.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-System-Archiving</Category>
+	      <Category>X-Mandrakelinux-System-Archiving</Category>
       </Include>
       <Menu>
         <Name>Backup</Name>
@@ -915,9 +1090,12 @@
           <Filename>Mandrakelinux-System-Archiving-Backup-DrakSync.desktop</Filename>
           <Merge type="files"/>
         </Layout>
-        <Directory>mandrakelinux$2dsystem$2darchiving$2dbackup.directory</Directory>
+        <Directory>mandriva-system-archiving-backup.directory</Directory>
         <Include>
-          <Category>X-Mandrakelinux-System-Archiving-Backup</Category>
+		<Or>
+			<Category>X-Mandrakelinux-System-Archiving-Backup</Category>
+		        <Category>Archiving</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
@@ -927,21 +1105,24 @@
           <Filename>kde-k3b.desktop</Filename>
           <Merge type="files"/>
         </Layout>
-        <Directory>mandrakelinux$2dsystem$2darchiving$2dcdburning.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-System-Archiving-CDBurning</Category>
+        <Directory>mandriva-system-archiving-cdburning.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-System-Archiving-CDBurning</Category>
+			<Category>DiscBurning</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Compression</Name>
-        <Directory>mandrakelinux$2dsystem$2darchiving$2dcompression.directory</Directory>
+        <Directory>mandriva-system-archiving-compression.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Archiving-Compression</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
-        <Directory>mandrakelinux$2dsystem$2darchiving$2dother.directory</Directory>
+        <Directory>mandriva-system-archiving-other.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Archiving-Other</Category>
         </Include>
@@ -962,26 +1143,36 @@
         <Merge type="menus"/>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dsystem$2dconfiguration.directory</Directory>
+      <Directory>mandriva-system-configuration.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-System-Configuration</Category>
       </Include>
       <Menu>
         <Name>Boot and Init</Name>
-        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dbootandinit.directory</Directory>
+        <Directory>mandriva-system-configuration-bootandinit.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Configuration-BootandInit</Category>
         </Include>
       </Menu>
       <Menu>
+        <Name>Hardware</Name>
+        <Directory>mandriva-system-configuration-hardware.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-System-Configuration-Hardware</Category>
+			<Category>HardwareSettings</Category>
+		</Or>
+        </Include>
+      </Menu>
+      <Menu>
         <Name>GNOME</Name>
-        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dgnome.directory</Directory>
+        <Directory>mandriva-system-configuration-gnome.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Configuration-GNOME</Category>
         </Include>
         <Menu>
           <Name>Advanced</Name>
-          <Directory>mandrakelinux$2dsystem$2dconfiguration$2dgnome$2dadvanced.directory</Directory>
+          <Directory>mandriva-system-configuration-gnome-advanced.directory</Directory>
           <Include>
             <Category>X-Mandrakelinux-System-Configuration-GNOME-Advanced</Category>
           </Include>
@@ -989,119 +1180,128 @@
       </Menu>
       <Menu>
         <Name>KDE</Name>
-        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde.directory</Directory>
+        <Directory>mandriva-system-configuration-kde.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Configuration-KDE</Category>
   		</Include>
 		<Menu>
 			<Name>Accessibility</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2daccessibility.directory</Directory>
-		<Include>
-			<Category>X-Mandrakelinux-System-Configuration-KDE-Accessibility</Category>
-		</Include>
+			<Directory>kde-settings-accessibility.directory</Directory>
+			<Include>
+				<Category>X-Mandrakelinux-System-Configuration-KDE-Accessibility</Category>
+			</Include>
 		</Menu>
-        <Menu>
-          <Name>Components</Name>
-          <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dcomponents.directory</Directory>
-          <Include>
-            <Category>X-Mandrakelinux-System-Configuration-KDE-Components</Category>
-          </Include>
+        	<Menu>
+			<Name>Components</Name>
+			<Directory>kde-settings-components.directory</Directory>
+			<Include>
+				<Category>X-Mandrakelinux-System-Configuration-KDE-Components</Category>
+			</Include>
   		</Menu>
 		<Menu>
 			<Name>Information</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dinformation.directory</Directory>
+			<Directory>kde-settings-hardware.directory</Directory>
 		<Include>
 			<Category>X-Mandrakelinux-System-Configuration-KDE-Information</Category>
 		</Include>
 		</Menu>
 		<Menu>
 			<Name>LookNFeel</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dlooknfeel.directory</Directory>
+			<Directory>kde-settings-looknfeel.directory</Directory>
 		<Include>
 			<Category>X-Mandrakelinux-System-Configuration-KDE-LookNFeel</Category>
 		</Include>
 		</Menu>
 		<Menu>
 			<Name>Network</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dnetwork.directory</Directory>
+			<Directory>kde-settings-network.directory</Directory>
 		<Include>
 			<Category>X-Mandrakelinux-System-Configuration-KDE-Network</Category>
 		</Include>
 		</Menu>
 		<Menu>
 			<Name>Peripherals</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dperipherals.directory</Directory>
+			<Directory>kde-settings-peripherals.directory</Directory>
 		<Include>
 			<Category>X-Mandrakelinux-System-Configuration-KDE-Peripherals</Category>
 		</Include>
 		</Menu>
 		<Menu>
 			<Name>PowerControl</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dpowercontrol.directory</Directory>
+			<Directory>kde-settings-power.directory</Directory>
 		<Include>
 			<Category>X-Mandrakelinux-System-Configuration-KDE-PowerControl</Category>
 		</Include>
 		</Menu>
 		<Menu>
 			<Name>Security</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dsecurity.directory</Directory>
+			<Directory>kde-settings-security.directory</Directory>
 		<Include>
 			<Category>X-Mandrakelinux-System-Configuration-KDE-Security</Category>
 		</Include>
 		</Menu>
 		<Menu>
 			<Name>Sound</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dsound.directory</Directory>
+			<Directory>kde-settings-sound.directory</Directory>
 		<Include>
 			<Category>X-Mandrakelinux-System-Configuration-KDE-Sound</Category>
 		</Include>
 		</Menu>
 		<Menu>
-		<Name>WebBrowsing</Name>
-			<Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dwebbrowsing.directory</Directory>
-		<Include>
-			<Category>X-Mandrakelinux-System-Configuration-KDE-WebBrowsing</Category>
-		</Include>
+			<Name>WebBrowsing</Name>
+			<Directory>kde-settings-webbrowsing.directory</Directory>
+			<Include>
+				<Category>X-Mandrakelinux-System-Configuration-KDE-WebBrowsing</Category>
+			</Include>
 		</Menu>
-        <Menu>
-          <Name>System</Name>
-          <Directory>mandrakelinux$2dsystem$2dconfiguration$2dkde$2dsystem.directory</Directory>
-          <Include>
-            <Category>X-Mandrakelinux-System-Configuration-KDE-System</Category>
-          </Include>
-        </Menu>
-      </Menu>
-      <Menu>
+		<Menu>
+			<Name>System</Name>
+			<Directory>kde-settings-system.directory</Directory>
+			<Include>
+				<Category>X-Mandrakelinux-System-Configuration-KDE-System</Category>
+			</Include>
+		</Menu>
+	</Menu>
+	<Menu>
         <Name>Networking</Name>
-        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dnetworking.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-System-Configuration-Networking</Category>
+        <Directory>mandriva-system-configuration-networking.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-System-Configuration-Networking</Category>
+			<And>
+				<Category>Settings</Category>
+				<Category>Network</Category>
+			</And>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Packaging</Name>
-        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dpackaging.directory</Directory>
-        <Include>
-          <Category>X-Mandrakelinux-System-Configuration-Packaging</Category>
+        <Directory>mandriva-system-configuration-packaging.directory</Directory>
+	<Include>
+		<Or>
+			<Category>X-Mandrakelinux-System-Configuration-Packaging</Category>
+			<Category>PackageManager</Category>
+		</Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Printing</Name>
-        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dprinting.directory</Directory>
+        <Directory>mandriva-system-configuration-printing.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Configuration-Printing</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Users</Name>
-        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dusers.directory</Directory>
+        <Directory>mandriva-system-configuration-users.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Configuration-Users</Category>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
-        <Directory>mandrakelinux$2dsystem$2dconfiguration$2dother.directory</Directory>
+        <Directory>mandriva-system-configuration-other.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Configuration-Other</Category>
         </Include>
@@ -1114,7 +1314,7 @@
         <Filename>kde-Kfind.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dsystem$2dfiletools.directory</Directory>
+      <Directory>mandriva-system-filetools.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-System-FileTools</Category>
       </Include>
@@ -1126,20 +1326,26 @@
         <Filename>kde-ksysguard.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dsystem$2dmonitoring.directory</Directory>
+      <Directory>mandriva-system-monitoring.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-System-Monitoring</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-System-Monitoring</Category>
+		      <And>
+			      <Category>System</Category>
+			      <Category>Monitor</Category>
+		      </And>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Session</Name>
-      <Directory>mandrakelinux$2dsystem$2dsession.directory</Directory>
+      <Directory>mandriva-system-session.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-System-Session</Category>
       </Include>
       <Menu>
         <Name>Windowmanagers</Name>
-        <Directory>mandrakelinux$2dsystem$2dsession$2dwindowmanagers.directory</Directory>
+        <Directory>mandriva-system-session-windowmanagers.directory</Directory>
         <Include>
           <Category>X-Mandrakelinux-System-Session-Windowmanagers</Category>
         </Include>
@@ -1152,9 +1358,12 @@
         <Filename>kde-konsole.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dsystem$2dterminals.directory</Directory>
+      <Directory>mandriva-system-terminals.directory</Directory>
       <Include>
-        <Category>X-Mandrakelinux-System-Terminals</Category>
+	      <Or>
+		      <Category>X-Mandrakelinux-System-Terminals</Category>
+		      <Category>TerminalEmulator</Category>
+	      </Or>
       </Include>
     </Menu>
     <Menu>
@@ -1164,7 +1373,7 @@
         <Filename>kde-kdict.desktop</Filename>
         <Merge type="files"/>
       </Layout>
-      <Directory>mandrakelinux$2dsystem$2dtexttools.directory</Directory>
+      <Directory>mandriva-system-texttools.directory</Directory>
       <Include>
         <Category>X-Mandrakelinux-System-TextTools</Category>
       </Include>
@@ -1172,14 +1381,14 @@
   </Menu>
   <Menu>
     <Name>Other</Name>
-    <Directory>mandrakelinux$2d$2eother.directory</Directory>
+    <Directory>mandriva-other.directory</Directory>
     <Include>
       <Category>X-Mandrakelinux-Other</Category>
     </Include>
   </Menu>
   <Menu>
     <Name>.hidden</Name>
-    <Directory>mandrakelinux$2d$2ehidden.directory</Directory>
+    <Directory>mandriva-hidden.directory</Directory>
     <Include>
       <Category>X-Mandrakelinux-.hidden</Category>
     </Include>
