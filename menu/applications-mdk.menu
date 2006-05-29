@@ -17,9 +17,9 @@
     <Merge type="files"/>
   </DefaultLayout>
 
-<!--  <DefaultMergeDirs/>-->
+  <DefaultMergeDirs/>
   <AppDir>/var/lib/menu-xdg/applications</AppDir>
-<!--  <KDELegacyDirs/>-->
+  <KDELegacyDirs/>
   <DefaultAppDirs/>
   <DefaultDirectoryDirs/>
   <Directory>mandrivalinux.directory</Directory>
