@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	%mkrel 7
+Release: 	%mkrel 8
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -200,6 +200,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon May 29 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-8mdv2007.0
+- Add legacy directories and default merge directory
+
 * Wed May 17 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-7mdk
 - ship our own .directory files now
 - use kde .directory files when possible
