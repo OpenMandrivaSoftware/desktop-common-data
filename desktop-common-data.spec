@@ -1,7 +1,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	%mkrel 8
+Release: 	%mkrel 9
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -200,6 +200,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Jun 15 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-9mdv2007.0
+- Switch to X-MandrivaLinux
+
 * Mon May 29 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-8mdv2007.0
 - Add legacy directories and default merge directory
 
