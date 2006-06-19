@@ -403,7 +403,7 @@
     </Menu>
     <Menu>
       <Name>Video Conference</Name>
-      <Directory>mandriva-internet-kppp.directory</Directory>
+      <Directory>mandriva-internet-videoconference.directory</Directory>
       <Include>
 	      <Or>
 		      <Category>X-Mandrakelinux-Internet-VideoConference</Category>
