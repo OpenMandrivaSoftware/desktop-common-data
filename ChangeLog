@@ -1,3 +1,9 @@
+2006-07-07 15:44  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec,
+	  menu/desktop-directories/mandriva-moreapplications-games-sports.directory.in:
+	  - add missing .directory - rebuild with fixed intltool
+
 2006-07-07 12:07  Pixel <pixel at mandriva.com>
 
 	* desktop-common-data.spec: - fix generating icewm menu from XDG -
