@@ -1,13 +1,15 @@
+# EDIT IN CVS NOT IN SOURCE PACKAGE (NO PATCH ALLOWED).
+
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	%mkrel 10
+Release: 	%mkrel 11
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
 
-# get the source from our cvs repository (see
-# http://www.mandrivalinux.com/en/cvs.php3)
+# get the source from our cvs repository (http://cvs.mandriva.com/cgi-bin/viewvc.cgi/soft/mandrake_desk)
+# (see http://qa.mandriva.com/twiki/bin/view/Main/CvsHowto)
 # no extra source or patch are allowed here.
 Source:		%{name}-%{version}.tar.bz2
 
@@ -200,6 +202,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Jul  7 2006 Pixel <pixel@mandriva.com> 2006-11mdv2007.0
+- fix generating icewm menu from XDG
+
 * Mon Jun 19 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-10mdv2007.0
 - Add missing .directory files and fix videoconference one
 
