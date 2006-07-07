@@ -202,8 +202,10 @@ rm -fr %buildroot
 
 
 %changelog
-* Fri Jul  7 2006 Pixel <pixel@mandriva.com> 2006-11mdv2007.0
-- fix generating icewm menu from XDG
+* Fri Jul 07 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-11mdv2007.0
+- add missing .directory
+- rebuild with fixed intltool
+- fix generating icewm menu from XDG (pixel)
 
 * Mon Jun 19 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-10mdv2007.0
 - Add missing .directory files and fix videoconference one
