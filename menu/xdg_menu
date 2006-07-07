@@ -56,6 +56,12 @@ sub check_file ($)
 	}
 }
 
+sub add_png_extension_if_needed ($)
+{
+	my ($f) = @_;
+	return $f =~ /\.(png|xpm|svg)$/ ? $f : "$f.png";
+}
+
 sub scan_AppDir ($$;$)
 {
 	my ($pool, $dir, $topdir) = @_;
@@ -1569,7 +1575,7 @@ sub output_icewm_menu ($;$)
 	my $menu_icon = $menu->{'PrepIcon'} || "folder" ;
 	
 	$output .= ' ' x $indent;
-	$output .= "menu \"$menu_name\" $menu_icon {\n";
+	$output .= "menu \"$menu_name\" $menu_icon.png {\n";
 	
 	foreach my $entry (@{$menu->{'entries'}}) {
 		if ($entry->{type} eq 'desktop') {
@@ -1577,7 +1583,7 @@ sub output_icewm_menu ($;$)
 			
 			my $name = $desktop->{'PrepName'};
 			my $exec = $desktop->{'PrepExec'};
-			my $icon = $desktop->{'Icon'};
+			my $icon = add_png_extension_if_needed($desktop->{'Icon'});
 			
 			$output .= ' ' x $indent;
 			$output .= " prog \"$name\" $icon $exec\n";
