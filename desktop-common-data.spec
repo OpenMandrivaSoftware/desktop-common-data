@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2006
-Release: 	%mkrel 11
+Release: 	%mkrel 12
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -202,6 +202,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Jul 11 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-12mdv2007.0
+- Add missing .directory (Mdv bug #23614)
+- fix translations for some .directories (Mdv bug #23641)
+
 * Fri Jul 07 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-11mdv2007.0
 - add missing .directory
 - rebuild with fixed intltool
