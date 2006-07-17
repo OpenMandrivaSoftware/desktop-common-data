@@ -1,3 +1,23 @@
+2006-07-17 18:23  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-mdk.menu,
+	  xinit.d/menu: final switch to XDG menu
+
+2006-07-17 11:01  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, xinit.d/menu: Final switch to XDG menu
+
+2006-07-11 13:35  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec: - Add missing .directory (Mdv bug
+	  #23614) - fix translations for some .directories (Mdv bug #23641)
+
+2006-07-10 15:29  Frederic Crozat <fcrozat at mandriva.com>
+
+	*
+	  menu/desktop-directories/mandriva-moreapplications-games-strategy.directory.in:
+	  Add missing directory file
+
 2006-07-07 15:44  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec,
