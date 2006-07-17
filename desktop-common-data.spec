@@ -24,7 +24,8 @@ Provides:	mandrake_desk
 Conflicts:	kdebase-kdm-config-file < 1:3.2-62mdk
 Obsoletes:	menu
 Obsoletes:	menu-xdg
-Provides:	menu
+Provides:	menu-xdg
+Provides:	menu = 2.1.24
 Requires:	xinitrc >= 2.4.12
 Requires:	mdk-menu-messages >= 10.2-7mdk
 
@@ -140,8 +141,6 @@ fi
 [ -e %_datadir/wallpapers ] && rm -f %_datadir/wallpapers/mandrake-linux
 [ $(ls %_datadir/wallpapers/ | wc -l) -eq 0 ] && rm -fr %_datadir/wallpapers/
 %clean_menus
-
-
 
 %clean
 rm -fr %buildroot

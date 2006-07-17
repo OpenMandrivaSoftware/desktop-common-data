@@ -1,14 +1,38 @@
 #!/bin/sh
 
+# move old menus if still existing
+if [ ! -f $HOME/.mdk-menu-migrated ]; then
+if [ -f $HOME/.config/menus/applications-mdk.menu ]; then
+	mv $HOME/.config/menus/applications-mdk.menu $HOME/.config/menus/applications-mdk.menu.obsolete
+	if [ -L $HOME/.config/menus/applications.menu ]; then
+		mv $HOME/.config/menus/applications.menu $HOME/.config/menus/applications.menu.obsolete
+	fi
+fi
+
+if [ -d $HOME/.local/share/applications/Mandrakelinux ]; then
+	mkdir -p $HOME/.local/share/applications-obsolete/ 2> /dev/null
+	mv $HOME/.local/share/applications/Mandrakelinux $HOME/.local/share/applications-obsolete/Mandrakelinux 
+fi
+
+if [ -d $HOME/.local/share/applications/MandrivaLinux ]; then
+	mkdir -p $HOME/.local/share/applications-obsolete/ 2> /dev/null
+	mv $HOME/.local/share/applications/MandrivaLinux $HOME/.local/share/applications-obsolete/MandrivaLinux 
+fi
+
+if [ -d $HOME/.local/share/desktop-directories ]; then
+	mkdir -p $HOME/.local/share/desktop-directories-obsolete 
+	mv $HOME/.local/share/desktop-directories/mandrake* $HOME/.local/share/desktop-directories-obsolete/ 2> /dev/null
+fi
+touch $HOME/.mdk-menu-migrated
+fi
+
 USER_STAMP=$HOME/.xdg-menu-updates.stamp
 USER_MENU=$HOME/.local/
 
 RETVAL=0
 
-if [ -d $USER_MENU -o -f $USER_STAMP -a -f $SYSTEM_STAMP  ]; then
+if [ -d $USER_MENU -o -f $USER_STAMP ]; then
     if [ ! -f $USER_STAMP ]; then
-            RETVAL=1;
-    elif [ $SYSTEM_STAMP -nt $USER_STAMP ]; then
             RETVAL=1;
     fi
     if [ $RETVAL -eq 1 ]; then
