@@ -2,8 +2,8 @@
 
 Summary:	Desktop common files 
 Name:		desktop-common-data
-Version:	2006
-Release: 	%mkrel 12
+Version:	2007
+Release: 	%mkrel 1
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -22,7 +22,9 @@ Requires:	mandrake_theme
 Obsoletes:	mandrake_desk
 Provides:	mandrake_desk
 Conflicts:	kdebase-kdm-config-file < 1:3.2-62mdk
-Conflicts:	menu <= 2.1.12-10mdk
+Obsoletes:	menu
+Obsoletes:	menu-xdg
+Provides:	menu
 Requires:	xinitrc >= 2.4.12
 Requires:	mdk-menu-messages >= 10.2-7mdk
 
@@ -90,28 +92,19 @@ install -m 0644 kde/kdm-mdk-logo.png %buildroot/%_datadir/apps/kdm/pics/
 
 
 
-## menu
-install -d -m 0755 %buildroot/%_menudir/simplified/ %buildroot/%_sysconfdir/menu-methods/simplified
-install -m 0644 menu/desktop-common-data %buildroot/%_menudir/simplified/
-install -m 0644 menu/menu-simplified %buildroot/%_menudir/simplified/
-install -m 0644 menu/menu %buildroot/%_menudir/
-install -m 0644 menu/translate_menus %buildroot/%_sysconfdir/menu-methods/
-install -m 0644 menu/translate_menus-simplified %buildroot/%_sysconfdir/menu-methods/simplified/translate_menus
+## icons
 install -d -m 0755 %buildroot/%_miconsdir %buildroot/%_liconsdir
 install -m 0644 menu/icons/*.png %buildroot/%_iconsdir
 install -m 0644 menu/icons/large/*.png %buildroot/%_liconsdir
 install -m 0644 menu/icons/mini/*.png %buildroot/%_miconsdir
-install -d -m 0755 %buildroot/%_localstatedir/menu-xdg/menus/applications-mdk-merged %buildroot/%_localstatedir/menu-xdg/menus/applications-simplified-merged 
-#install -m 0644 menu/defaultlayout.menu %buildroot/%_localstatedir/menu-xdg/menus/applications-mdk-merged
-install -m 0644 menu/defaultlayout-simplified.menu %buildroot/%_localstatedir/menu-xdg/menus/applications-simplified-merged
 
 # XDG menus
 install -d -m 0755 %buildroot/%_sysconfdir/xdg/menus/applications-merged
 install -d -m 0755 %buildroot/%_sysconfdir/menu.d
-install -m 0644 menu/applications-mdk.menu %buildroot/%_sysconfdir/xdg/menus
+install -m 0644 menu/applications-mdk.menu %buildroot/%_sysconfdir/xdg/menus/applications.menu
 install -m 0755 menu/xdg_menu %buildroot/%_bindir
 #temporary name
-install -m 0755 menu/update-menus %buildroot/%_bindir/update-menus-xdg
+install -m 0755 menu/update-menus %buildroot/%_bindir/update-menus
 
 install -d -m 0755 %buildroot/%_datadir/desktop-directories
 mkdir tmp-l10n
@@ -187,13 +180,6 @@ rm -fr %buildroot
 
 %_datadir/mdk/dm
 #
-%_localstatedir/menu-xdg/menus/applications-mdk-merged
-%_localstatedir/menu-xdg/menus/applications-simplified-merged
-
-%config(noreplace) %_sysconfdir/menu-methods/translate_menus
-%config(noreplace) %_sysconfdir/menu-methods/simplified/translate_menus
-%_menudir/menu
-%_menudir/simplified/*
 %_iconsdir/*.png
 %_liconsdir/*.png
 %_miconsdir/*.png
@@ -202,6 +188,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Jul 17 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-1mdv2007.0
+- Drop old menu system completely
+
 * Tue Jul 11 2006 Frederic Crozat <fcrozat@mandriva.com> 2006-12mdv2007.0
 - Add missing .directory (Mdv bug #23614)
 - fix translations for some .directories (Mdv bug #23641)
