@@ -557,7 +557,6 @@
 	      <Or>
 		      <Category>X-Mandrakelinux-MoreApplications-Development</Category>
 		      <Category>X-MandrivaLinux-MoreApplications-Development</Category>
-		      <Category>Development</Category>
 	      </Or>
       </Include>
       <Menu>
