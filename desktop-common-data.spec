@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -187,6 +187,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Jul 20 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-2mdv2007.0
+- Fix some typo (Andrej) (Mdk bug #23842)
+
 * Mon Jul 17 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-1mdv2007.0
 - Drop old menu system completely
 

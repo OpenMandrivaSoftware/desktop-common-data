@@ -877,7 +877,7 @@
 	<Include>
 		<Or>
 			<Category>X-Mandrakelinux-MoreApplications-Games-Strategy</Category>
-			<Category>X-Mandrivalinux-MoreApplications-Games-Strategy</Category>
+			<Category>X-MandrivaLinux-MoreApplications-Games-Strategy</Category>
 			<Category>StrategyGame</Category>
 		</Or>
         </Include>
@@ -1276,7 +1276,7 @@
 	<Include>
 		<Or>
 			<Category>X-Mandrakelinux-System-Archiving-Compression</Category>
-			<Category>X-Mandrakelinux-System-Archiving-Compression</Category>
+			<Category>X-MandrivaLinux-System-Archiving-Compression</Category>
 		</Or>
         </Include>
       </Menu>
