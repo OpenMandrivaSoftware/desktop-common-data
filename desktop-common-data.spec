@@ -189,6 +189,7 @@ rm -fr %buildroot
 %changelog
 * Thu Jul 20 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-3mdv2007.0
 - Ignore "Development" keyword, it is too broad atm (Mdv bug #23826)
+- Add .directory for Archiving/Other (Mdv bug #23845)
 
 * Thu Jul 20 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-2mdv2007.0
 - Fix some typo (Andrej) (Mdk bug #23842)
