@@ -1,3 +1,9 @@
+2006-07-20 18:33  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec,
+	  menu/desktop-directories/mandriva-system-archiving-other.directory.in:
+	  - Add .directory for Archiving/Other (Mdv bug #23845)
+
 2006-07-20 18:29  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/applications-mdk.menu: - Ignore
