@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 3
+Release: 	%mkrel 4
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -187,6 +187,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Aug 07 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-4
+- Fix applications-mdk.menu to merge kmenuedit.menu files (fix mdk bug #24103)
+
 * Thu Jul 20 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-3mdv2007.0
 - Ignore "Development" keyword, it is too broad atm (Mdv bug #23826)
 - Add .directory for Archiving/Other (Mdv bug #23845)

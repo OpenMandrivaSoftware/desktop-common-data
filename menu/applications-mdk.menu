@@ -1633,4 +1633,5 @@
 	    </Or>
     </Include>
   </Menu>
+  <MergeFile>applications-kmenuedit.menu</MergeFile>
 </Menu>
