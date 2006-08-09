@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 4
+Release: 	%mkrel 5
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -187,6 +187,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Aug 09 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-5
+- Fix oowriter menu entry
+
 * Mon Aug 07 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-4
 - Fix applications-mdk.menu to merge kmenuedit.menu files (fix mdk bug #24103)
 
