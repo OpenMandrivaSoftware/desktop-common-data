@@ -286,7 +286,7 @@
 	<Or>
         <Category>X-Mandrakelinux-Office-Wordprocessors</Category>
         <Category>X-MandrivaLinux-Office-Wordprocessors</Category>
-	<Category>Wordprocessor</Category>
+	<Category>WordProcessor</Category>
 	</Or>
       </Include>
     </Menu>
