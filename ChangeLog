@@ -1,3 +1,26 @@
+2006-08-17 19:56  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-discovery.menu,
+	  menu/menustyle.csh, menu/menustyle.sh: - Add discovery menu and
+	  script to support MDV_MENU_STYLE
+
+2006-08-17 13:45  Laurent Montel <lmontel at mandriva.com>
+
+	* desktop-common-data.spec: Change requires to mandriva-theme
+
+2006-08-09 11:56  Laurent Montel <lmontel at mandriva.com>
+
+	* desktop-common-data.spec: Update release
+
+2006-08-09 11:46  Laurent Montel <lmontel at mandriva.com>
+
+	* menu/applications-mdk.menu: Fix typo. (fix oowriter menu entry)
+
+2006-08-07 11:49  Laurent Montel <lmontel at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-mdk.menu: Fix mdk bug
+	  #24103 (add kmenuedit.menu file)
+
 2006-07-20 18:33  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec,
