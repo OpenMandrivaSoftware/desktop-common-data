@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 5
+Release: 	%mkrel 6
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -18,7 +18,7 @@ BuildRequires:	intltool
 BuildRequires:  mdk-menu-messages
 BuildRequires:  gettext
 BuildArch:	noarch
-Requires:	mandrake_theme
+Requires:	mandriva-theme
 Obsoletes:	mandrake_desk
 Provides:	mandrake_desk
 Conflicts:	kdebase-kdm-config-file < 1:3.2-62mdk
@@ -187,6 +187,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Aug 17 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-6
+- Change requires to mandriva-theme
+
 * Wed Aug 09 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-5
 - Fix oowriter menu entry
 
