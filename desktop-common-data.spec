@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 6
+Release: 	%mkrel 7
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -100,12 +100,13 @@ install -m 0644 menu/icons/large/*.png %buildroot/%_liconsdir
 install -m 0644 menu/icons/mini/*.png %buildroot/%_miconsdir
 
 # XDG menus
-install -d -m 0755 %buildroot/%_sysconfdir/xdg/menus/applications-merged
-install -d -m 0755 %buildroot/%_sysconfdir/menu.d
+install -d -m 0755 %buildroot/%_sysconfdir/xdg/menus/applications-merged  %buildroot/%_sysconfdir/xdg/discovery/menus/applications-merged
+install -d -m 0755 %buildroot/%_sysconfdir/menu.d %buildroot/%_sysconfdir/profile.d
 install -m 0644 menu/applications-mdk.menu %buildroot/%_sysconfdir/xdg/menus/applications.menu
+install -m 0644 menu/applications-discovery.menu %buildroot/%_sysconfdir/xdg/discovery/menus/applications.menu
 install -m 0755 menu/xdg_menu %buildroot/%_bindir
-#temporary name
 install -m 0755 menu/update-menus %buildroot/%_bindir/update-menus
+install -m 0755 menu/menustyle.sh menu/menustyle.csh %buildroot/%_sysconfdir/profile.d
 
 install -d -m 0755 %buildroot/%_datadir/desktop-directories
 mkdir tmp-l10n
@@ -154,11 +155,15 @@ rm -fr %buildroot
 %_sbindir/*
 
 %_sysconfdir/X11/xinit.d/*
+%_sysconfdir/profile.d/*
 %dir %_sysconfdir/menu.d
 %dir %_sysconfdir/xdg
 %dir %_sysconfdir/xdg/menus
 %dir %_sysconfdir/xdg/menus/applications-merged
+%dir %_sysconfdir/xdg/discovery/menus
+%dir %_sysconfdir/xdg/discovery/menus/applications-merged
 %config(noreplace) %_sysconfdir/xdg/menus/*.menu
+%config(noreplace) %_sysconfdir/xdg/discovery/menus/*.menu
 
 #
 %dir %_datadir/faces/
@@ -187,6 +192,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Aug 17 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-7mdv2007.0
+- Add discovery menu and script to support MDV_MENU_STYLE
+
 * Thu Aug 17 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-6
 - Change requires to mandriva-theme
 
