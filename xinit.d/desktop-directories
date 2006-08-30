@@ -33,13 +33,13 @@ if [ ! -e $USER_STAMP ]; then
 
 
 	    DIRECTORY_PATH="$HOME/$TARGET_DIR"
-	    [ -d "$DIRECTORY_PATH" ] || mkdir -p $DIRECTORY_PATH
-	    echo -e [Desktop Entry]\\nHidden=true\\n`grep Icon= $file` > $DIRECTORY_PATH/.directory
+	    [ -d "$DIRECTORY_PATH" ] || mkdir -p "$DIRECTORY_PATH"
+	    echo -e [Desktop Entry]\\nHidden=true\\n`grep Icon= $file` > "$DIRECTORY_PATH/.directory"
 
 	    FILE_PATH=$HOME/.mdk-folders/`basename $file .template`
 	    SYMLINK=$HOME/.mdk-folders/`basename $file -mdk.desktop.template`
 
-	    ln -f -s $DIRECTORY_PATH $SYMLINK
+	    ln -f -s "$DIRECTORY_PATH" $SYMLINK
 
 	    if [ "$CHARSET" != "UTF-8" ]; then
 		    DIRECTORY_PATH=`echo $DIRECTORY_PATH | iconv -f "$CHARSET" -t UTF-8 2>/dev/null`

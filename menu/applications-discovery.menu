@@ -147,7 +147,11 @@
 			<Category>X-MandrivaLinux-System-Configuration-Users</Category>
 			<Category>X-MandrivaLinux-System-Configuration-Other</Category>
 		</Or>
-        </Include>
+	</Include>
+	<!-- Empty node for KDE -->
+	<Menu>
+		<Name>ScreenSaver</Name>
+	</Menu>
   </Menu>
     <Menu>
       <Name>Documentation</Name>
@@ -201,5 +205,13 @@
 			<Category>X-MandrivaLinux-MoreApplications-Sciences-Other</Category>
 		</Or>
         </Include>
-  </Menu>
+</Menu>
+<!-- Empty nodes used by KDE -->
+<Menu>
+	<Name>Settings</Name>
+</Menu>
+<Menu>
+	<Name>Information</Name>
+</Menu>
+
 </Menu>

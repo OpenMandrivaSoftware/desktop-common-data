@@ -11,7 +11,7 @@ foreach file (/etc/sysconfig/menustyle $HOME/.menustyle)
  endif
 end
 
-if ($MDV_MENU_STYLE  == discovery ) then
+if ($MDV_MENU_STYLE  == discovery && ! ${?XDG_CONFIG_DIRS}) then
 	setenv XDG_CONFIG_DIRS /etc/xdg/discovery:/etc/xdg
 endif
 
