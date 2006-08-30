@@ -1,3 +1,8 @@
+2006-08-30 18:54  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/update-menus: - update-menus
+	  doesn't do anything if DURING_INSTALL is set to 1
+
 2006-08-30 18:01  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/applications-discovery.menu,
