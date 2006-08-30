@@ -1,3 +1,16 @@
+2006-08-30 18:01  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-discovery.menu,
+	  menu/applications-mdk.menu, menu/menustyle.csh,
+	  menu/menustyle.sh,
+	  menu/desktop-directories/mandriva-moreapplications-games-adventure.directory.in,
+	  xinit.d/desktop-directories: - Add missing directory file for
+	  adventure (Mdv bug #24829) - Add empty menu nodes for KDE in
+	  discovery menu - Remove old X-MandrakeLinux* categories for main
+	  menu, all entries   must now use X-MandrivaLinux - fix default
+	  directories creation if translation contains spaces (Mdv bug
+	  #24677)
+
 2006-08-17 19:56  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/applications-discovery.menu,
