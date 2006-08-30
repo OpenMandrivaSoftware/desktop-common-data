@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 8
+Release: 	%mkrel 9
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -192,6 +192,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Aug 30 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-9mdv2007.0
+- update-menus doesn't do anything if DURING_INSTALL is set to 1
+
 * Wed Aug 30 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-8mdv2007.0
 - Add missing directory file for adventure (Mdv bug #24829)
 - Add empty menu nodes for KDE in discovery menu

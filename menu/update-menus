@@ -12,6 +12,10 @@ exit 0
 
 VERBOSE=0
 
+if [ "$DURING_INSTALL" = "1" ]; then
+  exit 0
+fi
+
 if [ "$UID" == "0" ]; then 
  USER_MENU=0 
 else 
