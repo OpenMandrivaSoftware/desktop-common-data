@@ -195,6 +195,8 @@ rm -fr %buildroot
 %changelog
 * Thu Aug 31 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-10mdv2007.0
 - Fix upgrade from 2006
+- Fix discovery menu (merge kmenuedit.menu when it created by kmenuedit, fix 
+ kfmclient error)
 
 * Wed Aug 30 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-9mdv2007.0
 - update-menus doesn't do anything if DURING_INSTALL is set to 1

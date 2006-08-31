@@ -213,5 +213,14 @@
 <Menu>
 	<Name>Information</Name>
 </Menu>
-
+  <Menu>
+    <Name>.hidden</Name>
+    <Directory>mandriva-hidden.directory</Directory>
+    <Include>
+            <Or>
+                    <Category>X-MandrivaLinux-.hidden</Category>
+            </Or>
+    </Include>
+  </Menu>
+<MergeFile>applications-kmenuedit.menu</MergeFile>
 </Menu>
