@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 9
+Release: 	%mkrel 10
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -28,6 +28,7 @@ Provides:	menu-xdg
 Provides:	menu = 2.1.24
 Requires:	xinitrc >= 2.4.12
 Requires:	mdk-menu-messages >= 10.2-7mdk
+Conflicts:      kdelibs-common < 30000000:3.5
 
 %description
 This package contains useful icons, menu structure and others goodies for the
@@ -192,6 +193,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Aug 31 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-10mdv2007.0
+- Fix upgrade from 2006
+
 * Wed Aug 30 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-9mdv2007.0
 - update-menus doesn't do anything if DURING_INSTALL is set to 1
 
