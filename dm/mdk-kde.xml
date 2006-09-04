@@ -117,11 +117,11 @@
   </item>
 
   <item type="rect" id="caps-lock-warning">
-    <normal color="#ffffff" alpha="0.6"/>
+    <normal color="#ffffff" alpha="0.0"/>
     <pos anchor="c" x="50%" y="75%" width="box" height="box"/>
     <box orientation="vertical" min-width="400" xpadding="10" ypadding="5" spacing="0">
       <item type="label">
-        <normal color="#000000" font="Sans 14"/>
+        <normal color="#FFFFFF" font="Sans 14"/>
         <pos x="50%" anchor="n"/>
 	<!-- Stock label for: You've got capslock on! -->
 	<stock type="caps-lock-warning"/>
