@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 10
+Release: 	%mkrel 11
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -193,6 +193,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Sep 04 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-11mdv2007.0
+- Improve gdm/kdm theme with new backgrounds
+- Don't create default desktop directories for root (Mdv bug #19711)
+
 * Thu Aug 31 2006 Laurent MONTEL <lmontel@mandriva.com> 2007-10mdv2007.0
 - Fix upgrade from 2006
 - Fix discovery menu (merge kmenuedit.menu when it created by kmenuedit, fix 

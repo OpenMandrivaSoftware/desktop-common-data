@@ -118,7 +118,7 @@
 
   <item type="rect" id="caps-lock-warning">
     <normal color="#ffffff" alpha="0.0"/>
-    <pos anchor="c" x="50%" y="75%" width="box" height="box"/>
+    <pos anchor="c" x="50%" y="50%" width="box" height="box"/>
     <box orientation="vertical" min-width="400" xpadding="10" ypadding="5" spacing="0">
       <item type="label">
         <normal color="#FFFFFF" font="Sans 14"/>
@@ -131,7 +131,7 @@
 
   <item type="rect">
     <show type="timed"/>
-    <normal color="#ffffff" alpha="0.6"/>
+    <normal color="#ffffff" alpha="0"/>
     <pos anchor="c" x="50%" y="70%" width="box" height="box"/>
     <box orientation="vertical" min-width="400" xpadding="10" ypadding="5" spacing="0">
       <item type="label" id="timed-label">
@@ -164,13 +164,13 @@
         <box orientation="vertical" xpadding="0" ypadding="0" spacing="14">
           <item type="label">
             <pos anchor="ne" x="100%"/>
-            <normal color="#FFFFFF" font="Sans 16"/>
+            <normal color="#FFFFFF" font="Sans 14"/>
      	 	<!-- Stock label for: Username: -->
      	 	<stock type="username-label"/>
           </item>
           <item type="label">
             <pos anchor="ne" x="100%"/>
-            <normal color="#FFFFFF" font="Sans 16"/>
+            <normal color="#FFFFFF" font="Sans 14"/>
      	 	<!-- Stock label for: Password: -->
      	 	<stock type="password-label"/>
           </item>
@@ -194,7 +194,7 @@
     <fixed>
       <item type="label" id="pam-error">
         <pos anchor="n" x="50%" y="110%"/>
-        <normal color="#ffffff" font="Sans 16"/>
+        <normal color="#ffffff" font="Sans 12"/>
         <text></text>
       </item>
     </fixed>

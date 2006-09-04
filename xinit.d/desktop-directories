@@ -1,8 +1,8 @@
 #!/bin/sh
 
-USER_STAMP=$HOME/.mdk-folders
+MDK_FOLDERS="$HOME/.mdk-folders"
 
-if [ ! -e $USER_STAMP ]; then
+if [ "$UID" != "0" -a ! -e $MDK_FOLDERS ]; then
 . /etc/profile.d/10lang.sh
    locale=C
    if [ ! -z "$LC_ALL" ]; then
@@ -14,7 +14,7 @@ if [ ! -e $USER_STAMP ]; then
    fi
    CHARSET=`locale charmap`
 
-   [ -d $HOME/.mdk-folders ] || mkdir -p $HOME/.mdk-folders
+   [ -d $MDK_FOLDERS ] || mkdir -p "$MDK_FOLDERS"
 
     for file in /usr/share/mdk/menu/*-mdk.desktop.template ; do
 	    TARGET_DIR=`grep -m1 -F Name[$locale]= $file | sed -e 's|.*=||g'`
@@ -36,8 +36,8 @@ if [ ! -e $USER_STAMP ]; then
 	    [ -d "$DIRECTORY_PATH" ] || mkdir -p "$DIRECTORY_PATH"
 	    echo -e [Desktop Entry]\\nHidden=true\\n`grep Icon= $file` > "$DIRECTORY_PATH/.directory"
 
-	    FILE_PATH=$HOME/.mdk-folders/`basename $file .template`
-	    SYMLINK=$HOME/.mdk-folders/`basename $file -mdk.desktop.template`
+	    FILE_PATH=$MDK_FOLDERS/`basename $file .template`
+	    SYMLINK=$MDK_FOLDERS/`basename $file -mdk.desktop.template`
 
 	    ln -f -s "$DIRECTORY_PATH" $SYMLINK
 
@@ -47,6 +47,5 @@ if [ ! -e $USER_STAMP ]; then
 	    [ -f $FILE_PATH ] || cat $file | sed -e "s|\$HOME.*|$DIRECTORY_PATH|g" > $FILE_PATH
 	    echo "file://$FILE_PATH" >> $HOME/.gtk-bookmarks
     done
-    touch $USER_STAMP
 fi
 

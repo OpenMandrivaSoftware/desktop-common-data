@@ -117,11 +117,11 @@
   </item>
 
   <item type="rect" id="caps-lock-warning">
-    <normal color="#ffffff" alpha="0.6"/>
-    <pos anchor="c" x="50%" y="75%" width="box" height="box"/>
+    <normal color="#ffffff" alpha="0"/>
+    <pos anchor="c" x="50%" y="50%" width="box" height="box"/>
     <box orientation="vertical" min-width="400" xpadding="10" ypadding="5" spacing="0">
       <item type="label">
-        <normal color="#000000" font="Sans 14"/>
+        <normal color="#FFFFFF" font="Sans 14"/>
         <pos x="50%" anchor="n"/>
 	<!-- Stock label for: You've got capslock on! -->
 	<stock type="caps-lock-warning"/>
@@ -131,11 +131,11 @@
 
   <item type="rect">
     <show type="timed"/>
-    <normal color="#ffffff" alpha="0.6"/>
+    <normal color="#ffffff" alpha="0"/>
     <pos anchor="c" x="50%" y="70%" width="box" height="box"/>
     <box orientation="vertical" min-width="400" xpadding="10" ypadding="5" spacing="0">
       <item type="label" id="timed-label">
-        <normal color="#000000" font="Sans 14"/>
+        <normal color="#FFFFFF" font="Sans 14"/>
         <pos x="50%" anchor="n"/>
 	<!-- Stock label for: User %s will login in %d seconds -->
 	<stock type="timed-label"/>
@@ -144,23 +144,23 @@
   </item>
 
   <item type="rect">
-    <normal color="#ffffff" alpha="0.6"/>
+    <normal color="#ffffff" alpha="0"/>
     <pos anchor="c" x="50%" y="40%" width="box" height="box"/>
     <box orientation="vertical" min-width="350" xpadding="30" ypadding="30" spacing="10">
       <item type="label">
         <pos anchor="n" x="50%"/>
-        <normal color="#000000" font="Sans 18"/>
+        <normal color="#FFFFFF" font="Sans 18"/>
 	<!-- Stock label for: Welcome to %h -->
 	<stock type="welcome-label"/>
       </item>
       <item type="label" id="pam-prompt">
-        <pos anchor="nw" x="10%"/>
-        <normal color="#000000" font="Sans 16"/>
+        <pos anchor="nw" x="10%" />
+        <normal color="#FFFFFF" font="Sans 14"/>
 	<!-- Stock label for: Username: -->
 	<stock type="username-label"/>
       </item>
       <item type="rect">
-	<normal color="#000000"/>
+	<normal color="#FFFFFF"/>
         <pos anchor="n" x="50%" height="24" width="80%"/>
 	<fixed>
 	  <item type="entry" id="user-pw-entry">
@@ -170,7 +170,7 @@
       </item>
       <item type="label" id="pam-message">
         <pos anchor="n" x="50%"/>
-        <normal color="#000000" font="Sans 16"/>
+        <normal color="#FFFFFF" font="Sans 12"/>
 	<text></text>
       </item>
     </box>
