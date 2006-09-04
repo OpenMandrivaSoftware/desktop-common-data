@@ -1,3 +1,27 @@
+2006-09-04 18:32  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, dm/mdk-gdm.xml, dm/mdk-kde.xml,
+	  xinit.d/desktop-directories: - Improve gdm/kdm theme with new
+	  backgrounds - Don't create default desktop directories for root
+	  (Mdv bug #19711)
+
+2006-09-04 11:46  Laurent Montel <lmontel at mandriva.com>
+
+	* dm/mdk-kde.xml: Fix caps lock error
+
+2006-09-04 10:29  Laurent Montel <lmontel at mandriva.com>
+
+	* dm/mdk-kde.xml: Change design as requested by design team
+
+2006-08-31 17:46  Laurent Montel <lmontel at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-discovery.menu: Use
+	  kmenuedit menu file if it's generated.
+
+2006-08-31 17:33  Laurent Montel <lmontel at mandriva.com>
+
+	* desktop-common-data.spec: Fix upgrade from 2006
+
 2006-08-30 18:54  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/update-menus: - update-menus
