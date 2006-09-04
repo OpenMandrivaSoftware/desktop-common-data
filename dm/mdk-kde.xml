@@ -144,17 +144,17 @@
   </item>
 
   <item type="rect">
-    <normal color="#ffffff" alpha="0.6"/>
+    <normal color="#ffffff" alpha="0"/>
     <pos anchor="c" x="50%" y="40%" width="box" height="box"/>
     <box orientation="vertical" min-width="350" xpadding="30" ypadding="30" spacing="10">
       <item type="label">
         <pos anchor="n" x="50%"/>
-        <normal color="#000000" font="Sans 18"/>
+        <normal color="#FFFFFF" font="Sans 18"/>
 	<!-- Stock label for: Welcome to %h -->
 	<stock type="welcome-label"/>
 </item>
       <item type="rect" id="talker">
-      <normal color="#000000" alpha="0" font="Sans 16"/>
+      <normal color="#FFFFFF" alpha="0" font="Sans 16"/>
       <pos anchor="n" x="50%" width="box" height="box"/>
       <!-- box orientation="vertical" xpadding="0" ypadding="0" spacing="10" -->
       <box orientation="horizontal" xpadding="0" ypadding="0" spacing="0">
@@ -164,13 +164,13 @@
         <box orientation="vertical" xpadding="0" ypadding="0" spacing="14">
           <item type="label">
             <pos anchor="ne" x="100%"/>
-            <normal color="#000000" font="Sans 16"/>
+            <normal color="#FFFFFF" font="Sans 16"/>
      	 	<!-- Stock label for: Username: -->
      	 	<stock type="username-label"/>
           </item>
           <item type="label">
             <pos anchor="ne" x="100%"/>
-            <normal color="#000000" font="Sans 16"/>
+            <normal color="#FFFFFF" font="Sans 16"/>
      	 	<!-- Stock label for: Password: -->
      	 	<stock type="password-label"/>
           </item>
