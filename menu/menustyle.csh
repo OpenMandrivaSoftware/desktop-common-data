@@ -1,4 +1,3 @@
-#!/bin/csh
 if ($META_CLASS == desktop ) then 
 	set MDV_MENU_STYLE=discovery 
 else

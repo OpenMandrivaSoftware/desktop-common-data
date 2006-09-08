@@ -1,5 +1,3 @@
-#!/bin/sh
-
 if [ "$META_CLASS" = "desktop" ]; then 
 	MDV_MENU_STYLE=discovery 
 else

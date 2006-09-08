@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 11
+Release: 	%mkrel 12
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -126,6 +126,17 @@ for i in dm/*.png dm/*.desktop dm/*.xml ; do
   install -m 0644 $i %buildroot/%_datadir/mdk/dm/
 done
 
+# install bookmarks
+install -d -m 0755 %buildroot%_datadir/mdk/bookmarks/konqueror
+for i in bookmarks/konqueror/*.xml ; do 
+  install -m 0644 $i %buildroot%_datadir/mdk/bookmarks/konqueror
+done
+
+install -d -m 0755 %buildroot%_datadir/mdk/bookmarks/mozilla
+for i in bookmarks/mozilla/*.html ; do 
+  install -m 0644 $i %buildroot%_datadir/mdk/bookmarks/mozilla
+done
+
 
 %post
 if [ -f %_sysconfdir/X11/window-managers.rpmsave ];then
@@ -175,6 +186,13 @@ rm -fr %buildroot
 #
 %dir %_datadir/mdk/backgrounds/
 %_datadir/mdk/backgrounds/*.jpg
+
+%dir %_datadir/mdk/bookmarks
+%dir %_datadir/mdk/bookmarks/konqueror
+%_datadir/mdk/bookmarks/konqueror/*.xml
+%dir %_datadir/mdk/bookmarks/mozilla
+%_datadir/mdk/bookmarks/mozilla/*.html
+%_datadir/mdk/backgrounds/*.jpg
 #
 %dir %_datadir/apps/kdm/pics/
 %_datadir/apps/kdm/pics/*
@@ -193,6 +211,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Fri Sep 08 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-12mdv2007.0
+- Update profile scripts to remove invalid dependencies
+- move defaults bookmarks from kde and firefox to this package
+
 * Mon Sep 04 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-11mdv2007.0
 - Improve gdm/kdm theme with new backgrounds
 - Don't create default desktop directories for root (Mdv bug #19711)
