@@ -1,3 +1,19 @@
+2006-09-08 19:11  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec,
+	  bookmarks/mozilla/mozilla-discovery-download.html,
+	  bookmarks/mozilla/mozilla-powerpack.html,
+	  bookmarks/mozilla/mozilla-powerpackplus.html, menu/menustyle.csh,
+	  menu/menustyle.sh: - Update profile scripts to remove invalid
+	  dependencies - move defaults bookmarks from kde and firefox to
+	  this package
+
+2006-09-08 14:19  Laurent Montel <lmontel at mandriva.com>
+
+	* bookmarks/konqueror/: bookmarks-discovery.xml,
+	  bookmarks-download.xml, bookmarks-powerpack.xml,
+	  bookmarks-powerpackplus.xml: Move konqueror bookmarks
+
 2006-09-04 18:32  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, dm/mdk-gdm.xml, dm/mdk-kde.xml,
