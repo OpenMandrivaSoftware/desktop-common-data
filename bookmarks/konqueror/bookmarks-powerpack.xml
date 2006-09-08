@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel>
+<xbel folded="no" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/" >
+  <title>Mandriva</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/" >
+  <title>Mandrivastore</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com/" >
+  <title>Mandrivaclub</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
+  <title>Mandrivaexpert</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="https://online.mandriva.com/" >
+  <title>Mandrivaonline</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="https://secure.mandriva.com/" >
+  <title>Mandrivasecure</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/skype.png" href="http://www.skype.com"
+ >
+  <title>Free calls online</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/intel.png" href="http://store.mandriva.com/index.php?cPath=25_119&amp;osCsid=196dee78207e1652e69b4eab3d169b16" >
+  <title>Intel(R) Compilers</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/lpi_org.png" href="http://www.lpi.org/" >
+  <title>LPI</title>
+ </bookmark>
+ <folder folded="yes" >
+  <title>Community</title>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.gnu.org/software/software.html" >
+   <title>Free Software Foundation</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.gnu.org/" >
+   <title>The GNU Project</title>
+  </bookmark>
+  <separator/>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://freshmeat.net/" >
+   <title>Freshmeat</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.gnome.org/" >
+   <title>GNOME</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.kde.org/" >
+   <title>KDE</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linux.org/" >
+   <title>Linux.org</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linuxgames.com/" >
+   <title>Linux Games</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linuxhq.com/" >
+   <title>Linux HeadQuarters</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.kernel.org/" >
+   <title>Linux Kernel Archives</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://rpmfind.net/" >
+   <title>RpmFind.net</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.x.org/" >
+   <title>Xorg</title>
+  </bookmark>
+ </folder>
+ <folder folded="yes" >
+  <title>News</title>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://alllinuxdevices.com/" >
+   <title>All Linux Devices</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linux.com/" >
+   <title>Linux.com</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linuxplanet.com/" >
+   <title>Linux Planet</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://linuxtoday.com/" >
+   <title>Linux Today</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.lwn.net/" >
+   <title>Linux Weekly News</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.ofb.biz/" >
+   <title>OfB.biz</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.osnews.com/" >
+   <title>OSNews.com</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://slashdot.org/" >
+   <title>Slashdot</title>
+  </bookmark>
+ </folder>
+ <folder folded="no" >
+  <title>Programming</title>
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/en/cookerdevel.php3" >
+   <title>Mandrake Linux Cooker</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://qa.mandriva.com/wiki" >
+   <title>Mandrake Linux Development Community</title>
+  </bookmark>
+  <separator/>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://gcc.gnu.org/" >
+   <title>GCC</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.gtk.org/" >
+   <title>GTK+</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://developer.kde.org/" >
+   <title>KDE - Developer's Corner</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.opensource.org/" >
+   <title>OpenSource.org</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.perl.org/" >
+   <title>Perl.org</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.python.org/" >
+   <title>Python.org</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.trolltech.com/products/qt/" >
+   <title>Qt Overview</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.rpm.org/" >
+   <title>RPM.org</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://sourceforge.net/" >
+   <title>SourceForge</title>
+  </bookmark>
+ </folder>
+</xbel>
