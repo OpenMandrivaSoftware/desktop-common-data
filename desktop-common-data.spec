@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 12
+Release: 	%mkrel 13
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -211,6 +211,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Wed Sep 13 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-13mdv2007.0
+- Update with new bookmarks
+
 * Fri Sep 08 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-12mdv2007.0
 - Update profile scripts to remove invalid dependencies
 - move defaults bookmarks from kde and firefox to this package
