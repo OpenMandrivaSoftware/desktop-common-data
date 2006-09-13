@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
 <xbel folded="no" >
-		<bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/" >
   <title>Mandriva</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/" >
   <title>Mandrivastore</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com/xwiki/bin/view/Main/WebHome" >
   <title>Mandrivaclub</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/en/support" >
   <title>Mandrivaexpert</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="https://online.mandriva.com/" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://online.mandriva.com/" >
   <title>Mandrivaonline</title>
  </bookmark>
-<bookmark icon="/usr/share/icons/favicons/skype.png" href="http://www.skype.com" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://kiosk.mandriva.com/" >
+  <title>Kiosk</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/skype.png" href="http://www.skype.com/intl/fr/illimite/" >
   <title>Free calls online</title>
  </bookmark>
-<bookmark icon="/usr/share/icons/favicons/intel.png" href="http://store.mandriva.com/index.php?cPath=25_119&amp;osCsid=196dee78207e1652e69b4eab3d169b16" >
+<bookmark icon="/usr/share/icons/favicons/transgaming.ico" href="http://www.transgaming.com/" >
+  <title>Transgaming/cedega</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/bitdefender.ico" href="http://store.mandriva.com/index.php?cPath=25_121" >
+  <title>Bitdefender</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/kaspersky.ico" href="http://www.kaspersky.com/" >
+  <title>Kaspersky</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/lindvd.ico" href="http://www.intervideo.com/jsp/LinDVD.jsp" >
+  <title>LinDVD</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/lindvd.ico" href="http://www.intervideo-europe.com/ieso/lindvd.htm" >
+  <title>LinDVD</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/index.php?cPath=25_112" >
+  <title>Arkeia</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/crossover.ico" href="http://store.mandriva.com/index.php?cPath=25_38" >
+  <title>Crossover  (codeweavers)</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/intel.png" href="http://store.mandriva.com/index.php?cPath=25_119" >
   <title>Intel(R) Compilers</title>
- </bookmark> 
-<bookmark icon="/usr/share/icons/favicons/lpi_org.png" href="http://www.lpi.org/" >
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/lpi_org.png" href="http://www.lpi.org/" >
   <title>LPI</title>
  </bookmark>
  <folder folded="yes" >
@@ -89,7 +113,7 @@
    <title>Slashdot</title>
   </bookmark>
  </folder>
- <folder folded="yes" >
+ <folder folded="no" >
   <title>Programming</title>
   <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/en/cookerdevel.php3" >
    <title>Mandrake Linux Cooker</title>
@@ -124,36 +148,6 @@
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://sourceforge.net/" >
    <title>SourceForge</title>
-  </bookmark>
- </folder>
- <folder folded="yes" icon="bookmark_folder" >
-  <title>Server</title>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.apache.org/" >
-   <title>Apache</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://kolab.kde.org/" >
-   <title>Kolab</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.mysql.com/" >
-   <title>MySQL</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.php.net/" >
-   <title>PHP</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.postfix.com/" >
-   <title>Postfix</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.postgresql.org/" >
-   <title>PostgreSQL</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.proftpd.org/" >
-   <title>ProFTPD</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.openldap.org/" >
-   <title>OpenLDAP</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://samba.org/samba/samba.html" >
-   <title>Samba</title>
   </bookmark>
  </folder>
 </xbel>
