@@ -1251,9 +1251,6 @@
           <Name>Advanced</Name>
           <Directory>mandriva-system-configuration-gnome-advanced.directory</Directory>
 	  <Include>
-		  <Or>
-			  <Category>X-MandrivaLinux-System-Configuration-GNOME-Advanced</Category>
-		  </Or>
           </Include>
         </Menu>
       </Menu>

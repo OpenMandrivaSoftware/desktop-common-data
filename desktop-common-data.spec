@@ -213,6 +213,7 @@ rm -fr %buildroot
 %changelog
 * Wed Sep 13 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-13mdv2007.0
 - Update with new bookmarks
+- Don't show GNOME configuration in standard menu, moved in preferences menu
 
 * Fri Sep 08 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-12mdv2007.0
 - Update profile scripts to remove invalid dependencies
