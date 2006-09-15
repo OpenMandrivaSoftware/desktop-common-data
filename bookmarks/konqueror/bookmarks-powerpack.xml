@@ -25,17 +25,25 @@
 <bookmark icon="/usr/share/icons/favicons/transgaming.ico" href="http://www.transgaming.com/" >
   <title>Transgaming/cedega</title>
  </bookmark>
-<bookmark icon="/usr/share/icons/favicons/bitdefender.ico" href="http://store.mandriva.com/index.php?cPath=25_121" >
-  <title>Bitdefender</title>
- </bookmark>
-<bookmark icon="/usr/share/icons/favicons/kaspersky.ico" href="http://www.kaspersky.com/" >
-  <title>Kaspersky</title>
- </bookmark>
-<bookmark icon="/usr/share/icons/favicons/lindvd.ico" href="http://www.intervideo.com/jsp/LinDVD.jsp" >
+<bookmark icon="/usr/share/icons/favicons/lindvd.ico" href="http://www.intervideo-europe.com/ieso/lindvd.htm" >
   <title>LinDVD</title>
+ </bookmark>
+ <folder folded="yes" >
+  <title>Partners</title>
+ <bookmark icon="/usr/share/icons/favicons/skype.png" href="http://www.skype.com/" >
+  <title>Free calls online</title>
+ </bookmark>
+<bookmark icon="/usr/share/icons/favicons/transgaming.ico" href="http://www.transgaming.com/" >
+  <title>Transgaming/cedega</title>
  </bookmark>
 <bookmark icon="/usr/share/icons/favicons/lindvd.ico" href="http://www.intervideo-europe.com/ieso/lindvd.htm" >
   <title>LinDVD</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/bitdefender.ico" href="http://store.mandriva.com/index.php?cPath=25_121" >
+  <title>Bitdefender</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/kaspersky.ico" href="http://www.kaspersky.com/" >
+  <title>Kaspersky</title>
  </bookmark>
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/index.php?cPath=25_112" >
   <title>Arkeia</title>
@@ -46,6 +54,8 @@
 <bookmark icon="/usr/share/icons/favicons/intel.png" href="http://store.mandriva.com/index.php?cPath=25_119" >
   <title>Intel(R) Compilers</title>
  </bookmark>
+ </folder>
+ <separator/>
  <bookmark icon="/usr/share/icons/favicons/lpi_org.png" href="http://www.lpi.org/" >
   <title>LPI</title>
  </bookmark>
