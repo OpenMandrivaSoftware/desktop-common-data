@@ -1,3 +1,60 @@
+2006-09-18 16:25  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec: - Rebuild with fixed mdk-menu-message
+	  to get all translations (Mdv bug #25895)
+
+2006-09-15 09:59  Laurent Montel <lmontel at mandriva.com>
+
+	* bookmarks/konqueror/: bookmarks-powerpack.xml,
+	  bookmarks-powerpackplus.xml: Fix kaspersky icons
+
+2006-09-15 09:53  Laurent Montel <lmontel at mandriva.com>
+
+	* bookmarks/konqueror/: bookmarks-powerpack.xml,
+	  bookmarks-powerpackplus.xml: Fix crossover favicon
+
+2006-09-15 08:48  Laurent Montel <lmontel at mandriva.com>
+
+	* bookmarks/konqueror/: bookmarks-powerpack.xml,
+	  bookmarks-powerpackplus.xml: Add partners directory
+
+2006-09-15 08:33  Laurent Montel <lmontel at mandriva.com>
+
+	* bookmarks/konqueror/: bookmarks-discovery.xml,
+	  bookmarks-download.xml, bookmarks-powerpack.xml,
+	  bookmarks-powerpackplus.xml: Fix bookmarks url
+
+2006-09-13 20:05  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-mdk.menu: - Don't
+	  show GNOME configuration in standard menu, moved in preferences
+	  menu
+
+2006-09-13 16:19  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec,
+	  bookmarks/mozilla/mozilla-discovery-download.html,
+	  bookmarks/mozilla/mozilla-discovery.html,
+	  bookmarks/mozilla/mozilla-download.html,
+	  bookmarks/mozilla/mozilla-powerpack.html,
+	  bookmarks/mozilla/mozilla-powerpackplus.html: - Update with new
+	  bookmarks
+
+2006-09-13 09:46  Laurent Montel <lmontel at mandriva.com>
+
+	* bookmarks/konqueror/: bookmarks-powerpack.xml,
+	  bookmarks-powerpackplus.xml: Fix bookmarks for power*
+
+2006-09-13 08:58  Laurent Montel <lmontel at mandriva.com>
+
+	* bookmarks/konqueror/bookmarks-download.xml: Fix download
+	  bookmarks
+
+2006-09-13 08:56  Laurent Montel <lmontel at mandriva.com>
+
+	* bookmarks/konqueror/bookmarks-discovery.xml: Fix discovery
+	  bookmarks
+
 2006-09-08 19:11  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec,
