@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 13
+Release: 	%mkrel 14
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -211,6 +211,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Sep 18 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-14mdv2007.0
+- Rebuild with fixed mdk-menu-message to get all translations (Mdv bug #25895)
+
 * Wed Sep 13 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-13mdv2007.0
 - Update with new bookmarks
 - Don't show GNOME configuration in standard menu, moved in preferences menu
