@@ -1,3 +1,11 @@
+2006-09-19 20:08  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-discovery.menu,
+	  menu/applications-mdk.menu, menu/mandriva-discovery.menu: - Fix
+	  error in upstream category in main menu - add
+	  mandriva-discovery.menu additional menu file to hide / sort
+	  applications	 for Discovery / One products
+
 2006-09-18 16:25  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec: - Rebuild with fixed mdk-menu-message
