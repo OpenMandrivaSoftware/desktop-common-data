@@ -222,5 +222,6 @@
             </Or>
     </Include>
   </Menu>
+<MergeFile>/etc/xdg/discovery/menus/mandriva-discovery.menu</MergeFile>
 <MergeFile>applications-kmenuedit.menu</MergeFile>
 </Menu>

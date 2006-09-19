@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 14
+Release: 	%mkrel 15
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -105,6 +105,7 @@ install -d -m 0755 %buildroot/%_sysconfdir/xdg/menus/applications-merged  %build
 install -d -m 0755 %buildroot/%_sysconfdir/menu.d %buildroot/%_sysconfdir/profile.d
 install -m 0644 menu/applications-mdk.menu %buildroot/%_sysconfdir/xdg/menus/applications.menu
 install -m 0644 menu/applications-discovery.menu %buildroot/%_sysconfdir/xdg/discovery/menus/applications.menu
+install -m 0644 menu/mandriva-discovery.menu %buildroot/%_sysconfdir/xdg/discovery/menus/mandriva-discovery.menu
 install -m 0755 menu/xdg_menu %buildroot/%_bindir
 install -m 0755 menu/update-menus %buildroot/%_bindir/update-menus
 install -m 0755 menu/menustyle.sh menu/menustyle.csh %buildroot/%_sysconfdir/profile.d
@@ -211,6 +212,11 @@ rm -fr %buildroot
 
 
 %changelog
+* Tue Sep 19 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-15mdv2007.0
+- Fix error in upstream category in main menu
+- add mandriva-discovery.menu additional menu file to hide / sort applications
+  for Discovery / One products
+
 * Mon Sep 18 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-14mdv2007.0
 - Rebuild with fixed mdk-menu-message to get all translations (Mdv bug #25895)
 

@@ -697,7 +697,7 @@
 			<Category>X-MandrivaLinux-MoreApplications-Education-Sciences</Category>
 			<And>
 				<Category>Education</Category>
-				<Category>Languages</Category>
+				<Category>Science</Category>
 			</And>
 		</Or>
         </Include>
