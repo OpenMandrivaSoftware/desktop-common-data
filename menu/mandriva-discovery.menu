@@ -135,6 +135,13 @@
       <Filename>kde-kjscmd.desktop</Filename>
       <Filename>invest-chart.desktop</Filename>
       <Filename>base2.0.desktop</Filename>
+      <Filename>kasumi.desktop</Filename>
+    </Exclude>
+  </Menu>
+  <Menu>
+    <Name>Documentation</Name>
+    <Exclude>
+      <Filename>monodoc.desktop</Filename>
     </Exclude>
   </Menu>
 </Menu>

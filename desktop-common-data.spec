@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 15
+Release: 	%mkrel 16
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -28,7 +28,7 @@ Provides:	menu-xdg
 Provides:	menu = 2.1.24
 Requires:	xinitrc >= 2.4.12
 Requires:	mdk-menu-messages >= 10.2-7mdk
-Conflicts:      kdelibs-common < 30000000:3.5
+Conflicts:      kdelibs-common < 30000000:3.5.2
 
 %description
 This package contains useful icons, menu structure and others goodies for the
@@ -212,6 +212,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Sep 21 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-16mdv2007.0
+- Hide more applications in one products
+- Increase version for Conflicts (Mdv bug #26043)
+
 * Tue Sep 19 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-15mdv2007.0
 - Fix error in upstream category in main menu
 - add mandriva-discovery.menu additional menu file to hide / sort applications
