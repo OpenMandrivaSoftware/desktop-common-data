@@ -509,6 +509,16 @@
       </Include>
     </Menu>
     <Menu>
+      <Name>Emulators</Name>
+      <Directory>mandriva-moreapplications-emulators.directory</Directory>
+      <Include>
+	      <Or>
+		      <Category>X-MandrivaLinux-MoreApplications-Emulators</Category>
+		      <Category>Emulator</Category>
+	      </Or>
+      </Include>
+    </Menu>
+    <Menu>
       <Name>Development</Name>
       <Layout>
         <Menuname>Development Environment</Menuname>
