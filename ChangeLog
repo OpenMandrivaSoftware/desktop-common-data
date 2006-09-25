@@ -1,3 +1,10 @@
+2006-09-25 14:33  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-discovery.menu,
+	  menu/applications-mdk.menu,
+	  menu/desktop-directories/mandriva-moreapplications-emulators.directory.in:
+	  - Add missing Emulator category to menu files (Mdv bug #26148)
+
 2006-09-21 12:20  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/mandriva-discovery.menu: - Hide
