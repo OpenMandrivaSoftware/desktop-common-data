@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://standards.freedesktop.org/menu-spec/menu-1.0.dtd">
 <Menu>
-  <Name>Mandriva Linux</Name>
+  <Name>Applications</Name>
   <Layout>
     <Menuname>Office</Menuname>
     <Menuname>Internet</Menuname>
@@ -661,7 +661,7 @@
       </Menu>
       <Menu>
         <Name>Geography</Name>
-        <Directory>mandriva-moreapplications-educatino-geography.directory</Directory>
+        <Directory>mandriva-moreapplications-education-geography.directory</Directory>
 	<Include>
 		<Or>
 			<Category>X-MandrivaLinux-MoreApplications-Education-Geography</Category>

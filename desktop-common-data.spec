@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 17
+Release: 	%mkrel 18
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -212,6 +212,10 @@ rm -fr %buildroot
 
 
 %changelog
+* Mon Oct 02 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-18mdv2007.0
+- Rename root node from Mandriva Linux to Applications (Mdv bug #25389)
+- Add missing .directory for various entries (Mdv bug #26273)
+
 * Mon Sep 25 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-17mdv2007.0
 - Add missing Emulator category to menu files (Mdv bug #26148)
 
