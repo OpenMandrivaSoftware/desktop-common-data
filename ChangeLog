@@ -1,3 +1,24 @@
+2006-10-02 19:28  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-discovery.menu,
+	  menu/applications-mdk.menu,
+	  menu/desktop-directories/mandriva-moreapplications-development-interpreters.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-development-other.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-economy.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-geography.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-history.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-literature.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-sports.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-other.directory.in,
+	  menu/desktop-directories/mandriva-multimedia-other.directory.in,
+	  menu/desktop-directories/mandriva-office-communications-other.directory.in,
+	  menu/desktop-directories/mandriva-office-other.directory.in,
+	  menu/desktop-directories/mandriva-other.directory.in,
+	  menu/desktop-directories/mandriva-system-archiving-backup.directory.in,
+	  menu/desktop-directories/mandrivalinux.directory.in: - Rename
+	  root node from Mandriva Linux to Applications (Mdv bug #25389) -
+	  Add missing .directory for various entries (Mdv bug #26273)
+
 2006-09-25 14:33  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/applications-discovery.menu,
