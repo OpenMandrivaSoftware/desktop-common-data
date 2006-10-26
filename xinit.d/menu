@@ -26,19 +26,27 @@ fi
 touch $HOME/.mdk-menu-migrated
 fi
 
-USER_STAMP=$HOME/.xdg-menu-updates.stamp
-USER_MENU=$HOME/.local/
+USER_STAMP=$HOME/.menu-updates.stamp
+SYSTEM_STAMP=/var/lib/menu/.menu-updates.stamp
+MENU_DIR=$HOME/.config/menus
+APPS_DIR=$HOME/.local/share/applications
 
 RETVAL=0
 
-if [ -d $USER_MENU -o -f $USER_STAMP ]; then
-    if [ ! -f $USER_STAMP ]; then
+if [ \( -d "$MENU_DIR" -o -d "$APP_DIR" \) -o -f "$USER_STAMP" -a -f "$SYSTEM_STAMP" ]; then
+    if [ ! -f "$USER_STAMP" ]; then
+            RETVAL=1;
+    elif [ "$SYSTEM_STAMP" -nt "$USER_STAMP" ]; then
+            RETVAL=1;
+    elif [ "$MENU_DIR" -nt "$USER_STAMP" ]; then
+	    RETVAL=1;
+    elif [ "$APPS_DIR" -nt "$USER_STAMP" ]; then
             RETVAL=1;
     fi
     if [ $RETVAL -eq 1 ]; then
-        echo -n "Running update-menus..."
+        echo "Running update-menus..."
         update-menus -u
-        echo done
+	echo "menu generation finished"
     fi
 fi
 

@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 18
+Release: 	%mkrel 19
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -115,6 +115,8 @@ mkdir tmp-l10n
 for i in %_datadir/locale/*/LC_MESSAGES/menu-messages.mo ; do
  msgunfmt $i > tmp-l10n/`echo $i | sed -e 's|%{_datadir}/locale/||' -e 's|/LC.*||'`.po
 done
+
+install -d -m 0755 %buildroot/%_var/lib/menu
  
 for i in menu/desktop-directories/*.in ; do
  %{_bindir}/intltool-merge --desktop-style -c tmp-l10n/cache tmp-l10n $i %buildroot/%_datadir/desktop-directories/`basename $i .in` 
@@ -177,6 +179,7 @@ rm -fr %buildroot
 %dir %_sysconfdir/xdg/discovery/menus/applications-merged
 %config(noreplace) %_sysconfdir/xdg/menus/*.menu
 %config(noreplace) %_sysconfdir/xdg/discovery/menus/*.menu
+%dir %_var/lib/menu
 
 #
 %dir %_datadir/faces/
@@ -212,6 +215,11 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Oct 26 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-19mdv2007.0
+- Fix update-menus script to not output empty line
+- Re-add menu file stamp to prevent restarting update-menus for each
+  graphical login
+
 * Mon Oct 02 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-18mdv2007.0
 - Rename root node from Mandriva Linux to Applications (Mdv bug #25389)
 - Add missing .directory for various entries (Mdv bug #26273)

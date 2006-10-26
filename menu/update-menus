@@ -38,7 +38,11 @@ export VERBOSE
 export USER_MENU
 
 if [ -d /etc/menu.d ]; then 
-   run-parts $RUN_PARTS_ARG /etc/menu.d 
- echo 
+   run-parts $RUN_PARTS_ARG /etc/menu.d
+   if [ "$USER_MENU" = "1" ]; then
+	   touch "$HOME/.menu-updates.stamp" 2> /dev/null
+   else 
+	   touch /var/lib/menu/.menu-updates.stamp 2> /dev/null
+   fi 
 fi
 
