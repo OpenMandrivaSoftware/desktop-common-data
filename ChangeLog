@@ -1,3 +1,10 @@
+2006-10-26 18:04  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/update-menus, xinit.d/menu: - Fix
+	  update-menus script to not output empty line - Re-add menu file
+	  stamp to prevent restarting update-menus for each   graphical
+	  login
+
 2006-10-02 19:28  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/applications-discovery.menu,
