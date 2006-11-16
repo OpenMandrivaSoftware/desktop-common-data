@@ -3,7 +3,7 @@
 Summary:	Desktop common files 
 Name:		desktop-common-data
 Version:	2007
-Release: 	%mkrel 19
+Release: 	%mkrel 20
 License:	GPL
 URL:		http://www.mandrivalinux.com/
 Group:		System/Configuration/Other
@@ -215,6 +215,9 @@ rm -fr %buildroot
 
 
 %changelog
+* Thu Nov 16 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-20mdv2007.0
+- Fix incorrect category for wordprocessors in discovery menu (Mdv bug #27084)
+
 * Thu Oct 26 2006 Frederic Crozat <fcrozat@mandriva.com> 2007-19mdv2007.0
 - Fix update-menus script to not output empty line
 - Re-add menu file stamp to prevent restarting update-menus for each

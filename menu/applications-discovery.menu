@@ -117,7 +117,7 @@
 		      <Category>X-MandrivaLinux-Office-TasksManagement</Category>
 		 <Category>X-MandrivaLinux-Office-TimeManagement</Category>
         <Category>X-MandrivaLinux-Office-Other</Category>
-        <Category>X-MandrivaLinux-Office-WordProcessors</Category>
+        <Category>X-MandrivaLinux-Office-Wordprocessors</Category>
 	</Or>
       </Include>
   </Menu>
