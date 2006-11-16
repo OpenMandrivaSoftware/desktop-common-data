@@ -1,3 +1,9 @@
+2006-11-16 17:42  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop-common-data.spec, menu/applications-discovery.menu: Fix
+	  incorrect category for wordprocessors in discovery menu (Mdv bug
+	  #27084)
+
 2006-10-26 18:04  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop-common-data.spec, menu/update-menus, xinit.d/menu: - Fix
