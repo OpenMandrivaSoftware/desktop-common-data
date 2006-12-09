@@ -1,4 +1,4 @@
-.\" Scritto da Camille BÈgnis 12/28/99
+.\" Scritto da Camille B√©gnis 12/28/99
 .TH CHKSESSION 8 "Dec 1999" "mandrake_desk" "MandrakeSoft"
 .SH NOME
 chksession \- Aggiunge/rimuove sessioni dai display manager
@@ -32,15 +32,15 @@ Elenca i window-manager disponibili nel file di configurazione.
 Stampa su stdout la lista di tutti i window-manager presenti nel file di configurazione, tranne ENTRY.
 .TP
 \fB\-t\fR, \fB\-\-test\fR
-Entra nella modalit‡ di test.
+Entra nella modalit√† di test.
 .TP
 \fB\-x=ENTRY\fR, \fB\-\-xsession=ENTRY\fR
 Stampa su stdout lo script usato per lanciare il window-manager ENTRY.
 .SH "STRUTTURA DEL FILE DI CONFIGURAZIONE"
-Questo file descrive ogni window manager che sar‡ reso disponibile attraverso i display manager. Ogni voce di questo file Ë separata da una linea \fB\-\-@@\-\-\fR .
+Questo file descrive ogni window manager che sar√† reso disponibile attraverso i display manager. Ogni voce di questo file √® separata da una linea \fB\-\-@@\-\-\fR .
 .PP
 .B NAME=
-Ë il nome della sessione come visualizzata nella lista del display manager.
+√® il nome della sessione come visualizzata nella lista del display manager.
 .PP
 .B ICON=
 file dell'icona (\fI.xpm o .png\fR) usato per questa sessione.
@@ -49,14 +49,14 @@ file dell'icona (\fI.xpm o .png\fR) usato per questa sessione.
 breve descrizione della sessione.
 .PP
 .B EXEC=
-stringa di test per controllare se il session manager Ë stato installato o no.
+stringa di test per controllare se il session manager √® stato installato o no.
 .PP
 .B SCRIPT:
 shell script usato per eseguire il window-manager scelto dall'utente.
 .SH FILE
 .TP 
 \fB\/etc/X11/window-manager\fR
-file di configurazione di default, in cui Ë elencata la maggior parte dei window-manager pi˘ conosciuti. E' la base usata da \fBchksessio\fRn per aggiornare i file di configurazione dei display manager kdm e gdm.
+file di configurazione di default, in cui √® elencata la maggior parte dei window-manager pi√π conosciuti. E' la base usata da \fBchksessio\fRn per aggiornare i file di configurazione dei display manager kdm e gdm.
 .SH "SEGNALAZIONE BUG"
 Segnalate i bug a \fBhttp://www.linux-mandrake.com/bugs/\fR.
 .SH "VEDI ANCHE"
