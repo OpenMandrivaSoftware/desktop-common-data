@@ -18,7 +18,6 @@
     <Merge type="menus"/>
     <Merge type="files"/>
   </DefaultLayout>
-
   <DefaultMergeDirs/>
   <KDELegacyDirs/>
   <DefaultAppDirs/>
@@ -26,55 +25,59 @@
   <Directory>mandrivalinux.directory</Directory>
   <Include>
     <Or>
-	    <Category>X-MandrivaLinux</Category>
-	    <Category>X-MandrivaLinux-Other</Category>
+      <Category>X-MandrivaLinux</Category>
+      <Category>X-MandrivaLinux-Other</Category>
     </Or>
   </Include>
-    <Menu>
-      <Name>Games</Name>
-      <Directory>mandriva-moreapplications-games.directory</Directory>
-      <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Games</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Adventure</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Arcade</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Boards</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Cards</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Puzzles</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Sports</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Strategy</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Other</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Toys</Category>
-		</Or>
-        </Include>
-    </Menu>
-    <Menu>
-      <Name>Graphics</Name>
-      <Directory>mandriva-multimedia-graphics.directory</Directory>
-      <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Multimedia-Graphics</Category>
-	      </Or>
-      </Include>
-    </Menu>
+  <Menu>
+    <Name>Games</Name>
+    <Directory>mandriva-moreapplications-games.directory</Directory>
+    <Include>
+      <Or>
+        <Category>X-MandrivaLinux-MoreApplications-Games</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Adventure</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Arcade</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Boards</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Cards</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Puzzles</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Sports</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Strategy</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Other</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Games-Toys</Category>
+        <Category>Game</Category>
+        <Category>Amusement</Category>
+      </Or>
+    </Include>
+  </Menu>
+  <Menu>
+    <Name>Graphics</Name>
+    <Directory>mandriva-multimedia-graphics.directory</Directory>
+    <Include>
+      <Or>
+        <Category>X-MandrivaLinux-Multimedia-Graphics</Category>
+        <Category>Graphics</Category>
+      </Or>
+    </Include>
+  </Menu>
   <Menu>
     <Name>Internet</Name>
     <Directory>mandriva-internet.directory</Directory>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-Internet</Category>
+      <Or>
+        <Category>X-MandrivaLinux-Internet</Category>
         <Category>X-MandrivaLinux-Internet-Chat</Category>
         <Category>X-MandrivaLinux-Internet-FileTransfer</Category>
         <Category>X-MandrivaLinux-Internet-InstantMessaging</Category>
-		      <Category>X-MandrivaLinux-Internet-Mail</Category>
-		      <Category>X-MandrivaLinux-Internet-News</Category>
-		      <Category>X-MandrivaLinux-Internet-VideoConference</Category>
-		      <Category>X-MandrivaLinux-Internet-Other</Category>
-		      <Category>X-MandrivaLinux-Internet-RemoteAccess</Category>
-		      <Category>X-MandrivaLinux-Internet-WebBrowsers</Category>
-		      <Category>X-MandrivaLinux-Internet-WebEditors</Category>
-	      </Or>
-      </Include>
+        <Category>X-MandrivaLinux-Internet-Mail</Category>
+        <Category>X-MandrivaLinux-Internet-News</Category>
+        <Category>X-MandrivaLinux-Internet-VideoConference</Category>
+        <Category>X-MandrivaLinux-Internet-Other</Category>
+        <Category>X-MandrivaLinux-Internet-RemoteAccess</Category>
+        <Category>X-MandrivaLinux-Internet-WebBrowsers</Category>
+        <Category>X-MandrivaLinux-Internet-WebEditors</Category>
+        <Category>Network</Category>
+      </Or>
+    </Include>
   </Menu>
   <Menu>
     <Name>Multimedia</Name>
@@ -87,142 +90,154 @@
     </Layout>
     <Directory>mandriva-multimedia.directory</Directory>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-Multimedia</Category>
-		      <Category>X-MandrivaLinux-Multimedia-Sound</Category>
-		      <Category>X-MandrivaLinux-Multimedia-Video</Category>
-		      <Category>X-MandrivaLinux-Multimedia-Other</Category>
-	      </Or>
-      </Include>
+      <Or>
+        <Category>X-MandrivaLinux-Multimedia</Category>
+        <Category>X-MandrivaLinux-Multimedia-Sound</Category>
+        <Category>X-MandrivaLinux-Multimedia-Video</Category>
+        <Category>X-MandrivaLinux-Multimedia-Other</Category>
+        <Category>Audio</Category>
+        <Category>Video</Category>
+        <Category>AudioVideo</Category>
+      </Or>
+    </Include>
   </Menu>
   <Menu>
     <Name>Office</Name>
     <Directory>mandriva-office.directory</Directory>
     <Include>
       <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Editors</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Editors</Category>
         <Category>X-MandrivaLinux-Office</Category>
-         <Category>X-MandrivaLinux-Office-Accessories</Category>
+        <Category>X-MandrivaLinux-Office-Accessories</Category>
         <Category>X-MandrivaLinux-Office-AddressBooks</Category>
         <Category>X-MandrivaLinux-Office-Communications</Category>
-          <Category>X-MandrivaLinux-Office-Communications-Fax</Category>
-		  <Category>X-MandrivaLinux-Office-Communications-PDA</Category>
-		  <Category>X-MandrivaLinux-Office-Communications-Phone</Category>
-			<Category>X-MandrivaLinux-Office-Communications-Other</Category>
-		      <Category>X-MandrivaLinux-Office-Drawing</Category>
-		      <Category>X-MandrivaLinux-Office-Graphs</Category>
-		      <Category>X-MandrivaLinux-Office-Presentations</Category>
-		      <Category>X-MandrivaLinux-Office-Publishing</Category>
-		      <Category>X-MandrivaLinux-Office-Spreadsheets</Category>
-		      <Category>X-MandrivaLinux-Office-TasksManagement</Category>
-		 <Category>X-MandrivaLinux-Office-TimeManagement</Category>
+        <Category>X-MandrivaLinux-Office-Communications-Fax</Category>
+        <Category>X-MandrivaLinux-Office-Communications-PDA</Category>
+        <Category>X-MandrivaLinux-Office-Communications-Phone</Category>
+        <Category>X-MandrivaLinux-Office-Communications-Other</Category>
+        <Category>X-MandrivaLinux-Office-Drawing</Category>
+        <Category>X-MandrivaLinux-Office-Graphs</Category>
+        <Category>X-MandrivaLinux-Office-Presentations</Category>
+        <Category>X-MandrivaLinux-Office-Publishing</Category>
+        <Category>X-MandrivaLinux-Office-Spreadsheets</Category>
+        <Category>X-MandrivaLinux-Office-TasksManagement</Category>
+        <Category>X-MandrivaLinux-Office-TimeManagement</Category>
         <Category>X-MandrivaLinux-Office-Other</Category>
         <Category>X-MandrivaLinux-Office-Wordprocessors</Category>
-	</Or>
-      </Include>
+        <Category>Office</Category>
+      </Or>
+    </Include>
   </Menu>
   <Menu>
     <Name>System</Name>
     <Directory>mandriva-system.directory</Directory>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-System</Category>
-		      <Category>X-MandrivaLinux-System-Archiving</Category>
-			<Category>X-MandrivaLinux-System-Archiving-Backup</Category>
-			<Category>X-MandrivaLinux-System-Archiving-CDBurning</Category>
-			<Category>X-MandrivaLinux-System-Archiving-Compression</Category>
-			<Category>X-MandrivaLinux-System-Archiving-Other</Category>
-		      <Category>X-MandrivaLinux-System-FileTools</Category>
-		      <Category>X-MandrivaLinux-System-Monitoring</Category>
-		      <Category>X-MandrivaLinux-System-Session</Category>
-			<Category>X-MandrivaLinux-System-Session-Windowmanagers</Category>
-		      <Category>X-MandrivaLinux-System-Terminals</Category>
-		      <Category>X-MandrivaLinux-System-TextTools</Category>
-		      <Category>X-MandrivaLinux-System-Configuration</Category>
-			<Category>X-MandrivaLinux-System-Configuration-BootandInit</Category>
-			<Category>X-MandrivaLinux-System-Configuration-Hardware</Category>
-			<Category>X-MandrivaLinux-System-Configuration-Networking</Category>
-			<Category>X-MandrivaLinux-System-Configuration-Packaging</Category>
-			<Category>X-MandrivaLinux-System-Configuration-Printing</Category>
-			<Category>X-MandrivaLinux-System-Configuration-Users</Category>
-			<Category>X-MandrivaLinux-System-Configuration-Other</Category>
-		</Or>
-	</Include>
-	<!-- Empty node for KDE -->
-	<Menu>
-		<Name>ScreenSaver</Name>
-	</Menu>
-  </Menu>
+      <Or>
+        <Category>X-MandrivaLinux-System</Category>
+        <Category>X-MandrivaLinux-System-Archiving</Category>
+        <Category>X-MandrivaLinux-System-Archiving-Backup</Category>
+        <Category>X-MandrivaLinux-System-Archiving-CDBurning</Category>
+        <Category>X-MandrivaLinux-System-Archiving-Compression</Category>
+        <Category>X-MandrivaLinux-System-Archiving-Other</Category>
+        <Category>X-MandrivaLinux-System-FileTools</Category>
+        <Category>X-MandrivaLinux-System-Monitoring</Category>
+        <Category>X-MandrivaLinux-System-Session</Category>
+        <Category>X-MandrivaLinux-System-Session-Windowmanagers</Category>
+        <Category>X-MandrivaLinux-System-Terminals</Category>
+        <Category>X-MandrivaLinux-System-TextTools</Category>
+        <Category>X-MandrivaLinux-System-Configuration</Category>
+        <Category>X-MandrivaLinux-System-Configuration-BootandInit</Category>
+        <Category>X-MandrivaLinux-System-Configuration-Hardware</Category>
+        <Category>X-MandrivaLinux-System-Configuration-Networking</Category>
+        <Category>X-MandrivaLinux-System-Configuration-Packaging</Category>
+        <Category>X-MandrivaLinux-System-Configuration-Printing</Category>
+        <Category>X-MandrivaLinux-System-Configuration-Users</Category>
+        <Category>X-MandrivaLinux-System-Configuration-Other</Category>
+        <Category>Settings</Category>
+        <Category>System</Category>
+        <Category>Utility</Category>
+      </Or>
+    </Include>
+<!-- Empty node for KDE -->
     <Menu>
-      <Name>Documentation</Name>
-      <Directory>mandriva-moreapplications-documentation.directory</Directory>
-      <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Documentation</Category>
-	      </Or>
-      </Include>
+      <Name>ScreenSaver</Name>
     </Menu>
+  </Menu>
+  <Menu>
+    <Name>Documentation</Name>
+    <Directory>mandriva-moreapplications-documentation.directory</Directory>
+    <Include>
+      <Or>
+        <Category>X-MandrivaLinux-MoreApplications-Documentation</Category>
+        <Category>Documentation</Category>
+      </Or>
+    </Include>
+  </Menu>
   <Menu>
     <Name>More Applications</Name>
     <Directory>mandriva-moreapplications.directory</Directory>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-MoreApplications</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Accessibility</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Communications</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Finances</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Databases</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Emulators</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Development</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Development-DevelopmentEnvironments</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Development-Interpreters</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Development-Tools</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Development-Other</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Other</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Education</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Economy</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Geography</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Education-History</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Languages</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Literature</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Sciences</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Sports</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Other</Category>
-		      <Category>X-MandrivaLinux-MoreApplications-Sciences</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-ArtificialIntelligence</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Astronomy</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Biology</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Chemistry</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-ComputerScience</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-DataVisualization</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Electricity</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Geosciences</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-ImageProcessing</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Mathematics</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-NumericAnalysis</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-ParallelComptuting</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Physics</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Robotics</Category>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Other</Category>
-		</Or>
-        </Include>
-</Menu>
+      <Or>
+        <Category>X-MandrivaLinux-MoreApplications</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Accessibility</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Communications</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Finances</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Databases</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Emulators</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Development</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Development-DevelopmentEnvironments</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Development-Interpreters</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Development-Tools</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Development-Other</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Other</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education-Economy</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education-Geography</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education-History</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education-Languages</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education-Literature</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education-Sciences</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education-Sports</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Education-Other</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-ArtificialIntelligence</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Astronomy</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Biology</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Chemistry</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-ComputerScience</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-DataVisualization</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Electricity</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Geosciences</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-ImageProcessing</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Mathematics</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-NumericAnalysis</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-ParallelComptuting</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Physics</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Robotics</Category>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Other</Category>
+        <Category>Development</Category>
+        <Category>Education</Category>
+        <Category>Electronics</Category>
+        <Category>Engineering</Category>
+      </Or>
+    </Include>
+  </Menu>
 <!-- Empty nodes used by KDE -->
-<Menu>
-	<Name>Settings</Name>
-</Menu>
-<Menu>
-	<Name>Information</Name>
-</Menu>
+  <Menu>
+    <Name>Settings</Name>
+  </Menu>
+  <Menu>
+    <Name>Information</Name>
+  </Menu>
   <Menu>
     <Name>.hidden</Name>
     <Directory>mandriva-hidden.directory</Directory>
     <Include>
-            <Or>
-                    <Category>X-MandrivaLinux-.hidden</Category>
-            </Or>
+      <Or>
+        <Category>X-MandrivaLinux-.hidden</Category>
+      </Or>
     </Include>
   </Menu>
-<MergeFile>/etc/xdg/discovery/menus/mandriva-discovery.menu</MergeFile>
-<MergeFile>applications-kmenuedit.menu</MergeFile>
+  <MergeFile>/etc/xdg/discovery/menus/mandriva-discovery.menu</MergeFile>
+  <MergeFile>applications-kmenuedit.menu</MergeFile>
 </Menu>

@@ -16,15 +16,13 @@
     <Merge type="menus"/>
     <Merge type="files"/>
   </DefaultLayout>
-
   <DefaultMergeDirs/>
-  <KDELegacyDirs/>
   <DefaultAppDirs/>
   <DefaultDirectoryDirs/>
   <Directory>mandrivalinux.directory</Directory>
   <Include>
     <Or>
-	    <Category>X-MandrivaLinux</Category>
+      <Category>X-MandrivaLinux</Category>
     </Or>
   </Include>
   <Menu>
@@ -46,9 +44,11 @@
       <Merge type="files"/>
     </Layout>
     <Directory>mandriva-office.directory</Directory>
+    <OnlyUnallocated/>
     <Include>
       <Or>
         <Category>X-MandrivaLinux-Office</Category>
+        <Category>Office</Category>
       </Or>
     </Include>
     <Menu>
@@ -61,10 +61,12 @@
       </Layout>
       <Directory>mandriva-office-accessories.directory</Directory>
       <Include>
-	<Or>
-         <Category>X-MandrivaLinux-Office-Accessories</Category>
-	 <Category>Calculator</Category>
-	</Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Accessories</Category>
+          <Category>Calculator</Category>
+          <Category>Dictionary</Category>
+          <Category>Clock</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -76,10 +78,10 @@
       </Layout>
       <Directory>mandriva-office-addressbooks.directory</Directory>
       <Include>
-       <Or>
-        <Category>X-MandrivaLinux-Office-AddressBooks</Category>
-	<Category>ContactManagement</Category>
-       </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-AddressBooks</Category>
+          <Category>ContactManagement</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -94,9 +96,9 @@
       </Layout>
       <Directory>mandriva-office-communications.directory</Directory>
       <Include>
-       <Or>
-        <Category>X-MandrivaLinux-Office-Communications</Category>
-       </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Communications</Category>
+        </Or>
       </Include>
       <Menu>
         <Name>Fax</Name>
@@ -113,29 +115,30 @@
           <Merge type="files"/>
         </Layout>
         <Directory>mandriva-office-communications-pda.directory</Directory>
-	<Include>
-	  <Or>
-		  <Category>PDA</Category>
-		  <Category>X-MandrivaLinux-Office-Communications-PDA</Category>
-	  </Or>
+        <Include>
+          <Or>
+            <Category>PDA</Category>
+            <Category>X-MandrivaLinux-Office-Communications-PDA</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Phone</Name>
         <Directory>mandriva-office-communications-phone.directory</Directory>
-	<Include>
-	  <Or>
-		  <Category>X-MandrivaLinux-Office-Communications-Phone</Category>
-	  </Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-Office-Communications-Phone</Category>
+            <Category>TelephonyTool</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
         <Directory>mandriva-office-communications-other.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-Office-Communications-Other</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-Office-Communications-Other</Category>
+          </Or>
         </Include>
       </Menu>
     </Menu>
@@ -148,9 +151,9 @@
       </Layout>
       <Directory>mandriva-office-drawing.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Office-Drawing</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Drawing</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -162,9 +165,11 @@
       </Layout>
       <Directory>mandriva-office-graphs.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Office-Graphs</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Graphs</Category>
+          <Category>Chart</Category>
+          <Category>FlowChart</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -176,10 +181,10 @@
       </Layout>
       <Directory>mandriva-office-presentations.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Office-Presentations</Category>
-		      <Category>Presentation</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Presentations</Category>
+          <Category>Presentation</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -192,15 +197,15 @@
       </Layout>
       <Directory>mandriva-office-publishing.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Office-Publishing</Category>
-		      <Category>Scanning</Category>
-		      <Category>OCR</Category>
-		      <And>
-			      <Category>Office</Category>
-			      <Category>Viewer</Category>
-		      </And>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Publishing</Category>
+          <Category>Scanning</Category>
+          <Category>OCR</Category>
+          <And>
+            <Category>Office</Category>
+            <Category>Viewer</Category>
+          </And>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -212,10 +217,10 @@
       </Layout>
       <Directory>mandriva-office-spreadsheets.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Office-Spreadsheets</Category>
-		      <Category>Spreadsheet</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Spreadsheets</Category>
+          <Category>Spreadsheet</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -227,9 +232,10 @@
       </Layout>
       <Directory>mandriva-office-tasksmanagement.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Office-TasksManagement</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-TasksManagement</Category>
+          <Category>ProjectManagement</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -241,19 +247,19 @@
       </Layout>
       <Directory>mandriva-office-timemanagement.directory</Directory>
       <Include>
-	 <Or>
-		 <Category>X-MandrivaLinux-Office-TimeManagement</Category>
-		 <Category>Calendar</Category>
-	 </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-TimeManagement</Category>
+          <Category>Calendar</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
       <Directory>mandriva-office-other.directory</Directory>
       <Include>
-	<Or>
-        <Category>X-MandrivaLinux-Office-Other</Category>
-	</Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Other</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -266,10 +272,10 @@
       </Layout>
       <Directory>mandriva-office-wordprocessors.directory</Directory>
       <Include>
-	<Or>
-        <Category>X-MandrivaLinux-Office-Wordprocessors</Category>
-	<Category>WordProcessor</Category>
-	</Or>
+        <Or>
+          <Category>X-MandrivaLinux-Office-Wordprocessors</Category>
+          <Category>WordProcessor</Category>
+        </Or>
       </Include>
     </Menu>
   </Menu>
@@ -290,10 +296,12 @@
       <Merge type="files"/>
     </Layout>
     <Directory>mandriva-internet.directory</Directory>
+    <OnlyUnallocated/>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-Internet</Category>
-	    </Or>
+      <Or>
+        <Category>X-MandrivaLinux-Internet</Category>
+        <Category>Network</Category>
+      </Or>
     </Include>
     <Menu>
       <Name>Chat</Name>
@@ -304,10 +312,11 @@
       </Layout>
       <Directory>mandriva-internet-chat.directory</Directory>
       <Include>
-       <Or>
-        <Category>X-MandrivaLinux-Internet-Chat</Category>
-        <Category>IRCClient</Category>
-       </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-Chat</Category>
+          <Category>IRCClient</Category>
+          <Category>Chat</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -320,14 +329,13 @@
       </Layout>
       <Directory>mandriva-internet-filetransfer.directory</Directory>
       <Include>
-       <Or>
-        <Category>X-MandrivaLinux-Internet-FileTransfer</Category>
-        <Category>FileTransfer</Category>
-        <Category>P2P</Category>
-       </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-FileTransfer</Category>
+          <Category>FileTransfer</Category>
+          <Category>P2P</Category>
+        </Or>
       </Include>
     </Menu>
-
     <Menu>
       <Name>Instant Messaging</Name>
       <Layout>
@@ -338,10 +346,10 @@
       </Layout>
       <Directory>mandriva-internet-instantmessaging.directory</Directory>
       <Include>
-	<Or>
-        <Category>X-MandrivaLinux-Internet-InstantMessaging</Category>
-        <Category>InstantMessaging</Category>
-	</Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-InstantMessaging</Category>
+          <Category>InstantMessaging</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -355,10 +363,10 @@
       </Layout>
       <Directory>mandriva-internet-mail.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Internet-Mail</Category>
-		      <Category>Email</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-Mail</Category>
+          <Category>Email</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -370,28 +378,34 @@
       </Layout>
       <Directory>mandriva-internet-news.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Internet-News</Category>
-		      <Category>News</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-News</Category>
+          <Category>News</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Video Conference</Name>
       <Directory>mandriva-internet-videoconference.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Internet-VideoConference</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-VideoConference</Category>
+          <Category>Telephony</Category>
+          <Category>VideoConference</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
       <Directory>mandriva-internet-other.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Internet-Other</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-Other</Category>
+          <And>
+            <Category>Network</Category>
+            <Category>HamRadio</Category>
+          </And>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -403,11 +417,11 @@
       </Layout>
       <Directory>mandriva-internet-remoteaccess.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Internet-RemoteAccess</Category>
-		      <Category>RemoteAccess</Category>
-		      <Category>Dialup</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-RemoteAccess</Category>
+          <Category>RemoteAccess</Category>
+          <Category>Dialup</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -423,20 +437,20 @@
       </Layout>
       <Directory>mandriva-internet-webbrowsers.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Internet-WebBrowsers</Category>
-		      <Category>WebBrowser</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-WebBrowsers</Category>
+          <Category>WebBrowser</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Web Editors</Name>
       <Directory>mandriva-internet-webeditors.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Internet-WebEditors</Category>
-		      <Category>WebDevelopment</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Internet-WebEditors</Category>
+          <Category>WebDevelopment</Category>
+        </Or>
       </Include>
     </Menu>
   </Menu>
@@ -451,7 +465,6 @@
       <Menuname>Databases</Menuname>
       <Menuname>Education</Menuname>
       <Menuname>Sciences</Menuname>
-	  <Menuname>Communications</Menuname>
       <Menuname>Games</Menuname>
       <Menuname>Documentation</Menuname>
       <Menuname>Other</Menuname>
@@ -459,10 +472,12 @@
       <Merge type="files"/>
     </Layout>
     <Directory>mandriva-moreapplications.directory</Directory>
+    <OnlyUnallocated/>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-MoreApplications</Category>
-	    </Or>
+      <Or>
+        <Category>X-MandrivaLinux-MoreApplications</Category>
+        <Category>Utility</Category>
+      </Or>
     </Include>
     <Menu>
       <Name>Accessibility</Name>
@@ -473,49 +488,53 @@
       </Layout>
       <Directory>mandriva-moreapplications-accessibility.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Accessibility</Category>
-		      <Category>Accessibility</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Accessibility</Category>
+          <Category>Accessibility</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Communications</Name>
       <Directory>mandriva-moreapplications-communications.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Communications</Category>
-		      <Category>Communications</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Communications</Category>
+          <Category>Communications</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Finances</Name>
       <Directory>mandriva-moreapplications-finances.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Finances</Category>
-		      <Category>Finance</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Finances</Category>
+          <Category>Finance</Category>
+        </Or>
       </Include>
-    </Menu>	
+    </Menu>
     <Menu>
       <Name>Databases</Name>
       <Directory>mandriva-moreapplications-databases.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Databases</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Databases</Category>
+          <Category>Database</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Emulators</Name>
       <Directory>mandriva-moreapplications-emulators.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Emulators</Category>
-		      <Category>Emulator</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Emulators</Category>
+          <And>
+            <Category>System</Category>
+            <Category>Emulator</Category>
+          </And>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -525,14 +544,17 @@
         <Menuname>Interpreters</Menuname>
         <Menuname>Tools</Menuname>
         <Menuname>Code Generators</Menuname>
+        <Menuname>Other</Menuname>
         <Merge type="menus"/>
         <Merge type="files"/>
       </Layout>
       <Directory>mandriva-moreapplications-development.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Development</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Development</Category>
+          <Category>Development</Category>
+        </Or>
       </Include>
       <Menu>
         <Name>Development Environments</Name>
@@ -542,12 +564,12 @@
           <Merge type="files"/>
         </Layout>
         <Directory>mandriva-moreapplications-development-developmentenvironments.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Development-DevelopmentEnvironments</Category>
-			<Category>IDE</Category>
-			<Category>GUIDesigner</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Development-DevelopmentEnvironments</Category>
+            <Category>IDE</Category>
+            <Category>GUIDesigner</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
@@ -558,10 +580,10 @@
           <Merge type="files"/>
         </Layout>
         <Directory>mandriva-moreapplications-development-interpreters.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Development-Interpreters</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Development-Interpreters</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
@@ -572,26 +594,27 @@
           <Merge type="files"/>
         </Layout>
         <Directory>mandriva-moreapplications-development-tools.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Development-Tools</Category>
-			<Category>Profiling</Category>
-			<Category>Debugger</Category>
-			<Category>RevisionControl</Category>
-			<And>
-				<Category>Development</Category>
-				<Category>Translation</Category>
-			</And>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Development-Tools</Category>
+            <Category>Building</Category>
+            <Category>Profiling</Category>
+            <Category>Debugger</Category>
+            <Category>RevisionControl</Category>
+            <And>
+              <Category>Development</Category>
+              <Category>Translation</Category>
+            </And>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
         <Directory>mandriva-moreapplications-development-other.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Development-Other</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Development-Other</Category>
+          </Or>
         </Include>
       </Menu>
     </Menu>
@@ -599,18 +622,19 @@
       <Name>Documentation</Name>
       <Directory>mandriva-moreapplications-documentation.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Documentation</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Documentation</Category>
+          <Category>Documentation</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
       <Directory>mandriva-moreapplications-other.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Other</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Other</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -624,15 +648,15 @@
       </Layout>
       <Directory>mandriva-moreapplications-editors.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Editors</Category>
-		      <Category>TextEditor</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Editors</Category>
+          <Category>TextEditor</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Education</Name>
-       <Layout>
+      <Layout>
         <Menuname>Economy</Menuname>
         <Menuname>Geography</Menuname>
         <Menuname>History</Menuname>
@@ -645,102 +669,103 @@
         <Merge type="files"/>
       </Layout>
       <Directory>mandriva-moreapplications-education.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Education</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Education</Category>
+          <Category>Education</Category>
+        </Or>
       </Include>
       <Menu>
         <Name>Economy</Name>
         <Directory>mandriva-moreapplications-education-economy.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Economy</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Education-Economy</Category>
+            <Category>Economy</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Geography</Name>
         <Directory>mandriva-moreapplications-education-geography.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Geography</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Education-Geography</Category>
+            <Category>Geography</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>History</Name>
         <Directory>mandriva-moreapplications-education-history.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Education-History</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Education-History</Category>
+            <Category>History</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Languages</Name>
         <Directory>mandriva-moreapplications-education-languages.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Languages</Category>
-			<And>
-				<Category>Education</Category>
-				<Category>Languages</Category>
-			</And>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Education-Languages</Category>
+            <Category>Languages</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Literature</Name>
         <Directory>mandriva-moreapplications-education-literature.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Literature</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Education-Literature</Category>
+            <Category>Literature</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Sciences</Name>
         <Directory>mandriva-moreapplications-education-sciences.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Sciences</Category>
-			<And>
-				<Category>Education</Category>
-				<Category>Science</Category>
-			</And>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Education-Sciences</Category>
+            <And>
+              <Category>Science</Category>
+              <Category>Education</Category>
+            </And>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Sports</Name>
         <Directory>mandriva-moreapplications-education-sports.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Sports</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Education-Sports</Category>
+            <Category>Sports</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
         <Directory>mandriva-moreapplications-education-other.directory</Directory>
         <Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Education-Other</Category>
-			<And>
-				<Category>Education</Category>
-				<Or>
-					<Category>Art</Category>
-					<Category>Construction</Category>
-					<Category>Music</Category>
-					<Category>Teaching</Category>
-				</Or>
-			</And>
-		</Or>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Education-Other</Category>
+            <Category>Art</Category>
+            <Category>Construction</Category>
+            <Category>Teaching</Category>
+            <And>
+              <Category>Education</Category>
+              <Category>Music</Category>
+            </And>
+          </Or>
         </Include>
       </Menu>
-     </Menu>
-
+    </Menu>
     <Menu>
       <Name>Games</Name>
       <Layout>
@@ -756,107 +781,109 @@
         <Merge type="files"/>
       </Layout>
       <Directory>mandriva-moreapplications-games.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Games</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Games</Category>
+          <Category>Game</Category>
+        </Or>
       </Include>
       <Menu>
         <Name>Adventure</Name>
         <Directory>mandriva-moreapplications-games-adventure.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Adventure</Category>
-			<Category>AdventureGame</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Adventure</Category>
+            <Category>AdventureGame</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Arcade</Name>
         <Directory>mandriva-moreapplications-games-arcade.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Arcade</Category>
-			<Category>ArcadeGame</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Arcade</Category>
+            <Category>ArcadeGame</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Boards</Name>
         <Directory>mandriva-moreapplications-games-boards.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Boards</Category>
-			<Category>BoardGame</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Boards</Category>
+            <Category>BoardGame</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Cards</Name>
         <Directory>mandriva-moreapplications-games-cards.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Cards</Category>
-			<Category>CardGame</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Cards</Category>
+            <Category>CardGame</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Puzzles</Name>
         <Directory>mandriva-moreapplications-games-puzzles.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Puzzles</Category>
-			<Category>LogicGame</Category>
-			<Category>BlocksGame</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Puzzles</Category>
+            <Category>LogicGame</Category>
+            <Category>BlocksGame</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Sports</Name>
         <Directory>mandriva-moreapplications-games-sports.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Sports</Category>
-			<Category>SportsGame</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Sports</Category>
+            <Category>SportsGame</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Strategy</Name>
         <Directory>mandriva-moreapplications-games-strategy.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Strategy</Category>
-			<Category>StrategyGame</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Strategy</Category>
+            <Category>StrategyGame</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
         <Directory>mandriva-moreapplications-games-other.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Other</Category>
-			<And>
-				<Category>Game</Category>
-				<Or>
-					<Category>KidsGame</Category>
-					<Category>RolePlaying</Category>
-					<Category>Simulation</Category>
-				</Or>
-			</And>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Other</Category>
+            <Category>KidsGame</Category>
+            <Category>RolePlaying</Category>
+            <Category>Simulation</Category>
+            <Category>ActionGame</Category>
+            <And>
+              <Category>Game</Category>
+              <Category>Emulator</Category>
+            </And>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Toys</Name>
         <Directory>mandriva-moreapplications-games-toys.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Games-Toys</Category>
-			<Category>Amusement</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Games-Toys</Category>
+            <Category>Amusement</Category>
+          </Or>
         </Include>
       </Menu>
     </Menu>
@@ -882,149 +909,164 @@
         <Merge type="files"/>
       </Layout>
       <Directory>mandriva-moreapplications-sciences.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-MoreApplications-Sciences</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-MoreApplications-Sciences</Category>
+          <Category>Science</Category>
+        </Or>
       </Include>
       <Menu>
         <Name>Artificial Intelligence</Name>
         <Directory>mandriva-moreapplications-sciences-artificialintelligence.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-ArtificialIntelligence</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-ArtificialIntelligence</Category>
+            <Category>ArtificialIntelligence</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Astronomy</Name>
         <Directory>mandriva-moreapplications-sciences-astronomy.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Astronomy</Category>
-			<Category>Astronomy</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Astronomy</Category>
+            <Category>Astronomy</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Biology</Name>
         <Directory>mandriva-moreapplications-sciences-biology.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Biology</Category>
-			<Category>Biology</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Biology</Category>
+            <Category>Biology</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Chemistry</Name>
         <Directory>mandriva-moreapplications-sciences-chemistry.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Chemistry</Category>
-			<Category>Chemistry</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Chemistry</Category>
+            <Category>Chemistry</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Computer Science</Name>
         <Directory>mandriva-moreapplications-sciences-computerscience.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-ComputerScience</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-ComputerScience</Category>
+            <Category>ComputerScience</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Data Visualization</Name>
         <Directory>mandriva-moreapplications-sciences-datavisualization.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-DataVisualization</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-DataVisualization</Category>
+            <Category>DataVisualization</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Electricity</Name>
         <Directory>mandriva-moreapplications-sciences-electricity.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Electricity</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Electricity</Category>
+            <Category>Electricity</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Geosciences</Name>
         <Directory>mandriva-moreapplications-sciences-geosciences.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Geosciences</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Geosciences</Category>
+            <Category>Geoscience</Category>
+            <Category>Geology</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Image Processing</Name>
         <Directory>mandriva-moreapplications-sciences-imageprocessing.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-ImageProcessing</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-ImageProcessing</Category>
+            <Category>ImageProcessing</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Mathematics</Name>
         <Directory>mandriva-moreapplications-sciences-mathematics.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Mathematics</Category>
-			<Category>Math</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Mathematics</Category>
+            <Category>Math</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Numeric Analysis</Name>
         <Directory>mandriva-moreapplications-sciences-numericanalysis.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-NumericAnalysis</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-NumericAnalysis</Category>
+            <Category>NumericAnalysis</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Parallel Computing</Name>
         <Directory>mandriva-moreapplications-sciences-parallelcomputing.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-ParallelComptuting</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-ParallelComptuting</Category>
+            <Category>ParallelComptuting</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Physics</Name>
         <Directory>mandriva-moreapplications-sciences-physics.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Physics</Category>
-			<Category>Physics</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Physics</Category>
+            <Category>Physics</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Robotics</Name>
         <Directory>mandriva-moreapplications-sciences-robotics.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Robotics</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Robotics</Category>
+            <Category>Robotics</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
         <Directory>mandriva-moreapplications-sciences-other.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-MoreApplications-Sciences-Other</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-MoreApplications-Sciences-Other</Category>
+            <Category>MedicalSoftware</Category>
+            <Category>Electronics</Category>
+            <Category>Engineering</Category>
+          </Or>
         </Include>
       </Menu>
     </Menu>
@@ -1040,10 +1082,12 @@
       <Merge type="files"/>
     </Layout>
     <Directory>mandriva-multimedia.directory</Directory>
+    <OnlyUnallocated/>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-Multimedia</Category>
-	    </Or>
+      <Or>
+        <Category>X-MandrivaLinux-Multimedia</Category>
+        <Category>AudioVideo</Category>
+      </Or>
     </Include>
     <Menu>
       <Name>Graphics</Name>
@@ -1055,15 +1099,19 @@
       </Layout>
       <Directory>mandriva-multimedia-graphics.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Multimedia-Graphics</Category>
-		      <Category>Graphics</Category>
-		      <Category>Photography</Category>
-		      <Category>3DGraphics</Category>
-		      <And>
-			      <Category>Viewer</Category>
-		      </And>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Multimedia-Graphics</Category>
+          <Category>Graphics</Category>
+          <Category>Photography</Category>
+          <Category>3DGraphics</Category>
+          <Category>2DGraphics</Category>
+          <Category>VectorGraphics</Category>
+          <Category>RasterGraphics</Category>
+          <And>
+            <Category>Graphics</Category>
+            <Category>Viewer</Category>
+          </And>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -1076,22 +1124,27 @@
       </Layout>
       <Directory>mandriva-multimedia-sound.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Multimedia-Sound</Category>
-		      <Category>Audio</Category>
-		      <Category>Midi</Category>
-		      <Category>Mixer</Category>
-		      <Category>Sequencer</Category>
-		      <Category>Tuner</Category>
-		      <And>
-			      <Category>Audio</Category>
-			      <Or>
-				      <Category>AudioVideoEdition</Category>
-				      <Category>Player</Category>
-				      <Category>Recorder</Category>
-			      </Or>
-		      </And>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Multimedia-Sound</Category>
+          <Category>Audio</Category>
+          <Category>Midi</Category>
+          <Category>Mixer</Category>
+          <Category>Sequencer</Category>
+          <Category>Tuner</Category>
+          <And>
+            <Category>Audio</Category>
+            <Or>
+              <Category>AudioVideoEditing</Category>
+              <Category>Player</Category>
+              <Category>Recorder</Category>
+              <Category>HamRadio</Category>
+            </Or>
+          </And>
+          <And>
+            <Category>AudioVideo</Category>
+            <Category>Music</Category>
+          </And>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -1103,28 +1156,28 @@
       </Layout>
       <Directory>mandriva-multimedia-video.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Multimedia-Video</Category>
-		      <Category>Video</Category>
-		      <Category>TV</Category>
-		      <And>
-			      <Category>Video</Category>
-			      <Or>
-				      <Category>AudioVideoEdition</Category>
-				      <Category>Player</Category>
-				      <Category>Recorder</Category>
-			      </Or>
-		      </And>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Multimedia-Video</Category>
+          <Category>Video</Category>
+          <Category>TV</Category>
+          <And>
+            <Category>Video</Category>
+            <Or>
+              <Category>AudioVideoEditing</Category>
+              <Category>Player</Category>
+              <Category>Recorder</Category>
+            </Or>
+          </And>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
       <Directory>mandriva-multimedia-other.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-Multimedia-Other</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-Multimedia-Other</Category>
+        </Or>
       </Include>
     </Menu>
   </Menu>
@@ -1142,10 +1195,17 @@
       <Merge type="files"/>
     </Layout>
     <Directory>mandriva-system.directory</Directory>
+    <OnlyUnallocated/>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-System</Category>
-	    </Or>
+      <Or>
+        <Category>X-MandrivaLinux-System</Category>
+        <Category>System</Category>
+        <Category>Filesystem</Category>
+        <And>
+          <Category>System</Category>
+          <Category>Security</Category>
+        </And>
+      </Or>
     </Include>
     <Menu>
       <Name>Archiving</Name>
@@ -1159,9 +1219,9 @@
       </Layout>
       <Directory>mandriva-system-archiving.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-System-Archiving</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-System-Archiving</Category>
+        </Or>
       </Include>
       <Menu>
         <Name>Backup</Name>
@@ -1172,10 +1232,10 @@
         </Layout>
         <Directory>mandriva-system-archiving-backup.directory</Directory>
         <Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Archiving-Backup</Category>
-		        <Category>Archiving</Category>
-		</Or>
+          <Or>
+            <Category>X-MandrivaLinux-System-Archiving-Backup</Category>
+            <Category>Archiving</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
@@ -1186,29 +1246,30 @@
           <Merge type="files"/>
         </Layout>
         <Directory>mandriva-system-archiving-cdburning.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Archiving-CDBurning</Category>
-			<Category>DiscBurning</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Archiving-CDBurning</Category>
+            <Category>DiscBurning</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Compression</Name>
         <Directory>mandriva-system-archiving-compression.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Archiving-Compression</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Archiving-Compression</Category>
+            <Category>Compression</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
         <Directory>mandriva-system-archiving-other.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Archiving-Other</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Archiving-Other</Category>
+          </Or>
         </Include>
       </Menu>
     </Menu>
@@ -1228,199 +1289,215 @@
         <Merge type="files"/>
       </Layout>
       <Directory>mandriva-system-configuration.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-System-Configuration</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-System-Configuration</Category>
+          <And>
+            <Category>Settings</Category>
+            <Category>DesktopSettings</Category>
+            <Category>HardwareSettings</Category>
+            <Not>
+              <Category>GNOME</Category>
+              <Category>KDE</Category>
+            </Not>
+          </And>
+        </Or>
       </Include>
       <Menu>
         <Name>Boot and Init</Name>
         <Directory>mandriva-system-configuration-bootandinit.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Configuration-BootandInit</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Configuration-BootandInit</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Hardware</Name>
         <Directory>mandriva-system-configuration-hardware.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Configuration-Hardware</Category>
-			<Category>HardwareSettings</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Configuration-Hardware</Category>
+            <Category>HardwareSettings</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>GNOME</Name>
         <Directory>mandriva-system-configuration-gnome.directory</Directory>
         <Include>
+          <Category>X-MandrivaLinux-System-Configuration-GNOME</Category>
         </Include>
         <Menu>
           <Name>Advanced</Name>
           <Directory>mandriva-system-configuration-gnome-advanced.directory</Directory>
-	  <Include>
+          <Include>
+            <Category>X-MandrivaLinux-System-Configuration-GNOME-Advanced</Category>
           </Include>
         </Menu>
       </Menu>
       <Menu>
         <Name>KDE</Name>
         <Directory>mandriva-system-configuration-kde.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Configuration-KDE</Category>
-		</Or>
-  		</Include>
-		<Menu>
-			<Name>Accessibility</Name>
-			<Directory>kde-settings-accessibility.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-Accessibility</Category>
-				</Or>
-			</Include>
-		</Menu>
-        	<Menu>
-			<Name>Components</Name>
-			<Directory>kde-settings-components.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-Components</Category>
-				</Or>
-			</Include>
-  		</Menu>
-		<Menu>
-			<Name>Information</Name>
-			<Directory>kde-settings-hardware.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-Information</Category>
-				</Or>
-			</Include>
-		</Menu>
-		<Menu>
-			<Name>LookNFeel</Name>
-			<Directory>kde-settings-looknfeel.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-LookNFeel</Category>
-				</Or>
-			</Include>
-
-		</Menu>
-		<Menu>
-			<Name>Network</Name>
-			<Directory>kde-settings-network.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-Network</Category>
-				</Or>
-			</Include>
-		</Menu>
-		<Menu>
-			<Name>Peripherals</Name>
-			<Directory>kde-settings-peripherals.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-Peripherals</Category>
-				</Or>
-			</Include>
-		</Menu>
-		<Menu>
-			<Name>PowerControl</Name>
-			<Directory>kde-settings-power.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-PowerControl</Category>
-				</Or>
-			</Include>
-		</Menu>
-		<Menu>
-			<Name>Security</Name>
-			<Directory>kde-settings-security.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-Security</Category>
-				</Or>
-			</Include>
-		</Menu>
-		<Menu>
-			<Name>Sound</Name>
-			<Directory>kde-settings-sound.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-Sound</Category>
-				</Or>
-			</Include>
-		</Menu>
-		<Menu>
-			<Name>WebBrowsing</Name>
-			<Directory>kde-settings-webbrowsing.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-WebBrowsing</Category>
-				</Or>
-			</Include>
-		</Menu>
-		<Menu>
-			<Name>System</Name>
-			<Directory>kde-settings-system.directory</Directory>
-			<Include>
-				<Or>
-					<Category>X-MandrivaLinux-System-Configuration-KDE-System</Category>
-				</Or>
-			</Include>
-		</Menu>
-	</Menu>
-	<Menu>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Configuration-KDE</Category>
+          </Or>
+        </Include>
+        <Menu>
+          <Name>Accessibility</Name>
+          <Directory>kde-settings-accessibility.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-Accessibility</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>Components</Name>
+          <Directory>kde-settings-components.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-Components</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>Information</Name>
+          <Directory>kde-settings-hardware.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-Information</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>LookNFeel</Name>
+          <Directory>kde-settings-looknfeel.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-LookNFeel</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>Network</Name>
+          <Directory>kde-settings-network.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-Network</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>Peripherals</Name>
+          <Directory>kde-settings-peripherals.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-Peripherals</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>PowerControl</Name>
+          <Directory>kde-settings-power.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-PowerControl</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>Security</Name>
+          <Directory>kde-settings-security.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-Security</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>Sound</Name>
+          <Directory>kde-settings-sound.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-Sound</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>WebBrowsing</Name>
+          <Directory>kde-settings-webbrowsing.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-WebBrowsing</Category>
+            </Or>
+          </Include>
+        </Menu>
+        <Menu>
+          <Name>System</Name>
+          <Directory>kde-settings-system.directory</Directory>
+          <Include>
+            <Or>
+              <Category>X-MandrivaLinux-System-Configuration-KDE-System</Category>
+            </Or>
+          </Include>
+        </Menu>
+      </Menu>
+      <Menu>
         <Name>Networking</Name>
         <Directory>mandriva-system-configuration-networking.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Configuration-Networking</Category>
-			<And>
-				<Category>Settings</Category>
-				<Category>Network</Category>
-			</And>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Configuration-Networking</Category>
+            <And>
+              <Category>Settings</Category>
+              <Category>Network</Category>
+            </And>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Packaging</Name>
         <Directory>mandriva-system-configuration-packaging.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Configuration-Packaging</Category>
-			<Category>PackageManager</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Configuration-Packaging</Category>
+            <Category>PackageManager</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Printing</Name>
         <Directory>mandriva-system-configuration-printing.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Configuration-Printing</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Configuration-Printing</Category>
+            <Category>Printing</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Users</Name>
         <Directory>mandriva-system-configuration-users.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Configuration-Users</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Configuration-Users</Category>
+          </Or>
         </Include>
       </Menu>
       <Menu>
         <Name>Other</Name>
         <Directory>mandriva-system-configuration-other.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Configuration-Other</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Configuration-Other</Category>
+            <And>
+              <Category>Settings</Category>
+              <Category>Security</Category>
+            </And>
+          </Or>
         </Include>
       </Menu>
     </Menu>
@@ -1433,9 +1510,11 @@
       </Layout>
       <Directory>mandriva-system-filetools.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-System-FileTools</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-System-FileTools</Category>
+          <Category>FileTool</Category>
+          <Category>FileManager</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -1447,30 +1526,27 @@
       </Layout>
       <Directory>mandriva-system-monitoring.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-System-Monitoring</Category>
-		      <And>
-			      <Category>System</Category>
-			      <Category>Monitor</Category>
-		      </And>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-System-Monitoring</Category>
+          <Category>Monitor</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
       <Name>Session</Name>
       <Directory>mandriva-system-session.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-System-Session</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-System-Session</Category>
+        </Or>
       </Include>
       <Menu>
         <Name>Windowmanagers</Name>
         <Directory>mandriva-system-session-windowmanagers.directory</Directory>
-	<Include>
-		<Or>
-			<Category>X-MandrivaLinux-System-Session-Windowmanagers</Category>
-		</Or>
+        <Include>
+          <Or>
+            <Category>X-MandrivaLinux-System-Session-Windowmanagers</Category>
+          </Or>
         </Include>
       </Menu>
     </Menu>
@@ -1483,10 +1559,10 @@
       </Layout>
       <Directory>mandriva-system-terminals.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-System-Terminals</Category>
-		      <Category>TerminalEmulator</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-System-Terminals</Category>
+          <Category>TerminalEmulator</Category>
+        </Or>
       </Include>
     </Menu>
     <Menu>
@@ -1498,28 +1574,32 @@
       </Layout>
       <Directory>mandriva-system-texttools.directory</Directory>
       <Include>
-	      <Or>
-		      <Category>X-MandrivaLinux-System-TextTools</Category>
-	      </Or>
+        <Or>
+          <Category>X-MandrivaLinux-System-TextTools</Category>
+          <Category>TextTool</Category>
+        </Or>
       </Include>
     </Menu>
   </Menu>
   <Menu>
     <Name>Other</Name>
     <Directory>mandriva-other.directory</Directory>
+    <OnlyUnallocated/>
+<!--
     <Include>
 	    <Or>
 		    <Category>X-MandrivaLinux-Other</Category>
 	    </Or>
-    </Include>
+    </Include>-->
+    <KDELegacyDirs/>
   </Menu>
   <Menu>
     <Name>.hidden</Name>
     <Directory>mandriva-hidden.directory</Directory>
     <Include>
-	    <Or>
-		    <Category>X-MandrivaLinux-.hidden</Category>
-	    </Or>
+      <Or>
+        <Category>X-MandrivaLinux-.hidden</Category>
+      </Or>
     </Include>
   </Menu>
   <MergeFile>applications-kmenuedit.menu</MergeFile>
