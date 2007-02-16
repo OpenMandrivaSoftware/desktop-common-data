@@ -9,6 +9,8 @@
 # Purpose         : find sessions for display managers
 #---------------------------------------------------------------
 
+umask 022
+
 for f in /etc/X11/dm.d/*.conf; do
     EXEC=
     FNDSESSION_EXEC=
