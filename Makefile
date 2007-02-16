@@ -34,7 +34,7 @@ tar: checktag
 
 # rules to build a distributable rpm
 
-dist: checktag cleandist dir export tar
+dist: checktag cleandist svntag export tar
 
 
 export: checktag
