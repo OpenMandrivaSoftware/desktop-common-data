@@ -16,13 +16,13 @@
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://online.mandriva.com/" >
   <title>Mandrivaonline</title>
  </bookmark>
-<bookmark icon="/usr/share/icons/favicons/lindvd.ico" href="http://www.intervideo-europe.com/ieso/lindvd.htm" >
-  <title>LinDVD</title>
- </bookmark>
  <folder folded="yes" >
   <title>Partners</title>
-<bookmark icon="/usr/share/icons/favicons/lindvd.ico" href="http://www.intervideo-europe.com/ieso/lindvd.htm" >
-  <title>LinDVD</title>
+ <bookmark href="http://www.fon.com/" >
+  <title>Fon</title>
+ </bookmark>
+  <bookmark href="http://ogg.jamendo.com/" >
+  <title>Jamendo</title>
  </bookmark>
  <bookmark icon="/usr/share/icons/favicons/bitdefender.ico" href="http://store.mandriva.com/index.php?cPath=25_121" >
   <title>Bitdefender</title>
