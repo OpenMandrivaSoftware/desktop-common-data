@@ -9,6 +9,17 @@
 # Purpose         : launch a web browser
 #---------------------------------------------------------------
 
+#
+# If we got any argument, we can call xdg-open
+#
+if [[ -n "$@" ]]; then
+	exec xdg-open "$@"
+fi
+
+#
+# No URL specified, so we must find a proper browser for the current env
+#
+
 strip_browser_var() {
     if [[ -n "$BROWSER" ]]; then
 	if [[ `basename "$BROWSER"` == "www-browser" ]]; then
@@ -38,7 +49,8 @@ if [[ -z "$BROWSER" ]]; then
 	NEWBROWSER=`grep -m 1 'BrowserApplication=' $HOME/.kde/share/config/kdeglobals 2>/dev/null`
 	[[ -z "$NEWBROWSER" ]] && NEWBROWSER=`grep -m 1 'BrowserApplication=' /etc/kde/kdeglobals 2>/dev/null`
 	if [[ -n "$NEWBROWSER" ]]; then
-	    BROWSER=`echo $NEWBROWSER | sed -e 's/BrowserApplication=//' -e 's/!//'`
+	    BROWSER=`echo $NEWBROWSER | sed -e 's/BrowserApplication=\(.*\).desktop/\1/'`
+	    BROWSER="dcop klauncher default start_service_by_desktop_name(QString,QStringList) $BROWSER [ ]"
 	fi
     fi
 
@@ -55,7 +67,7 @@ if [[ -z "$BROWSER" ]]; then
 fi
 
 if [[ -n "$BROWSER" ]]; then 
-    exec $BROWSER "$@"
+    exec $BROWSER
 else
     echo "no web browser detected"
 fi
