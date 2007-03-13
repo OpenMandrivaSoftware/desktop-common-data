@@ -19,10 +19,10 @@
  <bookmark href="http://www.fon.com/" >
   <title>Fon</title>
  </bookmark>
-  <bookmark href="http://ogg.jamendo.com/" >
+ <bookmark icon="/usr/share/icons/favicons/jamendo.png" href="http://ogg.jamendo.com/" >
   <title>Jamendo</title>
  </bookmark>
-  <bookmark href="http://www.wengophone.com" >
+ <bookmark icon="/usr/share/icons/favicons/wengophone.png" href="http://www.wengophone.com" >
   <title>Wengo</title>
  </bookmark>
 </xbel>
