@@ -8,10 +8,10 @@
   <title>Mandriva Store</title>
  </bookmark>
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com/" >
-  <title>Mandrivaclub</title>
+  <title>Mandriva Club</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
-  <title>Mandrivaexpert</title>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://expert.mandriva.com/" >
+  <title>Mandriva Expert</title>
  </bookmark>
  <bookmark icon="/usr/share/icons/favicons/wengophone.png" href="http://www.wengophone.com" >
   <title>Wengo</title>
@@ -55,10 +55,10 @@
  </folder>
  <folder folded="no" >
   <title>Programming</title>
-  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/en/cookerdevel.php3" >
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href=" http://wiki.mandriva.com/" >
    <title>Mandrake Linux Cooker</title>
   </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://qa.mandriva.com/wiki" >
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/" >
    <title>Mandrake Linux Development Community</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.opensource.org/" >
