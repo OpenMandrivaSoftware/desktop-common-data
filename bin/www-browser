@@ -10,9 +10,11 @@
 #---------------------------------------------------------------
 
 #
-# If we got any argument, we can call xdg-open
+# If we got any argument, we can call xdg-open, if we haven´t already done it
 #
-if [[ -n "$@" ]]; then
+if [ -n "$@" -a -z "$THROUGHXDG" ]; then
+	# Lock against bug #29599
+	export THROUGHXDG=1
 	exec xdg-open "$@"
 fi
 
@@ -67,7 +69,12 @@ if [[ -z "$BROWSER" ]]; then
 fi
 
 if [[ -n "$BROWSER" ]]; then 
-    exec $BROWSER
+    if [[ -n "$THROUGHXDG" ]]; then
+	# xdg couldn't handle the url
+	exec $BROWSER $@
+    else
+	exec $BROWSER
+    fi
 else
     echo "no web browser detected"
 fi
