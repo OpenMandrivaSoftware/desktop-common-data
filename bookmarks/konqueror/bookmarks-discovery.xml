@@ -7,14 +7,11 @@
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/" >
   <title>Mandriva Store</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com/" >
   <title>Mandriva Club</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://expert.mandriva.com/" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
   <title>Mandriva Expert</title>
- </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://online.mandriva.com/" >
-  <title>Mandriva Online</title>
  </bookmark>
  <bookmark href="http://www.fon.com/" >
   <title>Fon</title>
@@ -22,7 +19,7 @@
  <bookmark icon="/usr/share/icons/favicons/jamendo.png" href="http://ogg.jamendo.com/" >
   <title>Jamendo</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/wengophone.png" href="http://www.wengophone.com" >
+ <bookmark icon="/usr/share/icons/favicons/wengophone.png" href="http://www.wengophone.com/" >
   <title>Wengo</title>
  </bookmark>
 </xbel>

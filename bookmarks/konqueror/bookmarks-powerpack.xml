@@ -10,14 +10,9 @@
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com/" >
   <title>Mandriva Club</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://expert.mandriva.com/" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
   <title>Mandriva Expert</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://online.mandriva.com/" >
-  <title>Mandriva Online</title>
- </bookmark>
- <folder folded="yes" >
-  <title>Partners</title>
  <bookmark href="http://www.fon.com/" >
   <title>Fon</title>
  </bookmark>
@@ -27,6 +22,8 @@
  <bookmark icon="/usr/share/icons/favicons/wengophone.png" href="http://www.wengophone.com" >
   <title>Wengo</title>
  </bookmark>
+ <folder folded="yes" >
+  <title>Partners</title>
  <bookmark icon="/usr/share/icons/favicons/bitdefender.ico" href="http://store.mandriva.com/index.php?cPath=25_121" >
   <title>Bitdefender</title>
  </bookmark>
@@ -113,11 +110,11 @@
  </folder>
  <folder folded="no" >
   <title>Programming</title>
-  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/en/cookerdevel.php3" >
-   <title>Mandrake Linux Cooker</title>
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/Development" >
+   <title>Mandriva Linux Cooker</title>
   </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://qa.mandriva.com/wiki" >
-   <title>Mandrake Linux Development Community</title>
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/" >
+   <title>Mandrake Linux Wiki</title>
   </bookmark>
   <separator/>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://gcc.gnu.org/" >
