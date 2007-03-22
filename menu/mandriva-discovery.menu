@@ -5,7 +5,8 @@
   <Menu>
     <Name>Graphics</Name>
     <Exclude>
-      <Filename>kde-showfoto.desktop</Filename>
+      <Filename>kde-kpdf.desktop</Filename>
+      <Filename>kde-kghostview.desktop</Filename>
     </Exclude>
   </Menu>
   <Menu>
@@ -33,6 +34,11 @@
       <Filename>kde-KNode.desktop</Filename>
       <Filename>kde-ksirc.desktop</Filename>
       <Filename>kde-groupwarewizard.desktop</Filename>
+      <Filename>kde-kbluethoothd.desktop</Filename>
+      <Filename>kde-kbtobexclient.desktop</Filename>
+      <Filename>kde-kbtserialchat.desktop</Filename>
+      <Filename>kde-knetattach.desktop</Filename>
+      <Filename>kde-kdict.desktop</Filename>
       <Filename>bme.desktop</Filename>
       <Filename>gftp.desktop</Filename>
     </Exclude>
@@ -40,13 +46,13 @@
   <Menu>
     <Name>Office</Name>
     <Layout>
-      <Filename>template2.0.desktop</Filename>
-      <Filename>writer2.0.desktop</Filename>
-      <Filename>calc2.0.desktop</Filename>
-      <Filename>impress2.0.desktop</Filename>
-      <Filename>draw2.0.desktop</Filename>
-      <Filename>base2.0.desktop</Filename>
-      <Filename>web2.0.desktop</Filename>
+      <Filename>template2.1.desktop</Filename>
+      <Filename>writer2.1.desktop</Filename>
+      <Filename>calc2.1.desktop</Filename>
+      <Filename>impress2.1.desktop</Filename>
+      <Filename>draw2.1.desktop</Filename>
+      <Filename>base2.1.desktop</Filename>
+      <Filename>web2.1.desktop</Filename>
       <Separator/>
       <Filename>kde-kwrite.desktop</Filename>
       <Filename>kde-kpdf.desktop</Filename>
@@ -65,6 +71,9 @@
       <Filename>kde-multisynk.desktop</Filename>
       <Filename>mandriva-hp-sendfax.desktop</Filename>
       <Filename>kde-kpalmdoc.desktop</Filename>
+      <Filename>kde-Kontact.desktop</Filename>
+      <Filename>kde-karm.desktop</Filename>
+      <Filename>kde-knotes.desktop</Filename>
       <Filename>gnome-dictionary.desktop</Filename>
     </Exclude>
   </Menu>
@@ -77,6 +86,8 @@
       <Filename>kde-kdenlive.desktop</Filename>
       <Filename>vumeter.desktop</Filename>
       <Filename>reclevel.desktop</Filename>
+      <Filename>kde-k3b.desktop</Filename>
+      <Filename>gnome-cd.desktop</Filename>
     </Exclude>
   </Menu>
   <Menu>
@@ -115,7 +126,30 @@
       <Filename>mandriva-drakxtools-newt-user.desktop</Filename>
       <Filename>kde-krandrtray.desktop</Filename>
       <Filename>kde-kwikdisk.desktop</Filename>
-      <Filename>mandriva-net_applet.desktop</Filename>
+      <Filename>kde-kpowersave.desktop</Filename>
+      <Filename>kde-KCharSelect.desktop</Filename>
+      <Filename>kde-klipper.desktop</Filename>
+      <Filename>kde-kappfinder.desktop</Filename>
+      <Filename>kde-kpager.desktop</Filename>
+      <Filename>kde-kcmkicker.desktop</Filename>
+      <Filename>kde-krfb.desktop</Filename>
+      <Filename>kde-kpersonalizer.desktop</Filename>
+      <Filename>kde-kdeprintfax.desktop</Filename>
+      <Filename>kde-kfontview.desktop</Filename>
+      <Filename>kde-groupwarewizard.desktop</Filename>
+      <Filename>kde-kalarm.desktop</Filename>
+      <Filename>kde-karm.desktop</Filename>
+      <Filename>kde-knotes.desktop</Filename>
+      <Filename>kde-printers.desktop</Filename>
+      <Filename>kde-kcalc.desktop</Filename>
+      <Filename>kde-multisynk.desktop</Filename>
+      <Filename>kde-ktip.desktop</Filename>
+      <Filename>kde-kwalletmanager.desktop</Filename>
+      <Filename>drakbackup.desktop</Filename>
+      <Filename>mandriva-drakxtools-curses-system.desktop</Filename>
+      <Filename>mandriva-drakxtools-curses-user.desktop</Filename>
+      <Filename>mandriva-printerdrake.desktop</Filename>
+      <Filename>net_applet.desktop</Filename>
       <Filename>baobab.desktop</Filename>
       <Filename>nautilus.desktop</Filename>
       <Filename>gdmsetup.desktop</Filename>
@@ -123,25 +157,34 @@
       <Filename>gdmflexiserver.desktop</Filename>
       <Filename>gnome-system-log.desktop</Filename>
       <Filename>gnome-search-tool.desktop</Filename>
+      <Filename>gnome-volume-control.desktop</Filename>
       <Filename>gfloppy.desktop</Filename>
       <Filename>gnome-system-monitor.desktop</Filename>
+      <Filename>gnome-obex-server.desktop</Filename>
+      <Filename>dasher.desktop</Filename>
+      <Filename>gok.desktop</Filename>
+      <Filename>gnome-dictionary.desktop</Filename>
+      <Filename>gnome-power-preferences.desktop</Filename>
+      <Filename>gnome-power-statistics.desktop</Filename>
+      <Filename>gnome-screensaver-preferences.desktop</Filename>
+      <Filename>session-properties.desktop</Filename>
+      <Filename>gnome-screenshot.desktop</Filename>
+      <Filename>gedit.desktop</Filename>
+      <Filename>alacarte.desktop</Filename>
     </Exclude>
   </Menu>
   <Menu>
     <Name>More Applications</Name>
     <Exclude>
       <Filename>kde-kbtobexclient.desktop</Filename>
+      <Filename>kde-kbluetoothd.desktop</Filename>
       <Filename>kde-kbtserialchat.desktop</Filename>
       <Filename>kde-kjscmd.desktop</Filename>
+      <Filename>kde-embedjs.desktop</Filename>
       <Filename>invest-chart.desktop</Filename>
-      <Filename>base2.0.desktop</Filename>
+      <Filename>base2.1.desktop</Filename>
       <Filename>kasumi.desktop</Filename>
-    </Exclude>
-  </Menu>
-  <Menu>
-    <Name>Documentation</Name>
-    <Exclude>
-      <Filename>monodoc.desktop</Filename>
+      <Filename>gnome-obex-server.desktop</Filename>
     </Exclude>
   </Menu>
 </Menu>

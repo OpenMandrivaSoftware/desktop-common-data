@@ -75,7 +75,12 @@
         <Category>X-MandrivaLinux-Internet-RemoteAccess</Category>
         <Category>X-MandrivaLinux-Internet-WebBrowsers</Category>
         <Category>X-MandrivaLinux-Internet-WebEditors</Category>
-        <Category>Network</Category>
+	<And>
+		<Category>Network</Category>
+		<Not>
+			<Category>Settings</Category>
+		</Not>
+	</And>
       </Or>
     </Include>
   </Menu>
@@ -153,7 +158,12 @@
         <Category>X-MandrivaLinux-System-Configuration-Printing</Category>
         <Category>X-MandrivaLinux-System-Configuration-Users</Category>
         <Category>X-MandrivaLinux-System-Configuration-Other</Category>
-        <Category>Settings</Category>
+	<And>
+		<Category>Settings</Category>
+		<Not>
+			<Category>GNOME</Category>
+		</Not>
+	</And>
         <Category>System</Category>
         <Category>Utility</Category>
       </Or>
