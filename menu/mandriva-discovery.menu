@@ -34,7 +34,7 @@
       <Filename>kde-KNode.desktop</Filename>
       <Filename>kde-ksirc.desktop</Filename>
       <Filename>kde-groupwarewizard.desktop</Filename>
-      <Filename>kde-kbluethoothd.desktop</Filename>
+      <Filename>kde-kbluetoothd.desktop</Filename>
       <Filename>kde-kbtobexclient.desktop</Filename>
       <Filename>kde-kbtserialchat.desktop</Filename>
       <Filename>kde-knetattach.desktop</Filename>
@@ -171,6 +171,9 @@
       <Filename>gnome-screenshot.desktop</Filename>
       <Filename>gedit.desktop</Filename>
       <Filename>alacarte.desktop</Filename>
+      <Filename>kasumi.desktop</Filename>
+      <Filename>uim.desktop</Filename>
+      <Filename>scim-setup.desktop</Filename>
     </Exclude>
   </Menu>
   <Menu>
