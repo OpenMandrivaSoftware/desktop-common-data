@@ -11,7 +11,13 @@
 
 umask 022
 
-for f in /etc/X11/dm.d/*.conf; do
+FILES=`/bin/ls /etc/X11/dm.d/*.conf 2> /dev/null`
+
+if [ $? != 0 ]; then
+	exit 0
+fi
+
+for f in $FILES; do
     EXEC=
     FNDSESSION_EXEC=
     eval `grep 'EXEC=' "$f"`
