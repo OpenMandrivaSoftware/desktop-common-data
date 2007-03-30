@@ -129,6 +129,7 @@
           <Or>
             <Category>X-MandrivaLinux-Office-Communications-Phone</Category>
             <Category>TelephonyTool</Category>
+            <Category>TelephonyTools</Category>
           </Or>
         </Include>
       </Menu>
@@ -900,7 +901,7 @@
         <Menuname>Geosciences</Menuname>
         <Menuname>Image Processing</Menuname>
         <Menuname>Mathematics</Menuname>
-        <Menuname>Numeric analysis</Menuname>
+        <Menuname>Numeric Analysis</Menuname>
         <Menuname>Parallel Computing</Menuname>
         <Menuname>Physics</Menuname>
         <Menuname>Robotics</Menuname>
@@ -1024,6 +1025,7 @@
           <Or>
             <Category>X-MandrivaLinux-MoreApplications-Sciences-NumericAnalysis</Category>
             <Category>NumericAnalysis</Category>
+            <Category>NumericalAnalysis</Category>
           </Or>
         </Include>
       </Menu>
@@ -1517,6 +1519,7 @@
         <Or>
           <Category>X-MandrivaLinux-System-FileTools</Category>
           <Category>FileTool</Category>
+          <Category>FileTools</Category>
           <Category>FileManager</Category>
         </Or>
       </Include>
@@ -1581,6 +1584,7 @@
         <Or>
           <Category>X-MandrivaLinux-System-TextTools</Category>
           <Category>TextTool</Category>
+          <Category>TextTools</Category>
         </Or>
       </Include>
     </Menu>
