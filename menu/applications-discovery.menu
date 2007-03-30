@@ -164,6 +164,12 @@
 			<Category>GNOME</Category>
 		</Not>
 	</And>
+	<And>
+		<Category>Utility</Category>
+		<Not>
+			<Category>Accesibility</Category>
+		</Not>
+	</And>
         <Category>System</Category>
         <Category>Utility</Category>
       </Or>
@@ -229,6 +235,10 @@
         <Category>Education</Category>
         <Category>Electronics</Category>
         <Category>Engineering</Category>
+	<And>
+		<Category>Utility</Category>
+		<Category>Accesibility</Category>
+	</And>
       </Or>
     </Include>
   </Menu>

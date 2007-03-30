@@ -108,6 +108,7 @@
     </Layout>
     <Exclude>
       <Filename>mandriva-mtink.desktop</Filename>
+      <Filename>kde-ksig.desktop</Filename>
       <Filename>kde-kdf.desktop</Filename>
       <Filename>kde-kwifimanager.desktop</Filename>
       <Filename>kde-kinfocenter.desktop</Filename>
@@ -153,6 +154,7 @@
       <Filename>baobab.desktop</Filename>
       <Filename>nautilus.desktop</Filename>
       <Filename>gdmsetup.desktop</Filename>
+      <Filename>gcalctool.desktop</Filename>
       <Filename>gdmphotosetup.desktop</Filename>
       <Filename>gdmflexiserver.desktop</Filename>
       <Filename>gnome-system-log.desktop</Filename>
@@ -161,8 +163,6 @@
       <Filename>gfloppy.desktop</Filename>
       <Filename>gnome-system-monitor.desktop</Filename>
       <Filename>gnome-obex-server.desktop</Filename>
-      <Filename>dasher.desktop</Filename>
-      <Filename>gok.desktop</Filename>
       <Filename>gnome-dictionary.desktop</Filename>
       <Filename>gnome-power-preferences.desktop</Filename>
       <Filename>gnome-power-statistics.desktop</Filename>
@@ -174,6 +174,7 @@
       <Filename>kasumi.desktop</Filename>
       <Filename>uim.desktop</Filename>
       <Filename>scim-setup.desktop</Filename>
+      <Filename>cups.desktop</Filename>
     </Exclude>
   </Menu>
   <Menu>
