@@ -167,11 +167,10 @@
 	<And>
 		<Category>Utility</Category>
 		<Not>
-			<Category>Accesibility</Category>
+			<Category>Accessibility</Category>
 		</Not>
 	</And>
         <Category>System</Category>
-        <Category>Utility</Category>
       </Or>
     </Include>
 <!-- Empty node for KDE -->
@@ -237,7 +236,7 @@
         <Category>Engineering</Category>
 	<And>
 		<Category>Utility</Category>
-		<Category>Accesibility</Category>
+		<Category>Accessibility</Category>
 	</And>
       </Or>
     </Include>
