@@ -1113,6 +1113,10 @@
           </And>
         </Or>
       </Include>
+      <Exclude>
+        <Filename>kde-kpdf.desktop</Filename>
+        <Filename>kde-kghostview.desktop</Filename>
+      </Exclude>
     </Menu>
     <Menu>
       <Name>Sound</Name>
