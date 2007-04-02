@@ -1497,6 +1497,7 @@ sub output_blackbox_menu ($;$)
         my ($menu, $indent) = @_;
 
         my $output = '';
+        my $run = $format eq 'fluxbox' ? 'fbrun -nearmouse' : 'bbrun -a -w';
 
     $output .= "[begin] (Menu)\n";
         $output .= output_blackbox_inner_menu ($menu, $indent);
@@ -1514,7 +1515,7 @@ sub output_blackbox_menu ($;$)
 			[stylesdir] (~/.openbox/styles)
                 [end]
         [separator]
-        [exec] (Run Command) {bbrun -a -w}
+        [exec] (Run Command) {' . $run . '}
         [exec] (Lock Screen) {xlock}
         [restart] (Restart) {}
         [exit] (Logout)
