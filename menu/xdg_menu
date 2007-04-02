@@ -1499,7 +1499,6 @@ sub output_blackbox_menu ($;$)
         my $output = '';
 
     $output .= "[begin] (Menu)\n";
-    $output .= "[exec] (xterm) {xterm}\n[separator]\n";
         $output .= output_blackbox_inner_menu ($menu, $indent);
     $output .= "[separator]\n";
     $output .= '[config] (Configuration)
