@@ -17,6 +17,7 @@
     <Merge type="files"/>
   </DefaultLayout>
   <DefaultMergeDirs/>
+  <KDELegacyDirs/>
   <DefaultAppDirs/>
   <DefaultDirectoryDirs/>
   <Directory>mandrivalinux.directory</Directory>
@@ -1599,7 +1600,6 @@
 		    <Category>X-MandrivaLinux-Other</Category>
 	    </Or>
     </Include>-->
-    <KDELegacyDirs/>
   </Menu>
   <Menu>
     <Name>.hidden</Name>
