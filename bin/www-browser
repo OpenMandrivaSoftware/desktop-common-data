@@ -12,7 +12,7 @@
 #
 # If we got any argument, we can call xdg-open, if we haven´t already done it
 #
-if [ -n "$@" -a -z "$THROUGHXDG" ]; then
+if [ -n "$*" -a -z "$THROUGHXDG" ]; then
 	# Lock against bug #29599
 	export THROUGHXDG=1
 	exec xdg-open "$@"
