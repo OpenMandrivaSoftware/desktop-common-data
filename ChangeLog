@@ -1,3 +1,16 @@
+2007-05-11 16:00  Frederic Crozat <fcrozat at mandriva.com>
+
+	* dm/mdk-gdm.xml: Add support for gdm 2.19.x background attribute
+
+2007-05-11 15:57  Frederic Crozat <fcrozat at mandriva.com>
+
+	* xinit.d/desktop-directories: Fix handling for zh locales (Mdv bug
+	  #30215)
+
+2007-05-02 16:34  mrl
+
+	* bin/www-browser: - Replace $@ with $*. Closes: #30522
+
 2007-04-02 09:56  Olivier Blin <oblin at mandriva.com>
 
 	* soft/desktop-common-data/trunk/menu/xdg_menu: use fbrun for
