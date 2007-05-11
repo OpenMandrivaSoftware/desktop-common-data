@@ -19,8 +19,12 @@ if [ "$UID" != "0" -a ! -e $MDK_FOLDERS ]; then
     for file in /usr/share/mdk/menu/*-mdk.desktop.template ; do
 	    TARGET_DIR=`grep -m1 -F Name[$locale]= $file | sed -e 's|.*=||g'`
 	    if [ -z "$TARGET_DIR" ]; then
-		locale=`echo $locale | sed -e 's/_.*//g' -e 's/@.*//g'`
+		locale=`echo $locale | sed -e 's/@.*//g' -e 's/\..*//g'`
 	    	TARGET_DIR=`grep -m1 -F Name[$locale]= $file | sed -e 's|.*=||g'`
+	    	if [ -z "$TARGET_DIR" ]; then
+			locale=`echo $locale | sed -e 's/_.*//g'`
+		    	TARGET_DIR=`grep -m1 -F Name[$locale]= $file | sed -e 's|.*=||g'`
+		fi
 	    fi
 
 	    if [ -z "$TARGET_DIR" ]; then
