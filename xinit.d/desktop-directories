@@ -38,7 +38,7 @@ if [ "$UID" != "0" -a ! -e $MDK_FOLDERS ]; then
 
 	    DIRECTORY_PATH="$HOME/$TARGET_DIR"
 	    [ -d "$DIRECTORY_PATH" ] || mkdir -p "$DIRECTORY_PATH"
-	    echo -e [Desktop Entry]\\nHidden=true\\n`grep Icon= $file` > "$DIRECTORY_PATH/.directory"
+	    echo -e [Desktop Entry]\\n`grep Icon= $file` > "$DIRECTORY_PATH/.directory"
 
 	    FILE_PATH=$MDK_FOLDERS/`basename $file .template`
 	    SYMLINK=$MDK_FOLDERS/`basename $file -mdk.desktop.template`
