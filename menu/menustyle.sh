@@ -1,15 +1,10 @@
-if [ "$META_CLASS" = "desktop" ]; then 
-	MDV_MENU_STYLE=discovery 
-else
-	MDV_MENU_STYLE=mandriva
-fi
+MDV_MENU_STYLE=mandriva
 
 [ -r /etc/sysconfig/menustyle ] && source /etc/sysconfig/menustyle
 [ -r $HOME/.menustyle ] && source $HOME/.menustyle
 
-if [ "$MDV_MENU_STYLE" = "discovery" -a "x$XDG_CONFIG_DIRS" = "x" ]; then
-	XDG_CONFIG_DIRS=/etc/xdg/discovery:/etc/xdg
-	export XDG_CONFIG_DIRS
+if [ "$MDV_MENU_STYLE" = "discovery" ]; then
+	MDV_MENU_STYLE=mandriva
 fi
 
 export MDV_MENU_STYLE

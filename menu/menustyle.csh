@@ -1,8 +1,4 @@
-if ($META_CLASS == desktop ) then 
-	set MDV_MENU_STYLE=discovery 
-else
-	set MDV_MENU_STYLE=mandriva
-endif
+set MDV_MENU_STYLE=mandriva
 
 foreach file (/etc/sysconfig/menustyle $HOME/.menustyle)
  if ( -f $file ) then
@@ -11,7 +7,7 @@ foreach file (/etc/sysconfig/menustyle $HOME/.menustyle)
 end
 
 if ($MDV_MENU_STYLE  == discovery && ! ${?XDG_CONFIG_DIRS}) then
-	setenv XDG_CONFIG_DIRS /etc/xdg/discovery:/etc/xdg
+	set MDV_MENU_STYLE=mandriva
 endif
 
 setenv MDV_MENU_STYLE $MDV_MENU_STYLE
