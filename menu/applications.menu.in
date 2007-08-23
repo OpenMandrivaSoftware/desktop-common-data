@@ -7,7 +7,7 @@
     <Menuname>Office</Menuname>
     <Menuname>Graphics</Menuname>
     <Menuname>SoundVideo</Menuname>
-    <Menuname>Accessories</Menuname>
+    <Menuname>Tools</Menuname>
     <Menuname>Development</Menuname>
     <Menuname>Games</Menuname>
     <Menuname>Education</Menuname>
@@ -81,7 +81,9 @@
       <Filename>calc2.2.desktop</Filename>
       <Filename>impress2.2.desktop</Filename>
       <Separator/>
-      <Merge type="all"/>
+      <Merge type="files"/>
+      <Menuname>More</Menuname>
+      <Merge type="menus"/>
     </Layout>
     <Include>
       <And>
@@ -206,6 +208,7 @@
       <Menuname>SystemTools</Menuname>
       <Menuname>Accessibility</Menuname>
       <Menuname>Emulator</Menuname>
+      <Separator/>
       <Merge type="files"/>
       <Menuname>More</Menuname>
       <Merge type="dirs"/>
