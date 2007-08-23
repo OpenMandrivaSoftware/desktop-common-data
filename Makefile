@@ -32,6 +32,7 @@ localdist: cleandist dir localcopy tar
 
 cleandist: checktag
 	rm -rf $(PACKAGE)-$(VERSION) $(PACKAGE)-$(VERSION).tar.bz2
+	rm -f applications.menu kde-applications.menu
 
 dir: checktag
 	mkdir $(PACKAGE)-$(VERSION)
