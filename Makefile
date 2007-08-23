@@ -4,6 +4,18 @@ TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 mandir=/usr/share/man
 SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
+menus: applications.menu kde-applications.menu
+
+applications.menu: menu/applications.menu.in
+	@echo -n "generating $@"
+	@sed -e 's,@MAIN_DESKTOP@,GNOME,g' -e 's,@MAIN_TOOLKIT@,GTK,g' < $? > $@
+	@echo " OK"
+
+kde-applications.menu: menu/applications.menu.in
+	@echo -n "generating $@"
+	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' < $? > $@
+	@echo " OK"
+
 checktag:
 	@if [ "x$(VERSION)" == "x" -o "x$(RELEASE)" = "x" ]; then \
  	  echo usage is "make VERSION=version_number RELEASE=release_number dist" ; \
@@ -12,6 +24,7 @@ checktag:
 
 clean:
 	find . -type d -name '.xvpics' -o -name '*~' |xargs rm -rf
+	rm -f applications.menu kde-applications.menu
 
 # rules to build a test rpm
 
