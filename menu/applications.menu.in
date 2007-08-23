@@ -100,7 +100,7 @@
       </And>
     </Include>
     <Menu>
-      <Name>Other</Name>
+      <Name>More</Name>
       <Directory>mandriva-office-more.directory</Directory>
       <Include>
         <And>
@@ -139,8 +139,8 @@
       </And>
     </Include>
     <Menu>
-      <Name>Other</Name>
-      <Directory>mandriva-graphics-other.directory</Directory>
+      <Name>More</Name>
+      <Directory>mandriva-graphics-more.directory</Directory>
       <Include>
         <And>
           <Not>
@@ -178,8 +178,8 @@
       </And>
     </Include>
     <Menu>
-      <Name>Other</Name>
-      <Directory>mandriva-soundvideo-other.directory</Directory>
+      <Name>More</Name>
+      <Directory>mandriva-soundvideo-more.directory</Directory>
       <Include>
         <And>
           <Not>
@@ -207,7 +207,7 @@
       <Menuname>Accessibility</Menuname>
       <Menuname>Emulator</Menuname>
       <Merge type="files"/>
-      <Menuname>Other</Menuname>
+      <Menuname>More</Menuname>
       <Merge type="dirs"/>
     </Layout>
     <Include>
@@ -287,8 +287,8 @@
       </Include>
     </Menu>
     <Menu>
-      <Name>Other</Name>
-      <Directory>mandriva-tools-other.directory</Directory>
+      <Name>More</Name>
+      <Directory>mandriva-tools-more.directory</Directory>
       <Include>
         <And>
           <Not>
@@ -319,7 +319,6 @@
       <Menuname>Interpreters</Menuname>
       <Menuname>Tools</Menuname>
       <Menuname>Code Generators</Menuname>
-      <Menuname>Other</Menuname>
       <Merge type="menus"/>
       <Merge type="files"/>
     </Layout>

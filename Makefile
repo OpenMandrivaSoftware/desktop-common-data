@@ -28,7 +28,7 @@ clean:
 
 # rules to build a test rpm
 
-localdist: menus cleandist dir localcopy tar
+localdist: cleandist dir localcopy tar
 
 cleandist: checktag
 	rm -rf $(PACKAGE)-$(VERSION) $(PACKAGE)-$(VERSION).tar.bz2
@@ -47,7 +47,7 @@ tar: checktag
 
 # rules to build a distributable rpm
 
-dist: menus checktag cleandist svntag export tar
+dist: checktag cleandist svntag export tar
 
 
 export: checktag
