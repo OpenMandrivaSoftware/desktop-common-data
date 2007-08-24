@@ -29,10 +29,8 @@
   <DefaultDirectoryDirs/>
   <Directory>mandrivalinux.directory</Directory>
   <Include>
-    <Or>
-      <Category>X-MandrivaLinux</Category>
-      <Filename>mandriva-rpmdrake-root.desktop</Filename>
-    </Or>
+    <Category>X-MandrivaLinux</Category>
+    <Filename>mandriva-rpmdrake-root.desktop</Filename>
   </Include>
   <Menu>
     <Name>Internet</Name>
@@ -59,16 +57,14 @@
       <Include>
         <And>
           <Not>
-            <Or>
-              <Category>@MAIN_DESKTOP@</Category>
-              <Category>@MAIN_TOOLKIT@</Category>
-              <Category>X-MandrivaLinux-CrossDesktop</Category>
-              <Category>WebDevelopment</Category>
-            </Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
           </Not>
-          <Or>
-            <Category>Network</Category>
-          </Or>
+          <Not>
+            <Category>WebDevelopment</Category>
+          </Not>
+          <Category>Network</Category>
         </And>
       </Include>
     </Menu>
@@ -107,11 +103,9 @@
       <Include>
         <And>
           <Not>
-            <Or>
-              <Category>@MAIN_DESKTOP@</Category>
-              <Category>@MAIN_TOOLKIT@</Category>
-              <Category>X-MandrivaLinux-CrossDesktop</Category>
-            </Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
           </Not>
           <Or>
             <Category>Office</Category>
@@ -146,15 +140,11 @@
       <Include>
         <And>
           <Not>
-            <Or>
-              <Category>@MAIN_DESKTOP@</Category>
-              <Category>@MAIN_TOOLKIT@</Category>
-              <Category>X-MandrivaLinux-CrossDesktop</Category>
-            </Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
           </Not>
-          <Or>
-            <Category>Graphics</Category>
-          </Or>
+          <Category>Graphics</Category>
         </And>
       </Include>
     </Menu>
@@ -185,17 +175,17 @@
       <Include>
         <And>
           <Not>
-            <Or>
-              <Category>@MAIN_DESKTOP@</Category>
-              <Category>@MAIN_TOOLKIT@</Category>
-              <Category>X-MandrivaLinux-CrossDesktop</Category>
-            </Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
           </Not>
           <Or>
             <Category>X-MandrivaLinux-Multimedia-Other</Category>
             <Category>X-MandrivaLinux-Multimedia-Sound</Category>
             <Category>X-MandrivaLinux-Multimedia-Video</Category>
             <Category>AudioVideo</Category>
+            <Category>Video</Category>
+            <Category>Audio</Category>
           </Or>
         </And>
       </Include>
@@ -207,11 +197,11 @@
     <Layout>
       <Menuname>SystemTools</Menuname>
       <Menuname>Accessibility</Menuname>
-      <Menuname>Emulator</Menuname>
+      <Menuname>Emulators</Menuname>
       <Separator/>
       <Merge type="files"/>
       <Menuname>More</Menuname>
-      <Merge type="dirs"/>
+      <Merge type="menus"/>
     </Layout>
     <Include>
       <And>
@@ -226,7 +216,20 @@
           <And>
             <Category>Settings</Category>
             <Not>
-              <Category>KDE</Category>
+              <Category>X-KDE-settings-accessibility</Category>
+              <Category>X-KDE-settings-components</Category>
+              <Category>X-KDE-settings-desktop</Category>
+              <Category>X-KDE-settings-looknfeel</Category>
+              <Category>X-KDE-settings-network</Category>
+              <Category>X-KDE-settings-webbrowsing</Category>
+              <Category>X-KDE-settings-peripherals</Category>
+              <Category>X-KDE-settings-hardware</Category>
+              <Category>X-KDE-settings-power</Category>
+              <Category>X-KDE-settings-security</Category>
+              <Category>X-KDE-settings-sound</Category>
+              <Category>X-KDE-settings-system</Category>
+              <Category>X-KDE-information</Category>
+              <Category>GNOME</Category>
             </Not>
           </And>
         </Or>
@@ -235,6 +238,8 @@
           <Category>Monitor</Category>
           <Category>System</Category>
           <Category>Emulator</Category>
+          <Category>HardwareSettings</Category>
+          <Category>PackageManager</Category>
         </Not>
       </And>
     </Include>
@@ -249,8 +254,9 @@
       <Include>
         <Or>
           <And>
+            <!-- never show those, they are in a separate menu for GNOME and not relevant for KDE -->
             <Not>
-              <Category>@MAIN_DESKTOP@</Category>
+              <Category>GNOME</Category>
             </Not>
             <Category>HardwareSettings</Category>
           </And>
@@ -260,8 +266,17 @@
               <Category>X-MandrivaLinux-CrossDesktop</Category>
             </Or>
             <Or>
-              <Category>System</Category>
+              <And>
+                <Category>System</Category>
+                <Not>
+                  <Category>GNOME</Category>
+                </Not>
+                <Not>
+                  <Category>Settings</Category>
+                </Not>
+              </And>
               <Category>Monitor</Category>
+              <Category>PackageManager</Category>
             </Or>
           </And>
           <Filename>mandriva-drakconf.desktop</Filename>
@@ -289,6 +304,33 @@
         <Category>Emulator</Category>
       </Include>
     </Menu>
+    <!-- always present, just to ensure GNOME preferences don't appear in any menu -->
+    <Menu>
+      <Name>GNOME Preferences</Name>
+      <Directory>mandriva-system-configuration-gnome.directory</Directory>
+      <Include>
+        <And>
+          <Category>GNOME</Category>
+          <Or>
+            <Category>Settings</Category>
+            <Category>DesktopSettings</Category>
+          </Or>
+        </And>
+        <Category>X-MandrivaLinux-System-Configuration-GNOME-Advanced</Category>
+        <Category>X-MandrivaLinux-System-Configuration-GNOME</Category>
+      </Include>
+    </Menu>
+    <!-- always present, just to ensure KDE preferences don't appear in any menu -->
+    <Menu>
+      <Name>KDE Preferences</Name>
+      <Directory>mandriva-system-configuration-kde.directory</Directory>
+      <MergeFile>/etc/xdg/kde/menus/kde-settings.menu</MergeFile>
+    </Menu>
+    <Menu>
+      <Name>KDE Info Center</Name>
+      <Directory>mandriva-system-configuration-kde.directory</Directory>
+      <MergeFile>/etc/xdg/kde/menus/kde-information.menu</MergeFile>
+    </Menu>
     <Menu>
       <Name>More</Name>
       <Directory>mandriva-tools-more.directory</Directory>
@@ -296,18 +338,21 @@
         <And>
           <Not>
             <Category>@MAIN_DESKTOP@</Category>
-          </Not>
-          <Not>
             <Category>@MAIN_TOOLKIT@</Category>
-          </Not>
-          <Category>X-MandrivaLinux-CrossDesktop</Category>
-          <Not>
             <Category>Accessibility</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
           </Not>
+	  <Not>
+		  <And>
+		  <Category>GNOME</Category>
+		  <Category>Settings</Category>
+	  </And>
+    </Not>
           <Or>
             <Category>Utility</Category>
             <Category>System</Category>
             <Category>TextEditor</Category>
+            <Category>Settings</Category>
           </Or>
         </And>
       </Include>
@@ -657,163 +702,131 @@
     <Directory>mandriva-sciences.directory</Directory>
     <OnlyUnallocated/>
     <Include>
-      <Or>
-        <Category>X-MandrivaLinux-MoreApplications-Sciences</Category>
-        <Category>Science</Category>
-      </Or>
+      <Category>X-MandrivaLinux-MoreApplications-Sciences</Category>
+      <Category>Science</Category>
     </Include>
     <Menu>
       <Name>Artificial Intelligence</Name>
       <Directory>mandriva-sciences-artificialintelligence.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-ArtificialIntelligence</Category>
-          <Category>ArtificialIntelligence</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-ArtificialIntelligence</Category>
+        <Category>ArtificialIntelligence</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Astronomy</Name>
       <Directory>mandriva-sciences-astronomy.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Astronomy</Category>
-          <Category>Astronomy</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Astronomy</Category>
+        <Category>Astronomy</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Biology</Name>
       <Directory>mandriva-sciences-biology.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Biology</Category>
-          <Category>Biology</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Biology</Category>
+        <Category>Biology</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Chemistry</Name>
       <Directory>mandriva-sciences-chemistry.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Chemistry</Category>
-          <Category>Chemistry</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Chemistry</Category>
+        <Category>Chemistry</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Computer Science</Name>
       <Directory>mandriva-sciences-computerscience.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-ComputerScience</Category>
-          <Category>ComputerScience</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-ComputerScience</Category>
+        <Category>ComputerScience</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Data Visualization</Name>
       <Directory>mandriva-sciences-datavisualization.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-DataVisualization</Category>
-          <Category>DataVisualization</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-DataVisualization</Category>
+        <Category>DataVisualization</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Electricity</Name>
       <Directory>mandriva-sciences-electricity.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Electricity</Category>
-          <Category>Electricity</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Electricity</Category>
+        <Category>Electricity</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Geosciences</Name>
       <Directory>mandriva-sciences-geosciences.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Geosciences</Category>
-          <Category>Geoscience</Category>
-          <Category>Geology</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Geosciences</Category>
+        <Category>Geoscience</Category>
+        <Category>Geology</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Image Processing</Name>
       <Directory>mandriva-sciences-imageprocessing.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-ImageProcessing</Category>
-          <Category>ImageProcessing</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-ImageProcessing</Category>
+        <Category>ImageProcessing</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Mathematics</Name>
       <Directory>mandriva-sciences-mathematics.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Mathematics</Category>
-          <Category>Math</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Mathematics</Category>
+        <Category>Math</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Numeric Analysis</Name>
       <Directory>mandriva-sciences-numericanalysis.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-NumericAnalysis</Category>
-          <Category>NumericAnalysis</Category>
-          <Category>NumericalAnalysis</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-NumericAnalysis</Category>
+        <Category>NumericAnalysis</Category>
+        <Category>NumericalAnalysis</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Parallel Computing</Name>
       <Directory>mandriva-sciences-parallelcomputing.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-ParallelComptuting</Category>
-          <Category>ParallelComptuting</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-ParallelComptuting</Category>
+        <Category>ParallelComptuting</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Physics</Name>
       <Directory>mandriva-sciences-physics.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Physics</Category>
-          <Category>Physics</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Physics</Category>
+        <Category>Physics</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Robotics</Name>
       <Directory>mandriva-sciences-robotics.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Robotics</Category>
-          <Category>Robotics</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Robotics</Category>
+        <Category>Robotics</Category>
       </Include>
     </Menu>
     <Menu>
       <Name>Other</Name>
       <Directory>mandriva-sciences-other.directory</Directory>
       <Include>
-        <Or>
-          <Category>X-MandrivaLinux-MoreApplications-Sciences-Other</Category>
-          <Category>MedicalSoftware</Category>
-          <Category>Electronics</Category>
-          <Category>Engineering</Category>
-        </Or>
+        <Category>X-MandrivaLinux-MoreApplications-Sciences-Other</Category>
+        <Category>MedicalSoftware</Category>
+        <Category>Electronics</Category>
+        <Category>Engineering</Category>
       </Include>
     </Menu>
   </Menu>
@@ -821,26 +834,11 @@
     <Name>Documentation</Name>
     <Directory>mandriva-documentation.directory</Directory>
     <Include>
-      <Or>
-        <Category>X-MandrivaLinux-MoreApplications-Documentation</Category>
-        <Category>Documentation</Category>
-      </Or>
+      <Category>X-MandrivaLinux-MoreApplications-Documentation</Category>
+      <Category>Documentation</Category>
     </Include>
   </Menu>
   <!--
-    <Menu>
-	    <Name>@MAIN_DESKTOP@ Preferences</Name>
-    <Directory>mandriva-system-configuration.directory</Directory>
-      <Include>
-	      <And>
-		      <Category>@MAIN_DESKTOP@</Category>
-        <Or>
-          <Category>Settings</Category>
-          <Category>DesktopSettings</Category>
-  </Or>
-  </And>
-      </Include>
-    </Menu>
   <Menu>
     <Name>Other</Name>
     <Directory>mandriva-other.directory</Directory>
@@ -856,9 +854,7 @@
     <Name>.hidden</Name>
     <Directory>mandriva-hidden.directory</Directory>
     <Include>
-      <Or>
-        <Category>X-MandrivaLinux-.hidden</Category>
-      </Or>
+      <Category>X-MandrivaLinux-.hidden</Category>
     </Include>
   </Menu>
   <MergeFile>applications-kmenuedit.menu</MergeFile>
