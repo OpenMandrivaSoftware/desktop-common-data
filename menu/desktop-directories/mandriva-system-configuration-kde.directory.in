@@ -4,3 +4,4 @@ Encoding=UTF-8
 _Name=KDE
 X-KDE-BaseGroup=settings
 Icon=kde_section
+NoDisplay=true
