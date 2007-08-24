@@ -6,14 +6,19 @@ SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
 menus: applications.menu kde-applications.menu
 
-applications.menu: menu/applications.menu.in
-	@echo -n "generating $@"
-	@sed -e 's,@MAIN_DESKTOP@,GNOME,g' -e 's,@MAIN_TOOLKIT@,GTK,g' < $? > $@
+menu/validated-menu: menu/applications.menu.in
+	xmllint --noout --dtdvalid menu/menu.dtd $?
+
+applications.menu: menu/validated-menu
+	@echo -n "generating $@ "
+	@sed -e 's,@MAIN_DESKTOP@,GNOME,g' -e 's,@MAIN_TOOLKIT@,GTK,g' < menu/applications.menu.in > $@
+	@xmllint --noout --dtdvalid menu/menu.dtd $@
 	@echo " OK"
 
-kde-applications.menu: menu/applications.menu.in
-	@echo -n "generating $@"
-	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' < $? > $@
+kde-applications.menu: menu/validated-menu
+	@echo -n "generating $@ "
+	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' < menu/applications.menu.in > $@
+	@xmllint --noout --dtdvalid menu/menu.dtd $@
 	@echo " OK"
 
 checktag:
@@ -28,7 +33,7 @@ clean:
 
 # rules to build a test rpm
 
-localdist: cleandist dir localcopy tar
+localdist: menus cleandist dir localcopy tar
 
 cleandist: checktag
 	rm -rf $(PACKAGE)-$(VERSION) $(PACKAGE)-$(VERSION).tar.bz2
@@ -48,7 +53,7 @@ tar: checktag
 
 # rules to build a distributable rpm
 
-dist: checktag cleandist svntag export tar
+dist: menus checktag cleandist svntag export tar
 
 
 export: checktag
