@@ -2017,7 +2017,7 @@ sub write_cache ($)
 {
 	my ($output) = @_;
 
-	my $cachedir = $ENV{HOME};
+	my $cachedir = $> ? $ENV{HOME} : '/var/lib/menu';
 	
 	return unless -d $cachedir;
 	
