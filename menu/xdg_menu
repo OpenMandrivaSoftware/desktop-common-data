@@ -1909,7 +1909,7 @@ sub prepare_language_keys ($)
 
 sub check_cache
 {
-	my $cachedir = $ENV{HOME};
+	my $cachedir = $> ? $ENV{HOME} : '/var/lib/menu';
 	
 	return unless -d $cachedir;
 	
