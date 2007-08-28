@@ -1830,7 +1830,7 @@ sub get_app_dirs
 {
 	my %used;
 	my $ret = '';
-	my @kde_xdgdata = split(/:/, `kde-config --path xdgdata-apps`);
+	my @kde_xdgdata = $> ? split(/:/, `kde-config --path xdgdata-apps`) : ();
 	
 	foreach $_ (@kde_xdgdata) {
 	    s/\/applications\/*\s*$//;
