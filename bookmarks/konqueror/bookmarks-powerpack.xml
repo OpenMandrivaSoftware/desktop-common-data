@@ -13,31 +13,22 @@
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
   <title>Mandriva Expert</title>
  </bookmark>
- <bookmark href="http://www.fon.com/" >
-  <title>Fon</title>
- </bookmark>
- <bookmark icon="/usr/share/icons/favicons/jamendo.png" href="http://ogg.jamendo.com/" >
+<bookmark icon="/usr/share/icons/favicons/jamendo.png" href="http://ogg.jamendo.com/" >
   <title>Jamendo</title>
- </bookmark>
- <bookmark icon="/usr/share/icons/favicons/wengophone.png" href="http://www.wengophone.com" >
-  <title>Wengo</title>
  </bookmark>
  <folder folded="yes" >
   <title>Partners</title>
- <bookmark icon="/usr/share/icons/favicons/bitdefender.ico" href="http://store.mandriva.com/index.php?cPath=25_121" >
-  <title>Bitdefender</title>
+  <bookmark href="http://www.transgaming.com/products/cedega/" >
+  <title>Cedega</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/kaspersky.gif" href="http://www.kaspersky.com/" >
-  <title>Kaspersky</title>
+ <bookmark href="http://www.fluendo.com/" >
+  <title>Fluendo</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/index.php?cPath=25_112" >
-  <title>Arkeia</title>
+ <bookmark href="http://picasa.google.com/linux/" >
+  <title>Picasa</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/crossover.png" href="http://store.mandriva.com/index.php?cPath=25_38" >
-  <title>Crossover  (codeweavers)</title>
- </bookmark>
-<bookmark icon="/usr/share/icons/favicons/intel.png" href="http://store.mandriva.com/index.php?cPath=25_119" >
-  <title>Intel(R) Compilers</title>
+ <bookmark href="http://earth.google.com/" >
+  <title>Google Earth</title>
  </bookmark>
  </folder>
  <separator/>
