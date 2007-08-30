@@ -30,7 +30,7 @@
   <Directory>mandrivalinux.directory</Directory>
   <Include>
     <Category>X-MandrivaLinux</Category>
-    <Filename>mandriva-rpmdrake-root.desktop</Filename>
+    <Filename>rpmdrake.desktop</Filename>
   </Include>
   <Menu>
     <Name>Internet</Name>
