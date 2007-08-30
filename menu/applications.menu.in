@@ -16,7 +16,7 @@
     <Merge type="menus"/>
     <Merge type="files"/>
     <Separator/>
-    <Filename>mandriva-rpmdrake-root.desktop</Filename>
+    <Filename>rpmdrake.desktop</Filename>
   </Layout>
   <DefaultLayout>
     <Merge type="files"/>
@@ -342,15 +342,18 @@
             <Category>Accessibility</Category>
             <Category>X-MandrivaLinux-CrossDesktop</Category>
           </Not>
-	  <Not>
-		  <And>
-		  <Category>GNOME</Category>
-		  <Category>Settings</Category>
-	  </And>
-    </Not>
+          <Not>
+            <And>
+              <Category>GNOME</Category>
+              <Category>Settings</Category>
+            </And>
+          </Not>
           <Or>
             <Category>Utility</Category>
-            <Category>System</Category>
+	    <And>
+	            <Category>System</Category>
+		    <Category>Emulator</Category>
+	    </And>
             <Category>TextEditor</Category>
             <Category>Settings</Category>
           </Or>
