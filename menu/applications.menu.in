@@ -20,7 +20,7 @@
   </Layout>
   <DefaultLayout>
     <Merge type="files"/>
-    <Menuname>More</Menuname>
+    <Menuname inline="true" inline_limit="1">More</Menuname>
     <Merge type="menus"/>
   </DefaultLayout>
   <DefaultMergeDirs/>
@@ -48,6 +48,7 @@
         </Or>
         <Not>
           <Category>WebDevelopment</Category>
+          <Category>X-MandrivaLinux-More</Category>
         </Not>
       </And>
     </Include>
@@ -56,11 +57,14 @@
       <Directory>mandriva-internet-more.directory</Directory>
       <Include>
         <And>
-          <Not>
-            <Category>@MAIN_DESKTOP@</Category>
-            <Category>@MAIN_TOOLKIT@</Category>
-            <Category>X-MandrivaLinux-CrossDesktop</Category>
-          </Not>
+          <Or>
+            <Not>
+              <Category>@MAIN_DESKTOP@</Category>
+              <Category>@MAIN_TOOLKIT@</Category>
+              <Category>X-MandrivaLinux-CrossDesktop</Category>
+            </Not>
+            <Category>X-MandrivaLinux-More</Category>
+          </Or>
           <Not>
             <Category>WebDevelopment</Category>
           </Not>
@@ -78,7 +82,7 @@
       <Filename>impress2.2.desktop</Filename>
       <Separator/>
       <Merge type="files"/>
-      <Menuname>More</Menuname>
+      <Menuname inline="true" inline_limit="1">More</Menuname>
       <Merge type="menus"/>
     </Layout>
     <Include>
@@ -94,6 +98,7 @@
         </Or>
         <Not>
           <Category>Utility</Category>
+          <Category>X-MandrivaLinux-More</Category>
         </Not>
       </And>
     </Include>
@@ -102,11 +107,14 @@
       <Directory>mandriva-office-more.directory</Directory>
       <Include>
         <And>
-          <Not>
-            <Category>@MAIN_DESKTOP@</Category>
-            <Category>@MAIN_TOOLKIT@</Category>
-            <Category>X-MandrivaLinux-CrossDesktop</Category>
-          </Not>
+          <Or>
+            <Not>
+              <Category>@MAIN_DESKTOP@</Category>
+              <Category>@MAIN_TOOLKIT@</Category>
+              <Category>X-MandrivaLinux-CrossDesktop</Category>
+            </Not>
+            <Category>X-MandrivaLinux-More</Category>
+          </Or>
           <Or>
             <Category>Office</Category>
             <Category>X-MandrivaLinux-Office-Other</Category>
@@ -132,6 +140,9 @@
           <Category>X-MandrivaLinux-Multimedia-Graphics</Category>
           <Category>Graphics</Category>
         </Or>
+        <Not>
+          <Category>X-MandrivaLinux-More</Category>
+        </Not>
       </And>
     </Include>
     <Menu>
@@ -139,11 +150,14 @@
       <Directory>mandriva-graphics-more.directory</Directory>
       <Include>
         <And>
-          <Not>
-            <Category>@MAIN_DESKTOP@</Category>
-            <Category>@MAIN_TOOLKIT@</Category>
-            <Category>X-MandrivaLinux-CrossDesktop</Category>
-          </Not>
+          <Or>
+            <Not>
+              <Category>@MAIN_DESKTOP@</Category>
+              <Category>@MAIN_TOOLKIT@</Category>
+              <Category>X-MandrivaLinux-CrossDesktop</Category>
+            </Not>
+            <Category>X-MandrivaLinux-More</Category>
+          </Or>
           <Category>Graphics</Category>
         </And>
       </Include>
@@ -167,6 +181,9 @@
           <Category>Audio</Category>
           <Category>Video</Category>
         </Or>
+        <Not>
+          <Category>X-MandrivaLinux-More</Category>
+        </Not>
       </And>
     </Include>
     <Menu>
@@ -174,11 +191,14 @@
       <Directory>mandriva-soundvideo-more.directory</Directory>
       <Include>
         <And>
-          <Not>
-            <Category>@MAIN_DESKTOP@</Category>
-            <Category>@MAIN_TOOLKIT@</Category>
-            <Category>X-MandrivaLinux-CrossDesktop</Category>
-          </Not>
+          <Or>
+            <Not>
+              <Category>@MAIN_DESKTOP@</Category>
+              <Category>@MAIN_TOOLKIT@</Category>
+              <Category>X-MandrivaLinux-CrossDesktop</Category>
+            </Not>
+            <Category>X-MandrivaLinux-More</Category>
+          </Or>
           <Or>
             <Category>X-MandrivaLinux-Multimedia-Other</Category>
             <Category>X-MandrivaLinux-Multimedia-Sound</Category>
@@ -200,7 +220,7 @@
       <Menuname>Emulators</Menuname>
       <Separator/>
       <Merge type="files"/>
-      <Menuname>More</Menuname>
+      <Menuname inline="true" inline_limit="1">More</Menuname>
       <Merge type="menus"/>
     </Layout>
     <Include>
@@ -240,6 +260,7 @@
           <Category>Emulator</Category>
           <Category>HardwareSettings</Category>
           <Category>PackageManager</Category>
+          <Category>X-MandrivaLinux-More</Category>
         </Not>
       </And>
     </Include>
@@ -336,12 +357,15 @@
       <Directory>mandriva-tools-more.directory</Directory>
       <Include>
         <And>
-          <Not>
-            <Category>@MAIN_DESKTOP@</Category>
-            <Category>@MAIN_TOOLKIT@</Category>
-            <Category>Accessibility</Category>
-            <Category>X-MandrivaLinux-CrossDesktop</Category>
-          </Not>
+          <Or>
+            <Not>
+              <Category>@MAIN_DESKTOP@</Category>
+              <Category>@MAIN_TOOLKIT@</Category>
+              <Category>Accessibility</Category>
+              <Category>X-MandrivaLinux-CrossDesktop</Category>
+            </Not>
+            <Category>X-MandrivaLinux-More</Category>
+          </Or>
           <Not>
             <And>
               <Category>GNOME</Category>
@@ -350,10 +374,10 @@
           </Not>
           <Or>
             <Category>Utility</Category>
-	    <And>
-	            <Category>System</Category>
-		    <Category>Emulator</Category>
-	    </And>
+            <And>
+              <Category>System</Category>
+              <Category>Emulator</Category>
+            </And>
             <Category>TextEditor</Category>
             <Category>Settings</Category>
           </Or>
