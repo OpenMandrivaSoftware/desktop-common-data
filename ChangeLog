@@ -1,3 +1,277 @@
+2007-09-07 17:28  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/applications.menu.in,
+	  menu/desktop-directories/mandriva-system-configuration-gnome-advanced.directory.in:
+	  - restore gnome/advanced entry (needed for GNOME panel)
+	  - add X-MandrivaLinux-More keyword
+	  - add inlining for More entries
+
+2007-09-03 20:54  helio
+
+	* dm/mdk-kde.xml: - Start kde changes
+
+2007-08-30 16:08  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/applications.menu.in: Fix renaming of rpmdrake .desktop
+
+2007-08-30 16:02  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/applications.menu.in: Exclude Emulator from SystemTools (Mdv
+	  bug #32940)
+
+2007-08-30 15:50  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/desktop-directories/mandriva-graphics-more.directory.in: Add
+	  missing .directory (Mdv bug #32839)
+
+2007-08-30 13:20  Frederic Crozat <fcrozat at mandriva.com>
+
+	* bookmarks/konqueror/bookmarks-discovery.xml,
+	  bookmarks/konqueror/bookmarks-download.xml,
+	  bookmarks/konqueror/bookmarks-one.xml,
+	  bookmarks/konqueror/bookmarks-powerpack.xml,
+	  bookmarks/konqueror/bookmarks-powerpackplus.xml,
+	  bookmarks/mozilla/mozilla-discovery.html,
+	  bookmarks/mozilla/mozilla-download.html,
+	  bookmarks/mozilla/mozilla-one.html,
+	  bookmarks/mozilla/mozilla-powerpack.html,
+	  bookmarks/mozilla/mozilla-powerpackplus.html: Bookmarks for
+	  2008.0
+
+2007-08-28 09:23  Pixel <pixel at mandriva.com>
+
+	* menu/xdg_menu: don't call "kde-config --path xdgdata-apps" when
+	  running as root, since we
+	  don't want to modify /root. as for /usr/share/applications that's
+	  also
+	  returned in @kde_xdgdata, it is transformed to /usr/share which
+	  is already
+	  hardcoded and so unneeded.
+	  
+	  this gets rid of /.kde created during install (where HOME=/)
+
+2007-08-27 12:04  Pixel <pixel at mandriva.com>
+
+	* menu/xdg_menu: (really) use /var/lib/menu/.xdg_menu_cache when
+	  running as root (#32847)
+
+2007-08-27 10:42  Pixel <pixel at mandriva.com>
+
+	* menu/xdg_menu: use /var/lib/menu/.xdg_menu_cache when running as
+	  root (#32847)
+
+2007-08-24 17:55  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/applications.menu.in: Many fixes for GNOME and KDE menus
+
+2007-08-24 17:55  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/menu.dtd: Add menu spec DTD
+
+2007-08-24 17:55  Frederic Crozat <fcrozat at mandriva.com>
+
+	* Makefile: Validate menu files
+
+2007-08-24 17:54  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/desktop-directories/mandriva-moreapplications-communications.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-editors.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-finances.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-other.directory.in,
+	  menu/desktop-directories/mandriva-soundvideo-more.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-gnome-accessibility.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-gnome-advanced.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-kde.directory.in:
+	  -Remove old .directory file
+	  -Replace some Other with More
+
+2007-08-23 18:16  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/applications.menu.in: Additional fixes
+
+2007-08-23 18:15  Frederic Crozat <fcrozat at mandriva.com>
+
+	* Makefile: Don't put generated files in tarball
+
+2007-08-23 17:53  Frederic Crozat <fcrozat at mandriva.com>
+
+	* Makefile, menu/applications.menu.in,
+	  menu/desktop-directories/mandriva-soundvideo-more.directory.in,
+	  menu/desktop-directories/mandriva-soundvideo-other.directory.in,
+	  menu/desktop-directories/mandriva-tools-more.directory.in,
+	  menu/desktop-directories/mandriva-tools-other.directory.in: Fix
+	  missing title / icons
+
+2007-08-23 17:33  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/menustyle.csh, menu/menustyle.sh: discovery menu is dead
+
+2007-08-23 17:26  Frederic Crozat <fcrozat at mandriva.com>
+
+	* Makefile: Add dependency to build menus for tarball
+
+2007-08-23 17:25  Frederic Crozat <fcrozat at mandriva.com>
+
+	* Makefile, menu/applications-discovery.menu,
+	  menu/applications-mdk.menu, menu/applications.menu.in,
+	  menu/defaultlayout-simplified.menu, menu/defaultlayout.menu,
+	  menu/desktop-common-data,
+	  menu/desktop-directories/mandriva-accessibility.directory.in,
+	  menu/desktop-directories/mandriva-development-databases.directory.in,
+	  menu/desktop-directories/mandriva-development-developmentenvironments.directory.in,
+	  menu/desktop-directories/mandriva-development-tools.directory.in,
+	  menu/desktop-directories/mandriva-development-webdevelopment.directory.in,
+	  menu/desktop-directories/mandriva-development.directory.in,
+	  menu/desktop-directories/mandriva-documentation.directory.in,
+	  menu/desktop-directories/mandriva-education-economy.directory.in,
+	  menu/desktop-directories/mandriva-education-geography.directory.in,
+	  menu/desktop-directories/mandriva-education-history.directory.in,
+	  menu/desktop-directories/mandriva-education-languages.directory.in,
+	  menu/desktop-directories/mandriva-education-literature.directory.in,
+	  menu/desktop-directories/mandriva-education-other.directory.in,
+	  menu/desktop-directories/mandriva-education-sciences.directory.in,
+	  menu/desktop-directories/mandriva-education-sports.directory.in,
+	  menu/desktop-directories/mandriva-education.directory.in,
+	  menu/desktop-directories/mandriva-emulators.directory.in,
+	  menu/desktop-directories/mandriva-games-adventure.directory.in,
+	  menu/desktop-directories/mandriva-games-arcade.directory.in,
+	  menu/desktop-directories/mandriva-games-boards.directory.in,
+	  menu/desktop-directories/mandriva-games-cards.directory.in,
+	  menu/desktop-directories/mandriva-games-other.directory.in,
+	  menu/desktop-directories/mandriva-games-puzzles.directory.in,
+	  menu/desktop-directories/mandriva-games-sports.directory.in,
+	  menu/desktop-directories/mandriva-games-strategy.directory.in,
+	  menu/desktop-directories/mandriva-games-toys.directory.in,
+	  menu/desktop-directories/mandriva-games.directory.in,
+	  menu/desktop-directories/mandriva-graphics.directory.in,
+	  menu/desktop-directories/mandriva-internet-chat.directory.in,
+	  menu/desktop-directories/mandriva-internet-filetransfer.directory.in,
+	  menu/desktop-directories/mandriva-internet-instantmessaging.directory.in,
+	  menu/desktop-directories/mandriva-internet-mail.directory.in,
+	  menu/desktop-directories/mandriva-internet-more.directory.in,
+	  menu/desktop-directories/mandriva-internet-news.directory.in,
+	  menu/desktop-directories/mandriva-internet-other.directory.in,
+	  menu/desktop-directories/mandriva-internet-remoteaccess.directory.in,
+	  menu/desktop-directories/mandriva-internet-videoconference.directory.in,
+	  menu/desktop-directories/mandriva-internet-webbrowsers.directory.in,
+	  menu/desktop-directories/mandriva-internet-webeditors.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-accessibility.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-databases.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-development-developmentenvironments.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-development-interpreters.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-development-other.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-development-tools.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-development.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-documentation.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-economy.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-geography.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-history.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-languages.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-literature.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-other.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-sciences.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education-sports.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-education.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-emulators.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-adventure.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-arcade.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-boards.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-cards.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-other.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-puzzles.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-sports.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-strategy.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games-toys.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-games.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-artificialintelligence.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-astronomy.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-biology.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-chemistry.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-computerscience.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-datavisualization.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-electricity.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-geosciences.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-imageprocessing.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-mathematics.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-numericanalysis.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-other.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-parallelcomputing.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-physics.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences-robotics.directory.in,
+	  menu/desktop-directories/mandriva-moreapplications-sciences.directory.in,
+	  menu/desktop-directories/mandriva-multimedia-graphics.directory.in,
+	  menu/desktop-directories/mandriva-multimedia-other.directory.in,
+	  menu/desktop-directories/mandriva-multimedia-sound.directory.in,
+	  menu/desktop-directories/mandriva-multimedia-video.directory.in,
+	  menu/desktop-directories/mandriva-multimedia.directory.in,
+	  menu/desktop-directories/mandriva-office-accessories.directory.in,
+	  menu/desktop-directories/mandriva-office-addressbooks.directory.in,
+	  menu/desktop-directories/mandriva-office-communications-fax.directory.in,
+	  menu/desktop-directories/mandriva-office-communications-other.directory.in,
+	  menu/desktop-directories/mandriva-office-communications-pda.directory.in,
+	  menu/desktop-directories/mandriva-office-communications-phone.directory.in,
+	  menu/desktop-directories/mandriva-office-communications.directory.in,
+	  menu/desktop-directories/mandriva-office-drawing.directory.in,
+	  menu/desktop-directories/mandriva-office-graphs.directory.in,
+	  menu/desktop-directories/mandriva-office-more.directory.in,
+	  menu/desktop-directories/mandriva-office-other.directory.in,
+	  menu/desktop-directories/mandriva-office-presentations.directory.in,
+	  menu/desktop-directories/mandriva-office-publishing.directory.in,
+	  menu/desktop-directories/mandriva-office-spreadsheets.directory.in,
+	  menu/desktop-directories/mandriva-office-tasksmanagement.directory.in,
+	  menu/desktop-directories/mandriva-office-timemanagement.directory.in,
+	  menu/desktop-directories/mandriva-office-wordprocessors.directory.in,
+	  menu/desktop-directories/mandriva-sciences-artificialintelligence.directory.in,
+	  menu/desktop-directories/mandriva-sciences-astronomy.directory.in,
+	  menu/desktop-directories/mandriva-sciences-biology.directory.in,
+	  menu/desktop-directories/mandriva-sciences-chemistry.directory.in,
+	  menu/desktop-directories/mandriva-sciences-computerscience.directory.in,
+	  menu/desktop-directories/mandriva-sciences-datavisualization.directory.in,
+	  menu/desktop-directories/mandriva-sciences-electricity.directory.in,
+	  menu/desktop-directories/mandriva-sciences-geosciences.directory.in,
+	  menu/desktop-directories/mandriva-sciences-imageprocessing.directory.in,
+	  menu/desktop-directories/mandriva-sciences-mathematics.directory.in,
+	  menu/desktop-directories/mandriva-sciences-numericanalysis.directory.in,
+	  menu/desktop-directories/mandriva-sciences-other.directory.in,
+	  menu/desktop-directories/mandriva-sciences-parallelcomputing.directory.in,
+	  menu/desktop-directories/mandriva-sciences-physics.directory.in,
+	  menu/desktop-directories/mandriva-sciences-robotics.directory.in,
+	  menu/desktop-directories/mandriva-sciences.directory.in,
+	  menu/desktop-directories/mandriva-soundvideo-other.directory.in,
+	  menu/desktop-directories/mandriva-soundvideo.directory.in,
+	  menu/desktop-directories/mandriva-system-archiving-backup.directory.in,
+	  menu/desktop-directories/mandriva-system-archiving-cdburning.directory.in,
+	  menu/desktop-directories/mandriva-system-archiving-compression.directory.in,
+	  menu/desktop-directories/mandriva-system-archiving-other.directory.in,
+	  menu/desktop-directories/mandriva-system-archiving.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-bootandinit.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-hardware.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-networking.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-other.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-packaging.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration-printing.directory.in,
+	  menu/desktop-directories/mandriva-system-configuration.directory.in,
+	  menu/desktop-directories/mandriva-system-filetools.directory.in,
+	  menu/desktop-directories/mandriva-system-monitoring.directory.in,
+	  menu/desktop-directories/mandriva-system-terminals.directory.in,
+	  menu/desktop-directories/mandriva-system-texttools.directory.in,
+	  menu/desktop-directories/mandriva-system.directory.in,
+	  menu/desktop-directories/mandriva-systemtools.directory.in,
+	  menu/desktop-directories/mandriva-tools-other.directory.in,
+	  menu/desktop-directories/mandriva-tools.directory.in,
+	  menu/mandrake_desk-9.2, menu/mandriva-discovery.menu, menu/menu,
+	  menu/menu-simplified, menu/translate_menus,
+	  menu/translate_menus-simplified: New menu
+
+2007-08-06 16:21  Frederic Crozat <fcrozat at mandriva.com>
+
+	* xinit.d/desktop-directories: Die mdk-folders, die
+
+2007-07-11 11:04  Frederic Crozat <fcrozat at mandriva.com>
+
+	* xinit.d/desktop-directories: - Remove "hidden=true" statement
+	  (Mdv bug 23181) from .directory files
+
 2007-05-11 16:00  Frederic Crozat <fcrozat at mandriva.com>
 
 	* dm/mdk-gdm.xml: Add support for gdm 2.19.x background attribute
