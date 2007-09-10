@@ -273,35 +273,33 @@
         <Merge type="all"/>
       </Layout>
       <Include>
-        <Or>
-          <And>
-            <!-- never show those, they are in a separate menu for GNOME and not relevant for KDE -->
-            <Not>
-              <Category>GNOME</Category>
-            </Not>
-            <Category>HardwareSettings</Category>
-          </And>
-          <And>
-            <Or>
-              <Category>@MAIN_TOOLKIT@</Category>
-              <Category>X-MandrivaLinux-CrossDesktop</Category>
-            </Or>
-            <Or>
-              <And>
-                <Category>System</Category>
-                <Not>
+        <And>
+          <!-- never show those, they are in a separate menu for GNOME and not relevant for KDE -->
+          <Not>
+            <Category>GNOME</Category>
+          </Not>
+          <Category>HardwareSettings</Category>
+        </And>
+        <And>
+          <Or>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
+          </Or>
+          <Or>
+            <And>
+              <Category>System</Category>
+              <Not>
+                <And>
                   <Category>GNOME</Category>
-                </Not>
-                <Not>
                   <Category>Settings</Category>
-                </Not>
-              </And>
-              <Category>Monitor</Category>
-              <Category>PackageManager</Category>
-            </Or>
-          </And>
-          <Filename>mandriva-drakconf.desktop</Filename>
-        </Or>
+                </And>
+              </Not>
+            </And>
+            <Category>Monitor</Category>
+            <Category>PackageManager</Category>
+          </Or>
+        </And>
+        <Filename>mandriva-drakconf.desktop</Filename>
       </Include>
     </Menu>
     <Menu>
