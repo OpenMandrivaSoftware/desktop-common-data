@@ -77,9 +77,12 @@
     <Name>Office</Name>
     <Directory>mandriva-office.directory</Directory>
     <Layout>
-      <Filename>writer2.2.desktop</Filename>
-      <Filename>calc2.2.desktop</Filename>
-      <Filename>impress2.2.desktop</Filename>
+      <Filename>template.desktop</Filename>
+      <Filename>writer.desktop</Filename>
+      <Filename>calc.desktop</Filename>
+      <Filename>impress.desktop</Filename>
+      <Filename>base.desktop</Filename>
+      <Filename>web.desktop</Filename>
       <Separator/>
       <Merge type="files"/>
       <Menuname inline="true" inline_limit="1">More</Menuname>
