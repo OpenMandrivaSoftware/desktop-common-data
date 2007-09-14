@@ -302,7 +302,6 @@
             <Category>PackageManager</Category>
           </Or>
         </And>
-        <Filename>mandriva-drakconf.desktop</Filename>
       </Include>
     </Menu>
     <Menu>
