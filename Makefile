@@ -53,7 +53,7 @@ tar: checktag
 
 # rules to build a distributable rpm
 
-dist: menus checktag cleandist svntag export tar
+dist: menus checktag cleandist changelog svntag export tar
 
 
 export: checktag
