@@ -6,35 +6,40 @@
     <pos x="0" y="0" width="100%" height="100%"/>
   </item>
 
+  <!-- START BAR -->
+  
   <item type="rect">
-    <pos x="0" y="90%" width="100%" height="10%"/>
+    <pos x="0" y="92%" width="100%" height="8%"/>
     <fixed>
       <item type="rect">
-        <normal color="#ffffff"/>
+        <normal color="#ffffff" alpha="0.2" />
         <pos x="0" y="4" width="100%" height="100%"/>
-        <box orientation="horizontal" spacing="10" xpadding="10">
+	  <box orientation="horizontal" >
+	
+	  <!-- LANGUAGE BUTTON -->
           <item type="rect" id="language_button" button="true">
-            <normal color="#ffffff"/>
+            <normal color="#ffffff" alpha="0" />
 	    <pos y="50%" anchor="w" width="box" height="box"/>
             <box orientation="horizontal" spacing="10" xpadding="10">
 	      <item type="pixmap">
 	        <normal file="languages.png" tint="#dddddd"/>
-	        <prelight file="languages.png"/>
+   		<prelight file="languages.png"/>
 		<active file="languages.png" tint="#b8bcdb"/>
-	        <pos y="50%" anchor="w"/>
+         	<pos y="50%" anchor="w"/>
 	      </item>
 	      <item type="label">
-	        <normal color="#21449c" font="Sans 14"/>
+	        <normal color="#FFFFFF" font="Sans 14"/>
 		<prelight color="#666666" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
 		<!-- Stock label for: _Language -->
 		<stock type="language"/>
-	      </item>
+	     </item>
             </box>
-          </item>
+	</item>
+
           <item type="rect" id="session_button" button="true">
-            <normal color="#ffffff"/>
+            <normal color="#ffffff" alpha="0" />
 	    <pos y="50%" anchor="w" width="box" height="box"/>
             <box orientation="horizontal" spacing="10" xpadding="10">
 	      <item type="pixmap">
@@ -44,7 +49,7 @@
 		<pos y="50%" anchor="w"/>
 	      </item>
 	      <item type="label">
-	        <normal color="#21449c" font="Sans 14"/>
+	        <normal color="#FFFFFF" font="Sans 14"/>
 		<prelight color="#666666" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
@@ -54,18 +59,18 @@
             </box>
           </item>
           <item type="rect" id="system_button" button="true">
-            <normal color="#ffffff"/>
+            <normal color="#ffffff" alpha="0" />
 	    <show modes="console" type="system"/>
 	    <pos y="50%" anchor="w" width="box" height="box"/>
             <box orientation="horizontal" spacing="10" xpadding="10">
 	      <item type="pixmap">
-	        <normal file="system.png" tint="#dddddd"/>
-	        <prelight file="system.png"/>
-		<active file="system.png" tint="#b8bcdb"/>
+	        <normal file="reboot.png" tint="#dddddd"/>
+	        <prelight file="reboot.png"/>
+		<active file="reboot.png" tint="#b8bcdb"/>
 	        <pos y="50%" anchor="w"/>
 	      </item>
 	      <item type="label">
-	        <normal color="#21449c" font="Sans 14"/>
+	        <normal color="#FFFFFF" font="Sans 14"/>
 		<prelight color="#666666" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
@@ -75,7 +80,7 @@
             </box>
           </item>
           <item type="rect" id="disconnect_button" button="true">
-            <normal color="#ffffff"/>
+            <normal color="#ffffff" alpha="0" />
 	    <show modes="flexi,remote"/>
 	    <pos y="50%" anchor="w" width="box" height="box"/>
             <box orientation="horizontal" spacing="10" xpadding="10">
@@ -86,7 +91,7 @@
 	        <pos y="50%" anchor="w"/>
 	      </item>
 	      <item type="label">
-	        <normal color="#21449c" font="Sans 14"/>
+	        <normal color="#FFFFFF" font="Sans 14"/>
 		<prelight color="#666666" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
@@ -95,7 +100,7 @@
 	        <show modes="remote"/>
 	      </item>
 	      <item type="label">
-	        <normal color="#21449c" font="Sans 14"/>
+	        <normal color="#FFFFFF" font="Sans 14"/>
 		<prelight color="#666666" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
@@ -106,19 +111,23 @@
             </box>
           </item>
         </box>
-      </item>
+</item>
+
+<!-- START CLOCK -->
+ 	 <item type="label" id="clock">
+  	  <normal color="#FFFFFF" font="Sans 14"/>
+ 	   <pos x="99%" y="55%" anchor="e"/>
+  	  <text>%c</text>
+	  </item>
     </fixed>
   </item>
+<!-- END CLOCK -->
 
-  <item type="label" id="clock">
-    <normal color="#0d2d84" font="Sans 16"/>
-    <pos x="-10" y="95%" anchor="e"/>
-    <text>%c</text>
-  </item>
+  <!-- END BAR -->
 
   <item type="rect" id="caps-lock-warning">
-    <normal color="#ffffff" alpha="0"/>
-    <pos anchor="c" x="50%" y="50%" width="box" height="box"/>
+    <normal color="#ffffff" alpha="0.0"/>
+    <pos anchor="c" x="50%" y="60%" width="box" height="box"/>
     <box orientation="vertical" min-width="400" xpadding="10" ypadding="5" spacing="0">
       <item type="label">
         <normal color="#FFFFFF" font="Sans 14"/>
@@ -135,7 +144,7 @@
     <pos anchor="c" x="50%" y="70%" width="box" height="box"/>
     <box orientation="vertical" min-width="400" xpadding="10" ypadding="5" spacing="0">
       <item type="label" id="timed-label">
-        <normal color="#FFFFFF" font="Sans 14"/>
+        <normal color="#000000" font="Sans 14"/>
         <pos x="50%" anchor="n"/>
 	<!-- Stock label for: User %s will login in %d seconds -->
 	<stock type="timed-label"/>
@@ -143,16 +152,19 @@
     </box>
   </item>
 
+  <!-- HERE START THE CENTER LOGIN LAYOUT -->
+
   <item type="rect">
     <normal color="#ffffff" alpha="0"/>
     <pos anchor="c" x="50%" y="40%" width="box" height="box"/>
     <box orientation="vertical" min-width="350" xpadding="30" ypadding="30" spacing="10">
-      <item type="label">
+  <!-- WELCOME LABEL -->
+		<!--
+			<item type="label">
         <pos anchor="n" x="50%"/>
         <normal color="#FFFFFF" font="Sans 18"/>
-	<!-- Stock label for: Welcome to %h -->
 	<stock type="welcome-label"/>
-      </item>
+</item> -->
       <item type="label" id="pam-prompt">
         <pos anchor="nw" x="10%" />
         <normal color="#FFFFFF" font="Sans 14"/>
@@ -177,7 +189,7 @@
     <fixed>
       <item type="label" id="pam-error">
         <pos anchor="n" x="50%" y="110%"/>
-        <normal color="#ffffff" font="Sans 16"/>
+        <normal color="#ffffff" font="Sans 14"/>
         <text></text>
       </item>
     </fixed>

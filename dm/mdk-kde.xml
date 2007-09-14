@@ -9,10 +9,10 @@
   <!-- START BAR -->
   
   <item type="rect">
-    <pos x="0" y="90%" width="100%" height="10%"/>
+    <pos x="0" y="92%" width="100%" height="8%"/>
     <fixed>
       <item type="rect">
-        <normal color="#ffffff" alpha="0.1" />
+        <normal color="#ffffff" alpha="0.2" />
         <pos x="0" y="4" width="100%" height="100%"/>
 		<box orientation="horizontal" >
 	
@@ -116,7 +116,7 @@
 <!-- START CLOCK -->
  	 <item type="label" id="clock">
   	  <normal color="#FFFFFF" font="Sans 11"/>
- 	   <pos x="95%" y="55%" anchor="e"/>
+ 	   <pos x="99%" y="55%" anchor="e"/>
   	  <text>%c</text>
 	  </item>
     </fixed>
@@ -155,9 +155,9 @@
   <!-- HERE START THE CENTER LOGIN LAYOUT -->
 
   <item type="rect">
-    <normal color="#ffffff" alpha="0.2"/>
-    <pos anchor="c" x="50%" y="40%" width="box" height="150"/>
-    <box orientation="vertical" min-width="350" xpadding="5" ypadding="5" spacing="2">
+    <normal color="#ffffff" alpha="0"/>
+    <pos anchor="c" x="50%" y="40%" width="box" height="box"/>
+    <box orientation="vertical" min-width="150" xpadding="5" ypadding="5" spacing="2">
   <!-- WELCOME LABEL -->
 		<!--
 			<item type="label">
@@ -173,54 +173,46 @@
 		<normal color="#FFFFFF" alpha="0" font="Sans 12"/>
 		<pos anchor="n" x="50%" width="box" height="box"/>
 
-
-
-		<box orientation="horizontal" xpadding="0" ypadding="0" spacing="5">
-				<!-- USER LIST -->
-			<item type="rect" id="userlist-background">
-					<pos anchor="w" y="50%" width="150" height="140" />
-				<normal color="#FFFFFF" alpha="0.7"/>
-					<item type="rect" id="userlist">
-						<pos  width="100%" height="100%"/>
-						<show type="userlist"/>
-						<normal color="#ffffff" alpha="0"/>
-					</item>
-		</item> 
-
-			<item type="rect">
-				<normal color="#FF8080" alpha="0.0"/>
-				<pos anchor="w" y="50%" width="box" height="box"/>
-				<box orientation="vertical" xpadding="10" ypadding="0" spacing="0">
-					<item type="label">
-						<pos anchor="ne" x="100%"/>
-						<normal color="#FFFFFF" font="Sans 13"/>
-						<!-- Stock label for: Username: -->
-						<stock type="username-label"/>
-					</item>
-					<item type="entry" id="user-entry">
-						<pos anchor="ne" x="100%" height="20" width="150"/>
-					</item>
-					<item type="label">
-						<pos anchor="ne" x="100%"/>
-						<normal color="#FFFFFF" font="Sans 13"/>
-						<!-- Stock label for: Password: -->
-						<stock type="password-label"/>
-					</item>
-					<item type="entry" id="pw-entry">
-						<pos anchor="ne" x="100%" height="20" width="150"/>
-	  				</item>
-				</box>
-			</item>
-		</box>
-
-	</item>
-</box>
-    <fixed>
-      <item type="label" id="pam-error">
-        <pos anchor="n" x="50%" y="110%"/>
-        <normal color="#ffffff" font="Sans 11"/>
-        <text></text>
-      </item>
-    </fixed>
-  </item>
+        <box orientation="horizontal" xpadding="0" ypadding="0" spacing="0">
+            <item type="rect">
+                <normal color="#FF8080" alpha="0.0"/>
+                <pos anchor="w" y="50%" width="box" height="box"/>
+                <box orientation="vertical" xpadding="0" ypadding="0" spacing="14">
+                    <item type="label">
+                        <pos anchor="ne" x="100%"/>
+                       <normal color="#FFFFFF" font="Sans 14"/>
+                        <!-- Stock label for: Username: -->
+                       <stock type="username-label"/>
+                    </item>
+                    <item type="label">
+                        <pos anchor="ne" x="100%"/>
+                        <normal color="#FFFFFF" font="Sans 14"/>
+                        <!-- Stock label for: Password: -->
+                        <stock type="password-label"/>
+                    </item>
+                </box>
+            </item>
+            <item type="rect">
+                <normal color="#FF80FF" alpha="0.0"/>
+                <pos anchor="w" y="50%" width="box" height="box"/>
+                <box orientation="vertical" xpadding="15" ypadding="0" spacing="10">
+                    <item type="entry" id="user-entry">
+                        <pos anchor="n" x="50%" height="24" width="150"/>
+                    </item>
+                    <item type="entry" id="pw-entry">
+                        <pos anchor="n" x="50%" height="24" width="150"/>
+                    </item>
+                </box>
+                    </item>
+                </box>
+            </item>
+        </box>
+        <fixed>
+            <item type="label" id="pam-error">
+                <pos anchor="n" x="50%" y="110%"/>
+                <normal color="#ffffff" font="Sans 11"/>
+                <text></text>
+            </item>
+        </fixed>
+    </item>
 </greeter>
