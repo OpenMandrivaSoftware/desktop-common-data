@@ -82,6 +82,7 @@
       <Filename>calc.desktop</Filename>
       <Filename>impress.desktop</Filename>
       <Filename>base.desktop</Filename>
+      <Filename>draw.desktop</Filename>
       <Filename>web.desktop</Filename>
       <Separator/>
       <Merge type="files"/>
