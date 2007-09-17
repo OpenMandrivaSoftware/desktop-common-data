@@ -64,9 +64,9 @@
 	    <pos y="50%" anchor="w" width="box" height="box"/>
             <box orientation="horizontal" spacing="10" xpadding="10">
 	      <item type="pixmap">
-	        <normal file="reboot.png" tint="#dddddd"/>
-	        <prelight file="reboot.png"/>
-		<active file="reboot.png" tint="#b8bcdb"/>
+	        <normal file="system.png" tint="#dddddd"/>
+	        <prelight file="system.png"/>
+		<active file="system.png" tint="#b8bcdb"/>
 	        <pos y="50%" anchor="w"/>
 	      </item>
 	      <item type="label">
