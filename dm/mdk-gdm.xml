@@ -29,7 +29,7 @@
 	      </item>
 	      <item type="label">
 	        <normal color="#FFFFFF" font="Sans 14"/>
-		<prelight color="#666666" font="Sans 14"/>
+		<prelight color="#BBBBBB" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
 		<!-- Stock label for: _Language -->
@@ -50,7 +50,7 @@
 	      </item>
 	      <item type="label">
 	        <normal color="#FFFFFF" font="Sans 14"/>
-		<prelight color="#666666" font="Sans 14"/>
+		<prelight color="#BBBBBB" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
 		<!-- Stock label for: _Session -->
@@ -71,7 +71,7 @@
 	      </item>
 	      <item type="label">
 	        <normal color="#FFFFFF" font="Sans 14"/>
-		<prelight color="#666666" font="Sans 14"/>
+		<prelight color="#BBBBBB" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
 		<!-- Stock label for: _Actions -->
@@ -92,7 +92,7 @@
 	      </item>
 	      <item type="label">
 	        <normal color="#FFFFFF" font="Sans 14"/>
-		<prelight color="#666666" font="Sans 14"/>
+		<prelight color="#BBBBBB" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
 		<!-- Stock label for: D_isconnect -->
@@ -101,7 +101,7 @@
 	      </item>
 	      <item type="label">
 	        <normal color="#FFFFFF" font="Sans 14"/>
-		<prelight color="#666666" font="Sans 14"/>
+		<prelight color="#BBBBBB" font="Sans 14"/>
 		<active color="#0d2d84" font="Sans 14"/>
 	        <pos y="50%" anchor="w"/>
 		<!-- Stock label for: _Quit -->
