@@ -44,7 +44,7 @@ dir: checktag
 
 localcopy: checktag
 	find . -not -name "$(PACKAGE)-$(VERSION)"|cpio -pd $(PACKAGE)-$(VERSION)/
-	find $(PACKAGE)-$(VERSION) -type d -name CVS -o -name .cvsignore -name '*~' -o name '.svn' |xargs rm -rf
+	find $(PACKAGE)-$(VERSION) -type d -name CVS -o -type d -name '.svn' -o -name .cvsignore -o -name '*~' |xargs rm -rf
 
 tar: checktag
 	tar cvf $(PACKAGE)-$(VERSION).tar $(PACKAGE)-$(VERSION)
