@@ -273,6 +273,7 @@
       <Directory>mandriva-systemtools.directory</Directory>
       <Layout>
         <Filename>mandriva-drakconf.desktop</Filename>
+        <Filename>kde-KControl.desktop</Filename>
         <Separator/>
         <Merge type="all"/>
       </Layout>
@@ -304,6 +305,9 @@
           </Or>
         </And>
       </Include>
+      <Exclude>
+        <Filename>rpmdrake.desktop</Filename>
+      </Exclude>
     </Menu>
     <Menu>
       <Name>Accessibility</Name>
