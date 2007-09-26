@@ -265,6 +265,7 @@
           <Category>HardwareSettings</Category>
           <Category>PackageManager</Category>
           <Category>X-MandrivaLinux-More</Category>
+          <Category>Printing</Category>
         </Not>
       </And>
     </Include>
@@ -301,9 +302,10 @@
               </Not>
             </And>
             <Category>Monitor</Category>
-            <Category>PackageManager</Category>
           </Or>
         </And>
+        <Category>PackageManager</Category>
+        <Category>Printing</Category>
       </Include>
       <Exclude>
         <Filename>rpmdrake.desktop</Filename>
@@ -366,7 +368,6 @@
             <Not>
               <Category>@MAIN_DESKTOP@</Category>
               <Category>@MAIN_TOOLKIT@</Category>
-              <Category>Accessibility</Category>
               <Category>X-MandrivaLinux-CrossDesktop</Category>
             </Not>
             <Category>X-MandrivaLinux-More</Category>
@@ -376,6 +377,11 @@
               <Category>GNOME</Category>
               <Category>Settings</Category>
             </And>
+            <Category>Accessibility</Category>
+            <Category>HardwareSettings</Category>
+            <Category>Emulator</Category>
+            <Category>PackageManager</Category>
+            <Category>Printing</Category>
           </Not>
           <Or>
             <Category>Utility</Category>
@@ -385,6 +391,7 @@
             </And>
             <Category>TextEditor</Category>
             <Category>Settings</Category>
+            <Category>Monitor</Category>
           </Or>
         </And>
       </Include>
