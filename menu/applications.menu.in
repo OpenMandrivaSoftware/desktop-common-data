@@ -38,9 +38,28 @@
     <Include>
       <And>
         <Or>
-          <Category>@MAIN_DESKTOP@</Category>
-          <Category>@MAIN_TOOLKIT@</Category>
-          <Category>X-MandrivaLinux-CrossDesktop</Category>
+          <Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
+          </Or>
+          <Not>
+            <Category>Email</Category>
+            <Category>Dialup</Category>
+            <Category>InstantMessaging</Category>
+            <Category>Chat</Category>
+            <Category>IRCClient</Category>
+            <Category>FileTransfer</Category>
+            <Category>HamRadio</Category>
+            <Category>News</Category>
+            <Category>P2P</Category>
+            <Category>RemoteAccess</Category>
+            <Category>Telephony</Category>
+            <Category>VideoConference</Category>
+            <Category>WebBrowser</Category>
+            <Category>@ALTERNATIVE_DESKTOP@</Category>
+            <Category>@ALTERNATIVE_TOOLKIT@</Category>
+          </Not>
         </Or>
         <Or>
           <Category>X-MandrivaLinux-Internet</Category>
@@ -55,6 +74,7 @@
     <Menu>
       <Name>More</Name>
       <Directory>mandriva-internet-more.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
         <And>
           <Or>
@@ -99,9 +119,31 @@
     <Include>
       <And>
         <Or>
-          <Category>@MAIN_DESKTOP@</Category>
-          <Category>@MAIN_TOOLKIT@</Category>
-          <Category>X-MandrivaLinux-CrossDesktop</Category>
+          <Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
+          </Or>
+          <Not>
+            <Category>Calendar</Category>
+            <Category>ContactManagement</Category>
+            <Category>Database</Category>
+            <Category>Dictionary</Category>
+            <Category>Chart</Category>
+            <Category>Email</Category>
+            <Category>Finance</Category>
+            <Category>FlowChart</Category>
+            <Category>PDA</Category>
+            <Category>ProjectManagement</Category>
+            <Category>Presentation</Category>
+            <Category>Spreadsheet</Category>
+            <Category>WordProcessor</Category>
+            <Category>Photography</Category>
+            <Category>Publishing</Category>
+            <Category>Viewer</Category>
+            <Category>@ALTERNATIVE_DESKTOP@</Category>
+            <Category>@ALTERNATIVE_TOOLKIT@</Category>
+          </Not>
         </Or>
         <Or>
           <Category>X-MandrivaLinux-Office</Category>
@@ -116,6 +158,7 @@
     <Menu>
       <Name>More</Name>
       <Directory>mandriva-office-more.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
         <And>
           <Or>
@@ -143,9 +186,24 @@
     <Include>
       <And>
         <Or>
-          <Category>@MAIN_DESKTOP@</Category>
-          <Category>@MAIN_TOOLKIT@</Category>
-          <Category>X-MandrivaLinux-CrossDesktop</Category>
+          <Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
+          </Or>
+          <Not>
+            <Category>2DGraphics</Category>
+            <Category>VectorGraphics</Category>
+            <Category>RasterGraphics</Category>
+            <Category>3DGraphics</Category>
+            <Category>Scanning</Category>
+            <Category>OCR</Category>
+            <Category>Photography</Category>
+            <Category>Publishing</Category>
+            <Category>Viewer</Category>
+            <Category>@ALTERNATIVE_DESKTOP@</Category>
+            <Category>@ALTERNATIVE_TOOLKIT@</Category>
+          </Not>
         </Or>
         <Or>
           <Category>X-MandrivaLinux-Multimedia-Graphics</Category>
@@ -159,6 +217,7 @@
     <Menu>
       <Name>More</Name>
       <Directory>mandriva-graphics-more.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
         <And>
           <Or>
@@ -180,9 +239,27 @@
     <Include>
       <And>
         <Or>
-          <Category>@MAIN_DESKTOP@</Category>
-          <Category>@MAIN_TOOLKIT@</Category>
-          <Category>X-MandrivaLinux-CrossDesktop</Category>
+          <Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
+          </Or>
+          <Not>
+            <Category>Database</Category>
+            <Category>HamRadio</Category>
+            <Category>Midi</Category>
+            <Category>Mixer</Category>
+            <Category>Sequencer</Category>
+            <Category>Tuner</Category>
+            <Category>TV</Category>
+            <Category>AudioVideoEditing</Category>
+            <Category>Player</Category>
+            <Category>Recorder</Category>
+            <Category>DiscBurning</Category>
+            <Category>Music</Category>
+            <Category>@ALTERNATIVE_DESKTOP@</Category>
+            <Category>@ALTERNATIVE_TOOLKIT@</Category>
+          </Not>
         </Or>
         <Or>
           <Category>X-MandrivaLinux-Multimedia</Category>
@@ -200,6 +277,7 @@
     <Menu>
       <Name>More</Name>
       <Directory>mandriva-soundvideo-more.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
         <And>
           <Or>
@@ -237,32 +315,27 @@
     <Include>
       <And>
         <Or>
-          <Category>@MAIN_DESKTOP@</Category>
-          <Category>@MAIN_TOOLKIT@</Category>
-          <Category>X-MandrivaLinux-CrossDesktop</Category>
+          <Or>
+            <Category>@MAIN_DESKTOP@</Category>
+            <Category>@MAIN_TOOLKIT@</Category>
+            <Category>X-MandrivaLinux-CrossDesktop</Category>
+          </Or>
+          <Not>
+            <Category>TextTools</Category>
+            <Category>TelephonyTools</Category>
+            <Category>Archiving</Category>
+            <Category>Calculator</Category>
+            <Category>Clock</Category>
+            <Category>TextEditor</Category>
+            <Category>@ALTERNATIVE_DESKTOP@</Category>
+            <Category>@ALTERNATIVE_TOOLKIT@</Category>
+          </Not>
         </Or>
         <Or>
           <Category>Utility</Category>
           <Category>TextEditor</Category>
-          <And>
-            <Category>Settings</Category>
-            <Not>
-              <Category>X-KDE-settings-accessibility</Category>
-              <Category>X-KDE-settings-components</Category>
-              <Category>X-KDE-settings-desktop</Category>
-              <Category>X-KDE-settings-looknfeel</Category>
-              <Category>X-KDE-settings-network</Category>
-              <Category>X-KDE-settings-webbrowsing</Category>
-              <Category>X-KDE-settings-peripherals</Category>
-              <Category>X-KDE-settings-hardware</Category>
-              <Category>X-KDE-settings-power</Category>
-              <Category>X-KDE-settings-security</Category>
-              <Category>X-KDE-settings-sound</Category>
-              <Category>X-KDE-settings-system</Category>
-              <Category>X-KDE-information</Category>
-              <Category>GNOME</Category>
-            </Not>
-          </And>
+          <Category>TerminalEmulator</Category>
+          <Category>Settings</Category>
         </Or>
         <Not>
           <Category>Accessibility</Category>
@@ -273,6 +346,23 @@
           <Category>PackageManager</Category>
           <Category>X-MandrivaLinux-More</Category>
           <Category>Printing</Category>
+          <Category>X-KDE-settings-accessibility</Category>
+          <Category>X-KDE-settings-components</Category>
+          <Category>X-KDE-settings-desktop</Category>
+          <Category>X-KDE-settings-looknfeel</Category>
+          <Category>X-KDE-settings-network</Category>
+          <Category>X-KDE-settings-webbrowsing</Category>
+          <Category>X-KDE-settings-peripherals</Category>
+          <Category>X-KDE-settings-hardware</Category>
+          <Category>X-KDE-settings-power</Category>
+          <Category>X-KDE-settings-security</Category>
+          <Category>X-KDE-settings-sound</Category>
+          <Category>X-KDE-settings-system</Category>
+          <Category>X-KDE-information</Category>
+          <And>
+            <Category>GNOME</Category>
+            <Category>Settings</Category>
+          </And>
         </Not>
       </And>
     </Include>
@@ -295,13 +385,25 @@
         </And>
         <And>
           <Or>
-            <Category>@MAIN_TOOLKIT@</Category>
-            <Category>X-MandrivaLinux-CrossDesktop</Category>
+            <Or>
+              <Category>@MAIN_TOOLKIT@</Category>
+              <Category>X-MandrivaLinux-CrossDesktop</Category>
+            </Or>
+            <Not>
+              <Category>FileTools</Category>
+              <Category>FileSystem</Category>
+              <Category>Security</Category>
+              <Category>Applet</Category>
+              <Category>@ALTERNATIVE_DESKTOP@</Category>
+              <Category>@ALTERNATIVE_TOOLKIT@</Category>
+            </Not>
           </Or>
           <Or>
             <And>
               <Category>System</Category>
               <Not>
+                <Category>Emulator</Category>
+                <Category>TerminalEmulator</Category>
                 <And>
                   <Category>GNOME</Category>
                   <Category>Settings</Category>
@@ -369,6 +471,7 @@
     <Menu>
       <Name>More</Name>
       <Directory>mandriva-tools-more.directory</Directory>
+      <OnlyUnallocated/>
       <Include>
         <And>
           <Or>
