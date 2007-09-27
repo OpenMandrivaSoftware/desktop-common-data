@@ -11,13 +11,13 @@ menu/validated-menu: menu/applications.menu.in
 
 applications.menu: menu/validated-menu
 	@echo -n "generating $@ "
-	@sed -e 's,@MAIN_DESKTOP@,GNOME,g' -e 's,@MAIN_TOOLKIT@,GTK,g' < menu/applications.menu.in > $@
+	@sed -e 's,@MAIN_DESKTOP@,GNOME,g' -e 's,@MAIN_TOOLKIT@,GTK,g' -e 's,@ALTERNATIVE_DESKTOP@,KDE,g' -e 's,@ALTERNATIVE_TOOLKIT@,Qt,g' < menu/applications.menu.in > $@
 	@xmllint --noout --dtdvalid menu/menu.dtd $@
 	@echo " OK"
 
 kde-applications.menu: menu/validated-menu
 	@echo -n "generating $@ "
-	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' < menu/applications.menu.in > $@
+	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' -e 's,@ALTERNATIVE_DESKTOP@,GNOME,g' -e 's,@ALTERNATIVE_TOOLKIT@,GTK,g' < menu/applications.menu.in > $@
 	@xmllint --noout --dtdvalid menu/menu.dtd $@
 	@echo " OK"
 
@@ -47,8 +47,7 @@ localcopy: checktag
 	find $(PACKAGE)-$(VERSION) -type d -name CVS -o -type d -name '.svn' -o -name .cvsignore -o -name '*~' |xargs rm -rf
 
 tar: checktag
-	tar cvf $(PACKAGE)-$(VERSION).tar $(PACKAGE)-$(VERSION)
-	bzip2 -9vf $(PACKAGE)-$(VERSION).tar
+	tar cjvf $(PACKAGE)-$(VERSION).tar.bz2 $(PACKAGE)-$(VERSION)
 	rm -rf $(PACKAGE)-$(VERSION)
 
 # rules to build a distributable rpm
