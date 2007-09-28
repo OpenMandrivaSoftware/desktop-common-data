@@ -1,3 +1,11 @@
+2007-09-28 16:57  Adam Williamson <awilliamson at mandriva.com>
+
+	* desktop/free/register.desktop.in,
+	  desktop/one/register.desktop.in,
+	  desktop/powerpack/register.desktop.in: adjust default icons:
+	  change 'register' icon to point to my.mandriva.com, remove 'buy
+	  it' icon (#34238, #34235)
+
 2007-09-28 16:49  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop/free/register.desktop.in,
