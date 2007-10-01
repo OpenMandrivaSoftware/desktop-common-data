@@ -404,10 +404,6 @@
               <Not>
                 <Category>Emulator</Category>
                 <Category>TerminalEmulator</Category>
-                <And>
-                  <Category>GNOME</Category>
-                  <Category>Settings</Category>
-                </And>
               </Not>
             </And>
             <Category>Monitor</Category>
