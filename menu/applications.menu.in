@@ -338,30 +338,39 @@
           <Category>Settings</Category>
         </Or>
         <Not>
-          <Category>Accessibility</Category>
-          <Category>Monitor</Category>
-          <Category>System</Category>
-          <Category>Emulator</Category>
-          <Category>HardwareSettings</Category>
-          <Category>PackageManager</Category>
-          <Category>X-MandrivaLinux-More</Category>
-          <Category>Printing</Category>
-          <Category>X-KDE-settings-accessibility</Category>
-          <Category>X-KDE-settings-components</Category>
-          <Category>X-KDE-settings-desktop</Category>
-          <Category>X-KDE-settings-looknfeel</Category>
-          <Category>X-KDE-settings-network</Category>
-          <Category>X-KDE-settings-webbrowsing</Category>
-          <Category>X-KDE-settings-peripherals</Category>
-          <Category>X-KDE-settings-hardware</Category>
-          <Category>X-KDE-settings-power</Category>
-          <Category>X-KDE-settings-security</Category>
-          <Category>X-KDE-settings-sound</Category>
-          <Category>X-KDE-settings-system</Category>
-          <Category>X-KDE-information</Category>
           <And>
-            <Category>GNOME</Category>
-            <Category>Settings</Category>
+            <Or>
+              <Category>Accessibility</Category>
+              <Category>Monitor</Category>
+              <Category>System</Category>
+              <Category>TerminalEmulator</Category>
+              <Category>Emulator</Category>
+              <Category>HardwareSettings</Category>
+              <Category>PackageManager</Category>
+              <Category>X-MandrivaLinux-More</Category>
+              <Category>Printing</Category>
+              <Category>X-KDE-settings-accessibility</Category>
+              <Category>X-KDE-settings-components</Category>
+              <Category>X-KDE-settings-desktop</Category>
+              <Category>X-KDE-settings-looknfeel</Category>
+              <Category>X-KDE-settings-network</Category>
+              <Category>X-KDE-settings-webbrowsing</Category>
+              <Category>X-KDE-settings-peripherals</Category>
+              <Category>X-KDE-settings-hardware</Category>
+              <Category>X-KDE-settings-power</Category>
+              <Category>X-KDE-settings-security</Category>
+              <Category>X-KDE-settings-sound</Category>
+              <Category>X-KDE-settings-system</Category>
+              <Category>X-KDE-information</Category>
+              <And>
+                <Category>GNOME</Category>
+                <Category>Settings</Category>
+              </And>
+            </Or>
+            <Not>
+              <Category>TextEditor</Category>
+              <Category>TerminalEmulator</Category>
+            </Not>
           </And>
         </Not>
       </And>
