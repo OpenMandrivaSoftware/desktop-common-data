@@ -1015,7 +1015,7 @@
   <Menu>
     <Name>Settings</Name>
     <Directory>kde-settings.directory</Directory>
-    <MergeFile>kde-settings.menu</MergeFile>
+    <MergeFile>/etc/xdg/kde/menus/kde-settings.menu</MergeFile>
   </Menu>
   <MergeFile>applications-kmenuedit.menu</MergeFile>
 </Menu>
