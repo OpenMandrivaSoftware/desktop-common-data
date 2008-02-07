@@ -1012,5 +1012,10 @@
       <Category>X-MandrivaLinux-.hidden</Category>
     </Include>
   </Menu>
+  <Menu>
+    <Name>Settings</Name>
+    <Directory>kde-settings.directory</Directory>
+    <MergeFile>kde-settings.menu</MergeFile>
+  </Menu>
   <MergeFile>applications-kmenuedit.menu</MergeFile>
 </Menu>
