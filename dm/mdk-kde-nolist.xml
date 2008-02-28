@@ -26,21 +26,11 @@
           </item>
           <item type="rect">
             <pos anchor="n" x="50%" y="50" width="100%" height="156"/>
-            <!--            <normal color="#FF0000" alpha="0.5"/>-->
+	    <!-- <normal color="#FF0000" alpha="0.5"/> -->
             <fixed>
-              <item type="rect" id="userlist-background">
-                <!-- 16 pixel per user in list -->
-                <pos x="22" width="50%" height="100%"/>
-                <normal color="#ffffff" alpha="1.0"/>
-                <fixed>
-                  <item type="list" id="userlist">
-                    <pos height="100%" width="100%"/>
-                  </item>
-                </fixed>
-              </item>
               <!-- the login box contents, positioned freely -->
               <item type="rect">
-                <pos width="box" height="box" x="100%" y="50%" anchor="e"/>
+                <pos width="box" height="box" x="50%" y="50%" anchor="c"/>
                 <box orientation="vertical" spacing="8" xpadding="22">
                   <!-- Stock label for: Username: -->
                   <item type="label">
