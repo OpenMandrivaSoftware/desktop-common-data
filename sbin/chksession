@@ -134,9 +134,9 @@ if ($xsession) {
     print $script{$xsession}
   } else {
     print "xterm -geometry 100x25+0+0 &\n";
-	if ( -x '/usr/X11R6/bin/icewm' ) {
+	if ( -x '/usr/bin/icewm' ) {
 		print "icewm\n";
-	} elsif ( -x '/usr/X11R6/bin/twm' ) {
+	} elsif ( -x '/usr/bin/twm' ) {
 		print "twm\n";
 	} else {
 		print "xterm -geometry 67x14+384+446\n";
