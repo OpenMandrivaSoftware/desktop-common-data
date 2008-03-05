@@ -3,9 +3,9 @@
 
 [GdmGreeterTheme]
 Encoding=UTF-8
-Greeter=mdk-gdm.xml
+Greeter=mdk-gdm-nolist.xml
 Name=Mandriva Linux
-Description=Mandriva Linux theme
+Description=Mandriva Linux theme (without user list)
 Author=Mandriva graphic team
 Copyright=(c) 2002-2008 Mandriva
-Screenshot=screenshot.png
+Screenshot=screenshot-gdm-nolist.png
