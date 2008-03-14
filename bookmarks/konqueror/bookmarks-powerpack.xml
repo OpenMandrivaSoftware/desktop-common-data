@@ -7,13 +7,13 @@
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/" >
   <title>Mandriva Store</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com/" >
-  <title>Mandriva Club</title>
- </bookmark>
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
   <title>Mandriva Expert</title>
  </bookmark>
-<bookmark icon="/usr/share/icons/favicons/jamendo.png" href="http://ogg.jamendo.com/" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/community/" >
+  <title>Mandriva Community</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/jamendo.png" href="http://ogg.jamendo.com/" >
   <title>Jamendo</title>
  </bookmark>
  <folder folded="yes" >
@@ -32,9 +32,6 @@
  </bookmark>
  </folder>
  <separator/>
- <bookmark icon="/usr/share/icons/favicons/lpi_org.png" href="http://www.lpi.org/" >
-  <title>LPI</title>
- </bookmark>
  <folder folded="yes" >
   <title>Community</title>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.gnu.org/software/software.html" >
@@ -56,6 +53,9 @@
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linux.org/" >
    <title>Linux.org</title>
   </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linux-foundation.org/" >
+   <title>Linux Foundation</title>
+  </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linuxgames.com/" >
    <title>Linux Games</title>
   </bookmark>
@@ -65,11 +65,8 @@
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.kernel.org/" >
    <title>Linux Kernel Archives</title>
   </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://rpmfind.net/" >
-   <title>RpmFind.net</title>
-  </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.x.org/" >
-   <title>Xorg</title>
+   <title>X.org</title>
   </bookmark>
  </folder>
  <folder folded="yes" >
@@ -89,12 +86,6 @@
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.lwn.net/" >
    <title>Linux Weekly News</title>
   </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.ofb.biz/" >
-   <title>OfB.biz</title>
-  </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.osnews.com/" >
-   <title>OSNews.com</title>
-  </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://slashdot.org/" >
    <title>Slashdot</title>
   </bookmark>
@@ -102,10 +93,10 @@
  <folder folded="no" >
   <title>Programming</title>
   <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/Development" >
-   <title>Mandriva Linux Cooker</title>
+   <title>Mandriva Cooker</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/" >
-   <title>Mandriva Linux Wiki</title>
+   <title>Mandriva Wiki</title>
   </bookmark>
   <separator/>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://gcc.gnu.org/" >

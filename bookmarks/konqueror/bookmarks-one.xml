@@ -7,11 +7,11 @@
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/" >
   <title>Mandriva Store</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://club.mandriva.com/" >
-  <title>Mandriva Club</title>
- </bookmark>
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
   <title>Mandriva Expert</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/community/" >
+  <title>Mandriva Community</title>
  </bookmark>
  <bookmark icon="/usr/share/icons/favicons/jamendo.png" href="http://ogg.jamendo.com/" >
   <title>Jamendo</title>
