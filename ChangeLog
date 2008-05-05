@@ -1,3 +1,7 @@
+2008-05-05 16:54  Helio Chissini de Castro <helio at mandriva.com>
+
+	* sbin/fndsession: Added possibility to use kdm3 and kdm4
+
 2008-03-14 17:28  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop/free/register.desktop.in,
