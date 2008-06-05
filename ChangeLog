@@ -1,3 +1,18 @@
+2008-06-05 16:53  Pixel <pixel at mandriva.com>
+
+	* menu/update-menus.filter, menu/update-menus.script: add rpm
+	  filetrigger running update-menus when rpm install/remove .desktop
+	  files
+
+2008-05-05 19:56  helio
+
+	* .cvsignore, ChangeLog: - remove old cvs file
+	  - Updated changelog
+
+2008-05-05 19:52  helio
+
+	* sbin/chksession: - Enable both kdm 3 and 4 to be detected.
+
 2008-05-05 16:54  Helio Chissini de Castro <helio at mandriva.com>
 
 	* sbin/fndsession: Added possibility to use kdm3 and kdm4
