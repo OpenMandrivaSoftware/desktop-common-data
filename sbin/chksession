@@ -63,7 +63,7 @@ sub gen_desktops {
 	print FH "Comment=$file\n";
 	print FH "TryExec=$exe{$file}\n" if $exe{$file};
 	if ($usesession) {
-	    print FH "Exec=/etc/X11/xdm/Xsession $file\n";
+	    print FH "Exec=/usr/share/X11/xdm/Xsession $file\n";
 	} else {
 	    print FH "Exec=$file\n";
 	}
