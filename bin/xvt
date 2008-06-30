@@ -46,6 +46,7 @@ if [[ -z "$TERMINAL" ]]; then
     [[ -z "$TERMINAL" ]] && TERMINAL=`which kterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which multi-gnome-terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which multixterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which terminal 2> /dev/null`
 fi
 
 if [[ -n "$TERMINAL" ]]; then 
