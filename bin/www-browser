@@ -48,21 +48,31 @@ if [[ -z "$BROWSER" ]]; then
 
     #using KDE
     if [[ -n "$KDE_FULL_SESSION" ]]; then
-	NEWBROWSER=`grep -m 1 'BrowserApplication=' $HOME/.kde/share/config/kdeglobals 2>/dev/null`
-	[[ -z "$NEWBROWSER" ]] && NEWBROWSER=`grep -m 1 'BrowserApplication=' /etc/kde/kdeglobals 2>/dev/null`
+	NEWBROWSER=`kreadconfig --group General --key BrowserApplication 2>/dev/null`
 	if [[ -n "$NEWBROWSER" ]]; then
-	    BROWSER=`echo $NEWBROWSER | sed -e 's/BrowserApplication=\(.*\).desktop/\1/'`
-	    BROWSER="dcop klauncher default start_service_by_desktop_name(QString,QStringList) $BROWSER [ ]"
+	    BROWSER=`echo $NEWBROWSER | sed -e 's/\(.*\).desktop/\1/'`
+	    if [[ x"$KDE_SESSION_VERSION" == x"4" ]]; then   # KDE 4
+		BROWSER="dbus-send --type=method_call --dest=org.kde.klauncher /KLauncher org.kde.KLauncher.start_service_by_desktop_name string:$BROWSER array:string: array:string: string: boolean:true"
+	    else                                        # KDE 3
+		BROWSER="dcop klauncher default start_service_by_desktop_name(QString,QStringList) $BROWSER [ ]"
+	    fi
 	fi
     fi
 
+    #using XFCE
+    if xprop -root _DT_SAVE_MODE | grep ' = \"xfce4\"$' >/dev/null 2>&1; then
+	    BROWSER="exo-open --launch WebBrowser"
+    fi
+
+
     strip_browser_var
     
+    [[ -z "$BROWSER" ]] && BROWSER=`which firefox 2> /dev/null` 
     [[ -z "$BROWSER" ]] && BROWSER=`which mozilla-firefox 2> /dev/null` 
     [[ -z "$BROWSER" ]] && [[ -n "$KDE_FULL_SESSION" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
     [[ -z "$BROWSER" ]] && BROWSER=`which epiphany 2> /dev/null`
     [[ -z "$BROWSER" ]] && BROWSER=`which galeon 2> /dev/null`
-    [[ -z "$BROWSER" ]] && BROWSER=`which mozilla 2> /dev/null`
+    [[ -z "$BROWSER" ]] && BROWSER=`which seamonkey 2> /dev/null`
     [[ -z "$BROWSER" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
     [[ -z "$BROWSER" ]] && which links > /dev/null 2>&1 && BROWSER="xvt -e links"
     [[ -z "$BROWSER" ]] && which lynx > /dev/null 2>&1 && BROWSER="xvt -e lynx"
