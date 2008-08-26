@@ -9,6 +9,11 @@
 # Purpose         : launch a terminal emulator
 #---------------------------------------------------------------
 
+# allowed parameters, that must be handled by all terminals:
+#   -geometry <geometry>
+#   -T <title>
+#   -e <program>
+
 strip_terminal_var() {
 if [[ -n "$TERMINAL" ]]; then
   if [[ `basename "$TERMINAL"` == "xvt" ]]; then
