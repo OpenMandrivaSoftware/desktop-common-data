@@ -255,7 +255,6 @@
             <Category>AudioVideoEditing</Category>
             <Category>Player</Category>
             <Category>Recorder</Category>
-            <Category>DiscBurning</Category>
             <Category>Music</Category>
             <Category>@ALTERNATIVE_DESKTOP@</Category>
             <Category>@ALTERNATIVE_TOOLKIT@</Category>
@@ -271,6 +270,7 @@
         </Or>
         <Not>
           <Category>X-MandrivaLinux-More</Category>
+          <Category>DiscBurning</Category>
         </Not>
       </And>
     </Include>
@@ -285,6 +285,7 @@
               <Category>@MAIN_DESKTOP@</Category>
               <Category>@MAIN_TOOLKIT@</Category>
               <Category>X-MandrivaLinux-CrossDesktop</Category>
+              <Category>DiscBurning</Category>
             </Not>
             <Category>X-MandrivaLinux-More</Category>
           </Or>
@@ -336,6 +337,7 @@
           <Category>TextEditor</Category>
           <Category>TerminalEmulator</Category>
           <Category>Settings</Category>
+          <Category>DiscBurning</Category>
         </Or>
         <Not>
           <And>
@@ -507,6 +509,7 @@
             <Category>TextEditor</Category>
             <Category>Settings</Category>
             <Category>Monitor</Category>
+            <Category>DiscBurning</Category>
           </Or>
         </And>
       </Include>
