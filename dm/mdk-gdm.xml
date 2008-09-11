@@ -40,7 +40,7 @@
               </item>
               <!-- the login box contents, positioned freely -->
               <item type="rect">
-                <pos width="box" height="box" x="100%" y="50%" anchor="e"/>
+                <pos width="box" height="box" x="100%" y="55%" anchor="e"/>
                 <box orientation="vertical" spacing="8" xpadding="22">
                   <!-- Stock label for: Username: -->
                   <item type="label" id="pam-prompt">

@@ -30,7 +30,7 @@
             <fixed>
               <!-- the login box contents, positioned freely -->
               <item type="rect">
-                <pos width="box" height="box" x="50%" y="50%" anchor="c"/>
+                <pos width="box" height="box" x="50%" y="60%" anchor="c"/>
                 <box orientation="vertical" spacing="8" xpadding="22">
                   <!-- Stock label for: Username: -->
                   <item type="label" id="pam-prompt">
