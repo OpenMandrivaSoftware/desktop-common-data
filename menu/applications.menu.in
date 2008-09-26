@@ -382,7 +382,7 @@
       <Directory>mandriva-systemtools.directory</Directory>
       <Layout>
         <Filename>mandriva-drakconf.desktop</Filename>
-        <Filename>kde-KControl.desktop</Filename>
+        <Filename>kde4-systemsettings.desktop</Filename>
         <Separator/>
         <Merge type="all"/>
       </Layout>
