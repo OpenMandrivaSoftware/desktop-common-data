@@ -7,7 +7,7 @@
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/" >
   <title>Mandriva Store</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://support.mandriva.com/" >
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://expert.mandriva.com/" >
   <title>Mandriva Expert</title>
  </bookmark>
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/community/" >
@@ -53,7 +53,7 @@
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linux.org/" >
    <title>Linux.org</title>
   </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linux-foundation.org/" >
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linuxfoundation.org/" >
    <title>Linux Foundation</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linuxgames.com/" >
@@ -92,7 +92,7 @@
  </folder>
  <folder folded="no" >
   <title>Programming</title>
-  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/Development" >
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/en/Development" >
    <title>Mandriva Cooker</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/" >
@@ -105,8 +105,8 @@
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.gtk.org/" >
    <title>GTK+</title>
   </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://developer.kde.org/" >
-   <title>KDE - Developer's Corner</title>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://techbase.kde.org/" >
+   <title>KDE TechBase</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.opensource.org/" >
    <title>OpenSource.org</title>
@@ -117,8 +117,8 @@
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.python.org/" >
    <title>Python.org</title>
   </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.trolltech.com/products/qt/" >
-   <title>Qt Overview</title>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.qtsoftware.com/products/" >
+   <title>Qt Software</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.rpm.org/" >
    <title>RPM.org</title>
