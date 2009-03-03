@@ -40,12 +40,17 @@ if [[ -z "$TERMINAL" ]]; then
         [[ -z "$TERMINAL" ]] && which konsole 2> /dev/null && TERMINAL="konsole"
     fi
 
+    if [[ -n "$_LXSESSION_PID" ]]; then
+    	[[ -z "$TERMINAL" ]] && TERMINAL=`which lxterminal 2> /dev/null`
+    fi
+
    strip_terminal_var 
    
     [[ -z "$TERMINAL" ]] && TERMINAL=`which rxvt 2> /dev/null` 
     [[ -z "$TERMINAL" ]] && TERMINAL=`which xterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which gnome-terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which konsole 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which lxterminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which aterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which Eterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which kterm 2> /dev/null`
