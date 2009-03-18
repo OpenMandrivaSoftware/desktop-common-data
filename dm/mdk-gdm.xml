@@ -61,6 +61,11 @@
                       </item>
                     </fixed>
                   </item>
+  		  <item type="label" id="pam-message">
+                      <pos x="0%" y="50%" anchor="nw"/>
+                      <normal font="Sans 10" color="#ffffff"/>
+                      <text/>
+                   </item>
                 </box>
               </item>
             </fixed>
