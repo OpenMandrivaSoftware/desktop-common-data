@@ -1,6 +1,6 @@
 #!/bin/sh
 #---------------------------------------------------------------
-# Project         : Mandrakelinux
+# Project         : MandrivaLinux
 # Module          : bin
 # File            : xvt
 # Version         : $Id$
@@ -65,4 +65,4 @@ else
   echo "no terminal emulator detected"
 fi
 
-# www-browser ends here
+# xvt ends here
