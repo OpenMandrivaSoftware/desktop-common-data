@@ -1,3 +1,58 @@
+2009-11-06 10:41  Frederic Crozat <fcrozat at mandriva.com>
+
+	* menu/applications.menu.in:
+	  -
+	  Remove
+	  reference
+	  to
+	  old
+	  ooo64
+	  .desktop
+	  files,
+	  ensure
+	  OOo
+	  start
+	  .desktop
+	  is
+	  on
+	  top
+	  of
+	  the
+	  list
+
+2009-10-27 11:24  Frederic Crozat <fcrozat at mandriva.com>
+
+	* ChangeLog:
+	  Generated
+	  by
+	  svn2cl
+	  the
+	  Tue
+	  27
+	  Oct
+	  2009
+	  12:24:01
+	  PM
+	  CET
+
+2009-10-27 10:55  Frederic Crozat <fcrozat at mandriva.com>
+
+	* desktop/free/register.desktop.in,
+	  desktop/free/upgrade.desktop.in,
+	  desktop/one/register.desktop.in,
+	  desktop/one/upgrade.desktop.in,
+	  desktop/powerpack/register.desktop.in:
+	  use
+	  new
+	  urls
+	  for
+	  register
+	  /
+	  upgrade
+	  (Mdv
+	  bug
+	  #54933)
+
 2009-10-27 10:55  Frederic Crozat <fcrozat at mandriva.com>
 
 	* desktop/free/register.desktop.in,
