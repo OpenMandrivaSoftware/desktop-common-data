@@ -97,20 +97,13 @@
     <Name>Office</Name>
     <Directory>mandriva-office.directory</Directory>
     <Layout>
-      <Filename>template.desktop</Filename>
-      <Filename>template64.desktop</Filename>
+      <Filename>startcenter.desktop</Filename>
       <Filename>writer.desktop</Filename>
-      <Filename>writer64.desktop</Filename>
       <Filename>calc.desktop</Filename>
-      <Filename>calc64.desktop</Filename>
       <Filename>impress.desktop</Filename>
-      <Filename>impress64.desktop</Filename>
       <Filename>base.desktop</Filename>
-      <Filename>base64.desktop</Filename>
       <Filename>draw.desktop</Filename>
-      <Filename>draw64.desktop</Filename>
       <Filename>web.desktop</Filename>
-      <Filename>web64.desktop</Filename>
       <Separator/>
       <Merge type="files"/>
       <Menuname inline="true" inline_limit="1">More</Menuname>
