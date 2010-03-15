@@ -32,12 +32,7 @@ if [[ -z "$TERMINAL" ]]; then
 
     #using KDE
     if [[ -n "$KDE_FULL_SESSION" ]]; then
-	NEWTERMINAL=`grep -m 1 'TerminalApplication=' $HOME/.kde/share/config/kdeglobals 2>/dev/null`
-	[[ -z "$NEWTERMINAL" ]] && NEWTERMINAL=`grep -m 1 'TerminalApplication=' /etc/kde/kdeglobals 2>/dev/null`
-	if [[ -n "$NEWTERMINAL" ]]; then
-  	  TERMINAL=`echo $NEWTERMINAL| sed -e 's/TerminalApplication=//' -e 's/!//'`
-	fi
-        [[ -z "$TERMINAL" ]] && which konsole 2> /dev/null && TERMINAL="konsole"
+	TERMINAL=`kreadconfig --file kdeglobals --group General --key TerminalApplication --default "konsole"`
     fi
 
     if [[ -n "$_LXSESSION_PID" ]]; then
