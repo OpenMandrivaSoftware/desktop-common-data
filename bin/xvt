@@ -55,6 +55,11 @@ if [[ -z "$TERMINAL" ]]; then
 fi
 
 if [[ -n "$TERMINAL" ]]; then 
+  # keep the same behaviour between all terminals
+  if [[ "`basename ${TERMINAL%% *}`" = "konsole" ]]; then
+    TERMINAL="$TERMINAL --nofork"
+  fi
+
   exec $TERMINAL "$@"
 else
   echo "no terminal emulator detected"
