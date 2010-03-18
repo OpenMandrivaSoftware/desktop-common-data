@@ -83,6 +83,7 @@ ChangeLog: ../common/username.xml
 	@if test -d "$$PWD/.git"; then \
 	  ../common/gitlog-to-changelog | sed -e '/\tgit-svn-id:.*/d' > $@.tmp \
 	  && mv -f $@.tmp $@ \
+	  && git commit ChangeLog -m 'generated changelog' \
 	  && if [ -e ".git/svn" ]; then \
 	    git svn dcommit ; \
 	    fi \
