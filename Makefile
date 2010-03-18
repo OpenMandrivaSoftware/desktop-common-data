@@ -83,6 +83,9 @@ ChangeLog: ../common/username.xml
 	@if test -d "$$PWD/.git"; then \
 	  ../common/gitlog-to-changelog | sed -e '/\tgit-svn-id:.*/d' > $@.tmp \
 	  && mv -f $@.tmp $@ \
+	  && if [ -e ".git/svn" ]; then \
+	    git svn dcommit ; \
+	    fi ;\
 	  || (rm -f  $@.tmp; \
 	 echo Failed to generate ChangeLog, your ChangeLog may be outdated >&2; \
 	 (test -f $@ || echo git-log is required to generate this file >> $@)); \
