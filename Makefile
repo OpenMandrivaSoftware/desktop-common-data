@@ -85,7 +85,7 @@ ChangeLog: ../common/username.xml
 	  && mv -f $@.tmp $@ \
 	  && if [ -e ".git/svn" ]; then \
 	    git svn dcommit ; \
-	    fi ;\
+	    fi \
 	  || (rm -f  $@.tmp; \
 	 echo Failed to generate ChangeLog, your ChangeLog may be outdated >&2; \
 	 (test -f $@ || echo git-log is required to generate this file >> $@)); \
