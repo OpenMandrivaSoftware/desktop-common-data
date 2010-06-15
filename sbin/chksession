@@ -152,14 +152,14 @@ if ($xsession) {
   exit (0);
 }
 
-@lf ? print shift @lf, "\n" : print "Default\n"
+@lf ? print shift @lf, "\n" : print "default\n"
   if $first;
 
 if ($list) { 
   if (@lf) {
-    print join(' ', @lf, 'Default', 'failsafe'), "\n";
+    print join(' ', @lf, 'default', 'failsafe'), "\n";
  } else {
-    print "Default\n";
+    print "default\n";
   }
 } elsif ($list_order) { 
     print join(' ', map { "$_=$order{$_}" } @lf), "\n";
