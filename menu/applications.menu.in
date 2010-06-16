@@ -396,7 +396,6 @@
             <Not>
               <Category>FileTools</Category>
               <Category>FileSystem</Category>
-              <Category>Security</Category>
               <Category>Applet</Category>
               <Category>@ALTERNATIVE_DESKTOP@</Category>
               <Category>@ALTERNATIVE_TOOLKIT@</Category>
