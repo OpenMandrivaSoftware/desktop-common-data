@@ -298,9 +298,9 @@
     <Name>Tools</Name>
     <Directory>mandriva-tools.directory</Directory>
     <Layout>
-      <Menuname>SystemTools</Menuname>
-      <Menuname>Accessibility</Menuname>
-      <Menuname>Emulators</Menuname>
+      <Menuname inline="false">SystemTools</Menuname>
+      <Menuname inline="false">Accessibility</Menuname>
+      <Menuname inline="false">Emulators</Menuname>
       <Separator/>
       <Merge type="files"/>
       <Menuname>More</Menuname>
