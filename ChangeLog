@@ -1,4 +1,16 @@
+2010-06-16  fcrozat  <fcrozat@99302b65-d5f7-0310-b3dd-f8cd6f4e3d94>
+
+	- unhide Security tagged entries (Mdv bug #59087)
+
+	- uninline submenus in Tools menu
+
+2010-06-15  pzanoni  <pzanoni@99302b65-d5f7-0310-b3dd-f8cd6f4e3d94>
+
+	chksession: print "default" instead of "Default" because this is what Xsession expects CCBUG: 59733
+
 2010-03-18  fcrozat  <fcrozat@99302b65-d5f7-0310-b3dd-f8cd6f4e3d94>
+
+	generated changelog
 
 	commit changelog after generating it
 
