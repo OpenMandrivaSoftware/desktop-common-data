@@ -91,6 +91,6 @@ ChangeLog: ../common/username.xml
 	 echo Failed to generate ChangeLog, your ChangeLog may be outdated >&2; \
 	 (test -f $@ || echo git-log is required to generate this file >> $@)); \
 	else \
-	 svn2cl --accum --authors ../../soft/common/username.xml; \
+	 svn2cl --accum --authors ../common/username.xml; \
 	 rm -f *.bak;  \
 	fi;
