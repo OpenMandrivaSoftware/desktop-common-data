@@ -46,7 +46,7 @@ clean:
 # rules to build a distributable rpm
 
 dist: menus checktag clean changelog tag
-	rm -rf ../$(NAME)-$(VERSION)*.tar* $(NAME)-$(VERSION)
+	rm -rf $(NAME)-$(VERSION)*.tar* $(NAME)-$(VERSION)
 	@if [ -e ".svn" ]; then \
 		$(MAKE) dist-svn; \
 	elif [ -e ".git" ]; then \
@@ -58,11 +58,11 @@ dist: menus checktag clean changelog tag
 	$(info $(NAME)-$(VERSION).tar.xz is ready)
 
 dist-git: 
-	@git archive --prefix=$(NAME)-$(VERSION)/ HEAD | xz -c >../$(NAME)-$(VERSION).tar.xz;
+	@git archive --prefix=$(NAME)-$(VERSION)/ HEAD | xz -c > $(NAME)-$(VERSION).tar.xz;
 
 dist-svn: 
 	svn export -q -rBASE . $(NAME)-$(VERSION)
-	tar cfj ../$(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
+	tar cfJ $(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
 tag: checktag
