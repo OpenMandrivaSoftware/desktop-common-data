@@ -55,14 +55,14 @@ dist: menus checktag clean changelog tag
 		echo "Unknown SCM (not SVN nor GIT)";\
 		exit 1; \
 	fi;
-	$(info $(NAME)-$(VERSION).tar.bz2 is ready)
+	$(info $(NAME)-$(VERSION).tar.xz is ready)
 
 dist-git: 
-	@git archive --prefix=$(NAME)-$(VERSION)/ HEAD | bzip2 -9 -c >../$(NAME)-$(VERSION).tar.bz2;
+	@git archive --prefix=$(NAME)-$(VERSION)/ HEAD | xz -c >../$(NAME)-$(VERSION).tar.xz;
 
 dist-svn: 
 	svn export -q -rBASE . $(NAME)-$(VERSION)
-	tar cfj ../$(NAME)-$(VERSION).tar.bz2 $(NAME)-$(VERSION)
+	tar cfj ../$(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
 tag: checktag
