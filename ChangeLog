@@ -1,3 +1,191 @@
+2012-10-08 14:33  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-Sys-App-Critical.ogg,
+	  sounds/moondrake-Sys-App-Error-Critical.ogg,
+	  sounds/moondrake-Sys-App-Error-Serious.ogg,
+	  sounds/moondrake-Sys-App-Serious.ogg,
+	  sounds/moondrake-Sys-App2-Critical.ogg,
+	  sounds/moondrake-Sys-App2-Error-Critical.ogg,
+	  sounds/moondrake-Sys-App2-Error-Serious.ogg,
+	  sounds/moondrake-Sys-App2-Serious.ogg: fix file names
+
+2012-10-08 14:24  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-Sys-App-Critical.ogg,
+	  sounds/moondrake-Sys-App-Error.ogg,
+	  sounds/moondrake-Sys-App-Message.ogg,
+	  sounds/moondrake-Sys-App-Serious.ogg,
+	  sounds/moondrake-Sys-App2-Critical.ogg,
+	  sounds/moondrake-Sys-App2-Error.ogg,
+	  sounds/moondrake-Sys-App2-Serious.ogg,
+	  sounds/moondrake-Sys-List-End.ogg,
+	  sounds/moondrake-Sys-List-Match-Multiple.ogg,
+	  sounds/moondrake-Sys-List-Match-No.ogg,
+	  sounds/moondrake-Sys-Question.ogg,
+	  sounds/moondrake-Sys-Special.ogg,
+	  sounds/moondrake-Sys-Trash-Emptied.ogg,
+	  sounds/moondrake-Sys-Warning.ogg: add new sounds
+
+2012-10-03 19:06  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* ChangeLog: remove old entries
+
+2012-10-03 19:05  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* ChangeLog: update
+
+2012-10-03 19:04  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: shorten relative path...
+
+2012-10-03 19:01  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: don't create tarball in parent dir
+
+2012-10-03 18:59  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: use xz compression rather than bzip2
+
+2012-10-03 18:45  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-Sys-Error-Printing.ogg: replace print error
+	  sound with version provided by Christian Augustin
+
+2012-10-03 18:20  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-shutdown.ogg, sounds/moondrake-shutdown.wav,
+	  sounds/moondrake-startup.ogg, sounds/moondrake-startup.wav:
+	  reencode sound samples with ogg vorbis
+
+2012-10-03 18:15  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* faces/default.png: remove executable permission
+
+2012-10-03 18:09  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-shutdown.wav, sounds/moondrake-startup.wav:
+	  update startup & shutdown sounds from Christian Augustin
+
+2012-10-03 19:06  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* ChangeLog: remove old entries
+
+2012-10-03 19:05  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* ChangeLog: update
+
+2012-10-03 19:04  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: shorten relative path...
+
+2012-10-03 19:01  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: don't create tarball in parent dir
+
+2012-10-03 18:59  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: use xz compression rather than bzip2
+
+2012-10-03 18:45  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-Sys-Error-Printing.ogg: replace print error
+	  sound with version provided by Christian Augustin
+
+2012-10-03 18:20  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-shutdown.ogg, sounds/moondrake-shutdown.wav,
+	  sounds/moondrake-startup.ogg, sounds/moondrake-startup.wav:
+	  reencode sound samples with ogg vorbis
+
+2012-10-03 18:15  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* faces/default.png: remove executable permission
+
+2012-10-03 18:09  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-shutdown.wav, sounds/moondrake-startup.wav:
+	  update startup & shutdown sounds from Christian Augustin
+
+2012-10-03 19:06  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* ChangeLog: remove old entries
+
+2012-10-03 19:05  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* ChangeLog: update
+
+2012-10-03 19:04  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: shorten relative path...
+
+2012-10-03 19:01  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: don't create tarball in parent dir
+
+2012-10-03 18:59  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: use xz compression rather than bzip2
+
+2012-10-03 18:45  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-Sys-Error-Printing.ogg: replace print error
+	  sound with version provided by Christian Augustin
+
+2012-10-03 18:20  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-shutdown.ogg, sounds/moondrake-shutdown.wav,
+	  sounds/moondrake-startup.ogg, sounds/moondrake-startup.wav:
+	  reencode sound samples with ogg vorbis
+
+2012-10-03 18:15  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* faces/default.png: remove executable permission
+
+2012-10-03 18:09  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-shutdown.wav, sounds/moondrake-startup.wav:
+	  update startup & shutdown sounds from Christian Augustin
+
+2012-10-03 19:06  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* ChangeLog: remove old entries
+
+2012-10-03 19:05  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* ChangeLog: update
+
+2012-10-03 19:04  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: shorten relative path...
+
+2012-10-03 19:01  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: don't create tarball in parent dir
+
+2012-10-03 18:59  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* Makefile: use xz compression rather than bzip2
+
+2012-10-03 18:45  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-Sys-Error-Printing.ogg: replace print error
+	  sound with version provided by Christian Augustin
+
+2012-10-03 18:20  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-shutdown.ogg, sounds/moondrake-shutdown.wav,
+	  sounds/moondrake-startup.ogg, sounds/moondrake-startup.wav:
+	  reencode sound samples with ogg vorbis
+
+2012-10-03 18:15  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* faces/default.png: remove executable permission
+
+2012-10-03 18:09  Per Øyvind Karlsen <peroyvind at mandriva.org>
+
+	* sounds/moondrake-shutdown.wav, sounds/moondrake-startup.wav:
+	  update startup & shutdown sounds from Christian Augustin
+
 2012-10-03 19:01  Per Øyvind Karlsen <peroyvind at mandriva.org>
 
 	* Makefile: don't create tarball in parent dir
