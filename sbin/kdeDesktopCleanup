@@ -3,7 +3,7 @@
 # Copyright under GPL
 
 @dirs = (qw(/etc/skel /root), glob("/home/*"));
-@path = split ":", "/sbin:/usr/sbin:/usr/X11R6/bin:/bin:/usr/bin";
+@path = split ":", "/sbin:/usr/sbin:/bin:/usr/bin";
 
 foreach $f (map { grep { /\.kdelnk$/ } eval { all("$_/Desktop") } } @dirs) {
     open F, $f or next;
