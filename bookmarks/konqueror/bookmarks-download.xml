@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
 <xbel folded="no" >
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/" >
-  <title>Mandriva</title>
- </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://store.mandriva.com/" >
-  <title>Mandriva Store</title>
- </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://expert.mandriva.com/" >
-  <title>Mandriva Expert</title>
- </bookmark>
- <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://www.mandriva.com/community/" >
-  <title>Mandriva Community</title>
- </bookmark>
  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/" >
-  <title>Mandriva Wiki</title>
+  <title>Mandriva Linux Wiki</title>
  </bookmark>
- <bookmark icon="/usr/share/icons/favicons/jamendo.png" href="http://www.jamendo.com/" >
-  <title>Jamendo</title>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://forum.mandriva.com/" >
+  <title>Mandriva Linux Forums</title>
+ </bookmark>
+ <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://planetmandriva.zarb.org/" >
+  <title>Planet Mandriva</title>
  </bookmark>
   <separator/>
  <folder folded="yes" >
@@ -29,8 +20,8 @@
    <title>The GNU Project</title>
   </bookmark>
   <separator/>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://freshmeat.net/" >
-   <title>Freshmeat</title>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://freecode.com/" >
+   <title>Freecode</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.gnome.org/" >
    <title>GNOME</title>
@@ -62,6 +53,12 @@
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://alllinuxdevices.com/" >
    <title>All Linux Devices</title>
   </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://distrowatch.com/" >
+   <title>DistroWatch.com</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.h-online.com/" >
+   <title>The H</title>
+  </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.linux.com/" >
    <title>Linux.com</title>
   </bookmark>
@@ -74,14 +71,28 @@
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.lwn.net/" >
    <title>Linux Weekly News</title>
   </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://mandrivachronicles.blogspot.com/" >
+   <title>Mandriva Linux Chronicles</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://osnews.com/" >
+   <title>OSnews</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://phoronix.com/" >
+   <title>Phoronix</title>
+  </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://slashdot.org/" >
    <title>Slashdot</title>
+  </bookmark>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.tuxmachines.org/" >
+   <title>tuxmachines.org</title>
   </bookmark>
  </folder>
  <folder folded="no" >
   <title>Programming</title>
   <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://wiki.mandriva.com/en/Development" >
-   <title>Mandriva Cooker</title>
+   <title>Mandriva Linux Cooker</title>
+   <bookmark icon="/usr/share/icons/favicons/STAR_TRANSP.png" href="http://abf.rosalinux.ru/" >
+   <title>ABF</title>
   </bookmark>
   <separator/>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://gcc.gnu.org/" >
@@ -103,10 +114,10 @@
    <title>Python.org</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.qtsoftware.com/products/" >
-   <title>Qt Software</title>
+   <title>QT Software</title>
   </bookmark>
-  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.rpm.org/" >
-   <title>RPM.org</title>
+  <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://www.rpm5.org/" >
+   <title>RPM5.org</title>
   </bookmark>
   <bookmark icon="/usr/share/icons/favicons/empty.png" href="http://sourceforge.net/" >
    <title>SourceForge</title>
