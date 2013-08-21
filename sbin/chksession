@@ -18,10 +18,15 @@ Usage: $0 [OPTION]...
 	      -t, --test:   Go in test mode.
 	      -l, --list:   List window-managers.
 	      -L:           List window-managers including the order number
+
 	      -d=DIR, --dir=DIR:   Specifies a directory of w-m configuration files.
 			 Default is /etc/X11/wmsession.d/
+
 	      -x=ENTRY, --xsession=ENTRY: Produce window-managers script of ENTRY.
-	      -k,  --kdm3:   Produce window-managers list for kdm3 sessions.
+
+	      --generate=DIR: Produce window-manager .desktop files into DIR.
+	      --wrap-sessions: Wrap window-managers with /usr/share/X11/xdm/Xsession.
+
 	      -K,  --kdm4:   Produce window-managers list for kdm4 sessions.
 	      -g,  --gdm:   Produce window-managers script for gdm sessions.
 	      -h, --help:   Produce this help.
@@ -83,6 +88,10 @@ while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
     $xsession = $1;
   } elsif (/^--first/ || /^-F/) {
     $first++;
+  } elsif (/^--generate=([^ ]+)/) {
+    $generate = $1;
+  } elsif (/^--wrap-sessions/) {
+    $wrap_sessions++;
   } elsif (/^--gdm/ || /^-g/) {
     die "You should be root to build gdm session\n" if $< != 0;
     $gdm++;
@@ -90,8 +99,6 @@ while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
     $list++;
   } elsif (/^-L/) {
     $list_order++;
-  } elsif (/^--kdm3/ || /^-k/) {
-    $kdm3++;
   } elsif (/^--kdm4/ || /^-K/) {
     $kdm4++;
   } elsif (/^--test/ || /^-t/) {
@@ -122,9 +129,8 @@ my ($e) = eval {cat("/etc/sysconfig/desktop")} =~ /DESKTOP=(\S+)/;
 # Order of names in @lf is otherwise unchanged.
 @lf = sort { $b =~ /^$e$/i <=> $a =~ /^$e$/i } @lf;
 
-
-if ($kdm3) {
-    gen_desktops('/opt/kde3/share/apps/kdm/sessions', 0);
+if ($generate) {
+    gen_desktops($generate, $wrap_sessions);
 }
 
 if ($kdm4) {
