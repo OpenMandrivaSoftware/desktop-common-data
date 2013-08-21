@@ -1,6 +1,26 @@
+2013-08-21 23:08:00 +0200 tpg 
+
+	* add removed old faces (HEAD, origin/master, origin/HEAD, master)
+
+2013-08-21 23:04:26 +0200 tpg 
+
+	*  upload new faces form Matthew Dawkins
+
+2013-08-21 23:03:15 +0200 tpg 
+
+	* remove old faces
+
+2013-08-21 20:15:10 +0200 tpg 
+
+	*  point to abf source
+
+2013-08-21 20:13:41 +0200 tpg 
+
+	* generated changelog
+
 2013-08-21 20:12:17 +0200 tpg 
 
-	*  remove kde3 support also update menus whe /etc/menu.d is changed  - from Mageia (HEAD, origin/master, origin/HEAD, master)
+	*  remove kde3 support also update menus whe /etc/menu.d is changed  - from Mageia
 
 2013-08-21 20:09:20 +0200 tpg 
 
