@@ -1,1 +1,1 @@
-^.(/usr|/opt/kde3)/share/applications/.*\.desktop$
+^.(/usr/share/applications/.*\.desktop|/etc/menu.d/)
