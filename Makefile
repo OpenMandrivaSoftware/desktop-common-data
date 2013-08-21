@@ -82,9 +82,9 @@ log: ChangeLog
 changelog: ChangeLog
 
 #svn2cl is available in our contrib.
-ChangeLog: ../common/username.xml
+ChangeLog:
 	@if test -d "$$PWD/.git"; then \
-	  ../common/gitlog-to-changelog | sed -e '/\tgit-svn-id:.*/d' > $@.tmp \
+	  git --no-pager log --format="%ai %aN %n%n%x09* %s%d%n" > $@.tmp \
 	  && mv -f $@.tmp $@ \
 	  && git commit ChangeLog -m 'generated changelog' \
 	  && if [ -e ".git/svn" ]; then \
