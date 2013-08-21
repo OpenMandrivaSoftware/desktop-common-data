@@ -1,10 +1,46 @@
+2013-08-21 20:12:17 +0200 tpg 
+
+	*  remove kde3 support also update menus whe /etc/menu.d is changed  - from Mageia (HEAD, origin/master, origin/HEAD, master)
+
+2013-08-21 20:09:20 +0200 tpg 
+
+	* kill kdm3 also chksession: add support for generic --generate=DIR and --wrap-sessions from Mageia
+
+2013-08-21 20:03:07 +0200 tpg 
+
+	* add support for mcedit to editor file
+
+2013-08-21 20:01:01 +0200 tpg 
+
+	* add editor file
+
+2013-08-21 19:59:32 +0200 tpg 
+
+	* add midori and chromium-browser to www-browser
+
+2013-08-21 19:56:46 +0200 tpg 
+
+	*  remove flower.jpg and nature.jpg, dunno why these were here
+
+2013-08-21 19:46:03 +0200 tpg 
+
+	* clean it
+
+2013-08-21 19:39:39 +0200 tpg 
+
+	* fix generating of ChangeLog from git
+
+2013-08-21 19:38:50 +0200 tpg 
+
+	* generated changelog
+
 2013-08-21 19:37:44 +0200 tpg 
 
-	* generated changelog (HEAD, master)
+	* generated changelog
 
 2013-08-21 19:31:37 +0200 tpg 
 
-	* add symlinks to ia_ora sounds (origin/master, origin/HEAD)
+	* add symlinks to ia_ora sounds
 
 2013-08-21 19:28:08 +0200 tpg 
 
