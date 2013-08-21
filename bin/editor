@@ -20,7 +20,7 @@ strip_texteditor_var() {
 
 strip_texteditor_var
 if [[ -z "$TEXTEDITOR" ]]; then
- 
+
     # using GNOME
     if [[ -n "$GNOME_DESKTOP_SESSION_ID" ]]; then
 	TEXTEDITOR="gedit"
@@ -33,10 +33,10 @@ if [[ -z "$TEXTEDITOR" ]]; then
 
 
     strip_texteditor_var
-    
+
     [[ -z "$TEXTEDITOR" ]] && TEXTEDITOR=`which kwrite 2> /dev/null` 
     [[ -z "$TEXTEDITOR" ]] && TEXTEDITOR=`which gedit 2> /dev/null` 
-    
+
     if [[ -z "$TEXTEDITOR" ]]; then
 	EMACS=`/usr/sbin/update-alternatives --list emacs`
 	if [[ -n "$EMACS" ]]; then
@@ -47,12 +47,13 @@ if [[ -z "$TEXTEDITOR" ]]; then
 	    fi
 	fi
     fi
-    
+
+    [[ -z "$TEXTEDITOR" ]] && which mcedit > /dev/null 2>&1 && TEXTEDITOR="xvt -e mcedit"
     [[ -z "$TEXTEDITOR" ]] && which vim > /dev/null 2>&1 && TEXTEDITOR="xvt -e vim"
     [[ -z "$TEXTEDITOR" ]] && which nano > /dev/null 2>&1 && TEXTEDITOR="xvt -e nano"
 fi
 
-if [[ -n "$TEXTEDITOR" ]]; then 
+if [[ -n "$TEXTEDITOR" ]]; then
     exec $TEXTEDITOR "$@"
 else
     echo "no text editor detected"
