@@ -3,7 +3,7 @@
 # Project         : MandrivaLinux
 # Module          : bin
 # File            : xvt
-# Version         : $Id$
+# Version         : $Id: xvt 266850 2010-03-15 16:54:17Z fcrozat $
 # Author          : Frederic Lepied
 # Created On      : Tue Aug 31 16:26:54 2004
 # Purpose         : launch a terminal emulator
@@ -39,19 +39,27 @@ if [[ -z "$TERMINAL" ]]; then
     	[[ -z "$TERMINAL" ]] && TERMINAL=`which lxterminal 2> /dev/null`
     fi
 
+    #using Xfce
+    if [[  x"$XDG_CURRENT_DESKTOP" = x"XFCE" ]]; then
+        [[ -z "$TERMINAL" ]] && TERMINAL=`sed -n -e 's,^TerminalEmulator=\(.*\),\1,p' $HOME/.config/xfce4/helpers.rc 2> /dev/null`
+    fi
+
    strip_terminal_var 
    
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which rxvt 2> /dev/null` 
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which xterm 2> /dev/null`
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which gnome-terminal 2> /dev/null`
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which konsole 2> /dev/null`
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which lxterminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which aterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which Eterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which gnome-terminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which konsole 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which kterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which lxterminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which multi-gnome-terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which multixterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which rxvt 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which terminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which terminator 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which xfce4-terminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which xterm 2> /dev/null`
+
 fi
 
 if [[ -n "$TERMINAL" ]]; then 
