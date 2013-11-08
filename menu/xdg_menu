@@ -2234,7 +2234,7 @@ my $output;
 
 if ($format eq 'WindowMaker') {
 
-	$output = output_wmaker_menu($menu) 
+	$output = output_wmaker_menu($menu, 1) 
 }
 elsif ($format eq 'fvwm2') {
 
