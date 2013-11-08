@@ -35,6 +35,11 @@
   <Menu>
     <Name>Internet</Name>
     <Directory>mandriva-internet.directory</Directory>
+    <Layout>
+      <Merge type="menus"/>
+      <Merge type="files"/>
+      <Menuname>More</Menuname>
+    </Layout>
     <Include>
       <And>
         <Or>
@@ -140,6 +145,9 @@
         </Or>
         <Or>
           <Category>X-MandrivaLinux-Office</Category>
+          <Category>X-MandrivaLinux-Office-Wordprocessors</Category>
+          <Category>X-MandrivaLinux-Office-Spreadsheets</Category>
+          <Category>X-MandrivaLinux-Office-Presentations</Category>
           <Category>Office</Category>
         </Or>
         <Not>
@@ -229,6 +237,11 @@
   <Menu>
     <Name>SoundVideo</Name>
     <Directory>mandriva-soundvideo.directory</Directory>
+    <Layout>
+      <Merge type="menus"/>
+      <Merge type="files"/>
+      <Menuname>More</Menuname>
+    </Layout>
     <Include>
       <And>
         <Or>
@@ -301,10 +314,10 @@
       <Menuname inline="false">SystemTools</Menuname>
       <Menuname inline="false">Accessibility</Menuname>
       <Menuname inline="false">Emulators</Menuname>
+      <Merge type="menus"/>
       <Separator/>
       <Merge type="files"/>
       <Menuname>More</Menuname>
-      <Merge type="menus"/>
     </Layout>
     <Include>
       <And>
