@@ -1,6 +1,6 @@
 PACKAGE = desktop-common-data
 NAME = desktop-common-data
-VERSION=2013.0
+VERSION=2014.0
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 mandir=/usr/share/man
 #https://abf.rosalinux.ru/omv_software/desktop-common-data
