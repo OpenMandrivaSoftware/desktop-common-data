@@ -62,7 +62,7 @@ dist-old: menus checktag clean changelog tag
 	$(info $(NAME)-$(VERSION).tar.xz is ready)
 
 dist-git: 
-	git archive --prefix=$(NAME)-$(VERSION)/ HEAD | xz -cv > $(NAME)-$(VERSION).tar.xz;
+	git archive --prefix=$(NAME)-$(VERSION)/ HEAD | xz -cv -T0 > $(NAME)-$(VERSION).tar.xz;
 
 dist-svn: 
 	svn export -q -rBASE . $(NAME)-$(VERSION)
