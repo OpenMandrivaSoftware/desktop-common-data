@@ -1,20 +1,19 @@
 PACKAGE = desktop-common-data
 NAME = desktop-common-data
-VERSION=2014.0
+VERSION=2014.1
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 mandir=/usr/share/man
 #https://abf.rosalinux.ru/omv_software/desktop-common-data
 SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
-menus: applications.menu kde-applications.menu
+menus: applications.menu kde-applications.menu gnome-applications.menu
 
 menu/validated-menu: menu/applications.menu.in
 	xmllint --noout --dtdvalid menu/menu.dtd $?
 
-applications.menu: menu/validated-menu
+applications.menu: kde-applications.menu
 	@echo -n "generating $@ "
-	@sed -e 's,@MAIN_DESKTOP@,GNOME,g' -e 's,@MAIN_TOOLKIT@,GTK,g' -e 's,@ALTERNATIVE_DESKTOP@,KDE,g' -e 's,@ALTERNATIVE_TOOLKIT@,Qt,g' < menu/applications.menu.in > $@
-	@xmllint --noout --dtdvalid menu/menu.dtd $@
+	@ln -s kde-applications.menu $@
 	@echo " OK"
 
 kde-applications.menu: menu/validated-menu
@@ -22,6 +21,13 @@ kde-applications.menu: menu/validated-menu
 	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' -e 's,@ALTERNATIVE_DESKTOP@,GNOME,g' -e 's,@ALTERNATIVE_TOOLKIT@,GTK,g' < menu/applications.menu.in > $@
 	@xmllint --noout --dtdvalid menu/menu.dtd $@
 	@echo " OK"
+
+gnome-applications.menu: menu/validated-menu
+	@echo -n "generating $@ "
+	@sed -e 's,@MAIN_DESKTOP@,GNOME,g' -e 's,@MAIN_TOOLKIT@,GTK,g' -e 's,@ALTERNATIVE_DESKTOP@,KDE,g' -e 's,@ALTERNATIVE_TOOLKIT@,Qt,g' < menu/applications.menu.in > $@
+	@xmllint --noout --dtdvalid menu/menu.dtd $@
+	@echo " OK"
+
 
 checktag:
 	@if [ -e ".git" ]; then \
