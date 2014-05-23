@@ -102,13 +102,13 @@
     <Name>Office</Name>
     <Directory>mandriva-office.directory</Directory>
     <Layout>
-      <Filename>startcenter.desktop</Filename>
-      <Filename>writer.desktop</Filename>
-      <Filename>calc.desktop</Filename>
-      <Filename>impress.desktop</Filename>
-      <Filename>base.desktop</Filename>
-      <Filename>draw.desktop</Filename>
-      <Filename>web.desktop</Filename>
+      <Filename>libreoffice-startcenter.desktop</Filename>
+      <Filename>libreoffice-writer.desktop</Filename>
+      <Filename>libreoffice-calc.desktop</Filename>
+      <Filename>libreoffice-impress.desktop</Filename>
+      <Filename>libreoffice-base.desktop</Filename>
+      <Filename>libreoffice-draw.desktop</Filename>
+      <Filename>libreoffice-web.desktop</Filename>
       <Separator/>
       <Merge type="files"/>
       <Menuname>More</Menuname>
