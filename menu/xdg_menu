@@ -1902,7 +1902,7 @@ sub output_readable ($;$)
 
 sub get_root_menu
 {
-	foreach my $dir (split(/:/, $ENV{XDG_CONFIG_DIRS}), "/etc/xdg") {
+	foreach my $dir (split(/:/, $ENV{XDG_CONFIG_DIRS}), "/etc/xdg", "/etc/qt5/menus" ) {
 		check_file("$dir/menus/applications.menu");
 		return "$dir/menus/applications.menu" if -f "$dir/menus/applications.menu";
 	}
