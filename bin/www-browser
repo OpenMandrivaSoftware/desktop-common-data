@@ -64,9 +64,12 @@ if [[ -z "$BROWSER" ]]; then
 	    BROWSER="exo-open --launch WebBrowser"
     fi
 
+    if [[  x"$XDG_CURRENT_DESKTOP" = x"LXQt" ]]; then
+	    BROWSER=${BROWSER}
+    fi
 
     strip_browser_var
-    
+
     [[ -z "$BROWSER" ]] && BROWSER=`which firefox 2> /dev/null` 
     [[ -z "$BROWSER" ]] && BROWSER=`which mozilla-firefox 2> /dev/null` 
     [[ -z "$BROWSER" ]] && [[ -n "$KDE_FULL_SESSION" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
@@ -75,6 +78,7 @@ if [[ -z "$BROWSER" ]]; then
     [[ -z "$BROWSER" ]] && BROWSER=`which seamonkey 2> /dev/null`
     [[ -z "$BROWSER" ]] && BROWSER=`which chromium-browser 2> /dev/null`
     [[ -z "$BROWSER" ]] && BROWSER=`which midori 2> /dev/null`
+    [[ -z "$BROWSER" ]] && BROWSER=`which qupzilla 2> /dev/null`
     [[ -z "$BROWSER" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
     [[ -z "$BROWSER" ]] && which links > /dev/null 2>&1 && BROWSER="xvt -e links"
     [[ -z "$BROWSER" ]] && which lynx > /dev/null 2>&1 && BROWSER="xvt -e lynx"

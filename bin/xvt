@@ -44,8 +44,13 @@ if [[ -z "$TERMINAL" ]]; then
         [[ -z "$TERMINAL" ]] && TERMINAL=`sed -n -e 's,^TerminalEmulator=\(.*\),\1,p' $HOME/.config/xfce4/helpers.rc 2> /dev/null`
     fi
 
+    # using LXQt
+    if [[  x"$XDG_CURRENT_DESKTOP" = x"LXQt" ]]; then
+        [[ -z "$TERMINAL" ]] && TERMINAL=`which qterminal 2> /dev/null`
+    fi
+
    strip_terminal_var 
-   
+
     [[ -z "$TERMINAL" ]] && TERMINAL=`which aterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which Eterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which gnome-terminal 2> /dev/null`
@@ -58,6 +63,7 @@ if [[ -z "$TERMINAL" ]]; then
     [[ -z "$TERMINAL" ]] && TERMINAL=`which terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which terminator 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which xfce4-terminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which qterminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which xterm 2> /dev/null`
 
 fi
