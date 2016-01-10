@@ -48,10 +48,11 @@ sub parse_file {         # parse a session descriptor file
      $_ = cat ($fn);
      ($n = $1) =~ s| ||g if /^NAME=(.*)/m;
      $e = $1 if /^EXEC=(.*)/m;
+     my $dn = $1 if /^DESKTOPNAMES=(.*)/m;
 #     $d = $1 if /^DESC=(.*)/m;
 #     $i = $1 if /^ICON=(.*)/m;
      $s = $1 while /SCRIPT:(.*?)$/gs; chomp $s;
-     if (-x $e) { $script{$n} = $s; $exe{$n} = $e; push @lf, $n; ($order{$n}) = $fn =~ m/(^[0-9][0-9])/; }
+     if (-x $e) { $script{$n} = $s; $exe{$n} = $e; $desktopnames{$n} = $dn; push @lf, $n; ($order{$n}) = $fn =~ m/(^[0-9][0-9])/; }
 #     if (-x $e) { $script{$n} = $s; $exec{$n} = $e; $desc{$n} = $d; $icon{$n} = $i; push @lf, $n; }
 }
 
@@ -67,6 +68,7 @@ sub gen_desktops {
 	print FH "Name=$file\n";
 	print FH "Comment=$file\n";
 	print FH "TryExec=$exe{$file}\n" if $exe{$file};
+	print FH "DesktopNames=$desktopnames{$file}\n" if $desktopnames{$file};
 	if ($usesession) {
 	    print FH "Exec=/usr/share/X11/xdm/Xsession $file\n";
 	} else {
