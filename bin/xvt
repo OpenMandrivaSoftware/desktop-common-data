@@ -49,7 +49,7 @@ if [[ -z "$TERMINAL" ]]; then
         [[ -z "$TERMINAL" ]] && TERMINAL=`which qterminal 2> /dev/null`
     fi
 
-   strip_terminal_var 
+   strip_terminal_var
 
     [[ -z "$TERMINAL" ]] && TERMINAL=`which aterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which Eterm 2> /dev/null`

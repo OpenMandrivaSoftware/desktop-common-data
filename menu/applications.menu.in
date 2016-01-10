@@ -357,6 +357,9 @@
               <Category>PackageManager</Category>
               <Category>X-MandrivaLinux-More</Category>
               <Category>Printing</Category>
+              <Category>X-XFCE-SettingsDialog</Category>
+              <Category>X-XFCE-PersonalSettings</Category>
+              <Category>LXQt</Category>
               <Category>X-KDE-settings-accessibility</Category>
               <Category>X-KDE-settings-components</Category>
               <Category>X-KDE-settings-desktop</Category>
@@ -996,8 +999,13 @@
     <Name>Documentation</Name>
     <Directory>mandriva-documentation.directory</Directory>
     <Include>
-      <Category>X-MandrivaLinux-MoreApplications-Documentation</Category>
-      <Category>Documentation</Category>
+      <And>
+        <Category>X-MandrivaLinux-MoreApplications-Documentation</Category>
+        <Category>Documentation</Category>
+        <Not>
+          <Category>LXQt</Category>
+        </Not>
+      </And>
     </Include>
   </Menu>
   <!--
@@ -1018,6 +1026,9 @@
     <Directory>mandriva-hidden.directory</Directory>
     <Include>
       <Category>X-MandrivaLinux-.hidden</Category>
+      <Category>X-XFCE-SettingsDialog</Category>
+      <Category>X-XFCE-PersonalSettings</Category>
+      <Category>LXQt</Category>
     </Include>
   </Menu>
   <Menu>
