@@ -3,7 +3,7 @@ NAME = desktop-common-data
 VERSION=2015.0
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 mandir=/usr/share/man
-#https://abf.rosalinux.ru/omv_software/desktop-common-data
+#https://abf.io/omv_software/desktop-common-data
 SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
 menus: applications.menu kde-applications.menu gnome-applications.menu

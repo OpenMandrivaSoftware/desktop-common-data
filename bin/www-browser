@@ -37,7 +37,7 @@ strip_browser_var() {
 
 strip_browser_var
 if [[ -z "$BROWSER" ]]; then
- 
+
     # using GNOME
     if [[ -n "$GNOME_DESKTOP_SESSION_ID" ]]; then
 	BROWSER=`gconftool -g /desktop/gnome/url-handlers/http/command | sed -e 's/ %s//'`
@@ -51,7 +51,7 @@ if [[ -z "$BROWSER" ]]; then
 	NEWBROWSER=`kreadconfig --group General --key BrowserApplication 2>/dev/null`
 	if [[ -n "$NEWBROWSER" ]]; then
 	    BROWSER=`echo $NEWBROWSER | sed -e 's/\(.*\).desktop/\1/'`
-	    if [[ x"$KDE_SESSION_VERSION" == x"4" ]]; then   # KDE 4
+	    if [[ x"$KDE_SESSION_VERSION" -ge 4 ]]; then   # KDE 4 or higher
 		BROWSER="dbus-send --type=method_call --dest=org.kde.klauncher /KLauncher org.kde.KLauncher.start_service_by_desktop_name string:$BROWSER array:string: array:string: string: boolean:true"
 	    else                                        # KDE 3
 		BROWSER="dcop klauncher default start_service_by_desktop_name(QString,QStringList) $BROWSER [ ]"
@@ -84,7 +84,7 @@ if [[ -z "$BROWSER" ]]; then
     [[ -z "$BROWSER" ]] && which lynx > /dev/null 2>&1 && BROWSER="xvt -e lynx"
 fi
 
-if [[ -n "$BROWSER" ]]; then 
+if [[ -n "$BROWSER" ]]; then
     if [[ -n "$THROUGHXDG" ]]; then
 	# xdg couldn't handle the url
 	exec $BROWSER $@
