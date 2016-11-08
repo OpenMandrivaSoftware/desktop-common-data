@@ -6,7 +6,7 @@
 # Modified by Bernard Lang on August 21, 2003.
 
 
-my @lf;
+my (@lf, $dir, $first, $list, $list_order, %order, $test);
 
 sub usage {
   my $e = shift @_;
@@ -20,15 +20,10 @@ Usage: $0 [OPTION]...
 	      -L:           List window-managers including the order number
 
 	      -d=DIR, --dir=DIR:   Specifies a directory of w-m configuration files.
-			 Default is /etc/X11/wmsession.d/
+			 Default is /usr/share/xsessions/
 
-	      -x=ENTRY, --xsession=ENTRY: Produce window-managers script of ENTRY.
+              -x=ENTRY, --xsession=ENTRY: Produce window-managers script of ENTRY.
 
-	      --generate=DIR: Produce window-manager .desktop files into DIR.
-	      --wrap-sessions: Wrap window-managers with /usr/share/X11/xdm/Xsession.
-
-	      -K,  --kdm4:   Produce window-managers list for kdm4 sessions.
-	      -g,  --gdm:   Produce window-managers script for gdm sessions.
 	      -h, --help:   Produce this help.
 
 EOF
@@ -37,72 +32,35 @@ EOF
 
 sub cat {   # returns content of argument file as a single string
   my ($f) = @_;
-  local *F;
-  open F, $f or die "Can't open $f\n";
+  open my $F, $f or die "Can't open $f\n";
   local $/ = "";
-  <F>
-  }
-  
-sub parse_file {         # parse a session descriptor file
-    my ($fn) = @_;
-     $_ = cat ($fn);
-     ($n = $1) =~ s| ||g if /^NAME=(.*)/m;
-     $e = $1 if /^EXEC=(.*)/m;
-     my $dn = $1 if /^DESKTOPNAMES=(.*)/m;
-#     $d = $1 if /^DESC=(.*)/m;
-#     $i = $1 if /^ICON=(.*)/m;
-     $s = $1 while /SCRIPT:(.*?)$/gs; chomp $s;
-     if (-x $e) { $script{$n} = $s; $exe{$n} = $e; $desktopnames{$n} = $dn; push @lf, $n; ($order{$n}) = $fn =~ m/(^[0-9][0-9])/; }
-#     if (-x $e) { $script{$n} = $s; $exec{$n} = $e; $desc{$n} = $d; $icon{$n} = $i; push @lf, $n; }
+  <$F>;
 }
 
-sub gen_desktops {
-    my ($d, $usesession) = @_;
-    -d $d or system("mkdir -p $d");
-    system("rm -f $d/*");
-
-    for my $file (@lf) {
-	open FH, ">$d/$order{$file}$file.desktop" or die "Can't write to $d/$order{$file}.desktop\n";
-	print FH "[Desktop Entry]\n";
-	print FH "Encoding=UTF-8\n";
-	print FH "Name=$file\n";
-	print FH "Comment=$file\n";
-	print FH "TryExec=$exe{$file}\n" if $exe{$file};
-	print FH "DesktopNames=$desktopnames{$file}\n" if $desktopnames{$file};
-	if ($usesession) {
-	    print FH "Exec=/usr/share/X11/xdm/Xsession $file\n";
-	} else {
-	    print FH "Exec=$file\n";
-	}
-	print FH "Icon=\n";
-	print FH "Type=Application\n";
-	close FH;
-	chmod 0755, $file;
-    }
+sub parse_file {         # parse a session descriptor file
+    my ($fn) = @_;
+     my $n;
+     local $_ = cat($fn);
+     ($n = $1) =~ s| ||g if /^Name=(.*)/m;
+     my $e = $1 if /^Exec=(.*)/m;
+     $script{$n} = $e;
+     push @lf, $n;
+     ($order{$n}) = $fn =~ m/(^[0-9][0-9])/
 }
 
 usage(1)
   if @ARGV < 1;
 
 while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
-  $_ = shift;
+  local $_ = shift;
   if (/^--xsession=([^ ]+)/ || /^-x=([^ ]+)/) {
     $xsession = $1;
   } elsif (/^--first/ || /^-F/) {
     $first++;
-  } elsif (/^--generate=([^ ]+)/) {
-    $generate = $1;
-  } elsif (/^--wrap-sessions/) {
-    $wrap_sessions++;
-  } elsif (/^--gdm/ || /^-g/) {
-    die "You should be root to build gdm session\n" if $< != 0;
-    $gdm++;
   } elsif (/^--list/ || /^-l/) {
     $list++;
   } elsif (/^-L/) {
     $list_order++;
-  } elsif (/^--kdm4/ || /^-K/) {
-    $kdm4++;
   } elsif (/^--test/ || /^-t/) {
     $test++;
   } elsif (/^--dir=([^ ]+)/ || /^-d=([^ ]+)/) {
@@ -114,56 +72,42 @@ while ($ARGV[0] =~ /^--/ || $ARGV[0] =~ /^-/) {
     usage(1);
   }
 }
-  
+
 # Parse all relevant files in session directory $dir
-$dir = $test ? './wmsession.d/' : '/etc/X11/wmsession.d/' unless $dir;
-chdir $dir; 
-for (<*>) {
-    next if /.*~/;
-    next if /.*\.rpm(save|old)/;
-    parse_file ("$_");
+$dir = $test ? './xsessions/' : '/usr/share/xsessions/' unless $dir;
+chdir($dir);
+foreach (glob("*.desktop")) {
+    parse_file($_);
 }
 
-my ($e) = eval {cat("/etc/sysconfig/desktop")} =~ /DESKTOP=(\S+)/;
+my ($e) = eval { cat("/etc/sysconfig/desktop") } =~ /DESKTOP=(\S+)/;
 # The first string (without spaces) in the file is copied to $e.
 
 # If $e is one of the names in @lf, then it is placed first (leftmost).
 # Order of names in @lf is otherwise unchanged.
 @lf = sort { $b =~ /^$e$/i <=> $a =~ /^$e$/i } @lf;
 
-if ($generate) {
-    gen_desktops($generate, $wrap_sessions);
-}
-
-if ($kdm4) {
-    gen_desktops('/usr/share/apps/kdm/sessions', 0);
-}
-
-if ($gdm) {
-    gen_desktops('/etc/X11/dm/Sessions', 1);
-}
-
 if ($xsession) {
-  if ($script{$xsession}) {
-    print "#!/bin/sh\n";
-    print $script{$xsession}
-  } else {
-    print "xterm -geometry 100x25+0+0 &\n";
+    if ($script{$xsession}) {
+	print "#!/bin/sh\n";
+	print $script{$xsession}
+    } else {
+	print "xterm -geometry 100x25+0+0 &\n";
 	if ( -x '/usr/bin/icewm' ) {
-		print "icewm\n";
+	    print "icewm\n";
 	} elsif ( -x '/usr/bin/twm' ) {
-		print "twm\n";
+	    print "twm\n";
 	} else {
-		print "xterm -geometry 67x14+384+446\n";
+	    print "xterm -geometry 67x14+384+446\n";
 	}
-  }
-  exit (0);
+    }
+    exit (0);
 }
 
 @lf ? print shift @lf, "\n" : print "default\n"
   if $first;
 
-if ($list) { 
+if ($list) {
   if (@lf) {
     print join(' ', @lf, 'default', 'failsafe'), "\n";
  } else {
@@ -172,4 +116,3 @@ if ($list) {
 } elsif ($list_order) { 
     print join(' ', map { "$_=$order{$_}" } @lf), "\n";
 }
-

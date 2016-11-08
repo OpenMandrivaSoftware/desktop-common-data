@@ -10,7 +10,7 @@ foreach $f (map { grep { /\.kdelnk$/ } eval { all("$_/Desktop") } } @dirs) {
     L: foreach (<F>) {
 	  if (/^Exec=(?:kdesu\s+-c\s+)?"?(\S+)/) {
 	      -x "$_/$1" and last L foreach '', @path;
-	  } elsif (m|^URL=file:(/.*)|) {	  
+	  } elsif (m|^URL=file:(/.*)|) {
 	      -e $1 and last;
 	  } else { next }
 	  print STDERR "removing $f\n";

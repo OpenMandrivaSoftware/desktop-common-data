@@ -6,7 +6,7 @@ mandir=/usr/share/man
 #https://abf.io/omv_software/desktop-common-data
 SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
-menus: applications.menu kde-applications.menu gnome-applications.menu
+menus: applications.menu plasma-applications.menu gnome-applications.menu
 
 menu/validated-menu: menu/applications.menu.in
 	xmllint --noout --dtdvalid menu/menu.dtd $?
@@ -16,7 +16,7 @@ applications.menu: kde-applications.menu
 	@ln -s kde-applications.menu $@
 	@echo " OK"
 
-kde-applications.menu: menu/validated-menu
+plasma-applications.menu: menu/validated-menu
 	@echo -n "generating $@ "
 	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' -e 's,@ALTERNATIVE_DESKTOP@,GNOME,g' -e 's,@ALTERNATIVE_TOOLKIT@,GTK,g' < menu/applications.menu.in > $@
 	@xmllint --noout --dtdvalid menu/menu.dtd $@
@@ -49,7 +49,7 @@ checktag:
 
 clean:
 	find . -type d -name '.xvpics' -o -name '*~' |xargs rm -rf
-	rm -f applications.menu kde-applications.menu
+	rm -f applications.menu plasma-applications.menu
 
 # rules to build a distributable rpm
 

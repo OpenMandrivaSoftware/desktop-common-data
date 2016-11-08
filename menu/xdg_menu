@@ -41,12 +41,12 @@ my %Directory_entries;
 sub check_file ($)
 {
 	my ($file) =@_;
-	
+
 	unless (-e $file) {
 		push @accessed_files, "X $file";
 		return '';
 	}
-	
+
 	if (-d $file) {
 		push @accessed_files, "D $file";
 		return 'D';
@@ -144,7 +144,7 @@ sub add_png_extension_if_needed ($)
 sub scan_AppDir ($$;$)
 {
 	my ($pool, $dir, $topdir) = @_;
-	
+
 	check_file($dir);
 	$topdir = $dir unless defined $topdir;
 
@@ -180,14 +180,14 @@ sub scan_DirectoryDir ($$;$)
 			scan_DirectoryDir ($pool, "$dir/$entry", $topdir);
 		}
 	}
-	
+
 	closedir DIR;
 }
 
 sub read_directory_entry
 {
 	my ($pool, $file, $topdir) = @_;
-	
+
 
 	unless (defined $Directory_entries{$file}) {
 
@@ -222,7 +222,7 @@ sub read_directory_entry
 	}
 
 	my $entry = $Directory_entries{$file};
-	
+
 	$pool->{'Directory_entries'}{$entry->{'id'}} = $entry;
 }
 
@@ -234,7 +234,7 @@ sub check_show_in ($)
 
 	my %OnlyShowIn;
 	my %NotShowIn;
-	
+
 	if (defined $entry->{'OnlyShowIn'}) {
 		foreach my $showin (split /;/, $entry->{'OnlyShowIn'}) {
 			$OnlyShowIn{$showin} = 1;
@@ -247,7 +247,7 @@ sub check_show_in ($)
 		}
 		return 0 if defined $NotShowIn{$desktop_name} ;
 	}
-	
+
 	return 1;
 }
 
@@ -259,7 +259,7 @@ sub read_desktop_entry
 	unless (defined $Desktop_entries{$file}) {
 
 		check_file($file);
-	
+
 		open(FILE, "<$file") or return;
 
 		my $in_desktop_entry = 0;
@@ -286,7 +286,7 @@ sub read_desktop_entry
 		$entry{'id'} = $id;
 
 		$entry{'refcount'} = 0;
-		
+
 		$Desktop_entries{$file} = \%entry;
 	}
 
@@ -300,10 +300,9 @@ sub read_desktop_entry
 	return unless check_show_in($entry);
 
 	return if defined $entry->{'NotShowIn'} && $entry->{'NotShowIn'} eq $desktop_name;	
-	
-	
+
 	if (defined $pool) {
-	
+
 		foreach my $category (split /;/, $entry->{'Categories'}) {
 		        $pool->{'Categories'}{$category} = [] unless defined $pool->{'Categories'}{$category};
 			push @{$pool->{'Categories'}{$category}}, $entry;
@@ -323,30 +322,30 @@ sub read_desktop_entries ($$)
 
 	if ($cached_pool->{'Directory_paths'} eq $directory_paths &&
 	    $cached_pool->{'Desktop_paths'} eq $desktop_paths) {
-	
+
 		return $cached_pool;
 	}
 
-	
+
 	my $pool = {'Desktop_entries' => {},
 		       'Categories' => {},
 		       'Directory_entries' => {},
 		       'Directory_paths' => $directory_paths,
 		       'Desktop_paths' => $desktop_paths
 		       };
-		       
+
 	foreach my $dir (split /:/, $directory_paths) {
 		next if $dir =~ /^\s*$/;
 		scan_DirectoryDir($pool, $dir);
 	}
-	
+
 	foreach my $dir (split /:/, $desktop_paths) {
 		next if $dir =~ /^\s*$/;
 		scan_AppDir($pool, $dir);
 	}
 
 	$cached_pool = $pool;
-	
+
 	return $pool;
 }
 
@@ -354,7 +353,7 @@ sub dump_entry_list ($)
 {
 	my ($list) = @_;
 
-	print "list: ";	
+	print "list: ";
 	foreach my $entry (@$list) {
 		print "$entry->{id} ";
 	}
@@ -365,7 +364,7 @@ sub dump_entry_list ($)
 sub get_directory_entry ($$)
 {
 	my ($entry, $pool) = @_;
-	
+
 	return $pool->{'Directory_entries'}{$entry};
 }
 
@@ -373,7 +372,7 @@ sub interpret_Include
 {
 	my ($tree, $entries, $pool) = @_;
 	my %exist;
-	
+
 	my $i = 0;
 
 
@@ -389,28 +388,28 @@ sub interpret_Include
 #	dump_entry_list(\@list);
 
 	foreach my $entry (@list) {
-		
+
 		next if $exist{$entry};
-		
+
 		push @$entries, {type => 'desktop', desktop => $entry};
 		$entry->{'refcount'}++;
-		
+
 		$exist{$entry} = 1;
-			
+
 	}
 }
 
 sub interpret_Exclude
 {
 	my ($tree, $entries, $pool) = @_;
-	
+
 	my $i = 0;
 
 	my @list = interpret_entry_node($tree, 'Or', $pool);
 
 
 	foreach my $entry (@list) {
-		
+
 		my $i = 0;
 		while (defined $entries->[$i]) {
 			my $exist = $entries->[$i];
@@ -433,9 +432,9 @@ sub interpret_entry_node ($$$)
 
 	my $i = 0;
 	$i++ if (ref($tree->[$i]) eq 'HASH');
-	
+
 	my @subtree;
-	
+
 	while (defined $tree->[$i]) {
 		if ($tree->[$i] eq 'Filename') {
 			$i++;
@@ -520,7 +519,7 @@ sub interpret_entry_node ($$$)
 		my $min = @{$subtree[0]};
 		my $min_idx = 0;
 		my $idx = 0;
-		
+
 		foreach my $st (@subtree) {
 #			print "  st: ";
 #			dump_entry_list($st);
@@ -530,12 +529,12 @@ sub interpret_entry_node ($$$)
 				$min = $num;
 				$min_idx = $idx;
 			}
-			
+
 			my %dupes;
 			foreach my $entry (@$st) {
 				next if $dupes{$entry};
 				$dupes{$entry} = 1;
-				
+
 				if (! defined $used{$entry}) {
 					$used{$entry} = 1;
 				}
@@ -543,14 +542,14 @@ sub interpret_entry_node ($$$)
 					$used{$entry} ++
 				}
 			}
-			
+
 			$idx ++;
 		}
 		return () if $cnt == 0;
 		foreach my $entry (@{$subtree[$min_idx]}) {
 			push @res, $entry if $used{$entry} == $cnt;
 		}
-		
+
 #		print " res: ";
 #		dump_entry_list(\@res);
 		return @res;
@@ -571,7 +570,7 @@ sub interpret_entry_node ($$$)
 		foreach my $entry (values %{$pool->{'Desktop_entries'}}) {
 			push @res, $entry if !defined $used{$entry};
 		}
-		
+
 #		print " res: ";
 #		dump_entry_list(\@res);
 		return @res;
@@ -599,10 +598,10 @@ sub interpret_root ($$)
 sub interpret_menu ($;$$)
 {
 	my ($tree, $directory_paths, $desktop_paths) = @_;
-	
+
 	$directory_paths = '' unless defined $directory_paths;
 	$desktop_paths = '' unless defined $desktop_paths;
-	
+
 	my %menu = ('entries' => [], 
 	            'OnlyUnallocated' => 0,
 		    'DontShowIfEmpty' => 0,
@@ -651,10 +650,10 @@ sub interpret_menu ($;$$)
 		}
 	}
 
-	
+
 	$menu{directory_paths} = $directory_paths;
 	$menu{desktop_paths} = $desktop_paths;
-	
+
 	my $pool = read_desktop_entries($directory_paths, $desktop_paths);
 
 
@@ -738,16 +737,16 @@ sub interpret_menu ($;$$)
 			exit 1 if $die_on_error;
 		}
 	}
-	
+
 	return \%menu;
 }
 
-		
+
 sub read_menu ($;$)
 {
 	my ($file, $basedir) = @_;
 
-	
+
 	if ($file !~ /^\// && defined $basedir) {
 		$file = "$basedir/$file";
 	}
@@ -760,19 +759,19 @@ sub read_menu ($;$)
 	unless (check_file($file)) {
 		print STDERR "WARNING: '$file' does not exist\n";
 		return ['Menu', [{}]];
-	}	
+	}
 
 	print STDERR "reading '$file'\n" if $verbose; 
 
 	my $parser = new XML::Parser(Style => 'Tree');
 	my $tree = $parser->parsefile($file);
-	
+
 	my $DefaultMergeDir = $file;
 	$DefaultMergeDir =~ s/^.*\///;
 	$DefaultMergeDir =~ s/\.menu$/-merged/;
-	
+
 	read_includes($tree, $basedir, $DefaultMergeDir);
-	
+
 	return $tree
 }
 
@@ -781,14 +780,14 @@ sub read_menu_dir ($;$)
 	my ($dir, $basedir) = @_;
 
 	my @out;
-	
+
 	if ($dir !~ /^\// && defined $basedir) {
 		$dir = "$basedir/$dir";
 	}
 
 
 	check_file($dir);
-	
+
 	opendir(DIR, $dir);
 
 	foreach my $entry (readdir(DIR)) {
@@ -807,7 +806,7 @@ sub read_menu_dir ($;$)
 sub quote_xml ($)
 {
 	my ($txt) = @_;
-	
+
 	$txt =~ s/&/&amp;/g;
 	$txt =~ s/</&lt;/g;
 	$txt =~ s/>/&gt;/g;
@@ -820,16 +819,16 @@ sub read_legacy_dir ($;$)
 	my $out;
 
 	$dir =~ s/\/*$//;
-	
+
 	$basedir = $dir unless defined $basedir;
-	
+
 	return "" if check_file($dir) ne 'D';
-	
+
 	$out = "<Menu>\n";
-	
+
 	if ($dir eq $basedir) {
 		my $xmldir = quote_xml($dir);
-	
+
 		$out .= "<AppDir>$xmldir</AppDir>\n";
 		$out .= "<DirectoryDir>$xmldir</DirectoryDir>\n";
 	}
@@ -837,20 +836,20 @@ sub read_legacy_dir ($;$)
 		my $name = $dir;
 		$name =~ s/\/*$//;
 		$name =~ s/^.*\///;
-		
+
 		$name = quote_xml($name); 
-		
+
 		$out .= "<Name>$name</Name>\n"; 
 	}
-	
-	
+
+
 	if (-f "$dir/.directory") {
 
 		my $dir_id = "$dir/.directory";
 		$dir_id =~ s/^$basedir//;
 		$dir_id =~ s/^\///;
 		$dir_id = quote_xml($dir_id);
-		
+
 		$out .= "<Directory>$dir_id</Directory>\n";
 	}
 
@@ -864,7 +863,7 @@ sub read_legacy_dir ($;$)
 			$id =~ s/^\///;
 			$id =~ s/\//-/g;
 			$id = quote_xml($id);
-			
+
 			my $desktop = read_desktop_entry(undef, "$dir/$entry", $basedir);
 			$out .= "<Include><Filename>$id</Filename></Include>\n" unless defined $desktop->{'Categories'}
 		}
@@ -904,9 +903,9 @@ sub read_includes ($$$)
 			if (ref($tree->[$i + 1][0]) eq 'HASH' and $tree->[$i + 1][1] eq '0') {
 				my $add_tree = read_menu($tree->[$i + 1][2], $basedir);
 				$add_tree = remove_toplevel_Menu($add_tree);
-				
+
 				splice @$tree, $i, 2, @$add_tree;
-				
+
 			}
 			else {
 				print STDERR "wrong MergeFile\n";
@@ -914,15 +913,15 @@ sub read_includes ($$$)
 				$i++;
 				$i++;
 			}
-			
+
 		}
 		elsif ($tree->[$i] eq 'MergeDir') {
 			if (ref($tree->[$i + 1][0]) eq 'HASH' and $tree->[$i + 1][1] eq '0') {
-				
+
 				my $add_tree = read_menu_dir($tree->[$i + 1][2], $basedir);
-				
+
 				splice @$tree, $i, 2, @$add_tree;
-				
+
 			}
 			else {
 				print STDERR "wrong MergeFile\n";
@@ -930,7 +929,7 @@ sub read_includes ($$$)
 				$i++;
 				$i++;
 			}
-			
+
 		}
 		elsif ($tree->[$i] eq 'DefaultMergeDirs') {
 			my $add_tree = read_menu_dir($DefaultMergeDir, $basedir);
@@ -938,7 +937,7 @@ sub read_includes ($$$)
 		}
 		elsif ($tree->[$i] eq 'LegacyDir') {
 			if (ref($tree->[$i + 1][0]) eq 'HASH' and $tree->[$i + 1][1] eq '0') {
-				
+
 				my $xml = read_legacy_dir($tree->[$i + 1][2]);
 				print STDERR "reading legacy directory '" . $tree->[$i + 1][2] . "'\n" if $verbose; 
 
@@ -946,7 +945,7 @@ sub read_includes ($$$)
 				my $add_tree = $parser->parse($xml);
 				$add_tree = remove_toplevel_Menu($add_tree);
 				splice @$tree, $i, 2, @$add_tree;
-				
+
 			}
 			else {
 				print STDERR "wrong LegacyDir\n";
@@ -954,14 +953,14 @@ sub read_includes ($$$)
 				$i++;
 				$i++;
 			}
-			
+
 		}
 		elsif ($tree->[$i] eq 'KDELegacyDirs') {
 			my @out;
 			foreach my $dir (@KDELegacyDirs) {
 				my $xml = read_legacy_dir($dir);
 				print STDERR "reading legacy directory '$dir'\n" if $verbose; 
-				
+
 				my $parser = new XML::Parser(Style => 'Tree');
 				my $add_tree = $parser->parse($xml);
 				$add_tree = remove_toplevel_Menu($add_tree);
@@ -985,7 +984,7 @@ sub get_menu_name ($)
 {
 	my ($tree) = @_;
 	my $name;
-	
+
 	my $i = 0;
 
 	$i++ if (ref($tree->[$i]) eq 'HASH');
@@ -1007,7 +1006,7 @@ sub get_menu_name ($)
 			$i++;
 		}
 	}
-	
+
 	unless (defined $name) {
 		print STDERR "Menu has no name element\n";
 	}
@@ -1018,27 +1017,27 @@ sub get_menu_name ($)
 sub append_menu ($$)
 {
 	my ($target, $source) = @_;
-	
+
 	my $i = 0;
-	
+
 	$i++ if (ref($source->[$i]) eq 'HASH');
-	
+
 	while (defined $source->[$i]) {
 		if ($source->[$i] ne 'Name') {
 			push @$target, $source->[$i];
 			push @$target, $source->[$i + 1];
 		}
-		
+
 		$i++;
 		$i++;
 	}
 }
 
-			
+
 sub merge_menus ($)
 {
 	my ($tree) = @_;
-	
+
 	my %used; #menu name already used
 
 	my $i = 0;
@@ -1050,9 +1049,9 @@ sub merge_menus ($)
 			my $name = get_menu_name($tree->[$i + 1]);
 			if (defined $used{$name}) { #second menu with the same name
 				my $target = $used{$name};
-				
+
 				append_menu($tree->[$target], $tree->[$i + 1]);
-				
+
 				splice @$tree, $i, 2;
 			}
 			else { # first appearance
@@ -1070,7 +1069,7 @@ sub merge_menus ($)
 
 	$i = 0;
 	$i++ if (ref($tree->[$i]) eq 'HASH');
-	
+
 	while (defined $tree->[$i]) {
 		if ($tree->[$i] eq 'Menu') {
 			merge_menus($tree->[$i + 1]);
@@ -1083,11 +1082,11 @@ sub merge_menus ($)
 sub read_Move ($$)
 {
 	my ($tree, $hash) = @_;
-	
+
 	my $i = 0;
-	
+
 	my $old = '';
-	
+
 
 	$i++ if (ref($tree->[$i]) eq 'HASH');
 
@@ -1124,13 +1123,13 @@ sub read_Move ($$)
 sub find_menu_in_tree ($$)
 {
 	my ($path, $tree) = @_;
-	
+
 	my $root = $path;
 	$root =~ s/\/.*$//;
-	
+
 	my $subpath = $path;
-	$subpath =~ s/^[^\/]*\/*//; 	
-	
+	$subpath =~ s/^[^\/]*\/*//;
+
 	my $i = 0;
 
 	$i++ if (ref($tree->[$i]) eq 'HASH');
@@ -1138,40 +1137,40 @@ sub find_menu_in_tree ($$)
 	while (defined $tree->[$i]) {
 		if ($tree->[$i] eq 'Menu') {
 			if ($root eq get_menu_name($tree->[$i + 1])) {
-			
+
 				if ($subpath eq '') {
 					return { 'parent' => $tree, 'index' => $i, 'menu' => $tree->[$i + 1]}; 
 				}
 				return find_menu_in_tree($subpath, $tree->[$i + 1]);
 			}
 		}
-		
+
 		$i++;
 		$i++;
 	}
-	
+
 	return undef;
 }
 
 sub copy_menu ($$)
 {
 	my ($path, $tree) = @_;
-	
+
 	my $tail;
 	my $child;
-	
+
 	foreach my $elem (reverse split(/\//, $path)) {
 		next if $elem eq '';
-		
+
 		my $menu = [{}, 'Name', [{}, 0, $elem]];
 		push @$menu, ('Menu', $child) if defined $child;
-		
+
 		$tail = $menu unless defined $tail;
 		$child = $menu;
 	}
-	
+
 	append_menu($tail, $tree);
-	
+
 	return $child;
 }
 
@@ -1179,7 +1178,7 @@ sub move_menus ($)
 {
 	my ($tree) = @_;
 
-#	print "@$tree\n";	
+#	print "@$tree\n";
 	my %move;
 
 	my $i = 0;
@@ -1188,7 +1187,7 @@ sub move_menus ($)
 
 	while (defined $tree->[$i]) {
 		if ($tree->[$i] eq 'Move') {
-		
+
 			read_Move($tree->[$i + 1], \%move);
 			splice @$tree, $i, 2;		
 		}
@@ -1878,13 +1877,13 @@ sub output_readable ($;$)
 	foreach my $entry (@{$menu->{'entries'}}) {
 		if ($entry->{type} eq 'desktop') {
 			my $desktop = $entry->{desktop};
-			
+
 			my $name = $desktop->{Name};
 
 			$output .= "\t" x $indent;
 			$output .= "\t\"$name\"\n";
-			
-			
+
+
 			my @v = %$desktop;
 			$output .= "@v\n" if $name  eq '';
 		} 
@@ -1894,9 +1893,9 @@ sub output_readable ($;$)
 		else {
 			print STDERR "wrong menu entry type: $entry->{type}";
 		}
-		
+
 	}
-	
+
 	return $output;
 }
 
@@ -1909,16 +1908,16 @@ sub get_root_menu
 	return "";
 }
 
-sub get_app_dirs 
+sub get_app_dirs
 {
 	my %used;
 	my $ret = '';
-	my @kde_xdgdata = $> ? split(/:/, `kde-config --path xdgdata-apps`) : ();
-	
+	my @kde_xdgdata = $> ? split(/:/, `kf5-config --path xdgdata-apps`) : ();
+
 	foreach $_ (@kde_xdgdata) {
 	    s/\/applications\/*\s*$//;
 	};
-	
+
 	foreach my $d (split(/:/, $ENV{XDG_DATA_DIRS}), @kde_xdgdata, "/usr/share", "/opt/gnome/share") {
 		my $dir = $d;
 		$dir =~ s/\/*$//;
@@ -1964,7 +1963,7 @@ sub get_KDE_legacy_dirs
 sub prepare_language_keys ($)
 {
 	my ($language) = @_;
-	
+
 	my @keys;
 
 	$language =~ s/\.[^@]*//;  # remove .ENCODING
@@ -1986,25 +1985,25 @@ sub prepare_language_keys ($)
 	elsif ($language =~ /^([^_@]*)$/) { # LANG
 		push @keys, $1;
 	}
-	
+
 	return @keys;
 }
 
 sub check_cache
 {
 	my $cachedir = $> ? $ENV{HOME} : '/var/lib/menu';
-	
+
 	return unless -d $cachedir;
-	
+
 	$cachedir .= "/.xdg_menu_cache";
 
 	return unless -f "$cachedir/inputs" && -f "$cachedir/output";
-	
+
 	my @st = stat "$cachedir/output";
 	my $ref_time = $st[10]; #ctime
 
 	open(FILE, "<$cachedir/inputs");
-	
+
 	my $num_opts = 0;
 	
 	while (<FILE>) {
