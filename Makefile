@@ -13,7 +13,7 @@ menu/validated-menu: menu/applications.menu.in
 
 applications.menu: plasma-applications.menu
 	@echo -n "generating $@ "
-	@ln -s kde-applications.menu $@
+	@ln -s plasma-applications.menu $@
 	@echo " OK"
 
 plasma-applications.menu: menu/validated-menu
