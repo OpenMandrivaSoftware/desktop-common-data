@@ -11,7 +11,7 @@ menus: applications.menu plasma-applications.menu gnome-applications.menu
 menu/validated-menu: menu/applications.menu.in
 	xmllint --noout --dtdvalid menu/menu.dtd $?
 
-applications.menu: plasma-applications.menu
+applications.menu: plasma-applications.menu kde-applications.menu
 	@echo -n "generating $@ "
 	@ln -s plasma-applications.menu $@
 	@echo " OK"
