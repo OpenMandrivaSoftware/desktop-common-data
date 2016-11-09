@@ -11,13 +11,14 @@ menus: applications.menu plasma-applications.menu gnome-applications.menu
 menu/validated-menu: menu/applications.menu.in
 	xmllint --noout --dtdvalid menu/menu.dtd $?
 
-applications.menu: plasma-applications.menu kde-applications.menu
+applications.menu: plasma-applications.menu
 	@echo -n "generating $@ "
 	@ln -s plasma-applications.menu $@
 	@echo " OK"
 
 plasma-applications.menu: menu/validated-menu
 	@echo -n "generating $@ "
+	@ln -s plasma-applications.menu kde-applications.menu 
 	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' -e 's,@ALTERNATIVE_DESKTOP@,GNOME,g' -e 's,@ALTERNATIVE_TOOLKIT@,GTK,g' < menu/applications.menu.in > $@
 	@xmllint --noout --dtdvalid menu/menu.dtd $@
 	@echo " OK"
