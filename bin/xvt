@@ -27,7 +27,12 @@ if [[ -z "$TERMINAL" ]]; then
  
     # using GNOME
     if [[ -n "$GNOME_DESKTOP_SESSION_ID" ]]; then
-	TERMINAL=`gconftool -g /desktop/gnome/applications/terminal/exec`
+	TERMINAL=`gsettings get org.gnome.desktop.default-applications.terminal exec | tr -d \'`
+    fi
+
+    # using MATE
+    if [[ -n "$MATE_DESKTOP_SESSION_ID" || x"$XDG_CURRENT_DESKTOP" = x"MATE" ]]; then
+	TERMINAL=`gsettings get org.mate.applications-terminal exec | tr -d \'`
     fi
 
     #using KDE
@@ -51,18 +56,19 @@ if [[ -z "$TERMINAL" ]]; then
 
    strip_terminal_var
 
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which aterm 2> /dev/null`
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which Eterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which gnome-terminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which mate-terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which konsole 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which kterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which lxterminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which xfce4-terminal 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which aterm 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which Eterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which multi-gnome-terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which multixterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which rxvt 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which terminator 2> /dev/null`
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which xfce4-terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which qterminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which xterm 2> /dev/null`
 
