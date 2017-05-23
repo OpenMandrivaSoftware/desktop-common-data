@@ -1,6 +1,6 @@
 PACKAGE = desktop-common-data
 NAME = desktop-common-data
-VERSION=3.0
+VERSION=3.0.1
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 mandir=/usr/share/man
 #https://abf.io/omv_software/desktop-common-data
