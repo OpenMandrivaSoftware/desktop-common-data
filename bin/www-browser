@@ -1,99 +1,25 @@
 #!/bin/sh
-#---------------------------------------------------------------
-# Project         : Mandrakelinux
-# Module          : bin
-# File            : www-browser
-# Version         : $Id: www-browser 243941 2008-08-12 12:48:22Z fcrozat $
-# Author          : Frederic Lepied
-# Created On      : Tue Aug 31 16:26:54 2004
-# Purpose         : launch a web browser
-#---------------------------------------------------------------
-
 #
 # If we got any argument, we can call xdg-open, if we haven´t already done it
 #
-if [ -n "$*" -a -z "$THROUGHXDG" ]; then
+if [ "$#" -ge 1 ]; then
 	# Lock against bug #29599
-	export THROUGHXDG=1
 	exec xdg-open "$@"
 fi
 
 #
 # No URL specified, so we must find a proper browser for the current env
 #
-
-strip_browser_var() {
-    if [[ -n "$BROWSER" ]]; then
-	if [[ `basename "$BROWSER"` == "www-browser" ]]; then
-	    unset BROWSER
-	else
-	    set $BROWSER
-	    if ! which $1 > /dev/null 2>&1; then
-		unset BROWSER
-	    fi
-	fi
-    fi
-}
-
-strip_browser_var
-if [[ -z "$BROWSER" ]]; then
-
-    # using GNOME
-    if [[ -n "$GNOME_DESKTOP_SESSION_ID" ]]; then
-	BROWSER=`gconftool -g /desktop/gnome/url-handlers/http/command | sed -e 's/ %s//'`
-	if [[ `gconftool -g /desktop/gnome/url-handlers/http/needs_terminal` == "true" ]]; then
-	    BROWSER="xvt -e $BROWSER"
-	fi
-    fi
-
-    #using KDE
-    if [[ -n "$KDE_FULL_SESSION" ]]; then
-	NEWBROWSER=`kreadconfig --group General --key BrowserApplication 2>/dev/null`
-	if [[ -n "$NEWBROWSER" ]]; then
-	    BROWSER=`echo $NEWBROWSER | sed -e 's/\(.*\).desktop/\1/'`
-	    if [[ x"$KDE_SESSION_VERSION" -ge 4 ]]; then   # KDE 4 or higher
-		BROWSER="dbus-send --type=method_call --dest=org.kde.klauncher /KLauncher org.kde.KLauncher.start_service_by_desktop_name string:$BROWSER array:string: array:string: string: boolean:true"
-	    else                                        # KDE 3
-		BROWSER="dcop klauncher default start_service_by_desktop_name(QString,QStringList) $BROWSER [ ]"
-	    fi
-	fi
-    fi
-
-    #using XFCE
-    if xprop -root _DT_SAVE_MODE | grep ' = \"xfce4\"$' >/dev/null 2>&1; then
-	    BROWSER="exo-open --launch WebBrowser"
-    fi
-
-    if [[  x"$XDG_CURRENT_DESKTOP" = x"LXQt" ]]; then
-	    BROWSER=${BROWSER}
-    fi
-
-    strip_browser_var
-
-    [[ -z "$BROWSER" ]] && BROWSER=`which firefox 2> /dev/null` 
-    [[ -z "$BROWSER" ]] && BROWSER=`which mozilla-firefox 2> /dev/null` 
-    [[ -z "$BROWSER" ]] && [[ -n "$KDE_FULL_SESSION" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
-    [[ -z "$BROWSER" ]] && BROWSER=`which epiphany 2> /dev/null`
-    [[ -z "$BROWSER" ]] && BROWSER=`which galeon 2> /dev/null`
-    [[ -z "$BROWSER" ]] && BROWSER=`which seamonkey 2> /dev/null`
-    [[ -z "$BROWSER" ]] && BROWSER=`which chromium-browser 2> /dev/null`
-    [[ -z "$BROWSER" ]] && BROWSER=`which google-chrome 2> /dev/null`
-    [[ -z "$BROWSER" ]] && BROWSER=`which midori 2> /dev/null`
-    [[ -z "$BROWSER" ]] && BROWSER=`which qupzilla 2> /dev/null`
-    [[ -z "$BROWSER" ]] && which kfmclient > /dev/null 2>&1 && BROWSER="kfmclient openProfile webbrowsing"
-    [[ -z "$BROWSER" ]] && which links > /dev/null 2>&1 && BROWSER="xvt -e links"
-    [[ -z "$BROWSER" ]] && which lynx > /dev/null 2>&1 && BROWSER="xvt -e lynx"
+[ -n "$BROWSER" ] && [ `basename "$BROWSER"` == "www-browser" ] && unset BROWSER
+if [ -n "$BROWSER" ] && ! which $BROWSER &>/dev/null; then
+	unset BROWSER
 fi
 
-if [[ -n "$BROWSER" ]]; then
-    if [[ -n "$THROUGHXDG" ]]; then
-	# xdg couldn't handle the url
-	exec $BROWSER $@
-    else
-	exec $BROWSER
-    fi
-else
-    echo "no web browser detected"
+if [ -z "$BROWSER" ]; then
+	for i in falkon firefox chromium-browser-stable chromium-browser-beta chromium-browser-dev otter-browser arora; do
+		BROWSER="`which $i 2>/dev/null`"
+		[ -n "$BROWSER" ] && break
+	done
 fi
 
-# www-browser ends here
+exec $BROWSER

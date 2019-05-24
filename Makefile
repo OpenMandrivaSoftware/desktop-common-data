@@ -6,30 +6,6 @@ mandir=/usr/share/man
 #https://abf.io/omv_software/desktop-common-data
 SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
-menus: applications.menu plasma-applications.menu gnome-applications.menu
-
-menu/validated-menu: menu/applications.menu.in
-	xmllint --noout --dtdvalid menu/menu.dtd $?
-
-applications.menu: plasma-applications.menu
-	@echo -n "generating $@ "
-	@ln -s plasma-applications.menu $@
-	@echo " OK"
-
-plasma-applications.menu: menu/validated-menu
-	@echo -n "generating $@ "
-	@ln -s plasma-applications.menu kde-applications.menu 
-	@sed -e 's,@MAIN_DESKTOP@,KDE,g' -e 's,@MAIN_TOOLKIT@,Qt,g' -e 's,@ALTERNATIVE_DESKTOP@,GNOME,g' -e 's,@ALTERNATIVE_TOOLKIT@,GTK,g' < menu/applications.menu.in > $@
-	@xmllint --noout --dtdvalid menu/menu.dtd $@
-	@echo " OK"
-
-gnome-applications.menu: menu/validated-menu
-	@echo -n "generating $@ "
-	@sed -e 's,@MAIN_DESKTOP@,GNOME,g' -e 's,@MAIN_TOOLKIT@,GTK,g' -e 's,@ALTERNATIVE_DESKTOP@,KDE,g' -e 's,@ALTERNATIVE_TOOLKIT@,Qt,g' < menu/applications.menu.in > $@
-	@xmllint --noout --dtdvalid menu/menu.dtd $@
-	@echo " OK"
-
-
 checktag:
 	@if [ -e ".git" ]; then \
          if ! git diff --quiet  ; then \
@@ -50,13 +26,12 @@ checktag:
 
 clean:
 	find . -type d -name '.xvpics' -o -name '*~' |xargs rm -rf
-	rm -f applications.menu plasma-applications.menu
 
 # rules to build a distributable rpm
 
 dist: dist-git
 
-dist-old: menus checktag clean changelog tag
+dist-old: checktag clean changelog tag
 	rm -rf $(NAME)-$(VERSION)*.tar* $(NAME)-$(VERSION)
 	@if [ -e ".svn" ]; then \
 		$(MAKE) dist-svn; \
