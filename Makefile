@@ -1,28 +1,9 @@
 PACKAGE = desktop-common-data
 NAME = desktop-common-data
-VERSION=3.0.1
+VERSION = 4.1
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 mandir=/usr/share/man
 #https://abf.io/omv_software/desktop-common-data
-SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
-
-checktag:
-	@if [ -e ".git" ]; then \
-         if ! git diff --quiet  ; then \
-	   echo not all changes are committed, aborting ; \
-	   exit 1 ; \
-	 fi ; \
-	 if [ -e ".git/svn" ]; then \
-	   if ! git diff --quiet HEAD..trunk ; then \
-	   echo not all changes were pushed to SVN repository ; \
-	   exit 1 ; \
-	   fi ; \
-	 fi ; \
-	fi
-	@if [ "x$(VERSION)" == "x" -o "x$(RELEASE)" = "x" ]; then \
- 	  echo usage is "make VERSION=version_number RELEASE=release_number dist" ; \
-	  exit 1 ; \
-	fi
 
 clean:
 	find . -type d -name '.xvpics' -o -name '*~' |xargs rm -rf
@@ -42,21 +23,6 @@ dist-old: checktag clean changelog tag
 		exit 1; \
 	fi;
 	$(info $(NAME)-$(VERSION).tar.xz is ready)
-
-dist-git: 
-	git archive --prefix=$(NAME)-$(VERSION)/ HEAD | xz -cv -T0 > $(NAME)-$(VERSION).tar.xz;
-
-dist-svn: 
-	svn export -q -rBASE . $(NAME)-$(VERSION)
-	tar cfJ $(NAME)-$(VERSION).tar.xz $(NAME)-$(VERSION)
-	rm -rf $(NAME)-$(VERSION)
-
-tag: checktag
-	@if [ -e ".svn" ]; then \
-		svn copy $(SVNROOT)/trunk $(SVNROOT)/tags/$(TAG) -m "$(TAG)"; \
-	elif [ -e ".git" -a -e ".git/svn" ]; then \
-		git svn tag $(TAG); \
-	fi;
 
 .PHONY: ChangeLog log changelog
 

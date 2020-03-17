@@ -56,9 +56,10 @@ if [[ -z "$TERMINAL" ]]; then
 
    strip_terminal_var
 
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which konsole 2> /dev/null`
+    [[ -z "$TERMINAL" ]] && TERMINAL=`which qterminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which gnome-terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which mate-terminal 2> /dev/null`
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which konsole 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which kterm 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which lxterminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which xfce4-terminal 2> /dev/null`
@@ -69,7 +70,6 @@ if [[ -z "$TERMINAL" ]]; then
     [[ -z "$TERMINAL" ]] && TERMINAL=`which rxvt 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which terminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which terminator 2> /dev/null`
-    [[ -z "$TERMINAL" ]] && TERMINAL=`which qterminal 2> /dev/null`
     [[ -z "$TERMINAL" ]] && TERMINAL=`which xterm 2> /dev/null`
 
 fi
